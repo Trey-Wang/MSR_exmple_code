@@ -1,0 +1,2316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+***********************************************************************************************************************
+COPYRIGHT
+===============================================================================
+Copyright (c) 2017 by Vector Informatik GmbH.                                         All rights reserved.
+
+    This software is copyright protected and proprietary to Vector Informatik GmbH.
+    Vector Informatik GmbH grants to you only those rights as set out in the license conditions.
+    All other rights remain with Vector Informatik GmbH.
+===============================================================================
+FILE DESCRIPTION
+===============================================================================
+File:           Crypto_30_LibCv_bswmd.arxml
+Component:      DrvCrypto_LibCv
+Module:         Crypto
+Generator:      DaVinci Configurator
+Description:    Software Crypto Driver
+*********************************************************************************************************************** 
+-->
+<AUTOSAR xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-0-3.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://autosar.org/schema/r4.0">
+	<AR-PACKAGES>
+		<AR-PACKAGE UUID="ff55d029-386d-43a2-b3c2-dfef4c7a5e36">
+			<SHORT-NAME>MICROSAR</SHORT-NAME>
+			<AR-PACKAGES>
+				<AR-PACKAGE UUID="b4b8e5dd-7621-44f5-b0d0-70346b08094c">
+					<SHORT-NAME>Crypto_30_LibCv</SHORT-NAME>
+					<ELEMENTS>
+						<BSW-IMPLEMENTATION UUID="1a1491f6-7cc9-49cb-a255-e18167548a83">
+							<SHORT-NAME>Crypto_Impl</SHORT-NAME>
+							<PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+							<SW-VERSION>2.01.00</SW-VERSION>
+							<USED-CODE-GENERATOR>DaVinci Configurator 5</USED-CODE-GENERATOR>
+							<VENDOR-ID>30</VENDOR-ID>
+							<AR-RELEASE-VERSION>4.03.00</AR-RELEASE-VERSION>
+							<BEHAVIOR-REF DEST="BSW-INTERNAL-BEHAVIOR">/MICROSAR/Crypto_30_LibCv_ib_bswmd/BswModuleDescriptions/Crypto/Crypto_30_LibCv</BEHAVIOR-REF>
+							<PRECONFIGURED-CONFIGURATION-REFS>
+								<PRECONFIGURED-CONFIGURATION-REF DEST="ECUC-MODULE-CONFIGURATION-VALUES">/MICROSAR/Crypto_30_LibCv/Crypto_Pre</PRECONFIGURED-CONFIGURATION-REF>
+							</PRECONFIGURED-CONFIGURATION-REFS>
+							<RECOMMENDED-CONFIGURATION-REFS>
+								<RECOMMENDED-CONFIGURATION-REF DEST="ECUC-MODULE-CONFIGURATION-VALUES">/MICROSAR/Crypto_30_LibCv/Crypto_Rec</RECOMMENDED-CONFIGURATION-REF>
+							</RECOMMENDED-CONFIGURATION-REFS>
+							<VENDOR-API-INFIX>LibCv</VENDOR-API-INFIX>
+							<VENDOR-SPECIFIC-MODULE-DEF-REFS>
+								<VENDOR-SPECIFIC-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/MICROSAR/Crypto_30_LibCv/Crypto</VENDOR-SPECIFIC-MODULE-DEF-REF>
+							</VENDOR-SPECIFIC-MODULE-DEF-REFS>
+						</BSW-IMPLEMENTATION>
+						<ECUC-MODULE-DEF UUID="13af85c9-8ee6-4174-9962-507cad2fcb6e">
+							<SHORT-NAME>Crypto</SHORT-NAME>
+							<DESC>
+								<L-2 L="EN">Software Crypto Driver</L-2>
+							</DESC>
+							<CATEGORY>VENDOR_SPECIFIC_MODULE_DEFINITION</CATEGORY>
+							<ADMIN-DATA>
+								<DOC-REVISIONS>
+									<DOC-REVISION>
+										<REVISION-LABEL>1.00.00</REVISION-LABEL>
+										<STATE>beta</STATE>
+										<ISSUED-BY>visrpp</ISSUED-BY>
+										<DATE>2016-07-13T09:39:25+02:00</DATE>
+										<MODIFICATIONS>
+											<MODIFICATION>
+												<CHANGE>
+													<L-2 L="EN">Initial creation</L-2>
+												</CHANGE>
+											</MODIFICATION>
+										</MODIFICATIONS>
+									</DOC-REVISION>
+									<DOC-REVISION>
+										<REVISION-LABEL>1.00.01</REVISION-LABEL>
+										<STATE>beta</STATE>
+										<ISSUED-BY>visrpp</ISSUED-BY>
+										<DATE>2016-12-06T05:24:34+01:00</DATE>
+										<MODIFICATIONS>
+											<MODIFICATION>
+												<CHANGE>
+													<L-2 L="EN">Added CryptoNvMBlockDescriptor</L-2>
+												</CHANGE>
+											</MODIFICATION>
+										</MODIFICATIONS>
+									</DOC-REVISION>
+									<DOC-REVISION>
+										<REVISION-LABEL>1.00.02</REVISION-LABEL>
+										<STATE>beta</STATE>
+										<ISSUED-BY>vismss</ISSUED-BY>
+										<DATE>2016-12-07T02:24:39+01:00</DATE>
+										<MODIFICATIONS>
+											<MODIFICATION>
+												<CHANGE>
+													<L-2 L="EN">SW Version update</L-2>
+												</CHANGE>
+											</MODIFICATION>
+										</MODIFICATIONS>
+									</DOC-REVISION>
+									<DOC-REVISION>
+										<REVISION-LABEL>1.00.03</REVISION-LABEL>
+										<STATE>beta</STATE>
+										<ISSUED-BY>vismss</ISSUED-BY>
+										<DATE>2016-12-14T05:13:35+01:00</DATE>
+										<MODIFICATIONS>
+											<MODIFICATION>
+												<CHANGE>
+													<L-2 L="EN">SW Version update</L-2>
+												</CHANGE>
+											</MODIFICATION>
+										</MODIFICATIONS>
+									</DOC-REVISION>
+									<DOC-REVISION>
+										<REVISION-LABEL>1.00.04</REVISION-LABEL>
+										<STATE>beta</STATE>
+										<ISSUED-BY>vismss</ISSUED-BY>
+										<DATE>2017-01-24T09:44:19+01:00</DATE>
+										<MODIFICATIONS>
+											<MODIFICATION>
+												<CHANGE>
+													<L-2 L="EN">Adaptions to Specification</L-2>
+												</CHANGE>
+											</MODIFICATION>
+										</MODIFICATIONS>
+									</DOC-REVISION>
+									<DOC-REVISION>
+										<REVISION-LABEL>1.01.00</REVISION-LABEL>
+										<STATE>beta</STATE>
+										<ISSUED-BY>visgut</ISSUED-BY>
+										<DATE>2017-02-23T09:24:55+01:00</DATE>
+										<MODIFICATIONS>
+											<MODIFICATION>
+												<CHANGE>
+													<L-2 L="EN">Change multiplicity of Mainfunction Cycle Time and add default value</L-2>
+												</CHANGE>
+											</MODIFICATION>
+										</MODIFICATIONS>
+									</DOC-REVISION>
+									<DOC-REVISION>
+										<REVISION-LABEL>1.01.00</REVISION-LABEL>
+										<STATE>beta</STATE>
+										<ISSUED-BY>visgut</ISSUED-BY>
+										<DATE>2017-03-03T01:15:32+01:00</DATE>
+										<MODIFICATIONS>
+											<MODIFICATION>
+												<CHANGE>
+													<L-2 L="EN">Set min. and max. Queue Size to 1.</L-2>
+												</CHANGE>
+											</MODIFICATION>
+										</MODIFICATIONS>
+									</DOC-REVISION>
+									<DOC-REVISION>
+										<REVISION-LABEL>1.01.00</REVISION-LABEL>
+										<STATE>beta</STATE>
+										<ISSUED-BY>visrpp</ISSUED-BY>
+										<DATE>2017-03-07T09:23:34+01:00</DATE>
+										<MODIFICATIONS>
+											<MODIFICATION>
+												<CHANGE>
+													<L-2 L="EN">Removed non ASR 4.3 parameter, added CryptoKeyDeriveIterations</L-2>
+												</CHANGE>
+											</MODIFICATION>
+										</MODIFICATIONS>
+									</DOC-REVISION>
+									<DOC-REVISION>
+										<REVISION-LABEL>1.01.01</REVISION-LABEL>
+										<STATE>beta</STATE>
+										<ISSUED-BY>vismaw</ISSUED-BY>
+										<DATE>2017-04-19T03:18:30+02:00</DATE>
+										<MODIFICATIONS>
+											<MODIFICATION>
+												<CHANGE>
+													<L-2 L="EN">SW Version Update</L-2>
+												</CHANGE>
+											</MODIFICATION>
+										</MODIFICATIONS>
+									</DOC-REVISION>
+									<DOC-REVISION>
+										<REVISION-LABEL>1.02.00</REVISION-LABEL>
+										<STATE>released</STATE>
+										<ISSUED-BY>vismaw</ISSUED-BY>
+										<DATE>2017-05-05T05:26:41+02:00</DATE>
+										<MODIFICATIONS>
+											<MODIFICATION>
+												<CHANGE>
+													<L-2 L="EN">Release of component</L-2>
+												</CHANGE>
+												<REASON>
+													<L-2 L="EN">FEATC-1229</L-2>
+												</REASON>
+											</MODIFICATION>
+										</MODIFICATIONS>
+									</DOC-REVISION>
+									<DOC-REVISION>
+										<REVISION-LABEL>2.01.00</REVISION-LABEL>
+										<STATE>released</STATE>
+										<ISSUED-BY>vismaw</ISSUED-BY>
+										<DATE>2017-09-01T05:07:30+02:00</DATE>
+										<MODIFICATIONS>
+											<MODIFICATION>
+												<CHANGE>
+													<L-2 L="EN">Added CryptoSupportSheKeyUpdate, CryptoSupportKeyDerive and CryptoSupportPublicKeyExchange</L-2>
+												</CHANGE>
+												<REASON>
+													<L-2 L="EN">STORYC-281</L-2>
+												</REASON>
+											</MODIFICATION>
+										</MODIFICATIONS>
+									</DOC-REVISION>
+								</DOC-REVISIONS>
+							</ADMIN-DATA>
+							<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+							<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+							<REFINED-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/AUTOSAR/EcucDefs/Crypto</REFINED-MODULE-DEF-REF>
+							<SUPPORTED-CONFIG-VARIANTS>
+								<SUPPORTED-CONFIG-VARIANT>VARIANT-PRE-COMPILE</SUPPORTED-CONFIG-VARIANT>
+							</SUPPORTED-CONFIG-VARIANTS>
+							<CONTAINERS>
+								<ECUC-PARAM-CONF-CONTAINER-DEF UUID="0e17e3f1-e728-4480-8cb5-d67ef1f666ec">
+									<SHORT-NAME>CryptoDriverObjects</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Container for Crypto Driver Objects </L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:postBuildSelectableChangeable">false</SD>
+												<SD GID="DV:postBuildNotDeletable">false</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+									<SUB-CONTAINERS>
+										<ECUC-PARAM-CONF-CONTAINER-DEF UUID="36d23ea6-245a-4a3e-85a1-8b7f9db32fca">
+											<SHORT-NAME>CryptoDriverObject</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Container for configuration of Crypto Driver Object. The container name 
+serves as a symbolic name for the identifier of a Crypto Driver Object. </L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:CfgPostBuild">
+														<SD GID="DV:postBuildSelectableChangeable">false</SD>
+														<SD GID="DV:postBuildNotDeletable">false</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+											<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+											<PARAMETERS>
+												<ECUC-INTEGER-PARAM-DEF UUID="3d3238e1-9d79-4196-bb78-0a53c77f19d1">
+													<SHORT-NAME>CryptoDriverObjectId</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Identifier of the Crypto Driver Object. The Crypto Driver Object offers 
+different crypto primitives. </L-2>
+													</DESC>
+													<ADMIN-DATA>
+														<SDGS>
+															<SDG GID="DV:Display">
+																<SD GID="DV:DefaultFormat">DEC</SD>
+															</SDG>
+														</SDGS>
+													</ADMIN-DATA>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>0</DEFAULT-VALUE>
+													<MAX>4294967295</MAX>
+													<MIN>0</MIN>
+												</ECUC-INTEGER-PARAM-DEF>
+												<ECUC-INTEGER-PARAM-DEF UUID="84a4e4c9-22a0-4599-9940-0959df1c7ebf">
+													<SHORT-NAME>CryptoDriverObjectQueueSize</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Size of the queue in the Crypto Driver. Defines the maximum number of 
+jobs in the Crypto Driver Object queue. If it is set to 0, queueing is disabled 
+in the Crypto Driver Object.
+This Crypto Driver does not support queuing but uses the buffer for asynchronous processing.</L-2>
+													</DESC>
+													<ADMIN-DATA>
+														<SDGS>
+															<SDG GID="DV:Display">
+																<SD GID="DV:DefaultFormat">DEC</SD>
+															</SDG>
+														</SDGS>
+													</ADMIN-DATA>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>1</DEFAULT-VALUE>
+													<MAX>1</MAX>
+													<MIN>1</MIN>
+												</ECUC-INTEGER-PARAM-DEF>
+											</PARAMETERS>
+											<REFERENCES>
+												<ECUC-REFERENCE-DEF UUID="955aaf42-a4c9-4b55-9074-23736b382a25">
+													<SHORT-NAME>CryptoPrimitiveRef</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Refers to primitive in the CRYPTO. 
+The CryptoPrimitive is a pre-configured container of the crypto service that shall be used. </L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoPrimitives/CryptoPrimitive</DESTINATION-REF>
+												</ECUC-REFERENCE-DEF>
+											</REFERENCES>
+										</ECUC-PARAM-CONF-CONTAINER-DEF>
+									</SUB-CONTAINERS>
+								</ECUC-PARAM-CONF-CONTAINER-DEF>
+								<ECUC-PARAM-CONF-CONTAINER-DEF UUID="2d7f086e-4371-4e9e-a0bd-85ee35f0e75a">
+									<SHORT-NAME>CryptoGeneral</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Container for common configuration options.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:postBuildSelectableChangeable">false</SD>
+												<SD GID="DV:postBuildNotDeletable">false</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+									<MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+									<PARAMETERS>
+										<!-- PARAMETER DEFINITION: CsmDevErrorDetect -->
+										<ECUC-BOOLEAN-PARAM-DEF UUID="041b3bb0-e948-47aa-a75c-001633e551b2">
+											<SHORT-NAME>CryptoDevErrorDetect</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Switches the development error detection and notification on or off. 
+- True: detection and notification is enabled. 
+- False: detection and notification is disabled.
+</L-2>
+											</DESC>
+											<INTRODUCTION>
+												<P>
+													<L-1 L="EN">True: Development error detection enabled.
+                                        False: Development error detection disabled</L-1>
+												</P>
+											</INTRODUCTION>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>true</DEFAULT-VALUE>
+										</ECUC-BOOLEAN-PARAM-DEF>
+										<!-- PARAMETER DEFINITION: CsmMaxAlignScalarType -->
+										<!-- PARAMETER DEFINITION: CsmMaximumBlockingTime -->
+										<!-- PARAMETER DEFINITION: CsmUseInterruption -->
+										<!-- PARAMETER DEFINITION: CsmUseSyncJobProcessing -->
+										<!-- PARAMETER DEFINITION: CsmVersionInfoApi -->
+										<ECUC-BOOLEAN-PARAM-DEF UUID="5daeedd1-1114-45a7-a581-cf4de69e6252">
+											<SHORT-NAME>CryptoVersionInfoApi</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Pre-processor switch to enable and disable availability of the API Crypto_GetVersionInfo().  
+- True: API Crypto_GetVersionInfo() is available 
+- False: API Crypto_GetVersionInfo() is not available. </L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>false</DEFAULT-VALUE>
+										</ECUC-BOOLEAN-PARAM-DEF>
+										<ECUC-FLOAT-PARAM-DEF UUID="880aad9c-1462-410a-96bc-97abc9a6d31b">
+											<SHORT-NAME>CryptoMainFunctionPeriod</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Specifies the period of main function Crypto_MainFunction in seconds. </L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:Display">
+														<SD GID="DV:BaseUnit">SEC</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>0.01</DEFAULT-VALUE>
+											<MAX>3600</MAX>
+											<MIN>0</MIN>
+										</ECUC-FLOAT-PARAM-DEF>
+										<ECUC-BOOLEAN-PARAM-DEF UUID="d2b23e8c-046a-4ae5-bc35-d2a011135385">
+											<SHORT-NAME>CryptoSupportSheKeyUpdate</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">If enabled, the She key update with M1,M2 and M3 can be used for setting/updating a key.
+Disable to save ROM and Runtime.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>false</DEFAULT-VALUE>
+										</ECUC-BOOLEAN-PARAM-DEF>
+										<ECUC-BOOLEAN-PARAM-DEF UUID="1186ad48-1985-4563-bf39-ecca27457221">
+											<SHORT-NAME>CryptoSupportKeyDerive</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">If enabled, key derivation is usable via Crypto_KeyDerive API.
+Disable to save ROM.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>false</DEFAULT-VALUE>
+										</ECUC-BOOLEAN-PARAM-DEF>
+										<ECUC-BOOLEAN-PARAM-DEF UUID="0331441d-43da-453f-af78-ccfe8f58fa41">
+											<SHORT-NAME>CryptoSupportPublicKeyExchange</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">If enabled, key exchange is usable via Crypto_KeyExchangeCalcPubVal and Crypto_KeyExchangeCalcSecret API.
+Disable to save ROM.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>false</DEFAULT-VALUE>
+										</ECUC-BOOLEAN-PARAM-DEF>
+									</PARAMETERS>
+									<REFERENCES>
+										<ECUC-SYMBOLIC-NAME-REFERENCE-DEF UUID="97d07b83-59e1-4a70-aa63-761d428cbedd">
+											<SHORT-NAME>CryptoNvMBlockDescriptor</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">NvM Block Descriptor</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">Reference to the NvM Block Descriptor to store Key Elements</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/NvM/NvMBlockDescriptor</DESTINATION-REF>
+										</ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+									</REFERENCES>
+								</ECUC-PARAM-CONF-CONTAINER-DEF>
+								<ECUC-PARAM-CONF-CONTAINER-DEF UUID="aed317db-13c0-426a-b5c2-2b13fbc8bcbe">
+									<SHORT-NAME>CryptoKeyElements</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Container  for CRYPTO  key elements</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:postBuildSelectableChangeable">false</SD>
+												<SD GID="DV:postBuildNotDeletable">false</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+									<SUB-CONTAINERS>
+										<ECUC-PARAM-CONF-CONTAINER-DEF UUID="75d43fd5-7c25-403d-af4c-ff485b50e71b">
+											<SHORT-NAME>CryptoKeyElement</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Configuration of a CryptoKeyElement </L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:CfgPostBuild">
+														<SD GID="DV:postBuildSelectableChangeable">false</SD>
+														<SD GID="DV:postBuildNotDeletable">false</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+											<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+											<PARAMETERS>
+												<ECUC-INTEGER-PARAM-DEF UUID="971b39b3-8017-4b9a-bf7c-a6cac3a9389f">
+													<SHORT-NAME>CryptoKeyElementId</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Identifier of the CRYPTO key element </L-2>
+													</DESC>
+													<ADMIN-DATA>
+														<SDGS>
+															<SDG GID="DV:Display">
+																<SD GID="DV:DefaultFormat">DEC</SD>
+															</SDG>
+														</SDGS>
+													</ADMIN-DATA>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+													<MAX>4294967295</MAX>
+													<MIN>0</MIN>
+												</ECUC-INTEGER-PARAM-DEF>
+												<ECUC-INTEGER-PARAM-DEF UUID="0d569895-c90e-413d-b6ca-4bb59e1d4fb5">
+													<SHORT-NAME>CryptoKeyElementSize</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Maximum size of a CRYPTO key element in bytes </L-2>
+													</DESC>
+													<ADMIN-DATA>
+														<SDGS>
+															<SDG GID="DV:Display">
+																<SD GID="DV:DefaultFormat">DEC</SD>
+															</SDG>
+														</SDGS>
+													</ADMIN-DATA>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>16</DEFAULT-VALUE>
+													<MAX>4294967295</MAX>
+													<MIN>1</MIN>
+												</ECUC-INTEGER-PARAM-DEF>
+												<ECUC-STRING-PARAM-DEF UUID="457f0fa3-eed4-443f-92d5-950e4dc502aa">
+													<SHORT-NAME>CryptoKeyElementInitValue</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Value which will be used to fill the element during initialisation, when the element is not already initialized. </L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+												</ECUC-STRING-PARAM-DEF>
+												<ECUC-ENUMERATION-PARAM-DEF UUID="e4f34745-12da-4c8d-9a6e-59e85442c1e4">
+													<SHORT-NAME>CryptoKeyElementReadAccess</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Define the reading access rights of the key element. 
+CRYPTO_RA_DENIED = key element cannot be read from outside the Crypto 
+Driver 
+CRYPTO_RA INTERNAL_COPY = key element can be copied to another key 
+element in the same crypto driver. 
+CRYPTO_RA_ALLOWED = key element can be read as plaintext 
+CRYPTO_RA_ENCRYPTED = key element can be read encrypted. E.g. SHE Ram-
+Key export. </L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>RA_ALLOWED</DEFAULT-VALUE>
+													<LITERALS>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="10dabf1c-f7ae-49c3-a54a-99d9b065f441">
+															<SHORT-NAME>RA_ALLOWED</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="ea81ef80-dc85-4f00-91d6-f23719cf4dcd">
+															<SHORT-NAME>RA_DENIED</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="b8b63792-1b35-4bbc-970f-1d54433e2e08">
+															<SHORT-NAME>RA_ENCRYPTED</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="2bba0dab-6dab-42ac-8627-4d318f371dff">
+															<SHORT-NAME>RA_INTERNAL_COPY</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+													</LITERALS>
+												</ECUC-ENUMERATION-PARAM-DEF>
+												<ECUC-BOOLEAN-PARAM-DEF UUID="18b68db4-acc5-4852-895f-96482b55e4f7">
+													<SHORT-NAME>CryptoKeyElementAllowPartialAccess</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Enable or disable writing and reading the key element with data smaller 
+than the size of the element. 
+- True: enable partial access of the key element 
+- False: disable partial access of the key element </L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>false</DEFAULT-VALUE>
+												</ECUC-BOOLEAN-PARAM-DEF>
+												<ECUC-BOOLEAN-PARAM-DEF UUID="2458d9bb-9b34-4fd5-abc5-227d689167df">
+													<SHORT-NAME>CryptoKeyElementPersist</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Enable or disable persisting of the key element in non-volatile storage. 
+- True: enable persisting of the key element. 
+- False: disable persisting of the key element. </L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>false</DEFAULT-VALUE>
+												</ECUC-BOOLEAN-PARAM-DEF>
+												<ECUC-ENUMERATION-PARAM-DEF UUID="fb16099d-be05-4a54-abf2-354da5b2b68d">
+													<SHORT-NAME>CryptoKeyElementWriteAccess</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Define the writing access rights of the key element 
+CRYPTO_WA_DENIED = key element cannot be written from outside the Crypto Driver 
+CRYPTO_WA INTERNAL_COPY = key element can be filled with another key element in the same crypto driver. 
+CRYPTO_WA_ALLOWED = key element can be rewritten as plaintext 
+CRYPTO_WA_ENCRYPTED = key element can be written encrypted. E.g. SHE load key.
+</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>WA_ALLOWED</DEFAULT-VALUE>
+													<LITERALS>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="63785c19-9151-42fa-a647-16ffcc4724bf">
+															<SHORT-NAME>WA_ALLOWED</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="f577b03f-5aed-49ba-9346-63d3120efeb7">
+															<SHORT-NAME>WA_DENIED</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="1aa7bda8-2762-457c-a736-4536302ddb28">
+															<SHORT-NAME>WA_ENCRYPTED</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="48ef18d0-b1cd-4fbc-b80d-f3bc35b784e8">
+															<SHORT-NAME>WA_INTERNAL_COPY</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+													</LITERALS>
+												</ECUC-ENUMERATION-PARAM-DEF>
+											</PARAMETERS>
+											<REFERENCES>
+												<ECUC-REFERENCE-DEF UUID="6f927fd2-d962-4d09-b188-94056c790484">
+													<SHORT-NAME>CryptoKeyElementVirtualTargetRef</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Refers to a key element which will contain the actual data. If the Reference 
+is configured, the key element will be a virtual key element. </L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement</DESTINATION-REF>
+												</ECUC-REFERENCE-DEF>
+											</REFERENCES>
+										</ECUC-PARAM-CONF-CONTAINER-DEF>
+									</SUB-CONTAINERS>
+								</ECUC-PARAM-CONF-CONTAINER-DEF>
+								<ECUC-PARAM-CONF-CONTAINER-DEF UUID="8a1e80bc-cbb0-418c-b432-f3047cbd5adf">
+									<SHORT-NAME>CryptoKeyTypes</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Container for CRYPTO key types </L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:postBuildSelectableChangeable">false</SD>
+												<SD GID="DV:postBuildNotDeletable">false</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+									<SUB-CONTAINERS>
+										<ECUC-PARAM-CONF-CONTAINER-DEF UUID="1ca2ed3e-d113-4880-b356-193118c77870">
+											<SHORT-NAME>CryptoKeyType</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Configuration of a CryptoKeyType </L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:CfgPostBuild">
+														<SD GID="DV:postBuildSelectableChangeable">false</SD>
+														<SD GID="DV:postBuildNotDeletable">false</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+											<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+											<REFERENCES>
+												<ECUC-REFERENCE-DEF UUID="6bce2619-f2c2-4954-b2b1-532fe1059c99">
+													<SHORT-NAME>CryptoKeyElementRef</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Refers to a pointer in the CRYPTOCrypto Key Element, which holds the 
+data of the crypto key element. </L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement</DESTINATION-REF>
+												</ECUC-REFERENCE-DEF>
+											</REFERENCES>
+										</ECUC-PARAM-CONF-CONTAINER-DEF>
+									</SUB-CONTAINERS>
+								</ECUC-PARAM-CONF-CONTAINER-DEF>
+								<ECUC-PARAM-CONF-CONTAINER-DEF UUID="5906912b-8556-43d5-a823-e284ddddc22f">
+									<SHORT-NAME>CryptoKeys</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Container for CRYPTO keys</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:postBuildSelectableChangeable">false</SD>
+												<SD GID="DV:postBuildNotDeletable">false</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+									<SUB-CONTAINERS>
+										<ECUC-PARAM-CONF-CONTAINER-DEF UUID="93854f6f-0ce5-488c-880d-e8e7a1820704">
+											<SHORT-NAME>CryptoKey</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Configuration of a CryptoKey</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:CfgPostBuild">
+														<SD GID="DV:postBuildSelectableChangeable">false</SD>
+														<SD GID="DV:postBuildNotDeletable">false</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+											<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+											<PARAMETERS>
+												<ECUC-INTEGER-PARAM-DEF UUID="b170c36c-86a5-4054-82b4-db7f85eeb062">
+													<SHORT-NAME>CryptoKeyId</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Identifier of the CRYPTO key</L-2>
+													</DESC>
+													<ADMIN-DATA>
+														<SDGS>
+															<SDG GID="DV:Display">
+																<SD GID="DV:DefaultFormat">DEC</SD>
+															</SDG>
+														</SDGS>
+													</ADMIN-DATA>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>0</DEFAULT-VALUE>
+													<MAX>4294967295</MAX>
+													<MIN>0</MIN>
+												</ECUC-INTEGER-PARAM-DEF>
+												<ECUC-INTEGER-PARAM-DEF UUID="71254eaf-d161-44ed-8b55-15a12a1dc1e8">
+													<SHORT-NAME>CryptoKeyDeriveIterations</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Holds the number of iterations to be performed by the key derivation primitive</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>1</DEFAULT-VALUE>
+													<MAX>4294967295</MAX>
+													<MIN>1</MIN>
+												</ECUC-INTEGER-PARAM-DEF>
+											</PARAMETERS>
+											<REFERENCES>
+												<ECUC-REFERENCE-DEF UUID="baa1ba23-f95b-46d8-87a1-7874caba00a2">
+													<SHORT-NAME>CryptoKeyTypeRef</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Refers to a pointer in the CRYPTO to a CryptoKeyType. The CryptoKeyType provides the information which key elements are contained in a CryptoKey. </L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyTypes/CryptoKeyType</DESTINATION-REF>
+												</ECUC-REFERENCE-DEF>
+											</REFERENCES>
+										</ECUC-PARAM-CONF-CONTAINER-DEF>
+									</SUB-CONTAINERS>
+								</ECUC-PARAM-CONF-CONTAINER-DEF>
+								<ECUC-PARAM-CONF-CONTAINER-DEF UUID="fe27842d-c46e-4e06-a843-f8b054622876">
+									<SHORT-NAME>CryptoPrimitives</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Container for CRYPTO primitives </L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:postBuildSelectableChangeable">false</SD>
+												<SD GID="DV:postBuildNotDeletable">false</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+									<SUB-CONTAINERS>
+										<ECUC-PARAM-CONF-CONTAINER-DEF UUID="7cff9f20-8611-4ed0-96e9-a99346f6ed4a">
+											<SHORT-NAME>CryptoPrimitive</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Configuration of a CryptoPrimitive </L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:CfgPostBuild">
+														<SD GID="DV:postBuildSelectableChangeable">false</SD>
+														<SD GID="DV:postBuildNotDeletable">false</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+											<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+											<PARAMETERS>
+												<ECUC-ENUMERATION-PARAM-DEF UUID="8e806fe6-a4d9-4562-9d64-e263e4c7e382">
+													<SHORT-NAME>CryptoPrimitiveAlgorithmFamily</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Determines the algorithm family used for the crypto service.</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<LITERALS>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="3d4b7b2e-8bc7-4e90-8e1d-3a90a58f03ca">
+															<SHORT-NAME>CRYPTO_ALGOFAM_NOT_SET</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="b2d583d0-4d88-4f47-a26b-fef0a9acea62">
+															<SHORT-NAME>CRYPTO_ALGOFAM_SHA1</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="f8585a23-777f-411b-86ad-8195566b47e4">
+															<SHORT-NAME>CRYPTO_ALGOFAM_SHA2_224</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="fd021dc9-9120-4139-a607-146dfd942e05">
+															<SHORT-NAME>CRYPTO_ALGOFAM_SHA2_256</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="8347d59f-8536-407b-a581-96eb04841ad3">
+															<SHORT-NAME>CRYPTO_ALGOFAM_SHA2_384</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="241195c3-f289-474c-ba2f-3cf604503856">
+															<SHORT-NAME>CRYPTO_ALGOFAM_SHA2_512</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="32165952-9b47-485d-b243-d05155fa5b9e">
+															<SHORT-NAME>CRYPTO_ALGOFAM_SHA2_512_224</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="32a41bc6-75f1-481d-a408-b1329784cce8">
+															<SHORT-NAME>CRYPTO_ALGOFAM_SHA2_512_256</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="623dec31-827c-44c0-9771-c47898d42cbf">
+															<SHORT-NAME>CRYPTO_ALGOFAM_SHA3_224</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="55e592f2-9fec-4b1a-9c72-1ba996d3cc3c">
+															<SHORT-NAME>CRYPTO_ALGOFAM_SHA3_256</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="ad7d53ad-3709-4080-bfa4-50d95eafbebe">
+															<SHORT-NAME>CRYPTO_ALGOFAM_SHA3_384</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="b4228be5-26c9-4185-9cd4-f5a9bfdae2f0">
+															<SHORT-NAME>CRYPTO_ALGOFAM_SHA3_512</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="43f7397c-2d09-46fa-8508-6783f1aeb29c">
+															<SHORT-NAME>CRYPTO_ALGOFAM_SHAKE128</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="c6df5473-ebb1-4bf0-937e-27abfe5e76b1">
+															<SHORT-NAME>CRYPTO_ALGOFAM_SHAKE256</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="f33ea92b-0905-4233-893e-77d8ab405e60">
+															<SHORT-NAME>CRYPTO_ALGOFAM_RIPEMD160</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="4c91a878-01a4-43ad-b65b-95fae852d02f">
+															<SHORT-NAME>CRYPTO_ALGOFAM_BLAKE_1_256</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="0f18cd2c-f8b8-4443-b7e4-01fb7750559a">
+															<SHORT-NAME>CRYPTO_ALGOFAM_BLAKE_1_512</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="6668a328-82cf-43d5-9080-0eb8bb070e2a">
+															<SHORT-NAME>CRYPTO_ALGOFAM_BLAKE_2s_256</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="e86256d5-a758-476e-bfeb-f168aa5e09e5">
+															<SHORT-NAME>CRYPTO_ALGOFAM_BLAKE_2s_512</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="e32c6e30-45e9-4246-915f-72141cefa45a">
+															<SHORT-NAME>CRYPTO_ALGOFAM_3DES</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="94f97da0-4703-40a1-931e-b93c41246676">
+															<SHORT-NAME>CRYPTO_ALGOFAM_AES</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="ee779261-dc99-423c-b9bd-9c62cb81a997">
+															<SHORT-NAME>CRYPTO_ALGOFAM_CHACHA</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="0f4b628e-802e-4b6a-b81f-ac44bf9a37e0">
+															<SHORT-NAME>CRYPTO_ALGOFAM_RSA</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="97d82a0c-5714-44bc-a277-8a262b0e3ef0">
+															<SHORT-NAME>CRYPTO_ALGOFAM_ED25519</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="6a8df051-f699-42f1-851b-025ca22498cf">
+															<SHORT-NAME>CRYPTO_ALGOFAM_BRAINPOOL</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="894abe66-2537-4889-ace1-df2cbb6941c8">
+															<SHORT-NAME>CRYPTO_ALGOFAM_ECCNIST</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="6bdd4acd-3c3f-450a-9a64-46b67a344046">
+															<SHORT-NAME>CRYPTO_ALGOFAM_SECURECOUNTER</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="c5aa9c05-e59f-4ce2-a77f-851111633f23">
+															<SHORT-NAME>CRYPTO_ALGOFAM_RNG</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="d7056973-0d3f-448a-a5e7-dbf71b7844d7">
+															<SHORT-NAME>CRYPTO_ALGOFAM_SIPHASH</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="ecc2c948-0eaf-489a-ac5c-8c165c7a9c8a">
+															<SHORT-NAME>CRYPTO_ALGOFAM_ECIES</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="31b248be-1bfc-4075-aa19-4179f7316745">
+															<SHORT-NAME>CRYPTO_ALGOFAM_CUSTOM</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+													</LITERALS>
+												</ECUC-ENUMERATION-PARAM-DEF>
+												<ECUC-ENUMERATION-PARAM-DEF UUID="83a965da-f805-46c3-b157-e1fbe7e57364">
+													<SHORT-NAME>CryptoPrimitiveAlgorithmMode</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Determines the algorithm mode used for the crypto service</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<LITERALS>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="87c12a55-feac-4247-9134-9f11d859de1e">
+															<SHORT-NAME>CRYPTO_ALGOMODE_NOT_SET</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="ab052335-a7c6-4346-a5e0-b68f231a97cb">
+															<SHORT-NAME>CRYPTO_ALGOMODE_ECB</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="cbe32155-2a81-4a2b-a980-734c57052cf7">
+															<SHORT-NAME>CRYPTO_ALGOMODE_CBC</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="c83cf9c9-3372-4647-bdb9-9d8ee728cc4e">
+															<SHORT-NAME>CRYPTO_ALGOMODE_CFB</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="23e86b92-a731-43f1-a0fc-3387041462d0">
+															<SHORT-NAME>CRYPTO_ALGOMODE_OFB</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="f3865ac1-aeb5-4b10-9cd6-5c80780b1b2b">
+															<SHORT-NAME>CRYPTO_ALGOMODE_CTR</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="45711b84-18ed-4f15-b71c-53e2f0999aa4">
+															<SHORT-NAME>CRYPTO_ALGOMODE_GCM</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="132425a9-f0b3-45fc-a9d1-6ce6e60db9cb">
+															<SHORT-NAME>CRYPTO_ALGOMODE_XTS</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="b7b28106-e9b7-4b4d-9311-62f5d33bd1c3">
+															<SHORT-NAME>CRYPTO_ALGOMODE_RSAES_OAEP</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="0fa7cf1a-7c7b-40ab-872c-d165a61c4212">
+															<SHORT-NAME>CRYPTO_ALGOMODE_RSAES_PKCS1_v1_5</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="9994842a-c9b3-4f2b-809c-30b1059de422">
+															<SHORT-NAME>CRYPTO_ALGOMODE_RSASSA_PSS</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="a6256970-50f2-447c-b7f7-eb42ce249478">
+															<SHORT-NAME>CRYPTO_ALGOMODE_RSASSA_PKCS1_v1_5</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="e6304e31-8686-4086-8545-7a9deaad9513">
+															<SHORT-NAME>CRYPTO_ALGOMODE_8ROUNDS</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="b497d3a5-09e1-4c86-9455-2aba3740307a">
+															<SHORT-NAME>CRYPTO_ALGOMODE_12ROUNDS</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="3a6fe436-cbaa-4770-ac64-562fb96e5f1f">
+															<SHORT-NAME>CRYPTO_ALGOMODE_20ROUNDS</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="d854b78d-831c-4ce7-92ec-54d9a3208787">
+															<SHORT-NAME>CRYPTO_ALGOMODE_HMAC</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="3018ca76-f964-453a-a551-16692320a336">
+															<SHORT-NAME>CRYPTO_ALGOMODE_CMAC</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="2b58eb92-ece5-45fd-8d33-2320514385fa">
+															<SHORT-NAME>CRYPTO_ALGOMODE_GMAC</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="b5b2b71a-426c-4ae5-95a2-3278fdded684">
+															<SHORT-NAME>CRYPTO_ALGOMODE_CTRDRBG</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="de68ecd0-c43e-4aed-bd56-cd4d1b442164">
+															<SHORT-NAME>CRYPTO_ALGOMODE_SIPHASH_2_4</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="c2d87ca2-a725-46a0-997c-c5cdbf042d73">
+															<SHORT-NAME>CRYPTO_ALGOMODE_SIPHASH_4_8</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="60e2c301-7c42-4a4a-bf69-305b8326f686">
+															<SHORT-NAME>CRYPTO_ALGOMODE_CUSTOM</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+													</LITERALS>
+												</ECUC-ENUMERATION-PARAM-DEF>
+												<ECUC-ENUMERATION-PARAM-DEF UUID="a49dd5e7-3470-4e00-b9ae-875020b528d4">
+													<SHORT-NAME>CryptoPrimitiveService</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Determines the crypto service used for defining the capabilities</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<LITERALS>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="6d695f5e-cfa6-484a-b97d-662d53c390b9">
+															<SHORT-NAME>CRYPTO_MAC_VERIFY</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="7a8f813f-5a50-4814-8ae3-bc17885ba099">
+															<SHORT-NAME>CRYPTO_MAC_GENERATE</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="e67e67a3-5c19-49d6-ba0f-bd95596fcf83">
+															<SHORT-NAME>CRYPTO_SIGNATURE_VERIFY</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="b1388aff-d8f2-4f42-b7dd-814899f7b76a">
+															<SHORT-NAME>CRYPTO_SIGNATURE_GENERATE</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="f9e825aa-f509-498e-9541-b7e7e98d2040">
+															<SHORT-NAME>CRYPTO_ENCRYPT</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="83c19cc5-3a55-499e-9ddd-4d15223fc09e">
+															<SHORT-NAME>CRYPTO_DECRYPT</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="9846d098-9baf-48d7-bad1-e4481c6c40a2">
+															<SHORT-NAME>CRYPTO_AEADENCRYPT</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="4b11ba1a-6889-4103-984f-e6518ecf4570">
+															<SHORT-NAME>CRYPTO_AEADDECRYPT</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="75823542-9c86-47c2-b064-40b37a21c91e">
+															<SHORT-NAME>CRYPTO_HASH</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="8a21592a-5973-4204-bccd-80f4d808e979">
+															<SHORT-NAME>CRYPTO_RANDOM</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+													</LITERALS>
+												</ECUC-ENUMERATION-PARAM-DEF>
+												<ECUC-ENUMERATION-PARAM-DEF UUID="2d60b7f8-51ad-48db-b8b7-0f4399954bd5">
+													<SHORT-NAME>CryptoPrimitiveAlgorithmSecondaryFamily</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Determines the algorithm secondary family used for the crypto service</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<LITERALS>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="5db479aa-4366-4db1-aeb3-331fa0b7d66e">
+															<SHORT-NAME>CRYPTO_ALGOFAM_NOT_SET</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="027d6922-c208-4044-a445-23eb172fcd87">
+															<SHORT-NAME>CRYPTO_ALGOFAM_SHA1</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="716f793e-9a42-42ea-8166-8db40cd01f6d">
+															<SHORT-NAME>CRYPTO_ALGOFAM_SHA2_224</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="e134372a-25b0-4eab-8729-e2585a1ecc8f">
+															<SHORT-NAME>CRYPTO_ALGOFAM_SHA2_256</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="21ab3580-9f85-418d-9a54-c66200797fc8">
+															<SHORT-NAME>CRYPTO_ALGOFAM_SHA2_384</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="0ad6fbc1-90f0-48fb-8609-90ff9a755163">
+															<SHORT-NAME>CRYPTO_ALGOFAM_SHA2_512</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="56c32b7b-a0b2-4039-b04d-6c2a34480d46">
+															<SHORT-NAME>CRYPTO_ALGOFAM_SHA2_512_224</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="eabadc7c-fa10-4c42-a1fa-a6edd984884a">
+															<SHORT-NAME>CRYPTO_ALGOFAM_SHA2_512_256</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="5f800e77-9ac3-4aca-90aa-0c048b951474">
+															<SHORT-NAME>CRYPTO_ALGOFAM_SHA3_224</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="f3e38927-dbc2-4b9a-87d4-af18bd6d912b">
+															<SHORT-NAME>CRYPTO_ALGOFAM_SHA3_256</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="0b580f5c-2d82-40aa-951d-63637fc7b3b4">
+															<SHORT-NAME>CRYPTO_ALGOFAM_SHA3_384</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="b62e63e2-6a3b-48c4-91e4-4f1f3431d1fb">
+															<SHORT-NAME>CRYPTO_ALGOFAM_SHA3_512</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="2dd5d141-546c-4ce3-9432-18d8a0d6e77c">
+															<SHORT-NAME>CRYPTO_ALGOFAM_SHAKE128</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="f7b44669-64fd-4dda-bfea-1c0c72cb2591">
+															<SHORT-NAME>CRYPTO_ALGOFAM_SHAKE256</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="54ba28f9-7f95-4e98-92d1-7e66f7250278">
+															<SHORT-NAME>CRYPTO_ALGOFAM_RIPEMD160</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="c7f51205-7616-4ef9-9652-fbaa6605a573">
+															<SHORT-NAME>CRYPTO_ALGOFAM_BLAKE_1_256</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="c084ff48-f5c3-4e3c-8c2f-daac0c0c7deb">
+															<SHORT-NAME>CRYPTO_ALGOFAM_BLAKE_1_512</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="e3bf65d5-dbae-4627-9004-fad07bb74496">
+															<SHORT-NAME>CRYPTO_ALGOFAM_BLAKE_2s_256</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="eed50f1d-a673-4c68-a96f-775662f73db0">
+															<SHORT-NAME>CRYPTO_ALGOFAM_BLAKE_2s_512</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="b3c8166a-c257-4b1e-bd39-0c2be0922535">
+															<SHORT-NAME>CRYPTO_ALGOFAM_3DES</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="4d09f7d0-be34-478c-a0ba-4a63d9abee79">
+															<SHORT-NAME>CRYPTO_ALGOFAM_AES</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="487ef139-ce1c-49a0-bdf8-59d3eaeb35b0">
+															<SHORT-NAME>CRYPTO_ALGOFAM_CHACHA</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="1393b615-4656-4733-a586-a3e27c55690d">
+															<SHORT-NAME>CRYPTO_ALGOFAM_RSA</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="e4c3d4f3-ebea-4bb4-9247-dc611ce75480">
+															<SHORT-NAME>CRYPTO_ALGOFAM_ED25519</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="e603ac8b-d5f2-47f9-89e3-e5fbbc0821e5">
+															<SHORT-NAME>CRYPTO_ALGOFAM_BRAINPOOL</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="6f54825e-d510-46f1-9f2b-49cbe1647386">
+															<SHORT-NAME>CRYPTO_ALGOFAM_ECCNIST</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="153a6326-c72a-4b67-bec1-c9a31e0f88b6">
+															<SHORT-NAME>CRYPTO_ALGOFAM_SECURECOUNTER</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="06c552a4-7683-4bbb-a2d4-69dbc327ae1f">
+															<SHORT-NAME>CRYPTO_ALGOFAM_RNG</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="6cc7fa12-03ed-456f-b5e4-ed3c88e867ba">
+															<SHORT-NAME>CRYPTO_ALGOFAM_SIPHASH</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="530f7499-33a8-4496-87ca-df89db3bc527">
+															<SHORT-NAME>CRYPTO_ALGOFAM_ECIES</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="f2ad0f58-d078-415c-84ae-f28770abd482">
+															<SHORT-NAME>CRYPTO_ALGOFAM_CUSTOM</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+													</LITERALS>
+												</ECUC-ENUMERATION-PARAM-DEF>
+											</PARAMETERS>
+										</ECUC-PARAM-CONF-CONTAINER-DEF>
+									</SUB-CONTAINERS>
+								</ECUC-PARAM-CONF-CONTAINER-DEF>
+							</CONTAINERS>
+						</ECUC-MODULE-DEF>
+						<ECUC-MODULE-CONFIGURATION-VALUES UUID="bd7508ab-cf3e-4b73-b326-57de0c581a51">
+							<SHORT-NAME>Crypto_Pre</SHORT-NAME>
+							<DEFINITION-REF DEST="ECUC-MODULE-DEF">/MICROSAR/Crypto_30_LibCv/Crypto</DEFINITION-REF>
+							<CONTAINERS>
+								<ECUC-CONTAINER-VALUE UUID="c7eab868-8948-4938-a7e9-ce9f9c94cc3d">
+									<SHORT-NAME>CryptoPrimitives</SHORT-NAME>
+									<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoPrimitives</DEFINITION-REF>
+									<SUB-CONTAINERS>
+										<ECUC-CONTAINER-VALUE UUID="1e42c954-fee7-4d84-bd15-b8ff3503bff3">
+											<SHORT-NAME>AesGCMEncrypt</SHORT-NAME>
+											<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+											<PARAMETER-VALUES>
+												<ECUC-TEXTUAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+													<VALUE>CRYPTO_ALGOFAM_NOT_SET</VALUE>
+												</ECUC-TEXTUAL-PARAM-VALUE>
+												<ECUC-TEXTUAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+													<VALUE>CRYPTO_ALGOMODE_GCM</VALUE>
+												</ECUC-TEXTUAL-PARAM-VALUE>
+												<ECUC-TEXTUAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+													<VALUE>CRYPTO_AEADENCRYPT</VALUE>
+												</ECUC-TEXTUAL-PARAM-VALUE>
+												<ECUC-TEXTUAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+													<VALUE>CRYPTO_ALGOFAM_AES</VALUE>
+												</ECUC-TEXTUAL-PARAM-VALUE>
+											</PARAMETER-VALUES>
+										</ECUC-CONTAINER-VALUE>
+										<ECUC-CONTAINER-VALUE UUID="fa64e365-fcd8-4091-b92d-3704b70ccdad">
+											<SHORT-NAME>AesGCMDecrypt</SHORT-NAME>
+											<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+											<PARAMETER-VALUES>
+												<ECUC-TEXTUAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+													<VALUE>CRYPTO_ALGOFAM_NOT_SET</VALUE>
+												</ECUC-TEXTUAL-PARAM-VALUE>
+												<ECUC-TEXTUAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+													<VALUE>CRYPTO_ALGOMODE_GCM</VALUE>
+												</ECUC-TEXTUAL-PARAM-VALUE>
+												<ECUC-TEXTUAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+													<VALUE>CRYPTO_AEADDECRYPT</VALUE>
+												</ECUC-TEXTUAL-PARAM-VALUE>
+												<ECUC-TEXTUAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+													<VALUE>CRYPTO_ALGOFAM_AES</VALUE>
+												</ECUC-TEXTUAL-PARAM-VALUE>
+											</PARAMETER-VALUES>
+										</ECUC-CONTAINER-VALUE>
+										<ECUC-CONTAINER-VALUE UUID="94bd2408-f536-460f-af1d-6e4e2ca08e44">
+											<SHORT-NAME>AesEncrypt</SHORT-NAME>
+											<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+											<PARAMETER-VALUES>
+												<ECUC-TEXTUAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+													<VALUE>CRYPTO_ALGOFAM_NOT_SET</VALUE>
+												</ECUC-TEXTUAL-PARAM-VALUE>
+												<ECUC-TEXTUAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+													<VALUE>CRYPTO_ALGOMODE_ECB</VALUE>
+												</ECUC-TEXTUAL-PARAM-VALUE>
+												<ECUC-TEXTUAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+													<VALUE>CRYPTO_ENCRYPT</VALUE>
+												</ECUC-TEXTUAL-PARAM-VALUE>
+												<ECUC-TEXTUAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+													<VALUE>CRYPTO_ALGOFAM_AES</VALUE>
+												</ECUC-TEXTUAL-PARAM-VALUE>
+												<ECUC-TEXTUAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+													<VALUE>CRYPTO_ALGOMODE_CBC</VALUE>
+												</ECUC-TEXTUAL-PARAM-VALUE>
+											</PARAMETER-VALUES>
+										</ECUC-CONTAINER-VALUE>
+										<ECUC-CONTAINER-VALUE UUID="e088b932-1582-423e-91d7-5eb54bac5f07">
+											<SHORT-NAME>AesDecrypt</SHORT-NAME>
+											<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+											<PARAMETER-VALUES>
+												<ECUC-TEXTUAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+													<VALUE>CRYPTO_ALGOFAM_NOT_SET</VALUE>
+												</ECUC-TEXTUAL-PARAM-VALUE>
+												<ECUC-TEXTUAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+													<VALUE>CRYPTO_ALGOMODE_ECB</VALUE>
+												</ECUC-TEXTUAL-PARAM-VALUE>
+												<ECUC-TEXTUAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+													<VALUE>CRYPTO_DECRYPT</VALUE>
+												</ECUC-TEXTUAL-PARAM-VALUE>
+												<ECUC-TEXTUAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+													<VALUE>CRYPTO_ALGOFAM_AES</VALUE>
+												</ECUC-TEXTUAL-PARAM-VALUE>
+												<ECUC-TEXTUAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+													<VALUE>CRYPTO_ALGOMODE_CBC</VALUE>
+												</ECUC-TEXTUAL-PARAM-VALUE>
+											</PARAMETER-VALUES>
+										</ECUC-CONTAINER-VALUE>
+										<ECUC-CONTAINER-VALUE UUID="9d65591c-b97f-4e02-a095-83d42f391d5c">
+											<SHORT-NAME>SHA1</SHORT-NAME>
+											<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+											<PARAMETER-VALUES>
+												<ECUC-TEXTUAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+													<VALUE>CRYPTO_ALGOFAM_NOT_SET</VALUE>
+												</ECUC-TEXTUAL-PARAM-VALUE>
+												<ECUC-TEXTUAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+													<VALUE>CRYPTO_ALGOMODE_NOT_SET</VALUE>
+												</ECUC-TEXTUAL-PARAM-VALUE>
+												<ECUC-TEXTUAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+													<VALUE>CRYPTO_HASH</VALUE>
+												</ECUC-TEXTUAL-PARAM-VALUE>
+												<ECUC-TEXTUAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+													<VALUE>CRYPTO_ALGOFAM_SHA1</VALUE>
+												</ECUC-TEXTUAL-PARAM-VALUE>
+											</PARAMETER-VALUES>
+										</ECUC-CONTAINER-VALUE>
+										<ECUC-CONTAINER-VALUE UUID="ca6bff7e-f6cd-4d01-bbae-651bc4ce2a46">
+											<SHORT-NAME>SHA256</SHORT-NAME>
+											<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+											<PARAMETER-VALUES>
+												<ECUC-TEXTUAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+													<VALUE>CRYPTO_ALGOFAM_NOT_SET</VALUE>
+												</ECUC-TEXTUAL-PARAM-VALUE>
+												<ECUC-TEXTUAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+													<VALUE>CRYPTO_ALGOMODE_NOT_SET</VALUE>
+												</ECUC-TEXTUAL-PARAM-VALUE>
+												<ECUC-TEXTUAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+													<VALUE>CRYPTO_HASH</VALUE>
+												</ECUC-TEXTUAL-PARAM-VALUE>
+												<ECUC-TEXTUAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+													<VALUE>CRYPTO_ALGOFAM_SHA2_256</VALUE>
+												</ECUC-TEXTUAL-PARAM-VALUE>
+											</PARAMETER-VALUES>
+										</ECUC-CONTAINER-VALUE>
+										<ECUC-CONTAINER-VALUE UUID="44791faf-268d-4d72-84b1-c6e2d5cd6f48">
+											<SHORT-NAME>SHA512</SHORT-NAME>
+											<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+											<PARAMETER-VALUES>
+												<ECUC-TEXTUAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+													<VALUE>CRYPTO_ALGOFAM_NOT_SET</VALUE>
+												</ECUC-TEXTUAL-PARAM-VALUE>
+												<ECUC-TEXTUAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+													<VALUE>CRYPTO_ALGOMODE_NOT_SET</VALUE>
+												</ECUC-TEXTUAL-PARAM-VALUE>
+												<ECUC-TEXTUAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+													<VALUE>CRYPTO_HASH</VALUE>
+												</ECUC-TEXTUAL-PARAM-VALUE>
+												<ECUC-TEXTUAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+													<VALUE>CRYPTO_ALGOFAM_SHA2_512</VALUE>
+												</ECUC-TEXTUAL-PARAM-VALUE>
+											</PARAMETER-VALUES>
+										</ECUC-CONTAINER-VALUE>
+										<ECUC-CONTAINER-VALUE UUID="1a72be2d-aef4-489b-9f12-70d086e729bf">
+											<SHORT-NAME>AesCmacGenerate</SHORT-NAME>
+											<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+											<PARAMETER-VALUES>
+												<ECUC-TEXTUAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+													<VALUE>CRYPTO_ALGOFAM_NOT_SET</VALUE>
+												</ECUC-TEXTUAL-PARAM-VALUE>
+												<ECUC-TEXTUAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+													<VALUE>CRYPTO_ALGOMODE_CMAC</VALUE>
+												</ECUC-TEXTUAL-PARAM-VALUE>
+												<ECUC-TEXTUAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+													<VALUE>CRYPTO_MAC_GENERATE</VALUE>
+												</ECUC-TEXTUAL-PARAM-VALUE>
+												<ECUC-TEXTUAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+													<VALUE>CRYPTO_ALGOFAM_AES</VALUE>
+												</ECUC-TEXTUAL-PARAM-VALUE>
+											</PARAMETER-VALUES>
+										</ECUC-CONTAINER-VALUE>
+										<ECUC-CONTAINER-VALUE UUID="385c980b-9dfb-4ea6-8358-8870d2536f58">
+											<SHORT-NAME>AesCmacVerify</SHORT-NAME>
+											<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+											<PARAMETER-VALUES>
+												<ECUC-TEXTUAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+													<VALUE>CRYPTO_ALGOFAM_NOT_SET</VALUE>
+												</ECUC-TEXTUAL-PARAM-VALUE>
+												<ECUC-TEXTUAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+													<VALUE>CRYPTO_ALGOMODE_CMAC</VALUE>
+												</ECUC-TEXTUAL-PARAM-VALUE>
+												<ECUC-TEXTUAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+													<VALUE>CRYPTO_MAC_VERIFY</VALUE>
+												</ECUC-TEXTUAL-PARAM-VALUE>
+												<ECUC-TEXTUAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+													<VALUE>CRYPTO_ALGOFAM_AES</VALUE>
+												</ECUC-TEXTUAL-PARAM-VALUE>
+											</PARAMETER-VALUES>
+										</ECUC-CONTAINER-VALUE>
+										<ECUC-CONTAINER-VALUE UUID="c85e40bc-275c-4648-9236-b99fa27b08c0">
+											<SHORT-NAME>RngFips186</SHORT-NAME>
+											<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+											<PARAMETER-VALUES>
+												<ECUC-TEXTUAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+													<VALUE>CRYPTO_ALGOMODE_NOT_SET</VALUE>
+												</ECUC-TEXTUAL-PARAM-VALUE>
+												<ECUC-TEXTUAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+													<VALUE>CRYPTO_RANDOM</VALUE>
+												</ECUC-TEXTUAL-PARAM-VALUE>
+												<ECUC-TEXTUAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+													<VALUE>CRYPTO_ALGOFAM_RNG</VALUE>
+												</ECUC-TEXTUAL-PARAM-VALUE>
+												<ECUC-TEXTUAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+													<VALUE>CRYPTO_ALGOFAM_NOT_SET</VALUE>
+												</ECUC-TEXTUAL-PARAM-VALUE>
+											</PARAMETER-VALUES>
+										</ECUC-CONTAINER-VALUE>
+										<ECUC-CONTAINER-VALUE UUID="cf1b6c7b-5530-4217-a494-184bda066bc9">
+											<SHORT-NAME>EcDsaGenerate</SHORT-NAME>
+											<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+											<PARAMETER-VALUES>
+												<ECUC-TEXTUAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+													<VALUE>CRYPTO_ALGOFAM_NOT_SET</VALUE>
+												</ECUC-TEXTUAL-PARAM-VALUE>
+												<ECUC-TEXTUAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+													<VALUE>CRYPTO_ALGOMODE_NOT_SET</VALUE>
+												</ECUC-TEXTUAL-PARAM-VALUE>
+												<ECUC-TEXTUAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+													<VALUE>CRYPTO_SIGNATURE_GENERATE</VALUE>
+												</ECUC-TEXTUAL-PARAM-VALUE>
+												<ECUC-TEXTUAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+													<VALUE>CRYPTO_ALGOFAM_ED25519</VALUE>
+												</ECUC-TEXTUAL-PARAM-VALUE>
+												<ECUC-TEXTUAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+													<VALUE>CRYPTO_ALGOFAM_SHA2_512</VALUE>
+												</ECUC-TEXTUAL-PARAM-VALUE>
+											</PARAMETER-VALUES>
+										</ECUC-CONTAINER-VALUE>
+										<ECUC-CONTAINER-VALUE UUID="838bfa4c-e5af-4af2-acd2-93596db467a3">
+											<SHORT-NAME>EcDsaVerify</SHORT-NAME>
+											<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+											<PARAMETER-VALUES>
+												<ECUC-TEXTUAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+													<VALUE>CRYPTO_ALGOFAM_NOT_SET</VALUE>
+												</ECUC-TEXTUAL-PARAM-VALUE>
+												<ECUC-TEXTUAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+													<VALUE>CRYPTO_ALGOMODE_NOT_SET</VALUE>
+												</ECUC-TEXTUAL-PARAM-VALUE>
+												<ECUC-TEXTUAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+													<VALUE>CRYPTO_SIGNATURE_VERIFY</VALUE>
+												</ECUC-TEXTUAL-PARAM-VALUE>
+												<ECUC-TEXTUAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+													<VALUE>CRYPTO_ALGOFAM_ED25519</VALUE>
+												</ECUC-TEXTUAL-PARAM-VALUE>
+												<ECUC-TEXTUAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+													<VALUE>CRYPTO_ALGOFAM_SHA2_512</VALUE>
+												</ECUC-TEXTUAL-PARAM-VALUE>
+											</PARAMETER-VALUES>
+										</ECUC-CONTAINER-VALUE>
+										<ECUC-CONTAINER-VALUE UUID="899844fb-257e-41b0-8415-db198e486a6b">
+											<SHORT-NAME>SipHashGenerate</SHORT-NAME>
+											<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+											<PARAMETER-VALUES>
+												<ECUC-TEXTUAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+													<VALUE>CRYPTO_MAC_GENERATE</VALUE>
+												</ECUC-TEXTUAL-PARAM-VALUE>
+												<ECUC-TEXTUAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+													<VALUE>CRYPTO_ALGOFAM_SIPHASH</VALUE>
+												</ECUC-TEXTUAL-PARAM-VALUE>
+												<ECUC-TEXTUAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+													<VALUE>CRYPTO_ALGOMODE_SIPHASH_2_4</VALUE>
+												</ECUC-TEXTUAL-PARAM-VALUE>
+												<ECUC-TEXTUAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+													<VALUE>CRYPTO_ALGOFAM_NOT_SET</VALUE>
+												</ECUC-TEXTUAL-PARAM-VALUE>
+											</PARAMETER-VALUES>
+										</ECUC-CONTAINER-VALUE>
+										<ECUC-CONTAINER-VALUE UUID="c61e8798-a7b5-4950-96fe-fe32f5fb3700">
+											<SHORT-NAME>SipHashVerify</SHORT-NAME>
+											<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+											<PARAMETER-VALUES>
+												<ECUC-TEXTUAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+													<VALUE>CRYPTO_MAC_VERIFY</VALUE>
+												</ECUC-TEXTUAL-PARAM-VALUE>
+												<ECUC-TEXTUAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+													<VALUE>CRYPTO_ALGOFAM_SIPHASH</VALUE>
+												</ECUC-TEXTUAL-PARAM-VALUE>
+												<ECUC-TEXTUAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+													<VALUE>CRYPTO_ALGOMODE_SIPHASH_2_4</VALUE>
+												</ECUC-TEXTUAL-PARAM-VALUE>
+												<ECUC-TEXTUAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+													<VALUE>CRYPTO_ALGOFAM_NOT_SET</VALUE>
+												</ECUC-TEXTUAL-PARAM-VALUE>
+											</PARAMETER-VALUES>
+										</ECUC-CONTAINER-VALUE>
+									</SUB-CONTAINERS>
+								</ECUC-CONTAINER-VALUE>
+								<ECUC-CONTAINER-VALUE UUID="6629993b-c912-4343-8292-776896e0ba94">
+									<SHORT-NAME>CryptoKeyTypes</SHORT-NAME>
+									<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyTypes</DEFINITION-REF>
+									<SUB-CONTAINERS>
+										<ECUC-CONTAINER-VALUE UUID="69d99ca2-cb4c-41c9-bce0-7de6d817a839">
+											<SHORT-NAME>Cipher</SHORT-NAME>
+											<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyTypes/CryptoKeyType</DEFINITION-REF>
+											<REFERENCE-VALUES>
+												<ECUC-REFERENCE-VALUE>
+													<DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyTypes/CryptoKeyType/CryptoKeyElementRef</DEFINITION-REF>
+													<VALUE-REF DEST="BSW-MODULE-ENTRY">/ActiveEcuC/Crypto_30_LibCv/CryptoKeyElements/Crypto_30_LibCv_Cipher_Key</VALUE-REF>
+												</ECUC-REFERENCE-VALUE>
+												<ECUC-REFERENCE-VALUE>
+													<DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyTypes/CryptoKeyType/CryptoKeyElementRef</DEFINITION-REF>
+													<VALUE-REF DEST="BSW-MODULE-ENTRY">/ActiveEcuC/Crypto_30_LibCv/CryptoKeyElements/Crypto_30_LibCv_Cipher_IV</VALUE-REF>
+												</ECUC-REFERENCE-VALUE>
+												<ECUC-REFERENCE-VALUE>
+													<DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyTypes/CryptoKeyType/CryptoKeyElementRef</DEFINITION-REF>
+													<VALUE-REF DEST="BSW-MODULE-ENTRY">/ActiveEcuC/Crypto_30_LibCv/CryptoKeyElements/Crypto_30_LibCv_Cipher_Proof</VALUE-REF>
+												</ECUC-REFERENCE-VALUE>
+												<ECUC-REFERENCE-VALUE>
+													<DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyTypes/CryptoKeyType/CryptoKeyElementRef</DEFINITION-REF>
+													<VALUE-REF DEST="BSW-MODULE-ENTRY">/ActiveEcuC/Crypto_30_LibCv/CryptoKeyElements/Crypto_30_LibCv_Cipher_2ndKey</VALUE-REF>
+												</ECUC-REFERENCE-VALUE>
+											</REFERENCE-VALUES>
+										</ECUC-CONTAINER-VALUE>
+										<ECUC-CONTAINER-VALUE UUID="f8221d16-c785-4bc5-a100-dd9be293076d">
+											<SHORT-NAME>KeyExchange_X25519</SHORT-NAME>
+											<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyTypes/CryptoKeyType</DEFINITION-REF>
+											<REFERENCE-VALUES>
+												<ECUC-REFERENCE-VALUE>
+													<DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyTypes/CryptoKeyType/CryptoKeyElementRef</DEFINITION-REF>
+													<VALUE-REF DEST="BSW-MODULE-ENTRY">/ActiveEcuC/Crypto_30_LibCv/CryptoKeyElements/Crypto_30_LibCv_KeyExchange_Algorithm_X25519</VALUE-REF>
+												</ECUC-REFERENCE-VALUE>
+												<ECUC-REFERENCE-VALUE>
+													<DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyTypes/CryptoKeyType/CryptoKeyElementRef</DEFINITION-REF>
+													<VALUE-REF DEST="BSW-MODULE-ENTRY">/ActiveEcuC/Crypto_30_LibCv/CryptoKeyElements/Crypto_30_LibCv_KeyExchange_OwnPubKey</VALUE-REF>
+												</ECUC-REFERENCE-VALUE>
+												<ECUC-REFERENCE-VALUE>
+													<DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyTypes/CryptoKeyType/CryptoKeyElementRef</DEFINITION-REF>
+													<VALUE-REF DEST="BSW-MODULE-ENTRY">/ActiveEcuC/Crypto_30_LibCv/CryptoKeyElements/Crypto_30_LibCv_KeyExchange_Base</VALUE-REF>
+												</ECUC-REFERENCE-VALUE>
+												<ECUC-REFERENCE-VALUE>
+													<DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyTypes/CryptoKeyType/CryptoKeyElementRef</DEFINITION-REF>
+													<VALUE-REF DEST="BSW-MODULE-ENTRY">/ActiveEcuC/Crypto_30_LibCv/CryptoKeyElements/Crypto_30_LibCv_KeyExchange_PrivKey</VALUE-REF>
+												</ECUC-REFERENCE-VALUE>
+												<ECUC-REFERENCE-VALUE>
+													<DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyTypes/CryptoKeyType/CryptoKeyElementRef</DEFINITION-REF>
+													<VALUE-REF DEST="BSW-MODULE-ENTRY">/ActiveEcuC/Crypto_30_LibCv/CryptoKeyElements/Crypto_30_LibCv_KeyExchange_SharedValue</VALUE-REF>
+												</ECUC-REFERENCE-VALUE>
+											</REFERENCE-VALUES>
+										</ECUC-CONTAINER-VALUE>
+										<ECUC-CONTAINER-VALUE UUID="95768ae8-8706-4061-aa3a-66e19dfd927a">
+											<SHORT-NAME>KeyGenerate</SHORT-NAME>
+											<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyTypes/CryptoKeyType</DEFINITION-REF>
+											<REFERENCE-VALUES>
+												<ECUC-REFERENCE-VALUE>
+													<DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyTypes/CryptoKeyType/CryptoKeyElementRef</DEFINITION-REF>
+													<VALUE-REF DEST="BSW-MODULE-ENTRY">/ActiveEcuC/Crypto_30_LibCv/CryptoKeyElements/Crypto_30_LibCv_KeyGenerate_Algorithm</VALUE-REF>
+												</ECUC-REFERENCE-VALUE>
+												<ECUC-REFERENCE-VALUE>
+													<DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyTypes/CryptoKeyType/CryptoKeyElementRef</DEFINITION-REF>
+													<VALUE-REF DEST="BSW-MODULE-ENTRY">/ActiveEcuC/Crypto_30_LibCv/CryptoKeyElements/Crypto_30_LibCv_KeyGenerate_Seed</VALUE-REF>
+												</ECUC-REFERENCE-VALUE>
+												<ECUC-REFERENCE-VALUE>
+													<DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyTypes/CryptoKeyType/CryptoKeyElementRef</DEFINITION-REF>
+													<VALUE-REF DEST="BSW-MODULE-ENTRY">/ActiveEcuC/Crypto_30_LibCv/CryptoKeyElements/Crypto_30_LibCv_KeyGenerate_Key</VALUE-REF>
+												</ECUC-REFERENCE-VALUE>
+											</REFERENCE-VALUES>
+										</ECUC-CONTAINER-VALUE>
+										<ECUC-CONTAINER-VALUE UUID="ebd2d9e7-c407-4b51-ad29-0f2fba7f47bd">
+											<SHORT-NAME>Signature</SHORT-NAME>
+											<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyTypes/CryptoKeyType</DEFINITION-REF>
+											<REFERENCE-VALUES>
+												<ECUC-REFERENCE-VALUE>
+													<DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyTypes/CryptoKeyType/CryptoKeyElementRef</DEFINITION-REF>
+													<VALUE-REF DEST="BSW-MODULE-ENTRY">/ActiveEcuC/Crypto_30_LibCv/CryptoKeyElements/Crypto_30_LibCv_Signature_Key</VALUE-REF>
+												</ECUC-REFERENCE-VALUE>
+											</REFERENCE-VALUES>
+										</ECUC-CONTAINER-VALUE>
+										<ECUC-CONTAINER-VALUE UUID="0a17a73d-d33e-4c0c-9f7b-bbb4e8a72e82">
+											<SHORT-NAME>Mac</SHORT-NAME>
+											<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyTypes/CryptoKeyType</DEFINITION-REF>
+											<REFERENCE-VALUES>
+												<ECUC-REFERENCE-VALUE>
+													<DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyTypes/CryptoKeyType/CryptoKeyElementRef</DEFINITION-REF>
+													<VALUE-REF DEST="BSW-MODULE-ENTRY">/ActiveEcuC/Crypto_30_LibCv/CryptoKeyElements/Crypto_30_LibCv_Mac_Key</VALUE-REF>
+												</ECUC-REFERENCE-VALUE>
+												<ECUC-REFERENCE-VALUE>
+													<DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyTypes/CryptoKeyType/CryptoKeyElementRef</DEFINITION-REF>
+													<VALUE-REF DEST="BSW-MODULE-ENTRY">/ActiveEcuC/Crypto_30_LibCv/CryptoKeyElements/Crypto_30_LibCv_Mac_Proof</VALUE-REF>
+												</ECUC-REFERENCE-VALUE>
+											</REFERENCE-VALUES>
+										</ECUC-CONTAINER-VALUE>
+										<ECUC-CONTAINER-VALUE UUID="a69eb360-f868-4194-897f-0f79a47aa5b0">
+											<SHORT-NAME>KeyDerive</SHORT-NAME>
+											<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyTypes/CryptoKeyType</DEFINITION-REF>
+											<REFERENCE-VALUES>
+												<ECUC-REFERENCE-VALUE>
+													<DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyTypes/CryptoKeyType/CryptoKeyElementRef</DEFINITION-REF>
+													<VALUE-REF DEST="BSW-MODULE-ENTRY">/ActiveEcuC/Crypto_30_LibCv/CryptoKeyElements/Crypto_30_LibCv_KeyDerivation_Password</VALUE-REF>
+												</ECUC-REFERENCE-VALUE>
+												<ECUC-REFERENCE-VALUE>
+													<DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyTypes/CryptoKeyType/CryptoKeyElementRef</DEFINITION-REF>
+													<VALUE-REF DEST="BSW-MODULE-ENTRY">/ActiveEcuC/Crypto_30_LibCv/CryptoKeyElements/Crypto_30_LibCv_KeyDerive_Algorithm</VALUE-REF>
+												</ECUC-REFERENCE-VALUE>
+												<ECUC-REFERENCE-VALUE>
+													<DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyTypes/CryptoKeyType/CryptoKeyElementRef</DEFINITION-REF>
+													<VALUE-REF DEST="BSW-MODULE-ENTRY">/ActiveEcuC/Crypto_30_LibCv/CryptoKeyElements/Crypto_30_LibCv_KeyDerivation_Salt</VALUE-REF>
+												</ECUC-REFERENCE-VALUE>
+											</REFERENCE-VALUES>
+										</ECUC-CONTAINER-VALUE>
+										<ECUC-CONTAINER-VALUE UUID="aa4b3d82-f982-4cc1-b0c2-46076f885cc4">
+											<SHORT-NAME>Random_Fips186</SHORT-NAME>
+											<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyTypes/CryptoKeyType</DEFINITION-REF>
+											<REFERENCE-VALUES>
+												<ECUC-REFERENCE-VALUE>
+													<DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyTypes/CryptoKeyType/CryptoKeyElementRef</DEFINITION-REF>
+													<VALUE-REF DEST="BSW-MODULE-ENTRY">/ActiveEcuC/Crypto_30_LibCv/CryptoKeyElements/Crypto_30_LibCv_Random_Algorithm_Fips186</VALUE-REF>
+												</ECUC-REFERENCE-VALUE>
+												<ECUC-REFERENCE-VALUE>
+													<DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyTypes/CryptoKeyType/CryptoKeyElementRef</DEFINITION-REF>
+													<VALUE-REF DEST="BSW-MODULE-ENTRY">/ActiveEcuC/Crypto_30_LibCv/CryptoKeyElements/Crypto_30_LibCv_Random_Seed</VALUE-REF>
+												</ECUC-REFERENCE-VALUE>
+												<ECUC-REFERENCE-VALUE>
+													<DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyTypes/CryptoKeyType/CryptoKeyElementRef</DEFINITION-REF>
+													<VALUE-REF DEST="BSW-MODULE-ENTRY">/ActiveEcuC/Crypto_30_LibCv/CryptoKeyElements/Crypto_30_LibCv_Random_Data</VALUE-REF>
+												</ECUC-REFERENCE-VALUE>
+											</REFERENCE-VALUES>
+										</ECUC-CONTAINER-VALUE>
+										<ECUC-CONTAINER-VALUE UUID="a45710a7-0b82-4e3e-9578-25b447be2528">
+											<SHORT-NAME>Hash</SHORT-NAME>
+											<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyTypes/CryptoKeyType</DEFINITION-REF>
+											<REFERENCE-VALUES>
+												<ECUC-REFERENCE-VALUE>
+													<DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyTypes/CryptoKeyType/CryptoKeyElementRef</DEFINITION-REF>
+													<VALUE-REF DEST="BSW-MODULE-ENTRY">/ActiveEcuC/Crypto_30_LibCv/CryptoKeyElements/Crypto_30_LibCv_Hash_Result</VALUE-REF>
+												</ECUC-REFERENCE-VALUE>
+											</REFERENCE-VALUES>
+										</ECUC-CONTAINER-VALUE>
+									</SUB-CONTAINERS>
+								</ECUC-CONTAINER-VALUE>
+								<ECUC-CONTAINER-VALUE UUID="54774215-c7f0-4a36-ad31-a6fd2655835e">
+									<SHORT-NAME>CryptoGeneral</SHORT-NAME>
+									<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoGeneral</DEFINITION-REF>
+								</ECUC-CONTAINER-VALUE>
+								<ECUC-CONTAINER-VALUE UUID="8403a3b8-31cf-4692-bdc4-b17d89b59174">
+									<SHORT-NAME>CryptoKeyElements</SHORT-NAME>
+									<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements</DEFINITION-REF>
+									<SUB-CONTAINERS>
+										<ECUC-CONTAINER-VALUE UUID="ec5aaf53-9670-4f55-ae2d-4c5e4e654123">
+											<SHORT-NAME>Crypto_30_LibCv_Signature_Key</SHORT-NAME>
+											<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement</DEFINITION-REF>
+											<PARAMETER-VALUES>
+												<ECUC-NUMERICAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement/CryptoKeyElementId</DEFINITION-REF>
+													<VALUE>1</VALUE>
+												</ECUC-NUMERICAL-PARAM-VALUE>
+											</PARAMETER-VALUES>
+										</ECUC-CONTAINER-VALUE>
+										<ECUC-CONTAINER-VALUE UUID="ceb4399d-90c4-4b86-8b0f-7f1a57f555ca">
+											<SHORT-NAME>Crypto_30_LibCv_Random_Seed</SHORT-NAME>
+											<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement</DEFINITION-REF>
+											<PARAMETER-VALUES>
+												<ECUC-NUMERICAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement/CryptoKeyElementId</DEFINITION-REF>
+													<VALUE>3</VALUE>
+												</ECUC-NUMERICAL-PARAM-VALUE>
+											</PARAMETER-VALUES>
+										</ECUC-CONTAINER-VALUE>
+										<ECUC-CONTAINER-VALUE UUID="37653f4b-d8f6-49f0-8113-5ffe95574e97">
+											<SHORT-NAME>Crypto_30_LibCv_Random_Data</SHORT-NAME>
+											<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement</DEFINITION-REF>
+											<PARAMETER-VALUES>
+												<ECUC-NUMERICAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement/CryptoKeyElementId</DEFINITION-REF>
+													<VALUE>1</VALUE>
+												</ECUC-NUMERICAL-PARAM-VALUE>
+											</PARAMETER-VALUES>
+										</ECUC-CONTAINER-VALUE>
+										<ECUC-CONTAINER-VALUE UUID="22db2301-d42f-4c63-98e2-b375a51c8884">
+											<SHORT-NAME>Crypto_30_LibCv_KeyGenerate_Seed</SHORT-NAME>
+											<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement</DEFINITION-REF>
+											<PARAMETER-VALUES>
+												<ECUC-NUMERICAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement/CryptoKeyElementId</DEFINITION-REF>
+													<VALUE>16</VALUE>
+												</ECUC-NUMERICAL-PARAM-VALUE>
+											</PARAMETER-VALUES>
+										</ECUC-CONTAINER-VALUE>
+										<ECUC-CONTAINER-VALUE UUID="9c04a6ff-b358-4fb4-bb5d-ea6f7a1e5a3b">
+											<SHORT-NAME>Crypto_30_LibCv_KeyGenerate_Key</SHORT-NAME>
+											<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement</DEFINITION-REF>
+											<PARAMETER-VALUES>
+												<ECUC-NUMERICAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement/CryptoKeyElementId</DEFINITION-REF>
+													<VALUE>1</VALUE>
+												</ECUC-NUMERICAL-PARAM-VALUE>
+											</PARAMETER-VALUES>
+										</ECUC-CONTAINER-VALUE>
+										<ECUC-CONTAINER-VALUE UUID="759c0a8a-7f77-4f0e-90e9-421b649700c3">
+											<SHORT-NAME>Crypto_30_LibCv_KeyExchange_SharedValue</SHORT-NAME>
+											<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement</DEFINITION-REF>
+											<PARAMETER-VALUES>
+												<ECUC-NUMERICAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement/CryptoKeyElementId</DEFINITION-REF>
+													<VALUE>1</VALUE>
+												</ECUC-NUMERICAL-PARAM-VALUE>
+											</PARAMETER-VALUES>
+										</ECUC-CONTAINER-VALUE>
+										<ECUC-CONTAINER-VALUE UUID="7bc65a64-e21b-4b7b-a614-a5557921c728">
+											<SHORT-NAME>Crypto_30_LibCv_KeyExchange_PrivKey</SHORT-NAME>
+											<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement</DEFINITION-REF>
+											<PARAMETER-VALUES>
+												<ECUC-NUMERICAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement/CryptoKeyElementId</DEFINITION-REF>
+													<VALUE>9</VALUE>
+												</ECUC-NUMERICAL-PARAM-VALUE>
+											</PARAMETER-VALUES>
+										</ECUC-CONTAINER-VALUE>
+										<ECUC-CONTAINER-VALUE UUID="8b6b99c8-8490-4c5a-8e02-8c57403b9d37">
+											<SHORT-NAME>Crypto_30_LibCv_Mac_Proof</SHORT-NAME>
+											<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement</DEFINITION-REF>
+											<PARAMETER-VALUES>
+												<ECUC-NUMERICAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement/CryptoKeyElementId</DEFINITION-REF>
+													<VALUE>2</VALUE>
+												</ECUC-NUMERICAL-PARAM-VALUE>
+											</PARAMETER-VALUES>
+										</ECUC-CONTAINER-VALUE>
+										<ECUC-CONTAINER-VALUE UUID="9cb7ee84-cf1e-4af8-baa2-fe9e5b2304c4">
+											<SHORT-NAME>Crypto_30_LibCv_KeyDerivation_Salt</SHORT-NAME>
+											<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement</DEFINITION-REF>
+											<PARAMETER-VALUES>
+												<ECUC-NUMERICAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement/CryptoKeyElementId</DEFINITION-REF>
+													<VALUE>13</VALUE>
+												</ECUC-NUMERICAL-PARAM-VALUE>
+											</PARAMETER-VALUES>
+										</ECUC-CONTAINER-VALUE>
+										<ECUC-CONTAINER-VALUE UUID="7e41880c-0adb-411c-9d38-3301b721d46e">
+											<SHORT-NAME>Crypto_30_LibCv_KeyExchange_OwnPubKey</SHORT-NAME>
+											<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement</DEFINITION-REF>
+											<PARAMETER-VALUES>
+												<ECUC-NUMERICAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement/CryptoKeyElementId</DEFINITION-REF>
+													<VALUE>10</VALUE>
+												</ECUC-NUMERICAL-PARAM-VALUE>
+											</PARAMETER-VALUES>
+										</ECUC-CONTAINER-VALUE>
+										<ECUC-CONTAINER-VALUE UUID="ddc2a609-8b8f-445f-ad87-11d845544838">
+											<SHORT-NAME>Crypto_30_LibCv_KeyExchange_Base</SHORT-NAME>
+											<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement</DEFINITION-REF>
+											<PARAMETER-VALUES>
+												<ECUC-NUMERICAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement/CryptoKeyElementId</DEFINITION-REF>
+													<VALUE>8</VALUE>
+												</ECUC-NUMERICAL-PARAM-VALUE>
+											</PARAMETER-VALUES>
+										</ECUC-CONTAINER-VALUE>
+										<ECUC-CONTAINER-VALUE UUID="f5702abe-8355-4751-95b0-0dcf302e67a7">
+											<SHORT-NAME>Crypto_30_LibCv_KeyDerivation_Password</SHORT-NAME>
+											<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement</DEFINITION-REF>
+											<PARAMETER-VALUES>
+												<ECUC-NUMERICAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement/CryptoKeyElementId</DEFINITION-REF>
+													<VALUE>1</VALUE>
+												</ECUC-NUMERICAL-PARAM-VALUE>
+											</PARAMETER-VALUES>
+										</ECUC-CONTAINER-VALUE>
+										<ECUC-CONTAINER-VALUE UUID="dec5d686-4e62-4cc7-8c6d-f01fb17a4f6b">
+											<SHORT-NAME>Crypto_30_LibCv_Cipher_Key</SHORT-NAME>
+											<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement</DEFINITION-REF>
+											<PARAMETER-VALUES>
+												<ECUC-NUMERICAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement/CryptoKeyElementId</DEFINITION-REF>
+													<VALUE>1</VALUE>
+												</ECUC-NUMERICAL-PARAM-VALUE>
+											</PARAMETER-VALUES>
+										</ECUC-CONTAINER-VALUE>
+										<ECUC-CONTAINER-VALUE UUID="0a75950e-1569-475c-aa69-6e09b026bfcc">
+											<SHORT-NAME>Crypto_30_LibCv_Cipher_IV</SHORT-NAME>
+											<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement</DEFINITION-REF>
+											<PARAMETER-VALUES>
+												<ECUC-NUMERICAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement/CryptoKeyElementId</DEFINITION-REF>
+													<VALUE>5</VALUE>
+												</ECUC-NUMERICAL-PARAM-VALUE>
+											</PARAMETER-VALUES>
+										</ECUC-CONTAINER-VALUE>
+										<ECUC-CONTAINER-VALUE UUID="fabbe411-4b9c-4965-909e-a4933f11b63a">
+											<SHORT-NAME>Crypto_30_LibCv_Cipher_Proof</SHORT-NAME>
+											<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement</DEFINITION-REF>
+											<PARAMETER-VALUES>
+												<ECUC-NUMERICAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement/CryptoKeyElementId</DEFINITION-REF>
+													<VALUE>2</VALUE>
+												</ECUC-NUMERICAL-PARAM-VALUE>
+											</PARAMETER-VALUES>
+										</ECUC-CONTAINER-VALUE>
+										<ECUC-CONTAINER-VALUE UUID="c394d141-3a0c-4f6a-ab5a-cfb2862d07f4">
+											<SHORT-NAME>Crypto_30_LibCv_Cipher_2ndKey</SHORT-NAME>
+											<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement</DEFINITION-REF>
+											<PARAMETER-VALUES>
+												<ECUC-NUMERICAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement/CryptoKeyElementId</DEFINITION-REF>
+													<VALUE>6</VALUE>
+												</ECUC-NUMERICAL-PARAM-VALUE>
+											</PARAMETER-VALUES>
+										</ECUC-CONTAINER-VALUE>
+										<ECUC-CONTAINER-VALUE UUID="35741488-f848-4ecc-af8d-fa7f9b7499cc">
+											<SHORT-NAME>Crypto_30_LibCv_Mac_Key</SHORT-NAME>
+											<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement</DEFINITION-REF>
+											<PARAMETER-VALUES>
+												<ECUC-NUMERICAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement/CryptoKeyElementId</DEFINITION-REF>
+													<VALUE>1</VALUE>
+												</ECUC-NUMERICAL-PARAM-VALUE>
+											</PARAMETER-VALUES>
+										</ECUC-CONTAINER-VALUE>
+										<ECUC-CONTAINER-VALUE UUID="8f8b9022-974e-4a80-80a1-9672d1ff79c3">
+											<SHORT-NAME>Crypto_30_LibCv_Hash_Result</SHORT-NAME>
+											<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement</DEFINITION-REF>
+											<PARAMETER-VALUES>
+												<ECUC-NUMERICAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement/CryptoKeyElementId</DEFINITION-REF>
+													<VALUE>1</VALUE>
+												</ECUC-NUMERICAL-PARAM-VALUE>
+											</PARAMETER-VALUES>
+										</ECUC-CONTAINER-VALUE>
+										<ECUC-CONTAINER-VALUE UUID="2278f85a-e446-47d6-9977-45cb99755e8b">
+											<SHORT-NAME>Crypto_30_LibCv_KeyDerive_Algorithm</SHORT-NAME>
+											<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement</DEFINITION-REF>
+											<PARAMETER-VALUES>
+												<ECUC-NUMERICAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement/CryptoKeyElementId</DEFINITION-REF>
+													<VALUE>15</VALUE>
+												</ECUC-NUMERICAL-PARAM-VALUE>
+												<ECUC-TEXTUAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement/CryptoKeyElementInitValue</DEFINITION-REF>
+													<VALUE>0x00</VALUE>
+												</ECUC-TEXTUAL-PARAM-VALUE>
+												<ECUC-NUMERICAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement/CryptoKeyElementSize</DEFINITION-REF>
+													<VALUE>1</VALUE>
+												</ECUC-NUMERICAL-PARAM-VALUE>
+											</PARAMETER-VALUES>
+										</ECUC-CONTAINER-VALUE>
+										<ECUC-CONTAINER-VALUE UUID="b77b5cc2-e849-4d9c-ad69-05a9dc6cc824">
+											<SHORT-NAME>Crypto_30_LibCv_KeyGenerate_Algorithm</SHORT-NAME>
+											<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement</DEFINITION-REF>
+											<PARAMETER-VALUES>
+												<ECUC-NUMERICAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement/CryptoKeyElementId</DEFINITION-REF>
+													<VALUE>17</VALUE>
+												</ECUC-NUMERICAL-PARAM-VALUE>
+												<ECUC-TEXTUAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement/CryptoKeyElementInitValue</DEFINITION-REF>
+													<VALUE>0x00</VALUE>
+												</ECUC-TEXTUAL-PARAM-VALUE>
+												<ECUC-NUMERICAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement/CryptoKeyElementSize</DEFINITION-REF>
+													<VALUE>1</VALUE>
+												</ECUC-NUMERICAL-PARAM-VALUE>
+											</PARAMETER-VALUES>
+										</ECUC-CONTAINER-VALUE>
+										<ECUC-CONTAINER-VALUE UUID="31f031ee-1311-4f94-8c04-73947bd9272b">
+											<SHORT-NAME>Crypto_30_LibCv_KeyExchange_Algorithm_X25519</SHORT-NAME>
+											<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement</DEFINITION-REF>
+											<PARAMETER-VALUES>
+												<ECUC-NUMERICAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement/CryptoKeyElementId</DEFINITION-REF>
+													<VALUE>12</VALUE>
+												</ECUC-NUMERICAL-PARAM-VALUE>
+												<ECUC-TEXTUAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement/CryptoKeyElementInitValue</DEFINITION-REF>
+													<VALUE>0x00</VALUE>
+												</ECUC-TEXTUAL-PARAM-VALUE>
+												<ECUC-NUMERICAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement/CryptoKeyElementSize</DEFINITION-REF>
+													<VALUE>1</VALUE>
+												</ECUC-NUMERICAL-PARAM-VALUE>
+											</PARAMETER-VALUES>
+										</ECUC-CONTAINER-VALUE>
+										<ECUC-CONTAINER-VALUE UUID="6f85eb16-c754-44d1-a270-841ad02c547c">
+											<SHORT-NAME>Crypto_30_LibCv_Random_Algorithm_Fips186</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">4</L-4>
+											</LONG-NAME>
+											<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement</DEFINITION-REF>
+											<PARAMETER-VALUES>
+												<ECUC-NUMERICAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement/CryptoKeyElementId</DEFINITION-REF>
+													<VALUE>4</VALUE>
+												</ECUC-NUMERICAL-PARAM-VALUE>
+												<ECUC-TEXTUAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement/CryptoKeyElementInitValue</DEFINITION-REF>
+													<VALUE>0x00</VALUE>
+												</ECUC-TEXTUAL-PARAM-VALUE>
+												<ECUC-NUMERICAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement/CryptoKeyElementSize</DEFINITION-REF>
+													<VALUE>1</VALUE>
+												</ECUC-NUMERICAL-PARAM-VALUE>
+											</PARAMETER-VALUES>
+										</ECUC-CONTAINER-VALUE>
+									</SUB-CONTAINERS>
+								</ECUC-CONTAINER-VALUE>
+							</CONTAINERS>
+						</ECUC-MODULE-CONFIGURATION-VALUES>
+						<ECUC-MODULE-CONFIGURATION-VALUES UUID="b1820846-3feb-4ece-982d-dc4980cca7b1">
+							<SHORT-NAME>Crypto_Rec</SHORT-NAME>
+							<DEFINITION-REF DEST="ECUC-MODULE-DEF">/MICROSAR/Crypto_30_LibCv/Crypto</DEFINITION-REF>
+							<CONTAINERS>
+								<ECUC-CONTAINER-VALUE UUID="c1f49ce1-4561-4575-91dd-e1259b589b1c">
+									<SHORT-NAME>CryptoKeyElements</SHORT-NAME>
+									<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements</DEFINITION-REF>
+									<SUB-CONTAINERS>
+										<ECUC-CONTAINER-VALUE UUID="56856e78-bacb-4a7d-937a-66cc76f86a77">
+											<SHORT-NAME>Crypto_30_LibCv_Signature_Key</SHORT-NAME>
+											<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement</DEFINITION-REF>
+											<PARAMETER-VALUES>
+												<ECUC-NUMERICAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement/CryptoKeyElementSize</DEFINITION-REF>
+													<VALUE>32</VALUE>
+												</ECUC-NUMERICAL-PARAM-VALUE>
+											</PARAMETER-VALUES>
+										</ECUC-CONTAINER-VALUE>
+										<ECUC-CONTAINER-VALUE UUID="b5254c33-0a2a-4403-8e99-fd48db1de008">
+											<SHORT-NAME>Crypto_30_LibCv_Random_Seed</SHORT-NAME>
+											<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement</DEFINITION-REF>
+											<PARAMETER-VALUES>
+												<ECUC-NUMERICAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement/CryptoKeyElementSize</DEFINITION-REF>
+													<VALUE>20</VALUE>
+												</ECUC-NUMERICAL-PARAM-VALUE>
+											</PARAMETER-VALUES>
+										</ECUC-CONTAINER-VALUE>
+										<ECUC-CONTAINER-VALUE UUID="112f19f4-1532-42ff-92e3-7bf4d0a74c90">
+											<SHORT-NAME>Crypto_30_LibCv_Random_Data</SHORT-NAME>
+											<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement</DEFINITION-REF>
+											<PARAMETER-VALUES>
+												<ECUC-NUMERICAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement/CryptoKeyElementSize</DEFINITION-REF>
+													<VALUE>20</VALUE>
+												</ECUC-NUMERICAL-PARAM-VALUE>
+											</PARAMETER-VALUES>
+										</ECUC-CONTAINER-VALUE>
+										<ECUC-CONTAINER-VALUE UUID="cab81646-0e53-4cf5-8af6-6a167f34816b">
+											<SHORT-NAME>Crypto_30_LibCv_KeyGenerate_Seed</SHORT-NAME>
+											<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement</DEFINITION-REF>
+											<PARAMETER-VALUES>
+												<ECUC-NUMERICAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement/CryptoKeyElementSize</DEFINITION-REF>
+													<VALUE>16</VALUE>
+												</ECUC-NUMERICAL-PARAM-VALUE>
+											</PARAMETER-VALUES>
+										</ECUC-CONTAINER-VALUE>
+										<ECUC-CONTAINER-VALUE UUID="9fc75ab8-5756-4c0b-89f8-8ab10dd6b37f">
+											<SHORT-NAME>Crypto_30_LibCv_KeyGenerate_Key</SHORT-NAME>
+											<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement</DEFINITION-REF>
+											<PARAMETER-VALUES>
+												<ECUC-NUMERICAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement/CryptoKeyElementSize</DEFINITION-REF>
+													<VALUE>16</VALUE>
+												</ECUC-NUMERICAL-PARAM-VALUE>
+											</PARAMETER-VALUES>
+										</ECUC-CONTAINER-VALUE>
+										<ECUC-CONTAINER-VALUE UUID="0b4da7d7-b8ff-4b4f-ae7e-f32e76a06987">
+											<SHORT-NAME>Crypto_30_LibCv_KeyExchange_SharedValue</SHORT-NAME>
+											<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement</DEFINITION-REF>
+											<PARAMETER-VALUES>
+												<ECUC-NUMERICAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement/CryptoKeyElementSize</DEFINITION-REF>
+													<VALUE>32</VALUE>
+												</ECUC-NUMERICAL-PARAM-VALUE>
+											</PARAMETER-VALUES>
+										</ECUC-CONTAINER-VALUE>
+										<ECUC-CONTAINER-VALUE UUID="87708c6f-77ea-4963-980e-e4f11197cfc7">
+											<SHORT-NAME>Crypto_30_LibCv_KeyExchange_PrivKey</SHORT-NAME>
+											<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement</DEFINITION-REF>
+											<PARAMETER-VALUES>
+												<ECUC-NUMERICAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement/CryptoKeyElementSize</DEFINITION-REF>
+													<VALUE>32</VALUE>
+												</ECUC-NUMERICAL-PARAM-VALUE>
+											</PARAMETER-VALUES>
+										</ECUC-CONTAINER-VALUE>
+										<ECUC-CONTAINER-VALUE UUID="7cdaccbe-00db-44a5-8abd-596cd4f29d38">
+											<SHORT-NAME>Crypto_30_LibCv_Mac_Proof</SHORT-NAME>
+											<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement</DEFINITION-REF>
+											<PARAMETER-VALUES>
+												<ECUC-NUMERICAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement/CryptoKeyElementSize</DEFINITION-REF>
+													<VALUE>48</VALUE>
+												</ECUC-NUMERICAL-PARAM-VALUE>
+											</PARAMETER-VALUES>
+										</ECUC-CONTAINER-VALUE>
+										<ECUC-CONTAINER-VALUE UUID="36f71a42-dc23-4363-9e8d-ad51b8592616">
+											<SHORT-NAME>Crypto_30_LibCv_KeyDerivation_Salt</SHORT-NAME>
+											<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement</DEFINITION-REF>
+											<PARAMETER-VALUES>
+												<ECUC-NUMERICAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement/CryptoKeyElementSize</DEFINITION-REF>
+													<VALUE>16</VALUE>
+												</ECUC-NUMERICAL-PARAM-VALUE>
+											</PARAMETER-VALUES>
+										</ECUC-CONTAINER-VALUE>
+										<ECUC-CONTAINER-VALUE UUID="a28accd4-6aca-4a5a-a0e0-73f164acd79d">
+											<SHORT-NAME>Crypto_30_LibCv_KeyExchange_PartnerPubKey</SHORT-NAME>
+											<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement</DEFINITION-REF>
+											<PARAMETER-VALUES>
+												<ECUC-NUMERICAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement/CryptoKeyElementSize</DEFINITION-REF>
+													<VALUE>32</VALUE>
+												</ECUC-NUMERICAL-PARAM-VALUE>
+											</PARAMETER-VALUES>
+										</ECUC-CONTAINER-VALUE>
+										<ECUC-CONTAINER-VALUE UUID="208748a6-baa0-4d30-85c4-3d0ffca103ac">
+											<SHORT-NAME>Crypto_30_LibCv_KeyExchange_OwnPubKey</SHORT-NAME>
+											<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement</DEFINITION-REF>
+											<PARAMETER-VALUES>
+												<ECUC-NUMERICAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement/CryptoKeyElementSize</DEFINITION-REF>
+													<VALUE>32</VALUE>
+												</ECUC-NUMERICAL-PARAM-VALUE>
+											</PARAMETER-VALUES>
+										</ECUC-CONTAINER-VALUE>
+										<ECUC-CONTAINER-VALUE UUID="3cdb6b7e-b22f-4e2b-aa96-fc6cdfaa1f3c">
+											<SHORT-NAME>Crypto_30_LibCv_KeyExchange_Base</SHORT-NAME>
+											<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement</DEFINITION-REF>
+											<PARAMETER-VALUES>
+												<ECUC-NUMERICAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement/CryptoKeyElementSize</DEFINITION-REF>
+													<VALUE>16</VALUE>
+												</ECUC-NUMERICAL-PARAM-VALUE>
+											</PARAMETER-VALUES>
+										</ECUC-CONTAINER-VALUE>
+										<ECUC-CONTAINER-VALUE UUID="147791da-c4bf-4e8d-a970-fac0150557ba">
+											<SHORT-NAME>Crypto_30_LibCv_KeyDerivation_Password</SHORT-NAME>
+											<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement</DEFINITION-REF>
+											<PARAMETER-VALUES>
+												<ECUC-NUMERICAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement/CryptoKeyElementSize</DEFINITION-REF>
+													<VALUE>16</VALUE>
+												</ECUC-NUMERICAL-PARAM-VALUE>
+											</PARAMETER-VALUES>
+										</ECUC-CONTAINER-VALUE>
+										<ECUC-CONTAINER-VALUE UUID="0641682f-7f5f-4b02-96a9-500b19ed3e98">
+											<SHORT-NAME>Crypto_30_LibCv_KeyDerivation_DerivedKey</SHORT-NAME>
+											<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement</DEFINITION-REF>
+											<PARAMETER-VALUES>
+												<ECUC-NUMERICAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement/CryptoKeyElementSize</DEFINITION-REF>
+													<VALUE>16</VALUE>
+												</ECUC-NUMERICAL-PARAM-VALUE>
+											</PARAMETER-VALUES>
+										</ECUC-CONTAINER-VALUE>
+										<ECUC-CONTAINER-VALUE UUID="71b626bb-f933-4b27-ba43-03f7bf89c047">
+											<SHORT-NAME>Crypto_30_LibCv_Cipher_Key</SHORT-NAME>
+											<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement</DEFINITION-REF>
+											<PARAMETER-VALUES>
+												<ECUC-NUMERICAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement/CryptoKeyElementSize</DEFINITION-REF>
+													<VALUE>16</VALUE>
+												</ECUC-NUMERICAL-PARAM-VALUE>
+											</PARAMETER-VALUES>
+										</ECUC-CONTAINER-VALUE>
+										<ECUC-CONTAINER-VALUE UUID="69cae43b-bf2d-4366-ac5f-453b71243b7c">
+											<SHORT-NAME>Crypto_30_LibCv_Cipher_IV</SHORT-NAME>
+											<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement</DEFINITION-REF>
+											<PARAMETER-VALUES>
+												<ECUC-NUMERICAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement/CryptoKeyElementSize</DEFINITION-REF>
+													<VALUE>16</VALUE>
+												</ECUC-NUMERICAL-PARAM-VALUE>
+											</PARAMETER-VALUES>
+										</ECUC-CONTAINER-VALUE>
+										<ECUC-CONTAINER-VALUE UUID="d625fa71-5d58-4482-a05d-1eadac2dd7bc">
+											<SHORT-NAME>Crypto_30_LibCv_Cipher_Proof</SHORT-NAME>
+											<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement</DEFINITION-REF>
+											<PARAMETER-VALUES>
+												<ECUC-NUMERICAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement/CryptoKeyElementSize</DEFINITION-REF>
+													<VALUE>48</VALUE>
+												</ECUC-NUMERICAL-PARAM-VALUE>
+											</PARAMETER-VALUES>
+										</ECUC-CONTAINER-VALUE>
+										<ECUC-CONTAINER-VALUE UUID="f451d21b-143b-4553-867b-c1ccfa955d72">
+											<SHORT-NAME>Crypto_30_LibCv_Cipher_2ndKey</SHORT-NAME>
+											<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement</DEFINITION-REF>
+											<PARAMETER-VALUES>
+												<ECUC-NUMERICAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement/CryptoKeyElementSize</DEFINITION-REF>
+													<VALUE>16</VALUE>
+												</ECUC-NUMERICAL-PARAM-VALUE>
+											</PARAMETER-VALUES>
+										</ECUC-CONTAINER-VALUE>
+										<ECUC-CONTAINER-VALUE UUID="9e0c3bfa-ed24-45f8-81ce-933fbd576048">
+											<SHORT-NAME>Crypto_30_LibCv_Mac_Key</SHORT-NAME>
+											<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement</DEFINITION-REF>
+											<PARAMETER-VALUES>
+												<ECUC-NUMERICAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement/CryptoKeyElementSize</DEFINITION-REF>
+													<VALUE>16</VALUE>
+												</ECUC-NUMERICAL-PARAM-VALUE>
+											</PARAMETER-VALUES>
+										</ECUC-CONTAINER-VALUE>
+										<ECUC-CONTAINER-VALUE UUID="4a778df6-c22b-42cf-9348-dbc7858f2558">
+											<SHORT-NAME>Crypto_30_LibCv_Hash_Result</SHORT-NAME>
+											<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement</DEFINITION-REF>
+											<PARAMETER-VALUES>
+												<ECUC-NUMERICAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement/CryptoKeyElementSize</DEFINITION-REF>
+													<VALUE>20</VALUE>
+												</ECUC-NUMERICAL-PARAM-VALUE>
+											</PARAMETER-VALUES>
+										</ECUC-CONTAINER-VALUE>
+										<ECUC-CONTAINER-VALUE UUID="550eeeeb-f2ee-4161-9f15-fecea13d296d">
+											<SHORT-NAME>Crypto_30_LibCv_KeyDerive_Algorithm</SHORT-NAME>
+											<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement</DEFINITION-REF>
+										</ECUC-CONTAINER-VALUE>
+										<ECUC-CONTAINER-VALUE UUID="c317c38c-0d80-46da-bd89-ef79d0893062">
+											<SHORT-NAME>Crypto_30_LibCv_KeyGenerate_Algorithm</SHORT-NAME>
+											<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement</DEFINITION-REF>
+										</ECUC-CONTAINER-VALUE>
+										<ECUC-CONTAINER-VALUE UUID="4eb095ba-5920-410e-815f-c074dc2cb7a0">
+											<SHORT-NAME>Crypto_30_LibCv_KeyExchange_Algorithm_X25519</SHORT-NAME>
+											<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement</DEFINITION-REF>
+										</ECUC-CONTAINER-VALUE>
+										<ECUC-CONTAINER-VALUE UUID="6bde4a3a-e911-437f-8b80-57706b18ee01">
+											<SHORT-NAME>Crypto_30_LibCv_Random_Algorithm_Fips186</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">4</L-4>
+											</LONG-NAME>
+											<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyElements/CryptoKeyElement</DEFINITION-REF>
+										</ECUC-CONTAINER-VALUE>
+									</SUB-CONTAINERS>
+								</ECUC-CONTAINER-VALUE>
+								<ECUC-CONTAINER-VALUE UUID="67991ea3-70c5-4aeb-ac83-1dc7e2d600ad">
+									<SHORT-NAME>CryptoKeyTypes</SHORT-NAME>
+									<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoKeyTypes</DEFINITION-REF>
+								</ECUC-CONTAINER-VALUE>
+								<ECUC-CONTAINER-VALUE UUID="b47b49ba-b9a4-44ae-8fea-98502f842cd3">
+									<SHORT-NAME>CryptoDriverObjects</SHORT-NAME>
+									<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoDriverObjects</DEFINITION-REF>
+									<SUB-CONTAINERS>
+										<ECUC-CONTAINER-VALUE UUID="dca3f416-508f-4749-87f2-7ab1716e0654">
+											<SHORT-NAME>Crypto_30_LibCv</SHORT-NAME>
+											<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoDriverObjects/CryptoDriverObject</DEFINITION-REF>
+											<PARAMETER-VALUES>
+												<ECUC-NUMERICAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoDriverObjects/CryptoDriverObject/CryptoDriverObjectId</DEFINITION-REF>
+													<VALUE>1</VALUE>
+												</ECUC-NUMERICAL-PARAM-VALUE>
+												<ECUC-NUMERICAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Crypto_30_LibCv/Crypto/CryptoDriverObjects/CryptoDriverObject/CryptoDriverObjectQueueSize</DEFINITION-REF>
+													<VALUE>1</VALUE>
+												</ECUC-NUMERICAL-PARAM-VALUE>
+											</PARAMETER-VALUES>
+										</ECUC-CONTAINER-VALUE>
+									</SUB-CONTAINERS>
+								</ECUC-CONTAINER-VALUE>
+							</CONTAINERS>
+						</ECUC-MODULE-CONFIGURATION-VALUES>
+					</ELEMENTS>
+				</AR-PACKAGE>
+			</AR-PACKAGES>
+		</AR-PACKAGE>
+	</AR-PACKAGES>
+</AUTOSAR>

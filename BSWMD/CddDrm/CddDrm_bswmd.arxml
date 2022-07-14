@@ -1,0 +1,1697 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+***********************************************************************************************************************
+COPYRIGHT
+===============================================================================
+Copyright (c) 2015 by Vector Informatik GmbH.                                         All rights reserved.
+
+    This software is copyright protected and proprietary to Vector Informatik GmbH.
+    Vector Informatik GmbH grants to you only those rights as set out in the license conditions.
+    All other rights remain with Vector Informatik GmbH.
+===============================================================================
+FILE DESCRIPTION
+===============================================================================
+File:           Drm_bswmd.arxml
+Component:   Cdd_Asr4Drm      
+Module:         Drm
+Generator:     Configurator5
+Description:    -
+*********************************************************************************************************************** 
+-->
+<AUTOSAR xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-0-3.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://autosar.org/schema/r4.0">
+	<AR-PACKAGES>
+		<AR-PACKAGE UUID="de0bf0c3-8ad8-45cf-ab53-e85126ac5b65">
+			<SHORT-NAME>MICROSAR</SHORT-NAME>
+			<AR-PACKAGES>
+				<AR-PACKAGE UUID="68b75e53-eb4c-4b0b-8ab4-e75c522b4d49">
+					<SHORT-NAME>CddDrm</SHORT-NAME>
+					<ELEMENTS>
+						<ECUC-MODULE-DEF UUID="8ef18457-138d-4cb8-a935-71398135f4d1">
+							<SHORT-NAME>Cdd</SHORT-NAME>
+							<DESC>
+								<L-2 L="EN">Configuration of the Drm (Diagnostic Request Manager) module.</L-2>
+							</DESC>
+							<CATEGORY>VENDOR_SPECIFIC_MODULE_DEFINITION</CATEGORY>
+							<ADMIN-DATA>
+								<DOC-REVISIONS>
+									<DOC-REVISION>
+										<REVISION-LABEL>1.00.00</REVISION-LABEL>
+										<STATE>beta</STATE>
+										<ISSUED-BY>visade</ISSUED-BY>
+										<DATE>2015-12-11T02:15:55+01:00</DATE>
+										<MODIFICATIONS>
+											<MODIFICATION>
+												<CHANGE>
+													<L-2 L="EN">Initial creation</L-2>
+												</CHANGE>
+												<REASON>
+													<L-2 L="EN">initial</L-2>
+												</REASON>
+											</MODIFICATION>
+										</MODIFICATIONS>
+									</DOC-REVISION>
+								</DOC-REVISIONS>
+							</ADMIN-DATA>
+							<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+							<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+							<API-SERVICE-PREFIX>CddDrm</API-SERVICE-PREFIX>
+							<REFINED-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/AUTOSAR/EcucDefs/Cdd</REFINED-MODULE-DEF-REF>
+							<SUPPORTED-CONFIG-VARIANTS>
+								<SUPPORTED-CONFIG-VARIANT>VARIANT-PRE-COMPILE</SUPPORTED-CONFIG-VARIANT>
+							</SUPPORTED-CONFIG-VARIANTS>
+							<CONTAINERS>
+								<ECUC-PARAM-CONF-CONTAINER-DEF UUID="6955b44e-52f3-4ed8-b5f9-4acef8f14041">
+									<SHORT-NAME>CddComStackContribution</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Contribution of COM Stack modules.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:postBuildSelectableChangeable">false</SD>
+												<SD GID="DV:postBuildNotDeletable">false</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+									<MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+									<SUB-CONTAINERS>
+										<!-- Container Definition: CddComIfUpperLayerContribution -->
+										<!-- Container Definition: CddComMLowerLayerContribution -->
+										<!-- Container Definition: CddGenericNmLowerLayerContribution -->
+										<!-- Container Definition: CddPduRLowerLayerContribution -->
+										<ECUC-PARAM-CONF-CONTAINER-DEF UUID="532822de-b65a-420c-8fe3-9ea01f3d1b34">
+											<SHORT-NAME>CddPduRLowerLayerContribution</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">PduR Lower Layer Contribution</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">Parameters that are necessary for the configuration of a Complex Driver that serves as the LowerLayer of the Pdu Router module.</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:CfgPostBuild">
+														<SD GID="DV:postBuildSelectableChangeable">false</SD>
+														<SD GID="DV:postBuildNotDeletable">false</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+											<MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+											<SUB-CONTAINERS>
+												<!-- Container Definition: CddPduRLowerLayerRxPdu -->
+												<ECUC-PARAM-CONF-CONTAINER-DEF UUID="ca84fe63-00b2-4cac-82bb-fc3a5b4bbe0b">
+													<SHORT-NAME>CddPduRLowerLayerRxPdu</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">PduR Lower Layer Rx Pdu</L-4>
+													</LONG-NAME>
+													<DESC>
+														<L-2 L="EN">Rx PDU that is received by the Complex Driver and forwarded to the PduR.
+
+CddPhysicalRequests</L-2>
+													</DESC>
+													<ADMIN-DATA>
+														<SDGS>
+															<SDG GID="DV:CfgPostBuild">
+																<SD GID="DV:postBuildSelectableChangeable">false</SD>
+																<SD GID="DV:postBuildNotDeletable">false</SD>
+															</SDG>
+														</SDGS>
+													</ADMIN-DATA>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+													<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+													<MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+													<PARAMETERS>
+														<!-- PARAMETER DEFINITION: CddPduRLowerLayerHandleId -->
+														<ECUC-INTEGER-PARAM-DEF UUID="324b80a2-1679-4340-b029-8278bc6e5d47">
+															<SHORT-NAME>CddPduRLowerLayerHandleId</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">PduR Lower Layer Handle Id</L-4>
+															</LONG-NAME>
+															<DESC>
+																<L-2 L="EN">ECU wide unique, symbolic handle for the Pdu.</L-2>
+															</DESC>
+															<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+															<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+															<IMPLEMENTATION-CONFIG-CLASSES>
+																<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															</IMPLEMENTATION-CONFIG-CLASSES>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+															<REQUIRES-INDEX>false</REQUIRES-INDEX>
+															<SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+															<DEFAULT-VALUE>0</DEFAULT-VALUE>
+															<MAX>65535</MAX>
+															<MIN>0</MIN>
+														</ECUC-INTEGER-PARAM-DEF>
+													</PARAMETERS>
+													<REFERENCES>
+														<!-- Reference Definition: CddPduRLowerLayerPduRef -->
+														<ECUC-REFERENCE-DEF UUID="521e514b-06c0-49db-8836-2a7608834437">
+															<SHORT-NAME>CddPduRLowerLayerPduRef</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">PduR Lower Layer Pdu Ref</L-4>
+															</LONG-NAME>
+															<DESC>
+																<L-2 L="EN">Reference to the "global" Pdu structure to allow harmonization of handle IDs in the COM-Stack.</L-2>
+															</DESC>
+															<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+															<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+															<IMPLEMENTATION-CONFIG-CLASSES>
+																<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															</IMPLEMENTATION-CONFIG-CLASSES>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+															<REQUIRES-INDEX>false</REQUIRES-INDEX>
+															<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucPduCollection/Pdu</DESTINATION-REF>
+														</ECUC-REFERENCE-DEF>
+													</REFERENCES>
+												</ECUC-PARAM-CONF-CONTAINER-DEF>
+												<!-- Container Definition: CddPduRLowerLayerTxPdu -->
+												<ECUC-PARAM-CONF-CONTAINER-DEF UUID="61732b7d-fdc1-4731-af04-ef22893064cb">
+													<SHORT-NAME>CddPduRLowerLayerTxPdu</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">PduR Lower Layer Tx Pdu</L-4>
+													</LONG-NAME>
+													<DESC>
+														<L-2 L="EN">Tx PDU that is received by the Complex Driver from the PduR.
+
+CddPhysicalResponses</L-2>
+													</DESC>
+													<ADMIN-DATA>
+														<SDGS>
+															<SDG GID="DV:CfgPostBuild">
+																<SD GID="DV:postBuildSelectableChangeable">false</SD>
+																<SD GID="DV:postBuildNotDeletable">false</SD>
+															</SDG>
+														</SDGS>
+													</ADMIN-DATA>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+													<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+													<MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+													<PARAMETERS>
+														<!-- PARAMETER DEFINITION: CddPduRLowerLayerHandleId -->
+														<ECUC-INTEGER-PARAM-DEF UUID="2727df8c-9176-46c2-b692-b2b5610cff86">
+															<SHORT-NAME>CddPduRLowerLayerHandleId</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">PduR Lower Layer Handle Id</L-4>
+															</LONG-NAME>
+															<DESC>
+																<L-2 L="EN">ECU wide unique, symbolic handle for the Pdu.</L-2>
+															</DESC>
+															<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+															<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+															<IMPLEMENTATION-CONFIG-CLASSES>
+																<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															</IMPLEMENTATION-CONFIG-CLASSES>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+															<REQUIRES-INDEX>false</REQUIRES-INDEX>
+															<SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+															<DEFAULT-VALUE>0</DEFAULT-VALUE>
+															<MAX>65535</MAX>
+															<MIN>0</MIN>
+														</ECUC-INTEGER-PARAM-DEF>
+													</PARAMETERS>
+													<REFERENCES>
+														<!-- Reference Definition: CddPduRLowerLayerPduRef -->
+														<ECUC-REFERENCE-DEF UUID="deb53710-e51b-41f7-ad3e-8aae2a187c8c">
+															<SHORT-NAME>CddPduRLowerLayerPduRef</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">PduR Lower Layer Pdu Ref</L-4>
+															</LONG-NAME>
+															<DESC>
+																<L-2 L="EN">Reference to the "global" Pdu structure to allow harmonization of handle IDs in the COM-Stack.</L-2>
+															</DESC>
+															<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+															<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+															<IMPLEMENTATION-CONFIG-CLASSES>
+																<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															</IMPLEMENTATION-CONFIG-CLASSES>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+															<REQUIRES-INDEX>false</REQUIRES-INDEX>
+															<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucPduCollection/Pdu</DESTINATION-REF>
+														</ECUC-REFERENCE-DEF>
+													</REFERENCES>
+												</ECUC-PARAM-CONF-CONTAINER-DEF>
+											</SUB-CONTAINERS>
+										</ECUC-PARAM-CONF-CONTAINER-DEF>
+										<!-- Container Definition: CddPduRUpperLayerContribution -->
+										<!-- Container Definition: CddJ1939RmContribution-->
+										<!-- Container Definition: CddSoAdUpperLayerContribution -->
+									</SUB-CONTAINERS>
+								</ECUC-PARAM-CONF-CONTAINER-DEF>
+								<ECUC-PARAM-CONF-CONTAINER-DEF UUID="f0aa7514-6446-4323-9f8f-96d11d54005b">
+									<SHORT-NAME>CddGeneral</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This container contains the general configuration (parameters) of the Drm.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:postBuildSelectableChangeable">false</SD>
+												<SD GID="DV:postBuildNotDeletable">false</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+									<PARAMETERS>
+										<ECUC-INTEGER-PARAM-DEF UUID="05461a0a-73ae-4c88-8a39-2515ac76a169">
+											<SHORT-NAME>CddNumberOfChannels</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">This value specifies the limit of active connections at the same time.
+
+Note: If ECU Detection is enabled, the minimum value of this parameter is 2.</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:CfgPostBuild">
+														<SD GID="DV:variantMultiplicityPBL">false</SD>
+													</SDG>
+													<SDG GID="DV:Display">
+														<SD GID="DV:DefaultFormat">DEC</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>1</DEFAULT-VALUE>
+											<MAX>253</MAX>
+											<MIN>1</MIN>
+										</ECUC-INTEGER-PARAM-DEF>
+										<ECUC-FLOAT-PARAM-DEF UUID="bf769443-c644-4319-ae67-998faf576225">
+											<SHORT-NAME>CddTaskTime</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">MainTimer Function Period</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">This value specifies the cyclic call of the main function.</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:Display">
+														<SD GID="DV:BaseUnit">SEC</SD>
+														<SD GID="DV:Unit">MSEC</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>0.01</DEFAULT-VALUE>
+											<MAX>0.255</MAX>
+											<MIN>0.01</MIN>
+										</ECUC-FLOAT-PARAM-DEF>
+										<ECUC-BOOLEAN-PARAM-DEF UUID="a5eea150-9cec-4c4d-94ff-dbe6e0c4b4f2">
+											<SHORT-NAME>CddDevErrorDetect</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">Development Error Detect</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">Activate/Deactivate the Development Error Detection and Notification.
+
+If this option is enabled, integration errors are reported to the DET module (e.g. calling APIs with invalid arguments that would cause a malfunction of the Drm module).
+In a production system this option can be disabled as all code should be tested to correctly use the Drm API.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>true</DEFAULT-VALUE>
+										</ECUC-BOOLEAN-PARAM-DEF>
+										<ECUC-BOOLEAN-PARAM-DEF UUID="1bed8137-8dc9-4fbe-b924-64542c172ccf">
+											<SHORT-NAME>CddVersionInfoApi</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">This switch turns the API to get the component version ON or OFF.
+true: Version API ON
+false: Version API OFF</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>false</DEFAULT-VALUE>
+										</ECUC-BOOLEAN-PARAM-DEF>
+										<ECUC-BOOLEAN-PARAM-DEF UUID="fad15a7b-f7fc-45d3-a520-f3dda55729eb">
+											<SHORT-NAME>CddCancelApi</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">If enabled the Drm supports an API to cancel an ongoing request processing.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>false</DEFAULT-VALUE>
+										</ECUC-BOOLEAN-PARAM-DEF>
+										<ECUC-FLOAT-PARAM-DEF UUID="305c8ff4-6ae8-46a7-89f7-dcfa408ac8ee">
+											<SHORT-NAME>CddRequestDelayTime</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">This value specifies the delay time before the next request is sent.
+
+The timer is reloaded with this value when all request data was successful copied to the PduR.
+Restrictions: If connection separation time is configured this parameter cannot be activated too.</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:Display">
+														<SD GID="DV:BaseUnit">SEC</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>0.2</DEFAULT-VALUE>
+											<MAX>2.55</MAX>
+											<MIN>0.01</MIN>
+										</ECUC-FLOAT-PARAM-DEF>
+										<ECUC-BOOLEAN-PARAM-DEF UUID="1b7e70e1-0cbb-4c2a-b3a2-ddebba17236d">
+											<SHORT-NAME>CddUseNvm</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">If enabled the Drm stores data in non-volatile memory, e.g. ECU detection.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>true</DEFAULT-VALUE>
+										</ECUC-BOOLEAN-PARAM-DEF>
+										<ECUC-BOOLEAN-PARAM-DEF UUID="8173e45a-4811-4b21-b887-0234db855237">
+											<SHORT-NAME>CddEcuDetectionSupport</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter switches the ECU Detection on or off.
+
+Note: If this switch is set to true, the UseNvm parameter and EcuDetection container is mandatory and must be configured.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>false</DEFAULT-VALUE>
+										</ECUC-BOOLEAN-PARAM-DEF>
+										<ECUC-STRING-PARAM-DEF UUID="5a70d1ec-45d5-4ad3-a75b-3c97bccfe4e1">
+											<SHORT-NAME>CddHeaderFileInclusion</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Name of the header file(s) to be included by the Drm module containing the used C-callback declarations.
+
+The different callout configurations allow to specify a C-Callback. Therefore you need to add a header file here with the appropriate declaration of the function.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+										</ECUC-STRING-PARAM-DEF>
+										<ECUC-BOOLEAN-PARAM-DEF UUID="78ab6009-6f2a-4d95-8b8c-856175546924">
+											<SHORT-NAME>CddCancelReceiveApi</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter defines whether Receive Cancellation is enabled or disabled.
+
+If this switch is disabled, the API 'CddDrm_CancelReceive' is not available.
+The cancel receive feature is not supported but needed by DCM.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>false</DEFAULT-VALUE>
+										</ECUC-BOOLEAN-PARAM-DEF>
+										<ECUC-BOOLEAN-PARAM-DEF UUID="30c60dee-3cc0-4a3a-a07d-fbf256b2b232">
+											<SHORT-NAME>CddCancelTransmitApi</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter defines whether Transmit Cancellation is enabled or disabled.
+
+If this switch is disabled, the API 'CddDrm_CancelTransmit' is not available, reducing resource consumption.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>false</DEFAULT-VALUE>
+										</ECUC-BOOLEAN-PARAM-DEF>
+										<ECUC-BOOLEAN-PARAM-DEF UUID="3ab62312-b0e6-42ff-bead-30ef6e04e5dc">
+											<SHORT-NAME>CddChangeParameterApi</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter defines whether Change Parameter is enabled or disabled.
+
+If this switch is disabled, the API 'CddDrm_ChangeParameter' is not available.
+The change parameter feature is not supported but needed by DCM.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>false</DEFAULT-VALUE>
+										</ECUC-BOOLEAN-PARAM-DEF>
+										<ECUC-STRING-PARAM-DEF UUID="e310b7e5-32a2-48d5-b4b4-8b79ac21fa8b">
+											<SHORT-NAME>CddUserConfigFile</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Reference to an external text file that will be included during generation to CddDrm_Cfg.h.
+The content of the user configuration file will be added at the end of the generated module configuration file and allows altering or extending the generated code.
+Caution: User configuration files can cause the software module to malfunction and must only be used with great care!</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<ECUC-STRING-PARAM-DEF-VARIANTS>
+												<ECUC-STRING-PARAM-DEF-CONDITIONAL>
+													<DEFAULT-VALUE>CddDrm_UserConfig.ucf</DEFAULT-VALUE>
+												</ECUC-STRING-PARAM-DEF-CONDITIONAL>
+											</ECUC-STRING-PARAM-DEF-VARIANTS>
+										</ECUC-STRING-PARAM-DEF>
+										<ECUC-BOOLEAN-PARAM-DEF UUID="b5a63722-9257-4102-96cd-f29448c4e313">
+											<SHORT-NAME>CddUseFirewallUserDefinedServices</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter enables a callback so the application can verify if the user defined service is allowed or not.
+
+Note: If user defined services enabled in firewall, the callback is mandatory.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>false</DEFAULT-VALUE>
+										</ECUC-BOOLEAN-PARAM-DEF>
+										<ECUC-INTEGER-PARAM-DEF UUID="5cf589c2-5ad9-4608-a21c-de01878d2aa1">
+											<SHORT-NAME>CddCompiledConfigId</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Change this value to force the Drm to clear all NV data on next initialization (startup).
+
+This is useful if the flash eeprom emulation is not cleared during flashing of a new software version.
+If this value is missing the Drm will clear its NV data, if the component major or minor version will change.</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:Display">
+														<SD GID="DV:DefaultFormat">DEC</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>0</DEFAULT-VALUE>
+											<MAX>65535</MAX>
+											<MIN>0</MIN>
+										</ECUC-INTEGER-PARAM-DEF>
+									</PARAMETERS>
+									<SUB-CONTAINERS>
+										<ECUC-PARAM-CONF-CONTAINER-DEF UUID="f1cb9c33-e950-4ccf-b74f-3211c22948a7">
+											<SHORT-NAME>CddDedicatedApiServiceSupport</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Dedicated Diagnostic Service APIs</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:CfgPostBuild">
+														<SD GID="DV:postBuildSelectableChangeable">false</SD>
+														<SD GID="DV:postBuildNotDeletable">false</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+											<PARAMETERS>
+												<ECUC-BOOLEAN-PARAM-DEF UUID="8ee7253a-52a5-4a00-8f8f-2d2ed257f2d3">
+													<SHORT-NAME>CddSupportSvcApi_10</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Support Service 0x10</L-4>
+													</LONG-NAME>
+													<DESC>
+														<L-2 L="EN">DiagnosticSessionControl
+true:   Service enabled
+false:  Service disabled</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>true</DEFAULT-VALUE>
+												</ECUC-BOOLEAN-PARAM-DEF>
+												<ECUC-BOOLEAN-PARAM-DEF UUID="a85ba513-51c4-497a-9d8a-5a90376d8f55">
+													<SHORT-NAME>CddSupportSvcApi_11</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Support Service 0x11</L-4>
+													</LONG-NAME>
+													<DESC>
+														<L-2 L="EN">ECU Reset
+true:   Service enabled
+false:  Service disabled</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>true</DEFAULT-VALUE>
+												</ECUC-BOOLEAN-PARAM-DEF>
+												<ECUC-BOOLEAN-PARAM-DEF UUID="5c76032d-de06-4075-a41a-29fcaeb79324">
+													<SHORT-NAME>CddSupportSvcApi_22</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Support Service 0x22</L-4>
+													</LONG-NAME>
+													<DESC>
+														<L-2 L="EN">ReadDataByIdentifier
+true:   Service enabled
+false:  Service disabled</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>true</DEFAULT-VALUE>
+												</ECUC-BOOLEAN-PARAM-DEF>
+												<ECUC-BOOLEAN-PARAM-DEF UUID="0ba78a97-9106-4942-b680-da58e4c83083">
+													<SHORT-NAME>CddSupportSvcApi_27</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Support Service 0x27</L-4>
+													</LONG-NAME>
+													<DESC>
+														<L-2 L="EN">SecurityAccess
+true:   Service enabled
+false:  Service disabled</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>true</DEFAULT-VALUE>
+												</ECUC-BOOLEAN-PARAM-DEF>
+												<ECUC-BOOLEAN-PARAM-DEF UUID="f8e7b964-63b6-4ae6-8dc2-a44666012de5">
+													<SHORT-NAME>CddSupportSvcApi_28</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Support Service 0x28</L-4>
+													</LONG-NAME>
+													<DESC>
+														<L-2 L="EN">CommunicationControl
+true:   Service enabled
+false:  Service disabled</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>true</DEFAULT-VALUE>
+												</ECUC-BOOLEAN-PARAM-DEF>
+												<ECUC-BOOLEAN-PARAM-DEF UUID="6f613aed-f524-4a98-9a92-c58ea1c06bd6">
+													<SHORT-NAME>CddSupportSvcApi_3E</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Support Service 0x3E</L-4>
+													</LONG-NAME>
+													<DESC>
+														<L-2 L="EN">TesterPresent
+true:   Service enabled
+false:  Service disabled</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>true</DEFAULT-VALUE>
+												</ECUC-BOOLEAN-PARAM-DEF>
+												<ECUC-BOOLEAN-PARAM-DEF UUID="6a3dcc7a-60c1-4435-8f53-4118803b8d80">
+													<SHORT-NAME>CddSupportSvcApi_85</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Support Service 0x85</L-4>
+													</LONG-NAME>
+													<DESC>
+														<L-2 L="EN">ControlDTCSetting
+true:   Service enabled
+false:  Service disabled</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>true</DEFAULT-VALUE>
+												</ECUC-BOOLEAN-PARAM-DEF>
+												<ECUC-BOOLEAN-PARAM-DEF UUID="2ee2ca0c-927b-4f1a-9821-e138a7f6c038">
+													<SHORT-NAME>CddSupportSvcApi_1904</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Support Service 0x1904</L-4>
+													</LONG-NAME>
+													<DESC>
+														<L-2 L="EN">ReadDTCInformation sub-function: 0x04
+true:   Service enabled
+false:  Service disabled</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>true</DEFAULT-VALUE>
+												</ECUC-BOOLEAN-PARAM-DEF>
+												<ECUC-BOOLEAN-PARAM-DEF UUID="df808341-b326-4818-92bc-e27d7d2f589c">
+													<SHORT-NAME>CddSupportSvcApi_31</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Support Service 0x31</L-4>
+													</LONG-NAME>
+													<DESC>
+														<L-2 L="EN">RoutineControl
+true:   Service enabled
+false:  Service disabled</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>true</DEFAULT-VALUE>
+												</ECUC-BOOLEAN-PARAM-DEF>
+												<ECUC-BOOLEAN-PARAM-DEF UUID="0c3a3e0b-e8c4-4638-ada5-9629165a8924">
+													<SHORT-NAME>CddSupportSvcApi_34</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Support Service 0x34</L-4>
+													</LONG-NAME>
+													<DESC>
+														<L-2 L="EN">RequestDownload
+true:   Service enabled
+false:  Service disabled</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>true</DEFAULT-VALUE>
+												</ECUC-BOOLEAN-PARAM-DEF>
+												<ECUC-BOOLEAN-PARAM-DEF UUID="c46a6e6c-0eee-4d59-9265-eb6fa341012f">
+													<SHORT-NAME>CddSupportSvcApi_36</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Support Service 0x36</L-4>
+													</LONG-NAME>
+													<DESC>
+														<L-2 L="EN">TransferData
+true:   Service enabled
+false:  Service disabled</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>true</DEFAULT-VALUE>
+												</ECUC-BOOLEAN-PARAM-DEF>
+												<ECUC-BOOLEAN-PARAM-DEF UUID="f704ed98-6f62-4366-8081-384b2e943cd0">
+													<SHORT-NAME>CddSupportSvcApi_37</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Support Service 0x37</L-4>
+													</LONG-NAME>
+													<DESC>
+														<L-2 L="EN">RequestTransferExit
+true:   Service enabled
+false:  Service disabled</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>true</DEFAULT-VALUE>
+												</ECUC-BOOLEAN-PARAM-DEF>
+												<ECUC-BOOLEAN-PARAM-DEF UUID="1c51a220-a252-43dd-9b70-751ab2ddfee6">
+													<SHORT-NAME>CddSupportSvcApi_1902</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Support Service 0x1902</L-4>
+													</LONG-NAME>
+													<DESC>
+														<L-2 L="EN">ReadDTCInformation sub-function: 0x02
+true:   Service enabled
+false:  Service disabled</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>true</DEFAULT-VALUE>
+												</ECUC-BOOLEAN-PARAM-DEF>
+											</PARAMETERS>
+										</ECUC-PARAM-CONF-CONTAINER-DEF>
+										<ECUC-PARAM-CONF-CONTAINER-DEF UUID="7dd1fe52-06c6-432e-95d7-3d422301223d">
+											<SHORT-NAME>CddNvRamBlockId</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">NvRam BlockId</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">This container represents a non-volatile memory block used by the Drm.
+
+If no permanent storage is required, no block needs to be configured.</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:CfgPostBuild">
+														<SD GID="DV:postBuildSelectableChangeable">false</SD>
+														<SD GID="DV:postBuildNotDeletable">false</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+											<PARAMETERS>
+												<ECUC-ENUMERATION-PARAM-DEF UUID="97dbd034-b73a-4610-8e62-aa2612a40f9e">
+													<SHORT-NAME>CddNvRamBlockIdType</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">NvRam BlockId Type</L-4>
+													</LONG-NAME>
+													<DESC>
+														<L-2 L="EN">Usage kind of this NvBlock.
+
+This parameter is used to identify which block data needs to be stored.</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>DRM_NVBLOCK_ECU_DETECTION</DEFAULT-VALUE>
+													<LITERALS>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="5e6937ce-bafe-439b-beb7-a826ace68ec2">
+															<SHORT-NAME>DRM_NVBLOCK_ECU_DETECTION</SHORT-NAME>
+															<ORIGIN>Vector Informatik</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+													</LITERALS>
+												</ECUC-ENUMERATION-PARAM-DEF>
+											</PARAMETERS>
+											<REFERENCES>
+												<ECUC-SYMBOLIC-NAME-REFERENCE-DEF UUID="c2496cd8-3df3-4ebb-96db-c34abc1f6df1">
+													<SHORT-NAME>CddNvRamBlockIdRef</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">NvRam BlockId Ref</L-4>
+													</LONG-NAME>
+													<DESC>
+														<L-2 L="EN">This reference contains the link to a non-volatile memory block.</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/NvM/NvMBlockDescriptor</DESTINATION-REF>
+												</ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+											</REFERENCES>
+										</ECUC-PARAM-CONF-CONTAINER-DEF>
+										<ECUC-PARAM-CONF-CONTAINER-DEF UUID="da5c81f5-82ca-4bc7-b18d-70b4b4182670">
+											<SHORT-NAME>CddCallback</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">This container contain all callbacks that can be configured in the Drm.</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:CfgPostBuild">
+														<SD GID="DV:postBuildSelectableChangeable">false</SD>
+														<SD GID="DV:postBuildNotDeletable">false</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+											<PARAMETERS>
+												<ECUC-FUNCTION-NAME-DEF UUID="99a03c19-bcaa-40ff-953b-5b95df952c1c">
+													<SHORT-NAME>CddResponseNotification</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Specifies the function name in the application which is called when the request processing has finished. 
+E.g. a response was received or a timeout has occured.</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<ECUC-FUNCTION-NAME-DEF-VARIANTS>
+														<ECUC-FUNCTION-NAME-DEF-CONDITIONAL>
+															<DEFAULT-VALUE>Drm_ResponseNotification</DEFAULT-VALUE>
+														</ECUC-FUNCTION-NAME-DEF-CONDITIONAL>
+													</ECUC-FUNCTION-NAME-DEF-VARIANTS>
+												</ECUC-FUNCTION-NAME-DEF>
+												<ECUC-FUNCTION-NAME-DEF UUID="ed4f34a2-05d2-4d0d-8d86-40bd8f3426ec">
+													<SHORT-NAME>CddTxConfirmation</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Specifies the function name in the application which is called when all request data was transferred to the PduR.
+
+Note: Callback is only called, if request is triggered by application.</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+												</ECUC-FUNCTION-NAME-DEF>
+												<ECUC-FUNCTION-NAME-DEF UUID="db8ec623-86eb-4377-a980-1514fb3df6a2">
+													<SHORT-NAME>CddEcuDetectionFinished</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">This callback will be triggered from Drm after ECU Detection is finished.
+
+Note: Do not configure this callback, if ECU Detection is disabled.</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+												</ECUC-FUNCTION-NAME-DEF>
+												<ECUC-FUNCTION-NAME-DEF UUID="22b7de33-20fe-4bab-9d6f-03efe02d8c2f">
+													<SHORT-NAME>CddFirewallUserCallback</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Specifies a callback to the application, to verify if user defined service is allowed or not.</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+												</ECUC-FUNCTION-NAME-DEF>
+											</PARAMETERS>
+										</ECUC-PARAM-CONF-CONTAINER-DEF>
+										<ECUC-PARAM-CONF-CONTAINER-DEF UUID="db1ab843-8e07-477c-97d8-64f6d4158afc">
+											<SHORT-NAME>CddEcuDetection</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">This container contains all parameters related to the ECU detection.</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:CfgPostBuild">
+														<SD GID="DV:postBuildSelectableChangeable">false</SD>
+														<SD GID="DV:postBuildNotDeletable">false</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+											<PARAMETERS>
+												<ECUC-INTEGER-PARAM-DEF UUID="5a2c1e86-ded6-4b57-8289-4a23cfadc8de">
+													<SHORT-NAME>CddDetectionRequest</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">This value specifies the request bytes, which will be used to detect ECUs.</L-2>
+													</DESC>
+													<ADMIN-DATA>
+														<SDGS>
+															<SDG GID="DV:Display">
+																<SD GID="DV:DefaultFormat">HEX</SD>
+															</SDG>
+														</SDGS>
+													</ADMIN-DATA>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>7</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<REQUIRES-INDEX>true</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<MAX>255</MAX>
+													<MIN>0</MIN>
+												</ECUC-INTEGER-PARAM-DEF>
+												<ECUC-INTEGER-PARAM-DEF UUID="bdb1349c-0993-4aa8-9ae1-83392d840d4a">
+													<SHORT-NAME>CddDetectionBufferSize</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Response Buffer Size</L-4>
+													</LONG-NAME>
+													<DESC>
+														<L-2 L="EN">Specifies the Drm internal response buffer, that is only used for ECU Detection.
+
+Note: If the buffer is not large enough to receive the response data, the respective ECU is set to not detected.</L-2>
+													</DESC>
+													<ADMIN-DATA>
+														<SDGS>
+															<SDG GID="DV:Display">
+																<SD GID="DV:DefaultFormat">DEC</SD>
+															</SDG>
+														</SDGS>
+													</ADMIN-DATA>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>7</DEFAULT-VALUE>
+													<MAX>255</MAX>
+													<MIN>3</MIN>
+												</ECUC-INTEGER-PARAM-DEF>
+											</PARAMETERS>
+										</ECUC-PARAM-CONF-CONTAINER-DEF>
+									</SUB-CONTAINERS>
+								</ECUC-PARAM-CONF-CONTAINER-DEF>
+								<ECUC-PARAM-CONF-CONTAINER-DEF UUID="2b8ef97f-5c29-4bbb-a0a7-88f8891b1214">
+									<SHORT-NAME>CddConfig</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This container contains communication related configuration (parameters).</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:postBuildSelectableChangeable">false</SD>
+												<SD GID="DV:postBuildNotDeletable">false</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+									<SUB-CONTAINERS>
+										<ECUC-PARAM-CONF-CONTAINER-DEF UUID="1b3f2e9e-361d-48e9-b24d-b875521a8d2f">
+											<SHORT-NAME>CddConnection</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">This container contains the connection specific configuration (parameters) of the Drm. A connection represents a diagnosable ECU in the vehicle network.</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:CfgPostBuild">
+														<SD GID="DV:postBuildSelectableChangeable">false</SD>
+														<SD GID="DV:postBuildNotDeletable">false</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>254</UPPER-MULTIPLICITY>
+											<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+											<PARAMETERS>
+												<ECUC-FLOAT-PARAM-DEF UUID="0d8232e8-6a1c-4b37-a342-9b98c83a21a5">
+													<SHORT-NAME>CddP2</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">P2 Time</L-4>
+													</LONG-NAME>
+													<DESC>
+														<L-2 L="EN">This value specifies the default P2 Time.</L-2>
+													</DESC>
+													<ADMIN-DATA>
+														<SDGS>
+															<SDG GID="DV:Display">
+																<SD GID="DV:BaseUnit">SEC</SD>
+																<SD GID="DV:Unit">MSEC</SD>
+															</SDG>
+														</SDGS>
+													</ADMIN-DATA>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>0.5</DEFAULT-VALUE>
+													<MAX>2.55</MAX>
+													<MIN>0.01</MIN>
+												</ECUC-FLOAT-PARAM-DEF>
+												<ECUC-FLOAT-PARAM-DEF UUID="c4b65ba6-25e2-4ca1-8014-d66a7931b930">
+													<SHORT-NAME>CddP2Extended</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">P2 Extended Time</L-4>
+													</LONG-NAME>
+													<DESC>
+														<L-2 L="EN">This value specifies the extended P2 time.</L-2>
+													</DESC>
+													<ADMIN-DATA>
+														<SDGS>
+															<SDG GID="DV:Display">
+																<SD GID="DV:BaseUnit">SEC</SD>
+																<SD GID="DV:Unit">MSEC</SD>
+															</SDG>
+														</SDGS>
+													</ADMIN-DATA>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>2</DEFAULT-VALUE>
+													<MAX>2.55</MAX>
+													<MIN>0.01</MIN>
+												</ECUC-FLOAT-PARAM-DEF>
+												<ECUC-INTEGER-PARAM-DEF UUID="fbc9eeeb-e746-44f7-b976-583894913499">
+													<SHORT-NAME>CddMaxRCRRP</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Max. allowed RCRRP</L-4>
+													</LONG-NAME>
+													<DESC>
+														<L-2 L="EN">This value specifies the maximum number of allowed RCRRP messages.</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>10</DEFAULT-VALUE>
+													<MAX>255</MAX>
+													<MIN>1</MIN>
+												</ECUC-INTEGER-PARAM-DEF>
+												<ECUC-FLOAT-PARAM-DEF UUID="e623abc8-7a18-47cb-89f7-c0fc3e6fa39e">
+													<SHORT-NAME>CddSeparationTime</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">This value specifies the delay time between a diagnostic response and the next possible request for this connection.
+The timer is reloaded with this value when the allocated channel for this connection was closed. The channel can be closed for the following reasons:
+- Tx error between Drm and PduR
+- Rx error between Drm and PduR
+- Response timeout
+- External tester detected
+- Cancel API(s) has been called
+- RCRRP limit reached
+Restrictions: If RequestDelayTime is configured, the connection separation time cannot be activated too.
+</L-2>
+													</DESC>
+													<ADMIN-DATA>
+														<SDGS>
+															<SDG GID="DV:Display">
+																<SD GID="DV:BaseUnit">SEC</SD>
+															</SDG>
+														</SDGS>
+													</ADMIN-DATA>
+													<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>0.2</DEFAULT-VALUE>
+													<MAX>2.55</MAX>
+													<MIN>0.01</MIN>
+												</ECUC-FLOAT-PARAM-DEF>
+											</PARAMETERS>
+											<REFERENCES>
+												<ECUC-REFERENCE-DEF UUID="31e7b243-5fd2-409d-ad9d-ebf3dc550220">
+													<SHORT-NAME>CddFirewallListRef</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">This value references the firewall list.</L-2>
+													</DESC>
+													<ADMIN-DATA>
+														<SDGS>
+															<SDG GID="DV:CfgPostBuild">
+																<SD GID="DV:variantMultiplicityPBL">false</SD>
+															</SDG>
+														</SDGS>
+													</ADMIN-DATA>
+													<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/CddDrm/Cdd/CddConfig/CddFirewallLists</DESTINATION-REF>
+												</ECUC-REFERENCE-DEF>
+											</REFERENCES>
+											<SUB-CONTAINERS>
+												<ECUC-PARAM-CONF-CONTAINER-DEF UUID="7b5a9dfd-db2b-45e4-8cff-67a6ae3e39a2">
+													<SHORT-NAME>CddPhysical</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">The physical request and response Pdu for the ECU.</L-2>
+													</DESC>
+													<ADMIN-DATA>
+														<SDGS>
+															<SDG GID="DV:CfgPostBuild">
+																<SD GID="DV:postBuildSelectableChangeable">false</SD>
+																<SD GID="DV:postBuildNotDeletable">false</SD>
+															</SDG>
+														</SDGS>
+													</ADMIN-DATA>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+													<REFERENCES>
+														<ECUC-REFERENCE-DEF UUID="a1f8981f-805b-443b-a1bb-41e8750a1f6e">
+															<SHORT-NAME>CddPhysicalResponseRef</SHORT-NAME>
+															<DESC>
+																<L-2 L="EN">Response Pdu that is received by the Drm from the PduR.</L-2>
+															</DESC>
+															<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+															<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+															<IMPLEMENTATION-CONFIG-CLASSES>
+																<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															</IMPLEMENTATION-CONFIG-CLASSES>
+															<ORIGIN>Vector Informatik</ORIGIN>
+															<REQUIRES-INDEX>false</REQUIRES-INDEX>
+															<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/CddDrm/Cdd/CddComStackContribution/CddPduRLowerLayerContribution/CddPduRLowerLayerTxPdu</DESTINATION-REF>
+														</ECUC-REFERENCE-DEF>
+														<ECUC-REFERENCE-DEF UUID="d13c0dfd-f510-4cec-8db0-c4413d232064">
+															<SHORT-NAME>CddPhysicalRequestRef</SHORT-NAME>
+															<DESC>
+																<L-2 L="EN">Request Pdu that is forwarded to the PduR.</L-2>
+															</DESC>
+															<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+															<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+															<IMPLEMENTATION-CONFIG-CLASSES>
+																<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															</IMPLEMENTATION-CONFIG-CLASSES>
+															<ORIGIN>Vector Informatik</ORIGIN>
+															<REQUIRES-INDEX>false</REQUIRES-INDEX>
+															<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/CddDrm/Cdd/CddComStackContribution/CddPduRLowerLayerContribution/CddPduRLowerLayerRxPdu</DESTINATION-REF>
+														</ECUC-REFERENCE-DEF>
+													</REFERENCES>
+												</ECUC-PARAM-CONF-CONTAINER-DEF>
+											</SUB-CONTAINERS>
+										</ECUC-PARAM-CONF-CONTAINER-DEF>
+										<ECUC-PARAM-CONF-CONTAINER-DEF UUID="176f5cfe-fb2f-4348-a484-9b50d9d6c593">
+											<SHORT-NAME>CddFirewallLists</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">This container contains the firewall configuration (parameters) of the Drm.</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:CfgPostBuild">
+														<SD GID="DV:postBuildSelectableChangeable">false</SD>
+														<SD GID="DV:postBuildNotDeletable">false</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>65535</UPPER-MULTIPLICITY>
+											<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+											<PARAMETERS>
+												<ECUC-ENUMERATION-PARAM-DEF UUID="e2da6c4e-d0a0-40c5-80ca-69e91332e805">
+													<SHORT-NAME>CddFirewallServiceIds</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Diagnostic services configured in this blacklist will be rejected for service processing.</L-2>
+													</DESC>
+													<ADMIN-DATA>
+														<SDGS>
+															<SDG GID="DV:CfgPostBuild">
+																<SD GID="DV:variantMultiplicityPBL">false</SD>
+															</SDG>
+														</SDGS>
+													</ADMIN-DATA>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<LITERALS>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="ec858f65-2e4b-45ed-b608-e4a39241f5a7">
+															<SHORT-NAME>Service_0x10</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">Diagnostic Session Control</L-4>
+															</LONG-NAME>
+															<ORIGIN>Vector Informatik</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="747cf0ff-e274-4418-b99d-db408bbdf788">
+															<SHORT-NAME>Service_0x11</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">ECU Reset</L-4>
+															</LONG-NAME>
+															<ORIGIN>Vector Informatik</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="70c4d561-b169-4465-be95-a74b0374a4d4">
+															<SHORT-NAME>Service_0x14</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">Clear Diagnostic Information</L-4>
+															</LONG-NAME>
+															<ORIGIN>Vector Informatik</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="04e54916-822d-41a5-ba67-5aab6a166154">
+															<SHORT-NAME>Service_0x19</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">Read DTC Information</L-4>
+															</LONG-NAME>
+															<ORIGIN>Vector Informatik</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="061e05f2-5437-4ce3-b76b-55a6e0be3d29">
+															<SHORT-NAME>Service_0x22</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">Read Data By Identifier</L-4>
+															</LONG-NAME>
+															<ORIGIN>Vector Informatik</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="7e2cb7f3-0ddc-402a-9961-ee5d6df979c6">
+															<SHORT-NAME>Service_0x23</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">Read Memory By Address</L-4>
+															</LONG-NAME>
+															<ORIGIN>Vector Informatik</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="eae575e0-9174-42ac-9304-062b976397aa">
+															<SHORT-NAME>Service_0x24</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">Read Scaling Data By Identifier</L-4>
+															</LONG-NAME>
+															<ORIGIN>Vector Informatik</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="c0d2d928-a7cc-427c-b702-14716bd706ee">
+															<SHORT-NAME>Service_0x27</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">Security Access</L-4>
+															</LONG-NAME>
+															<ORIGIN>Vector Informatik</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="ac4450ff-2df3-40b3-97ea-55cd6967babf">
+															<SHORT-NAME>Service_0x28</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">Communication Control</L-4>
+															</LONG-NAME>
+															<ORIGIN>Vector Informatik</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="c79eda1e-6567-488d-9626-6cff4768ed18">
+															<SHORT-NAME>Service_0x2A</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">Read Data By Periodic Identifier</L-4>
+															</LONG-NAME>
+															<ORIGIN>Vector Informatik</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="b5af788d-84de-4759-8104-b63e1541bd68">
+															<SHORT-NAME>Service_0x2C</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">Dynamically Define Data Identifier</L-4>
+															</LONG-NAME>
+															<ORIGIN>Vector Informatik</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="4c26d435-3f65-4e4e-9928-cd790053150b">
+															<SHORT-NAME>Service_0x2E</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">Write Data By Identifier</L-4>
+															</LONG-NAME>
+															<ORIGIN>Vector Informatik</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="569aacc1-9110-4713-9573-a770031219a7">
+															<SHORT-NAME>Service_0x2F</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">Input Output Control By Identifier</L-4>
+															</LONG-NAME>
+															<ORIGIN>Vector Informatik</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="d79d6812-7c85-4953-a655-b6fb537ecdac">
+															<SHORT-NAME>Service_0x31</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">Routine Control</L-4>
+															</LONG-NAME>
+															<ORIGIN>Vector Informatik</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="74173671-b964-49f4-8b67-ebdd0da95ff2">
+															<SHORT-NAME>Service_0x34</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">Request Download</L-4>
+															</LONG-NAME>
+															<ORIGIN>Vector Informatik</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="6bb4b4ff-43d1-422f-aef5-e2f499da8bdc">
+															<SHORT-NAME>Service_0x35</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">Request Upload</L-4>
+															</LONG-NAME>
+															<ORIGIN>Vector Informatik</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="aa098329-aa64-4e16-9870-5039c67d71d7">
+															<SHORT-NAME>Service_0x36</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">Transfer Data</L-4>
+															</LONG-NAME>
+															<ORIGIN>Vector Informatik</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="9532331c-c817-420a-96f6-d988cd60b4b1">
+															<SHORT-NAME>Service_0x37</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">Request Transfer Exit</L-4>
+															</LONG-NAME>
+															<ORIGIN>Vector Informatik</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="5da9b14c-75a7-4565-9ab3-e59dda5dd4e3">
+															<SHORT-NAME>Service_0x38</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">Request File Transfer</L-4>
+															</LONG-NAME>
+															<ORIGIN>Vector Informatik</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="4b9be53c-c19b-4f17-b88a-97a54bc6f3a7">
+															<SHORT-NAME>Service_0x3D</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">Write Memory By Address</L-4>
+															</LONG-NAME>
+															<ORIGIN>Vector Informatik</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="aa9e2be4-c271-44c1-9528-9d50b289240f">
+															<SHORT-NAME>Service_0x3E</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">Tester Present</L-4>
+															</LONG-NAME>
+															<ORIGIN>Vector Informatik</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="6577cfbc-c5c0-4702-adfe-8ea333299a9d">
+															<SHORT-NAME>Service_0x83</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">Access Timing Parameter</L-4>
+															</LONG-NAME>
+															<ORIGIN>Vector Informatik</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="8c79d629-fde5-42b6-93aa-4272a261168d">
+															<SHORT-NAME>Service_0x84</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">Secured Transmission</L-4>
+															</LONG-NAME>
+															<ORIGIN>Vector Informatik</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="5bb110c9-84f7-49d1-bb4f-60e6d1af27a4">
+															<SHORT-NAME>Service_0x85</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">Control DTC Settings</L-4>
+															</LONG-NAME>
+															<ORIGIN>Vector Informatik</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="a80035fd-62da-409e-984b-2499e25b52ba">
+															<SHORT-NAME>Service_0x86</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">Response on Event</L-4>
+															</LONG-NAME>
+															<ORIGIN>Vector Informatik</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="bc4f4fb4-238b-44a6-bd9a-5c4936dbf8d7">
+															<SHORT-NAME>Service_0x87</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">Link control</L-4>
+															</LONG-NAME>
+															<ORIGIN>Vector Informatik</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+													</LITERALS>
+												</ECUC-ENUMERATION-PARAM-DEF>
+											</PARAMETERS>
+										</ECUC-PARAM-CONF-CONTAINER-DEF>
+									</SUB-CONTAINERS>
+								</ECUC-PARAM-CONF-CONTAINER-DEF>
+							</CONTAINERS>
+						</ECUC-MODULE-DEF>
+						<ECUC-MODULE-CONFIGURATION-VALUES UUID="0e0efb6b-c531-4692-a2d6-8356a3eda87f">
+							<SHORT-NAME>Cdd_Pre</SHORT-NAME>
+							<DEFINITION-REF DEST="ECUC-MODULE-DEF">/MICROSAR/CddDrm/Cdd</DEFINITION-REF>
+							<CONTAINERS></CONTAINERS>
+						</ECUC-MODULE-CONFIGURATION-VALUES>
+						<ECUC-MODULE-CONFIGURATION-VALUES UUID="bc801c13-7ed5-49fa-8a6e-30cb7a02fae3">
+							<SHORT-NAME>Cdd_Rec</SHORT-NAME>
+							<DEFINITION-REF DEST="ECUC-MODULE-DEF">/MICROSAR/CddDrm/Cdd</DEFINITION-REF>
+							<CONTAINERS></CONTAINERS>
+						</ECUC-MODULE-CONFIGURATION-VALUES>
+						<BSW-IMPLEMENTATION UUID="b0b37cab-b706-4244-8860-9b9feb47f046">
+							<SHORT-NAME>Cdd_Impl</SHORT-NAME>
+							<PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+							<SW-VERSION>1.00.00</SW-VERSION>
+							<USED-CODE-GENERATOR>DaVinci Configurator</USED-CODE-GENERATOR>
+							<VENDOR-ID>30</VENDOR-ID>
+							<AR-RELEASE-VERSION>4.01.02</AR-RELEASE-VERSION>
+							<BEHAVIOR-REF DEST="BSW-INTERNAL-BEHAVIOR">/MICROSAR/CddDrm_ib_bswmd/BswModuleDescriptions/CddDrm/CddDrmBehavior</BEHAVIOR-REF>
+							<PRECONFIGURED-CONFIGURATION-REFS>
+								<PRECONFIGURED-CONFIGURATION-REF DEST="ECUC-MODULE-CONFIGURATION-VALUES">/MICROSAR/CddDrm/Cdd_Pre</PRECONFIGURED-CONFIGURATION-REF>
+							</PRECONFIGURED-CONFIGURATION-REFS>
+							<RECOMMENDED-CONFIGURATION-REFS>
+								<RECOMMENDED-CONFIGURATION-REF DEST="ECUC-MODULE-CONFIGURATION-VALUES">/MICROSAR/CddDrm/Cdd_Rec</RECOMMENDED-CONFIGURATION-REF>
+							</RECOMMENDED-CONFIGURATION-REFS>
+							<VENDOR-SPECIFIC-MODULE-DEF-REFS>
+								<VENDOR-SPECIFIC-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/MICROSAR/CddDrm/Cdd</VENDOR-SPECIFIC-MODULE-DEF-REF>
+							</VENDOR-SPECIFIC-MODULE-DEF-REFS>
+						</BSW-IMPLEMENTATION>
+					</ELEMENTS>
+				</AR-PACKAGE>
+			</AR-PACKAGES>
+		</AR-PACKAGE>
+	</AR-PACKAGES>
+</AUTOSAR>

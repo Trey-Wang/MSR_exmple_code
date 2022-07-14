@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-0-3.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://autosar.org/schema/r4.0">
+	<AR-PACKAGES>
+		<AR-PACKAGE UUID="9ffdca3d-84c9-424c-b218-76b8f5b7801f">
+			<SHORT-NAME>MICROSAR</SHORT-NAME>
+			<AR-PACKAGES>
+				<AR-PACKAGE UUID="f2dffae2-92bf-4175-bdde-b5e31b9162eb">
+					<SHORT-NAME>Can_CanoeemuCanoe</SHORT-NAME>
+					<ELEMENTS>
+						<ECUC-MODULE-CONFIGURATION-VALUES UUID="b39d96bf-6619-417b-af55-e3cc83460acc">
+							<SHORT-NAME>Can_Pre</SHORT-NAME>
+							<DEFINITION-REF DEST="ECUC-MODULE-DEF">/MICROSAR/Can_CanoeemuCanoe/Can</DEFINITION-REF>
+							<CONTAINERS />
+						</ECUC-MODULE-CONFIGURATION-VALUES>
+					</ELEMENTS>
+				</AR-PACKAGE>
+			</AR-PACKAGES>
+		</AR-PACKAGE>
+	</AR-PACKAGES>
+</AUTOSAR>

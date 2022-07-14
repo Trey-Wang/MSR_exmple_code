@@ -1,0 +1,1723 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+***********************************************************************************************************************
+COPYRIGHT
+===============================================================================
+Copyright (c) 2013 by Vector Informatik GmbH.                                       All rights reserved.
+
+    This software is copyright protected and proprietary to Vector Informatik GmbH.
+    Vector Informatik GmbH grants to you only those rights as set out in the license conditions.
+    All other rights remain with Vector Informatik GmbH.
+===============================================================================
+THIS IS BETA VERSION === THIS IS BETA VERSION === THIS IS BETA VERSION === THIS IS BETA
+===============================================================================
+File:           AvTp_bswmd.arxml
+Module:         AvTp
+*********************************************************************************************************************** 
+-->
+<AUTOSAR xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-2-1.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://autosar.org/schema/r4.0">
+	<AR-PACKAGES>
+		<AR-PACKAGE UUID="4a1f5e4e-1b37-4ab3-9756-524419074e03">
+			<SHORT-NAME>MICROSAR</SHORT-NAME>
+			<ELEMENTS>
+				<BSW-IMPLEMENTATION UUID="a8b750ba-c2b5-46cc-8239-152f0f2b53df">
+					<SHORT-NAME>AvTp_Impl</SHORT-NAME>
+					<PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+					<SW-VERSION>5.00.00</SW-VERSION>
+					<USED-CODE-GENERATOR>DaVinci Configurator</USED-CODE-GENERATOR>
+					<VENDOR-ID>30</VENDOR-ID>
+					<AR-RELEASE-VERSION>4.02.01</AR-RELEASE-VERSION>
+					<BEHAVIOR-REF DEST="BSW-INTERNAL-BEHAVIOR">/MICROSAR/AvTp_ib_bswmd/BswModuleDescriptions/AvTp/AvTpBehavior</BEHAVIOR-REF>
+					<PRECONFIGURED-CONFIGURATION-REFS>
+						<PRECONFIGURED-CONFIGURATION-REF DEST="ECUC-MODULE-CONFIGURATION-VALUES">/MICROSAR/AvTp_Pre</PRECONFIGURED-CONFIGURATION-REF>
+					</PRECONFIGURED-CONFIGURATION-REFS>
+					<RECOMMENDED-CONFIGURATION-REFS>
+						<RECOMMENDED-CONFIGURATION-REF DEST="ECUC-MODULE-CONFIGURATION-VALUES">/MICROSAR/AvTp_Rec</RECOMMENDED-CONFIGURATION-REF>
+					</RECOMMENDED-CONFIGURATION-REFS>
+					<VENDOR-SPECIFIC-MODULE-DEF-REFS>
+						<VENDOR-SPECIFIC-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/MICROSAR/AvTp</VENDOR-SPECIFIC-MODULE-DEF-REF>
+					</VENDOR-SPECIFIC-MODULE-DEF-REFS>
+				</BSW-IMPLEMENTATION>
+				<ECUC-MODULE-DEF UUID="889a9162-a99a-49ba-8bd5-31dc7f4fa2eb">
+					<SHORT-NAME>AvTp</SHORT-NAME>
+					<LONG-NAME>
+						<L-4 L="EN">Audio Video Transport Protocol</L-4>
+					</LONG-NAME>
+					<DESC>
+						<L-2 L="EN">Configuration of the Audio Video Transport Protocol AvTp defined by IEEE 1722</L-2>
+					</DESC>
+					<CATEGORY>VENDOR_SPECIFIC_MODULE_DEFINITION</CATEGORY>
+					<ADMIN-DATA>
+						<DOC-REVISIONS>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.00.01</REVISION-LABEL>
+								<STATE>beta</STATE>
+								<ISSUED-BY>vislje</ISSUED-BY>
+								<DATE>2014-09-16T09:24:21+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Sw Updated</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00078402</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.00.2</REVISION-LABEL>
+								<STATE>beta</STATE>
+								<ISSUED-BY>vislje</ISSUED-BY>
+								<DATE>2015-01-08T10:35:22+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Sw Update</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00080004, ESCAN00080445</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.01.00</REVISION-LABEL>
+								<STATE>beta</STATE>
+								<ISSUED-BY>vislje</ISSUED-BY>
+								<DATE>2015-04-10T03:56:59+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">R12, Support UserCallout, EthTSyn and GPtp as source for time stamping parallel</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00082366</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.01.01</REVISION-LABEL>
+								<STATE>beta</STATE>
+								<ISSUED-BY>vislje</ISSUED-BY>
+								<DATE>2015-06-19T01:27:44+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Bugfix</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">Compiler error: C2078: too many initializers</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.02.00</REVISION-LABEL>
+								<STATE>beta</STATE>
+								<ISSUED-BY>vislje</ISSUED-BY>
+								<DATE>2015-07-21T12:57:50+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">R13, Remove default value of AvTp_TxStreamStateChangedCbk</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00084109, ESCAN00084112, ESCAN00084136, ESCAN00084135</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.02.01</REVISION-LABEL>
+								<STATE>beta</STATE>
+								<ISSUED-BY>vislje</ISSUED-BY>
+								<DATE>2015-08-07T09:15:16+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">No Changes</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00084407</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.03.00</REVISION-LABEL>
+								<STATE>beta</STATE>
+								<ISSUED-BY>vissem</ISSUED-BY>
+								<DATE>2015-08-10T09:01:32+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Added support of the 'Vendor Specific' format</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00084430</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>2.00.00</REVISION-LABEL>
+								<STATE>beta</STATE>
+								<ISSUED-BY>vissem</ISSUED-BY>
+								<DATE>2015-12-09T01:14:35+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">FEAT-1372: Support Java 8 and R14 CFG5 Breaking Changes</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00085026</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>3.00.00</REVISION-LABEL>
+								<STATE>final</STATE>
+								<ISSUED-BY>vissem</ISSUED-BY>
+								<DATE>2017-01-18</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Update SW-Version</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">FEATC-270</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>4.00.00</REVISION-LABEL>
+								<STATE>final</STATE>
+								<ISSUED-BY>vissem</ISSUED-BY>
+								<DATE>2017-01-23</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">FEAT-2111:  Update to latest IEEE 1722a version (Tp_Ieee1722AvTp)</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">FEATC-1127</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>5.00.00</REVISION-LABEL>
+								<STATE>final</STATE>
+								<ISSUED-BY>vissem</ISSUED-BY>
+								<DATE>2017-03-09</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Update to R18: Removed Parameter: AvTpTxTimeDomain, added Parameter: AvTpTxTimeBaseRef. Changed Values for TimeSource</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00094310</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+						</DOC-REVISIONS>
+					</ADMIN-DATA>
+					<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+					<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+					<POST-BUILD-VARIANT-SUPPORT>false</POST-BUILD-VARIANT-SUPPORT>
+					<REFINED-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/AUTOSAR/EcucDefs/AvTp</REFINED-MODULE-DEF-REF>
+					<SUPPORTED-CONFIG-VARIANTS>
+						<SUPPORTED-CONFIG-VARIANT>VARIANT-PRE-COMPILE</SUPPORTED-CONFIG-VARIANT>
+					</SUPPORTED-CONFIG-VARIANTS>
+					<CONTAINERS>
+						<ECUC-PARAM-CONF-CONTAINER-DEF UUID="186160de-4cec-4745-99e4-a49d0497f69c">
+							<SHORT-NAME>AvTpGeneral</SHORT-NAME>
+							<ADMIN-DATA>
+								<SDGS>
+									<SDG GID="DV:CfgPostBuild">
+										<SD GID="DV:postBuildSelectableChangeable">false</SD>
+										<SD GID="DV:postBuildNotDeletable">true</SD>
+									</SDG>
+								</SDGS>
+							</ADMIN-DATA>
+							<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+							<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+							<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+							<REQUIRES-INDEX>false</REQUIRES-INDEX>
+							<PARAMETERS>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="f926c158-ce02-41e7-8a8c-d2171886aa64">
+									<SHORT-NAME>AvTpDevErrorDetect</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">If 'Dev Error Detection' is enabled, all development errors are reported to the Development Error Tracer (DET). The errors are described in the [TechnicalReference_AvTp.pdf].
+
+Note: In general, the development error detection is recommended during pre-test phase. It is not recommended to enable the development error detection in production code due to increased runtime and ROM needs.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<SCOPE>LOCAL</SCOPE>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<VALUE-CONFIG-CLASSES>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+									</VALUE-CONFIG-CLASSES>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>true</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="568fc3c5-7a9a-49cd-9927-628340633249">
+									<SHORT-NAME>AvTpVersionInfoApi</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Version Info API</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">If 'AvTpVersionInfoApi' is enabled, the function AvTp_GetVersionInfo() is available to get major, minor and patch version information.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<SCOPE>LOCAL</SCOPE>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="d47d2f5c-4e08-495e-bdb6-a7e88af0fc2c">
+									<SHORT-NAME>AvTpEnableRxPduInfo</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Enable Rx Pdu Info</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">If 'AvTpEnableStreamInfo' is enabled, the upper layer rx indication function gets an additional structure containing information about the incoming stream pdu.
+If the switch is enabled, the upper layer function has the prototype: 
+App_RxIndication(
+  AVTP_P2CONST(AvTp_DataType) DataPtr,
+  AVTP_P2CONST(AvTp_RxPduInfoType) StreamInfoPtr,
+  uint16 LenByte
+)
+
+Otherwise the upper layer function has to look like: 
+App_RxIndication(
+  AVTP_P2CONST(AvTp_DataType) DataPtr,
+  uint16 LenByte
+)</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<SCOPE>LOCAL</SCOPE>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>true</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-FLOAT-PARAM-DEF UUID="a0441f21-d8a4-42c4-ac44-10f4dd90e2c5">
+									<SHORT-NAME>AvTpMainFunctionPeriod</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Main Function Period</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">Determines the frequency in seconds at which the AvTp_MainFunction() is called.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:BaseUnit">SEC</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<SCOPE>LOCAL</SCOPE>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>0.005</DEFAULT-VALUE>
+									<MAX>32.767</MAX>
+									<MIN>0.001</MIN>
+								</ECUC-FLOAT-PARAM-DEF>
+								<ECUC-STRING-PARAM-DEF UUID="2595ec31-eaab-4107-bd91-27db31e73719">
+									<SHORT-NAME>AvTpPublicCddHeaderFile</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">These parameters defines header files for callback functions which shall be included in case of CDDs.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>255</UPPER-MULTIPLICITY>
+									<SCOPE>LOCAL</SCOPE>
+									<MULTIPLICITY-CONFIG-CLASSES>
+										<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+									</MULTIPLICITY-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<VALUE-CONFIG-CLASSES>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+									</VALUE-CONFIG-CLASSES>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+								</ECUC-STRING-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="854f24ad-4d60-4e88-bc85-95403701a49f">
+									<SHORT-NAME>AvTpEnableRxFrameChecks</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">If 'TRUE' received frames are checked if they correspond to configured values.
+If 'FALSE' received frames are only checked whether they are valid.
+
+E.g. In case of 'FALSE' a AAF-message with Format=INT_16 would be accepted even though the configured subtype has Format=INT_24. However a AAF-message containing a invalid Format=Reserved would be discarded.
+In case of 'TRUE' a AAF-message with Format=INT_16 would be discarded when the configured (expected) subtype has Format=INT_24.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<SCOPE>LOCAL</SCOPE>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<VALUE-CONFIG-CLASSES>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+									</VALUE-CONFIG-CLASSES>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>true</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="a67fa193-95f8-4df6-a394-a7cac7d182c5">
+									<SHORT-NAME>AvTpEnableBinarySearch</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">TRUE: Use 'Binary Search' to find corresponding StreamIdx of received StreamId.
+FALSE: Use 'Linear Search' instead.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<SCOPE>LOCAL</SCOPE>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>true</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="264294c6-14e7-4f71-b0e2-7f79281395d5">
+									<SHORT-NAME>AvTpEnableDiagnosticCounters</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Diagnostic Counters</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">If enabled, every stream has a set of Diagnostic Counters available. The purpose of these counters is to acertain the relative health of the device. Further information can be found in Annex E (Diagnostics and Counters) in IEEE 1722a-2014-d8.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<SCOPE>LOCAL</SCOPE>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-ENUMERATION-PARAM-DEF UUID="8c67bfd1-d5b8-4c9e-ae1f-afa5b1bbb6c0">
+									<SHORT-NAME>AvTpIEEE1722aConformance</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Select the draft version of the AvTp Specification (IEEE1722a) which should be supported.
+
+Note: Currently only the Versions IEEE1722a-2014-d8 and IEEE1722a-2015-d16 are supported</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<SCOPE>LOCAL</SCOPE>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>IEEE1722A_2014_D8</DEFAULT-VALUE>
+									<LITERALS>
+										<ECUC-ENUMERATION-LITERAL-DEF UUID="03cbed44-f4a6-4e32-aa3e-557f8c9cc229">
+											<SHORT-NAME>IEEE1722A_2014_D8</SHORT-NAME>
+											<ORIGIN>Vector Informatik</ORIGIN>
+										</ECUC-ENUMERATION-LITERAL-DEF>
+										<ECUC-ENUMERATION-LITERAL-DEF UUID="f9fd348a-6852-4994-a870-4a3fc0290ea2">
+											<SHORT-NAME>IEEE1722A_2015_D16</SHORT-NAME>
+											<ORIGIN>Vector Informatik</ORIGIN>
+										</ECUC-ENUMERATION-LITERAL-DEF>
+									</LITERALS>
+								</ECUC-ENUMERATION-PARAM-DEF>
+							</PARAMETERS>
+							<REFERENCES>
+								<ECUC-REFERENCE-DEF UUID="2a10ac93-581e-4846-97d2-3fd6166a40af">
+									<SHORT-NAME>AvTpFrameType</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Frame Type</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">Reference to the AvTp Frame Type used by the EthIf</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<SCOPE>LOCAL</SCOPE>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/EthIf/EthIfConfigSet/EthIfFrameOwnerConfig</DESTINATION-REF>
+								</ECUC-REFERENCE-DEF>
+							</REFERENCES>
+						</ECUC-PARAM-CONF-CONTAINER-DEF>
+						<ECUC-PARAM-CONF-CONTAINER-DEF UUID="e4addbfe-b1e2-42dc-b19d-0065688b5ada">
+							<SHORT-NAME>AvTpConfigSet</SHORT-NAME>
+							<ADMIN-DATA>
+								<SDGS>
+									<SDG GID="DV:CfgPostBuild">
+										<SD GID="DV:postBuildSelectableChangeable">false</SD>
+										<SD GID="DV:postBuildNotDeletable">true</SD>
+									</SDG>
+								</SDGS>
+							</ADMIN-DATA>
+							<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+							<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+							<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+							<REQUIRES-INDEX>false</REQUIRES-INDEX>
+							<SUB-CONTAINERS>
+								<ECUC-PARAM-CONF-CONTAINER-DEF UUID="780881bd-cc80-4295-9b09-ba542b40d792">
+									<SHORT-NAME>AvTpRxStreamConfig</SHORT-NAME>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:postBuildSelectableChangeable">false</SD>
+												<SD GID="DV:postBuildNotDeletable">true</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<PARAMETERS>
+										<ECUC-STRING-PARAM-DEF UUID="c95d8f0c-59b2-4b85-a455-298373543a46">
+											<SHORT-NAME>AvTpRxStreamId</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">Receive Stream Id</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">Determines the 8 byte Stream Id of rx stream.
+Input format has to match xx:xx:xx:xx:xx:xx:xx:xx, where x stands for a hex value between 0 and F.
+</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<ECUC-STRING-PARAM-DEF-VARIANTS>
+												<ECUC-STRING-PARAM-DEF-CONDITIONAL>
+													<DEFAULT-VALUE>00:00:00:00:00:00:00:00</DEFAULT-VALUE>
+													<MAX-LENGTH>23</MAX-LENGTH>
+													<MIN-LENGTH>23</MIN-LENGTH>
+												</ECUC-STRING-PARAM-DEF-CONDITIONAL>
+											</ECUC-STRING-PARAM-DEF-VARIANTS>
+										</ECUC-STRING-PARAM-DEF>
+										<ECUC-INTEGER-PARAM-DEF UUID="bec5c912-7987-48a1-ac6d-9339441825eb">
+											<SHORT-NAME>AvTpRxStreamIdx</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">Receive Stream Index</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">Determines the used rx stream index.
+The rx steam index must be unique.
+</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>0</DEFAULT-VALUE>
+											<MAX>255</MAX>
+											<MIN>0</MIN>
+										</ECUC-INTEGER-PARAM-DEF>
+										<ECUC-FUNCTION-NAME-DEF UUID="8ddcd055-cd31-479b-9189-6b65316378e3">
+											<SHORT-NAME>AvTpRxStreamIndication</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">Receive Indication Function</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">Determines the Rx Indication function which is called when an stream pdu is incoming. 
+
+If 'AvTpEnableStreamInfo' is enabled, the upper layer rx indication function gets an additional structure containing information about the incoming stream pdu.
+If the switch is ebalbled, the upper layer function has to look like: 
+App_RxIndication(
+  AVTP_P2CONST(AvTp_DataType) DataPtr,
+  AVTP_P2CONST(AvTp_RxPduInfoType) StreamInfoPtr,
+  uint16 LenByte
+)
+
+Otherwise the upper layer function has to look like: 
+App_RxIndication(
+  AVTP_P2CONST(AvTp_DataType) DataPtr,
+  uint16 LenByte
+)</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+										</ECUC-FUNCTION-NAME-DEF>
+									</PARAMETERS>
+									<REFERENCES>
+										<ECUC-REFERENCE-DEF UUID="1c2b4a70-dbe7-4097-b1b2-d075d59c4163">
+											<SHORT-NAME>AvTpRxEthIfController</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">EthIf Controller</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">Reference to the EthIf Controller that is used for AvTp Frame transmission.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/EthIf/EthIfConfigSet/EthIfController</DESTINATION-REF>
+										</ECUC-REFERENCE-DEF>
+										<ECUC-CHOICE-REFERENCE-DEF UUID="12681ae5-9d0b-4238-baf5-5a5879b5b011">
+											<SHORT-NAME>AvTpRxSubtype</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">Subtype</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">Reference to a subtype received on this stream.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<DESTINATION-REFS>
+												<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/AvTp/AvTpConfigSet/AvTpSubtype/AvTpAVTPAudio</DESTINATION-REF>
+												<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/AvTp/AvTpConfigSet/AvTpSubtype/AvTpIEC61883</DESTINATION-REF>
+												<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/AvTp/AvTpConfigSet/AvTpSubtype/AvTpCompressedVideo</DESTINATION-REF>
+												<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/AvTp/AvTpConfigSet/AvTpSubtype/AvTpClockReference</DESTINATION-REF>
+												<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/AvTp/AvTpConfigSet/AvTpSubtype/AvTpVendorSpecificFormat</DESTINATION-REF>
+											</DESTINATION-REFS>
+										</ECUC-CHOICE-REFERENCE-DEF>
+									</REFERENCES>
+								</ECUC-PARAM-CONF-CONTAINER-DEF>
+								<ECUC-PARAM-CONF-CONTAINER-DEF UUID="f367adcd-bb9b-43fe-9922-eb5a9eaf915f">
+									<SHORT-NAME>AvTpTxStreamConfig</SHORT-NAME>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:postBuildSelectableChangeable">false</SD>
+												<SD GID="DV:postBuildNotDeletable">true</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+									<MULTIPLICITY-CONFIG-CLASSES>
+										<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+									</MULTIPLICITY-CONFIG-CLASSES>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<PARAMETERS>
+										<ECUC-STRING-PARAM-DEF UUID="56099449-9cbd-4825-acd6-5bce634149fa">
+											<SHORT-NAME>AvTpTxStreamId</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">Transmit Stream Id</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">Determines the 8 byte Stream Id of tx stream.
+Input format has to match xx:xx:xx:xx:xx:xx:xx:xx, where x stands for a hex value between 0 and F.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<ECUC-STRING-PARAM-DEF-VARIANTS>
+												<ECUC-STRING-PARAM-DEF-CONDITIONAL>
+													<DEFAULT-VALUE>00:00:00:00:00:00:00:00</DEFAULT-VALUE>
+												</ECUC-STRING-PARAM-DEF-CONDITIONAL>
+											</ECUC-STRING-PARAM-DEF-VARIANTS>
+										</ECUC-STRING-PARAM-DEF>
+										<ECUC-INTEGER-PARAM-DEF UUID="ade9da73-ff17-40c8-90dc-f52749a55ba8">
+											<SHORT-NAME>AvTpTxStreamIdx</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">Transmit Stream Index</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">Determines the used tx stream index.
+The tx steam index must be unique.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>0</DEFAULT-VALUE>
+											<MAX>255</MAX>
+											<MIN>0</MIN>
+										</ECUC-INTEGER-PARAM-DEF>
+										<ECUC-INTEGER-PARAM-DEF UUID="e4e554f2-e519-47d4-97f6-4b02f068db9e">
+											<SHORT-NAME>AvTpTxPresentationTimeOffset</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">Presentation Time Offset</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">Defines Presenation Time Offset =  Max Transit Time. IEEE 1722-2011 defines Class A (2ms) and Class B (50ms).
+This parameter is only considered if TIME STAMPING ENABLE is TRUE.</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:Display">
+														<SD GID="DV:BaseUnit">MSEC</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>2</DEFAULT-VALUE>
+											<MAX>4294</MAX>
+											<MIN>0</MIN>
+										</ECUC-INTEGER-PARAM-DEF>
+										<ECUC-STRING-PARAM-DEF UUID="dabf49e5-33b4-4460-ac67-fff315ffac5e">
+											<SHORT-NAME>AvTpTxDefaultMulticastMac</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">Default Multicast Mac</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">Destination Physical Hardware Address (MAC-Address) of AvTp Frames.
+This address is used when 'MAAP Support' is disabled.
+If 'MAAP Support' is enabled, this address is assigned dynamically.
+Input format has to match xx::xx::xx::xx::xx::xx, where x stands for a hex value between 0 and F.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<ECUC-STRING-PARAM-DEF-VARIANTS>
+												<ECUC-STRING-PARAM-DEF-CONDITIONAL>
+													<DEFAULT-VALUE>91:E0:F0:00:FF:00</DEFAULT-VALUE>
+													<MAX-LENGTH>17</MAX-LENGTH>
+													<MIN-LENGTH>17</MIN-LENGTH>
+												</ECUC-STRING-PARAM-DEF-CONDITIONAL>
+											</ECUC-STRING-PARAM-DEF-VARIANTS>
+										</ECUC-STRING-PARAM-DEF>
+										<ECUC-INTEGER-PARAM-DEF UUID="07a14dfa-8ef2-4c34-811d-d810de6bff1c">
+											<SHORT-NAME>AvTpTxFramePriority</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">Frame Priority</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">Determines the IEEE802.1Q priority in VLAN-Tag. 
+
+A stream is mapped to a queue according to its frame priority. To ensure that a stream is sent e.g. on a class A queue the priority mapping done in Ethernet Driver and the given frame priority must be consistent.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>0</DEFAULT-VALUE>
+											<MAX>7</MAX>
+											<MIN>0</MIN>
+										</ECUC-INTEGER-PARAM-DEF>
+										<ECUC-FUNCTION-NAME-DEF UUID="b991bea7-360f-4ccb-b58c-f7ef46c318c0">
+											<SHORT-NAME>AvTpTxStreamStateChangedCbk</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">State Changed Callback</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">Determines the callback function for stream state callbacks.
+This callback-function has the following prototype:
+App_TxStateChangedCbk( 
+  AvTp_StateType NewState
+)</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+										</ECUC-FUNCTION-NAME-DEF>
+										<ECUC-FUNCTION-NAME-DEF UUID="b7650c73-2e77-4d45-814b-f6356be407a0">
+											<SHORT-NAME>AvTpTxTimeSourceFunction</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">Time Source Function</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">If 'User-Callout' is selected as 'Time Source' a function for getting the current time has to be provided.
+This function has the following prototype:
+
+Msn_GetCurrentTime( 
+  AVTP_P2VAR(AvTp_GlobalTimestampType) TimestampPtr,
+  AVTP_P2VAR(AvTp_SyncStateType) SyncStatePtr 
+)
+
+This parameter is only considered if TimeStampingEnable is TRUE and TimeSource is set to UserCallout.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+										</ECUC-FUNCTION-NAME-DEF>
+										<ECUC-ENUMERATION-PARAM-DEF UUID="9faa87c4-0941-4186-900c-4e3d129d4cfd">
+											<SHORT-NAME>AvTpTxTimeSource</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">Time Source</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">Determines whether the AvTp obtains time stamp information from the StbM or a User-Callout.
+This parameter is only considered if TimeStampingEnable is TRUE.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<VALUE-CONFIG-CLASSES>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+											</VALUE-CONFIG-CLASSES>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>EthTSyn</DEFAULT-VALUE>
+											<LITERALS>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="f0910faf-d49b-4a4e-905c-71527ae90f60">
+													<SHORT-NAME>UserCallout</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">User-Callout</L-4>
+													</LONG-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="68bc3e07-0460-44f2-bf49-ff6db9205600">
+													<SHORT-NAME>StbM</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Synchronized Time Base Manager</L-4>
+													</LONG-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+											</LITERALS>
+										</ECUC-ENUMERATION-PARAM-DEF>
+										<ECUC-BOOLEAN-PARAM-DEF UUID="b82f73a9-7f44-4ee1-bb35-c37f1459cfdf">
+											<SHORT-NAME>AvTpTxTimeStampingEnable</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">Time Stamping Enable</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">Enable: Frames from this stream contain a AVTP_Timestamp
+Disable: Frames do not contain a AVTP_Timestamp</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>false</DEFAULT-VALUE>
+										</ECUC-BOOLEAN-PARAM-DEF>
+									</PARAMETERS>
+									<REFERENCES>
+										<ECUC-REFERENCE-DEF UUID="303fab99-cd2d-4a4a-91ee-8b9e7adba92f">
+											<SHORT-NAME>AvTpTxEthIfController</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">EthIf Controller</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">Reference to the EthIf Controller that is used for AvTp Frame transmission.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/EthIf/EthIfConfigSet/EthIfController</DESTINATION-REF>
+										</ECUC-REFERENCE-DEF>
+										<ECUC-CHOICE-REFERENCE-DEF UUID="b6c61199-1d25-48c6-9479-17eb69e806bd">
+											<SHORT-NAME>AvTpTxSubtype</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">Subtype</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">Reference to a subtype sent on this stream.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<DESTINATION-REFS>
+												<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/AvTp/AvTpConfigSet/AvTpSubtype/AvTpAVTPAudio</DESTINATION-REF>
+												<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/AvTp/AvTpConfigSet/AvTpSubtype/AvTpIEC61883</DESTINATION-REF>
+												<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/AvTp/AvTpConfigSet/AvTpSubtype/AvTpCompressedVideo</DESTINATION-REF>
+												<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/AvTp/AvTpConfigSet/AvTpSubtype/AvTpClockReference</DESTINATION-REF>
+												<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/AvTp/AvTpConfigSet/AvTpSubtype/AvTpVendorSpecificFormat</DESTINATION-REF>
+											</DESTINATION-REFS>
+										</ECUC-CHOICE-REFERENCE-DEF>
+										<ECUC-SYMBOLIC-NAME-REFERENCE-DEF UUID="20f9ec72-30d1-4552-87b1-86a63bd9328b">
+											<SHORT-NAME>AvTpTxTimeBaseRef</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Reference used for presentation time generation.
+This parameter is only considered if TimeStampingEnable is TRUE and TimeSource is set to StbM.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/StbM/StbMSynchronizedTimeBase</DESTINATION-REF>
+										</ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+									</REFERENCES>
+								</ECUC-PARAM-CONF-CONTAINER-DEF>
+								<ECUC-PARAM-CONF-CONTAINER-DEF UUID="9cff7f4d-5592-4b10-8b9c-fd5752cd2d7a">
+									<SHORT-NAME>AvTpSubtype</SHORT-NAME>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:postBuildSelectableChangeable">false</SD>
+												<SD GID="DV:postBuildNotDeletable">true</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SUB-CONTAINERS>
+										<ECUC-PARAM-CONF-CONTAINER-DEF UUID="72425dcd-e6a9-4a7b-b0dc-7167db42131d">
+											<SHORT-NAME>AvTpAVTPAudio</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">AVTP Audio Format (AAF) with Subtype 0x02</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:CfgPostBuild">
+														<SD GID="DV:postBuildSelectableChangeable">false</SD>
+														<SD GID="DV:postBuildNotDeletable">true</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<PARAMETERS>
+												<ECUC-ENUMERATION-PARAM-DEF UUID="04dd8292-741e-42cb-8387-ca4ef9016ca7">
+													<SHORT-NAME>AvTpAudioFormat</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Format</L-4>
+													</LONG-NAME>
+													<DESC>
+														<L-2 L="EN">The format field describes the size of samples contained within the stream</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<SCOPE>LOCAL</SCOPE>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+													<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>INT_16BIT</DEFAULT-VALUE>
+													<LITERALS>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="9a4250a3-7608-4ee1-af94-765f2f24b73d">
+															<SHORT-NAME>USERSPEC</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">User specified</L-4>
+															</LONG-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="bfd5e768-d3a7-436f-b5cf-b687df715b4e">
+															<SHORT-NAME>FLOAT_32BIT</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">32-Bit Float</L-4>
+															</LONG-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="b927ab19-a613-4d0b-8d7c-04ce557be0d6">
+															<SHORT-NAME>INT_32BIT</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">32-Bit Integer</L-4>
+															</LONG-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="76e4cb04-9e0b-49cf-9d5b-2c34a4c5c2c9">
+															<SHORT-NAME>INT_24BIT</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">24-Bit Integer</L-4>
+															</LONG-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="87b755f4-acb5-43da-87cc-c39aa3f9399d">
+															<SHORT-NAME>INT_16BIT</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">16-Bit Integer</L-4>
+															</LONG-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+													</LITERALS>
+												</ECUC-ENUMERATION-PARAM-DEF>
+												<ECUC-ENUMERATION-PARAM-DEF UUID="7c8806ca-0166-4eb1-a237-8b753fa9845e">
+													<SHORT-NAME>AvTpAudioNominalSampleRate</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Nominal Sample Rate</L-4>
+													</LONG-NAME>
+													<DESC>
+														<L-2 L="EN">The nominal_sample_rate field describes the sample rate of the audio stream</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<SCOPE>LOCAL</SCOPE>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+													<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>NSR_48KHZ</DEFAULT-VALUE>
+													<LITERALS>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="29968d8a-cc39-4d2b-b24d-7380923dd055">
+															<SHORT-NAME>NSR_USERSPEC</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">User specific</L-4>
+															</LONG-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="314057e3-a9e4-4fb3-89c8-34dbe09b9d7d">
+															<SHORT-NAME>NSR_8KHZ</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">8 kHz</L-4>
+															</LONG-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="4a32dc19-b668-4fe0-8fad-f2cf1bc0488d">
+															<SHORT-NAME>NSR_16KHZ</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">16 kHz</L-4>
+															</LONG-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="dfe72bbb-c86b-42c5-aaa3-3b42781b2a99">
+															<SHORT-NAME>NSR_32KHZ</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">32 kHz</L-4>
+															</LONG-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="bfab456a-1928-4bef-9261-a5158280f9e6">
+															<SHORT-NAME>NSR_441KHZ</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">44.1 kHz</L-4>
+															</LONG-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="9af90abd-b905-4f3a-b3bb-b3c52a9ce252">
+															<SHORT-NAME>NSR_48KHZ</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">48 kHz</L-4>
+															</LONG-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="a716c166-a0e2-42d2-b704-cb4b69dc5b41">
+															<SHORT-NAME>NSR_882KHZ</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">88.2 kHz</L-4>
+															</LONG-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="dce34e3e-b56b-43cc-a9c5-263d25f78096">
+															<SHORT-NAME>NSR_96KHZ</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">96 kHz</L-4>
+															</LONG-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="a054c105-3de8-457e-b006-cb69f316e478">
+															<SHORT-NAME>NSR_1764KHZ</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">176.4 kHz</L-4>
+															</LONG-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="0c6fe09a-ad59-4e69-babc-a83e4fe29e54">
+															<SHORT-NAME>NSR_192KHZ</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">192 kHz</L-4>
+															</LONG-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="52f3c2be-5678-4293-88fd-af7de986283a">
+															<SHORT-NAME>NSR_24KHZ</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">24 kHz</L-4>
+															</LONG-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="edce50bb-29da-44db-8da7-118830d213ba">
+															<SHORT-NAME>NSR_16RPM</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">16 RPM</L-4>
+															</LONG-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="ef088d4b-7142-40f9-b6ea-dfb7dfa4131a">
+															<SHORT-NAME>NSR_33RPM</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">33 1/3 RPM</L-4>
+															</LONG-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="8fae30da-3497-4012-97e9-4d9359e57c3e">
+															<SHORT-NAME>NSR_33RPM_REVERSE</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">33 1/3 RPM (in reverse)</L-4>
+															</LONG-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="055e38c3-7941-4f34-b764-9873a51258e7">
+															<SHORT-NAME>NSR_45RPM</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">45 RPM</L-4>
+															</LONG-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="d40b6b63-94fb-4143-80f5-73f60659e65a">
+															<SHORT-NAME>NSR_78RPM</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">78 RPM</L-4>
+															</LONG-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+													</LITERALS>
+												</ECUC-ENUMERATION-PARAM-DEF>
+												<ECUC-INTEGER-PARAM-DEF UUID="f931c29a-c288-41d2-9fea-aa824305e609">
+													<SHORT-NAME>AvTpAudioChannelsPerFrame</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Channels Per Frame</L-4>
+													</LONG-NAME>
+													<DESC>
+														<L-2 L="EN">The number of audio channels represented in the audio sample frame. The value of this field shall be a positive integer greater than zero (0). For example, an audio stream conveying "7.1 surround sound" shall be indicated as having 8 channels.</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<SCOPE>LOCAL</SCOPE>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+													<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>2</DEFAULT-VALUE>
+													<MAX>1023</MAX>
+													<MIN>1</MIN>
+												</ECUC-INTEGER-PARAM-DEF>
+												<ECUC-INTEGER-PARAM-DEF UUID="8a097287-269c-4c64-81a0-41e603f31f8c">
+													<SHORT-NAME>AvTpAudioBitDepth</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Bit Depth</L-4>
+													</LONG-NAME>
+													<DESC>
+														<L-2 L="EN">The bit_depth field describes how many bits within the sample that the talker is filling with valid data. The value of bit_depth shall not be set to a number which is larger than the size of the format set in the format field. If the format field is set to a non-integer format then the bit_depth field shall be set to zero (0).</L-2>
+													</DESC>
+													<ADMIN-DATA>
+														<SDGS>
+															<SDG GID="DV:Display">
+																<SD GID="DV:BaseUnit">BIT</SD>
+															</SDG>
+														</SDGS>
+													</ADMIN-DATA>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<SCOPE>LOCAL</SCOPE>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+													<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>16</DEFAULT-VALUE>
+													<MAX>255</MAX>
+													<MIN>0</MIN>
+												</ECUC-INTEGER-PARAM-DEF>
+												<ECUC-BOOLEAN-PARAM-DEF UUID="ce67a91b-1135-4a8c-8726-d5fc91e94a6a">
+													<SHORT-NAME>AvTpAudioTimestampSparseMode</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Timestamp Sparse Mode</L-4>
+													</LONG-NAME>
+													<DESC>
+														<L-2 L="EN">The sp field indicates whether the stream is in sparse timestamp mode. If the sp bit is set to one (1) then the stream is in sparse timestamp mode (every eigth packet is timestamped). If the sp bit is set to zero (0) then the stream is in normal timestamp mode.</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<SCOPE>LOCAL</SCOPE>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+													<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>true</DEFAULT-VALUE>
+												</ECUC-BOOLEAN-PARAM-DEF>
+												<ECUC-INTEGER-PARAM-DEF UUID="73ca8e9e-3970-45d3-b686-4e53e859634e">
+													<SHORT-NAME>AvTpAudioSampleFramesPerPacket</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Sample Frames Per Packet</L-4>
+													</LONG-NAME>
+													<DESC>
+														<L-2 L="EN">Determines number of SampleFrames in one AVTP Audio packet. A SampleFrame contain a sample for ever channel. The number of samples in on SampleFrame is determined by 'Channels Per Frame' .Recommended values are found in '8.6.1 AVTP Audio and SRP', IEEE 1722a-2014-d8</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<SCOPE>LOCAL</SCOPE>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+													<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>48</DEFAULT-VALUE>
+													<MAX>65535</MAX>
+													<MIN>1</MIN>
+												</ECUC-INTEGER-PARAM-DEF>
+											</PARAMETERS>
+										</ECUC-PARAM-CONF-CONTAINER-DEF>
+										<ECUC-PARAM-CONF-CONTAINER-DEF UUID="55df720e-a91d-4dce-8b03-d38833725580">
+											<SHORT-NAME>AvTpIEC61883</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">IEC 61883/IIDC over AVTP</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">IEC 61883/IIDC Format with Subtype (0x00)</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:CfgPostBuild">
+														<SD GID="DV:postBuildSelectableChangeable">false</SD>
+														<SD GID="DV:postBuildNotDeletable">true</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<PARAMETERS>
+												<ECUC-ENUMERATION-PARAM-DEF UUID="b9ff547c-5e32-4b4e-aa7e-d83e90fcd168">
+													<SHORT-NAME>AvTpIecTag</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Tag</L-4>
+													</LONG-NAME>
+													<DESC>
+														<L-2 L="EN">Determines wheater a CIP header is included or not. </L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<SCOPE>LOCAL</SCOPE>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+													<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>CIP</DEFAULT-VALUE>
+													<LITERALS>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="e6ac7816-5834-42f3-bb25-c0a6e2c746c2">
+															<SHORT-NAME>NO_CIP</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">No CIP header included</L-4>
+															</LONG-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="f9a392f0-0e7a-4df7-b6b6-d73c93fccd62">
+															<SHORT-NAME>CIP</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">CIP header included</L-4>
+															</LONG-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+													</LITERALS>
+												</ECUC-ENUMERATION-PARAM-DEF>
+												<ECUC-INTEGER-PARAM-DEF UUID="4df2e7e3-ed16-47e2-aa3b-eb9dd89d3de5">
+													<SHORT-NAME>AvTpIecChannel</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Channel Id</L-4>
+													</LONG-NAME>
+													<DESC>
+														<L-2 L="EN">0 to 30 and 32 to 63: Originating channel ID from an IEEE 1394 serial bus via IEEE 1394/IEC 61883 to IEEE 1722/IEC 61883 gateway
+31: Originating source is on AVB network (native AVB)</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<SCOPE>LOCAL</SCOPE>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+													<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>31</DEFAULT-VALUE>
+													<MAX>63</MAX>
+													<MIN>0</MIN>
+												</ECUC-INTEGER-PARAM-DEF>
+											</PARAMETERS>
+										</ECUC-PARAM-CONF-CONTAINER-DEF>
+										<ECUC-PARAM-CONF-CONTAINER-DEF UUID="e8553e69-855e-4be1-bf4e-1e9436a1edd8">
+											<SHORT-NAME>AvTpMaap</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">AvTp Mac Address Aquisition Protocol (0xFE)</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:CfgPostBuild">
+														<SD GID="DV:postBuildSelectableChangeable">false</SD>
+														<SD GID="DV:postBuildNotDeletable">true</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<PARAMETERS>
+												<ECUC-INTEGER-PARAM-DEF UUID="eba73558-bdde-443b-b954-2451757f264c">
+													<SHORT-NAME>AvTpMaapProbeRetransmits</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Determines the count of MAAP Probe retransmissions until the probed mac address is used.</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<SCOPE>LOCAL</SCOPE>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+													<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>3</DEFAULT-VALUE>
+													<MAX>255</MAX>
+													<MIN>1</MIN>
+												</ECUC-INTEGER-PARAM-DEF>
+												<ECUC-INTEGER-PARAM-DEF UUID="eed481b7-03cb-4113-9720-1365c25df276">
+													<SHORT-NAME>AvTpMaapProbeInterval</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Maap Probe Interval</L-4>
+													</LONG-NAME>
+													<DESC>
+														<L-2 L="EN">Determines the MAAP Probe retransmission time interval.</L-2>
+													</DESC>
+													<ADMIN-DATA>
+														<SDGS>
+															<SDG GID="DV:Display">
+																<SD GID="DV:BaseUnit">MSEC</SD>
+															</SDG>
+														</SDGS>
+													</ADMIN-DATA>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<SCOPE>LOCAL</SCOPE>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+													<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>500</DEFAULT-VALUE>
+													<MAX>65535</MAX>
+													<MIN>100</MIN>
+												</ECUC-INTEGER-PARAM-DEF>
+												<ECUC-INTEGER-PARAM-DEF UUID="51707eb7-1f29-410a-b77a-9442b108428e">
+													<SHORT-NAME>AvTpMaapAnnounceInterval</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Determines the MAAP Announce retransmission time interval.</L-2>
+													</DESC>
+													<ADMIN-DATA>
+														<SDGS>
+															<SDG GID="DV:Display">
+																<SD GID="DV:BaseUnit">MSEC</SD>
+																<SD GID="DV:Unit">SEC</SD>
+															</SDG>
+														</SDGS>
+													</ADMIN-DATA>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<SCOPE>LOCAL</SCOPE>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+													<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<VALUE-CONFIG-CLASSES>
+														<ECUC-VALUE-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-VALUE-CONFIGURATION-CLASS>
+													</VALUE-CONFIG-CLASSES>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>30000</DEFAULT-VALUE>
+													<MAX>65536</MAX>
+													<MIN>100</MIN>
+												</ECUC-INTEGER-PARAM-DEF>
+												<ECUC-STRING-PARAM-DEF UUID="135e0c91-f308-4b9b-a36a-2ef5a6f541e6">
+													<SHORT-NAME>AvTpMaapMulticastMac</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Destination Physical Hardware Address (MAC-Address) of MAAP Frames.
+Input format has to match xx::xx::xx::xx::xx::xx, where x stands for a hex value between 0 and F.
+This value should be 91:E0:F0:00:FF:00</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<SCOPE>LOCAL</SCOPE>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+													<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<ECUC-STRING-PARAM-DEF-VARIANTS>
+														<ECUC-STRING-PARAM-DEF-CONDITIONAL>
+															<DEFAULT-VALUE>91:E0:F0:00:FF:00</DEFAULT-VALUE>
+														</ECUC-STRING-PARAM-DEF-CONDITIONAL>
+													</ECUC-STRING-PARAM-DEF-VARIANTS>
+												</ECUC-STRING-PARAM-DEF>
+												<ECUC-INTEGER-PARAM-DEF UUID="c364683a-7525-48aa-b755-761b8c9b57b8">
+													<SHORT-NAME>AvTpMaapFramePriority</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Frame Priority</L-4>
+													</LONG-NAME>
+													<DESC>
+														<L-2 L="EN">Determines the IEEE802.1Q priority in VLAN-Tag.</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<SCOPE>LOCAL</SCOPE>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+													<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>0</DEFAULT-VALUE>
+													<MAX>7</MAX>
+													<MIN>0</MIN>
+												</ECUC-INTEGER-PARAM-DEF>
+											</PARAMETERS>
+										</ECUC-PARAM-CONF-CONTAINER-DEF>
+										<ECUC-PARAM-CONF-CONTAINER-DEF UUID="82104d64-34a3-4c59-a3da-605bb3d4828a">
+											<SHORT-NAME>AvTpCompressedVideo</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">AvTp Compressed Video (0x03)</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:CfgPostBuild">
+														<SD GID="DV:postBuildSelectableChangeable">false</SD>
+														<SD GID="DV:postBuildNotDeletable">true</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<PARAMETERS>
+												<ECUC-ENUMERATION-PARAM-DEF UUID="7f146cd5-e9be-4ae5-acd3-02946e7c3818">
+													<SHORT-NAME>AvTpCmpVideoFormat</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Format</L-4>
+													</LONG-NAME>
+													<DESC>
+														<L-2 L="EN">The format field identifies the compressed video payload format.</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<SCOPE>LOCAL</SCOPE>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+													<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>RFC</DEFAULT-VALUE>
+													<LITERALS>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="ee2954b1-ac93-42fd-9509-0b97fece7fd9">
+															<SHORT-NAME>RFC</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">RFC Payload</L-4>
+															</LONG-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+													</LITERALS>
+												</ECUC-ENUMERATION-PARAM-DEF>
+												<ECUC-ENUMERATION-PARAM-DEF UUID="cdaf19b0-d96e-42e4-8471-ad30ea309d66">
+													<SHORT-NAME>AvTpCmpVideoFormatSubtype</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Format Subtype</L-4>
+													</LONG-NAME>
+													<DESC>
+														<L-2 L="EN">The valid format subtypes for the RFC Payload type.</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<SCOPE>LOCAL</SCOPE>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+													<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>MJPEG</DEFAULT-VALUE>
+													<LITERALS>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="f03070f1-3d41-4a7e-81cc-17ac71ca9da5">
+															<SHORT-NAME>MJPEG</SHORT-NAME>
+															<ORIGIN>RFC 2435</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="2963bf1c-ef11-469a-980d-69407b3fd08e">
+															<SHORT-NAME>H264</SHORT-NAME>
+															<ORIGIN>RFC 6184</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="a699a12a-a2f2-4eff-94d4-1d87f5b3955c">
+															<SHORT-NAME>JPEG2000</SHORT-NAME>
+															<ORIGIN>RFC 5371</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+													</LITERALS>
+												</ECUC-ENUMERATION-PARAM-DEF>
+											</PARAMETERS>
+										</ECUC-PARAM-CONF-CONTAINER-DEF>
+										<ECUC-PARAM-CONF-CONTAINER-DEF UUID="1e251a2f-628c-4516-8c84-27fe2f168d3c">
+											<SHORT-NAME>AvTpClockReference</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">AvTp Clock Reference (0x04)</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:CfgPostBuild">
+														<SD GID="DV:postBuildSelectableChangeable">false</SD>
+														<SD GID="DV:postBuildNotDeletable">true</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<PARAMETERS>
+												<ECUC-ENUMERATION-PARAM-DEF UUID="6aacc126-f220-4956-bdb1-e90e951d8fef">
+													<SHORT-NAME>AvTpCrfType</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Type</L-4>
+													</LONG-NAME>
+													<DESC>
+														<L-2 L="EN">The type field indicates the type of timestamp represented by the CRF AVTPDU and the format of the CRF payload.</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<SCOPE>LOCAL</SCOPE>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+													<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>AUDIO_SAMPLE</DEFAULT-VALUE>
+													<LITERALS>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="dff2631a-0839-43e5-8496-30ba8542980b">
+															<SHORT-NAME>USER</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="32832e35-91f8-4ff3-9f3d-fd5b1c8469f2">
+															<SHORT-NAME>AUDIO_SAMPLE</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="54557178-bf76-4406-8f9d-5a439c01a48e">
+															<SHORT-NAME>VIDEO_FRAME</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="638b816e-fabc-442a-8cfd-b04185165238">
+															<SHORT-NAME>VIDEO_LINE</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="f3dd61a9-cade-468c-92d7-b5820576afea">
+															<SHORT-NAME>MACHINE_CYCLE</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+													</LITERALS>
+												</ECUC-ENUMERATION-PARAM-DEF>
+												<ECUC-INTEGER-PARAM-DEF UUID="e3988b66-f445-45eb-8844-53d7b5cfb31a">
+													<SHORT-NAME>AvTpCrfClockFrequency</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Clock Frequency</L-4>
+													</LONG-NAME>
+													<DESC>
+														<L-2 L="EN">The clock_frequency field represents the base frequency of the audio sample clock in Hertz, prior to being adjusted by clock_multiplier.
+
+Note: This parameter represents the base_frequency in IEEE1722a-2015-d16</L-2>
+													</DESC>
+													<ADMIN-DATA>
+														<SDGS>
+															<SDG GID="DV:Display">
+																<SD GID="DV:BaseUnit">HZ</SD>
+															</SDG>
+														</SDGS>
+													</ADMIN-DATA>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<SCOPE>LOCAL</SCOPE>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+													<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>48000</DEFAULT-VALUE>
+													<MAX>536870911</MAX>
+													<MIN>1</MIN>
+												</ECUC-INTEGER-PARAM-DEF>
+												<ECUC-ENUMERATION-PARAM-DEF UUID="3f5b0bee-1e6a-486c-b83a-c2f3855d302e">
+													<SHORT-NAME>AvTpCrfClockMultiplier</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Clock Multiplier</L-4>
+													</LONG-NAME>
+													<DESC>
+														<L-2 L="EN">The nominal frequency of the audio sample clock is the clock_frequency field multiplied by the multiplier specified by the clock_multiplier field (see table 11.3 IEEE 1722a-2014-d8).
+
+Note: For IEEE1722a-2015-d16: pull field (see Table 27)</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<SCOPE>LOCAL</SCOPE>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+													<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>NOMINAL_FREQUENCY</DEFAULT-VALUE>
+													<LITERALS>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="10ac5664-f28f-4926-aad2-886917eeeddb">
+															<SHORT-NAME>NOMINAL_FREQUENCY</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="23f466ac-f60f-4a28-8e86-9ae648dd9ff1">
+															<SHORT-NAME>NTSC_VIDEO_DROP_DOWN</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="140e02ee-b619-4f1f-9cd1-2d6324c67ed1">
+															<SHORT-NAME>NTSC_VIDEO_PULL_UP</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="86b390e4-23be-411c-b8cc-98c7f9c67c6b">
+															<SHORT-NAME>PAL_VIDEO_DROP_DOWN</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="8f040a9e-4bc6-428e-b2ee-b0514ab789d5">
+															<SHORT-NAME>PAL_VIDEO_PULL_UP</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="02d8ff8b-71d4-4231-a667-4edc26fd38a6">
+															<SHORT-NAME>ONE_EIGHTH</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+													</LITERALS>
+												</ECUC-ENUMERATION-PARAM-DEF>
+												<ECUC-INTEGER-PARAM-DEF UUID="bc4095e0-22ac-4f13-997b-b36730809e32">
+													<SHORT-NAME>AvTpCrfTimestampInterval</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Timestamp Interval</L-4>
+													</LONG-NAME>
+													<DESC>
+														<L-2 L="EN">The timestamp_interval field is an 16 bit field which indicates the number of audio samples between each Audio Sample Timestamp given in the CRF AVTPDU.</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<SCOPE>LOCAL</SCOPE>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+													<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>8</DEFAULT-VALUE>
+													<MAX>65534</MAX>
+													<MIN>0</MIN>
+												</ECUC-INTEGER-PARAM-DEF>
+											</PARAMETERS>
+										</ECUC-PARAM-CONF-CONTAINER-DEF>
+										<ECUC-PARAM-CONF-CONTAINER-DEF UUID="04519a20-a718-4279-85aa-eb1babf8df24">
+											<SHORT-NAME>AvTpVendorSpecificFormat</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">AvTp Vendor specific format (0x6F)</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:CfgPostBuild">
+														<SD GID="DV:postBuildNotDeletable">true</SD>
+														<SD GID="DV:postBuildSelectableChangeable">false</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<PARAMETERS>
+												<ECUC-STRING-PARAM-DEF UUID="7e44bd28-e912-43e3-8094-d69cdcb3e48f">
+													<SHORT-NAME>AvTpVendorEUI</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">The Vender EUI (48 Bit) used to identifie the format.
+
+Input format has to match xx:xx:xx:xx:xx:xx , where x stands for a hex value between 0 and F.</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<SCOPE>LOCAL</SCOPE>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+													<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<ECUC-STRING-PARAM-DEF-VARIANTS>
+														<ECUC-STRING-PARAM-DEF-CONDITIONAL>
+															<MAX-LENGTH>17</MAX-LENGTH>
+															<MIN-LENGTH>17</MIN-LENGTH>
+														</ECUC-STRING-PARAM-DEF-CONDITIONAL>
+													</ECUC-STRING-PARAM-DEF-VARIANTS>
+												</ECUC-STRING-PARAM-DEF>
+											</PARAMETERS>
+										</ECUC-PARAM-CONF-CONTAINER-DEF>
+									</SUB-CONTAINERS>
+								</ECUC-PARAM-CONF-CONTAINER-DEF>
+							</SUB-CONTAINERS>
+						</ECUC-PARAM-CONF-CONTAINER-DEF>
+					</CONTAINERS>
+				</ECUC-MODULE-DEF>
+				<ECUC-MODULE-CONFIGURATION-VALUES UUID="d8b54683-caea-4784-ba22-8abf5241871c">
+					<SHORT-NAME>AvTp_Pre</SHORT-NAME>
+					<DEFINITION-REF DEST="ECUC-MODULE-DEF">/MICROSAR/AvTp</DEFINITION-REF>
+					<CONTAINERS></CONTAINERS>
+				</ECUC-MODULE-CONFIGURATION-VALUES>
+				<ECUC-MODULE-CONFIGURATION-VALUES UUID="d167cc42-34bd-4c0c-8d90-19a699f795ef">
+					<SHORT-NAME>AvTp_Rec</SHORT-NAME>
+					<DEFINITION-REF DEST="ECUC-MODULE-DEF">/MICROSAR/AvTp</DEFINITION-REF>
+					<CONTAINERS></CONTAINERS>
+				</ECUC-MODULE-CONFIGURATION-VALUES>
+			</ELEMENTS>
+		</AR-PACKAGE>
+	</AR-PACKAGES>
+</AUTOSAR>

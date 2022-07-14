@@ -1,0 +1,1240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-0-3.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://autosar.org/schema/r4.0">
+	<AR-PACKAGES>
+		<AR-PACKAGE UUID="ff55d029-386d-43a2-b3c2-dfef4c7a5e36">
+			<SHORT-NAME>MICROSAR</SHORT-NAME>
+			<ADMIN-DATA>
+				<DOC-REVISIONS>
+					<DOC-REVISION>
+						<REVISION-LABEL>1.0.0</REVISION-LABEL>
+						<ISSUED-BY>visore</ISSUED-BY>
+						<DATE>2014-05-21T02:09:57+02:00</DATE>
+						<MODIFICATIONS>
+							<MODIFICATION>
+								<CHANGE>
+									<L-2 L="EN">Creation</L-2>
+								</CHANGE>
+							</MODIFICATION>
+						</MODIFICATIONS>
+					</DOC-REVISION>
+					<DOC-REVISION>
+						<REVISION-LABEL>1.0.1</REVISION-LABEL>
+						<ISSUED-BY>visore</ISSUED-BY>
+						<DATE>2014-05-21T02:10:07+02:00</DATE>
+						<MODIFICATIONS>
+							<MODIFICATION>
+								<CHANGE>
+									<L-2 L="EN">ESCAN00068657, ESCAN00068610, ESCAN00069596, ESCAN00069622</L-2>
+								</CHANGE>
+							</MODIFICATION>
+						</MODIFICATIONS>
+					</DOC-REVISION>
+					<DOC-REVISION>
+						<REVISION-LABEL>1.1.0</REVISION-LABEL>
+						<ISSUED-BY>visore</ISSUED-BY>
+						<DATE>2014-05-21T02:10:46+02:00</DATE>
+						<MODIFICATIONS>
+							<MODIFICATION>
+								<CHANGE>
+									<L-2 L="EN">ESCAN00070889</L-2>
+								</CHANGE>
+							</MODIFICATION>
+						</MODIFICATIONS>
+					</DOC-REVISION>
+					<DOC-REVISION>
+						<REVISION-LABEL>1.1.1</REVISION-LABEL>
+						<ISSUED-BY>visore</ISSUED-BY>
+						<DATE>2014-05-21T02:10:57+02:00</DATE>
+						<MODIFICATIONS>
+							<MODIFICATION>
+								<CHANGE>
+									<L-2 L="EN">ESCAN00075230</L-2>
+								</CHANGE>
+							</MODIFICATION>
+						</MODIFICATIONS>
+					</DOC-REVISION>
+					<DOC-REVISION>
+						<REVISION-LABEL>1.2.0</REVISION-LABEL>
+						<ISSUED-BY>viszda</ISSUED-BY>
+						<DATE>2014-10-13T12:09:00+02:00</DATE>
+						<MODIFICATIONS>
+							<MODIFICATION>
+								<CHANGE>
+									<L-2 L="EN">CPU load measurement for serial and parallel measurement mode. Added Timer Overrun Handling and runtime optimization</L-2>
+								</CHANGE>
+							</MODIFICATION>
+						</MODIFICATIONS>
+					</DOC-REVISION>
+					<DOC-REVISION>
+						<REVISION-LABEL>1.2.1</REVISION-LABEL>
+						<ISSUED-BY>viszda</ISSUED-BY>
+						<DATE>2014-11-14T12:09:00+02:00</DATE>
+						<MODIFICATIONS>
+							<MODIFICATION>
+								<CHANGE>
+									<L-2 L="EN">ESCAN00079842, ESCAN00079844, ESCAN00079535</L-2>
+								</CHANGE>
+							</MODIFICATION>
+						</MODIFICATIONS>
+					</DOC-REVISION>
+					<DOC-REVISION>
+						<REVISION-LABEL>1.2.2</REVISION-LABEL>
+						<ISSUED-BY>viszda</ISSUED-BY>
+						<DATE>2015-06-17T11:24:46+02:00</DATE>
+						<MODIFICATIONS>
+							<MODIFICATION>
+								<CHANGE>
+									<L-2 L="EN">ESCAN00082234</L-2>
+								</CHANGE>
+							</MODIFICATION>
+						</MODIFICATIONS>
+					</DOC-REVISION>
+					<DOC-REVISION>
+						<REVISION-LABEL>2.0.0</REVISION-LABEL>
+						<ISSUED-BY>viszda</ISSUED-BY>
+						<DATE>2016-04-05T10:38:10+02:00</DATE>
+						<MODIFICATIONS>
+							<MODIFICATION>
+								<CHANGE>
+									<L-2 L="EN">ESCAN00089228</L-2>
+								</CHANGE>
+							</MODIFICATION>
+						</MODIFICATIONS>
+					</DOC-REVISION>
+					<DOC-REVISION>
+						<REVISION-LABEL>2.1.0</REVISION-LABEL>
+						<ISSUED-BY>viszda</ISSUED-BY>
+						<DATE>2016-05-10T11:26:45+02:00</DATE>
+						<MODIFICATIONS>
+							<MODIFICATION>
+								<CHANGE>
+									<L-2 L="EN">ESCAN00089510</L-2>
+								</CHANGE>
+							</MODIFICATION>
+						</MODIFICATIONS>
+					</DOC-REVISION>
+					<DOC-REVISION>
+						<REVISION-LABEL>2.2.0</REVISION-LABEL>
+						<ISSUED-BY>viszda</ISSUED-BY>
+						<DATE>2016-09-05T11:11:12+02:00</DATE>
+						<MODIFICATIONS>
+							<MODIFICATION>
+								<CHANGE>
+									<L-2 L="EN">ESCAN00091735, ESCAN00091861</L-2>
+								</CHANGE>
+							</MODIFICATION>
+						</MODIFICATIONS>
+					</DOC-REVISION>
+					<DOC-REVISION>
+						<REVISION-LABEL>3.0.0</REVISION-LABEL>
+						<ISSUED-BY>viszda</ISSUED-BY>
+						<DATE>2017-04-07T01:21:20+02:00</DATE>
+						<MODIFICATIONS>
+							<MODIFICATION>
+								<CHANGE>
+									<L-2 L="EN">STORYC-724</L-2>
+								</CHANGE>
+							</MODIFICATION>
+						</MODIFICATIONS>
+					</DOC-REVISION>
+					<DOC-REVISION>
+						<REVISION-LABEL>3.1.0</REVISION-LABEL>
+						<ISSUED-BY>viszda</ISSUED-BY>
+						<DATE>2017-04-19T01:11:51+02:00</DATE>
+						<MODIFICATIONS>
+							<MODIFICATION>
+								<CHANGE>
+									<L-2 L="EN">STORYC-671, STORYC-672</L-2>
+								</CHANGE>
+							</MODIFICATION>
+						</MODIFICATIONS>
+					</DOC-REVISION>
+					<DOC-REVISION>
+						<REVISION-LABEL>3.1.1</REVISION-LABEL>
+						<ISSUED-BY>viszda</ISSUED-BY>
+						<DATE>2017-06-09T15:25:30+02:00</DATE>
+						<MODIFICATIONS>
+							<MODIFICATION>
+								<CHANGE>
+									<L-2 L="EN">ESCAN00095484</L-2>
+								</CHANGE>
+							</MODIFICATION>
+						</MODIFICATIONS>
+					</DOC-REVISION>
+				</DOC-REVISIONS>
+			</ADMIN-DATA>
+			<ELEMENTS>
+				<ECUC-MODULE-DEF UUID="310051e4-b34e-4b60-8dae-4f7667be206d">
+					<SHORT-NAME>Rtm</SHORT-NAME>
+					<DESC>
+						<L-2 L="EN">Configuration of the RTM (Runtime Measurement) module.</L-2>
+					</DESC>
+					<CATEGORY>VENDOR_SPECIFIC_MODULE_DEFINITION</CATEGORY>
+					<ADMIN-DATA>
+						<DOC-REVISIONS>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.0.0</REVISION-LABEL>
+								<ISSUED-BY>visazb</ISSUED-BY>
+								<DATE>2012-10-12T10:20:00Z</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Initial creation</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.0.1</REVISION-LABEL>
+								<ISSUED-BY>visore</ISSUED-BY>
+								<DATE>2013-07-09T12:52:39+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">ESCAN00068657, ESCAN00068610, ESCAN00069596, ESCAN00069622</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.1.0</REVISION-LABEL>
+								<ISSUED-BY>visore</ISSUED-BY>
+								<DATE>2014-05-21T02:10:33+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">ESCAN00070889</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.1.1</REVISION-LABEL>
+								<ISSUED-BY>visore</ISSUED-BY>
+								<DATE>2014-05-21T02:10:38+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">ESCAN00075230</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.2.0</REVISION-LABEL>
+								<ISSUED-BY>viszda</ISSUED-BY>
+								<DATE>2014-10-13T12:09:00+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">CPU load measurement for serial and parallel measurement mode. Added Timer Overrun Handling and runtime optimization</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.2.1</REVISION-LABEL>
+								<ISSUED-BY>viszda</ISSUED-BY>
+								<DATE>2014-11-14T12:09:00+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">ESCAN00079842, ESCAN00079844, ESCAN00079535</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.2.2</REVISION-LABEL>
+								<ISSUED-BY>viszda</ISSUED-BY>
+								<DATE>2015-06-17T12:43:20+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">ESCAN00082234</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>2.0.0</REVISION-LABEL>
+								<ISSUED-BY>viszda</ISSUED-BY>
+								<DATE>2016-04-05T10:37:24+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">ESCAN00089228</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>2.1.0</REVISION-LABEL>
+								<ISSUED-BY>viszda</ISSUED-BY>
+								<DATE>2016-05-10T11:30:06+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">ESCAN00089510</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>2.2.0</REVISION-LABEL>
+								<ISSUED-BY>viszda</ISSUED-BY>
+								<DATE>2016-09-05T10:52:07+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">ESCAN00091735, ESCAN00091861</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>3.0.0</REVISION-LABEL>
+								<ISSUED-BY>viszda</ISSUED-BY>
+								<DATE>2017-04-04T09:07:55+02:00</DATE>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>3.1.0</REVISION-LABEL>
+								<ISSUED-BY>viszda</ISSUED-BY>
+								<DATE>2017-04-19T01:14:01+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">STORYC-671, STORYC-672</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>3.1.1</REVISION-LABEL>
+								<ISSUED-BY>viszda</ISSUED-BY>
+								<DATE>2017-06-09T15:26:08+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">ESCAN00095484</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+						</DOC-REVISIONS>
+					</ADMIN-DATA>
+					<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+					<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+					<SUPPORTED-CONFIG-VARIANTS>
+						<SUPPORTED-CONFIG-VARIANT>VARIANT-PRE-COMPILE</SUPPORTED-CONFIG-VARIANT>
+						<SUPPORTED-CONFIG-VARIANT>VARIANT-LINK-TIME</SUPPORTED-CONFIG-VARIANT>
+					</SUPPORTED-CONFIG-VARIANTS>
+					<CONTAINERS>
+						<ECUC-PARAM-CONF-CONTAINER-DEF UUID="f7e11089-cf24-4557-8552-f6312177a4b5">
+							<SHORT-NAME>RtmGeneral</SHORT-NAME>
+							<DESC>
+								<L-2 L="EN">General configuration parameters of the RTM.</L-2>
+							</DESC>
+							<ADMIN-DATA>
+								<SDGS>
+									<SDG GID="DV:CfgPostBuild">
+										<SD GID="DV:postBuildSelectableChangeable">false</SD>
+										<SD GID="DV:postBuildNotDeletable">true</SD>
+									</SDG>
+								</SDGS>
+							</ADMIN-DATA>
+							<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+							<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+							<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+							<PARAMETERS>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="48da4d9e-31a2-4365-bbcd-9d92d1f8b142">
+									<SHORT-NAME>RtmDevErrorDetect</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter switches the Development Error Detection and Notification ON or OFF.
+true:	Development error detection is enabled.
+false:	Development error detection is disabled.
+
+Note: In general, the development error detection is recommended during pre-test phase. It is not recommended to enable the development error detection in production code due to increased runtime and ROM needs.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:variantMultiplicityPBL">false</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>true</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-STRING-PARAM-DEF UUID="8c18d2cd-ea1e-4a6c-9a61-c56165db19bd">
+									<SHORT-NAME>RtmGetMeasurementTimestampFct</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Name of the function or macro that shall be used by RTM to acquire the current value of a hardware counter. The prototype will be defined in Rtm_Cbk.h.
+
+This function has to be provided by the application.
+Prototype: Rtm_TimestampType Rtm_GetTimeMeasurement(void);
+The return type Rtm_TimestampType depends on the parameter Rtm32BitTimer.
+</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:variantMultiplicityPBL">false</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<ECUC-STRING-PARAM-DEF-VARIANTS>
+										<ECUC-STRING-PARAM-DEF-CONDITIONAL>
+											<DEFAULT-VALUE>Rtm_GetTimeMeasurement</DEFAULT-VALUE>
+										</ECUC-STRING-PARAM-DEF-CONDITIONAL>
+									</ECUC-STRING-PARAM-DEF-VARIANTS>
+								</ECUC-STRING-PARAM-DEF>
+								<ECUC-INTEGER-PARAM-DEF UUID="79646f7f-5da9-401c-8552-7c8a581c7403">
+									<SHORT-NAME>RtmMeasurementCtrFrequency</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Number of ticks per [ms] provided by the hardware timer.
+
+The frequency of the hardware timer used to acquire measurement timestamps has to be adjusted to provide a compromise between accuracy and maximal measurement duration.
+
+A value of 10000 ticks per [ms] is recommended.
+
+A higher frequency results in higher measurement accuracy but will also shorten the period which can be measured.
+</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:BaseUnit">Ticks / ms</SD>
+											</SDG>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:variantMultiplicityPBL">false</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>10000</DEFAULT-VALUE>
+									<MAX>4294967295</MAX>
+									<MIN>1</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<ECUC-ENUMERATION-PARAM-DEF UUID="12dea9f0-8ff4-4628-857e-6df07acd663f">
+									<SHORT-NAME>RtmCtrDirection</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Defines the counting direction of the hardware counter:
+-RTM_UP: 0 to MAXVAL
+-RTM_DOWN: MAXVAL to 0</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:variantMultiplicityPBL">false</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>RTM_UP</DEFAULT-VALUE>
+									<LITERALS>
+										<ECUC-ENUMERATION-LITERAL-DEF UUID="35e7a56b-777b-4ec5-93bf-bf07054a034f">
+											<SHORT-NAME>RTM_UP</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">Upwards</L-4>
+											</LONG-NAME>
+										</ECUC-ENUMERATION-LITERAL-DEF>
+										<ECUC-ENUMERATION-LITERAL-DEF UUID="099d65b0-5d3f-4ee5-97a9-58e0e179eacc">
+											<SHORT-NAME>RTM_DOWN</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">Downwards</L-4>
+											</LONG-NAME>
+										</ECUC-ENUMERATION-LITERAL-DEF>
+									</LITERALS>
+								</ECUC-ENUMERATION-PARAM-DEF>
+								<ECUC-FLOAT-PARAM-DEF UUID="db1f715d-bc84-44b6-85de-5a1c67a80a59">
+									<SHORT-NAME>RtmMainfunctionCycleTime</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Cycle time of RTM main function.
+
+A value of 0.01 [s] is recommended.
+Lower values result in higher update-rates during live measurement but also require more bandwidth to transmit the measurement results.
+Higher values may lead to erroneous results if the main function’s cycle time has a jitter larger than a half of the hardware counters cycle time.
+</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:BaseUnit">SEC</SD>
+											</SDG>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:variantMultiplicityPBL">false</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>0.01</DEFAULT-VALUE>
+									<MAX>1</MAX>
+									<MIN>0.001</MIN>
+								</ECUC-FLOAT-PARAM-DEF>
+								<ECUC-STRING-PARAM-DEF UUID="d59f7040-c2a7-43fd-879c-f357d1f582dd">
+									<SHORT-NAME>RtmUserConfigFile</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">A configuration file is generated by Cfg5. If you want to overwrite settings in the generated configuration file, you can specify a path to a user defined configuration file.
+
+Note: The user defined configuration file will be included at the end of the generated file. Therefore definitions in the user defined configuration file can overwrite definitions in the generated configuration file.
+
+The contents of the user defined configuration file is copied to the end of &lt;Bsw&gt;_Cfg.h.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:variantMultiplicityPBL">false</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+								</ECUC-STRING-PARAM-DEF>
+								<ECUC-INTEGER-PARAM-DEF UUID="1bef1b96-6971-4efe-8db7-e28793a6f50f">
+									<SHORT-NAME>RtmTaskSwitchOverhead</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter defines the duration in [µs] needed for OS task switches.
+</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:BaseUnit">USEC</SD>
+											</SDG>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:variantMultiplicityPBL">false</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>0</DEFAULT-VALUE>
+									<MAX>5000</MAX>
+									<MIN>0</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<ECUC-INTEGER-PARAM-DEF UUID="2487ac25-7afb-46bc-af6b-b0a7fca75529">
+									<SHORT-NAME>RtmInterruptCallOverhead</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter defines the time span between task switch and call of the ISR Category 2 hook function in [µs].
+</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:BaseUnit">USEC</SD>
+											</SDG>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:variantMultiplicityPBL">false</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>0</DEFAULT-VALUE>
+									<MAX>5000</MAX>
+									<MIN>0</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<ECUC-ENUMERATION-PARAM-DEF UUID="5cbb3e0b-1880-4851-8e2b-ba3b0c1ac661">
+									<SHORT-NAME>RtmCpuLoadControlMode</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Define how the Cpu load is measured and the measurement is controlled.
+If set to "Off", the Cpu load measurement is deactivated.
+If set to "C_API", the Cpu load measurement is started and stopped and the results are requested with C APIs.
+If set to "Xcp", the Cpu load is measured by a measurement point. This measurement point can be activated like all other measurement points.
+
+Hint:
+If set to "Xcp", a measurement point called "Rtm_CpuLoadMeasurement" has to exist and must be enabled in order to measure the overall CPU load.
+Please note that this measurement point should not be called by an application.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:variantMultiplicityPBL">false</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>LINK</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>Off</DEFAULT-VALUE>
+									<LITERALS>
+										<ECUC-ENUMERATION-LITERAL-DEF UUID="b25699e6-a68a-4d77-a388-f44c4c42916f">
+											<SHORT-NAME>Off</SHORT-NAME>
+											<ORIGIN>Vector Informatik</ORIGIN>
+										</ECUC-ENUMERATION-LITERAL-DEF>
+										<ECUC-ENUMERATION-LITERAL-DEF UUID="eb5bd366-a567-46dd-86d9-03e6ce3bf5a7">
+											<SHORT-NAME>C_API</SHORT-NAME>
+											<ORIGIN>Vector Informatik</ORIGIN>
+										</ECUC-ENUMERATION-LITERAL-DEF>
+										<ECUC-ENUMERATION-LITERAL-DEF UUID="95153581-ec64-422d-8088-92f1b6c6aae7">
+											<SHORT-NAME>Xcp</SHORT-NAME>
+											<ORIGIN>Vector Informatik</ORIGIN>
+										</ECUC-ENUMERATION-LITERAL-DEF>
+									</LITERALS>
+								</ECUC-ENUMERATION-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="8baa44da-7888-4b4e-a4c1-816dc5d7e71b">
+									<SHORT-NAME>RtmTimerOverrunSupport</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter switches the Support for Timer Overruns ON or OFF.
+true:	Timer Overrun Handling is enabled.
+false:	Timer Overrun Handling is disabled.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:variantMultiplicityPBL">false</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="cb7ea73c-62a2-4c22-8a60-1047664f3e2a">
+									<SHORT-NAME>Rtm32BitTimer</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Specifies if 32bit timer is used.
+If set to true: a 32bit timer is used
+If set to false: a 16bit timer is used</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:variantMultiplicityPBL">false</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="000c0bfd-7e91-4ec8-bc11-49a71159b32d">
+									<SHORT-NAME>RtmMulticoreSupport</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">If set to true: measurement on multiple cores is supported
+If set to false: measurement on one core is supported</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:variantMultiplicityPBL">false</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="e0fbab9a-7bf9-4012-a6da-f12baf5cf592">
+									<SHORT-NAME>RtmUseNestingCounter</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">The nesting counter is used to detect successive activation of a measurement point before stopping.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:variantMultiplicityPBL">false</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>true</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-INTEGER-PARAM-DEF UUID="0d49ed3f-e0d6-4c96-b709-92317eca80a3">
+									<SHORT-NAME>RtmUsedCoreMask</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Specifies selection of cores to be measured.
+
+This parameter must not be changed!
+It is calculated automatically.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:variantMultiplicityPBL">false</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>1</DEFAULT-VALUE>
+									<MAX>65535</MAX>
+									<MIN>1</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="bec5a130-9142-4661-a37e-f74acc3b6415">
+									<SHORT-NAME>RtmControl</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">If enabled the global variable Rtm_ControlState is provided which allows disabling and enabling the RTM functionality during runtime. The feature may be used to prevent unintended RTM activity by disabling the functionality on a special trigger.
+
+If this option is disabled RTM will always be activated in the ECU.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:variantMultiplicityPBL">false</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="dacd3398-cd71-426c-84b4-2342600ad5db">
+									<SHORT-NAME>RtmSafeBswChecks</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Selects if safety checks are used. These checks improve robustness as e.g. invalid parameters are checked before function is executed. This attribute has to be enabled for safety projects where this component is mapped to an ASIL partition.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-STRING-PARAM-DEF UUID="cf3ec9d7-c033-4e9b-b8da-1eec6e2ab0b4">
+									<SHORT-NAME>RtmEcuName</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter specifies the ECU name within the XCP settings of CANoe.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:variantMultiplicityPBL">false</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<ECUC-STRING-PARAM-DEF-VARIANTS>
+										<ECUC-STRING-PARAM-DEF-CONDITIONAL>
+											<DEFAULT-VALUE>Rtm</DEFAULT-VALUE>
+											<MAX-LENGTH>50</MAX-LENGTH>
+											<MIN-LENGTH>1</MIN-LENGTH>
+										</ECUC-STRING-PARAM-DEF-CONDITIONAL>
+									</ECUC-STRING-PARAM-DEF-VARIANTS>
+								</ECUC-STRING-PARAM-DEF>
+							</PARAMETERS>
+						</ECUC-PARAM-CONF-CONTAINER-DEF>
+						<ECUC-PARAM-CONF-CONTAINER-DEF UUID="7f99b07a-a665-4755-9f0c-d0a1261e953a">
+							<SHORT-NAME>RtmMeasurementPoint</SHORT-NAME>
+							<DESC>
+								<L-2 L="EN">Each measurement point describes one code area whose runtime shall be measured using the RTM module.</L-2>
+							</DESC>
+							<ADMIN-DATA>
+								<SDGS>
+									<SDG GID="DV:CfgPostBuild">
+										<SD GID="DV:postBuildSelectableChangeable">false</SD>
+										<SD GID="DV:postBuildNotDeletable">true</SD>
+									</SDG>
+								</SDGS>
+							</ADMIN-DATA>
+							<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+							<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+							<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+							<PARAMETERS>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="c8e84ea3-0e57-4146-97cf-3371c19b187b">
+									<SHORT-NAME>RtmAutostartEnabled</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Defines if this measurement shall be activated during ECU startup automatically.
+
+Autostart may be used for init-functions which are called only during the startup-phase the communication stack, XCP and RTM module are activated. 
+
+Note: Each autostart measurement causes CPU-load. It is therefore advised to activate autostart only when it is required.
+</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="aa3996ee-af77-46db-890f-d679a8f13913">
+									<SHORT-NAME>RtmMeasurementEnabled</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter defines the availability of a measurement section during pre-compile time. If disabled, the measurement points of this section will be generated as empty macros. Hence this measurement section requires no memory- or runtime resources. Since the measurement settings are still part of the ECU configuration, the measurement enabled settings can be changed later.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>true</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-INTEGER-PARAM-DEF UUID="637c825b-a0b0-44bd-bceb-2dc377d8f6d0">
+									<SHORT-NAME>RtmRuntimeThreshold</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Threshold alarm time
+
+If the current runtime of this measurement section exceeds the time specified, a callback function is called.
+The threshold alarm is inactive if this parameter is not defined or set to 0.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:BaseUnit">MSEC</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<MAX>65535</MAX>
+									<MIN>0</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<ECUC-STRING-PARAM-DEF UUID="91ab80a0-62f2-4209-a69c-1c02454e17f0">
+									<SHORT-NAME>RtmMeasurementGroup</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">The name can be used to organize measurement sections into groups by defining a unique group name. The groups will be visible in CANoe and the generated measurement report.
+</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:variantMultiplicityPBL">false</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<CONFIGURATION-CLASS-AFFECTION>
+										<AFFECTION-KIND>NO-AFFECT</AFFECTION-KIND>
+									</CONFIGURATION-CLASS-AFFECTION>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<ECUC-STRING-PARAM-DEF-VARIANTS>
+										<ECUC-STRING-PARAM-DEF-CONDITIONAL>
+											<DEFAULT-VALUE>Default</DEFAULT-VALUE>
+										</ECUC-STRING-PARAM-DEF-CONDITIONAL>
+									</ECUC-STRING-PARAM-DEF-VARIANTS>
+								</ECUC-STRING-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="a6fe8a46-4912-4df4-8165-0b45f9569f32">
+									<SHORT-NAME>RtmDisableInterrupts</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Defines if interrupts are locked during measurement.
+
+If enabled, RTM locks interrupts during measurement using the critical section RTM_EXCLUSIVE_AREA_0. This results in more accurate measurement results but will increase the time spent with locked interrupt.
+</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<CONFIGURATION-CLASS-AFFECTION>
+										<AFFECTION-KIND>NO-AFFECT</AFFECTION-KIND>
+									</CONFIGURATION-CLASS-AFFECTION>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-INTEGER-PARAM-DEF UUID="b5a5b9a6-feb5-44b1-8632-d12318e79bf3">
+									<SHORT-NAME>RtmMeasurementId</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This ID defines the measurement object</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:DefaultFormat">DEC</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>0</DEFAULT-VALUE>
+									<MAX>65535</MAX>
+									<MIN>0</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<ECUC-INTEGER-PARAM-DEF UUID="84bc54dd-e31f-4dd9-bfcd-351694cdc215">
+									<SHORT-NAME>RtmAssignedToCore</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Defines on which core the measurement point is running.
+
+If not defined the measurement point may measure runtime between two cores, in multi core systems.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<MAX>65535</MAX>
+									<MIN>0</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<ECUC-ENUMERATION-PARAM-DEF UUID="33f7a4ce-b3f4-4397-bcc0-819e2c9841b7">
+									<SHORT-NAME>RtmMeasurementType</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">The measurement type defines the measurement behavior of this measurement point.
+If set to ResponseTime: 
+  - Measures the absolute time between measurement start and stop.
+If set to ExecutionTime_NonNested: 
+  - Measures like ResponseTime minus interruptions by task or ISR.
+If set to ExecutionTime_Nested: 
+  - Measures like ExecutionTime_NonNested minus the execution time of nested measurement points.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>ResponseTime</DEFAULT-VALUE>
+									<LITERALS>
+										<ECUC-ENUMERATION-LITERAL-DEF UUID="540de543-272f-49bc-b5c0-8ff330c734f8">
+											<SHORT-NAME>ResponseTime</SHORT-NAME>
+											<ORIGIN>Vector Informatik</ORIGIN>
+										</ECUC-ENUMERATION-LITERAL-DEF>
+										<ECUC-ENUMERATION-LITERAL-DEF UUID="d7e75058-981d-4899-949b-a703338a6164">
+											<SHORT-NAME>ExecutionTime_Nested</SHORT-NAME>
+											<ORIGIN>Vector Informatik</ORIGIN>
+										</ECUC-ENUMERATION-LITERAL-DEF>
+										<ECUC-ENUMERATION-LITERAL-DEF UUID="82da2d80-8eb3-47bb-b572-e4fa657c5b14">
+											<SHORT-NAME>ExecutionTime_NonNested</SHORT-NAME>
+											<ORIGIN>Vector Informatik</ORIGIN>
+										</ECUC-ENUMERATION-LITERAL-DEF>
+									</LITERALS>
+								</ECUC-ENUMERATION-PARAM-DEF>
+							</PARAMETERS>
+						</ECUC-PARAM-CONF-CONTAINER-DEF>
+					</CONTAINERS>
+				</ECUC-MODULE-DEF>
+				<BSW-IMPLEMENTATION UUID="b1461bd1-4237-4cfa-9b71-f3458c755c59">
+					<SHORT-NAME>Rtm_Impl</SHORT-NAME>
+					<PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+					<SW-VERSION>3.01.01</SW-VERSION>
+					<USED-CODE-GENERATOR>DaVinci Configurator</USED-CODE-GENERATOR>
+					<VENDOR-ID>30</VENDOR-ID>
+					<AR-RELEASE-VERSION>4.2.2</AR-RELEASE-VERSION>
+					<BEHAVIOR-REF DEST="BSW-INTERNAL-BEHAVIOR">/MICROSAR/Rtm_ib_bswmd/BswModuleDescriptions/Rtm/RtmBehavior</BEHAVIOR-REF>
+					<PRECONFIGURED-CONFIGURATION-REFS>
+						<PRECONFIGURED-CONFIGURATION-REF DEST="ECUC-MODULE-CONFIGURATION-VALUES">/MICROSAR/Rtm_Pre</PRECONFIGURED-CONFIGURATION-REF>
+					</PRECONFIGURED-CONFIGURATION-REFS>
+					<RECOMMENDED-CONFIGURATION-REFS>
+						<RECOMMENDED-CONFIGURATION-REF DEST="ECUC-MODULE-CONFIGURATION-VALUES">/MICROSAR/Rtm_Rec</RECOMMENDED-CONFIGURATION-REF>
+					</RECOMMENDED-CONFIGURATION-REFS>
+					<VENDOR-SPECIFIC-MODULE-DEF-REFS>
+						<VENDOR-SPECIFIC-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/MICROSAR/Rtm</VENDOR-SPECIFIC-MODULE-DEF-REF>
+					</VENDOR-SPECIFIC-MODULE-DEF-REFS>
+				</BSW-IMPLEMENTATION>
+				<ECUC-MODULE-CONFIGURATION-VALUES UUID="142a4365-3674-44c1-8ab3-23916844a5a9">
+					<SHORT-NAME>Rtm_Pre</SHORT-NAME>
+					<DEFINITION-REF DEST="ECUC-MODULE-DEF">/MICROSAR/Rtm</DEFINITION-REF>
+					<CONTAINERS></CONTAINERS>
+				</ECUC-MODULE-CONFIGURATION-VALUES>
+				<ECUC-MODULE-CONFIGURATION-VALUES UUID="601730a0-4eb4-429e-972d-19668bd59dc6">
+					<SHORT-NAME>Rtm_Rec</SHORT-NAME>
+					<DEFINITION-REF DEST="ECUC-MODULE-DEF">/MICROSAR/Rtm</DEFINITION-REF>
+					<CONTAINERS></CONTAINERS>
+				</ECUC-MODULE-CONFIGURATION-VALUES>
+			</ELEMENTS>
+		</AR-PACKAGE>
+	</AR-PACKAGES>
+</AUTOSAR>

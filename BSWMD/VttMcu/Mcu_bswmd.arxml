@@ -1,0 +1,1134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-0-3.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://autosar.org/schema/r4.0">
+	<AR-PACKAGES>
+		<AR-PACKAGE UUID="b50b55f3-631e-4354-a328-15d846b6bbe9">
+			<SHORT-NAME>MICROSAR</SHORT-NAME>
+			<ELEMENTS>
+				<ECUC-MODULE-DEF UUID="0b63c699-6c37-4be3-8d4a-6c59819116b0">
+					<SHORT-NAME>Mcu</SHORT-NAME>
+					<DESC>
+						<L-2 L="EN">Configuration of the Mcu (Microcontroler Unit) module.
+</L-2>
+					</DESC>
+					<CATEGORY>VENDOR_SPECIFIC_MODULE_DEFINITION</CATEGORY>
+					<ADMIN-DATA>
+						<DOC-REVISIONS>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.00.00</REVISION-LABEL>
+								<ISSUED-BY>virlg</ISSUED-BY>
+								<DATE>2013-09-23T11:20:44+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Initial Creation</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00068491</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.00.01</REVISION-LABEL>
+								<ISSUED-BY>virchl</ISSUED-BY>
+								<DATE>2014-02-25T10:05:23+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Modification</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.00.02</REVISION-LABEL>
+								<ISSUED-BY>virchl</ISSUED-BY>
+								<DATE>2014-05-15T03:39:30+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Modification</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00070801</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.00.03</REVISION-LABEL>
+								<ISSUED-BY>virchl</ISSUED-BY>
+								<DATE>2014-11-21T04:19:05+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">No modifications here</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.00.04</REVISION-LABEL>
+								<ISSUED-BY>virchl</ISSUED-BY>
+								<DATE>2014-11-25T09:23:07+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">No modifications here</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>2.00.00</REVISION-LABEL>
+								<ISSUED-BY>virchl</ISSUED-BY>
+								<DATE>2015-01-20T11:55:34+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Default value of McuVersionInfoApi set to false</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>2.00.00</REVISION-LABEL>
+								<ISSUED-BY>virchl</ISSUED-BY>
+								<DATE>2015-01-20T11:55:34+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">SwVersion set to 2.00.00</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>2.00.01</REVISION-LABEL>
+								<ISSUED-BY>virchl</ISSUED-BY>
+								<DATE>2015-04-28T03:19:36+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Default value of McuMode set to Sleep Mode</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00082435</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>2.01.00</REVISION-LABEL>
+								<ISSUED-BY>virchl</ISSUED-BY>
+								<DATE>2015-07-08T10:22:18+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">SwVersion set to 2.01.00</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>2.01.00</REVISION-LABEL>
+								<ISSUED-BY>virchl</ISSUED-BY>
+								<DATE>2015-07-08T10:22:18+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">DisplaySettings for CFG5-Integer-Parameters added</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>2.02.00</REVISION-LABEL>
+								<ISSUED-BY>virchl</ISSUED-BY>
+								<DATE>2015-08-27T12:17:58+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">SwVersion set to 2.02.00</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">FEAT-1372</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>2.02.00</REVISION-LABEL>
+								<ISSUED-BY>virchl</ISSUED-BY>
+								<DATE>2015-10-07T11:18:42+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Recommended McuClockReferencePointFrequency added</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>2.02.00</REVISION-LABEL>
+								<ISSUED-BY>virchl</ISSUED-BY>
+								<DATE>2015-10-07T01:15:39+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Parameter McuVttMode added</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00085049</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>2.02.00</REVISION-LABEL>
+								<ISSUED-BY>virchl</ISSUED-BY>
+								<DATE>2015-10-07T01:17:12+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Range of McuMode extended to 255</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00085049</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>2.02.00</REVISION-LABEL>
+								<ISSUED-BY>virchl</ISSUED-BY>
+								<DATE>2015-10-07T01:20:37+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Pre-Defined McuModeSettingConf added</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00085049</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>2.03.00</REVISION-LABEL>
+								<ISSUED-BY>virbmz</ISSUED-BY>
+								<DATE>2017-01-13T02:26:35+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">FEAT1824 Support a component-specific SafeBSW configuration switch (Vtt Mcal), Version updates</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">FEAT1824</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>2.04.00</REVISION-LABEL>
+								<ISSUED-BY>virbmz</ISSUED-BY>
+								<DATE>2017-05-19T09:39:15+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Added list for symbolic name values for McuResetReason</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00094864</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+						</DOC-REVISIONS>
+					</ADMIN-DATA>
+					<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+					<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+					<REFINED-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/AUTOSAR/EcucDefs/Mcu</REFINED-MODULE-DEF-REF>
+					<SUPPORTED-CONFIG-VARIANTS>
+						<SUPPORTED-CONFIG-VARIANT>VARIANT-PRE-COMPILE</SUPPORTED-CONFIG-VARIANT>
+					</SUPPORTED-CONFIG-VARIANTS>
+					<CONTAINERS>
+						<!-- Container Definition: McuGeneralConfiguration -->
+						<ECUC-PARAM-CONF-CONTAINER-DEF UUID="90edbacf-a163-4386-ad5e-835d4c46cc08">
+							<SHORT-NAME>McuGeneralConfiguration</SHORT-NAME>
+							<DESC>
+								<L-2 L="EN">General configuration parameteres of the MCU module.</L-2>
+							</DESC>
+							<ADMIN-DATA>
+								<SDGS>
+									<SDG GID="DV:CfgPostBuild">
+										<SD GID="DV:postBuildSelectableChangeable">false</SD>
+										<SD GID="DV:postBuildNotDeletable">false</SD>
+									</SDG>
+								</SDGS>
+							</ADMIN-DATA>
+							<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+							<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+							<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+							<MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+							<PARAMETERS>
+								<!-- PARAMETER DEFINITION: McuDevErrorDetect -->
+								<ECUC-BOOLEAN-PARAM-DEF UUID="c285e599-ccc7-40a8-ac3e-e90aab2fac0e">
+									<SHORT-NAME>McuDevErrorDetect</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter switches the Development Error Detection and Notification ON or OFF.
+
+True: Development error detection is enabled.
+False: Development error detection is disabeld.
+
+Note: In general, the development error detection is recommended during pre-test phase. It is not recommended to enable the development error detection in production code due to increased runtime and ROM needs.
+
+</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>true</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: McuGetRamStateApi -->
+								<ECUC-BOOLEAN-PARAM-DEF UUID="be7a86fd-92a4-436d-8b7a-f1cdaefa6c90">
+									<SHORT-NAME>McuGetRamStateApi</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter defines whether the function Mcu_GetRamState() is enabled or disabled.
+
+True: API Mcu_GetRamState()  is supported (function provided)
+False: API Mcu_GetRamState() is not supported (functions not provided)
+</L-2>
+									</DESC>
+									<INTRODUCTION>
+										<P>
+											<L-1 L="EN">(e.g. If the H/W does not support the functionality, this parameter can be used to disable the Api).</L-1>
+										</P>
+									</INTRODUCTION>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: McuInitClock -->
+								<ECUC-BOOLEAN-PARAM-DEF UUID="f47eec02-3ef9-4d88-8a00-3b0716a1ebec">
+									<SHORT-NAME>McuInitClock</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter defines the responsibility of clock initialization.
+
+True: The MCU driver is responisble of the clock initialization. 
+False: The clock initialization has to be disabled from the MCU driver.
+</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>true</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: McuNoPll -->
+								<ECUC-BOOLEAN-PARAM-DEF UUID="b609d27c-ea09-494c-9d91-23f89db3010a">
+									<SHORT-NAME>McuNoPll</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter defines whether the HW does not have a PLL. If the HW does not have a PLL or the PLL circuitry is enabled after the power on without S/W intervention the functions MCU_DistributePllClock has to be disabled and MCU-GetPllStatus has to return MCC_PLL_STATUS_UNDEFINED.
+
+True: HW does not have a PLL or the PLL circuitry is enabled after the power on without S/W intervention
+False: HW does have a PLL.
+</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>true</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: McuPerformResetApi -->
+								<ECUC-BOOLEAN-PARAM-DEF UUID="dc8c5b96-02d1-4201-a8f2-01604eb242b9">
+									<SHORT-NAME>McuPerformResetApi</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter defines whether the function Mcu_PerformReset() is enabled or disabled.
+
+True: API Mcu_PerformReset() is supported (function provided)
+False: API Mcu_PerformReset() is not supported (function not provided)
+</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>true</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: McuVersionInfoApi -->
+								<ECUC-BOOLEAN-PARAM-DEF UUID="e84b650a-68dc-4748-8ff0-0e7baf59f337">
+									<SHORT-NAME>McuVersionInfoApi</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter defines whether the function Mcu_GetVersionInfo() is enabled or disabled.
+
+True: API Mcu_GetVersionInfo() is supported (function provided)
+False: API Mcu_GetVersionInfo() is not supported (function not provided)
+</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="7636765a-c9c1-4d98-817a-f42700a55830">
+									<SHORT-NAME>McuSafeBswChecks</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Selects if safety checks are used. These checks improve robustness as e.g. invalid parameters are checked before function is executed. This attribute has to be enabled for safety projects where this component is mapped to an ASIL partition.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+							</PARAMETERS>
+						</ECUC-PARAM-CONF-CONTAINER-DEF>
+						<!-- Container Definition: McuModuleConfiguration -->
+						<ECUC-PARAM-CONF-CONTAINER-DEF UUID="ecc220ad-265b-4d7b-8a04-11bd6dcd6356">
+							<SHORT-NAME>McuModuleConfiguration</SHORT-NAME>
+							<DESC>
+								<L-2 L="EN">This container includes the configuration (parameters) of the MCU driver
+</L-2>
+							</DESC>
+							<ADMIN-DATA>
+								<SDGS>
+									<SDG GID="DV:CfgPostBuild">
+										<SD GID="DV:postBuildSelectableChangeable">false</SD>
+										<SD GID="DV:postBuildNotDeletable">false</SD>
+									</SDG>
+								</SDGS>
+							</ADMIN-DATA>
+							<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+							<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+							<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+							<MULTIPLE-CONFIGURATION-CONTAINER>true</MULTIPLE-CONFIGURATION-CONTAINER>
+							<PARAMETERS>
+								<!-- PARAMETER DEFINITION: McuClockSrcFailureNotification -->
+								<ECUC-ENUMERATION-PARAM-DEF UUID="3afce278-17bb-41b1-ab55-d5e3d9979185">
+									<SHORT-NAME>McuClockSrcFailureNotification</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Parameter not used.
+
+This parameter defines whether the clock failure notification is enabled or disabled. In case this feature is not supportet by HW the setting should be disabled.
+
+DISABLED: Clock failure notification is disabled.
+ENABLED: Clock failure notification is enabled.
+</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<LITERALS>
+										<ECUC-ENUMERATION-LITERAL-DEF UUID="a3696b0b-0508-449f-bedd-100a79439eff">
+											<SHORT-NAME>DISABLED</SHORT-NAME>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+										</ECUC-ENUMERATION-LITERAL-DEF>
+										<ECUC-ENUMERATION-LITERAL-DEF UUID="c7fc0aaf-2657-43f2-9a45-0ac192fe36c1">
+											<SHORT-NAME>ENABLED</SHORT-NAME>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+										</ECUC-ENUMERATION-LITERAL-DEF>
+									</LITERALS>
+								</ECUC-ENUMERATION-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: McuNumberOfMcuModes -->
+								<ECUC-INTEGER-PARAM-DEF UUID="4d6a8a36-e901-45cb-aa4a-81f9646baf24">
+									<SHORT-NAME>McuNumberOfMcuModes</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Parameter not used.
+
+This parameter defines the number of modes available for the MCU.
+</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:DefaultFormat">DEC</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<INTRODUCTION>
+										<P>
+											<L-1 L="EN">calculationFormula = Number of configured McuModeSettingConf</L-1>
+										</P>
+									</INTRODUCTION>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<MAX>255</MAX>
+									<MIN>1</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: McuRamSectors -->
+								<ECUC-INTEGER-PARAM-DEF UUID="b496b299-1f3c-4ee6-bd9b-c24a47c99f95">
+									<SHORT-NAME>McuRamSectors</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Parameter not used.
+
+This parameter defines the number of RAM sectors available for the MCU.
+</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:DefaultFormat">DEC</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<INTRODUCTION>
+										<P>
+											<L-1 L="EN">calculationFormula = Number of configured McuRamSectorSettingConf</L-1>
+										</P>
+									</INTRODUCTION>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<MAX>4294967295</MAX>
+									<MIN>1</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: McuResetSetting -->
+								<ECUC-INTEGER-PARAM-DEF UUID="47c0e365-ae80-4b7b-9619-3494d685ccfc">
+									<SHORT-NAME>McuResetSetting</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Parameter not used.
+
+This parameter relates to the MCU specific reset configuration. This applies to the function Mcu_PerformReset, which performs a microcontroller reset using the hardware feature of the microcontroller.
+</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:DefaultFormat">HEX</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<MAX>255</MAX>
+									<MIN>1</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+							</PARAMETERS>
+							<SUB-CONTAINERS>
+								<!-- Container Definition: McuClockSettingConfig -->
+								<ECUC-PARAM-CONF-CONTAINER-DEF UUID="9fea1330-7d3e-42ca-abaa-feff5665bb5a">
+									<SHORT-NAME>McuClockSettingConfig</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This container includes the configuration (parameters) for the clock settings of the MCU. 
+</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:postBuildSelectableChangeable">false</SD>
+												<SD GID="DV:postBuildNotDeletable">false</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+									<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+									<MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+									<PARAMETERS>
+										<!-- PARAMETER DEFINITION: McuClockSettingId -->
+										<ECUC-INTEGER-PARAM-DEF UUID="cd72791e-ccba-4dec-9da3-1edeef67401e">
+											<SHORT-NAME>McuClockSettingId</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Parameter not used.
+
+This parameter defines the Id of this McuClockSettingConfig to be used as argument for the API call "Mcu_InitClock".
+</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>0</DEFAULT-VALUE>
+											<MAX>255</MAX>
+											<MIN>0</MIN>
+										</ECUC-INTEGER-PARAM-DEF>
+									</PARAMETERS>
+									<SUB-CONTAINERS>
+										<!-- Container Definition: McuClockReferencePoint -->
+										<ECUC-PARAM-CONF-CONTAINER-DEF UUID="b68a1a63-5ba5-4eed-8b06-2cf296726d7f">
+											<SHORT-NAME>McuClockReferencePoint</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Container not used.
+
+This container includes a reference point in the Mcu Clock tree. It defines the frequency which then can be used by other modules as an input value. Lower multiplictiy is 1, as even in the simpliest case (only one frequency is used), there is one frequency to be defined.
+</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:CfgPostBuild">
+														<SD GID="DV:postBuildSelectableChangeable">false</SD>
+														<SD GID="DV:postBuildNotDeletable">false</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+											<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+											<MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+											<PARAMETERS>
+												<!-- PARAMETER DEFINITION: McuClockReferencePointFrequency -->
+												<ECUC-FLOAT-PARAM-DEF UUID="de0b43e8-e64b-4fce-b70e-a453e6ec816f">
+													<SHORT-NAME>McuClockReferencePointFrequency</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">This parameter defines the frequency for the specific instance of the McuClockReferencePoint container.</L-2>
+													</DESC>
+													<ADMIN-DATA>
+														<SDGS>
+															<SDG GID="DV:Display">
+																<SD GID="DV:BaseUnit">HZ</SD>
+																<SD GID="DV:Unit">MHZ</SD>
+															</SDG>
+														</SDGS>
+													</ADMIN-DATA>
+													<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<MAX>1.7976931348623157E+308</MAX>
+													<MIN>0</MIN>
+												</ECUC-FLOAT-PARAM-DEF>
+											</PARAMETERS>
+										</ECUC-PARAM-CONF-CONTAINER-DEF>
+									</SUB-CONTAINERS>
+								</ECUC-PARAM-CONF-CONTAINER-DEF>
+								<!-- Container Definition: McuDemEventParameterRefs -->
+								<ECUC-PARAM-CONF-CONTAINER-DEF UUID="9d5417aa-2586-4bdf-bae1-5ca7a758032b">
+									<SHORT-NAME>McuDemEventParameterRefs</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Container not used.
+
+This container includes references to DemEventParameter elements which shall be invoked using the API Dem_ReportErrorStatus API in case the corresponding error occurs. The EventId is taken from the referenced DemEventParameter's DemEventId value. The standardized errors are provided in the container and can be extended by vendor specific error references.
+</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:postBuildSelectableChangeable">false</SD>
+												<SD GID="DV:postBuildNotDeletable">false</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+									<MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+									<REFERENCES>
+										<!-- Symbolic Name Reference Definition: MCU_E_CLOCK_FAILURE -->
+										<ECUC-SYMBOLIC-NAME-REFERENCE-DEF UUID="89d041b2-6524-4fc7-afde-b98f02cb0b4f">
+											<SHORT-NAME>MCU_E_CLOCK_FAILURE</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Reference to configured DEM event to report "Clock source failure".
+</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Dem/DemConfigSet/DemEventParameter</DESTINATION-REF>
+										</ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+									</REFERENCES>
+								</ECUC-PARAM-CONF-CONTAINER-DEF>
+								<!-- Container Definition: McuModeSettingConf -->
+								<ECUC-PARAM-CONF-CONTAINER-DEF UUID="36c44ec0-6ab3-4f2c-a99b-2eb61ab3eb86">
+									<SHORT-NAME>McuModeSettingConf</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This container includes the configuration (parameters) for the Mode setting of the MCU.  Please see MCU035 for more information on the MCU mode settings.
+
+</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:postBuildSelectableChangeable">false</SD>
+												<SD GID="DV:postBuildNotDeletable">false</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+									<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+									<MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+									<PARAMETERS>
+										<!-- PARAMETER DEFINITION: McuMode -->
+										<ECUC-INTEGER-PARAM-DEF UUID="02e51af9-b62a-46e8-a294-a0a13fec710e">
+											<SHORT-NAME>McuMode</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">The parameter defines the MCU Mode settings.</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:Display">
+														<SD GID="DV:DefaultFormat">DEC</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>0</DEFAULT-VALUE>
+											<MAX>255</MAX>
+											<MIN>0</MIN>
+										</ECUC-INTEGER-PARAM-DEF>
+										<ECUC-ENUMERATION-PARAM-DEF UUID="00cb364b-1f37-431e-bf99-f7a5493d6000">
+											<SHORT-NAME>McuVttMode</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter defines the corresponding mode for emulation.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>MCU_MODE_NORMAL</DEFAULT-VALUE>
+											<LITERALS>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="a775952c-1434-4b4b-8779-607a6a6fba02">
+													<SHORT-NAME>VTTMCU_MODE_NORMAL</SHORT-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="8a0690b5-6922-4f6b-875a-6d964c8a4734">
+													<SHORT-NAME>VTTMCU_MODE_SLEEP</SHORT-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="20224a64-8b77-422b-81b7-9246c7cc8bab">
+													<SHORT-NAME>VTTMCU_MODE_RESET</SHORT-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="abf1bd0f-c77f-46b4-9e0e-9d94f589acad">
+													<SHORT-NAME>VTTMCU_MODE_POWER_OFF</SHORT-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+											</LITERALS>
+										</ECUC-ENUMERATION-PARAM-DEF>
+									</PARAMETERS>
+								</ECUC-PARAM-CONF-CONTAINER-DEF>
+								<!-- Container Definition: McuRamSectorSettingConf -->
+								<ECUC-PARAM-CONF-CONTAINER-DEF UUID="9ffa2be6-a37b-40a7-9082-340816e391b6">
+									<SHORT-NAME>McuRamSectorSettingConf</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This container includes the configuration (parameters) for the RAM Sector setting.
+</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:postBuildSelectableChangeable">false</SD>
+												<SD GID="DV:postBuildNotDeletable">false</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>*</UPPER-MULTIPLICITY>
+									<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+									<MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+									<PARAMETERS>
+										<!-- PARAMETER DEFINITION: McuRamDefaultValue -->
+										<ECUC-INTEGER-PARAM-DEF UUID="574af5a3-aca4-40fa-a94f-1df0a8d6aaec">
+											<SHORT-NAME>McuRamDefaultValue</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Parameter not used.
+
+This parameter defines the data pre-setting to be initialized
+</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:Display">
+														<SD GID="DV:DefaultFormat">HEX</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<MAX>255</MAX>
+											<MIN>0</MIN>
+										</ECUC-INTEGER-PARAM-DEF>
+										<!-- PARAMETER DEFINITION: McuRamSectionBaseAddress -->
+										<ECUC-INTEGER-PARAM-DEF UUID="5e65e838-d5fb-400a-aec1-337b6b1de8ed">
+											<SHORT-NAME>McuRamSectionBaseAddress</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Parameter not used.
+
+This parameter defines the MCU RAM section base address
+</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:Display">
+														<SD GID="DV:DefaultFormat">HEX</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<MAX>4294967295</MAX>
+											<MIN>0</MIN>
+										</ECUC-INTEGER-PARAM-DEF>
+										<!-- PARAMETER DEFINITION: McuRamSectionSize -->
+										<ECUC-INTEGER-PARAM-DEF UUID="16492782-f045-4a70-8545-423be3dd24c0">
+											<SHORT-NAME>McuRamSectionSize</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Parameter not used.
+
+This parameter defines the MCU RAM Section size in bytes.
+</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:Display">
+														<SD GID="DV:BaseUnit">BYTE</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<MAX>4294967295</MAX>
+											<MIN>0</MIN>
+										</ECUC-INTEGER-PARAM-DEF>
+									</PARAMETERS>
+								</ECUC-PARAM-CONF-CONTAINER-DEF>
+							</SUB-CONTAINERS>
+						</ECUC-PARAM-CONF-CONTAINER-DEF>
+						<!-- Container Definition: McuPublishedInformation -->
+						<ECUC-PARAM-CONF-CONTAINER-DEF UUID="04ddf2d3-366e-4275-9477-bbb386e44b09">
+							<SHORT-NAME>McuPublishedInformation</SHORT-NAME>
+							<DESC>
+								<L-2 L="EN">This container includes all MCU specific published information parameters.</L-2>
+							</DESC>
+							<ADMIN-DATA>
+								<SDGS>
+									<SDG GID="DV:CfgPostBuild">
+										<SD GID="DV:postBuildSelectableChangeable">false</SD>
+										<SD GID="DV:postBuildNotDeletable">false</SD>
+									</SDG>
+								</SDGS>
+							</ADMIN-DATA>
+							<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+							<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+							<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+							<MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+							<SUB-CONTAINERS>
+								<!-- Container Definition: McuResetReasonConf -->
+								<ECUC-PARAM-CONF-CONTAINER-DEF UUID="b2d76da0-ecf5-4704-a26f-4ed02341641d">
+									<SHORT-NAME>McuResetReasonConf</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Container not used.
+
+This container includes the configuration for the different type of reset reason that can be retrieved from Mcu_GetResetReason Api.
+</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:postBuildSelectableChangeable">false</SD>
+												<SD GID="DV:postBuildNotDeletable">false</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+									<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+									<MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+									<PARAMETERS>
+										<!-- PARAMETER DEFINITION: McuResetReason -->
+										<ECUC-INTEGER-PARAM-DEF UUID="4576c1d6-0b9e-4245-9ed2-c475b5bb8778">
+											<SHORT-NAME>McuResetReason</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Parameter not used.
+
+This parameter defines the different types of reset that a microcontroller supports. This parameter is referenced by the parameter EcuMResetReason in the ECU State manager module.
+</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:Display">
+														<SD GID="DV:DefaultFormat">HEX</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PUBLISHED-INFORMATION</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+											<MAX>255</MAX>
+											<MIN>0</MIN>
+										</ECUC-INTEGER-PARAM-DEF>
+									</PARAMETERS>
+								</ECUC-PARAM-CONF-CONTAINER-DEF>
+							</SUB-CONTAINERS>
+						</ECUC-PARAM-CONF-CONTAINER-DEF>
+					</CONTAINERS>
+				</ECUC-MODULE-DEF>
+				<BSW-IMPLEMENTATION UUID="287fc7ca-7ff0-460f-9ded-eba0de59f03c">
+					<SHORT-NAME>Mcu_Impl</SHORT-NAME>
+					<PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+					<SW-VERSION>2.04.00</SW-VERSION>
+					<USED-CODE-GENERATOR>cMSR</USED-CODE-GENERATOR>
+					<VENDOR-ID>30</VENDOR-ID>
+					<AR-RELEASE-VERSION>4.00.03</AR-RELEASE-VERSION>
+					<PRECONFIGURED-CONFIGURATION-REFS>
+						<PRECONFIGURED-CONFIGURATION-REF DEST="ECUC-MODULE-CONFIGURATION-VALUES">/MICROSAR/Mcu_Pre</PRECONFIGURED-CONFIGURATION-REF>
+					</PRECONFIGURED-CONFIGURATION-REFS>
+					<RECOMMENDED-CONFIGURATION-REFS>
+						<RECOMMENDED-CONFIGURATION-REF DEST="ECUC-MODULE-CONFIGURATION-VALUES">/MICROSAR/Mcu_Rec</RECOMMENDED-CONFIGURATION-REF>
+					</RECOMMENDED-CONFIGURATION-REFS>
+					<VENDOR-SPECIFIC-MODULE-DEF-REFS>
+						<VENDOR-SPECIFIC-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/MICROSAR/Mcu</VENDOR-SPECIFIC-MODULE-DEF-REF>
+					</VENDOR-SPECIFIC-MODULE-DEF-REFS>
+				</BSW-IMPLEMENTATION>
+				<ECUC-MODULE-CONFIGURATION-VALUES UUID="8018dec4-6589-4a30-8342-6418f41b5bb7">
+					<SHORT-NAME>Mcu_Pre</SHORT-NAME>
+					<DEFINITION-REF DEST="ECUC-MODULE-DEF">/MICROSAR/Mcu</DEFINITION-REF>
+					<CONTAINERS>
+						<ECUC-CONTAINER-VALUE UUID="b1873216-1a16-4cf8-9f19-2545b804442e">
+							<SHORT-NAME>McuModuleConfiguration</SHORT-NAME>
+							<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Mcu/McuModuleConfiguration</DEFINITION-REF>
+							<SUB-CONTAINERS>
+								<ECUC-CONTAINER-VALUE UUID="dfd87eac-a3ae-45b9-8851-31ef9aeb859a">
+									<SHORT-NAME>NORMAL</SHORT-NAME>
+									<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Mcu/McuModuleConfiguration/McuModeSettingConf</DEFINITION-REF>
+									<PARAMETER-VALUES>
+										<ECUC-NUMERICAL-PARAM-VALUE>
+											<DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Mcu/McuModuleConfiguration/McuModeSettingConf/McuMode</DEFINITION-REF>
+											<VALUE>0</VALUE>
+										</ECUC-NUMERICAL-PARAM-VALUE>
+										<ECUC-TEXTUAL-PARAM-VALUE>
+											<DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Mcu/McuModuleConfiguration/McuModeSettingConf/McuVttMode</DEFINITION-REF>
+											<VALUE>VTTMCU_MODE_NORMAL</VALUE>
+										</ECUC-TEXTUAL-PARAM-VALUE>
+									</PARAMETER-VALUES>
+								</ECUC-CONTAINER-VALUE>
+								<ECUC-CONTAINER-VALUE UUID="cf6da85f-94b0-41ed-a54f-5b9b75e8927a">
+									<SHORT-NAME>SLEEP</SHORT-NAME>
+									<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Mcu/McuModuleConfiguration/McuModeSettingConf</DEFINITION-REF>
+									<PARAMETER-VALUES>
+										<ECUC-NUMERICAL-PARAM-VALUE>
+											<DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Mcu/McuModuleConfiguration/McuModeSettingConf/McuMode</DEFINITION-REF>
+											<VALUE>1</VALUE>
+										</ECUC-NUMERICAL-PARAM-VALUE>
+										<ECUC-TEXTUAL-PARAM-VALUE>
+											<DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Mcu/McuModuleConfiguration/McuModeSettingConf/McuVttMode</DEFINITION-REF>
+											<VALUE>VTTMCU_MODE_SLEEP</VALUE>
+										</ECUC-TEXTUAL-PARAM-VALUE>
+									</PARAMETER-VALUES>
+								</ECUC-CONTAINER-VALUE>
+								<ECUC-CONTAINER-VALUE UUID="f1c321be-64f3-4663-a264-866838d5edd6">
+									<SHORT-NAME>RESET</SHORT-NAME>
+									<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Mcu/McuModuleConfiguration/McuModeSettingConf</DEFINITION-REF>
+									<PARAMETER-VALUES>
+										<ECUC-NUMERICAL-PARAM-VALUE>
+											<DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Mcu/McuModuleConfiguration/McuModeSettingConf/McuMode</DEFINITION-REF>
+											<VALUE>2</VALUE>
+										</ECUC-NUMERICAL-PARAM-VALUE>
+										<ECUC-TEXTUAL-PARAM-VALUE>
+											<DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Mcu/McuModuleConfiguration/McuModeSettingConf/McuVttMode</DEFINITION-REF>
+											<VALUE>VTTMCU_MODE_RESET</VALUE>
+										</ECUC-TEXTUAL-PARAM-VALUE>
+									</PARAMETER-VALUES>
+								</ECUC-CONTAINER-VALUE>
+								<ECUC-CONTAINER-VALUE UUID="50f2400c-c7b2-4974-b1ba-9409798a0707">
+									<SHORT-NAME>POWER_OFF</SHORT-NAME>
+									<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Mcu/McuModuleConfiguration/McuModeSettingConf</DEFINITION-REF>
+									<PARAMETER-VALUES>
+										<ECUC-NUMERICAL-PARAM-VALUE>
+											<DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Mcu/McuModuleConfiguration/McuModeSettingConf/McuMode</DEFINITION-REF>
+											<VALUE>3</VALUE>
+										</ECUC-NUMERICAL-PARAM-VALUE>
+										<ECUC-TEXTUAL-PARAM-VALUE>
+											<DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Mcu/McuModuleConfiguration/McuModeSettingConf/McuVttMode</DEFINITION-REF>
+											<VALUE>VTTMCU_MODE_POWER_OFF</VALUE>
+										</ECUC-TEXTUAL-PARAM-VALUE>
+									</PARAMETER-VALUES>
+								</ECUC-CONTAINER-VALUE>
+							</SUB-CONTAINERS>
+						</ECUC-CONTAINER-VALUE>
+					</CONTAINERS>
+				</ECUC-MODULE-CONFIGURATION-VALUES>
+				<ECUC-MODULE-CONFIGURATION-VALUES UUID="80990fc4-ef77-46c3-b2e4-142316e207eb">
+					<SHORT-NAME>Mcu_Rec</SHORT-NAME>
+					<DEFINITION-REF DEST="ECUC-MODULE-DEF">/MICROSAR/Mcu</DEFINITION-REF>
+					<CONTAINERS>
+						<ECUC-CONTAINER-VALUE UUID="b66ce57b-23b4-4004-a147-b4ae79918fef">
+							<SHORT-NAME>McuModuleConfiguration</SHORT-NAME>
+							<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Mcu/McuModuleConfiguration</DEFINITION-REF>
+							<SUB-CONTAINERS>
+								<ECUC-CONTAINER-VALUE UUID="59298de8-c5f1-4c95-8e43-d763683002b9">
+									<SHORT-NAME>McuClockSettingConfig</SHORT-NAME>
+									<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Mcu/McuModuleConfiguration/McuClockSettingConfig</DEFINITION-REF>
+									<SUB-CONTAINERS>
+										<ECUC-CONTAINER-VALUE UUID="7e8b2528-b428-49a1-b19d-702cb4017cf1">
+											<SHORT-NAME>McuClockReferencePoint</SHORT-NAME>
+											<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuClockReferencePoint</DEFINITION-REF>
+											<PARAMETER-VALUES>
+												<ECUC-NUMERICAL-PARAM-VALUE>
+													<DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/MICROSAR/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuClockReferencePoint/McuClockReferencePointFrequency</DEFINITION-REF>
+													<VALUE>80000000</VALUE>
+												</ECUC-NUMERICAL-PARAM-VALUE>
+											</PARAMETER-VALUES>
+										</ECUC-CONTAINER-VALUE>
+									</SUB-CONTAINERS>
+								</ECUC-CONTAINER-VALUE>
+							</SUB-CONTAINERS>
+						</ECUC-CONTAINER-VALUE>
+					</CONTAINERS>
+				</ECUC-MODULE-CONFIGURATION-VALUES>
+			</ELEMENTS>
+		</AR-PACKAGE>
+	</AR-PACKAGES>
+</AUTOSAR>

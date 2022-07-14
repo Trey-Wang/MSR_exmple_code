@@ -1,0 +1,557 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-0-3.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://autosar.org/schema/r4.0">
+	<AR-PACKAGES>
+		<AR-PACKAGE UUID="f55d2ea6-d646-4587-a04e-517fd12cf6a0">
+			<SHORT-NAME>MICROSAR</SHORT-NAME>
+			<AR-PACKAGES>
+				<AR-PACKAGE UUID="08a17bef-9de3-4072-adb8-271c81e4f1fd">
+					<SHORT-NAME>VTT</SHORT-NAME>
+					<ELEMENTS>
+						<ECUC-MODULE-DEF UUID="188259fc-ab29-42a5-ad44-c5f9cc239907">
+							<SHORT-NAME>VTTCntrl</SHORT-NAME>
+							<CATEGORY>VENDOR_SPECIFIC_MODULE_DEFINITION</CATEGORY>
+							<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+							<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+							<SUPPORTED-CONFIG-VARIANTS>
+								<SUPPORTED-CONFIG-VARIANT>VARIANT-PRE-COMPILE</SUPPORTED-CONFIG-VARIANT>
+								<SUPPORTED-CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</SUPPORTED-CONFIG-VARIANT>
+							</SUPPORTED-CONFIG-VARIANTS>
+							<CONTAINERS>
+								<ECUC-PARAM-CONF-CONTAINER-DEF UUID="e3b141fd-0e21-41f7-8562-af2d9af78335">
+									<SHORT-NAME>VttGeneral</SHORT-NAME>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:postBuildSelectableChangeable">false</SD>
+												<SD GID="DV:postBuildNotDeletable">false</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+									<PARAMETERS>
+										<ECUC-FUNCTION-NAME-DEF UUID="849b7d4f-fe13-49cc-b1a4-ff78ddfef817">
+											<SHORT-NAME>VttEntryPointName</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Defines the entry point of the node layer DLL.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<ECUC-FUNCTION-NAME-DEF-VARIANTS>
+												<ECUC-FUNCTION-NAME-DEF-CONDITIONAL>
+													<DEFAULT-VALUE>main</DEFAULT-VALUE>
+												</ECUC-FUNCTION-NAME-DEF-CONDITIONAL>
+											</ECUC-FUNCTION-NAME-DEF-VARIANTS>
+										</ECUC-FUNCTION-NAME-DEF>
+										<ECUC-STRING-PARAM-DEF UUID="6a856d38-8243-42e2-8cd1-4a63eb927cb5">
+											<SHORT-NAME>VttHeaderFile</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Defines the header file for the entry point of the node layer DLL.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<ECUC-STRING-PARAM-DEF-VARIANTS>
+												<ECUC-STRING-PARAM-DEF-CONDITIONAL>
+													<DEFAULT-VALUE />
+												</ECUC-STRING-PARAM-DEF-CONDITIONAL>
+											</ECUC-STRING-PARAM-DEF-VARIANTS>
+										</ECUC-STRING-PARAM-DEF>
+										<ECUC-STRING-PARAM-DEF UUID="42aae49e-367d-42a7-960d-317d7012ae19">
+											<SHORT-NAME>VttPreferredInputAsrVersion</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Specifies the AUTOSAR version which should be used for input extracts. This parameter is only relevant for VTT Pro.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+										</ECUC-STRING-PARAM-DEF>
+										<ECUC-STRING-PARAM-DEF UUID="8b6118b3-3290-449e-bb43-f64c50d71863">
+											<SHORT-NAME>VttRequiredEcucGeneratorVersion</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Specifies the version of VTT's built-in ECU-C generator which is required for the SIP. This parameter is only relevant for VTT Pro.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+										</ECUC-STRING-PARAM-DEF>
+										<ECUC-BOOLEAN-PARAM-DEF UUID="8460bd7a-94dc-4764-9f52-e8b6bd26b033">
+											<SHORT-NAME>VttUserCalloutOnStateChange</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Specified whether VTTCntrl should provide the callout VttCntrl_UserCallout_OnStateChange. This callout allows user code to, e.g., perform work when the VTT DLL is loaded.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>false</DEFAULT-VALUE>
+										</ECUC-BOOLEAN-PARAM-DEF>
+										<ECUC-STRING-PARAM-DEF UUID="987b5c74-4c3f-4e1b-b368-b8600ef10a68">
+											<SHORT-NAME>VttDllName</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Defines the DLL file name (including .dll extension) of the node layer DLL. This parameter is used by the vVIRTUALtarget Tool to adapt the generated solution accordingly.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<ECUC-STRING-PARAM-DEF-VARIANTS>
+												<ECUC-STRING-PARAM-DEF-CONDITIONAL>
+													<DEFAULT-VALUE>MyECU.dll</DEFAULT-VALUE>
+												</ECUC-STRING-PARAM-DEF-CONDITIONAL>
+											</ECUC-STRING-PARAM-DEF-VARIANTS>
+										</ECUC-STRING-PARAM-DEF>
+										<ECUC-BOOLEAN-PARAM-DEF UUID="d6c34178-06f1-4644-b9d7-1ce692b877f4">
+											<SHORT-NAME>VttCalculateRteVfbHooks</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">Calculate RTE VFB Hooks</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">If enabled VTT is called during calculation phase of this generator to generate a partial RTE configuration file with VTT VFB hooks. This configuration file is then merged into the actual RTE configuration of the project.
+
+Only disable this option if you have previously generated this module and since then no changes have been made to OS and RTE configuration.</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:CfgPostBuild">
+														<SD GID="DV:variantMultiplicityPBL">false</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>true</DEFAULT-VALUE>
+										</ECUC-BOOLEAN-PARAM-DEF>
+									</PARAMETERS>
+								</ECUC-PARAM-CONF-CONTAINER-DEF>
+								<ECUC-PARAM-CONF-CONTAINER-DEF UUID="2f914de2-d2b6-4d60-840a-c09f23529b3b">
+									<SHORT-NAME>VttSystemVariables</SHORT-NAME>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:postBuildSelectableChangeable">false</SD>
+												<SD GID="DV:postBuildNotDeletable">false</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+									<SUB-CONTAINERS>
+										<ECUC-PARAM-CONF-CONTAINER-DEF UUID="ed5ced77-cbaa-4ab6-a403-e4a1dc39651f">
+											<SHORT-NAME>VttSysVarType</SHORT-NAME>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:CfgPostBuild">
+														<SD GID="DV:postBuildSelectableChangeable">false</SD>
+														<SD GID="DV:postBuildNotDeletable">false</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+											<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+										</ECUC-PARAM-CONF-CONTAINER-DEF>
+										<ECUC-PARAM-CONF-CONTAINER-DEF UUID="a195e3da-9f05-43b9-adb6-6226c42e90d7">
+											<SHORT-NAME>VttSysVar</SHORT-NAME>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:CfgPostBuild">
+														<SD GID="DV:postBuildSelectableChangeable">false</SD>
+														<SD GID="DV:postBuildNotDeletable">false</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+											<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+											<PARAMETERS>
+												<ECUC-LINKER-SYMBOL-DEF UUID="15b8a11f-80e5-49b1-973b-f87182e8fef8">
+													<SHORT-NAME>VttSysVarNotificationFunctionName</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Notification Function Name</L-4>
+													</LONG-NAME>
+													<DESC>
+														<L-2 L="EN">Name of the notification callback function.
+When this value is empty or undefined, notifications are disabled for this System Variable.
+
+Note: Notification functions are called in the context of an ISR.</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+												</ECUC-LINKER-SYMBOL-DEF>
+											</PARAMETERS>
+											<REFERENCES>
+												<ECUC-REFERENCE-DEF UUID="96903398-6ea6-4f15-a5ef-199f13a74143">
+													<SHORT-NAME>VttSysVarInstanceTypeRef</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">References the data type of this system variable.</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/VTT/VTTCntrl/VttSystemVariables/VttSysVarType</DESTINATION-REF>
+												</ECUC-REFERENCE-DEF>
+												<ECUC-REFERENCE-DEF UUID="f73bceae-b3f9-4483-9619-7bcb17c70af2">
+													<SHORT-NAME>VttSysVarNamespaceRef</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">References a namespace in CANoe, under which this system Variable is displayed.
+
+Note: The C implementation does not use namespaces. Namespaces are used for CANoe only.</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/VTT/VTTCntrl/VttSystemVariables/VttSysVarNamespace</DESTINATION-REF>
+												</ECUC-REFERENCE-DEF>
+											</REFERENCES>
+											<SUB-CONTAINERS>
+												<ECUC-CHOICE-CONTAINER-DEF UUID="e5b7e08b-c18e-4fb8-b675-7e93790f9673">
+													<SHORT-NAME>VttSysVarInitialValue</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Define an initial value for this system variable.</L-2>
+													</DESC>
+													<ADMIN-DATA>
+														<SDGS>
+															<SDG GID="DV:CfgPostBuild">
+																<SD GID="DV:postBuildSelectableChangeable">false</SD>
+																<SD GID="DV:postBuildNotDeletable">false</SD>
+															</SDG>
+														</SDGS>
+													</ADMIN-DATA>
+													<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+													<CHOICES>
+														<ECUC-PARAM-CONF-CONTAINER-DEF UUID="f98e9023-4ce5-46ad-bdc0-062e72f9b3c0">
+															<SHORT-NAME>VttInitValueUint64</SHORT-NAME>
+															<DESC>
+																<L-2 L="EN">An initial value of type uint64.</L-2>
+															</DESC>
+															<ADMIN-DATA>
+																<SDGS>
+																	<SDG GID="DV:CfgPostBuild">
+																		<SD GID="DV:postBuildSelectableChangeable">false</SD>
+																		<SD GID="DV:postBuildNotDeletable">false</SD>
+																	</SDG>
+																</SDGS>
+															</ADMIN-DATA>
+															<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+															<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+															<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+															<PARAMETERS>
+																<ECUC-INTEGER-PARAM-DEF UUID="80481cee-3fa8-4e1e-a941-b9631a832494">
+																	<SHORT-NAME>VttInitValueUint64Value</SHORT-NAME>
+																	<DESC>
+																		<L-2 L="EN">The initial value for this system variable.</L-2>
+																	</DESC>
+																	<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+																	<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+																	<IMPLEMENTATION-CONFIG-CLASSES>
+																		<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																			<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																			<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																		</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																		<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																			<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																			<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+																		</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																	</IMPLEMENTATION-CONFIG-CLASSES>
+																	<ORIGIN>Vector Informatik</ORIGIN>
+																	<REQUIRES-INDEX>false</REQUIRES-INDEX>
+																	<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+																	<DEFAULT-VALUE>0</DEFAULT-VALUE>
+																	<MAX>18446744073709551616</MAX>
+																	<MIN>0</MIN>
+																</ECUC-INTEGER-PARAM-DEF>
+															</PARAMETERS>
+														</ECUC-PARAM-CONF-CONTAINER-DEF>
+														<ECUC-PARAM-CONF-CONTAINER-DEF UUID="09cb34b4-ce2f-42e4-b62e-dc96afa9680f">
+															<SHORT-NAME>VttInitValueSint64</SHORT-NAME>
+															<DESC>
+																<L-2 L="EN">An initial value of type sint64.</L-2>
+															</DESC>
+															<ADMIN-DATA>
+																<SDGS>
+																	<SDG GID="DV:CfgPostBuild">
+																		<SD GID="DV:postBuildSelectableChangeable">false</SD>
+																		<SD GID="DV:postBuildNotDeletable">false</SD>
+																	</SDG>
+																</SDGS>
+															</ADMIN-DATA>
+															<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+															<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+															<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+															<PARAMETERS>
+																<ECUC-INTEGER-PARAM-DEF UUID="63c8d680-44fb-4097-b7fc-dcb0a7bc6c3b">
+																	<SHORT-NAME>VttInitValueSint64Value</SHORT-NAME>
+																	<DESC>
+																		<L-2 L="EN">The initial value for this system variable</L-2>
+																	</DESC>
+																	<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+																	<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+																	<IMPLEMENTATION-CONFIG-CLASSES>
+																		<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																			<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																			<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																		</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																		<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																			<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																			<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+																		</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																	</IMPLEMENTATION-CONFIG-CLASSES>
+																	<ORIGIN>Vector Informatik</ORIGIN>
+																	<REQUIRES-INDEX>false</REQUIRES-INDEX>
+																	<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+																	<DEFAULT-VALUE>0</DEFAULT-VALUE>
+																	<MAX>9223372036854775808</MAX>
+																	<MIN>-9223372036854775807</MIN>
+																</ECUC-INTEGER-PARAM-DEF>
+															</PARAMETERS>
+														</ECUC-PARAM-CONF-CONTAINER-DEF>
+														<ECUC-PARAM-CONF-CONTAINER-DEF UUID="d906bef1-8273-4ad9-a582-aa03a4e9d808">
+															<SHORT-NAME>VttInitValueFloat64</SHORT-NAME>
+															<DESC>
+																<L-2 L="EN">An initial value of type float64.</L-2>
+															</DESC>
+															<ADMIN-DATA>
+																<SDGS>
+																	<SDG GID="DV:CfgPostBuild">
+																		<SD GID="DV:postBuildSelectableChangeable">false</SD>
+																		<SD GID="DV:postBuildNotDeletable">false</SD>
+																	</SDG>
+																</SDGS>
+															</ADMIN-DATA>
+															<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+															<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+															<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+															<PARAMETERS>
+																<ECUC-FLOAT-PARAM-DEF UUID="bbd43fa4-744d-47e0-b6db-d067f0dc1e0a">
+																	<SHORT-NAME>VttInitValueFloat64Value</SHORT-NAME>
+																	<DESC>
+																		<L-2 L="EN">The initial value for this system variable</L-2>
+																	</DESC>
+																	<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+																	<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+																	<IMPLEMENTATION-CONFIG-CLASSES>
+																		<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																			<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																			<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																		</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																		<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																			<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																			<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+																		</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																	</IMPLEMENTATION-CONFIG-CLASSES>
+																	<ORIGIN>Vector Informatik</ORIGIN>
+																	<REQUIRES-INDEX>false</REQUIRES-INDEX>
+																	<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+																	<DEFAULT-VALUE>0</DEFAULT-VALUE>
+																</ECUC-FLOAT-PARAM-DEF>
+															</PARAMETERS>
+														</ECUC-PARAM-CONF-CONTAINER-DEF>
+													</CHOICES>
+												</ECUC-CHOICE-CONTAINER-DEF>
+											</SUB-CONTAINERS>
+										</ECUC-PARAM-CONF-CONTAINER-DEF>
+										<ECUC-PARAM-CONF-CONTAINER-DEF UUID="83298d55-e506-42fe-8ff5-05865ebadbb8">
+											<SHORT-NAME>VttSysVarNamespace</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Defines a namespace for system variables in CANoe. This namespace can be references in Parameter /VTTCntrl/VttSystemVariables/VttSysVar/VttSysVarNamespaceRef to place a system variable in the according namespace.
+
+Note: The C implementation does not use namespaces. Namespaces are used for CANoe only.</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:CfgPostBuild">
+														<SD GID="DV:postBuildSelectableChangeable">false</SD>
+														<SD GID="DV:postBuildNotDeletable">false</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+											<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+										</ECUC-PARAM-CONF-CONTAINER-DEF>
+									</SUB-CONTAINERS>
+								</ECUC-PARAM-CONF-CONTAINER-DEF>
+							</CONTAINERS>
+						</ECUC-MODULE-DEF>
+						<BSW-IMPLEMENTATION UUID="0904daa4-e1e4-4889-b107-823f60c049c4">
+							<SHORT-NAME>VTTCntrl_Impl</SHORT-NAME>
+							<PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+							<USED-CODE-GENERATOR>DaVinci Configurator</USED-CODE-GENERATOR>
+							<VENDOR-ID>30</VENDOR-ID>
+							<PRECONFIGURED-CONFIGURATION-REFS>
+								<PRECONFIGURED-CONFIGURATION-REF DEST="ECUC-MODULE-CONFIGURATION-VALUES">/MICROSAR/VTT/VTTCntrl_Pre</PRECONFIGURED-CONFIGURATION-REF>
+							</PRECONFIGURED-CONFIGURATION-REFS>
+							<RECOMMENDED-CONFIGURATION-REFS>
+								<RECOMMENDED-CONFIGURATION-REF DEST="ECUC-MODULE-CONFIGURATION-VALUES">/MICROSAR/VTT/VTTCntrl_Rec</RECOMMENDED-CONFIGURATION-REF>
+							</RECOMMENDED-CONFIGURATION-REFS>
+							<VENDOR-SPECIFIC-MODULE-DEF-REFS>
+								<VENDOR-SPECIFIC-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/MICROSAR/VTT/VTTCntrl</VENDOR-SPECIFIC-MODULE-DEF-REF>
+							</VENDOR-SPECIFIC-MODULE-DEF-REFS>
+						</BSW-IMPLEMENTATION>
+						<ECUC-MODULE-CONFIGURATION-VALUES UUID="97a471f8-2b74-430d-bf84-2c0988f64a04">
+							<SHORT-NAME>VTTCntrl_Pre</SHORT-NAME>
+							<DEFINITION-REF DEST="ECUC-MODULE-DEF">/MICROSAR/VTT/VTTCntrl</DEFINITION-REF>
+							<CONTAINERS>
+								<ECUC-CONTAINER-VALUE UUID="6687aeef-c133-466d-9a62-93f0bb499927">
+									<SHORT-NAME>VttGeneral</SHORT-NAME>
+									<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/VTT/VTTCntrl/VttGeneral</DEFINITION-REF>
+									<PARAMETER-VALUES>
+										<ECUC-TEXTUAL-PARAM-VALUE>
+											<DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/VTT/VTTCntrl/VttGeneral/VttPreferredInputAsrVersion</DEFINITION-REF>
+											<VALUE>4.2.1</VALUE>
+										</ECUC-TEXTUAL-PARAM-VALUE>
+										<ECUC-TEXTUAL-PARAM-VALUE>
+											<DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/VTT/VTTCntrl/VttGeneral/VttRequiredEcucGeneratorVersion</DEFINITION-REF>
+											<VALUE>1.0</VALUE>
+										</ECUC-TEXTUAL-PARAM-VALUE>
+									</PARAMETER-VALUES>
+								</ECUC-CONTAINER-VALUE>
+								<ECUC-CONTAINER-VALUE UUID="579e9f67-fd8b-47ff-a9b1-da10871b1a73">
+									<SHORT-NAME>VttSystemVariables</SHORT-NAME>
+									<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/VTT/VTTCntrl/VttSystemVariables</DEFINITION-REF>
+									<SUB-CONTAINERS>
+										<ECUC-CONTAINER-VALUE UUID="76b2eef1-cf88-47b2-8d66-3bded1143856">
+											<SHORT-NAME>sint64</SHORT-NAME>
+											<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/VTT/VTTCntrl/VttSystemVariables/VttSysVarType</DEFINITION-REF>
+										</ECUC-CONTAINER-VALUE>
+										<ECUC-CONTAINER-VALUE UUID="29bd0bbc-d74b-413d-a795-aaa7f5ecfc4f">
+											<SHORT-NAME>float64</SHORT-NAME>
+											<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/VTT/VTTCntrl/VttSystemVariables/VttSysVarType</DEFINITION-REF>
+										</ECUC-CONTAINER-VALUE>
+										<ECUC-CONTAINER-VALUE UUID="4e1b1ddb-eee7-4355-a52b-7749cc5468d1">
+											<SHORT-NAME>uint64</SHORT-NAME>
+											<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/VTT/VTTCntrl/VttSystemVariables/VttSysVarType</DEFINITION-REF>
+										</ECUC-CONTAINER-VALUE>
+									</SUB-CONTAINERS>
+								</ECUC-CONTAINER-VALUE>
+							</CONTAINERS>
+						</ECUC-MODULE-CONFIGURATION-VALUES>
+					</ELEMENTS>
+				</AR-PACKAGE>
+			</AR-PACKAGES>
+		</AR-PACKAGE>
+	</AR-PACKAGES>
+</AUTOSAR>

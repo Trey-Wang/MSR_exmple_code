@@ -1,0 +1,1606 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2009 sp1 (http://www.altova.com) by Vector Employee (Vector Informatik GmbH) -->
+<!---->
+<AUTOSAR xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-2-1.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://autosar.org/schema/r4.0">
+	<AR-PACKAGES>
+		<AR-PACKAGE UUID="a07c7c02-4483-4127-9b0e-253968f0818e">
+			<SHORT-NAME>MICROSAR</SHORT-NAME>
+			<ELEMENTS>
+				<BSW-IMPLEMENTATION UUID="38942444-7fc8-40e1-913a-69804274314b">
+					<SHORT-NAME>Rtp_Impl</SHORT-NAME>
+					<PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+					<SW-VERSION>1.01.00</SW-VERSION>
+					<USED-CODE-GENERATOR>DaVinci Configurator</USED-CODE-GENERATOR>
+					<VENDOR-ID>30</VENDOR-ID>
+					<AR-RELEASE-VERSION>4.02.01</AR-RELEASE-VERSION>
+					<BEHAVIOR-REF DEST="BSW-INTERNAL-BEHAVIOR">/MICROSAR/Rtp_ib_bswmd/BswModuleDescriptions/Rtp/RtpBehavior</BEHAVIOR-REF>
+					<RECOMMENDED-CONFIGURATION-REFS>
+						<RECOMMENDED-CONFIGURATION-REF DEST="ECUC-MODULE-CONFIGURATION-VALUES">/MICROSAR/Rtp_Rec</RECOMMENDED-CONFIGURATION-REF>
+					</RECOMMENDED-CONFIGURATION-REFS>
+					<VENDOR-SPECIFIC-MODULE-DEF-REFS>
+						<VENDOR-SPECIFIC-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/MICROSAR/Rtp</VENDOR-SPECIFIC-MODULE-DEF-REF>
+					</VENDOR-SPECIFIC-MODULE-DEF-REFS>
+				</BSW-IMPLEMENTATION>
+				<ECUC-MODULE-DEF UUID="fe7a2669-5579-4075-9081-261f105692ed">
+					<SHORT-NAME>Rtp</SHORT-NAME>
+					<LONG-NAME>
+						<L-4 L="EN">Realtime Transport Protocol</L-4>
+					</LONG-NAME>
+					<DESC>
+						<L-2 L="EN">Configuration of the Realtime Transport Protocol module.</L-2>
+					</DESC>
+					<CATEGORY>VENDOR_SPECIFIC_MODULE_DEFINITION</CATEGORY>
+					<ADMIN-DATA>
+						<DOC-REVISIONS>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.00.00</REVISION-LABEL>
+								<STATE>beta</STATE>
+								<ISSUED-BY>vispcn</ISSUED-BY>
+								<DATE>2016-08-05T10:39:07+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">FEAT-1879: [Beta] Development of RTP</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">FEATC-253</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.00.01</REVISION-LABEL>
+								<STATE>beta</STATE>
+								<ISSUED-BY>vispcn</ISSUED-BY>
+								<DATE>2017-01-09T11:09:15+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Implementation Bugfix</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.01.00</REVISION-LABEL>
+								<STATE>beta</STATE>
+								<ISSUED-BY>vispcn</ISSUED-BY>
+								<DATE>2017-01-09T12:58:37+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">FEATC-942</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">FEAT-1824: Support a component-specific SafeBSW configuration switch</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+						</DOC-REVISIONS>
+					</ADMIN-DATA>
+					<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+					<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+					<POST-BUILD-VARIANT-SUPPORT>false</POST-BUILD-VARIANT-SUPPORT>
+					<SUPPORTED-CONFIG-VARIANTS>
+						<SUPPORTED-CONFIG-VARIANT>VARIANT-PRE-COMPILE</SUPPORTED-CONFIG-VARIANT>
+					</SUPPORTED-CONFIG-VARIANTS>
+					<CONTAINERS>
+						<ECUC-PARAM-CONF-CONTAINER-DEF UUID="b43054e9-c90a-4bb5-8f29-d69acb9be422">
+							<SHORT-NAME>RtpConfig</SHORT-NAME>
+							<DESC>
+								<L-2 L="EN">This container contains the configuration parameters and sub containers of the Realtime Transport Protocol (Rtp) module.</L-2>
+							</DESC>
+							<ADMIN-DATA>
+								<SDGS>
+									<SDG GID="DV:CfgPostBuild">
+										<SD GID="DV:postBuildNotDeletable">true</SD>
+										<SD GID="DV:postBuildSelectableChangeable">false</SD>
+									</SDG>
+								</SDGS>
+							</ADMIN-DATA>
+							<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+							<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+							<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+							<REQUIRES-INDEX>false</REQUIRES-INDEX>
+							<SUB-CONTAINERS>
+								<ECUC-PARAM-CONF-CONTAINER-DEF UUID="6fdc8dac-6687-4582-a0ad-e2cbd220bf80">
+									<SHORT-NAME>RtpStream</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This container specifies all stream-dependent parameters.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:postBuildNotDeletable">true</SD>
+												<SD GID="DV:postBuildSelectableChangeable">false</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<PARAMETERS>
+										<ECUC-ENUMERATION-PARAM-DEF UUID="8a9cefb6-e8b8-473f-866f-7ee55b7c0fab">
+											<SHORT-NAME>RtpStreamType</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Payload type of the configured stream.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<LITERALS>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="f7a860b8-9d26-4174-a6a9-798c94a69c3e">
+													<SHORT-NAME>Ch1_16</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">1 Channel, 16 Bit</L-4>
+													</LONG-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="594d7563-d3c4-4cad-bc65-cb966b0c31e2">
+													<SHORT-NAME>Ch2_16</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">2 Channel, 16 Bit</L-4>
+													</LONG-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="f1b3c109-65af-484c-b157-d7309589d496">
+													<SHORT-NAME>Ch3_16</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">3 Channel, 16 Bit</L-4>
+													</LONG-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="32500be3-0eea-475c-a549-b8186f4d6eaf">
+													<SHORT-NAME>Ch4_16</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">4 Channel, 16 Bit</L-4>
+													</LONG-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="2751bf16-da4c-4beb-89b9-747917fff9f1">
+													<SHORT-NAME>Ch5_16</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">5 Channel, 16 Bit</L-4>
+													</LONG-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="bf1baa33-5cbd-449a-8d04-2a99b7d44681">
+													<SHORT-NAME>Ch6_16</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">6 Channel, 16 Bit</L-4>
+													</LONG-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="fd33fa76-acac-402c-98d0-9b2d49c6ae2d">
+													<SHORT-NAME>Ch6_24</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">6 Channel, 24 Bit</L-4>
+													</LONG-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="e1507f46-1a1e-4817-b442-a25ca951b35f">
+													<SHORT-NAME>Ch8_24</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">8 Channel, 24 Bit</L-4>
+													</LONG-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="dafad364-d8f2-4ef6-a65a-d75127459cda">
+													<SHORT-NAME>MPEG_TS</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">MPEG Transport Stream</L-4>
+													</LONG-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+											</LITERALS>
+										</ECUC-ENUMERATION-PARAM-DEF>
+										<ECUC-INTEGER-PARAM-DEF UUID="9b6499c5-a856-4108-8c29-20693c565b82">
+											<SHORT-NAME>RtpStreamId</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">IEEE 802.1Q stream identifier.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>0</DEFAULT-VALUE>
+											<MAX>18446744073709551615</MAX>
+											<MIN>0</MIN>
+										</ECUC-INTEGER-PARAM-DEF>
+										<ECUC-INTEGER-PARAM-DEF UUID="9aa5c891-b47e-405f-bce6-b6748aeb76d4">
+											<SHORT-NAME>RtpFramePriority</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Specifies the priority of the Ethernet frame.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>0</DEFAULT-VALUE>
+											<MAX>7</MAX>
+											<MIN>0</MIN>
+										</ECUC-INTEGER-PARAM-DEF>
+										<ECUC-INTEGER-PARAM-DEF UUID="fd646f4f-b26b-4916-a4de-5db35cdc6a8b">
+											<SHORT-NAME>RtpStreamHandleId</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">HandleId which has to be used by the upper layer in order to identify a stream.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>0</DEFAULT-VALUE>
+											<MAX>65535</MAX>
+											<MIN>0</MIN>
+										</ECUC-INTEGER-PARAM-DEF>
+									</PARAMETERS>
+									<REFERENCES>
+										<ECUC-REFERENCE-DEF UUID="92b43b8f-e2bd-4309-a863-9323dc70fb7d">
+											<SHORT-NAME>RtpUpperLayerRef</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Reference to the upper layer configuration.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Rtp/RtpConfig/RtpUpperLayer</DESTINATION-REF>
+										</ECUC-REFERENCE-DEF>
+										<ECUC-REFERENCE-DEF UUID="7af120a0-add2-45d8-a834-2ebac082d061">
+											<SHORT-NAME>RtpTimeDomainRef</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Reference to the time domain configuration.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Rtp/RtpConfig/RtpTimeDomain</DESTINATION-REF>
+										</ECUC-REFERENCE-DEF>
+									</REFERENCES>
+									<SUB-CONTAINERS>
+										<ECUC-CHOICE-CONTAINER-DEF UUID="2ed82162-a409-46b3-b8af-5daebdab63d3">
+											<SHORT-NAME>RtpTransmissionType</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Specifies the transmission type of the stream.</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:CfgPostBuild">
+														<SD GID="DV:postBuildNotDeletable">true</SD>
+														<SD GID="DV:postBuildSelectableChangeable">false</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<CHOICES>
+												<ECUC-PARAM-CONF-CONTAINER-DEF UUID="fa28552b-4afd-422b-9370-4418bc5ec506">
+													<SHORT-NAME>RtpTxStream</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Configuration of transmitted stream.</L-2>
+													</DESC>
+													<ADMIN-DATA>
+														<SDGS>
+															<SDG GID="DV:CfgPostBuild">
+																<SD GID="DV:postBuildNotDeletable">true</SD>
+																<SD GID="DV:postBuildSelectableChangeable">false</SD>
+															</SDG>
+														</SDGS>
+													</ADMIN-DATA>
+													<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<PARAMETERS>
+														<ECUC-FLOAT-PARAM-DEF UUID="04e6202a-4775-45da-870a-154edd223d37">
+															<SHORT-NAME>RtpRtcpCycleTime</SHORT-NAME>
+															<DESC>
+																<L-2 L="EN">Transmission cycle of RTCP messages.</L-2>
+															</DESC>
+															<ADMIN-DATA>
+																<SDGS>
+																	<SDG GID="DV:Display">
+																		<SD GID="DV:BaseUnit">SEC</SD>
+																	</SDG>
+																</SDGS>
+															</ADMIN-DATA>
+															<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+															<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+															<SCOPE>LOCAL</SCOPE>
+															<ORIGIN>Vector Informatik</ORIGIN>
+															<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+															<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+															<REQUIRES-INDEX>false</REQUIRES-INDEX>
+															<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+															<DEFAULT-VALUE>0.125</DEFAULT-VALUE>
+															<MAX>1</MAX>
+															<MIN>0.0001</MIN>
+														</ECUC-FLOAT-PARAM-DEF>
+														<ECUC-STRING-PARAM-DEF UUID="319243be-8521-4509-9943-9b65ecc89fa2">
+															<SHORT-NAME>RtpStreamName</SHORT-NAME>
+															<DESC>
+																<L-2 L="EN">Name to identify set of RTCP packets.</L-2>
+															</DESC>
+															<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+															<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+															<SCOPE>LOCAL</SCOPE>
+															<ORIGIN>Vector Informatik</ORIGIN>
+															<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+															<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+															<REQUIRES-INDEX>false</REQUIRES-INDEX>
+															<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+															<ECUC-STRING-PARAM-DEF-VARIANTS>
+																<ECUC-STRING-PARAM-DEF-CONDITIONAL>
+																	<MAX-LENGTH>4</MAX-LENGTH>
+																	<MIN-LENGTH>4</MIN-LENGTH>
+																</ECUC-STRING-PARAM-DEF-CONDITIONAL>
+															</ECUC-STRING-PARAM-DEF-VARIANTS>
+														</ECUC-STRING-PARAM-DEF>
+														<ECUC-STRING-PARAM-DEF UUID="b50d6d57-ab08-4470-960c-ed2886cf30eb">
+															<SHORT-NAME>RtpCName</SHORT-NAME>
+															<DESC>
+																<L-2 L="EN">CNAME of the stream which is transmitted in RTCP SDES packets.</L-2>
+															</DESC>
+															<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+															<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+															<SCOPE>LOCAL</SCOPE>
+															<ORIGIN>Vector Informatik</ORIGIN>
+															<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+															<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+															<REQUIRES-INDEX>false</REQUIRES-INDEX>
+															<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+															<ECUC-STRING-PARAM-DEF-VARIANTS>
+																<ECUC-STRING-PARAM-DEF-CONDITIONAL>
+																	<MAX-LENGTH>255</MAX-LENGTH>
+																	<MIN-LENGTH>1</MIN-LENGTH>
+																</ECUC-STRING-PARAM-DEF-CONDITIONAL>
+															</ECUC-STRING-PARAM-DEF-VARIANTS>
+														</ECUC-STRING-PARAM-DEF>
+														<ECUC-BOOLEAN-PARAM-DEF UUID="371a4c39-093c-4a77-b0a4-1346ca4c0727">
+															<SHORT-NAME>RtpCopyTxDataCalloutEnabled</SHORT-NAME>
+															<DESC>
+																<L-2 L="EN">If enabled, the upper layer will receive a callback in order to copy its payload to the Ethernet buffer.</L-2>
+															</DESC>
+															<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+															<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+															<SCOPE>LOCAL</SCOPE>
+															<ORIGIN>Vector Informatik</ORIGIN>
+															<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+															<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+															<REQUIRES-INDEX>false</REQUIRES-INDEX>
+															<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+															<DEFAULT-VALUE>true</DEFAULT-VALUE>
+														</ECUC-BOOLEAN-PARAM-DEF>
+													</PARAMETERS>
+													<SUB-CONTAINERS>
+														<ECUC-PARAM-CONF-CONTAINER-DEF UUID="8421e6f0-bea8-4eb5-86ea-96cc47892e1d">
+															<SHORT-NAME>RtpTxPdu</SHORT-NAME>
+															<DESC>
+																<L-2 L="EN">PDU used for transmission of RTP messages.</L-2>
+															</DESC>
+															<ADMIN-DATA>
+																<SDGS>
+																	<SDG GID="DV:CfgPostBuild">
+																		<SD GID="DV:postBuildNotDeletable">true</SD>
+																		<SD GID="DV:postBuildSelectableChangeable">false</SD>
+																	</SDG>
+																</SDGS>
+															</ADMIN-DATA>
+															<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+															<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+															<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+															<REQUIRES-INDEX>false</REQUIRES-INDEX>
+															<PARAMETERS>
+																<ECUC-INTEGER-PARAM-DEF UUID="65fceb17-cdaf-41a0-a4ee-b1bb0bb8a523">
+																	<SHORT-NAME>RtpTxPduId</SHORT-NAME>
+																	<DESC>
+																		<L-2 L="EN">ID of the PDU that will be transmitted via the API Rtp_SoAdTriggerTransmit().</L-2>
+																	</DESC>
+																	<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+																	<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+																	<SCOPE>LOCAL</SCOPE>
+																	<ORIGIN>Vector Informatik</ORIGIN>
+																	<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+																	<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+																	<REQUIRES-INDEX>false</REQUIRES-INDEX>
+																	<SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+																	<DEFAULT-VALUE>0</DEFAULT-VALUE>
+																	<MAX>65535</MAX>
+																	<MIN>0</MIN>
+																</ECUC-INTEGER-PARAM-DEF>
+															</PARAMETERS>
+															<REFERENCES>
+																<ECUC-REFERENCE-DEF UUID="32dc862d-6181-4e51-a73c-0a4230d453d1">
+																	<SHORT-NAME>RtpTxPduRef</SHORT-NAME>
+																	<DESC>
+																		<L-2 L="EN">Reference to the "global" Pdu structure to allow harmonization of handle IDs in the COM-Stack.</L-2>
+																	</DESC>
+																	<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+																	<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+																	<SCOPE>LOCAL</SCOPE>
+																	<ORIGIN>Vector Informatik</ORIGIN>
+																	<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+																	<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+																	<REQUIRES-INDEX>false</REQUIRES-INDEX>
+																	<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucPduCollection/Pdu</DESTINATION-REF>
+																</ECUC-REFERENCE-DEF>
+															</REFERENCES>
+														</ECUC-PARAM-CONF-CONTAINER-DEF>
+														<ECUC-PARAM-CONF-CONTAINER-DEF UUID="7bd04229-8600-403b-9b43-0de257347802">
+															<SHORT-NAME>RtpRtcpTxPdu</SHORT-NAME>
+															<DESC>
+																<L-2 L="EN">PDU used for transmission of RTCP messages.</L-2>
+															</DESC>
+															<ADMIN-DATA>
+																<SDGS>
+																	<SDG GID="DV:CfgPostBuild">
+																		<SD GID="DV:postBuildNotDeletable">true</SD>
+																		<SD GID="DV:postBuildSelectableChangeable">false</SD>
+																	</SDG>
+																</SDGS>
+															</ADMIN-DATA>
+															<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+															<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+															<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+															<REQUIRES-INDEX>false</REQUIRES-INDEX>
+															<PARAMETERS>
+																<ECUC-INTEGER-PARAM-DEF UUID="29cf3957-4bbd-41f4-9ca3-495f0e84c3d4">
+																	<SHORT-NAME>RtpRtcpTxPduId</SHORT-NAME>
+																	<DESC>
+																		<L-2 L="EN">ID of the PDU that will be transmitted via the API Rtp_SoAdTriggerTransmit().</L-2>
+																	</DESC>
+																	<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+																	<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+																	<SCOPE>LOCAL</SCOPE>
+																	<ORIGIN>Vector Informatik</ORIGIN>
+																	<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+																	<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+																	<REQUIRES-INDEX>false</REQUIRES-INDEX>
+																	<SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+																	<DEFAULT-VALUE>0</DEFAULT-VALUE>
+																	<MAX>65535</MAX>
+																	<MIN>0</MIN>
+																</ECUC-INTEGER-PARAM-DEF>
+															</PARAMETERS>
+															<REFERENCES>
+																<ECUC-REFERENCE-DEF UUID="488163b6-09c7-48f1-807a-f1db91244bdd">
+																	<SHORT-NAME>RtpRtcpTxPduRef</SHORT-NAME>
+																	<DESC>
+																		<L-2 L="EN">Reference to the "global" Pdu structure to allow harmonization of handle IDs in the COM-Stack.</L-2>
+																	</DESC>
+																	<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+																	<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+																	<SCOPE>LOCAL</SCOPE>
+																	<ORIGIN>Vector Informatik</ORIGIN>
+																	<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+																	<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+																	<REQUIRES-INDEX>false</REQUIRES-INDEX>
+																	<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucPduCollection/Pdu</DESTINATION-REF>
+																</ECUC-REFERENCE-DEF>
+															</REFERENCES>
+														</ECUC-PARAM-CONF-CONTAINER-DEF>
+													</SUB-CONTAINERS>
+												</ECUC-PARAM-CONF-CONTAINER-DEF>
+												<ECUC-PARAM-CONF-CONTAINER-DEF UUID="101e8a01-1c95-4c4d-841b-ce578bc086e9">
+													<SHORT-NAME>RtpRxStream</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Configuration of received stream.</L-2>
+													</DESC>
+													<ADMIN-DATA>
+														<SDGS>
+															<SDG GID="DV:CfgPostBuild">
+																<SD GID="DV:postBuildNotDeletable">true</SD>
+																<SD GID="DV:postBuildSelectableChangeable">false</SD>
+															</SDG>
+														</SDGS>
+													</ADMIN-DATA>
+													<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<PARAMETERS>
+														<ECUC-BOOLEAN-PARAM-DEF UUID="eb96ca25-dd8d-4316-9671-fa458b7f7a04">
+															<SHORT-NAME>RtpSdesInformationCalloutEnabled</SHORT-NAME>
+															<DESC>
+																<L-2 L="EN">If enabled, the upper layer will receive callbacks if SDES packets are received.</L-2>
+															</DESC>
+															<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+															<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+															<SCOPE>LOCAL</SCOPE>
+															<ORIGIN>Vector Informatik</ORIGIN>
+															<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+															<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+															<REQUIRES-INDEX>false</REQUIRES-INDEX>
+															<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+															<DEFAULT-VALUE>true</DEFAULT-VALUE>
+														</ECUC-BOOLEAN-PARAM-DEF>
+													</PARAMETERS>
+													<SUB-CONTAINERS>
+														<ECUC-PARAM-CONF-CONTAINER-DEF UUID="8a98f9d2-10e1-421b-b7a7-e72d26f0dd64">
+															<SHORT-NAME>RtpRxPdu</SHORT-NAME>
+															<DESC>
+																<L-2 L="EN">PDU used for reception of RTP messages.</L-2>
+															</DESC>
+															<ADMIN-DATA>
+																<SDGS>
+																	<SDG GID="DV:CfgPostBuild">
+																		<SD GID="DV:postBuildNotDeletable">true</SD>
+																		<SD GID="DV:postBuildSelectableChangeable">false</SD>
+																	</SDG>
+																</SDGS>
+															</ADMIN-DATA>
+															<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+															<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+															<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+															<REQUIRES-INDEX>false</REQUIRES-INDEX>
+															<PARAMETERS>
+																<ECUC-INTEGER-PARAM-DEF UUID="3f1f7353-b750-4b20-959e-6541ae567411">
+																	<SHORT-NAME>RtpRxPduId</SHORT-NAME>
+																	<DESC>
+																		<L-2 L="EN">ID of the PDU that will be received via the API Rtp_SoAdRxIndication().</L-2>
+																	</DESC>
+																	<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+																	<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+																	<SCOPE>LOCAL</SCOPE>
+																	<ORIGIN>Vector Informatik</ORIGIN>
+																	<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+																	<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+																	<REQUIRES-INDEX>false</REQUIRES-INDEX>
+																	<SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+																	<DEFAULT-VALUE>1</DEFAULT-VALUE>
+																	<MAX>65535</MAX>
+																	<MIN>0</MIN>
+																</ECUC-INTEGER-PARAM-DEF>
+															</PARAMETERS>
+															<REFERENCES>
+																<ECUC-REFERENCE-DEF UUID="940017f1-db58-4051-bd21-569ffbb8ee4a">
+																	<SHORT-NAME>RtpRxPduRef</SHORT-NAME>
+																	<DESC>
+																		<L-2 L="EN">Reference to the "global" Pdu structure to allow harmonization of handle IDs in the COM-Stack.</L-2>
+																	</DESC>
+																	<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+																	<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+																	<SCOPE>LOCAL</SCOPE>
+																	<ORIGIN>Vector Informatik</ORIGIN>
+																	<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+																	<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+																	<REQUIRES-INDEX>false</REQUIRES-INDEX>
+																	<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucPduCollection/Pdu</DESTINATION-REF>
+																</ECUC-REFERENCE-DEF>
+															</REFERENCES>
+														</ECUC-PARAM-CONF-CONTAINER-DEF>
+														<ECUC-PARAM-CONF-CONTAINER-DEF UUID="121d2f64-d104-4faf-b2bf-977c909074cf">
+															<SHORT-NAME>RtpRtcpRxPdu</SHORT-NAME>
+															<DESC>
+																<L-2 L="EN">PDU used for reception of RTCP messages.</L-2>
+															</DESC>
+															<ADMIN-DATA>
+																<SDGS>
+																	<SDG GID="DV:CfgPostBuild">
+																		<SD GID="DV:postBuildNotDeletable">true</SD>
+																		<SD GID="DV:postBuildSelectableChangeable">false</SD>
+																	</SDG>
+																</SDGS>
+															</ADMIN-DATA>
+															<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+															<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+															<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+															<REQUIRES-INDEX>false</REQUIRES-INDEX>
+															<PARAMETERS>
+																<ECUC-INTEGER-PARAM-DEF UUID="a905b733-1210-436e-8886-691b6755bf43">
+																	<SHORT-NAME>RtpRtcpRxPduId</SHORT-NAME>
+																	<DESC>
+																		<L-2 L="EN">ID of the PDU that will be received via the API Rtp_SoAdRxIndication().</L-2>
+																	</DESC>
+																	<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+																	<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+																	<SCOPE>LOCAL</SCOPE>
+																	<ORIGIN>Vector Informatik</ORIGIN>
+																	<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+																	<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+																	<REQUIRES-INDEX>false</REQUIRES-INDEX>
+																	<SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+																	<DEFAULT-VALUE>1</DEFAULT-VALUE>
+																	<MAX>65535</MAX>
+																	<MIN>0</MIN>
+																</ECUC-INTEGER-PARAM-DEF>
+															</PARAMETERS>
+															<REFERENCES>
+																<ECUC-REFERENCE-DEF UUID="006c20ac-f4fe-473d-b9a0-c4262594c99f">
+																	<SHORT-NAME>RtpRtcpRxPduRef</SHORT-NAME>
+																	<DESC>
+																		<L-2 L="EN">Reference to the "global" Pdu structure to allow harmonization of handle IDs in the COM-Stack.</L-2>
+																	</DESC>
+																	<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+																	<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+																	<SCOPE>LOCAL</SCOPE>
+																	<ORIGIN>Vector Informatik</ORIGIN>
+																	<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+																	<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+																	<REQUIRES-INDEX>false</REQUIRES-INDEX>
+																	<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucPduCollection/Pdu</DESTINATION-REF>
+																</ECUC-REFERENCE-DEF>
+															</REFERENCES>
+														</ECUC-PARAM-CONF-CONTAINER-DEF>
+													</SUB-CONTAINERS>
+												</ECUC-PARAM-CONF-CONTAINER-DEF>
+											</CHOICES>
+										</ECUC-CHOICE-CONTAINER-DEF>
+									</SUB-CONTAINERS>
+								</ECUC-PARAM-CONF-CONTAINER-DEF>
+								<ECUC-PARAM-CONF-CONTAINER-DEF UUID="427198f4-5aaa-4421-92fa-87a75513b27d">
+									<SHORT-NAME>RtpUpperLayer</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Configuration of UpperLayer parameters.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:postBuildNotDeletable">true</SD>
+												<SD GID="DV:postBuildSelectableChangeable">false</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<PARAMETERS>
+										<ECUC-LINKER-SYMBOL-DEF UUID="da7b9168-aa61-4a36-bf24-ca3a44c1c106">
+											<SHORT-NAME>RtpUpperLayerName</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">UpperLayer Name which will be used to prefix callouts.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<ECUC-LINKER-SYMBOL-DEF-VARIANTS>
+												<ECUC-LINKER-SYMBOL-DEF-CONDITIONAL>
+													<DEFAULT-VALUE>RtpUpperLayer</DEFAULT-VALUE>
+													<MIN-LENGTH>1</MIN-LENGTH>
+												</ECUC-LINKER-SYMBOL-DEF-CONDITIONAL>
+											</ECUC-LINKER-SYMBOL-DEF-VARIANTS>
+										</ECUC-LINKER-SYMBOL-DEF>
+									</PARAMETERS>
+								</ECUC-PARAM-CONF-CONTAINER-DEF>
+								<ECUC-PARAM-CONF-CONTAINER-DEF UUID="1ea95af7-12dd-49ba-a8c1-a23767efd6fd">
+									<SHORT-NAME>RtpTimeDomain</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Configuration of time domain parameters.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:postBuildNotDeletable">true</SD>
+												<SD GID="DV:postBuildSelectableChangeable">false</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<PARAMETERS>
+										<ECUC-STRING-PARAM-DEF UUID="6a418c19-9e4a-4481-bd46-f2e960204241">
+											<SHORT-NAME>RtpGmPhysAddr</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Physical address of the time domain.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+										</ECUC-STRING-PARAM-DEF>
+										<ECUC-INTEGER-PARAM-DEF UUID="abd184eb-aefe-4148-bcb7-b206eadc53c4">
+											<SHORT-NAME>RtpGmPortNumber</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Port of the time domain.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<MAX>65535</MAX>
+											<MIN>0</MIN>
+										</ECUC-INTEGER-PARAM-DEF>
+									</PARAMETERS>
+									<REFERENCES>
+										<ECUC-REFERENCE-DEF UUID="dff4c796-ba0a-46b6-b409-7bb966c503fb">
+											<SHORT-NAME>RtpGlobalTimeDomainRef</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Reference to the configured EthTSyn global time domain.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/EthTSyn/EthTSynGlobalTimeDomain</DESTINATION-REF>
+										</ECUC-REFERENCE-DEF>
+									</REFERENCES>
+								</ECUC-PARAM-CONF-CONTAINER-DEF>
+							</SUB-CONTAINERS>
+						</ECUC-PARAM-CONF-CONTAINER-DEF>
+						<ECUC-PARAM-CONF-CONTAINER-DEF UUID="0fa94255-a6fe-410d-852e-573606f044a0">
+							<SHORT-NAME>RtpGeneral</SHORT-NAME>
+							<DESC>
+								<L-2 L="EN">This container lists the general configuration parameters for the RTP module.</L-2>
+							</DESC>
+							<ADMIN-DATA>
+								<SDGS>
+									<SDG GID="DV:CfgPostBuild">
+										<SD GID="DV:postBuildNotDeletable">true</SD>
+										<SD GID="DV:postBuildSelectableChangeable">false</SD>
+									</SDG>
+								</SDGS>
+							</ADMIN-DATA>
+							<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+							<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+							<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+							<REQUIRES-INDEX>false</REQUIRES-INDEX>
+							<PARAMETERS>
+								<ECUC-STRING-PARAM-DEF UUID="0ad46fb2-e2f2-4f26-bd3e-d45c5d719ba2">
+									<SHORT-NAME>RtpRandomNumberFunctionIncludeFile</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter defines the header file holding the declaration of the random number generation function defined in 'RtpRandomNumberFunction'.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<SCOPE>LOCAL</SCOPE>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<ECUC-STRING-PARAM-DEF-VARIANTS>
+										<ECUC-STRING-PARAM-DEF-CONDITIONAL>
+											<DEFAULT-VALUE>Appl_Rand.h</DEFAULT-VALUE>
+										</ECUC-STRING-PARAM-DEF-CONDITIONAL>
+									</ECUC-STRING-PARAM-DEF-VARIANTS>
+								</ECUC-STRING-PARAM-DEF>
+								<ECUC-STRING-PARAM-DEF UUID="9d4e7c2b-1bf3-4fc0-aab1-6d6835e1c88f">
+									<SHORT-NAME>RtpRandomNumberFunction</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter defines the function called for the random number generation.
+API description:
+void &lt;FunctionName&gt;(uint8* DataPtr, uint16 Length)</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<SCOPE>LOCAL</SCOPE>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<ECUC-STRING-PARAM-DEF-VARIANTS>
+										<ECUC-STRING-PARAM-DEF-CONDITIONAL>
+											<DEFAULT-VALUE>Appl_Crypto_GetRandNo</DEFAULT-VALUE>
+										</ECUC-STRING-PARAM-DEF-CONDITIONAL>
+									</ECUC-STRING-PARAM-DEF-VARIANTS>
+								</ECUC-STRING-PARAM-DEF>
+								<ECUC-STRING-PARAM-DEF UUID="7ef0f2a0-b8d1-4fb0-afb8-bfe864b5e1b8">
+									<SHORT-NAME>RtpUserConfigFile</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Reference to an external user configuration file that will be included during generation.
+The content of the user configuration file will be added at the end of the generated module configuration file and allows altering or extending the generated code.
+Caution: User configuration files can cause the software module to malfunction and must only be used with great care!</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<SCOPE>LOCAL</SCOPE>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<ECUC-STRING-PARAM-DEF-VARIANTS>
+										<ECUC-STRING-PARAM-DEF-CONDITIONAL>
+											<DEFAULT-VALUE>X:\xyz\Rtp_UserConfig.txt</DEFAULT-VALUE>
+										</ECUC-STRING-PARAM-DEF-CONDITIONAL>
+									</ECUC-STRING-PARAM-DEF-VARIANTS>
+								</ECUC-STRING-PARAM-DEF>
+								<ECUC-FLOAT-PARAM-DEF UUID="5646d668-0bfb-4959-a84d-2550068bf1cd">
+									<SHORT-NAME>RtpMainFunctionCycleTime</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Determines the frequency at which the Rtp_MainFunction() is called.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:BaseUnit">SEC</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<SCOPE>LOCAL</SCOPE>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>0.005</DEFAULT-VALUE>
+									<MAX>1</MAX>
+									<MIN>0.0001</MIN>
+								</ECUC-FLOAT-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="6a998fe2-20ea-4fa5-9e66-22233a80c3f8">
+									<SHORT-NAME>RtpDevErrorDetect</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Enables and disables the development error detection and notification mechanism.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<SCOPE>LOCAL</SCOPE>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>true</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="52c1002d-b7ed-4d1c-b32f-e43a40ee0007">
+									<SHORT-NAME>RtpVersionInfoApi</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Enables and disables the version info API.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<SCOPE>LOCAL</SCOPE>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="c732d013-9adb-4dc4-8e8e-c97df24aafdc">
+									<SHORT-NAME>RtpSafeBswChecks</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Selects if safety checks are used. These checks improve robustness as e.g. invalid parameters are checked before function is executed. This attribute has to be enabled for safety projects where this component is mapped to an ASIL partition.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<SCOPE>LOCAL</SCOPE>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<VALUE-CONFIG-CLASSES>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+									</VALUE-CONFIG-CLASSES>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+							</PARAMETERS>
+							<SUB-CONTAINERS>
+								<ECUC-PARAM-CONF-CONTAINER-DEF UUID="9c869009-aba8-4d0e-894e-c70995903e1c">
+									<SHORT-NAME>RtpGeneration</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Contains the generation configuration parameters of the module Rtp.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:postBuildSelectableChangeable">false</SD>
+												<SD GID="DV:postBuildNotDeletable">true</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<PARAMETERS>
+										<!--RtpOutOfBoundsWriteProtectionStrategy-->
+										<ECUC-ENUMERATION-PARAM-DEF UUID="ec5d6832-7ebe-4e1c-91c3-525561c23329">
+											<SHORT-NAME>RtpOutOfBoundsWriteProtectionStrategy</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter is used to configure a strategy to protect the code to write out of bounds.
+
+NONE: no protection strategy is generated in the data access.
+INDEX_SATURATION: arrays are blown up and the data access index is saturated by an appropriate mask. The advantage is the speed of the data access, but own data elements at other indexes of the same variable can be overridden.
+INDEX_CHECKING: the data access index is validated by a runtime check. The advantage is that values are never written to incorrect indexes of the data access.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<VALUE-CONFIG-CLASSES>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+											</VALUE-CONFIG-CLASSES>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>NONE</DEFAULT-VALUE>
+											<LITERALS>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="8e055569-e188-4811-95da-04ec44e7dd60">
+													<SHORT-NAME>NONE</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">none</L-4>
+													</LONG-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="8b39123a-3873-4586-a0c5-543a8687beaa">
+													<SHORT-NAME>INDEX_SATURATION</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">index saturation</L-4>
+													</LONG-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="9d1cc0ed-8977-4106-958c-4ca580fee5cc">
+													<SHORT-NAME>INDEX_CHECKING</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">index checking</L-4>
+													</LONG-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+											</LITERALS>
+										</ECUC-ENUMERATION-PARAM-DEF>
+										<!--RtpOutOfBoundsWriteSanitizer-->
+										<ECUC-BOOLEAN-PARAM-DEF UUID="120f4556-5bf0-4fed-ace4-24b81269611d">
+											<SHORT-NAME>RtpOutOfBoundsWriteSanitizer</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter activates/deactivates the generation of runtime checks which call a DET error notification function to find easily out of bounds write problems.
+
+FALSE:  no checks are generated in the data access.
+TRUE: the data access is enriched with DET checks to validate indexes.
+</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<VALUE-CONFIG-CLASSES>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+											</VALUE-CONFIG-CLASSES>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>false</DEFAULT-VALUE>
+										</ECUC-BOOLEAN-PARAM-DEF>
+										<!--RtpOutOfBoundsReadSanitizer-->
+										<ECUC-BOOLEAN-PARAM-DEF UUID="df37feb2-2a92-49d3-b0df-8237aba44991">
+											<SHORT-NAME>RtpOutOfBoundsReadSanitizer</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter activates/deactivates the generation of runtime checks which call a DET error notification function to find easily out of bounds read problems.
+
+FALSE:  no checks are generated in the data access.
+TRUE: the data access is enriched with DET checks to validate indexes.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<VALUE-CONFIG-CLASSES>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+											</VALUE-CONFIG-CLASSES>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>false</DEFAULT-VALUE>
+										</ECUC-BOOLEAN-PARAM-DEF>
+										<!--RtpNumericalDataTypeMinimizationStrategy-->
+										<ECUC-ENUMERATION-PARAM-DEF UUID="cb7ca0fe-6dcd-48e1-9ac4-34be6c5d9169">
+											<SHORT-NAME>RtpNumericalDataTypeMinimizationStrategy</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter is used to minimize the datatypes of CONFIG-CLASS PRE-COMPILE numerical data based on the used values.
+
+NONE: the datatype is not minimized.
+MINIMIZE_NUMERICAL_DATA_TYPES_WITHOUT_CAST: the datatype of numerical data is minimized. Unsigned data types are not changed to signed datatypes.
+MINIMIZE_NUMERICAL_DATA_TYPES_WITH_CAST: the datatype of numerical data is minimized. Unsigned data types can be optimized to signed datatypes.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<VALUE-CONFIG-CLASSES>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+											</VALUE-CONFIG-CLASSES>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>MINIMIZE_NUMERICAL_DATA_TYPES_WITH_CAST</DEFAULT-VALUE>
+											<LITERALS>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="1de1dbf6-6cae-48f9-b5bb-a1e28e166835">
+													<SHORT-NAME>NONE</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">none</L-4>
+													</LONG-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="1b5e4f10-baed-46ed-b3b7-78ee7db374f5">
+													<SHORT-NAME>MINIMIZE_NUMERICAL_DATA_TYPES_WITHOUT_CAST</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">minimize numerical data types without cast</L-4>
+													</LONG-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="21383754-e37d-43c6-ad2d-a722b8bfee8b">
+													<SHORT-NAME>MINIMIZE_NUMERICAL_DATA_TYPES_WITH_CAST</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">minimize numerical data types with cast</L-4>
+													</LONG-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+											</LITERALS>
+										</ECUC-ENUMERATION-PARAM-DEF>
+										<!--RtpReduceIdenticalValues2Define-->
+										<ECUC-BOOLEAN-PARAM-DEF UUID="6db27ba2-40bb-450a-b1db-507039512daa">
+											<SHORT-NAME>RtpReduceConstantData2Define</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">Reduce Constant Data To a Define</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter activates/deactivates the capability to generate CONFIG-CLASS PRE-COMPILE ROM arrays as constant define.
+
+FALSE: ROM arrays are generated as data even if all values are identical.
+TRUE: ROM arrays are generated as constant define if all values are identical.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<VALUE-CONFIG-CLASSES>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+											</VALUE-CONFIG-CLASSES>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>false</DEFAULT-VALUE>
+										</ECUC-BOOLEAN-PARAM-DEF>
+										<!--RtpBoolDataInArrayOfStructStrategy-->
+										<ECUC-ENUMERATION-PARAM-DEF UUID="127520df-d732-4221-8694-1d6d656aae8d">
+											<SHORT-NAME>RtpBoolDataInArrayOfStructStrategy</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter is used to tailor the usage of boolean data in structures in all CONFIG-CLASSES ROM data. The difference between BITFIELD and BITMASKING depends on your compiler options and memory mapping.
+
+BOOLEAN: the datatype of boolean data is native boolean.
+BITFIELD: the bitfield type is used and the compiler extracts the boolean data from structures.
+BITMASKING: generated masks are used to extract the boolean data from structures.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<VALUE-CONFIG-CLASSES>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+											</VALUE-CONFIG-CLASSES>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>BITMASKING</DEFAULT-VALUE>
+											<LITERALS>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="f032a9ce-6720-49b8-9171-eb28cd51fc01">
+													<SHORT-NAME>BOOLEAN</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">boolean</L-4>
+													</LONG-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="5c295553-70e3-4dbb-b91d-05c5d349d563">
+													<SHORT-NAME>BITFIELD</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">bitfield</L-4>
+													</LONG-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="c0775772-0a3b-4fdf-958e-a75eb11b7d53">
+													<SHORT-NAME>BITMASKING</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">bitmasking</L-4>
+													</LONG-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+											</LITERALS>
+										</ECUC-ENUMERATION-PARAM-DEF>
+										<!--RtpDeduplicateIndirectedData-->
+										<ECUC-BOOLEAN-PARAM-DEF UUID="cf7e1d5b-81a3-434e-a213-180853685110">
+											<SHORT-NAME>RtpDeduplicateIndirectedData</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter activates/deactivates the capability to compress 0:N relational ROM data in all CONFIG-CLASSES without increasing the runtime.
+
+FALSE: 0:N relational ROM data is not compressed.
+TRUE: 0:N relational ROM data is compressed without increasing the runtime.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<VALUE-CONFIG-CLASSES>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+											</VALUE-CONFIG-CLASSES>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>true</DEFAULT-VALUE>
+										</ECUC-BOOLEAN-PARAM-DEF>
+										<!--RtpDataDeduplicationStrategy-->
+										<ECUC-ENUMERATION-PARAM-DEF UUID="90f17aa3-5e7e-4fa1-8b88-c3ad657afc9d">
+											<SHORT-NAME>RtpDataDeduplicationStrategy</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter is used to taylor the the deduplication of CONFIG-CLASS PRE-COMPILE  ROM data.
+
+NONE: The generated data is not deduplicated.
+DEDUPLICATE_CONST_DATA_WITHOUT_CAST: The data is deduplicated without using casts.
+DEDUPLICATE_CONST_DATA_WITH_CAST: The data is deduplicated using casts.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<VALUE-CONFIG-CLASSES>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+											</VALUE-CONFIG-CLASSES>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>DEDUPLICATE_CONST_DATA_WITH_CAST</DEFAULT-VALUE>
+											<LITERALS>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="801401d7-5982-4d45-8d6b-7a805f5443ac">
+													<SHORT-NAME>NONE</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">none</L-4>
+													</LONG-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="4cebb512-f3f0-4be6-aa77-b7e3e9aea77c">
+													<SHORT-NAME>DEDUPLICATE_CONST_DATA_WITHOUT_CAST</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">deduplicate const data without cast</L-4>
+													</LONG-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="26e03d8d-b5aa-47fb-9a66-488f705eb115">
+													<SHORT-NAME>DEDUPLICATE_CONST_DATA_WITH_CAST</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">deduplicate const data with cast</L-4>
+													</LONG-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+											</LITERALS>
+										</ECUC-ENUMERATION-PARAM-DEF>
+										<!--RtpReduceBoolDataByNegationThreshold-->
+										<ECUC-INTEGER-PARAM-DEF UUID="bc74f4bf-60a0-4471-acf0-5334ca102e7a">
+											<SHORT-NAME>RtpReduceBoolDataByNegationThreshold</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter activates/deactivates the capability to compress boolean CONFIG-CLASS PRE-COMPILE ROM data by using the negation operator.
+
+0: The optimization is deactivated.
+&gt;0: If the number of deduplicateable elements is greater than this threshold the data optimization can be performed.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<VALUE-CONFIG-CLASSES>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+											</VALUE-CONFIG-CLASSES>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>2</DEFAULT-VALUE>
+											<MAX>9223372036854775807</MAX>
+											<MIN>0</MIN>
+										</ECUC-INTEGER-PARAM-DEF>
+										<!--RtpReduceBoolDataByNumericalComparisonThreshold-->
+										<ECUC-INTEGER-PARAM-DEF UUID="90aeb4ba-f2c1-4097-b80c-bb7d1af9f2cf">
+											<SHORT-NAME>RtpReduceBoolDataByNumericalComparisonThreshold</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter activates/deactivates the capability to compress boolean CONFIG-CLASS PRE-COMPILE ROM data by using numerical comparison with other ROM data.
+
+0: The optimization is deactivated.
+&gt;0: If the number of deduplicateable elements is greater than this threshold the data optimization can be performed.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<VALUE-CONFIG-CLASSES>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+											</VALUE-CONFIG-CLASSES>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>2</DEFAULT-VALUE>
+											<MAX>9223372036854775807</MAX>
+											<MIN>0</MIN>
+										</ECUC-INTEGER-PARAM-DEF>
+										<!--RtpReduceBoolDataByNumericalRelationThreshold-->
+										<ECUC-INTEGER-PARAM-DEF UUID="d5e71290-f359-4bc5-89af-8b099759ebee">
+											<SHORT-NAME>RtpReduceBoolDataByNumericalRelationThreshold</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter activates/deactivates the capability to compress boolean CONFIG-CLASS PRE-COMPILE ROM data by using relational comparison with other ROM data.
+
+0: The optimization is deactivated.
+&gt;0: If the number of deduplicateable elements is greater than this threshold the data optimization can be performed.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<VALUE-CONFIG-CLASSES>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+											</VALUE-CONFIG-CLASSES>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>2</DEFAULT-VALUE>
+											<MAX>9223372036854775807</MAX>
+											<MIN>0</MIN>
+										</ECUC-INTEGER-PARAM-DEF>
+										<!--RtpReduceBoolDataByNumericalOperandStrategy-->
+										<ECUC-ENUMERATION-PARAM-DEF UUID="d6260c17-2449-46f6-96aa-4944739f536c">
+											<SHORT-NAME>RtpReduceBoolDataByNumericalOperandStrategy</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter is used to taylor the CONFIG-CLASS PRE-COMPILE ROM bool data with number deduplication mechanisms. A comparison with 0 is very efficient, but a numerical comparison with a value not 0 can be used to increase the ROM data compression rate.
+
+NONE: ROM data deduplications are switched off.
+DEDUPLICATE_DATA_WITH_ZERO: ROM data deduplications can be applied with the value 0.
+DEDUPLICATE_DATA_WITH_ANY_VALUE: ROM data deduplications can be applied with any numerical value.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<VALUE-CONFIG-CLASSES>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+											</VALUE-CONFIG-CLASSES>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>DEDUPLICATE_DATA_WITH_ANY_VALUE</DEFAULT-VALUE>
+											<LITERALS>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="0f364663-482e-4a43-bc5c-43070d51080e">
+													<SHORT-NAME>NONE</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">none</L-4>
+													</LONG-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="97943e05-0645-47b9-a41b-7131713583b3">
+													<SHORT-NAME>DEDUPLICATE_DATA_WITH_ZERO</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">deduplicate data with zero</L-4>
+													</LONG-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="80ecc48c-48ce-4b48-9101-4bfb51979243">
+													<SHORT-NAME>DEDUPLICATE_DATA_WITH_ANY_VALUE</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">deduplicate data with any value</L-4>
+													</LONG-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+											</LITERALS>
+										</ECUC-ENUMERATION-PARAM-DEF>
+										<!--RtpReduceNumericalDataByOffsetThreshold-->
+										<ECUC-INTEGER-PARAM-DEF UUID="8a506b4d-e4e3-426e-a3af-ad0813fede95">
+											<SHORT-NAME>RtpReduceNumericalDataByOffsetThreshold</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter activates/deactivates the capability to compress numerical CONFIG-CLASS PRE-COMPILE ROM data by using a constant offset.
+
+0: The optimization is deactivated.
+&gt;0: If the number of deduplicateable elements is greater than this threshold the data optimization can be performed.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<VALUE-CONFIG-CLASSES>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+											</VALUE-CONFIG-CLASSES>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>2</DEFAULT-VALUE>
+											<MAX>9223372036854775807</MAX>
+											<MIN>0</MIN>
+										</ECUC-INTEGER-PARAM-DEF>
+										<!--RtpReduceNumericalDataByArraySubtractionThreshold-->
+										<ECUC-INTEGER-PARAM-DEF UUID="514d3b10-c95f-4d1a-9a2b-91638c3bad2a">
+											<SHORT-NAME>RtpReduceNumericalDataByArraySubtractionThreshold</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter activates/deactivates the capability to compress numerical CONFIG-CLASS PRE-COMPILE ROM data by using a subtraction with other ROM data.
+
+0: The optimization is deactivated.
+&gt;0: If the number of deduplicateable elements is greater than this threshold the data optimization can be performed.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<VALUE-CONFIG-CLASSES>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+											</VALUE-CONFIG-CLASSES>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>2</DEFAULT-VALUE>
+											<MAX>9223372036854775807</MAX>
+											<MIN>0</MIN>
+										</ECUC-INTEGER-PARAM-DEF>
+										<!--RtpReduceDataByStreaming-->
+										<ECUC-BOOLEAN-PARAM-DEF UUID="1589f4fa-6676-4c05-9ca4-4fbd26fd27eb">
+											<SHORT-NAME>RtpReduceDataByStreaming</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter activates/deactivates the capability to pack generated CONFIG-CLASS PRE-COMPILE ROM data into a data type dependent stream.
+
+FALSE: generated const data is not packed into a data type dependent stream.
+TRUE: generated const data is packed into a data type dependent stream.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<VALUE-CONFIG-CLASSES>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+											</VALUE-CONFIG-CLASSES>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>false</DEFAULT-VALUE>
+										</ECUC-BOOLEAN-PARAM-DEF>
+										<!--RtpShortSymbols-->
+										<ECUC-BOOLEAN-PARAM-DEF UUID="bc7fcf3c-2122-48c3-98ca-f0e928e02699">
+											<SHORT-NAME>RtpShortSymbols</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter activates/deactivates the capability to generate shortened symbol names.
+
+FALSE: symbol names are generated in a human readable style based on the MIP, tags and variant names.
+TRUE: symbol names are generated based on the MIP and a CRC32.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<VALUE-CONFIG-CLASSES>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+											</VALUE-CONFIG-CLASSES>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>false</DEFAULT-VALUE>
+										</ECUC-BOOLEAN-PARAM-DEF>
+										<!--RtpInterfacesForDeactivatedData-->
+										<ECUC-BOOLEAN-PARAM-DEF UUID="a51b095f-2764-47c1-800b-979cc5a6a7be">
+											<SHORT-NAME>RtpInterfacesForDeactivatedData</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter activates/deactivates the capability to generate bsw data interfaces for deactivated data elements. This is an advantage for the BSW developer to reduce the time to market with a development environment using auto completition and to investigate potential interfaces.
+
+FALSE: data interfaces are not generated if the data elementis deactivated.
+TRUE: data interfaces are generated as e.g. emty macros.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<VALUE-CONFIG-CLASSES>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+											</VALUE-CONFIG-CLASSES>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>false</DEFAULT-VALUE>
+										</ECUC-BOOLEAN-PARAM-DEF>
+										<!--RtpReferringKeysInComments-->
+										<ECUC-BOOLEAN-PARAM-DEF UUID="5a69636f-19f0-4218-a5be-439dee3f2943">
+											<SHORT-NAME>RtpReferringKeysInComments</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter activates/deactivates the capability to generate referring keys in comments. This is an advantage for the developer to investigate indirections, but this feature reduces the overall readability of the generated data.
+
+FALSE: referring keys are not generated in comments.
+TRUE: referring keys are generated in comments.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<VALUE-CONFIG-CLASSES>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+											</VALUE-CONFIG-CLASSES>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>false</DEFAULT-VALUE>
+										</ECUC-BOOLEAN-PARAM-DEF>
+									</PARAMETERS>
+								</ECUC-PARAM-CONF-CONTAINER-DEF>
+							</SUB-CONTAINERS>
+						</ECUC-PARAM-CONF-CONTAINER-DEF>
+					</CONTAINERS>
+				</ECUC-MODULE-DEF>
+			</ELEMENTS>
+		</AR-PACKAGE>
+	</AR-PACKAGES>
+</AUTOSAR>

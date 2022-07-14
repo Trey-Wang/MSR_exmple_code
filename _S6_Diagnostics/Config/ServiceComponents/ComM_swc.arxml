@@ -1,0 +1,792 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-2-1.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="4a1f5e4e-1b37-4ab3-9756-524419074e03">
+      <SHORT-NAME>MICROSAR</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="d9269c51-6d13-4f8f-8ca5-a1795e9d0e69">
+          <SHORT-NAME>ComM_swc</SHORT-NAME>
+          <ELEMENTS>
+            <MODE-DECLARATION-GROUP UUID="617f39c1-e788-4f02-827d-ee7dce2ec127">
+              <SHORT-NAME>ComMMode</SHORT-NAME>
+              <INITIAL-MODE-REF DEST="MODE-DECLARATION">/MICROSAR/ComM_swc/ComMMode/COMM_NO_COMMUNICATION</INITIAL-MODE-REF>
+              <MODE-DECLARATIONS>
+                <MODE-DECLARATION UUID="ba488026-ec47-4cd5-910f-3378bb5aff4d">
+                  <SHORT-NAME>COMM_NO_COMMUNICATION</SHORT-NAME>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="4066fc3e-5648-484e-b4b0-ab56b1843829">
+                  <SHORT-NAME>COMM_SILENT_COMMUNICATION</SHORT-NAME>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="2e63e0ed-862a-4306-b8c9-c52997bf305c">
+                  <SHORT-NAME>COMM_FULL_COMMUNICATION</SHORT-NAME>
+                </MODE-DECLARATION>
+              </MODE-DECLARATIONS>
+            </MODE-DECLARATION-GROUP>
+            <DATA-TYPE-MAPPING-SET UUID="3423462e-aa52-484a-bc68-e1d73a11fd5e">
+              <SHORT-NAME>ComMMode_DataTypeMappingSet</SHORT-NAME>
+              <DESC>
+                <L-2 L="FOR-ALL">Data Mapping for the Mode Declaration Group ComMMode.</L-2>
+              </DESC>
+              <MODE-REQUEST-TYPE-MAPS>
+                <MODE-REQUEST-TYPE-MAP>
+                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/ComM_swc/DataTypes/ComM_ModeType</IMPLEMENTATION-DATA-TYPE-REF>
+                  <MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP">/MICROSAR/ComM_swc/ComMMode</MODE-GROUP-REF>
+                </MODE-REQUEST-TYPE-MAP>
+              </MODE-REQUEST-TYPE-MAPS>
+            </DATA-TYPE-MAPPING-SET>
+          </ELEMENTS>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="634429ad-b17c-497f-b2b5-8dc1721e90fd">
+              <SHORT-NAME>DataTypes</SHORT-NAME>
+              <ELEMENTS>
+                <IMPLEMENTATION-DATA-TYPE UUID="3a5a0014-4e33-42c7-8b49-d85cfc1ca8c8">
+                  <SHORT-NAME>ComM_ModeType</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <COMPU-METHOD-REF DEST="COMPU-METHOD">/MICROSAR/ComM_swc/DataTypes/CompuMethods/ComM_ModeType</COMPU-METHOD-REF>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </IMPLEMENTATION-DATA-TYPE>
+                <IMPLEMENTATION-DATA-TYPE UUID="fda16b1c-215f-4d96-b82f-bb51b37fbcb1">
+                  <SHORT-NAME>ComM_InhibitionStatusType</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <DATA-CONSTR-REF DEST="DATA-CONSTR">/MICROSAR/ComM_swc/DataTypes/DataConstrs/ComM_InhibitionStatusType_Constr</DATA-CONSTR-REF>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </IMPLEMENTATION-DATA-TYPE>
+                <IMPLEMENTATION-DATA-TYPE UUID="638db0b0-85c6-4b3c-9dda-8c47394a3412">
+                  <SHORT-NAME>ComM_UserHandleType</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <DATA-CONSTR-REF DEST="DATA-CONSTR">/MICROSAR/ComM_swc/DataTypes/DataConstrs/ComM_UserHandleType_Constr</DATA-CONSTR-REF>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </IMPLEMENTATION-DATA-TYPE>
+                <IMPLEMENTATION-DATA-TYPE UUID="f2018a58-27ad-47f8-afcf-acab97587c24">
+                  <SHORT-NAME>NetworkHandleType</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <DATA-CONSTR-REF DEST="DATA-CONSTR">/MICROSAR/ComM_swc/DataTypes/DataConstrs/NetworkHandleType_Constr</DATA-CONSTR-REF>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                  <TYPE-EMITTER>ComM</TYPE-EMITTER>
+                </IMPLEMENTATION-DATA-TYPE>
+              </ELEMENTS>
+              <AR-PACKAGES>
+                <AR-PACKAGE UUID="34bb07fe-02b9-426f-96d4-71190a370cd9">
+                  <SHORT-NAME>CompuMethods</SHORT-NAME>
+                  <ELEMENTS>
+                    <COMPU-METHOD UUID="cc5d6207-79b8-4f4c-a0d1-39710c0fc630">
+                      <SHORT-NAME>ComM_ModeType</SHORT-NAME>
+                      <CATEGORY>TEXTTABLE</CATEGORY>
+                      <COMPU-INTERNAL-TO-PHYS>
+                        <COMPU-SCALES>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>COMM_NO_COMMUNICATION</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>COMM_NO_COMMUNICATION</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>COMM_SILENT_COMMUNICATION</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">1</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>COMM_SILENT_COMMUNICATION</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>COMM_FULL_COMMUNICATION</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">2</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">2</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>COMM_FULL_COMMUNICATION</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                        </COMPU-SCALES>
+                      </COMPU-INTERNAL-TO-PHYS>
+                    </COMPU-METHOD>
+                  </ELEMENTS>
+                </AR-PACKAGE>
+                <AR-PACKAGE UUID="f077176f-d842-4cb6-818e-16a52ceb7584">
+                  <SHORT-NAME>DataConstrs</SHORT-NAME>
+                  <ELEMENTS>
+                    <DATA-CONSTR UUID="5e5502e4-c1e8-455c-af04-3a8d5c819f96">
+                      <SHORT-NAME>ComM_InhibitionStatusType_Constr</SHORT-NAME>
+                      <DATA-CONSTR-RULES>
+                        <DATA-CONSTR-RULE>
+                          <INTERNAL-CONSTRS>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">255</UPPER-LIMIT>
+                          </INTERNAL-CONSTRS>
+                        </DATA-CONSTR-RULE>
+                      </DATA-CONSTR-RULES>
+                    </DATA-CONSTR>
+                    <DATA-CONSTR UUID="3d73feac-016a-42ce-9377-d2314f04d195">
+                      <SHORT-NAME>ComM_UserHandleType_Constr</SHORT-NAME>
+                      <DATA-CONSTR-RULES>
+                        <DATA-CONSTR-RULE>
+                          <INTERNAL-CONSTRS>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">255</UPPER-LIMIT>
+                          </INTERNAL-CONSTRS>
+                        </DATA-CONSTR-RULE>
+                      </DATA-CONSTR-RULES>
+                    </DATA-CONSTR>
+                    <DATA-CONSTR UUID="e1ebab87-7a9d-4f36-8613-2a4e48f64f96">
+                      <SHORT-NAME>NetworkHandleType_Constr</SHORT-NAME>
+                      <DATA-CONSTR-RULES>
+                        <DATA-CONSTR-RULE>
+                          <INTERNAL-CONSTRS>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">255</UPPER-LIMIT>
+                          </INTERNAL-CONSTRS>
+                        </DATA-CONSTR-RULE>
+                      </DATA-CONSTR-RULES>
+                    </DATA-CONSTR>
+                  </ELEMENTS>
+                </AR-PACKAGE>
+              </AR-PACKAGES>
+            </AR-PACKAGE>
+            <AR-PACKAGE UUID="c6578cba-d2fe-4769-832a-63c4932f5aea">
+              <SHORT-NAME>Interfaces</SHORT-NAME>
+              <ELEMENTS>
+                <CLIENT-SERVER-INTERFACE UUID="787034d0-fe44-4076-a837-b26430a7962c">
+                  <SHORT-NAME>ComM_UserRequest</SHORT-NAME>
+                  <IS-SERVICE>true</IS-SERVICE>
+                  <SERVICE-KIND>COM-MANAGER</SERVICE-KIND>
+                  <OPERATIONS>
+                    <CLIENT-SERVER-OPERATION UUID="8aecbb6d-9727-43cf-b15b-5468469c3f59">
+                      <SHORT-NAME>RequestComMode</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="FOR-ALL"/>
+                      </DESC>
+                      <ARGUMENTS>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="d8c6b940-9a74-49a5-9772-8c6258e29ac0">
+                          <SHORT-NAME>ComMode</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/ComM_swc/DataTypes/ComM_ModeType</TYPE-TREF>
+                          <DIRECTION>IN</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                      </ARGUMENTS>
+                      <POSSIBLE-ERROR-REFS>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/ComM_swc/Interfaces/ComM_UserRequest/E_NOT_OK</POSSIBLE-ERROR-REF>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/ComM_swc/Interfaces/ComM_UserRequest/E_MODE_LIMITATION</POSSIBLE-ERROR-REF>
+                      </POSSIBLE-ERROR-REFS>
+                    </CLIENT-SERVER-OPERATION>
+                    <CLIENT-SERVER-OPERATION UUID="9d3597aa-57f0-44cc-9662-9d5ce3121cf0">
+                      <SHORT-NAME>GetCurrentComMode</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="FOR-ALL"/>
+                      </DESC>
+                      <ARGUMENTS>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="fa61361e-3b7a-403f-87be-cb2a9769b23c">
+                          <SHORT-NAME>ComMode</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/ComM_swc/DataTypes/ComM_ModeType</TYPE-TREF>
+                          <DIRECTION>OUT</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                      </ARGUMENTS>
+                      <POSSIBLE-ERROR-REFS>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/ComM_swc/Interfaces/ComM_UserRequest/E_NOT_OK</POSSIBLE-ERROR-REF>
+                      </POSSIBLE-ERROR-REFS>
+                    </CLIENT-SERVER-OPERATION>
+                    <CLIENT-SERVER-OPERATION UUID="c239b68b-dc28-44fb-9b2b-97cc981d3d8e">
+                      <SHORT-NAME>GetMaxComMode</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="FOR-ALL"/>
+                      </DESC>
+                      <ARGUMENTS>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="493c2c65-cca7-4e5b-a78b-a77af1dcf710">
+                          <SHORT-NAME>ComMode</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/ComM_swc/DataTypes/ComM_ModeType</TYPE-TREF>
+                          <DIRECTION>OUT</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                      </ARGUMENTS>
+                      <POSSIBLE-ERROR-REFS>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/ComM_swc/Interfaces/ComM_UserRequest/E_NOT_OK</POSSIBLE-ERROR-REF>
+                      </POSSIBLE-ERROR-REFS>
+                    </CLIENT-SERVER-OPERATION>
+                    <CLIENT-SERVER-OPERATION UUID="6e5b758a-16ea-45ff-aed5-3e738f5c4efb">
+                      <SHORT-NAME>GetRequestedComMode</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="FOR-ALL"/>
+                      </DESC>
+                      <ARGUMENTS>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="a5431004-67ce-48e0-87b5-053ce2c057dc">
+                          <SHORT-NAME>ComMode</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/ComM_swc/DataTypes/ComM_ModeType</TYPE-TREF>
+                          <DIRECTION>OUT</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                      </ARGUMENTS>
+                      <POSSIBLE-ERROR-REFS>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/ComM_swc/Interfaces/ComM_UserRequest/E_NOT_OK</POSSIBLE-ERROR-REF>
+                      </POSSIBLE-ERROR-REFS>
+                    </CLIENT-SERVER-OPERATION>
+                  </OPERATIONS>
+                  <POSSIBLE-ERRORS>
+                    <APPLICATION-ERROR UUID="5fa7d693-4741-4dc9-8e2c-a32354c90c30">
+                      <SHORT-NAME>E_NOT_OK</SHORT-NAME>
+                      <ERROR-CODE>1</ERROR-CODE>
+                    </APPLICATION-ERROR>
+                    <APPLICATION-ERROR UUID="b80c8094-8eb0-4482-a7e2-4d4dcfa7b708">
+                      <SHORT-NAME>E_MODE_LIMITATION</SHORT-NAME>
+                      <ERROR-CODE>2</ERROR-CODE>
+                    </APPLICATION-ERROR>
+                  </POSSIBLE-ERRORS>
+                </CLIENT-SERVER-INTERFACE>
+                <CLIENT-SERVER-INTERFACE UUID="f7c0f4e9-1f46-4b13-abdd-cdeaf221f745">
+                  <SHORT-NAME>ComM_ECUModeLimitation</SHORT-NAME>
+                  <IS-SERVICE>true</IS-SERVICE>
+                  <SERVICE-KIND>COM-MANAGER</SERVICE-KIND>
+                  <OPERATIONS>
+                    <CLIENT-SERVER-OPERATION UUID="42298e9e-1780-4725-ae5c-f9e1e9efdc21">
+                      <SHORT-NAME>LimitECUToNoComMode</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="FOR-ALL"/>
+                      </DESC>
+                      <ARGUMENTS>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="a2e22523-a640-4ba6-9302-4e1ff8523d6d">
+                          <SHORT-NAME>Status</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</TYPE-TREF>
+                          <DIRECTION>IN</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                      </ARGUMENTS>
+                      <POSSIBLE-ERROR-REFS>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/ComM_swc/Interfaces/ComM_ECUModeLimitation/E_NOT_OK</POSSIBLE-ERROR-REF>
+                      </POSSIBLE-ERROR-REFS>
+                    </CLIENT-SERVER-OPERATION>
+                    <CLIENT-SERVER-OPERATION UUID="0b24ab45-b8ab-43ae-98ac-5e59862e67f3">
+                      <SHORT-NAME>ReadInhibitCounter</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="FOR-ALL"/>
+                      </DESC>
+                      <ARGUMENTS>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="8bcae376-1665-4339-b196-d96e86824ee8">
+                          <SHORT-NAME>CounterValue</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16</TYPE-TREF>
+                          <DIRECTION>OUT</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                      </ARGUMENTS>
+                      <POSSIBLE-ERROR-REFS>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/ComM_swc/Interfaces/ComM_ECUModeLimitation/E_NOT_OK</POSSIBLE-ERROR-REF>
+                      </POSSIBLE-ERROR-REFS>
+                    </CLIENT-SERVER-OPERATION>
+                    <CLIENT-SERVER-OPERATION UUID="2f432a52-7abf-4be0-a4d1-d1d36ad3427d">
+                      <SHORT-NAME>ResetInhibitCounter</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="FOR-ALL"/>
+                      </DESC>
+                      <POSSIBLE-ERROR-REFS>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/ComM_swc/Interfaces/ComM_ECUModeLimitation/E_NOT_OK</POSSIBLE-ERROR-REF>
+                      </POSSIBLE-ERROR-REFS>
+                    </CLIENT-SERVER-OPERATION>
+                    <CLIENT-SERVER-OPERATION UUID="b48487b2-6298-402e-a763-88f890e17f9f">
+                      <SHORT-NAME>SetECUGroupClassification</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="FOR-ALL"/>
+                      </DESC>
+                      <ARGUMENTS>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="6569f853-50c6-45ad-bbc6-dc2bf576330a">
+                          <SHORT-NAME>Status</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/ComM_swc/DataTypes/ComM_InhibitionStatusType</TYPE-TREF>
+                          <DIRECTION>IN</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                      </ARGUMENTS>
+                      <POSSIBLE-ERROR-REFS>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/ComM_swc/Interfaces/ComM_ECUModeLimitation/E_NOT_OK</POSSIBLE-ERROR-REF>
+                      </POSSIBLE-ERROR-REFS>
+                    </CLIENT-SERVER-OPERATION>
+                  </OPERATIONS>
+                  <POSSIBLE-ERRORS>
+                    <APPLICATION-ERROR UUID="f4d51b4e-53fe-4193-b38e-706e8c64775f">
+                      <SHORT-NAME>E_NOT_OK</SHORT-NAME>
+                      <ERROR-CODE>1</ERROR-CODE>
+                    </APPLICATION-ERROR>
+                  </POSSIBLE-ERRORS>
+                </CLIENT-SERVER-INTERFACE>
+                <CLIENT-SERVER-INTERFACE UUID="c4ddda16-97b9-44f1-9262-796efa919df2">
+                  <SHORT-NAME>ComM_ChannelWakeUp</SHORT-NAME>
+                  <IS-SERVICE>true</IS-SERVICE>
+                  <SERVICE-KIND>COM-MANAGER</SERVICE-KIND>
+                  <OPERATIONS>
+                    <CLIENT-SERVER-OPERATION UUID="4dfd09f5-4227-42e9-bd39-a18229945b17">
+                      <SHORT-NAME>PreventWakeUp</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="FOR-ALL"/>
+                      </DESC>
+                      <ARGUMENTS>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="b20adfe8-b0de-45ae-ac9a-9042e3f4718f">
+                          <SHORT-NAME>Status</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</TYPE-TREF>
+                          <DIRECTION>IN</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                      </ARGUMENTS>
+                      <POSSIBLE-ERROR-REFS>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/ComM_swc/Interfaces/ComM_ChannelWakeUp/E_NOT_OK</POSSIBLE-ERROR-REF>
+                      </POSSIBLE-ERROR-REFS>
+                    </CLIENT-SERVER-OPERATION>
+                  </OPERATIONS>
+                  <POSSIBLE-ERRORS>
+                    <APPLICATION-ERROR UUID="55a3d264-3207-4886-9687-1fa44a00efc2">
+                      <SHORT-NAME>E_NOT_OK</SHORT-NAME>
+                      <ERROR-CODE>1</ERROR-CODE>
+                    </APPLICATION-ERROR>
+                  </POSSIBLE-ERRORS>
+                </CLIENT-SERVER-INTERFACE>
+                <CLIENT-SERVER-INTERFACE UUID="05e008fc-c654-4eca-93c2-5e53ff4033f0">
+                  <SHORT-NAME>ComM_ChannelLimitation</SHORT-NAME>
+                  <IS-SERVICE>true</IS-SERVICE>
+                  <SERVICE-KIND>COM-MANAGER</SERVICE-KIND>
+                  <OPERATIONS>
+                    <CLIENT-SERVER-OPERATION UUID="c1dd7fd7-ba61-4c89-ae12-1cab22de84c6">
+                      <SHORT-NAME>LimitChannelToNoComMode</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="FOR-ALL"/>
+                      </DESC>
+                      <ARGUMENTS>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="26b29e62-1638-4c64-9e4d-a3286a055646">
+                          <SHORT-NAME>Status</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</TYPE-TREF>
+                          <DIRECTION>IN</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                      </ARGUMENTS>
+                      <POSSIBLE-ERROR-REFS>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/ComM_swc/Interfaces/ComM_ChannelLimitation/E_NOT_OK</POSSIBLE-ERROR-REF>
+                      </POSSIBLE-ERROR-REFS>
+                    </CLIENT-SERVER-OPERATION>
+                    <CLIENT-SERVER-OPERATION UUID="f9b625bb-26aa-419b-a5b5-c9f937d9b083">
+                      <SHORT-NAME>GetInhibitionStatus</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="FOR-ALL"/>
+                      </DESC>
+                      <ARGUMENTS>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="0cd260d0-22d1-4ecd-a6cb-fe4ee9b50327">
+                          <SHORT-NAME>Status</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/ComM_swc/DataTypes/ComM_InhibitionStatusType</TYPE-TREF>
+                          <DIRECTION>OUT</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                      </ARGUMENTS>
+                      <POSSIBLE-ERROR-REFS>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/ComM_swc/Interfaces/ComM_ChannelLimitation/E_NOT_OK</POSSIBLE-ERROR-REF>
+                      </POSSIBLE-ERROR-REFS>
+                    </CLIENT-SERVER-OPERATION>
+                  </OPERATIONS>
+                  <POSSIBLE-ERRORS>
+                    <APPLICATION-ERROR UUID="2d594fec-4d37-4f9a-8872-23bef2e44bbf">
+                      <SHORT-NAME>E_NOT_OK</SHORT-NAME>
+                      <ERROR-CODE>1</ERROR-CODE>
+                    </APPLICATION-ERROR>
+                  </POSSIBLE-ERRORS>
+                </CLIENT-SERVER-INTERFACE>
+                <MODE-SWITCH-INTERFACE UUID="1ae2735c-1f18-4182-b65d-f7d9e6df77b5">
+                  <SHORT-NAME>ComM_CurrentMode</SHORT-NAME>
+                  <IS-SERVICE>true</IS-SERVICE>
+                  <SERVICE-KIND>COM-MANAGER</SERVICE-KIND>
+                  <MODE-GROUP UUID="c0de4027-658f-4b18-b206-511d9ebbb954">
+                    <SHORT-NAME>currentMode</SHORT-NAME>
+                    <TYPE-TREF DEST="MODE-DECLARATION-GROUP">/MICROSAR/ComM_swc/ComMMode</TYPE-TREF>
+                  </MODE-GROUP>
+                </MODE-SWITCH-INTERFACE>
+              </ELEMENTS>
+            </AR-PACKAGE>
+            <AR-PACKAGE UUID="2f751be7-95df-4ce6-ab1a-de3e78da933e">
+              <SHORT-NAME>ComponentTypes</SHORT-NAME>
+              <ELEMENTS>
+                <SERVICE-SW-COMPONENT-TYPE UUID="51c0b06c-aa0b-4311-b8e1-335ea2ab3c64">
+                  <SHORT-NAME>ComM</SHORT-NAME>
+                  <CATEGORY>SERVICE_COMPONENT</CATEGORY>
+                  <PORTS>
+                    <P-PORT-PROTOTYPE UUID="6d8e124e-7667-43c4-800e-d262dba1032a">
+                      <SHORT-NAME>modeLimitation</SHORT-NAME>
+                      <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/MICROSAR/ComM_swc/Interfaces/ComM_ECUModeLimitation</PROVIDED-INTERFACE-TREF>
+                    </P-PORT-PROTOTYPE>
+                    <P-PORT-PROTOTYPE UUID="a72db1b9-27ba-4558-b19c-625d4fc7c884">
+                      <SHORT-NAME>CL_CAN00_f26020e5</SHORT-NAME>
+                      <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/MICROSAR/ComM_swc/Interfaces/ComM_ChannelLimitation</PROVIDED-INTERFACE-TREF>
+                    </P-PORT-PROTOTYPE>
+                    <P-PORT-PROTOTYPE UUID="e7d9daa8-00eb-4820-839d-e1ccdf4ebfa6">
+                      <SHORT-NAME>CW_CAN00_f26020e5</SHORT-NAME>
+                      <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/MICROSAR/ComM_swc/Interfaces/ComM_ChannelWakeUp</PROVIDED-INTERFACE-TREF>
+                    </P-PORT-PROTOTYPE>
+                    <P-PORT-PROTOTYPE UUID="a11917b4-6ffb-4d88-92b2-9a0fa8735911">
+                      <SHORT-NAME>UR_USR_INTERIOR_LIGHT</SHORT-NAME>
+                      <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/MICROSAR/ComM_swc/Interfaces/ComM_UserRequest</PROVIDED-INTERFACE-TREF>
+                    </P-PORT-PROTOTYPE>
+                    <P-PORT-PROTOTYPE UUID="7b6239fd-7a5a-4fec-b34a-a75fc2421e48">
+                      <SHORT-NAME>UM_USR_INTERIOR_LIGHT</SHORT-NAME>
+                      <PROVIDED-COM-SPECS>
+                        <MODE-SWITCH-SENDER-COM-SPEC>
+                          <MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MICROSAR/ComM_swc/Interfaces/ComM_CurrentMode/currentMode</MODE-GROUP-REF>
+                        </MODE-SWITCH-SENDER-COM-SPEC>
+                      </PROVIDED-COM-SPECS>
+                      <PROVIDED-INTERFACE-TREF DEST="MODE-SWITCH-INTERFACE">/MICROSAR/ComM_swc/Interfaces/ComM_CurrentMode</PROVIDED-INTERFACE-TREF>
+                    </P-PORT-PROTOTYPE>
+                    <P-PORT-PROTOTYPE UUID="004c6c6f-6433-45b3-842a-edba8e59ddcd">
+                      <SHORT-NAME>UR_USR_CHNL_f276589c</SHORT-NAME>
+                      <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/MICROSAR/ComM_swc/Interfaces/ComM_UserRequest</PROVIDED-INTERFACE-TREF>
+                    </P-PORT-PROTOTYPE>
+                  </PORTS>
+                  <INTERNAL-BEHAVIORS>
+                    <SWC-INTERNAL-BEHAVIOR UUID="2a05402f-018c-4b40-8636-8971d5f698f6">
+                      <SHORT-NAME>ComMInternalBehavior</SHORT-NAME>
+                      <DATA-TYPE-MAPPING-REFS>
+                        <DATA-TYPE-MAPPING-REF DEST="DATA-TYPE-MAPPING-SET">/MICROSAR/ComM_swc/ComMMode_DataTypeMappingSet</DATA-TYPE-MAPPING-REF>
+                      </DATA-TYPE-MAPPING-REFS>
+                      <EVENTS>
+                        <TIMING-EVENT UUID="37093f95-f645-4464-aef8-523ed73cc405">
+                          <SHORT-NAME>Timer_ComM_MainFunction_0</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/ComM_MainFunction_0</START-ON-EVENT-REF>
+                          <PERIOD>0.02</PERIOD>
+                        </TIMING-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="803eaf84-5148-4717-b97b-15c9238f5aec">
+                          <SHORT-NAME>OpEventGetInhibitionStatus_GetInhibitionStatus_CL_CAN00_f26020e5</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/GetInhibitionStatus</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/ComM_swc/ComponentTypes/ComM/CL_CAN00_f26020e5</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/ComM_swc/Interfaces/ComM_ChannelLimitation/GetInhibitionStatus</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="2fae551a-e5cd-45bd-b0ea-0618497e62ce">
+                          <SHORT-NAME>OpEventLimitECUToNoComMode_LimitECUToNoComMode_modeLimitation</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/LimitECUToNoComMode</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/ComM_swc/ComponentTypes/ComM/modeLimitation</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/ComM_swc/Interfaces/ComM_ECUModeLimitation/LimitECUToNoComMode</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="8aab6dbc-7f55-44bf-9d0a-be616e7c8137">
+                          <SHORT-NAME>OpEventReadInhibitCounter_ReadInhibitCounter_modeLimitation</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/ReadInhibitCounter</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/ComM_swc/ComponentTypes/ComM/modeLimitation</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/ComM_swc/Interfaces/ComM_ECUModeLimitation/ReadInhibitCounter</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="d8c48143-48c2-4fbf-b52b-92019b464975">
+                          <SHORT-NAME>OpEventResetInhibitCounter_ResetInhibitCounter_modeLimitation</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/ResetInhibitCounter</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/ComM_swc/ComponentTypes/ComM/modeLimitation</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/ComM_swc/Interfaces/ComM_ECUModeLimitation/ResetInhibitCounter</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="ee9ad337-f119-4b24-9628-7202c3039e94">
+                          <SHORT-NAME>OpEventSetECUGroupClassification_SetECUGroupClassification_modeLimitation</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/SetECUGroupClassification</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/ComM_swc/ComponentTypes/ComM/modeLimitation</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/ComM_swc/Interfaces/ComM_ECUModeLimitation/SetECUGroupClassification</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="40b4a365-c71c-4123-a285-40ef94ef9c0b">
+                          <SHORT-NAME>OpEventLimitChannelToNoComMode_LimitChannelToNoComMode_CL_CAN00_f26020e5</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/LimitChannelToNoComMode</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/ComM_swc/ComponentTypes/ComM/CL_CAN00_f26020e5</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/ComM_swc/Interfaces/ComM_ChannelLimitation/LimitChannelToNoComMode</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="eb5ef35c-acdc-4cbe-b862-7b94177dbaa1">
+                          <SHORT-NAME>OpEventPreventWakeUp_PreventWakeUp_CW_CAN00_f26020e5</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/PreventWakeUp</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/ComM_swc/ComponentTypes/ComM/CW_CAN00_f26020e5</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/ComM_swc/Interfaces/ComM_ChannelWakeUp/PreventWakeUp</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="07ac0f6b-ec9c-4d8d-b2da-7b7f80aa9c61">
+                          <SHORT-NAME>OpEventRequestComMode_RequestComMode_UR_USR_INTERIOR_LIGHT</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/RequestComMode</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/ComM_swc/ComponentTypes/ComM/UR_USR_INTERIOR_LIGHT</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/ComM_swc/Interfaces/ComM_UserRequest/RequestComMode</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="04156c75-f53c-4160-80f9-f1964441d630">
+                          <SHORT-NAME>OpEventGetCurrentComMode_GetCurrentComMode_UR_USR_INTERIOR_LIGHT</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/GetCurrentComMode</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/ComM_swc/ComponentTypes/ComM/UR_USR_INTERIOR_LIGHT</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/ComM_swc/Interfaces/ComM_UserRequest/GetCurrentComMode</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="a72411e2-c59e-48cb-b037-c955335c784b">
+                          <SHORT-NAME>OpEventGetMaxComMode_GetMaxComMode_UR_USR_INTERIOR_LIGHT</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/GetMaxComMode</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/ComM_swc/ComponentTypes/ComM/UR_USR_INTERIOR_LIGHT</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/ComM_swc/Interfaces/ComM_UserRequest/GetMaxComMode</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="7f3b56c1-96c2-4bba-bfe3-05e7fc43ff38">
+                          <SHORT-NAME>OpEventGetRequestedComMode_GetRequestedComMode_UR_USR_INTERIOR_LIGHT</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/GetRequestedComMode</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/ComM_swc/ComponentTypes/ComM/UR_USR_INTERIOR_LIGHT</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/ComM_swc/Interfaces/ComM_UserRequest/GetRequestedComMode</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="d95cea4d-4cc7-4eb3-a448-72a4fc323194">
+                          <SHORT-NAME>OpEventRequestComMode_RequestComMode_UR_USR_CHNL_f276589c</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/RequestComMode</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/ComM_swc/ComponentTypes/ComM/UR_USR_CHNL_f276589c</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/ComM_swc/Interfaces/ComM_UserRequest/RequestComMode</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="ba9c933e-3540-4c40-8a47-ae01f2f552e1">
+                          <SHORT-NAME>OpEventGetCurrentComMode_GetCurrentComMode_UR_USR_CHNL_f276589c</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/GetCurrentComMode</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/ComM_swc/ComponentTypes/ComM/UR_USR_CHNL_f276589c</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/ComM_swc/Interfaces/ComM_UserRequest/GetCurrentComMode</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="09c8bbde-7cbd-4260-a414-fb4842adf232">
+                          <SHORT-NAME>OpEventGetMaxComMode_GetMaxComMode_UR_USR_CHNL_f276589c</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/GetMaxComMode</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/ComM_swc/ComponentTypes/ComM/UR_USR_CHNL_f276589c</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/ComM_swc/Interfaces/ComM_UserRequest/GetMaxComMode</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="a3af3a06-000e-4814-9c70-d901fb394aa9">
+                          <SHORT-NAME>OpEventGetRequestedComMode_GetRequestedComMode_UR_USR_CHNL_f276589c</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/GetRequestedComMode</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/ComM_swc/ComponentTypes/ComM/UR_USR_CHNL_f276589c</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/ComM_swc/Interfaces/ComM_UserRequest/GetRequestedComMode</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                      </EVENTS>
+                      <HANDLE-TERMINATION-AND-RESTART>NO-SUPPORT</HANDLE-TERMINATION-AND-RESTART>
+                      <INCLUDED-DATA-TYPE-SETS>
+                        <INCLUDED-DATA-TYPE-SET>
+                          <DATA-TYPE-REFS>
+                            <DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/ComM_swc/DataTypes/ComM_ModeType</DATA-TYPE-REF>
+                            <DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/ComM_swc/DataTypes/ComM_InhibitionStatusType</DATA-TYPE-REF>
+                            <DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/ComM_swc/DataTypes/ComM_UserHandleType</DATA-TYPE-REF>
+                            <DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/ComM_swc/DataTypes/NetworkHandleType</DATA-TYPE-REF>
+                          </DATA-TYPE-REFS>
+                        </INCLUDED-DATA-TYPE-SET>
+                      </INCLUDED-DATA-TYPE-SETS>
+                      <PORT-API-OPTIONS>
+                        <PORT-API-OPTION>
+                          <ENABLE-TAKE-ADDRESS>true</ENABLE-TAKE-ADDRESS>
+                          <INDIRECT-API>false</INDIRECT-API>
+                          <PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/ComM_swc/ComponentTypes/ComM/modeLimitation</PORT-REF>
+                        </PORT-API-OPTION>
+                        <PORT-API-OPTION>
+                          <ENABLE-TAKE-ADDRESS>true</ENABLE-TAKE-ADDRESS>
+                          <INDIRECT-API>false</INDIRECT-API>
+                          <PORT-ARG-VALUES>
+                            <PORT-DEFINED-ARGUMENT-VALUE>
+                              <VALUE>
+                                <NUMERICAL-VALUE-SPECIFICATION>
+                                  <VALUE>0</VALUE>
+                                </NUMERICAL-VALUE-SPECIFICATION>
+                              </VALUE>
+                              <VALUE-TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/ComM_swc/DataTypes/NetworkHandleType</VALUE-TYPE-TREF>
+                            </PORT-DEFINED-ARGUMENT-VALUE>
+                          </PORT-ARG-VALUES>
+                          <PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/ComM_swc/ComponentTypes/ComM/CL_CAN00_f26020e5</PORT-REF>
+                        </PORT-API-OPTION>
+                        <PORT-API-OPTION>
+                          <ENABLE-TAKE-ADDRESS>true</ENABLE-TAKE-ADDRESS>
+                          <INDIRECT-API>false</INDIRECT-API>
+                          <PORT-ARG-VALUES>
+                            <PORT-DEFINED-ARGUMENT-VALUE>
+                              <VALUE>
+                                <NUMERICAL-VALUE-SPECIFICATION>
+                                  <VALUE>0</VALUE>
+                                </NUMERICAL-VALUE-SPECIFICATION>
+                              </VALUE>
+                              <VALUE-TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/ComM_swc/DataTypes/NetworkHandleType</VALUE-TYPE-TREF>
+                            </PORT-DEFINED-ARGUMENT-VALUE>
+                          </PORT-ARG-VALUES>
+                          <PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/ComM_swc/ComponentTypes/ComM/CW_CAN00_f26020e5</PORT-REF>
+                        </PORT-API-OPTION>
+                        <PORT-API-OPTION>
+                          <ENABLE-TAKE-ADDRESS>true</ENABLE-TAKE-ADDRESS>
+                          <INDIRECT-API>false</INDIRECT-API>
+                          <PORT-ARG-VALUES>
+                            <PORT-DEFINED-ARGUMENT-VALUE>
+                              <VALUE>
+                                <NUMERICAL-VALUE-SPECIFICATION>
+                                  <VALUE>0</VALUE>
+                                </NUMERICAL-VALUE-SPECIFICATION>
+                              </VALUE>
+                              <VALUE-TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/ComM_swc/DataTypes/ComM_UserHandleType</VALUE-TYPE-TREF>
+                            </PORT-DEFINED-ARGUMENT-VALUE>
+                          </PORT-ARG-VALUES>
+                          <PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/ComM_swc/ComponentTypes/ComM/UR_USR_INTERIOR_LIGHT</PORT-REF>
+                        </PORT-API-OPTION>
+                        <PORT-API-OPTION>
+                          <ENABLE-TAKE-ADDRESS>true</ENABLE-TAKE-ADDRESS>
+                          <INDIRECT-API>false</INDIRECT-API>
+                          <PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/ComM_swc/ComponentTypes/ComM/UM_USR_INTERIOR_LIGHT</PORT-REF>
+                        </PORT-API-OPTION>
+                        <PORT-API-OPTION>
+                          <ENABLE-TAKE-ADDRESS>true</ENABLE-TAKE-ADDRESS>
+                          <INDIRECT-API>false</INDIRECT-API>
+                          <PORT-ARG-VALUES>
+                            <PORT-DEFINED-ARGUMENT-VALUE>
+                              <VALUE>
+                                <NUMERICAL-VALUE-SPECIFICATION>
+                                  <VALUE>1</VALUE>
+                                </NUMERICAL-VALUE-SPECIFICATION>
+                              </VALUE>
+                              <VALUE-TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/ComM_swc/DataTypes/ComM_UserHandleType</VALUE-TYPE-TREF>
+                            </PORT-DEFINED-ARGUMENT-VALUE>
+                          </PORT-ARG-VALUES>
+                          <PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/ComM_swc/ComponentTypes/ComM/UR_USR_CHNL_f276589c</PORT-REF>
+                        </PORT-API-OPTION>
+                      </PORT-API-OPTIONS>
+                      <RUNNABLES>
+                        <RUNNABLE-ENTITY UUID="37e2b850-396a-46a9-90a2-bc1b14b1ba13">
+                          <SHORT-NAME>ComM_MainFunction_0</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <MODE-SWITCH-POINTS>
+                            <MODE-SWITCH-POINT UUID="c54de60d-7f57-4605-a519-fedea868db50">
+                              <SHORT-NAME>ModeSwitchPointComM_MainFunction_0_UM_USR_INTERIOR_LIGHT_currentMode</SHORT-NAME>
+                              <MODE-GROUP-IREF>
+                                <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/ComM_swc/ComponentTypes/ComM/UM_USR_INTERIOR_LIGHT</CONTEXT-P-PORT-REF>
+                                <TARGET-MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MICROSAR/ComM_swc/Interfaces/ComM_CurrentMode/currentMode</TARGET-MODE-GROUP-REF>
+                              </MODE-GROUP-IREF>
+                            </MODE-SWITCH-POINT>
+                          </MODE-SWITCH-POINTS>
+                          <SYMBOL>ComM_MainFunction_0</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="5fca3594-92c0-4fd6-b0d7-7cf48a2da61f">
+                          <SHORT-NAME>GetInhibitionStatus</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>ComM_GetInhibitionStatus</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="a59b303d-89cf-418c-8ad2-87fb4f7fec29">
+                          <SHORT-NAME>LimitECUToNoComMode</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>ComM_LimitECUToNoComMode</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="d716c8b0-8e40-4b20-a630-10283de469bc">
+                          <SHORT-NAME>ReadInhibitCounter</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>ComM_ReadInhibitCounter</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="9702a088-dca6-4642-9dbd-0b3776f6af34">
+                          <SHORT-NAME>ResetInhibitCounter</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>ComM_ResetInhibitCounter</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="bb018add-42fa-4bb3-827e-cceaa64b1d91">
+                          <SHORT-NAME>SetECUGroupClassification</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>ComM_SetECUGroupClassification</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="de460c85-bb44-4991-8fa7-a2366da2eb39">
+                          <SHORT-NAME>LimitChannelToNoComMode</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>ComM_LimitChannelToNoComMode</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="30b9660c-7dd5-40b5-a17e-a7597b2519ed">
+                          <SHORT-NAME>PreventWakeUp</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>ComM_PreventWakeUp</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="bdce8f2f-1d31-4bb8-b9e0-0be808e90c4b">
+                          <SHORT-NAME>RequestComMode</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>ComM_RequestComMode</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="b030c164-3587-459b-97a3-26e54989ff8f">
+                          <SHORT-NAME>GetCurrentComMode</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>ComM_GetCurrentComMode</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="328d1280-ff58-4647-b6a5-44118abd3e99">
+                          <SHORT-NAME>GetMaxComMode</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>ComM_GetMaxComMode</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="60164889-010d-4813-95c5-e9aadda5d39b">
+                          <SHORT-NAME>GetRequestedComMode</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>ComM_GetRequestedComMode</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                      </RUNNABLES>
+                      <SUPPORTS-MULTIPLE-INSTANTIATION>false</SUPPORTS-MULTIPLE-INSTANTIATION>
+                    </SWC-INTERNAL-BEHAVIOR>
+                  </INTERNAL-BEHAVIORS>
+                </SERVICE-SW-COMPONENT-TYPE>
+                <SWC-IMPLEMENTATION UUID="0553b230-ce4e-4c56-993e-6b3c7c928f3b">
+                  <SHORT-NAME>ComMImplementation</SHORT-NAME>
+                  <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+                  <BEHAVIOR-REF DEST="SWC-INTERNAL-BEHAVIOR">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior</BEHAVIOR-REF>
+                </SWC-IMPLEMENTATION>
+              </ELEMENTS>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

@@ -1,0 +1,1701 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+***********************************************************************************************************************
+COPYRIGHT
+===============================================================================
+Copyright (c) 2014-2017 by Vector Informatik GmbH.                                         All rights reserved.
+
+    This software is copyright protected and proprietary to Vector Informatik GmbH.
+    Vector Informatik GmbH grants to you only those rights as set out in the license conditions.
+    All other rights remain with Vector Informatik GmbH.
+===============================================================================
+FILE DESCRIPTION
+===============================================================================
+File:           NmOsek_bswmd.arxml
+Component:      -
+Module:         NmOsek
+Generator:      -
+Description:    -
+*********************************************************************************************************************** 
+-->
+<AUTOSAR xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-0-3.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://autosar.org/schema/r4.0">
+	<AR-PACKAGES>
+		<AR-PACKAGE UUID="6272bdda-da2e-43e3-9bb6-653f94833b0d">
+			<SHORT-NAME>MICROSAR</SHORT-NAME>
+			<ELEMENTS>
+				<BSW-IMPLEMENTATION UUID="ebc1baff-2e84-4fa6-afd2-5ca46fa99ed3">
+					<SHORT-NAME>NmOsek_Impl</SHORT-NAME>
+					<PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+					<SW-VERSION>7.00.00</SW-VERSION>
+					<USED-CODE-GENERATOR>DaVinci Configurator</USED-CODE-GENERATOR>
+					<VENDOR-ID>30</VENDOR-ID>
+					<AR-RELEASE-VERSION>4.00.03</AR-RELEASE-VERSION>
+					<BEHAVIOR-REF DEST="BSW-INTERNAL-BEHAVIOR">/MICROSAR/NmOsek_ib_bswmd/BswModuleDescriptions/NmOsek/NmOsekBehavior</BEHAVIOR-REF>
+					<PRECONFIGURED-CONFIGURATION-REFS>
+						<PRECONFIGURED-CONFIGURATION-REF DEST="ECUC-MODULE-CONFIGURATION-VALUES">/MICROSAR/NmOsek_Pre</PRECONFIGURED-CONFIGURATION-REF>
+					</PRECONFIGURED-CONFIGURATION-REFS>
+					<RECOMMENDED-CONFIGURATION-REFS>
+						<RECOMMENDED-CONFIGURATION-REF DEST="ECUC-MODULE-CONFIGURATION-VALUES">/MICROSAR/NmOsek_Rec</RECOMMENDED-CONFIGURATION-REF>
+					</RECOMMENDED-CONFIGURATION-REFS>
+					<VENDOR-SPECIFIC-MODULE-DEF-REFS>
+						<VENDOR-SPECIFIC-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/MICROSAR/NmOsek</VENDOR-SPECIFIC-MODULE-DEF-REF>
+					</VENDOR-SPECIFIC-MODULE-DEF-REFS>
+				</BSW-IMPLEMENTATION>
+				<ECUC-MODULE-DEF UUID="0f766625-4b2e-4ec7-bcf7-1a6e48463819">
+					<SHORT-NAME>NmOsek</SHORT-NAME>
+					<DESC>
+						<L-2 L="EN">This component represents the direct OSEK network management (Direct OSEK NM, further referred to as NM).
+
+The NM provides network services for an application operating on a CAN bus. These services are mainly:
+- control the transition to the bus sleep state
+- determine and monitor the network configuration
+- provide status information
+- handle and recover Bus Off
+- exchange user data in the NM messages
+The most important task of the NM is the safe transition into a power saving bus sleep state. Therefore the NM is mainly used in communication systems which cannot derive the need for communication from a hardware setting like e.g. the ignition state.
+
+A detailed explanation of the Nm_AsrNmDirOsek can be found in the technical reference.</L-2>
+					</DESC>
+					<CATEGORY>VENDOR_SPECIFIC_MODULE_DEFINITION</CATEGORY>
+					<ADMIN-DATA>
+						<DOC-REVISIONS>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.00.00</REVISION-LABEL>
+								<STATE>released</STATE>
+								<ISSUED-BY>vismdr</ISSUED-BY>
+								<DATE>2011-02-03T10:53:17+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Creation</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00048567</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.00.01</REVISION-LABEL>
+								<STATE>released</STATE>
+								<ISSUED-BY>vismdr</ISSUED-BY>
+								<DATE>2011-03-25T14:07:43+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Updated implementation</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00049575</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.00.02</REVISION-LABEL>
+								<STATE>released</STATE>
+								<ISSUED-BY>vismdr</ISSUED-BY>
+								<DATE>2011-04-06T14:41:51+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Updated implementation</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00049741</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.00.03</REVISION-LABEL>
+								<STATE>released</STATE>
+								<ISSUED-BY>vismdr</ISSUED-BY>
+								<DATE>2011-04-14T08:30:00+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Updated implementation</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00049988</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.00.04</REVISION-LABEL>
+								<STATE>released</STATE>
+								<ISSUED-BY>vismdr</ISSUED-BY>
+								<DATE>2011-05-27T14:59:00+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Updated implementation</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00051017</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.01.00</REVISION-LABEL>
+								<STATE>released</STATE>
+								<ISSUED-BY>vismdr</ISSUED-BY>
+								<DATE>2011-10-13T13:22:00+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Added CddNmOsekLastByteOfCanIdAsNodeIdEnabled, CddNmOsekSkippedAliveMessageRequestEnabled, CddNmOsekTPWONWaitBusSleep, CddNmOsekTSendStart, CddNmOsekTBWIntervalSAMsg, CddNmOsekTSAMsgReqIntermissionTime, CddNmOsekTxConfirmationTimeoutTime; Updated implementation</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00052318, ESCAN00052665, ESCAN00052926, ESCAN00054027</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.01.01</REVISION-LABEL>
+								<STATE>released</STATE>
+								<ISSUED-BY>vismdr</ISSUED-BY>
+								<DATE>2011-11-09T04:44:27+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Updated implementation</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00049894</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.01.02</REVISION-LABEL>
+								<STATE>released</STATE>
+								<ISSUED-BY>vismdr</ISSUED-BY>
+								<DATE>2012-01-03T11:51:28+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Updated implementation</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00055698</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.01.03</REVISION-LABEL>
+								<STATE>released</STATE>
+								<ISSUED-BY>vismdr</ISSUED-BY>
+								<DATE>2012-03-05T03:21:58+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Updated implementation</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00055857, ESCAN00057341</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.02.00</REVISION-LABEL>
+								<STATE>released</STATE>
+								<ISSUED-BY>vismdr</ISSUED-BY>
+								<DATE>2012-04-23T03:19:35+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Added CddNmOsekResetTMaxInNMLimpHomePrepSleepOnRxRing, CddNmOsekIgnoreRxOfAnyMsgExceptAliveMsgInNMReset, CddNmOsekLeaveLimpHomeOnlyOnTxConfirmation, CddNmOsekWBSTransitionOnRingMsgOnlyEnabled</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00058551, ESCAN00058552, ESCAN00058553, ESCAN00059017</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.02.01</REVISION-LABEL>
+								<STATE>released</STATE>
+								<ISSUED-BY>vismdr</ISSUED-BY>
+								<DATE>2012-10-16T09:06:21+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Adapted to Vector Coding Rules Standard; Removed CddNmOsekTEBSDisableWakeup; Added CddNmOsekLimpHomeStatusFunctionsEnabled; Adapted CddNmOsekWaitBusSleepExtensions description</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00060808, ESCAN00062286</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.02.02</REVISION-LABEL>
+								<STATE>released</STATE>
+								<ISSUED-BY>vismdr</ISSUED-BY>
+								<DATE>2013-05-04T11:23:23+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Updated implementation</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00064472, ESCAN00066879</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.02.03</REVISION-LABEL>
+								<STATE>released</STATE>
+								<ISSUED-BY>vismdr</ISSUED-BY>
+								<DATE>2013-09-02T02:18:14+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Updated implementation</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00069704</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.02.04</REVISION-LABEL>
+								<STATE>released</STATE>
+								<ISSUED-BY>vismdr</ISSUED-BY>
+								<DATE>2013-12-09T01:19:17+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Updated implementation</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00072460</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.02.05</REVISION-LABEL>
+								<STATE>released</STATE>
+								<ISSUED-BY>vismdr</ISSUED-BY>
+								<DATE>2014-04-08T11:40:15+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Updated implementation</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00074498</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>2.00.00</REVISION-LABEL>
+								<STATE>released</STATE>
+								<ISSUED-BY>vismdr</ISSUED-BY>
+								<DATE>2014-11-03T04:05:42+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Updated to AUTOSAR 4.0.3</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00080498</L-2>
+										</REASON>
+									</MODIFICATION>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Adapted max value of NmOsekNodeSpecificationNo to 65279</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00081545</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>3.00.00</REVISION-LABEL>
+								<STATE>released</STATE>
+								<ISSUED-BY>vismdr</ISSUED-BY>
+								<DATE>2015-04-13T02:30:53+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Updated implementation</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00082410</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>4.00.00</REVISION-LABEL>
+								<STATE>released</STATE>
+								<ISSUED-BY>vismdr</ISSUED-BY>
+								<DATE>2015-08-19T10:48:06+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Added NmOsekFirstMessageShallBeNmMessage, adapted NmOsekTxConfirmationTimeoutTime</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00084670</L-2>
+										</REASON>
+									</MODIFICATION>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Adapted config class of NmOsekChannelConfig containers to 'POST-BUILD' for VARIANT-POST-BUILD-SELECTABLE</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00084672</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>5.00.00</REVISION-LABEL>
+								<STATE>released</STATE>
+								<ISSUED-BY>vismdr</ISSUED-BY>
+								<DATE>2016-01-28T07:38:37+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Updated implementation</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00087845</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>6.00.00</REVISION-LABEL>
+								<STATE>released</STATE>
+								<ISSUED-BY>vismdr</ISSUED-BY>
+								<DATE>2016-04-20T09:36:21+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Updated implementation</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00089292</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>6.01.00</REVISION-LABEL>
+								<STATE>released</STATE>
+								<ISSUED-BY>vismdr</ISSUED-BY>
+								<DATE>2016-08-02T07:27:57+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Adapted descriptions of NmOsekType, NmOsekFirstMessageShallBeNmMessage and NmOsekTxUserDataPduType</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00086742</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>6.01.01</REVISION-LABEL>
+								<STATE>released</STATE>
+								<ISSUED-BY>vismdr</ISSUED-BY>
+								<DATE>2016-10-19T02:21:54+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Updated implementation</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00091595</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>7.00.00</REVISION-LABEL>
+								<STATE>released</STATE>
+								<ISSUED-BY>vismdr</ISSUED-BY>
+								<DATE>2016-12-16T09:21:51+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Removed NmOsekTPWONWaitBusSleep. Parameter NmOsekTxDeadlineMonitoringInComEnabled added, adapted NmOsekBusSleepWaitCSTS.</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">FEATC-46, FEATC-870</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+						</DOC-REVISIONS>
+					</ADMIN-DATA>
+					<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+					<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+					<SUPPORTED-CONFIG-VARIANTS>
+						<SUPPORTED-CONFIG-VARIANT>VARIANT-PRE-COMPILE</SUPPORTED-CONFIG-VARIANT>
+						<SUPPORTED-CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</SUPPORTED-CONFIG-VARIANT>
+						<SUPPORTED-CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</SUPPORTED-CONFIG-VARIANT>
+					</SUPPORTED-CONFIG-VARIANTS>
+					<CONTAINERS>
+						<ECUC-PARAM-CONF-CONTAINER-DEF UUID="124ce7c7-b680-49a1-97a1-df7990f907e8">
+							<SHORT-NAME>NmOsekGlobalConfig</SHORT-NAME>
+							<DESC>
+								<L-2 L="EN">This container contains the global configuration parameter of the NmOsek.</L-2>
+							</DESC>
+							<ADMIN-DATA>
+								<SDGS>
+									<SDG GID="DV:CfgPostBuild">
+										<SD GID="DV:postBuildSelectableChangeable">false</SD>
+										<SD GID="DV:postBuildNotDeletable">false</SD>
+									</SDG>
+								</SDGS>
+							</ADMIN-DATA>
+							<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+							<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+							<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+							<MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+							<PARAMETERS>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="d1a60040-8822-4185-b99d-c81efecc92b3">
+									<SHORT-NAME>NmOsekApiOptimization</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">If the OSEK NM just consists of a single channel and the pre-compile configuration variant is available the API and parts of the code can be optimized to save ROM, RAM and runtime.
+
+Note: Since this is a pre-compile parameter it can only be customized during the PRE-COMPILE configuration phase.
+
+RESTRICTIONS: If (multiplicity(NmOsekChannelConfig) &amp;gt; 1)  then (NmOsekApiOptimization = False)
+If (NmOsekApiOptimization = True) then (multiplicity(NmOsekChannelConfig) == 1)</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-STRING-PARAM-DEF UUID="b1f62290-28e0-4965-b686-87fea0b33c9b">
+									<SHORT-NAME>NmOsekUserConfigFile</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Reference to an external text file that will be included during generation to NmOsek_Cfg.h.
+The content of the user configuration file will be added at the end of the generated module configuration file and allows altering or extending the generated code.
+Caution: User configuration files can cause the software module to malfunction and must only be used with great care!</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+								</ECUC-STRING-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="6d99444d-4ffe-4d7b-a10a-6041611c3ae8">
+									<SHORT-NAME>NmOsekUseNmNodeList</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This attribute enables/disables a feature to monitor and store the currently available nodes of the logical ring in a bit field.
+If this attribute is enabled, the API functions 'NmOsek_GetConfig()' and 'NmOsek_CmpConfig()' are provided by the NM.
+
+Hints on usage:
+- Enable this attribute if you have to monitor and/or to check the present nodes. Otherwise you can disable this attribute in order to save memory and runtime resources.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-INTEGER-PARAM-DEF UUID="dde4ff2d-c85f-4a64-aa26-650ff8ac71d8">
+									<SHORT-NAME>NmOsekNumberOfNmConfigNodes</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This attribute defines the number of nodes that have to be covered by the node list. There is a node list for NM node monitoring and a list for the transceiver error status.
+
+The value of this attribute is used to calculate the size of the bit field that stores the mentioned information for each node.
+
+Value limitations:
+- Value must be an integer multiple of 8 and must fit into the CanIfRxPduCanIdRange.
+
+RESTRICTIONS: This attribute is only necessary if attribute 'NmOsekUseNmNodeList' is activated.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:DefaultFormat">DEC</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>32</DEFAULT-VALUE>
+									<MAX>256</MAX>
+									<MIN>8</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<!--
+                -->
+								<ECUC-BOOLEAN-PARAM-DEF UUID="b55ca254-4f98-4e64-ae98-11e4a49c26e2">
+									<SHORT-NAME>NmOsekDevErrorDetect</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter switches the Development Error Detection and Notification ON or OFF.
+true:	Development error detection is enabled.
+false:	Development error detection is disabled.
+
+Note: In general, the development error detection is recommended during pre-test phase. It is not recommended to enable the development error detection in production code due to increased runtime and ROM needs.
+If it is enabled development errors are reported to the Development Error Tracer (Det).
+The following development errors are reported: 
+&lt;TBD&gt;</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>true</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="78004079-9b13-4432-8176-68f0fa15a1c4">
+									<SHORT-NAME>NmOsekTokenMonitoring</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This attribute enables/disables a feature that monitors if the own NM node has the token or not.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-FLOAT-PARAM-DEF UUID="23d6eaf9-8d8f-491d-90b3-b07e8a51c92e">
+									<SHORT-NAME>NmOsekMainFunctionPeriod</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Call cycle of NmOsek_MainFunction.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:BaseUnit">SEC</SD>
+												<SD GID="DV:Unit">MSEC</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>0.01</DEFAULT-VALUE>
+									<MAX>0.255</MAX>
+									<MIN>0.001</MIN>
+								</ECUC-FLOAT-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="45dfdb81-9d36-47ed-a578-fba8c8e3eaae">
+									<SHORT-NAME>NmOsekVersionInfoApi</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter enables/disables the function NmOsek_GetVersionInfo() to get major, minor and patch version information.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-INTEGER-PARAM-DEF UUID="4d103b0e-40a8-44b2-8022-1e77e7dcc9a1">
+									<SHORT-NAME>NmOsekInstanceId</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">As NmOsek is not an official AUTOSAR component an instance identifier is necessary to allow distinction in case of reporting errors to DET.
+Refer also to the Technical Reference for details.
+
+RESTRICTIONS: This parameter is only used if (NmOsekDevErrorDetect == True).</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:DefaultFormat">DEC</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>0</DEFAULT-VALUE>
+									<MAX>255</MAX>
+									<MIN>0</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<!--
+                -->
+								<ECUC-BOOLEAN-PARAM-DEF UUID="05e92486-87fd-47bd-b64b-1455dd0216b6">
+									<SHORT-NAME>NmOsekBusOffNotificationEnabled</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This switch enables the implementation of the CanSM callback functions for BusOff occurrence and recovery notification.
+
+RESTRICTIONS: This parameter can only be set to true if CanSM.CanSMBusOffBegin and CanSM.CanSMBusOffEnd are defined.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<!--
+                -->
+								<ECUC-BOOLEAN-PARAM-DEF UUID="d831513d-0486-4630-b378-539d3bf46aa0">
+									<SHORT-NAME>NmOsekLastByteOfCanIdAsNodeIdEnabled</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Enable/disable whether the last byte of the CAN Identifier of the NM Messages should be used for all destination IDs in the NM PDU.
+
+Example:
+Let the Base Address be 0x440 and let there be a node with Node Identifier 0x04. If the feature is enabled:
+Everytime this node is addressed, the destination ID byte contains 0x44.
+
+If the feature is disabled:
+Everytime this node is addressed, the destination ID byte contains 0x04.
+
+Note: If the Base Address has 0x00 in its last byte (e.g. 0x400), the feature can be disabled to save ROM consumption and runtime.
+
+If there are multiple NmOsekRxPdus, the setting NmOsekLastByteOfCanIdAsNodeIdEnabled = ON has the following semantics for each channel:
+Each CanIfRxPduRange that belongs to a NmOsekRxPdu extends the possible number of NM nodes.
+Example:
+There is
+- a NmOsekRxPdu that is associated with an CanIfRxPduRange container that has CanIfRxPduRange.CanIfRxPduCanIdRangeLowerCanId = 0x400 and CanIfRxPduRange.CanIfRxPduCanIdRangeUpperCanId = 0x43F
+- a NmOsekRxPdu that is associated with an CanIfRxPduRange container that has CanIfRxPduRange.CanIfRxPduCanIdRangeLowerCanId = 0x540 and CanIfRxPduRange.CanIfRxPduCanIdRangeUpperCanId = 0x57F
+This allows a total number of 128 NM nodes in the network with an unique node identifier.
+
+If there are multiple NmOsekRxPdus, the setting NmOsekLastByteOfCanIdAsNodeIdEnabled = OFF has the following semantics for each channel:
+Each CanIfRxPduRange that belongs to a NmOsekRxPdu provides another possiblity to have the same node identifier inside the CanIfRxPduRange.
+Example:
+- a NmOsekRxPdu that is associated with an CanIfRxPduRange container that has CanIfRxPduRange.CanIfRxPduCanIdRangeLowerCanId = 0x400 and CanIfRxPduRange.CanIfRxPduCanIdRangeUpperCanId = 0x43F
+- a NmOsekRxPdu that is associated with an CanIfRxPduRange container that has CanIfRxPduRange.CanIfRxPduCanIdRangeLowerCanId = 0x540 and CanIfRxPduRange.CanIfRxPduCanIdRangeUpperCanId = 0x57F
+This allows a total number of 64 NM nodes in the network. Each node identifier must either exist in the first or in the second CanIfRxPduRange.
+So for instance the node 1, if it exists, must either have 0x401 or 0x541 as CAN Identifier for its NM message.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<!--
+                -->
+								<ECUC-BOOLEAN-PARAM-DEF UUID="22e126a5-e5f4-4024-adcd-b554fabf84fd">
+									<SHORT-NAME>NmOsekResetTMaxInLHPrepSleepOnRxRingEnabled</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Enable/disable the functionality that the timer TMax shall be reset if a Ring Message is received in NMLimpHomePrepSleep in order to delay the transition to sleep when reception is possible but transmission is not possible and the own node is ready to sleep.
+
+Note that this feature is a Vector Extension to the OSEK NM specification.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>true</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="e4c4f6c8-9706-4113-b8c5-89beb4358989">
+									<SHORT-NAME>NmOsekNMResetIgnoreRxExceptAliveEnabled</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Enable/disable the functionality that the reception of any message except an Alive Message is ignored in NMReset.
+
+If this feature is enabled, the implementation is in accordance with the OSEK NM Specification. However, important messages (Ring, LimpHome, Wake-Up) could be ignored within the time where OSEK NM is in the state NMReset (up to one main function period), including messages that should trigger the transition to sleep (Ring messages with sleep acknowledge bit set to 1). Switch this feature off if those messages should not be ignored.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="aab1afd1-d15a-43be-a574-4b5d6c43a357">
+									<SHORT-NAME>NmOsekLeaveLHOnlyOnRxIndicationEnabled</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Enable/disable the functionality that NMLimpHome may only be left to NMReset at the moment of a successful reception of the NM message.
+
+If this switch is OFF, LimpHome is left to NMReset if these two events have occurred (no matter which one occurred first):
+(1) the LimpHome message has been successfully sent AND
+(2) an NM message has been successfully received.
+In other words, the sequences:
+- (1), (2)
+- (2), (1)
+lead to a transition to NMReset from LimpHome.
+
+If this switch is ON, LimpHome is left to NMReset because of the same conditions (1), (2), but the transition is delayed to the next occurrence of (2).
+In other words, the sequences:
+- (2), (1), (2)
+- (1), (2)
+lead to a transition to NMReset from LimpHome.
+
+If this feature is enabled, the implementation is closer to the OSEK NM specification, but it takes much longer to leave LimpHome.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="ad87f32a-502b-4ac1-b31f-4c796999dc57">
+									<SHORT-NAME>NmOsekWBSTransitionOnRingMsgOnlyEnabled</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Enable/disable the functionality that a transition to Wait Bus Sleep from NMNormalPrepSleep may only be triggered by the reception/transmission of a RING Message with the Sleep Acknowledge Bit set to one.
+
+If this switch is ON, the transition to Wait Bus Sleep from NMNormalPrepSleep may only be triggered by sending or receiving an NM Ring Message with the Sleep Acknowledge Bit set to one.
+
+If this switch is OFF, the transition to Wait Bus Sleep from NMNormalPrepSleep may be triggered by sending an NM Ring Message with the Sleep Acknowledge Bit set to one or by receiving any NM message with the Sleep Acknowledge Bit set to one.
+
+The original OSEK NM Specification is ambiguous about this topic, so this behavior has been made configurable.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<!--
+                -->
+								<ECUC-ENUMERATION-PARAM-DEF UUID="fcd8df7c-ea35-4c26-b910-f4ab55d9f740">
+									<SHORT-NAME>NmOsekType</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This attribute determines the message layout and other OEM-specific behavior.
+
+										<!--
+										-->
+NMOSEK_TYPE_VECTOR_OSEK: Vector specific NM message layout
+
+NM PDU Message layout:
+Byte 0: Destination Identifier byte
+Byte 1: OpCode byte including Sleep flags
+Byte 2-7: User Data bytes
+
+ALIVE message: bit 0 is set in OpCode byte, bits 1 and 2 are not set in OpCode byte
+RING message: bit 1 is set in OpCode byte, bits 0 and 2 are not set in OpCode byte
+LIMPHOME message: bit 2 is set in OpCode byte, bits 0 and 1 are not set in OpCode byte
+Sleep Indication Bit in message: bit 4 in OpCode byte
+Sleep Acknowledge Bit in message: bit 5 in OpCode byte
+Control Bytes (Destination Identifier and OpCode) are initialized with 0x00
+User Data Bytes (other bytes) are initialized with 0x00
+										<!--
+										-->
+NMOSEK_TYPE_VECTOR2_OSEK: Vector specific NM message layout according to the Implementation proposal in OSEK/VDX Network Management Concept and Application Programming Interface Version 2.5.3, chapter 7.0.3
+										<!--
+										-->
+
+NM PDU Message layout:
+Byte 0: Destination Identifier byte
+Byte 1: OpCode byte including Sleep flags
+Byte 2-7: User Data bytes
+
+ALIVE message with Sleep Indication/Acknowledge Bits set to 0: bit 1 is set in OpCode byte, bits 0 and 2 are not set in OpCode byte
+ALIVE message with Sleep Indication Bit set to 1, Sleep Acknowledge Bit set to 0: bit 1 and bit 2 are set in OpCode byte, bit 0 is not set in OpCode byte
+RING message with Sleep Indication/Acknowledge Bits set to 0: bit 0 is set in OpCode byte, bits 1 and 2 are not set in OpCode byte
+RING message with Sleep Indication Bit set to 1, Sleep Acknowledge Bit set to 0: bit 0 and bit 2 are set in OpCode byte, bit 1 is not set in OpCode byte
+LIMPHOME message with Sleep Indication/Acknowledge Bits set to 0: bits 0, 1 and 2 are not set in OpCode byte
+LIMPHOME message with Sleep Indication Bit set to 1, Sleep Acknowledge Bit set to 0: bit 2 is set in OpCode byte, bits 0 and 1 are not set in OpCode byte
+Other bits in the OpCode byte are reserved for future usage
+
+Control Bytes (Destination Identifier and OpCode) are initialized with 0x00
+User Data Bytes (other bytes) are initialized with 0x00
+										<!--
+										--></L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<LITERALS>
+										<!--
+										-->
+										<ECUC-ENUMERATION-LITERAL-DEF UUID="fe062f4d-3aed-445d-9df3-b0f3f32255cd">
+											<SHORT-NAME>NMOSEK_TYPE_VECTOR_OSEK</SHORT-NAME>
+											<ORIGIN>Vector Informatik</ORIGIN>
+										</ECUC-ENUMERATION-LITERAL-DEF>
+										<ECUC-ENUMERATION-LITERAL-DEF UUID="9bf8c457-ec92-4ee6-bd22-4958e71b72a2">
+											<SHORT-NAME>NMOSEK_TYPE_VECTOR2_OSEK</SHORT-NAME>
+											<ORIGIN>Vector Informatik</ORIGIN>
+										</ECUC-ENUMERATION-LITERAL-DEF>
+										<!--
+										-->
+									</LITERALS>
+								</ECUC-ENUMERATION-PARAM-DEF>
+								<!--
+								-->
+								<ECUC-BOOLEAN-PARAM-DEF UUID="646fa3c7-e3d8-4478-8433-480885040ce3">
+									<SHORT-NAME>NmOsekFirstMessageShallBeNmMessage</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Enable/disable the functionality that the NM message sent by NmOsek shall be the first one on the bus if the NM has been actively woken up (i.e. no NM message has been previously received after the active wake-up event).
+
+If this switch is turned ON:
+- NM message transmission observation is mandatory, i.e. NmOsekTxConfirmationTimeoutTime needs to be defined for every NmOsekChannelConfig. See the description of the NmOsekTxConfirmationTimeoutTime parameter below a NmOsekChannelConfig container for details.
+- the API NmOsek_CancelWaitForTxConfOrRxInd() is available
+- the current NM state - notified by Nm_StateChangeNotification() and returned by Nm_GetState() - may only be changed to NM_STATE_READY_SLEEP, NM_STATE_NORMAL_OPERATION or NM_STATE_REPEAT_MESSAGE if NmOsek has successfully received or transmitted a NM message or NmOsek_CancelWaitForTxConfOrRxInd() has been called
+- a state change to NM_STATE_WAIT_STARTUP indicates that there is a pending NM state change to one of NM_STATE_READY_SLEEP, NM_STATE_NORMAL_OPERATION or NM_STATE_REPEAT_MESSAGE but there has not been a successful transmission or reception of the NM message yet (or NmOsek_CancelWaitForTxConfOrRxInd() has not been called)
+
+Note:
+In previous releases, NmOsek required the Pn Wake-up Filter to be turned ON if this feature is turned ON. In this release, NmOsek requires the Pn Wake-up Filter to be turned OFF in CanIf.
+
+If this switch is turned OFF,
+- observing the NM message transmission is optional and depends on the existence of NmOsekTxConfirmationTimeoutTime.
+- the transition to the NM states NM_STATE_REPEAT_MESSAGE, NM_STATE_NORMAL_OPERATION and NM_STATE_READY_SLEEP does not depend on the aspect whether a NM PDU has been successfully sent or received
+- the API NmOsek_CancelWaitForTxConfOrRxInd() is not available
+
+RESTRICTIONS: This parameter can only be turned ON if 'Passive Mode Enabled' is turned OFF in Nm.
+</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="dc77f710-0a00-48cd-9f41-ad271136002f">
+									<SHORT-NAME>NmOsekTxDeadlineMonitoringInComEnabled</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Enable/disable the Tx-Deadline Monitoring for the Nm Pdu by Com. 
+
+If this switch is ON, the parameter NmOsekTxConfirmationTimeoutTime is not considered for Tx-Deadline Monitoring. Instead, the Com module is used for that purpose. 
+In this case there will be no function call of Nm_TxTimeoutException(), but instead a signal inside the I-PDU which is referenced by NmOsekTxUserDataPduRef can be used for the timeout notification.
+
+If this switch is OFF, the parameter NmOsekTxConfirmationTimeoutTime will be considered for Tx-Deadline Monitoring. There will be a function call of Nm_TxTimeoutException() for the timeout notification. The Com module is not used for that purpose.
+
+RESTRICTIONS: This parameter can only be turned ON if 'Passive Mode Enabled' is turned OFF in Nm and if 'First Message Shall Be Nm Message' is turned OFF and if 'Com User Data Support' is turned ON in Nm.
+</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+							</PARAMETERS>
+							<SUB-CONTAINERS>
+								<ECUC-PARAM-CONF-CONTAINER-DEF UUID="b6d2096d-90a6-4137-9e27-b3268e226678">
+									<SHORT-NAME>NmOsekChannelConfig</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This container contains the channel specific configuration parameters of the NmOsek.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:postBuildSelectableChangeable">true</SD>
+												<SD GID="DV:postBuildNotDeletable">false</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+									<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+									<PARAMETERS>
+										<ECUC-INTEGER-PARAM-DEF UUID="55ded1fd-b2ac-4e7d-8c11-5bc39ae6ffb4">
+											<SHORT-NAME>NmOsekNodeId</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">This attribute defines the NM node address of the currently used network node. The value of this attribute is required to define the CAN identifier of the node's NM message.
+
+This setting can't be modified. Its value is derived from settings in the configuration file: The node address is calculated out of the CAN identifier of the assigned NM message and the CanIfRxPduCanIdRange.
+
+Example:
+CanIfRxPduCanIdRange.CanIfRxPduCanIdRangeLowerCanId=0x400
+The current node has an NM message with CAN identifier 0x405
+=&gt; NmOsekNodeId=0x05
+
+Note: This attribute may be derived from the DBC attribute 'NmNodeAddress'.
+This parameter is only used if Nm.NmPassiveModeEnabled = False.</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:Display">
+														<SD GID="DV:DefaultFormat">HEX</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>0</DEFAULT-VALUE>
+											<MAX>255</MAX>
+											<MIN>0</MIN>
+										</ECUC-INTEGER-PARAM-DEF>
+										<ECUC-FLOAT-PARAM-DEF UUID="764ca75e-33a5-4d56-bba3-6d02da5b08dd">
+											<SHORT-NAME>NmOsekRingTypTime</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">This attribute defines the typical time interval between two ring messages (TTyp).
+
+Value limitations:
+- Value must be an integer multiple of attribute 'NmOsekMainFunctionPeriod'</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:Display">
+														<SD GID="DV:BaseUnit">SEC</SD>
+														<SD GID="DV:Unit">MSEC</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>LINK</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>0.1</DEFAULT-VALUE>
+											<MAX>65.535</MAX>
+											<MIN>0.0010</MIN>
+										</ECUC-FLOAT-PARAM-DEF>
+										<ECUC-FLOAT-PARAM-DEF UUID="48841bcf-0dd1-4083-897d-ac44da296d57">
+											<SHORT-NAME>NmOsekRingMaxTime</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">This attribute defines the maximum time interval between two ring messages (TMax).
+
+Value limitations:
+- Value must be an integer multiple of attribute 'NmOsekMainFunctionPeriod'
+- Value must be greater than the value of attribute 'NmOsekRingTypTime'</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:Display">
+														<SD GID="DV:BaseUnit">SEC</SD>
+														<SD GID="DV:Unit">MSEC</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>LINK</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>0.26</DEFAULT-VALUE>
+											<MAX>65.535</MAX>
+											<MIN>0.0010</MIN>
+										</ECUC-FLOAT-PARAM-DEF>
+										<ECUC-FLOAT-PARAM-DEF UUID="bed69663-c10e-4d0e-8511-506b2f1abc81">
+											<SHORT-NAME>NmOsekLimpHomeTime</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">This attribute defines the time interval between two limp home messages (TError).
+
+Value limitations:
+- Value must be an integer multiple of 'NmOsekMainFunctionPeriod'
+- Value is typically: 'NmOsekLimpHomeTime' = 10.0 * 'NmOsekRingTypTime'</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:Display">
+														<SD GID="DV:BaseUnit">SEC</SD>
+														<SD GID="DV:Unit">MSEC</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>LINK</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>1.000</DEFAULT-VALUE>
+											<MAX>65.535</MAX>
+											<MIN>0.001</MIN>
+										</ECUC-FLOAT-PARAM-DEF>
+										<ECUC-FLOAT-PARAM-DEF UUID="d5e3424f-c91f-432e-b22e-230e30cb6c9e">
+											<SHORT-NAME>NmOsekWaitBusSleepTime</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">This attribute defines the time between the detection of a SleepAcknowledge and the transition to BusSleep mode.
+
+Value limitations:
+- Value must be an integer multiple of 'NmOsekMainFunctionPeriod'
+- Value must be greater than 'NmOsekLimpHomeTime'
+- Value must be greater than 'NmOsekRingMaxTime'
+- Value is typically: 'NmOsekWaitBusSleepTime' = 1.5 * 'NmOsekLimpHomeTime'</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:Display">
+														<SD GID="DV:BaseUnit">SEC</SD>
+														<SD GID="DV:Unit">MSEC</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>LINK</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>1.5</DEFAULT-VALUE>
+											<MAX>65.535</MAX>
+											<MIN>0.001</MIN>
+										</ECUC-FLOAT-PARAM-DEF>
+										<!--
+                    -->
+										<ECUC-FLOAT-PARAM-DEF UUID="256c54e6-0b92-4726-a18f-d84042f8c601">
+											<SHORT-NAME>NmOsekTxConfirmationTimeoutTime</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Time for how long the NM should wait for the TX confirmation of the NM message.
+
+If this parameter is defined, it is used for every NM message transmission request.
+It is mandatory if
+- NmOsekFirstMessageShallBeNmMessage is turned ON
+<!--
+-->
+
+Refer to the Technical Reference for the actions on timeout.
+
+Value limitations:
+- Value must be an integer multiple of 'NmOsekMainFunctionPeriod'
+
+RESTRICTIONS: This parameter is not used if Nm.NmPassiveModeEnabled is True.</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:Display">
+														<SD GID="DV:BaseUnit">SEC</SD>
+														<SD GID="DV:Unit">MSEC</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>LINK</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>0.02</DEFAULT-VALUE>
+											<MAX>65.535</MAX>
+											<MIN>0.001</MIN>
+										</ECUC-FLOAT-PARAM-DEF>
+										<!--
+                    -->
+									</PARAMETERS>
+									<REFERENCES>
+										<!-- Reference Definition: NmOsekChannelIdRef -->
+										<ECUC-REFERENCE-DEF UUID="6c721b37-b9c0-40f4-807a-aa73456287b4">
+											<SHORT-NAME>NmOsekComMNetworkHandleRef</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">ComM Network Handle Ref</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">Reference to the unique channel defined by the ComMChannel. It provides access to the unique channel index value in ComMChannelId.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>LINK</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/ComM/ComMConfigSet/ComMChannel</DESTINATION-REF>
+										</ECUC-REFERENCE-DEF>
+									</REFERENCES>
+									<SUB-CONTAINERS>
+										<ECUC-PARAM-CONF-CONTAINER-DEF UUID="477adff8-3294-4e55-9a44-ad7bdf4bc7d9">
+											<SHORT-NAME>NmOsekRxPdu</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">This container includes the configuration of Rx PDU properties that are used for the NmOsek Channel.</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:CfgPostBuild">
+														<SD GID="DV:postBuildSelectableChangeable">true</SD>
+														<SD GID="DV:postBuildNotDeletable">false</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+											<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+											<MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+											<REFERENCES>
+												<!-- Reference Definition: NmOsekRxPduRef -->
+												<ECUC-REFERENCE-DEF UUID="fa7f6487-2cd5-49c3-ad41-ce50e6ddbfeb">
+													<SHORT-NAME>NmOsekRxPduRef</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Reference to the global Rx PDU that is used by this NmOsek Channel.</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucPduCollection/Pdu</DESTINATION-REF>
+												</ECUC-REFERENCE-DEF>
+											</REFERENCES>
+										</ECUC-PARAM-CONF-CONTAINER-DEF>
+										<ECUC-PARAM-CONF-CONTAINER-DEF UUID="d67f973f-247a-49c5-936d-35029aa84871">
+											<SHORT-NAME>NmOsekTxPdu</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">This container includes the configuration of Tx PDU properties that are used for the NmOsek Channel.</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:CfgPostBuild">
+														<SD GID="DV:postBuildSelectableChangeable">true</SD>
+														<SD GID="DV:postBuildNotDeletable">false</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+											<MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+											<REFERENCES>
+												<!-- Reference Definition: NmOsekTxPduRef -->
+												<ECUC-REFERENCE-DEF UUID="41594804-5640-40a9-ad5e-0710b18c3d29">
+													<SHORT-NAME>NmOsekTxPduRef</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Reference to the global Tx PDU that is used by this NmOsek Channel.
+
+RESTRICTIONS: This parameter is only relevant if Nm.NmPassiveModeEnabled = False.</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucPduCollection/Pdu</DESTINATION-REF>
+												</ECUC-REFERENCE-DEF>
+											</REFERENCES>
+										</ECUC-PARAM-CONF-CONTAINER-DEF>
+										<ECUC-PARAM-CONF-CONTAINER-DEF UUID="fcf080ce-be73-49f0-88ce-3e285f67c10d">
+											<SHORT-NAME>NmOsekUserDataTxPdu</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">This optional container is used to configure the UserNm PDU. This container is only available if Nm.NmComUserDataSupport is enabled.</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:CfgPostBuild">
+														<SD GID="DV:postBuildSelectableChangeable">true</SD>
+														<SD GID="DV:postBuildNotDeletable">false</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>2</UPPER-MULTIPLICITY>
+											<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+											<MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+											<PARAMETERS>
+												<!-- PARAMETER DEFINITION: NmOsekTxUserDataPduId -->
+												<ECUC-INTEGER-PARAM-DEF UUID="d4008317-6751-4f76-8384-dee83b4cde89">
+													<SHORT-NAME>NmOsekTxUserDataPduId</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">This value specifies the Handle ID of the NM User Data PDU.
+If NM user data has been changed, NmOsek_Transmit may be called by PduR using this handle ID.
+
+RESTRICTIONS: This parameter is only relevant if Nm.NmComUserDataSupport = True.</L-2>
+													</DESC>
+													<ADMIN-DATA>
+														<SDGS>
+															<SDG GID="DV:Display">
+																<SD GID="DV:DefaultFormat">DEC</SD>
+															</SDG>
+														</SDGS>
+													</ADMIN-DATA>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>LINK</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>LINK</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>0</DEFAULT-VALUE>
+													<MAX>65535</MAX>
+													<MIN>0</MIN>
+												</ECUC-INTEGER-PARAM-DEF>
+												<ECUC-ENUMERATION-PARAM-DEF UUID="11893a2d-1e46-4f40-a9fd-f17b49a140e2">
+													<SHORT-NAME>NmOsekTxUserDataPduType</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">The NmOsekTxUserDataPduType defines whether the I-PDU provides a reasons for Wake-Up or for Awake.
+
+Wake-Up reasons inside the configured I-PDU are put inside ALIVE messages.
+Awake reasons inside the configured I-PDU are put inside RING and LIMPHOME messages.
+
+Configure this setting if the multiplicity of NmOsekUserDataTxPdu is 2, otherwise delete this parameter.
+
+RESTRICTIONS: This parameter is only used and needs to be defined if Nm.NmComUserDataSupport = True and there are two NmOsekUserDataTxPdu containers.</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<LITERALS>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="dba0a4da-6b73-4577-afa3-73b772808c4b">
+															<SHORT-NAME>WakeUp</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">Wake-Up</L-4>
+															</LONG-NAME>
+															<ORIGIN>Vector Informatik</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="ef0075f5-0052-4fb0-b780-cf390d189fa7">
+															<SHORT-NAME>Awake</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">Awake</L-4>
+															</LONG-NAME>
+															<ORIGIN>Vector Informatik</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+													</LITERALS>
+												</ECUC-ENUMERATION-PARAM-DEF>
+											</PARAMETERS>
+											<REFERENCES>
+												<!-- Reference Definition: NmOsekTxUserDataPduRef -->
+												<ECUC-REFERENCE-DEF UUID="8564083c-3033-478b-be97-aeba7baf81f4">
+													<SHORT-NAME>NmOsekTxUserDataPduRef</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Reference to the global User Data Tx PDU that is used by this NmOsek Channel.
+
+RESTRICTIONS: This parameter is only relevant if Nm.NmComUserDataSupport = True.</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucPduCollection/Pdu</DESTINATION-REF>
+												</ECUC-REFERENCE-DEF>
+											</REFERENCES>
+										</ECUC-PARAM-CONF-CONTAINER-DEF>
+									</SUB-CONTAINERS>
+								</ECUC-PARAM-CONF-CONTAINER-DEF>
+							</SUB-CONTAINERS>
+						</ECUC-PARAM-CONF-CONTAINER-DEF>
+					</CONTAINERS>
+				</ECUC-MODULE-DEF>
+				<ECUC-MODULE-CONFIGURATION-VALUES UUID="ef4e9f34-2145-4444-9cd9-55d28bca21a0">
+					<SHORT-NAME>NmOsek_Pre</SHORT-NAME>
+					<DEFINITION-REF DEST="ECUC-MODULE-DEF">/MICROSAR/NmOsek</DEFINITION-REF>
+					<CONTAINERS></CONTAINERS>
+				</ECUC-MODULE-CONFIGURATION-VALUES>
+				<ECUC-MODULE-CONFIGURATION-VALUES UUID="461aef8b-845e-4694-8b4e-1441c886a58f">
+					<SHORT-NAME>NmOsek_Rec</SHORT-NAME>
+					<DEFINITION-REF DEST="ECUC-MODULE-DEF">/MICROSAR/NmOsek</DEFINITION-REF>
+					<CONTAINERS></CONTAINERS>
+				</ECUC-MODULE-CONFIGURATION-VALUES>
+			</ELEMENTS>
+		</AR-PACKAGE>
+	</AR-PACKAGES>
+</AUTOSAR>

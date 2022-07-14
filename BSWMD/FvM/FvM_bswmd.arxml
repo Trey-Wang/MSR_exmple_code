@@ -1,0 +1,1256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-2-2.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://autosar.org/schema/r4.0">
+	<AR-PACKAGES>
+		<AR-PACKAGE UUID="ff55d029-386d-43a2-b3c2-dfef4c7a5e36">
+			<SHORT-NAME>MICROSAR</SHORT-NAME>
+			<ELEMENTS>
+				<ECUC-MODULE-DEF UUID="696340d2-d43f-49b7-a364-e43bf264caf7">
+					<SHORT-NAME>FvM</SHORT-NAME>
+					<LONG-NAME>
+						<L-4 L="EN">Freshness Value Manager</L-4>
+					</LONG-NAME>
+					<DESC>
+						<L-2 L="EN">The Freshness Value Manager proides freshness values to the SecOC.</L-2>
+					</DESC>
+					<CATEGORY>VENDOR_SPECIFIC_MODULE_DEFINITION</CATEGORY>
+					<ADMIN-DATA>
+						<DOC-REVISIONS>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.00.00</REVISION-LABEL>
+								<ISSUED-BY>vishho</ISSUED-BY>
+								<DATE>2016-12-15</DATE>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.00.01</REVISION-LABEL>
+								<ISSUED-BY>vishho</ISSUED-BY>
+								<DATE>2017-02-08T10:36:31+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">updated SW-version</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">FEATC-1154</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.00.02</REVISION-LABEL>
+								<ISSUED-BY>vishho</ISSUED-BY>
+								<DATE>2017-02-14T10:36:31+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">updated SW-version</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">FEATC-1154</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.01.00</REVISION-LABEL>
+								<ISSUED-BY>visfrm</ISSUED-BY>
+								<DATE>2017-02-23T03:52:56+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">updated description</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">FEATC-1186</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>2.00.00</REVISION-LABEL>
+								<ISSUED-BY>vishho</ISSUED-BY>
+								<DATE>2017-02-23T03:52:56+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">updated SW-version</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>2.00.00</REVISION-LABEL>
+								<ISSUED-BY>vishho</ISSUED-BY>
+								<DATE>2017-05-09T03:52:56+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Added Notifcation functions for reach MAX value.</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">STORYC-766: Inform FV overflow</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>2.01.00</REVISION-LABEL>
+								<ISSUED-BY>vishho</ISSUED-BY>
+								<DATE>2017-05-09T03:52:56+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">updated sw-version</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">STORYC-161: 100% C/DC for FvM implementation</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>2.02.00</REVISION-LABEL>
+								<ISSUED-BY>vishho</ISSUED-BY>
+								<DATE>2017-07-13T16:54:33+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Added Notification function parameter</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">STORYC-1700: Inform FV overflow also in case of Tx Messages</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>2.02.00</REVISION-LABEL>
+								<ISSUED-BY>vishho</ISSUED-BY>
+								<DATE>2017-07-17T17:12:38+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Added FvMTxUseDefaultFreshnessValueDuringStartUp</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">STORYC-1556: FvM_Jaspar - transmit messages with default Trip/Reset counter, before SyncMessage is received</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>2.02.01</REVISION-LABEL>
+								<ISSUED-BY>vishho</ISSUED-BY>
+								<DATE>2017-08-09T17:12:38+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">updated SW-Version</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+						</DOC-REVISIONS>
+					</ADMIN-DATA>
+					<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+					<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+					<API-SERVICE-PREFIX>FvM</API-SERVICE-PREFIX>
+					<POST-BUILD-VARIANT-SUPPORT>true</POST-BUILD-VARIANT-SUPPORT>
+					<REFINED-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/AUTOSAR/EcucDefs/FvM</REFINED-MODULE-DEF-REF>
+					<SUPPORTED-CONFIG-VARIANTS>
+						<SUPPORTED-CONFIG-VARIANT>VARIANT-PRE-COMPILE</SUPPORTED-CONFIG-VARIANT>
+					</SUPPORTED-CONFIG-VARIANTS>
+					<CONTAINERS>
+						<ECUC-PARAM-CONF-CONTAINER-DEF UUID="b259bcb4-cdbd-4f88-b137-37f8d027c1aa">
+							<SHORT-NAME>FvMFreshnessValueRxProcessing</SHORT-NAME>
+							<DESC>
+								<L-2 L="EN">Freshness value Processings for reception side.</L-2>
+							</DESC>
+							<ADMIN-DATA>
+								<SDGS>
+									<SDG GID="DV:CfgPostBuild">
+										<SD GID="DV:postBuildNotDeletable">true</SD>
+										<SD GID="DV:postBuildSelectableChangeable">false</SD>
+									</SDG>
+								</SDGS>
+							</ADMIN-DATA>
+							<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+							<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+							<MULTIPLICITY-CONFIG-CLASSES>
+								<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+									<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+									<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+								</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+							</MULTIPLICITY-CONFIG-CLASSES>
+							<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+							<REQUIRES-INDEX>false</REQUIRES-INDEX>
+							<REFERENCES>
+								<ECUC-REFERENCE-DEF UUID="070959e0-dd04-4e6f-9058-3c358ad93d44">
+									<SHORT-NAME>FvMProcessingRef</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Reference to the related SecOC processing.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<SCOPE>LOCAL</SCOPE>
+									<MULTIPLICITY-CONFIG-CLASSES>
+										<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+									</MULTIPLICITY-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<VALUE-CONFIG-CLASSES>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+									</VALUE-CONFIG-CLASSES>
+									<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/SecOC/SecOCRxPduProcessing</DESTINATION-REF>
+								</ECUC-REFERENCE-DEF>
+							</REFERENCES>
+							<SUB-CONTAINERS>
+								<ECUC-CHOICE-CONTAINER-DEF UUID="3a4414cf-f8f8-4fc4-8586-09f629ca5645">
+									<SHORT-NAME>FvMFreshnessValueUseCase</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Freshness value use case choice container.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:postBuildNotDeletable">true</SD>
+												<SD GID="DV:postBuildSelectableChangeable">false</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<MULTIPLICITY-CONFIG-CLASSES>
+										<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+									</MULTIPLICITY-CONFIG-CLASSES>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<CHOICES>
+										<ECUC-PARAM-CONF-CONTAINER-DEF UUID="d6dbf5f3-e910-4c16-941c-e5bbfb0b1d8b">
+											<SHORT-NAME>FvMJasparAttributes</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Jaspar Freshness Value UseCase Attributes.</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:CfgPostBuild">
+														<SD GID="DV:postBuildNotDeletable">true</SD>
+														<SD GID="DV:postBuildSelectableChangeable">false</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<MULTIPLICITY-CONFIG-CLASSES>
+												<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											</MULTIPLICITY-CONFIG-CLASSES>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<PARAMETERS>
+												<ECUC-INTEGER-PARAM-DEF UUID="9f03dd4b-dc13-4ca5-9f06-77f5663d89f0">
+													<SHORT-NAME>FvMMessageCounterBitSize</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Message Counter bit size.</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<SCOPE>LOCAL</SCOPE>
+													<MULTIPLICITY-CONFIG-CLASSES>
+														<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													</MULTIPLICITY-CONFIG-CLASSES>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+													<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<VALUE-CONFIG-CLASSES>
+														<ECUC-VALUE-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-VALUE-CONFIGURATION-CLASS>
+													</VALUE-CONFIG-CLASSES>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>8</DEFAULT-VALUE>
+													<MAX>16</MAX>
+													<MIN>0</MIN>
+												</ECUC-INTEGER-PARAM-DEF>
+												<ECUC-INTEGER-PARAM-DEF UUID="f7d2d7c9-b11c-4ac8-9d89-c9fea87f6502">
+													<SHORT-NAME>FvMResetFlagBitSize</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Reset flag bit size.</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<SCOPE>LOCAL</SCOPE>
+													<MULTIPLICITY-CONFIG-CLASSES>
+														<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													</MULTIPLICITY-CONFIG-CLASSES>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+													<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<VALUE-CONFIG-CLASSES>
+														<ECUC-VALUE-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-VALUE-CONFIGURATION-CLASS>
+													</VALUE-CONFIG-CLASSES>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>2</DEFAULT-VALUE>
+													<MAX>8</MAX>
+													<MIN>0</MIN>
+												</ECUC-INTEGER-PARAM-DEF>
+											</PARAMETERS>
+										</ECUC-PARAM-CONF-CONTAINER-DEF>
+										<ECUC-PARAM-CONF-CONTAINER-DEF UUID="ef330b5a-9a52-42f5-9e17-9e09c800205b">
+											<SHORT-NAME>FvMSyncMessage</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Freshness Value Sync Message Container.</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:CfgPostBuild">
+														<SD GID="DV:postBuildNotDeletable">true</SD>
+														<SD GID="DV:postBuildSelectableChangeable">false</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<MULTIPLICITY-CONFIG-CLASSES>
+												<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											</MULTIPLICITY-CONFIG-CLASSES>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+										</ECUC-PARAM-CONF-CONTAINER-DEF>
+									</CHOICES>
+								</ECUC-CHOICE-CONTAINER-DEF>
+							</SUB-CONTAINERS>
+						</ECUC-PARAM-CONF-CONTAINER-DEF>
+						<ECUC-PARAM-CONF-CONTAINER-DEF UUID="2a435872-c142-43f5-a62f-4f18f2f8a13d">
+							<SHORT-NAME>FvMFreshnessValueTxProcessing</SHORT-NAME>
+							<DESC>
+								<L-2 L="EN">Freshness value Processings for transmission side.</L-2>
+							</DESC>
+							<ADMIN-DATA>
+								<SDGS>
+									<SDG GID="DV:CfgPostBuild">
+										<SD GID="DV:postBuildNotDeletable">true</SD>
+										<SD GID="DV:postBuildSelectableChangeable">false</SD>
+									</SDG>
+								</SDGS>
+							</ADMIN-DATA>
+							<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+							<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+							<MULTIPLICITY-CONFIG-CLASSES>
+								<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+									<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+									<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+								</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+							</MULTIPLICITY-CONFIG-CLASSES>
+							<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+							<REQUIRES-INDEX>false</REQUIRES-INDEX>
+							<REFERENCES>
+								<ECUC-REFERENCE-DEF UUID="6bce5337-b777-41ca-8404-558e3bf5ff0b">
+									<SHORT-NAME>FvMProcessingRef</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Reference to the related SecOC processing.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<SCOPE>LOCAL</SCOPE>
+									<MULTIPLICITY-CONFIG-CLASSES>
+										<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+									</MULTIPLICITY-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<VALUE-CONFIG-CLASSES>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+									</VALUE-CONFIG-CLASSES>
+									<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/SecOC/SecOCTxPduProcessing</DESTINATION-REF>
+								</ECUC-REFERENCE-DEF>
+							</REFERENCES>
+							<SUB-CONTAINERS>
+								<ECUC-CHOICE-CONTAINER-DEF UUID="5e19e165-6ce4-4626-a8ed-9d67746c5ec8">
+									<SHORT-NAME>FvMFreshnessValueUseCase</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Freshness value use case choice container.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:postBuildNotDeletable">true</SD>
+												<SD GID="DV:postBuildSelectableChangeable">false</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<MULTIPLICITY-CONFIG-CLASSES>
+										<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+									</MULTIPLICITY-CONFIG-CLASSES>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<CHOICES>
+										<ECUC-PARAM-CONF-CONTAINER-DEF UUID="e296a999-e42a-4918-9216-f7e3bc752867">
+											<SHORT-NAME>FvMJasparAttributes</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Jaspar Freshness Value UseCase Attributes.</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:CfgPostBuild">
+														<SD GID="DV:postBuildNotDeletable">true</SD>
+														<SD GID="DV:postBuildSelectableChangeable">false</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<MULTIPLICITY-CONFIG-CLASSES>
+												<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											</MULTIPLICITY-CONFIG-CLASSES>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<PARAMETERS>
+												<ECUC-INTEGER-PARAM-DEF UUID="5a6978b4-29dc-47c5-b1cc-4979f3da1aa2">
+													<SHORT-NAME>FvMMessageCounterBitSize</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Message Counter bit size.</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<SCOPE>LOCAL</SCOPE>
+													<MULTIPLICITY-CONFIG-CLASSES>
+														<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													</MULTIPLICITY-CONFIG-CLASSES>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+													<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<VALUE-CONFIG-CLASSES>
+														<ECUC-VALUE-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-VALUE-CONFIGURATION-CLASS>
+													</VALUE-CONFIG-CLASSES>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>8</DEFAULT-VALUE>
+													<MAX>16</MAX>
+													<MIN>0</MIN>
+												</ECUC-INTEGER-PARAM-DEF>
+												<ECUC-INTEGER-PARAM-DEF UUID="1c7b1bd0-a5aa-4c03-bea3-bae02da4c252">
+													<SHORT-NAME>FvMResetFlagBitSize</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Reset flag bit size.</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<SCOPE>LOCAL</SCOPE>
+													<MULTIPLICITY-CONFIG-CLASSES>
+														<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													</MULTIPLICITY-CONFIG-CLASSES>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+													<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<VALUE-CONFIG-CLASSES>
+														<ECUC-VALUE-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-VALUE-CONFIGURATION-CLASS>
+													</VALUE-CONFIG-CLASSES>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>2</DEFAULT-VALUE>
+													<MAX>8</MAX>
+													<MIN>0</MIN>
+												</ECUC-INTEGER-PARAM-DEF>
+											</PARAMETERS>
+										</ECUC-PARAM-CONF-CONTAINER-DEF>
+									</CHOICES>
+								</ECUC-CHOICE-CONTAINER-DEF>
+							</SUB-CONTAINERS>
+						</ECUC-PARAM-CONF-CONTAINER-DEF>
+						<ECUC-PARAM-CONF-CONTAINER-DEF UUID="2a9ce21b-3b2c-469c-b732-ebb95e97bee8">
+							<SHORT-NAME>FvMGeneral</SHORT-NAME>
+							<DESC>
+								<L-2 L="EN">Freshness Value Manager General Attributes Container.</L-2>
+							</DESC>
+							<ADMIN-DATA>
+								<SDGS>
+									<SDG GID="DV:CfgPostBuild">
+										<SD GID="DV:postBuildNotDeletable">true</SD>
+										<SD GID="DV:postBuildSelectableChangeable">false</SD>
+									</SDG>
+								</SDGS>
+							</ADMIN-DATA>
+							<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+							<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+							<MULTIPLICITY-CONFIG-CLASSES>
+								<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+									<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+									<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+								</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+							</MULTIPLICITY-CONFIG-CLASSES>
+							<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+							<REQUIRES-INDEX>false</REQUIRES-INDEX>
+							<PARAMETERS>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="e800bbde-f08a-4480-8393-22ad8432e105">
+									<SHORT-NAME>FvMDevErrorDetect</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Pre-processor switch for enabling development error detection support.
+</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<SCOPE>LOCAL</SCOPE>
+									<MULTIPLICITY-CONFIG-CLASSES>
+										<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+									</MULTIPLICITY-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<VALUE-CONFIG-CLASSES>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+									</VALUE-CONFIG-CLASSES>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>true</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="281174b8-3b6c-4e63-96ad-d56f96233596">
+									<SHORT-NAME>FvMVersionInfoApi</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">If true the SecOC_GetVersionInfo API is available.
+</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<SCOPE>LOCAL</SCOPE>
+									<MULTIPLICITY-CONFIG-CLASSES>
+										<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+									</MULTIPLICITY-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<VALUE-CONFIG-CLASSES>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+									</VALUE-CONFIG-CLASSES>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-FLOAT-PARAM-DEF UUID="6020b026-7b0e-4e40-8657-59227b213fb7">
+									<SHORT-NAME>FvMStartUpAcceptanceTime</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter defines the time during start up in which all messages are accepted.
+The "accept all messages" behavior is stopped if a valid sync message is received or the time runns out.
+
+If this is feature is not configured, only valid messages will be accepted.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:BaseUnit">SEC</SD>
+												<SD GID="DV:Unit">MSEC</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<SCOPE>LOCAL</SCOPE>
+									<MULTIPLICITY-CONFIG-CLASSES>
+										<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+									</MULTIPLICITY-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<VALUE-CONFIG-CLASSES>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+									</VALUE-CONFIG-CLASSES>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>0</DEFAULT-VALUE>
+									<MAX>3600</MAX>
+									<MIN>0</MIN>
+								</ECUC-FLOAT-PARAM-DEF>
+								<ECUC-FLOAT-PARAM-DEF UUID="189ffb31-4d55-4ab9-ac9a-04e8adc54393">
+									<SHORT-NAME>FvMMainFunctionPeriod</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Mainfunction Period time.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:BaseUnit">SEC</SD>
+												<SD GID="DV:Unit">MSEC</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<SCOPE>LOCAL</SCOPE>
+									<MULTIPLICITY-CONFIG-CLASSES>
+										<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+									</MULTIPLICITY-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<VALUE-CONFIG-CLASSES>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+									</VALUE-CONFIG-CLASSES>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>0.01</DEFAULT-VALUE>
+									<MAX>0.255</MAX>
+									<MIN>0</MIN>
+								</ECUC-FLOAT-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="4143ff9d-8266-4b92-98d6-4aa3dfa2d9f9">
+									<SHORT-NAME>FvMSafeBswChecks</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Selects if safety checks are used. These checks improve robustness as e.g. invalid parameters are checked before function is executed.
+This attribute has to be enabled for safety projects where this component is mapped to an ASIL partition.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<SCOPE>LOCAL</SCOPE>
+									<MULTIPLICITY-CONFIG-CLASSES>
+										<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+									</MULTIPLICITY-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<VALUE-CONFIG-CLASSES>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+									</VALUE-CONFIG-CLASSES>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+							</PARAMETERS>
+						</ECUC-PARAM-CONF-CONTAINER-DEF>
+						<ECUC-PARAM-CONF-CONTAINER-DEF UUID="4bd3b159-f9a1-4989-a160-8d58221e0206">
+							<SHORT-NAME>FvMJasparGeneral</SHORT-NAME>
+							<DESC>
+								<L-2 L="EN">Freshness Value Manager Jaspar Freshness Value Use Case General Attributes Container.</L-2>
+							</DESC>
+							<ADMIN-DATA>
+								<SDGS>
+									<SDG GID="DV:CfgPostBuild">
+										<SD GID="DV:postBuildNotDeletable">true</SD>
+										<SD GID="DV:postBuildSelectableChangeable">false</SD>
+									</SDG>
+								</SDGS>
+							</ADMIN-DATA>
+							<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+							<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+							<MULTIPLICITY-CONFIG-CLASSES>
+								<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+									<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+									<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+								</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+							</MULTIPLICITY-CONFIG-CLASSES>
+							<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+							<REQUIRES-INDEX>false</REQUIRES-INDEX>
+							<PARAMETERS>
+								<ECUC-INTEGER-PARAM-DEF UUID="22285540-ea6e-46a7-adbc-a7c21a2a71f2">
+									<SHORT-NAME>FvMTripCounterBitSize</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Trip Counter bit size.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<SCOPE>LOCAL</SCOPE>
+									<MULTIPLICITY-CONFIG-CLASSES>
+										<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+									</MULTIPLICITY-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<VALUE-CONFIG-CLASSES>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+									</VALUE-CONFIG-CLASSES>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>16</DEFAULT-VALUE>
+									<MAX>24</MAX>
+									<MIN>0</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<ECUC-INTEGER-PARAM-DEF UUID="67e311c6-b652-4820-8ea9-c423fb9ce64d">
+									<SHORT-NAME>FvMResetCounterBitSize</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Reset Counter bit size.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<SCOPE>LOCAL</SCOPE>
+									<MULTIPLICITY-CONFIG-CLASSES>
+										<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+									</MULTIPLICITY-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<VALUE-CONFIG-CLASSES>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+									</VALUE-CONFIG-CLASSES>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>20</DEFAULT-VALUE>
+									<MAX>48</MAX>
+									<MIN>0</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<ECUC-INTEGER-PARAM-DEF UUID="aef490a6-aedc-4f46-83d2-ae2548332259">
+									<SHORT-NAME>FvMClearAcceptanceWindow</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter defines the amount of Sync messages that can be lost before an trip counter overflow.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<SCOPE>LOCAL</SCOPE>
+									<MULTIPLICITY-CONFIG-CLASSES>
+										<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+									</MULTIPLICITY-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<VALUE-CONFIG-CLASSES>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+									</VALUE-CONFIG-CLASSES>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>0</DEFAULT-VALUE>
+									<MAX>255</MAX>
+									<MIN>0</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<ECUC-FUNCTION-NAME-DEF UUID="88af03c4-862b-4e9d-8d88-b359086e9a9e">
+									<SHORT-NAME>FvMTripCounterReachMaxNotification</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This function is called if the Trip Coutner value is updated to its MAX value.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<SCOPE>LOCAL</SCOPE>
+									<MULTIPLICITY-CONFIG-CLASSES>
+										<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+									</MULTIPLICITY-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<VALUE-CONFIG-CLASSES>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+									</VALUE-CONFIG-CLASSES>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<ECUC-FUNCTION-NAME-DEF-VARIANTS>
+										<ECUC-FUNCTION-NAME-DEF-CONDITIONAL>
+											<DEFAULT-VALUE>Appl_FvM_TripCounterReachMax</DEFAULT-VALUE>
+										</ECUC-FUNCTION-NAME-DEF-CONDITIONAL>
+									</ECUC-FUNCTION-NAME-DEF-VARIANTS>
+								</ECUC-FUNCTION-NAME-DEF>
+								<ECUC-FUNCTION-NAME-DEF UUID="6c53120f-985f-4346-85e8-2cdaaf4021c5">
+									<SHORT-NAME>FvMResetCounterReachMaxNotification</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This function is called if the Reset Coutner value is updated to its MAX value.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<SCOPE>LOCAL</SCOPE>
+									<MULTIPLICITY-CONFIG-CLASSES>
+										<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+									</MULTIPLICITY-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<VALUE-CONFIG-CLASSES>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+									</VALUE-CONFIG-CLASSES>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<ECUC-FUNCTION-NAME-DEF-VARIANTS>
+										<ECUC-FUNCTION-NAME-DEF-CONDITIONAL>
+											<DEFAULT-VALUE>Appl_FvM_ResetCounterReachMax</DEFAULT-VALUE>
+										</ECUC-FUNCTION-NAME-DEF-CONDITIONAL>
+									</ECUC-FUNCTION-NAME-DEF-VARIANTS>
+								</ECUC-FUNCTION-NAME-DEF>
+								<ECUC-FUNCTION-NAME-DEF UUID="88f5993a-bef2-41e2-bffe-ae16278d782e">
+									<SHORT-NAME>FvMRxMessageCounterReachMaxNotification</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This function is called if a Message Couter reaches the the MAX value.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<SCOPE>LOCAL</SCOPE>
+									<MULTIPLICITY-CONFIG-CLASSES>
+										<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+									</MULTIPLICITY-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<VALUE-CONFIG-CLASSES>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+									</VALUE-CONFIG-CLASSES>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<ECUC-FUNCTION-NAME-DEF-VARIANTS>
+										<ECUC-FUNCTION-NAME-DEF-CONDITIONAL>
+											<DEFAULT-VALUE>Appl_FvM_RxMessageCounterReachMax</DEFAULT-VALUE>
+										</ECUC-FUNCTION-NAME-DEF-CONDITIONAL>
+									</ECUC-FUNCTION-NAME-DEF-VARIANTS>
+								</ECUC-FUNCTION-NAME-DEF>
+								<ECUC-FUNCTION-NAME-DEF UUID="7347899b-525b-44df-9309-aea3bdaa169b">
+									<SHORT-NAME>FvMTxMessageCounterReachMaxNotification</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This function is called if a Message Couter reaches the the MAX value.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<SCOPE>LOCAL</SCOPE>
+									<MULTIPLICITY-CONFIG-CLASSES>
+										<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+									</MULTIPLICITY-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<VALUE-CONFIG-CLASSES>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+									</VALUE-CONFIG-CLASSES>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<ECUC-FUNCTION-NAME-DEF-VARIANTS>
+										<ECUC-FUNCTION-NAME-DEF-CONDITIONAL>
+											<DEFAULT-VALUE>Appl_FvM_TxMessageCounterReachMax</DEFAULT-VALUE>
+										</ECUC-FUNCTION-NAME-DEF-CONDITIONAL>
+									</ECUC-FUNCTION-NAME-DEF-VARIANTS>
+								</ECUC-FUNCTION-NAME-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="ab2af56b-4ce8-44e0-a00d-ca70cb8b4638">
+									<SHORT-NAME>FvMTxUseDefaultFreshnessValueDuringStartUp</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">If enabled the the FvM will return a default freshness value during strart up until the first sync message is received.
+If disabled the FvM will returns E_NOT_OK if a Tx Freshness value is requested.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<SCOPE>LOCAL</SCOPE>
+									<MULTIPLICITY-CONFIG-CLASSES>
+										<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+									</MULTIPLICITY-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<VALUE-CONFIG-CLASSES>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+									</VALUE-CONFIG-CLASSES>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+							</PARAMETERS>
+							<REFERENCES>
+								<ECUC-SYMBOLIC-NAME-REFERENCE-DEF UUID="3c3f9795-cf00-429b-96e0-cb9c94a0a17e">
+									<SHORT-NAME>FvMTripCounterNvMBlockDescriptor</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Not used yet</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<SCOPE>LOCAL</SCOPE>
+									<MULTIPLICITY-CONFIG-CLASSES>
+										<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+									</MULTIPLICITY-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<VALUE-CONFIG-CLASSES>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+									</VALUE-CONFIG-CLASSES>
+									<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/NvM/NvMBlockDescriptor</DESTINATION-REF>
+								</ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+							</REFERENCES>
+						</ECUC-PARAM-CONF-CONTAINER-DEF>
+						<ECUC-PARAM-CONF-CONTAINER-DEF UUID="c9035d00-8919-4bd0-93d5-f51470014723">
+							<SHORT-NAME>FvMGeneration</SHORT-NAME>
+							<ADMIN-DATA>
+								<SDGS>
+									<SDG GID="DV:CfgPostBuild">
+										<SD GID="DV:postBuildNotDeletable">true</SD>
+										<SD GID="DV:postBuildSelectableChangeable">false</SD>
+									</SDG>
+								</SDGS>
+							</ADMIN-DATA>
+							<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+							<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+							<MULTIPLICITY-CONFIG-CLASSES>
+								<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+									<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+									<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+								</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+							</MULTIPLICITY-CONFIG-CLASSES>
+							<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+							<REQUIRES-INDEX>false</REQUIRES-INDEX>
+							<PARAMETERS>
+								<ECUC-ENUMERATION-PARAM-DEF UUID="98f4e0e9-b7c7-4dfb-8bd8-1bf4686aca0e">
+									<SHORT-NAME>FvMOutOfBoundsWriteProtectionStrategy</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter is used to configure a strategy to protect the code to write out of bounds.
+
+NONE: no protection strategy is generated in the data access.
+INDEX_SATURATION: arrays are blown up and the data access index is saturated by an appropriate mask. The advantage is the speed of the data access, but own data elements at other indexes of the same variable can be overridden.
+INDEX_CHECKING: the data access index is validated by a runtime check. The advantage is that values are never written to incorrect indexes of the data access.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<SCOPE>LOCAL</SCOPE>
+									<MULTIPLICITY-CONFIG-CLASSES>
+										<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+									</MULTIPLICITY-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<VALUE-CONFIG-CLASSES>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+									</VALUE-CONFIG-CLASSES>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>NONE</DEFAULT-VALUE>
+									<LITERALS>
+										<ECUC-ENUMERATION-LITERAL-DEF UUID="23dfa092-e5f6-4c2c-8104-bd68735ea1e7">
+											<SHORT-NAME>NONE</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">none</L-4>
+											</LONG-NAME>
+											<ORIGIN>Vector Informatik</ORIGIN>
+										</ECUC-ENUMERATION-LITERAL-DEF>
+										<ECUC-ENUMERATION-LITERAL-DEF UUID="6559a271-faae-4606-b426-2cc1e67a6b3b">
+											<SHORT-NAME>INDEX_SATURATION</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">index saturation</L-4>
+											</LONG-NAME>
+											<ORIGIN>Vector Informatik</ORIGIN>
+										</ECUC-ENUMERATION-LITERAL-DEF>
+										<ECUC-ENUMERATION-LITERAL-DEF UUID="23c73d5e-ac3c-4fce-98b4-fda325cd9053">
+											<SHORT-NAME>INDEX_CHECKING</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">index checking</L-4>
+											</LONG-NAME>
+											<ORIGIN>Vector Informatik</ORIGIN>
+										</ECUC-ENUMERATION-LITERAL-DEF>
+									</LITERALS>
+								</ECUC-ENUMERATION-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="1c2f0640-0a1c-4c30-a960-f0856069dfc8">
+									<SHORT-NAME>FvMOutOfBoundsWriteSanitizer</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter activates/deactivates the generation of runtime checks which call a DET error notification function to find easily out of bounds write problems.
+
+FALSE:  no checks are generated in the data access.
+TRUE: the data access is enriched with DET checks to validate indexes.
+</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<SCOPE>LOCAL</SCOPE>
+									<MULTIPLICITY-CONFIG-CLASSES>
+										<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+									</MULTIPLICITY-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<VALUE-CONFIG-CLASSES>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+									</VALUE-CONFIG-CLASSES>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="68370225-4d8a-4688-b436-4bc907a83529">
+									<SHORT-NAME>FvMOutOfBoundsReadSanitizer</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter activates/deactivates the generation of runtime checks which call a DET error notification function to find easily out of bounds read problems.
+
+FALSE:  no checks are generated in the data access.
+TRUE: the data access is enriched with DET checks to validate indexes.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<SCOPE>LOCAL</SCOPE>
+									<MULTIPLICITY-CONFIG-CLASSES>
+										<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+									</MULTIPLICITY-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<VALUE-CONFIG-CLASSES>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+									</VALUE-CONFIG-CLASSES>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="3741af0b-e930-456d-9924-6c244d244b13">
+									<SHORT-NAME>FvMShortSymbols</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter activates/deactivates the capability to generate shortened symbol names.
+
+FALSE: symbol names are generated in a human readable style based on the MIP, tags and variant names.
+TRUE: symbol names are generated based on the MIP and a CRC32.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<SCOPE>LOCAL</SCOPE>
+									<MULTIPLICITY-CONFIG-CLASSES>
+										<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+									</MULTIPLICITY-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<VALUE-CONFIG-CLASSES>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+									</VALUE-CONFIG-CLASSES>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="ea65add0-345e-4c1d-afd8-cd7ad6163c8a">
+									<SHORT-NAME>FvMInterfacesForDeactivatedData</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter activates/deactivates the capability to generate bsw data interfaces for deactivated data elements. This is an advantage for the BSW developer to reduce the time to market with a development environment using auto completition and to investigate potential interfaces.
+
+FALSE: data interfaces are not generated if the data elementis deactivated.
+TRUE: data interfaces are generated as e.g. emty macros.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<SCOPE>LOCAL</SCOPE>
+									<MULTIPLICITY-CONFIG-CLASSES>
+										<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+									</MULTIPLICITY-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<VALUE-CONFIG-CLASSES>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+									</VALUE-CONFIG-CLASSES>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="093b1508-07c3-4fc6-9cff-ab83e2bc9a7b">
+									<SHORT-NAME>FvMReferringKeysInComments</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter activates/deactivates the capability to generate referring keys in comments. This is an advantage for the developer to investigate indirections, but this feature reduces the overall readability of the generated data.
+
+FALSE: referring keys are not generated in comments.
+TRUE: referring keys are generated in comments.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<SCOPE>LOCAL</SCOPE>
+									<MULTIPLICITY-CONFIG-CLASSES>
+										<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+									</MULTIPLICITY-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<VALUE-CONFIG-CLASSES>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+									</VALUE-CONFIG-CLASSES>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+							</PARAMETERS>
+						</ECUC-PARAM-CONF-CONTAINER-DEF>
+					</CONTAINERS>
+				</ECUC-MODULE-DEF>
+				<BSW-IMPLEMENTATION UUID="cf96550b-56fc-4077-aaa0-1b84d64027bb">
+					<SHORT-NAME>FvM_Impl</SHORT-NAME>
+					<PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+					<SW-VERSION>2.03.00</SW-VERSION>
+					<USED-CODE-GENERATOR>DaVinci Configurator</USED-CODE-GENERATOR>
+					<VENDOR-ID>30</VENDOR-ID>
+					<AR-RELEASE-VERSION>4.02.02</AR-RELEASE-VERSION>
+					<BEHAVIOR-REF DEST="BSW-INTERNAL-BEHAVIOR">/MICROSAR/FvM_ib_bswmd/BswModuleDescriptions/FvM/FvMBehavior</BEHAVIOR-REF>
+					<PRECONFIGURED-CONFIGURATION-REFS>
+						<PRECONFIGURED-CONFIGURATION-REF DEST="ECUC-MODULE-CONFIGURATION-VALUES">/MICROSAR/FvM_Pre</PRECONFIGURED-CONFIGURATION-REF>
+					</PRECONFIGURED-CONFIGURATION-REFS>
+					<RECOMMENDED-CONFIGURATION-REFS>
+						<RECOMMENDED-CONFIGURATION-REF DEST="ECUC-MODULE-CONFIGURATION-VALUES">/MICROSAR/FvM_Rec</RECOMMENDED-CONFIGURATION-REF>
+					</RECOMMENDED-CONFIGURATION-REFS>
+					<VENDOR-SPECIFIC-MODULE-DEF-REFS>
+						<VENDOR-SPECIFIC-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/MICROSAR/FvM</VENDOR-SPECIFIC-MODULE-DEF-REF>
+					</VENDOR-SPECIFIC-MODULE-DEF-REFS>
+				</BSW-IMPLEMENTATION>
+				<ECUC-MODULE-CONFIGURATION-VALUES UUID="2af03e1d-93e3-4f6d-a6eb-aafca96f2c04">
+					<SHORT-NAME>FvM_Pre</SHORT-NAME>
+					<DEFINITION-REF DEST="ECUC-MODULE-DEF">/MICROSAR/FvM</DEFINITION-REF>
+					<CONTAINERS/>
+				</ECUC-MODULE-CONFIGURATION-VALUES>
+				<ECUC-MODULE-CONFIGURATION-VALUES UUID="26c92149-0fe2-43af-bed8-bedd78965cfb">
+					<SHORT-NAME>FvM_Rec</SHORT-NAME>
+					<DEFINITION-REF DEST="ECUC-MODULE-DEF">/MICROSAR/FvM</DEFINITION-REF>
+					<CONTAINERS/>
+				</ECUC-MODULE-CONFIGURATION-VALUES>
+			</ELEMENTS>
+		</AR-PACKAGE>
+	</AR-PACKAGES>
+</AUTOSAR>

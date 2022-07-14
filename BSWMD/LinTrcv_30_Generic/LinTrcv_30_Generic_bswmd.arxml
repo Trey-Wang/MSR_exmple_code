@@ -1,0 +1,879 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+***********************************************************************************************************************
+COPYRIGHT
+===============================================================================
+Copyright (c) 2017 by Vector Informatik GmbH.                                       All rights reserved.
+
+    This software is copyright protected and proprietary to Vector Informatik GmbH.
+    Vector Informatik GmbH grants to you only those rights as set out in the license conditions.
+    All other rights remain with Vector Informatik GmbH.
+===============================================================================
+File:           LinTrcv_30_Generic_bswmd.arxml
+Module:         LinTrcv
+*********************************************************************************************************************** 
+-->
+<AUTOSAR xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-0-3.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://autosar.org/schema/r4.0">
+	<AR-PACKAGES>
+		<AR-PACKAGE UUID="0664971c-7999-4f45-b592-1ccc616f01f5">
+			<SHORT-NAME>MICROSAR</SHORT-NAME>
+			<AR-PACKAGES>
+				<AR-PACKAGE UUID="38e0dedc-b610-4e13-a0e7-d70990772458">
+					<SHORT-NAME>LinTrcv_30_Generic</SHORT-NAME>
+					<ELEMENTS>
+						<ECUC-MODULE-DEF UUID="c3a22865-6023-4e23-b39b-97ee9dfcaf0c">
+							<SHORT-NAME>LinTrcv</SHORT-NAME>
+							<DESC>
+								<L-2 L="EN">Configuration of LIN Transceiver Driver module</L-2>
+							</DESC>
+							<CATEGORY>VENDOR_SPECIFIC_MODULE_DEFINITION</CATEGORY>
+							<ADMIN-DATA>
+								<DOC-REVISIONS>
+									<DOC-REVISION>
+										<REVISION-LABEL>2.00.00</REVISION-LABEL>
+										<STATE>released</STATE>
+										<ISSUED-BY>viseta</ISSUED-BY>
+										<DATE>2013-04-02</DATE>
+										<MODIFICATIONS>
+											<MODIFICATION>
+												<CHANGE>
+													<L-2 L="EN">Initial version for ASR4.0.3 / Cfg5</L-2>
+												</CHANGE>
+											</MODIFICATION>
+										</MODIFICATIONS>
+									</DOC-REVISION>
+									<DOC-REVISION>
+										<REVISION-LABEL>2.01.00</REVISION-LABEL>
+										<STATE>released</STATE>
+										<ISSUED-BY>viseta</ISSUED-BY>
+										<DATE>2013-09-27T12:32:08+02:00</DATE>
+										<MODIFICATIONS>
+											<MODIFICATION>
+												<CHANGE>
+													<L-2 L="EN">HL Part was updated</L-2>
+												</CHANGE>
+											</MODIFICATION>
+										</MODIFICATIONS>
+									</DOC-REVISION>
+									<DOC-REVISION>
+										<REVISION-LABEL>2.02.00</REVISION-LABEL>
+										<STATE>released</STATE>
+										<ISSUED-BY>viseta</ISSUED-BY>
+										<DATE>2014-02-06T05:19:35+01:00</DATE>
+										<MODIFICATIONS>
+											<MODIFICATION>
+												<CHANGE>
+													<L-2 L="EN">HL Part was updated</L-2>
+												</CHANGE>
+											</MODIFICATION>
+										</MODIFICATIONS>
+									</DOC-REVISION>
+									<DOC-REVISION>
+										<REVISION-LABEL>3.00.00</REVISION-LABEL>
+										<STATE>released</STATE>
+										<ISSUED-BY>viseta</ISSUED-BY>
+										<DATE>2014-09-24T05:00:35+02:00</DATE>
+										<MODIFICATIONS>
+											<MODIFICATION>
+												<CHANGE>
+													<L-2 L="EN">ESCAN00078866</L-2>
+												</CHANGE>
+												<REASON>
+													<L-2 L="EN">AR4-698: Post-Build Selectable (Identity Manager)</L-2>
+												</REASON>
+											</MODIFICATION>
+										</MODIFICATIONS>
+									</DOC-REVISION>
+									<DOC-REVISION>
+										<REVISION-LABEL>4.00.00</REVISION-LABEL>
+										<STATE>released</STATE>
+										<ISSUED-BY>viseta</ISSUED-BY>
+										<DATE>2015-05-04T04:13:24+02:00</DATE>
+										<MODIFICATIONS>
+											<MODIFICATION>
+												<CHANGE>
+													<L-2 L="EN">HL Part was updated</L-2>
+												</CHANGE>
+											</MODIFICATION>
+										</MODIFICATIONS>
+									</DOC-REVISION>
+									<DOC-REVISION>
+										<REVISION-LABEL>5.00.00</REVISION-LABEL>
+										<STATE>released</STATE>
+										<ISSUED-BY>visneb</ISSUED-BY>
+										<DATE>2015-11-02</DATE>
+										<MODIFICATIONS>
+											<MODIFICATION>
+												<CHANGE>
+													<L-2 L="EN">HL Part was updated</L-2>
+												</CHANGE>
+												<REASON>
+													<L-2 L="EN">R14</L-2>
+												</REASON>
+											</MODIFICATION>
+										</MODIFICATIONS>
+									</DOC-REVISION>
+									<DOC-REVISION>
+										<REVISION-LABEL>5.01.00</REVISION-LABEL>
+										<STATE>released</STATE>
+										<ISSUED-BY>visneb</ISSUED-BY>
+										<DATE>2017-03-28T10:41:13+02:00</DATE>
+										<MODIFICATIONS>
+											<MODIFICATION>
+												<CHANGE>
+													<L-2 L="EN">HL Part was updated, ESCAN00094516</L-2>
+												</CHANGE>
+											</MODIFICATION>
+										</MODIFICATIONS>
+									</DOC-REVISION>
+								</DOC-REVISIONS>
+							</ADMIN-DATA>
+							<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+							<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+							<REFINED-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/AUTOSAR/EcucDefs/LinTrcv</REFINED-MODULE-DEF-REF>
+							<SUPPORTED-CONFIG-VARIANTS>
+								<SUPPORTED-CONFIG-VARIANT>VARIANT-PRE-COMPILE</SUPPORTED-CONFIG-VARIANT>
+								<SUPPORTED-CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</SUPPORTED-CONFIG-VARIANT>
+							</SUPPORTED-CONFIG-VARIANTS>
+							<CONTAINERS>
+								<!-- Container Definition: LinTrcvChannel -->
+								<ECUC-PARAM-CONF-CONTAINER-DEF UUID="f12e9b40-3a43-46f0-a648-f2513b5725fb">
+									<SHORT-NAME>LinTrcvChannel</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Container gives LIN transceiver driver information about a single LIN transceiver channel. Any LIN transceiver driver has such LIN transceiver channels.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:postBuildSelectableChangeable">false</SD>
+												<SD GID="DV:postBuildNotDeletable">false</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+									<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+									<MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+									<PARAMETERS>
+										<!-- PARAMETER DEFINITION: LinTrcvChannelId -->
+										<ECUC-INTEGER-PARAM-DEF UUID="f869aea1-df0e-49d8-b3a4-5e3ede7e1781">
+											<SHORT-NAME>LinTrcvChannelId</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Unique identifier of the LIN Transceiver Channel.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>0</DEFAULT-VALUE>
+											<MAX>255</MAX>
+											<MIN>0</MIN>
+										</ECUC-INTEGER-PARAM-DEF>
+										<!-- PARAMETER DEFINITION: LinTrcvChannelUsed -->
+										<ECUC-BOOLEAN-PARAM-DEF UUID="ca16f321-1b7b-4a0b-9017-70420de60567">
+											<SHORT-NAME>LinTrcvChannelUsed</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Shall the related LIN transceiver channel be used?</L-2>
+											</DESC>
+											<INTRODUCTION>
+												<P>
+													<L-1 L="EN">True: Is used
+                                        False Is not used</L-1>
+												</P>
+											</INTRODUCTION>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>true</DEFAULT-VALUE>
+										</ECUC-BOOLEAN-PARAM-DEF>
+										<!-- PARAMETER DEFINITION: LinTrcvInitState -->
+										<ECUC-ENUMERATION-PARAM-DEF UUID="45e29079-c418-4aad-a128-9e7c139ea26f">
+											<SHORT-NAME>LinTrcvInitState</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">State of LIN transceiver after call to LinTrcv_Init.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>LINTRCV_TRCV_MODE_NORMAL</DEFAULT-VALUE>
+											<LITERALS>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="a142bd6f-b92c-4200-a26b-af5c7c92214f">
+													<SHORT-NAME>LINTRCV_TRCV_MODE_NORMAL</SHORT-NAME>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="ebb15912-b5a2-4684-9a78-727530ba2fda">
+													<SHORT-NAME>LINTRCV_TRCV_MODE_SLEEP</SHORT-NAME>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="a83ba45b-d930-40e6-8438-caee37e95dcc">
+													<SHORT-NAME>LINTRCV_TRCV_MODE_STANDBY</SHORT-NAME>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+											</LITERALS>
+										</ECUC-ENUMERATION-PARAM-DEF>
+										<!-- PARAMETER DEFINITION: LinTrcvWakeupByBusUsed -->
+										<ECUC-BOOLEAN-PARAM-DEF UUID="bb418c75-a506-4d55-971c-9c69dbac9fee">
+											<SHORT-NAME>LinTrcvWakeupByBusUsed</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">If LIN transceiver hardware does not support wake up by bus value is always FALSE. If LIN transceiver hardware supports wake up by bus value is TRUE or FALSE depending whether it is used or not.</L-2>
+											</DESC>
+											<INTRODUCTION>
+												<P>
+													<L-1 L="EN">TRUE = Is used. 
+                                        FALSE = Is not used.</L-1>
+												</P>
+											</INTRODUCTION>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>false</DEFAULT-VALUE>
+										</ECUC-BOOLEAN-PARAM-DEF>
+										<ECUC-BOOLEAN-PARAM-DEF UUID="46af1c12-cfed-4462-86b2-b21935bf0901">
+											<SHORT-NAME>LinTrcvWakeupByPinUsed</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">If LIN transceiver hardware does not support wake up by pin value is always FALSE. If LIN transceiver hardware supports wake up by pin value is TRUE or FALSE depending whether it is used or not.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>false</DEFAULT-VALUE>
+										</ECUC-BOOLEAN-PARAM-DEF>
+									</PARAMETERS>
+									<REFERENCES>
+										<!-- Symbolic Name Reference Definition: LinTrcvIcuChannelRef -->
+										<ECUC-SYMBOLIC-NAME-REFERENCE-DEF UUID="3eda44a5-18d8-4deb-a6b8-a31758ed5b88">
+											<SHORT-NAME>LinTrcvIcuChannelRef</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Reference to the IcuChannel to enable/disable the interrupts for wakeups.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Icu/IcuConfigSet/IcuChannel</DESTINATION-REF>
+										</ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+										<!-- Symbolic Name Reference Definition: LinTrcvWakeupSourceRef -->
+										<ECUC-SYMBOLIC-NAME-REFERENCE-DEF UUID="babe0c2e-d5f8-4cd0-b7e9-3221ad4be120">
+											<SHORT-NAME>LinTrcvWakeupSourceRef</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Reference to a wakeup source in the EcuM configuration. This reference is only needed if LinTrcvWakeupByBusUsed is true. Implementation Type: reference to EcuM_WakeupSourceType.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuM/EcuMConfiguration/EcuMCommonConfiguration/EcuMWakeupSource</DESTINATION-REF>
+										</ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+									</REFERENCES>
+									<SUB-CONTAINERS>
+										<!-- Container Definition: LinTrcvAccess -->
+										<ECUC-CHOICE-CONTAINER-DEF UUID="0f16754f-61c8-4e14-97f4-ff7f26779a5d">
+											<SHORT-NAME>LinTrcvAccess</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Container gives LIN transceiver driver access about a single LIN transceiver channel.</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:CfgPostBuild">
+														<SD GID="DV:postBuildSelectableChangeable">false</SD>
+														<SD GID="DV:postBuildNotDeletable">false</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+											<CHOICES>
+												<!-- Container Definition: LinTrcvDioAccess -->
+												<ECUC-PARAM-CONF-CONTAINER-DEF UUID="63e53970-29f9-496f-aa43-b7907277c57f">
+													<SHORT-NAME>LinTrcvDioAccess</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Container gives LIN transceiver driver information about accessing ports and port pins. In addition relation between LIN transceiver hardware pin names and Dio port access information is given. If a LIN transceiver hardware has no Dio interface, there is no instance of this container.</L-2>
+													</DESC>
+													<ADMIN-DATA>
+														<SDGS>
+															<SDG GID="DV:CfgPostBuild">
+																<SD GID="DV:postBuildSelectableChangeable">false</SD>
+																<SD GID="DV:postBuildNotDeletable">false</SD>
+															</SDG>
+														</SDGS>
+													</ADMIN-DATA>
+													<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+													<MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+													<PARAMETERS>
+														<!-- PARAMETER DEFINITION: LinTrcvHardwareInterfaceName -->
+														<ECUC-STRING-PARAM-DEF UUID="8701ecf1-4891-4bd0-90cd-bf6fa3d83def">
+															<SHORT-NAME>LinTrcvHardwareInterfaceName</SHORT-NAME>
+															<DESC>
+																<L-2 L="EN">not used, LinTrcvHardwareInterfaceName moved to LinDioChannelAccess under LinTrcvDioAccess choice container.</L-2>
+															</DESC>
+															<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+															<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+															<IMPLEMENTATION-CONFIG-CLASSES>
+																<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+																</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															</IMPLEMENTATION-CONFIG-CLASSES>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+															<REQUIRES-INDEX>false</REQUIRES-INDEX>
+															<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+														</ECUC-STRING-PARAM-DEF>
+													</PARAMETERS>
+													<REFERENCES>
+														<!-- Choice Reference Definition: LinTrcvDioSymRefName -->
+														<ECUC-CHOICE-REFERENCE-DEF UUID="71a8871b-be1a-42de-87eb-6cdb0f794d7c">
+															<SHORT-NAME>LinTrcvDioSymRefName</SHORT-NAME>
+															<DESC>
+																<L-2 L="EN">not used, LinTrcvDioSymRefName moved to LinDioChannelAccess under LinTrcvDioAccess choice container.</L-2>
+															</DESC>
+															<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+															<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+															<IMPLEMENTATION-CONFIG-CLASSES>
+																<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+																</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															</IMPLEMENTATION-CONFIG-CLASSES>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+															<REQUIRES-INDEX>false</REQUIRES-INDEX>
+															<DESTINATION-REFS>
+																<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Dio/DioConfig/DioPort/DioChannel</DESTINATION-REF>
+																<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Dio/DioConfig/DioPort/DioChannelGroup</DESTINATION-REF>
+																<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Dio/DioConfig/DioPort</DESTINATION-REF>
+															</DESTINATION-REFS>
+														</ECUC-CHOICE-REFERENCE-DEF>
+													</REFERENCES>
+													<SUB-CONTAINERS>
+														<ECUC-PARAM-CONF-CONTAINER-DEF UUID="2dc1a7b3-f07e-406e-b00c-852ff940abf2">
+															<SHORT-NAME>LinTrcvDioChannelAccess</SHORT-NAME>
+															<DESC>
+																<L-2 L="EN">This container includes the DIO channel access by single LIN transceiver channel.</L-2>
+															</DESC>
+															<ADMIN-DATA>
+																<SDGS>
+																	<SDG GID="DV:CfgPostBuild">
+																		<SD GID="DV:postBuildSelectableChangeable">false</SD>
+																		<SD GID="DV:postBuildNotDeletable">false</SD>
+																	</SDG>
+																</SDGS>
+															</ADMIN-DATA>
+															<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+															<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+															<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+															<PARAMETERS>
+																<ECUC-STRING-PARAM-DEF UUID="3c9bdca5-a3ff-4fb3-a4c3-7663713d09ba">
+																	<SHORT-NAME>LinTrcvHardwareInterfaceName</SHORT-NAME>
+																	<DESC>
+																		<L-2 L="EN">LIN transceiver hardware interface name. It is typically the name of a pin. From a Dio point of view it is either a port, a single channel or a channel group. Depending on this fact either LINTRCV_DIO_PORT_SYMBOLIC_NAME or LINTRCV_DIO_CHANNEL_SYMBOLIC_NAME or LINTRCV_DIO_CHANNEL_GROUP_SYMBOLIC_NAME shall reference a Dio configuration. The LIN transceiver driver implementation description shall list up this name for the appropriate LIN transceiver hardware.</L-2>
+																	</DESC>
+																	<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+																	<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+																	<IMPLEMENTATION-CONFIG-CLASSES>
+																		<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																			<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																			<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+																		</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																		<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																			<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																			<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																		</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																	</IMPLEMENTATION-CONFIG-CLASSES>
+																	<ORIGIN>Vector Informatik</ORIGIN>
+																	<REQUIRES-INDEX>false</REQUIRES-INDEX>
+																	<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+																</ECUC-STRING-PARAM-DEF>
+															</PARAMETERS>
+															<REFERENCES>
+																<ECUC-CHOICE-REFERENCE-DEF UUID="20f26758-82e7-40b4-9759-c6c6a3d9e190">
+																	<SHORT-NAME>LinTrcvDioSymRefName</SHORT-NAME>
+																	<DESC>
+																		<L-2 L="EN">Choice Reference to a DIO Port, DIO Channel or DIO Channel Group. This reference replaces the LINTRCV_DIO_PORT_SYM_NAME, LINTRCV_DIO_CHANNEL_SYM_NAME and LINTRCV_DIO_GROUP_SYM_NAME references in the Lin Trcv SWS.</L-2>
+																	</DESC>
+																	<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+																	<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+																	<IMPLEMENTATION-CONFIG-CLASSES>
+																		<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																			<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																			<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+																		</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																		<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																			<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																			<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																		</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																	</IMPLEMENTATION-CONFIG-CLASSES>
+																	<ORIGIN>Vector Informatik</ORIGIN>
+																	<REQUIRES-INDEX>false</REQUIRES-INDEX>
+																	<DESTINATION-REFS>
+																		<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Dio/DioConfig/DioPort/DioChannel</DESTINATION-REF>
+																		<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Dio/DioConfig/DioPort/DioChannelGroup</DESTINATION-REF>
+																		<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Dio/DioConfig/DioPort</DESTINATION-REF>
+																	</DESTINATION-REFS>
+																</ECUC-CHOICE-REFERENCE-DEF>
+															</REFERENCES>
+														</ECUC-PARAM-CONF-CONTAINER-DEF>
+													</SUB-CONTAINERS>
+												</ECUC-PARAM-CONF-CONTAINER-DEF>
+												<!-- Container Definition: LinTrcvSpiSequence -->
+												<ECUC-PARAM-CONF-CONTAINER-DEF UUID="824a9919-057b-46db-a0c4-e728fdf7b252">
+													<SHORT-NAME>LinTrcvSpiSequence</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Container gives LIN transceiver driver information about one SPI sequence.</L-2>
+													</DESC>
+													<ADMIN-DATA>
+														<SDGS>
+															<SDG GID="DV:CfgPostBuild">
+																<SD GID="DV:postBuildSelectableChangeable">false</SD>
+																<SD GID="DV:postBuildNotDeletable">false</SD>
+															</SDG>
+														</SDGS>
+													</ADMIN-DATA>
+													<INTRODUCTION>
+														<P>
+															<L-1 L="EN">One SPI sequence used by LIN transceiver driver is in exclusive use for it. No other driver is allowed to access this sequence. LIN transceiver driver may use one sequence to access n LIN transceiver hardwares chips of the same type or n sequences are used to access one single LIN transceiver hardware chip.
+                                                If a LIN transceiver hardware has no SPI interface, there is no instance of this container.</L-1>
+														</P>
+													</INTRODUCTION>
+													<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+													<MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+													<REFERENCES>
+														<!-- Symbolic Name Reference Definition: LinTrcvSpiSequenceName -->
+														<ECUC-SYMBOLIC-NAME-REFERENCE-DEF UUID="27351494-00ae-4041-95f8-f3ab4138fd5a">
+															<SHORT-NAME>LinTrcvSpiSequenceName</SHORT-NAME>
+															<DESC>
+																<L-2 L="EN">Reference to a Spi sequence configuration container.</L-2>
+															</DESC>
+															<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+															<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+															<IMPLEMENTATION-CONFIG-CLASSES>
+																<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+																</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															</IMPLEMENTATION-CONFIG-CLASSES>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+															<REQUIRES-INDEX>false</REQUIRES-INDEX>
+															<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Spi/SpiDriver/SpiSequence</DESTINATION-REF>
+														</ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+													</REFERENCES>
+												</ECUC-PARAM-CONF-CONTAINER-DEF>
+												<ECUC-PARAM-CONF-CONTAINER-DEF UUID="778ce1f8-8ef5-4b8a-9a6b-7823f73c86b6">
+													<SHORT-NAME>LinTrcvSbcAccess</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Contains a reference to the underlying SBC channel. </L-2>
+													</DESC>
+													<ADMIN-DATA>
+														<SDGS>
+															<SDG GID="DV:CfgPostBuild">
+																<SD GID="DV:postBuildSelectableChangeable">false</SD>
+																<SD GID="DV:postBuildNotDeletable">false</SD>
+															</SDG>
+														</SDGS>
+													</ADMIN-DATA>
+													<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+													<REFERENCES>
+														<ECUC-CHOICE-REFERENCE-DEF UUID="eed7d5ec-4343-43ac-acc7-c68679e195c7">
+															<SHORT-NAME>LinTrcvSbcPeripheralIdRef</SHORT-NAME>
+															<DESC>
+																<L-2 L="EN">Reference to the SBC peripheral that is being used by this LinTrcv channel.</L-2>
+															</DESC>
+															<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+															<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+															<IMPLEMENTATION-CONFIG-CLASSES>
+																<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+																</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															</IMPLEMENTATION-CONFIG-CLASSES>
+															<ORIGIN>Vector Informatik</ORIGIN>
+															<REQUIRES-INDEX>false</REQUIRES-INDEX>
+															<DESTINATION-REFS>
+																<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Sbc_30_GenericAsr/Sbc/SbcDevice/SbcLinTrcvPeripheral</DESTINATION-REF>
+															</DESTINATION-REFS>
+														</ECUC-CHOICE-REFERENCE-DEF>
+													</REFERENCES>
+												</ECUC-PARAM-CONF-CONTAINER-DEF>
+											</CHOICES>
+										</ECUC-CHOICE-CONTAINER-DEF>
+									</SUB-CONTAINERS>
+								</ECUC-PARAM-CONF-CONTAINER-DEF>
+								<!-- Container Definition: LinTrcvGeneral -->
+								<ECUC-PARAM-CONF-CONTAINER-DEF UUID="5ee056b4-5abd-4b66-a335-5887c61486b3">
+									<SHORT-NAME>LinTrcvGeneral</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Container gives LIN transceiver driver basic information.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:postBuildSelectableChangeable">false</SD>
+												<SD GID="DV:postBuildNotDeletable">false</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+									<MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+									<PARAMETERS>
+										<!-- PARAMETER DEFINITION: LinTrcvDevErrorDetect -->
+										<ECUC-BOOLEAN-PARAM-DEF UUID="c33a5485-4b6e-48da-a812-a98752097a0b">
+											<SHORT-NAME>LinTrcvDevErrorDetect</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Switches development error detection and notification on and off. If switched on, #define LINTRCV_DEV_ERROR_DETECT ON shall be generated. If switched off, #define LINTRCV_DEV_ERROR_DETECT OFF shall be generated. Define shall be part of file LinTrcv_Cfg.h.</L-2>
+											</DESC>
+											<INTRODUCTION>
+												<P>
+													<L-1 L="EN">True: Is used
+                                        False: Is not used</L-1>
+												</P>
+											</INTRODUCTION>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>true</DEFAULT-VALUE>
+										</ECUC-BOOLEAN-PARAM-DEF>
+										<!-- PARAMETER DEFINITION: LinTrcvGetVersionInfo -->
+										<ECUC-BOOLEAN-PARAM-DEF UUID="c7a3c19b-4c5b-4f7e-b1a1-fa888a8a4e0d">
+											<SHORT-NAME>LinTrcvGetVersionInfo</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Switches version information API on and off. If switched off, function need not be present in compiled code.</L-2>
+											</DESC>
+											<INTRODUCTION>
+												<P>
+													<L-1 L="EN">True: Is used
+                                        False: Is not used</L-1>
+												</P>
+											</INTRODUCTION>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>false</DEFAULT-VALUE>
+										</ECUC-BOOLEAN-PARAM-DEF>
+										<!-- PARAMETER DEFINITION: LinTrcvIndex -->
+										<ECUC-INTEGER-PARAM-DEF UUID="2c6d8649-c092-4fe8-a346-ea540880091a">
+											<SHORT-NAME>LinTrcvIndex</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Specifies the InstanceId of this module instance. If only one instance is present it shall have the Id 0.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>0</DEFAULT-VALUE>
+											<MAX>255</MAX>
+											<MIN>0</MIN>
+										</ECUC-INTEGER-PARAM-DEF>
+										<!-- PARAMETER DEFINITION: LinTrcvWaitCount -->
+										<ECUC-INTEGER-PARAM-DEF UUID="fce7b05c-fc80-4a56-959c-8cb8a3a54e3c">
+											<SHORT-NAME>LinTrcvWaitCount</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Wait count for transceiver state changes.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>0</DEFAULT-VALUE>
+											<MAX>4294967295</MAX>
+											<MIN>0</MIN>
+										</ECUC-INTEGER-PARAM-DEF>
+										<!-- PARAMETER DEFINITION: LinTrcvWakeUpSupport -->
+										<ECUC-BOOLEAN-PARAM-DEF UUID="b380b244-8d32-4e25-a928-ca353e7a1539">
+											<SHORT-NAME>LinTrcvWakeUpSupport</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Informs whether wake up is supported or not. In case wake up is not supported by LIN transceiver hardware the setting shall be false. The wake up ability may be switched on or off for each channel of one LIN transceiver by LinTrcvWakeupSourceRef.</L-2>
+											</DESC>
+											<INTRODUCTION>
+												<P>
+													<L-1 L="EN">True: Is used
+                                        False: Is not used</L-1>
+												</P>
+											</INTRODUCTION>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>false</DEFAULT-VALUE>
+										</ECUC-BOOLEAN-PARAM-DEF>
+										<ECUC-STRING-PARAM-DEF UUID="3877d506-445d-4402-b18e-5fa746d39f30">
+											<SHORT-NAME>LinTrcvUserConfigFile</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Reference to an external text file that will be included during generation to LinTrcv_Cfg.h.
+The content of the user configuration file will be added at the end of the generated module configuration file and allows altering or extending the generated code.
+Caution: User configuration files can cause the software module to malfunction and must only be used with great care.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+										</ECUC-STRING-PARAM-DEF>
+										<ECUC-BOOLEAN-PARAM-DEF UUID="46d8c1b3-7f2b-4e99-8cf9-fe7aa8c58e47">
+											<SHORT-NAME>LinTrcvSafeBswChecks</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Selects if safety checks are used. These checks improve robustness as e.g. invalid parameters are checked before function is executed. This attribute has to be enabled for safety projects where this component is mapped to an ASIL partition.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+										</ECUC-BOOLEAN-PARAM-DEF>
+									</PARAMETERS>
+								</ECUC-PARAM-CONF-CONTAINER-DEF>
+							</CONTAINERS>
+						</ECUC-MODULE-DEF>
+						<BSW-IMPLEMENTATION UUID="7e79cf80-2a18-4dc1-9c4d-508305355bf9">
+							<SHORT-NAME>LinTrcv_Impl</SHORT-NAME>
+							<PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+							<SW-VERSION>5.01.00</SW-VERSION>
+							<USED-CODE-GENERATOR>DaVinci Configurator</USED-CODE-GENERATOR>
+							<VENDOR-ID>30</VENDOR-ID>
+							<AR-RELEASE-VERSION>4.00.03</AR-RELEASE-VERSION>
+							<BEHAVIOR-REF DEST="BSW-INTERNAL-BEHAVIOR">/MICROSAR/LinTrcv_GenericLin_ib_bswmd/BswModuleDescriptions/LinTrcv/LinTrcv_GenericLin_Behavior</BEHAVIOR-REF>
+							<PRECONFIGURED-CONFIGURATION-REFS>
+								<PRECONFIGURED-CONFIGURATION-REF DEST="ECUC-MODULE-CONFIGURATION-VALUES">/MICROSAR/LinTrcv_30_Generic/LinTrcv_Pre</PRECONFIGURED-CONFIGURATION-REF>
+							</PRECONFIGURED-CONFIGURATION-REFS>
+							<RECOMMENDED-CONFIGURATION-REFS>
+								<RECOMMENDED-CONFIGURATION-REF DEST="ECUC-MODULE-CONFIGURATION-VALUES">/MICROSAR/LinTrcv_30_Generic/LinTrcv_Rec</RECOMMENDED-CONFIGURATION-REF>
+							</RECOMMENDED-CONFIGURATION-REFS>
+							<VENDOR-API-INFIX>Generic</VENDOR-API-INFIX>
+							<VENDOR-SPECIFIC-MODULE-DEF-REFS>
+								<VENDOR-SPECIFIC-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/MICROSAR/LinTrcv_30_Generic/LinTrcv</VENDOR-SPECIFIC-MODULE-DEF-REF>
+							</VENDOR-SPECIFIC-MODULE-DEF-REFS>
+						</BSW-IMPLEMENTATION>
+						<ECUC-MODULE-CONFIGURATION-VALUES UUID="355cfbf1-afe2-484a-8d58-446ceca864ab">
+							<SHORT-NAME>LinTrcv_Pre</SHORT-NAME>
+							<ADMIN-DATA>
+								<SDGS>
+									<SDG GID="DV:ClassConfiguration">
+										<SD>/MICROSAR/LinTrcv_30_Generic/LinTrcv_Pre_Class1/LinTrcvChannel</SD>
+									</SDG>
+								</SDGS>
+							</ADMIN-DATA>
+							<DEFINITION-REF DEST="ECUC-MODULE-DEF">/MICROSAR/LinTrcv_30_Generic/LinTrcv</DEFINITION-REF>
+							<CONTAINERS>
+								<ECUC-CONTAINER-VALUE UUID="f6fd71b4-0311-48ed-be75-8397cb159532">
+									<SHORT-NAME>LinTrcvGeneral</SHORT-NAME>
+									<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/LinTrcv_30_Generic/LinTrcv/LinTrcvGeneral</DEFINITION-REF>
+									<PARAMETER-VALUES>
+										<ECUC-NUMERICAL-PARAM-VALUE>
+											<DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/LinTrcv_30_Generic/LinTrcv/LinTrcvGeneral/LinTrcvSafeBswChecks</DEFINITION-REF>
+											<VALUE>0</VALUE>
+										</ECUC-NUMERICAL-PARAM-VALUE>
+									</PARAMETER-VALUES>
+								</ECUC-CONTAINER-VALUE>
+							</CONTAINERS>
+						</ECUC-MODULE-CONFIGURATION-VALUES>
+						<ECUC-MODULE-CONFIGURATION-VALUES UUID="00052a24-11da-450a-afc3-66166862ba3f">
+							<SHORT-NAME>LinTrcv_Rec</SHORT-NAME>
+							<DEFINITION-REF DEST="ECUC-MODULE-DEF">/MICROSAR/LinTrcv_30_Generic/LinTrcv</DEFINITION-REF>
+							<CONTAINERS></CONTAINERS>
+						</ECUC-MODULE-CONFIGURATION-VALUES>
+						<ECUC-MODULE-CONFIGURATION-VALUES UUID="f1f26d43-d871-401a-94ad-4c3f84d87af1">
+							<SHORT-NAME>LinTrcv_Pre_Class1</SHORT-NAME>
+							<DEFINITION-REF DEST="ECUC-MODULE-DEF">/MICROSAR/LinTrcv_30_Generic/LinTrcv</DEFINITION-REF>
+							<CONTAINERS>
+								<ECUC-CONTAINER-VALUE UUID="caa77d39-81b5-4b68-967a-2c3ffb968847">
+									<SHORT-NAME>LinTrcvChannel</SHORT-NAME>
+									<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/LinTrcv_30_Generic/LinTrcv/LinTrcvChannel</DEFINITION-REF>
+									<SUB-CONTAINERS>
+										<ECUC-CONTAINER-VALUE UUID="1e27b097-f8e8-4df8-9cf0-2cd536805aa4">
+											<SHORT-NAME>LinTrcvAccess</SHORT-NAME>
+											<DEFINITION-REF DEST="ECUC-CHOICE-CONTAINER-DEF">/MICROSAR/LinTrcv_30_Generic/LinTrcv/LinTrcvChannel/LinTrcvAccess</DEFINITION-REF>
+											<SUB-CONTAINERS>
+												<ECUC-CONTAINER-VALUE UUID="b7134905-feaf-40be-8041-3e3dbdb0da6e">
+													<SHORT-NAME>LinTrcvDioAccess</SHORT-NAME>
+													<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/LinTrcv_30_Generic/LinTrcv/LinTrcvChannel/LinTrcvAccess/LinTrcvDioAccess</DEFINITION-REF>
+												</ECUC-CONTAINER-VALUE>
+											</SUB-CONTAINERS>
+										</ECUC-CONTAINER-VALUE>
+									</SUB-CONTAINERS>
+								</ECUC-CONTAINER-VALUE>
+							</CONTAINERS>
+						</ECUC-MODULE-CONFIGURATION-VALUES>
+					</ELEMENTS>
+				</AR-PACKAGE>
+			</AR-PACKAGES>
+		</AR-PACKAGE>
+	</AR-PACKAGES>
+</AUTOSAR>

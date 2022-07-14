@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!--
+This file has been created by the Vector Legacy Database Converter Version 1.7.1.0
+Copyright © Vector Informatik GmbH 2014
+License cannot be found!
+The created file must only be used with Vectors MICROSAR Basic Software. Please contact Vector Informatik to obtain a license.
+-->
+<AUTOSAR xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-1-2.xsd" xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<AR-PACKAGES>
+		<AR-PACKAGE>
+			<SHORT-NAME>SWC</SHORT-NAME>
+		</AR-PACKAGE>
+		<AR-PACKAGE>
+			<SHORT-NAME>DataType</SHORT-NAME>
+		</AR-PACKAGE>
+	</AR-PACKAGES>
+</AUTOSAR>

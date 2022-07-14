@@ -1,0 +1,677 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-2-1.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://autosar.org/schema/r4.0">
+	<AR-PACKAGES>
+		<AR-PACKAGE UUID="76b2439a-86f6-4235-aec8-b34723d4d490">
+			<SHORT-NAME>MICROSAR</SHORT-NAME>
+			<ELEMENTS>
+				<ECUC-MODULE-DEF UUID="a9c0b99f-5230-48a5-95a2-d9926dd2485b">
+					<SHORT-NAME>ComXf</SHORT-NAME>
+					<DESC>
+						<L-2 L="EN">Configuration of the ComXf module.</L-2>
+					</DESC>
+					<CATEGORY>VENDOR_SPECIFIC_MODULE_DEFINITION</CATEGORY>
+					<ADMIN-DATA>
+						<DOC-REVISIONS>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.00.00</REVISION-LABEL>
+								<ISSUED-BY>visrco</ISSUED-BY>
+								<DATE>2015-04-21</DATE>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.00.01</REVISION-LABEL>
+								<ISSUED-BY>visrco</ISSUED-BY>
+								<DATE>2015-09-01T09:37:52+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Support platform settings in VTT DualTarget-UseCase</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.01.00</REVISION-LABEL>
+								<ISSUED-BY>vissi</ISSUED-BY>
+								<DATE>2015-09-14T16:51:00+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Disabled postbuild and linktime support in the BSWMD file</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.02.00</REVISION-LABEL>
+								<ISSUED-BY>visrco</ISSUED-BY>
+								<DATE>2016-02-26T01:38:29+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Increased version</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.03.00</REVISION-LABEL>
+								<ISSUED-BY>vissi</ISSUED-BY>
+								<DATE>2016-04-20T02:51:37+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Increased version</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.04.00</REVISION-LABEL>
+								<ISSUED-BY>vissi</ISSUED-BY>
+								<DATE>2016-06-20T08:18:58+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Increased version</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.04.01</REVISION-LABEL>
+								<ISSUED-BY>vissi</ISSUED-BY>
+								<DATE>2016-10-21T09:39:50+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Increased version</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.05.00</REVISION-LABEL>
+								<ISSUED-BY>visso</ISSUED-BY>
+								<DATE>2016-10-21T10:25:55+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Increased version</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.05.01</REVISION-LABEL>
+								<ISSUED-BY>vissi</ISSUED-BY>
+								<DATE>2017-01-20T08:50:00+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Increased version</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.06.00</REVISION-LABEL>
+								<ISSUED-BY>vissi</ISSUED-BY>
+								<DATE>2017-01-20T09:30:00+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Increased version</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.07.00</REVISION-LABEL>
+								<ISSUED-BY>vissi</ISSUED-BY>
+								<DATE>2017-05-19T09:00:00+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Increased version</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.08.00</REVISION-LABEL>
+								<ISSUED-BY>vissi</ISSUED-BY>
+								<DATE>2017-06-30T09:00:00+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Increased version</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+						</DOC-REVISIONS>
+					</ADMIN-DATA>
+					<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+					<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+					<UPPER-MULTIPLICITY-INFINITE>false</UPPER-MULTIPLICITY-INFINITE>
+					<POST-BUILD-VARIANT-SUPPORT>false</POST-BUILD-VARIANT-SUPPORT>
+					<REFINED-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/AUTOSAR/EcucDefs/Xfrm</REFINED-MODULE-DEF-REF>
+					<SUPPORTED-CONFIG-VARIANTS>
+						<SUPPORTED-CONFIG-VARIANT>VARIANT-PRE-COMPILE</SUPPORTED-CONFIG-VARIANT>
+					</SUPPORTED-CONFIG-VARIANTS>
+					<CONTAINERS>
+						<!-- Container Definition: XfrmGeneral -->
+						<ECUC-PARAM-CONF-CONTAINER-DEF UUID="d4954f92-e60a-4c65-b03e-34368e89e2ac">
+							<SHORT-NAME>XfrmGeneral</SHORT-NAME>
+							<DESC>
+								<L-2 L="EN">Contains the general configuration parameters of the module.</L-2>
+							</DESC>
+							<ADMIN-DATA>
+								<SDGS>
+									<SDG GID="DV:CfgPostBuild">
+										<SD GID="DV:postBuildSelectableChangeable">false</SD>
+										<SD GID="DV:postBuildNotDeletable">true</SD>
+									</SDG>
+								</SDGS>
+							</ADMIN-DATA>
+							<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+							<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+							<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+							<REQUIRES-INDEX>false</REQUIRES-INDEX>
+							<PARAMETERS>
+								<!-- PARAMETER DEFINITION: XfrmDevErrorDetect -->
+								<ECUC-BOOLEAN-PARAM-DEF UUID="77fb0db0-a11a-4b6d-8ad3-ed3bbc4ed62c">
+									<SHORT-NAME>XfrmDevErrorDetect</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Switches the Development Error Detection and Notification ON or OFF.</L-2>
+									</DESC>
+									<INTRODUCTION>
+										<P>
+											<L-1 L="EN">true: Enabled
+                                        false: Disabled</L-1>
+										</P>
+									</INTRODUCTION>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<SCOPE>LOCAL</SCOPE>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<VALUE-CONFIG-CLASSES>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+									</VALUE-CONFIG-CLASSES>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>true</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: XfrmVersionInfoApi -->
+								<ECUC-BOOLEAN-PARAM-DEF UUID="1c7abd90-5a32-408d-b7ab-e3f66ed73ea6">
+									<SHORT-NAME>XfrmVersionInfoApi</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Activate/Deactivate the version information API.</L-2>
+									</DESC>
+									<INTRODUCTION>
+										<P>
+											<L-1 L="EN">True: version information API activated
+                                        False: version information API deactivated</L-1>
+										</P>
+									</INTRODUCTION>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<SCOPE>LOCAL</SCOPE>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<VALUE-CONFIG-CLASSES>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+									</VALUE-CONFIG-CLASSES>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+							</PARAMETERS>
+						</ECUC-PARAM-CONF-CONTAINER-DEF>
+						<!-- Container Definition: XfrmImplementationMapping -->
+						<ECUC-PARAM-CONF-CONTAINER-DEF UUID="23de1a46-48bf-4af1-86d2-0f2f64faebe9">
+							<SHORT-NAME>XfrmImplementationMapping</SHORT-NAME>
+							<DESC>
+								<L-2 L="EN">For each transformer (TransformationTechnology) in a transformer chain (DataTransformation) which is applied to an ISignal it is necessary to specify the BswModuleEntry which implements it. This is the container to hold these mappings.</L-2>
+							</DESC>
+							<ADMIN-DATA>
+								<SDGS>
+									<SDG GID="DV:CfgPostBuild">
+										<SD GID="DV:postBuildSelectableChangeable">false</SD>
+										<SD GID="DV:postBuildNotDeletable">false</SD>
+									</SDG>
+								</SDGS>
+							</ADMIN-DATA>
+							<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+							<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+							<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+							<REQUIRES-INDEX>false</REQUIRES-INDEX>
+							<REFERENCES>
+								<!-- Foreign Reference Definition: XfmTransformationBswModuleEntryRef -->
+								<ECUC-FOREIGN-REFERENCE-DEF UUID="64f017b8-25a0-4348-a9db-65e5c65addf4">
+									<SHORT-NAME>XfrmTransformerBswModuleEntryRef</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Reference to the BswModuleEntry which implements the referenced transformer on the sending/calling side.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<SCOPE>LOCAL</SCOPE>
+									<MULTIPLICITY-CONFIG-CLASSES>
+										<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+										</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+										<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+										</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+										<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+									</MULTIPLICITY-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<VALUE-CONFIG-CLASSES>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+									</VALUE-CONFIG-CLASSES>
+									<DESTINATION-TYPE>BSW-MODULE-ENTRY</DESTINATION-TYPE>
+								</ECUC-FOREIGN-REFERENCE-DEF>
+								<!-- Foreign Reference Definition: XfrmInvTransformerBswModuleEntryRef -->
+								<ECUC-FOREIGN-REFERENCE-DEF UUID="f9141ee4-78f7-4468-9b43-f7808d4d46c5">
+									<SHORT-NAME>XfrmInvTransformerBswModuleEntryRef</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Reference to the BswModuleEntry which implements the referenced inverse transformer on the receiving/called side.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<SCOPE>LOCAL</SCOPE>
+									<MULTIPLICITY-CONFIG-CLASSES>
+										<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+										</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+										<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+										</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+										<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+									</MULTIPLICITY-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<VALUE-CONFIG-CLASSES>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+									</VALUE-CONFIG-CLASSES>
+									<DESTINATION-TYPE>BSW-MODULE-ENTRY</DESTINATION-TYPE>
+								</ECUC-FOREIGN-REFERENCE-DEF>
+								<!-- Foreign Reference Definition: XfrmTransformationTechnologyRef -->
+								<ECUC-FOREIGN-REFERENCE-DEF UUID="a336c548-af5e-4b9e-a12b-0bced84e1214">
+									<SHORT-NAME>XfrmTransformationTechnologyRef</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Reference to the TransformationTechnology in the DataTransformation of the system description for which the implementation (BswModuleEntry) shall be mapped.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<SCOPE>LOCAL</SCOPE>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<VALUE-CONFIG-CLASSES>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+									</VALUE-CONFIG-CLASSES>
+									<DESTINATION-TYPE>TRANSFORMATION-TECHNOLOGY</DESTINATION-TYPE>
+								</ECUC-FOREIGN-REFERENCE-DEF>
+								<!-- Instance Reference Definition: XfrmVariableDataPrototypeInstanceRef -->
+								<ECUC-INSTANCE-REFERENCE-DEF UUID="d48f1d2b-1965-4422-b40c-8f5832694ed4">
+									<SHORT-NAME>XfrmVariableDataPrototypeInstanceRef</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Instance Reference to a VariableDataPrototype in case a dedicated transformer BswModuleEntry is required per VariableDataPrototype access.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<SCOPE>LOCAL</SCOPE>
+									<MULTIPLICITY-CONFIG-CLASSES>
+										<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+										</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+										<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+										</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+										<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+									</MULTIPLICITY-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<VALUE-CONFIG-CLASSES>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+									</VALUE-CONFIG-CLASSES>
+									<DESTINATION-CONTEXT>SW-COMPONENT-PROTOTYPE PORT-PROTOTYPE</DESTINATION-CONTEXT>
+									<DESTINATION-TYPE>VARIABLE-DATA-PROTOTYPE</DESTINATION-TYPE>
+								</ECUC-INSTANCE-REFERENCE-DEF>
+							</REFERENCES>
+							<SUB-CONTAINERS>
+								<!-- Container Definition: XfrmDemEventParameterRefs -->
+								<ECUC-PARAM-CONF-CONTAINER-DEF UUID="5de8467f-8bcb-4833-b232-d97f2f01e298">
+									<SHORT-NAME>XfrmDemEventParameterRefs</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Container for the references to DemEventParameter elements which shall be invoked using the API Dem_ReportErrorStatus API in case the corresponding error occurs. The EventId is taken from the referenced DemEventParameter's DemEventId value. The standardized errors are provided in the container and can be extended by vendor specific error references.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:postBuildSelectableChangeable">false</SD>
+												<SD GID="DV:postBuildNotDeletable">false</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<REFERENCES>
+										<!-- Symbolic Name Reference Definition: XFRM_E_MALFORMED_MESSAGE -->
+										<ECUC-SYMBOLIC-NAME-REFERENCE-DEF UUID="b25688d9-98cc-4776-8a3e-06c03f06e8b4">
+											<SHORT-NAME>XFRM_E_MALFORMED_MESSAGE</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Reference to configured DEM event to report if malformed messages were received by the transformer.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<MULTIPLICITY-CONFIG-CLASSES>
+												<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+												</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+												<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+												<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											</MULTIPLICITY-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<VALUE-CONFIG-CLASSES>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+											</VALUE-CONFIG-CLASSES>
+											<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Dem/DemConfigSet/DemEventParameter</DESTINATION-REF>
+										</ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+									</REFERENCES>
+								</ECUC-PARAM-CONF-CONTAINER-DEF>
+								<!-- Container Definition: XfrmSignal -->
+								<ECUC-PARAM-CONF-CONTAINER-DEF UUID="ed5f7c72-65e2-483d-9a37-c31ce24e6d62">
+									<SHORT-NAME>XfrmSignal</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Reference to the signal in the system description that transports the transformed data.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:postBuildSelectableChangeable">false</SD>
+												<SD GID="DV:postBuildNotDeletable">true</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SUB-CONTAINERS>
+										<!-- Container Definition: XfrmSignalChoice -->
+										<ECUC-CHOICE-CONTAINER-DEF UUID="9b7b40ef-f450-4ffb-a4d5-317d91db63b4">
+											<SHORT-NAME>XfrmSignalChoice</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Choice whether an ISignal or an ISignalGroup shall be referenced.</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:CfgPostBuild">
+														<SD GID="DV:postBuildSelectableChangeable">false</SD>
+														<SD GID="DV:postBuildNotDeletable">true</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<CHOICES>
+												<!-- Container Definition: XfrmISignalGroupRefChoice -->
+												<ECUC-PARAM-CONF-CONTAINER-DEF UUID="91f284ad-bed8-4ad5-9672-f4a3d72b5a7a">
+													<SHORT-NAME>XfrmISignalGroupRefChoice</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Reference to the ISignalGroup in the system description that transports the transformed data.</L-2>
+													</DESC>
+													<ADMIN-DATA>
+														<SDGS>
+															<SDG GID="DV:CfgPostBuild">
+																<SD GID="DV:postBuildSelectableChangeable">false</SD>
+																<SD GID="DV:postBuildNotDeletable">false</SD>
+															</SDG>
+														</SDGS>
+													</ADMIN-DATA>
+													<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<REFERENCES>
+														<!-- Foreign Reference Definition: XfrmISignalGroupRef -->
+														<ECUC-FOREIGN-REFERENCE-DEF UUID="8b251536-d238-4f7e-8f47-764cc1e62c0c">
+															<SHORT-NAME>XfrmISignalGroupRef</SHORT-NAME>
+															<DESC>
+																<L-2 L="EN">Reference to the ISignalGroup in the system description that transports the transformed data.</L-2>
+															</DESC>
+															<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+															<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+															<SCOPE>LOCAL</SCOPE>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+															<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+															<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+															<REQUIRES-INDEX>false</REQUIRES-INDEX>
+															<VALUE-CONFIG-CLASSES>
+																<ECUC-VALUE-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+																</ECUC-VALUE-CONFIGURATION-CLASS>
+																<ECUC-VALUE-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+																</ECUC-VALUE-CONFIGURATION-CLASS>
+																<ECUC-VALUE-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																</ECUC-VALUE-CONFIGURATION-CLASS>
+															</VALUE-CONFIG-CLASSES>
+															<DESTINATION-TYPE>I-SIGNAL-GROUP</DESTINATION-TYPE>
+														</ECUC-FOREIGN-REFERENCE-DEF>
+													</REFERENCES>
+												</ECUC-PARAM-CONF-CONTAINER-DEF>
+												<!-- Container Definition: XfrmISignalRefChoice -->
+												<ECUC-PARAM-CONF-CONTAINER-DEF UUID="9dff4fa3-3aaf-464e-b232-bc439a8c5dc0">
+													<SHORT-NAME>XfrmISignalRefChoice</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Reference to the ISignal in the system description that transports the transformed data.</L-2>
+													</DESC>
+													<ADMIN-DATA>
+														<SDGS>
+															<SDG GID="DV:CfgPostBuild">
+																<SD GID="DV:postBuildSelectableChangeable">false</SD>
+																<SD GID="DV:postBuildNotDeletable">false</SD>
+															</SDG>
+														</SDGS>
+													</ADMIN-DATA>
+													<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<REFERENCES>
+														<!-- Foreign Reference Definition: XfrmISignalRef -->
+														<ECUC-FOREIGN-REFERENCE-DEF UUID="040c3653-f8ac-4959-badb-4d20a3382db5">
+															<SHORT-NAME>XfrmISignalRef</SHORT-NAME>
+															<DESC>
+																<L-2 L="EN">Reference to the ISignal in the system description that transports the transformed data.</L-2>
+															</DESC>
+															<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+															<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+															<SCOPE>LOCAL</SCOPE>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+															<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+															<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+															<REQUIRES-INDEX>false</REQUIRES-INDEX>
+															<VALUE-CONFIG-CLASSES>
+																<ECUC-VALUE-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+																</ECUC-VALUE-CONFIGURATION-CLASS>
+																<ECUC-VALUE-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+																</ECUC-VALUE-CONFIGURATION-CLASS>
+																<ECUC-VALUE-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																</ECUC-VALUE-CONFIGURATION-CLASS>
+															</VALUE-CONFIG-CLASSES>
+															<DESTINATION-TYPE>I-SIGNAL</DESTINATION-TYPE>
+														</ECUC-FOREIGN-REFERENCE-DEF>
+													</REFERENCES>
+												</ECUC-PARAM-CONF-CONTAINER-DEF>
+											</CHOICES>
+										</ECUC-CHOICE-CONTAINER-DEF>
+									</SUB-CONTAINERS>
+								</ECUC-PARAM-CONF-CONTAINER-DEF>
+							</SUB-CONTAINERS>
+						</ECUC-PARAM-CONF-CONTAINER-DEF>
+					</CONTAINERS>
+				</ECUC-MODULE-DEF>
+				<BSW-IMPLEMENTATION UUID="6d23f47c-6dc8-41b6-8e7f-4674f528d52e">
+					<SHORT-NAME>ComXf_Impl</SHORT-NAME>
+					<PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+					<SW-VERSION>1.08.00</SW-VERSION>
+					<USED-CODE-GENERATOR>DaVinci Configurator</USED-CODE-GENERATOR>
+					<VENDOR-ID>30</VENDOR-ID>
+					<AR-RELEASE-VERSION>4.02.02</AR-RELEASE-VERSION>
+					<BEHAVIOR-REF DEST="BSW-INTERNAL-BEHAVIOR">/MICROSAR/ComXf_ib_bswmd/BswModuleDescriptions/ComXf/ComXfBehavior</BEHAVIOR-REF>
+					<PRECONFIGURED-CONFIGURATION-REFS>
+						<PRECONFIGURED-CONFIGURATION-REF DEST="ECUC-MODULE-CONFIGURATION-VALUES">/MICROSAR/ComXf_Pre</PRECONFIGURED-CONFIGURATION-REF>
+					</PRECONFIGURED-CONFIGURATION-REFS>
+					<RECOMMENDED-CONFIGURATION-REFS>
+						<RECOMMENDED-CONFIGURATION-REF DEST="ECUC-MODULE-CONFIGURATION-VALUES">/MICROSAR/ComXf_Rec</RECOMMENDED-CONFIGURATION-REF>
+					</RECOMMENDED-CONFIGURATION-REFS>
+					<VENDOR-SPECIFIC-MODULE-DEF-REFS>
+						<VENDOR-SPECIFIC-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/MICROSAR/ComXf</VENDOR-SPECIFIC-MODULE-DEF-REF>
+					</VENDOR-SPECIFIC-MODULE-DEF-REFS>
+				</BSW-IMPLEMENTATION>
+				<ECUC-MODULE-CONFIGURATION-VALUES UUID="dd961108-3b71-4ad4-9aea-f130af9020fa">
+					<SHORT-NAME>ComXf_Pre</SHORT-NAME>
+					<DEFINITION-REF DEST="ECUC-MODULE-DEF">/MICROSAR/ComXf</DEFINITION-REF>
+					<CONTAINERS></CONTAINERS>
+				</ECUC-MODULE-CONFIGURATION-VALUES>
+				<ECUC-MODULE-CONFIGURATION-VALUES UUID="86c092cf-acbc-4045-9b1c-53af34cece99">
+					<SHORT-NAME>ComXf_Rec</SHORT-NAME>
+					<DEFINITION-REF DEST="ECUC-MODULE-DEF">/MICROSAR/ComXf</DEFINITION-REF>
+					<CONTAINERS></CONTAINERS>
+				</ECUC-MODULE-CONFIGURATION-VALUES>
+			</ELEMENTS>
+		</AR-PACKAGE>
+	</AR-PACKAGES>
+</AUTOSAR>

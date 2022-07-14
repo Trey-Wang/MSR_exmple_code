@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MakeParameters xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <VersionInfo MajorVer="3" MinorVer="0" BuildVer="135" PrivateVer="0">
+    <ProcessName>VTT.exe</ProcessName>
+  </VersionInfo>
+  <Timestamp>2020-07-09T10:07:42.9613386+09:00</Timestamp>
+  <GlobalMakeStepList>
+    <MakeStep FullName="Vector.VTT.Generator.GenerateVsProject" HashCode="9c4091aa99515821cd4bc40a8ddef511" Duration="10682">2020-07-09T10:07:41.8931704+09:00</MakeStep>
+  </GlobalMakeStepList>
+  <EcuInfoList>
+    <EcuInfo>
+      <EcuName>MyECU</EcuName>
+      <MakeStepList>
+        <MakeStep FullName="Vector.VTT.Generator.GenerateRteHooks" HashCode="0fd212ec11942ce27b5238729ff38714" Duration="8019">2020-07-09T10:07:31.0942399+09:00</MakeStep>
+      </MakeStepList>
+    </EcuInfo>
+  </EcuInfoList>
+</MakeParameters>

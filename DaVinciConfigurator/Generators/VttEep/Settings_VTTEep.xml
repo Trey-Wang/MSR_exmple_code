@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?> 
+<!-- ***********************************************************************************************************************
+*  COPYRIGHT
+*  ********************************************************************************************************************
+*  Copyright (c) 2011 by Vector Informatik GmbH.                                              All rights reserved.
+*
+*                This software is copyright protected and proprietary to Vector Informatik GmbH.
+*                Vector Informatik GmbH grants to you only those rights as set out in the license conditions.
+*                All other rights remain with Vector Informatik GmbH.
+*
+***********************************************************************************************************************
+
+
+***********************************************************************************************************************
+*  FILE DESCRIPTION
+*  ********************************************************************************************************************
+*         File:  Settings_Eep.xml
+*    Component:  DrvEep_VttCanoe01Asr
+*       Module:  VTTEep
+*
+*   Description: -
+***********************************************************************************************************************
+
+**********************************************************************************************************************
+*  AUTHOR IDENTITY
+*  *******************************************************************************************************************
+*  Name                          Initials      Company
+*  *******************************************************************************************************************
+*  Leder Christian               virchl        Vector Informatik
+*  *******************************************************************************************************************
+*  REVISION HISTORY
+*  *******************************************************************************************************************
+*  Version   Date        Author  Change Id     Description
+*  *******************************************************************************************************************
+*  01.00.00  2014-03-24  virchl                Initial version of this file
+**********************************************************************************************************************
+
+  --> 
+<Settings>
+	
+	<!--  internal behaviour  --> 
+	<Settings Name="com.vector.cfg.model.services.bswintbehavior.synchronization.Settings">
+		<Settings Name="ModuleList">
+			<Settings Name="DrvEep_VttCanoe01Asr">
+				<XmlSetting Name="Xml">
+					  <Synchronization>
+						<BswImplementationName>/MICROSAR/Eep_Impl</BswImplementationName>
+						<ModuleName>Eep</ModuleName>
+						<ExclusiveAreas>
+						</ExclusiveAreas>
+						<TimingEvents>
+						  <Event entityName="Eep_MainFunction">
+							<DefRef package="/MICROSAR" moduleDefRef="Eep/EepInitConfiguration/EepJobCallCycle" />
+						  </Event>
+						</TimingEvents>
+					  </Synchronization>
+				</XmlSetting>
+			</Settings>
+		</Settings>
+	</Settings>
+</Settings>
+

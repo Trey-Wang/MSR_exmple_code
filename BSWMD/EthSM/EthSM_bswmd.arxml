@@ -1,0 +1,629 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-0-3.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://autosar.org/schema/r4.0">
+	<AR-PACKAGES>
+		<AR-PACKAGE UUID="39958cfa-554f-487a-8ffe-b609bbb7a67b">
+			<SHORT-NAME>MICROSAR</SHORT-NAME>
+			<ELEMENTS>
+				<ECUC-MODULE-DEF UUID="e1914d66-8fd8-4792-9f2b-5874cb6e9996">
+					<SHORT-NAME>EthSM</SHORT-NAME>
+					<DESC>
+						<L-2 L="EN">Configuration of the Ethernet State Manager</L-2>
+					</DESC>
+					<CATEGORY>VENDOR_SPECIFIC_MODULE_DEFINITION</CATEGORY>
+					<ADMIN-DATA>
+						<DOC-REVISIONS>
+							<DOC-REVISION>
+								<REVISION-LABEL>3.00.00</REVISION-LABEL>
+								<ISSUED-BY>vismha</ISSUED-BY>
+								<DATE>2012-08-01</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">inital creation of ASR 4.1.1 BSWMD with 4.0.3 schema</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>3.00.00</REVISION-LABEL>
+								<STATE>beta</STATE>
+								<ISSUED-BY>vismha</ISSUED-BY>
+								<DATE>2013-10-22T01:41:29+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Improve BSWMD Description Text</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00070248</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>3.00.01</REVISION-LABEL>
+								<ISSUED-BY>vismha</ISSUED-BY>
+								<DATE>2014-07-10T11:21:30+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Implementation update</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>3.01.00</REVISION-LABEL>
+								<ISSUED-BY>vismha</ISSUED-BY>
+								<DATE>2014-07-15T09:56:17+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Implementation update</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>3.01.01</REVISION-LABEL>
+								<ISSUED-BY>vismha</ISSUED-BY>
+								<DATE>2015-04-29T07:56:52+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">EthSM: Parameter EthSMMainFunctionPeriod does not define a base unit</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00082021</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>3.01.02</REVISION-LABEL>
+								<ISSUED-BY>vismha</ISSUED-BY>
+								<DATE>2015-11-06T04:34:52+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Impl update</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>3.01.03</REVISION-LABEL>
+								<ISSUED-BY>vismno</ISSUED-BY>
+								<DATE>2016-11-28T01:27:02+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Implementation update</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00092052, ESCAN00089264, ESCAN00093042</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+						</DOC-REVISIONS>
+					</ADMIN-DATA>
+					<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+					<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+					<REFINED-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/AUTOSAR/EcucDefs/EthSM</REFINED-MODULE-DEF-REF>
+					<SUPPORTED-CONFIG-VARIANTS>
+						<SUPPORTED-CONFIG-VARIANT>VARIANT-PRE-COMPILE</SUPPORTED-CONFIG-VARIANT>
+					</SUPPORTED-CONFIG-VARIANTS>
+					<CONTAINERS>
+						<!-- Container Definition: EthSMGeneral -->
+						<ECUC-PARAM-CONF-CONTAINER-DEF UUID="56e0feab-1aa5-46bc-9b5c-2a1630cd8b17">
+							<SHORT-NAME>EthSMGeneral</SHORT-NAME>
+							<DESC>
+								<L-2 L="EN">General configuration parameters of the EthSM.</L-2>
+							</DESC>
+							<ADMIN-DATA>
+								<SDGS>
+									<SDG GID="DV:CfgPostBuild">
+										<SD GID="DV:postBuildSelectableChangeable">false</SD>
+										<SD GID="DV:postBuildNotDeletable">false</SD>
+									</SDG>
+								</SDGS>
+							</ADMIN-DATA>
+							<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+							<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+							<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+							<MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+							<PARAMETERS>
+								<!-- PARAMETER DEFINITION: EthSMDevErrorDetect -->
+								<ECUC-BOOLEAN-PARAM-DEF UUID="f4b1bff6-5def-4f5a-b43e-2e76116de758">
+									<SHORT-NAME>EthSMDevErrorDetect</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Enable Development Error Detection</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter switches the Development Error Detection and Notification ON or OFF.
+
+true:   Development error detection is enabled.
+false:  Development error detection is disabled.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: EthSMDummyMode -->
+								<ECUC-BOOLEAN-PARAM-DEF UUID="d20bbfe7-3706-4b00-836e-27a46d2847d5">
+									<SHORT-NAME>EthSMDummyMode</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Enable Dummy Mode</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter defines the handling of the underlying modules.
+
+If the parameter is enabled EthSM will not call the APIs of EthIf to control the Ethernet controller and Ethernet Transceiver neither the API of TcpIp to request a TcpIp mode.
+
+The APIs to be used by the ComM are avaible but state changes of the underlying modules are not possible.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: EthSMMainFunctionPeriod -->
+								<ECUC-FLOAT-PARAM-DEF UUID="a3c7945a-6e3b-4e9a-aa03-8ec46be1264a">
+									<SHORT-NAME>EthSMMainFunctionPeriod</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Main Function Period</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">This value specifies the period that the Main Function of the EthSM has to be triggered with.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:BaseUnit">SEC</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>0.02</DEFAULT-VALUE>
+									<MAX>1</MAX>
+									<MIN>0.005</MIN>
+								</ECUC-FLOAT-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: EthSMVersionInfoApi -->
+								<ECUC-BOOLEAN-PARAM-DEF UUID="dd747976-a692-4eac-82a7-dfc3b4c5b473">
+									<SHORT-NAME>EthSMVersionInfoApi</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Enable Version Info API</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter enables/disables the function EthSM_GetVersionInfo() to get major, minor and patch version information.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-STRING-PARAM-DEF UUID="49c7c99a-ab6b-4af5-96ac-3fad1b062a5a">
+									<SHORT-NAME>EthSMUserConfigFile</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">User Config File</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">Reference to an external file that will be included during generation to EthSM_Cfg.h.
+
+The content of the user configuration file will be added at the end of the generated module configuration file and allows altering or extending the generated code.
+
+Caution: User configuration files can cause the software module to malfunction and must only be used with greate care!</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+								</ECUC-STRING-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="c40d29e2-02fa-4d3e-b2ce-59bc98d8b83c">
+									<SHORT-NAME>EthSMEnableEthIfApiTimeout</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Enable EthIf API Timeout</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter defines if a error handling for possibly unsuccessful calls to the EthIf APIs is actived.
+
+false:
+The error handling is disabled and the EthSM will call EthIf APIs endlessly every main function cycle until they return successfully.
+
+true:
+The error handling is enabled and the EthSM will call the EthIf APIs with a time gap specified by 'EthSMConfirmationTimeout' and as often as specified by 'EthSMMaxNumRetry'. (Both configurable Ethernet network-specific)
+
+Error handling of unsuccessful calls will be as followed:
+
+DET:
+(only enabled if 'EthSMDevErrorDetect' is enabled)
+EthSM will report the error ETHSM_E_ETHIF_TIMEOUT to DET by calling Det_ReportError.
+
+DEM:
+(only enabled if Ethernet network-specific DEM event 'ETHSM_E_TIMEOUT' is configured)
+EthSM will report the error with the specific DEM event ID by calling Dem_ReportErrorStatus.
+</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="ea32ce49-78d6-4b3e-a03a-77b2d320398b">
+									<SHORT-NAME>EthSMEnableOooIndications</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Enable Out Of Order Indications</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter defines if indications from EthIf and TcpIp can be handled out of order.
+
+false:
+The indications of EthIf and TcpIp must occur in the order they are specified in the state machine of the AUTOSAR 4.1.1 SWS (Figure 7-1)
+(dead locks of state machine possible if e.g. EthSM_TcpModeIndication is called before EthSM_TrcvLinkStateChange in a FULL_COM request scenario)
+
+true:
+The indications of EthIf and TcpIp can be handled if they occur out of order. The EthSM will recall the inidcated state of the out of order indication and procced with the sequence for the mode request as if the indications occured in order.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+							</PARAMETERS>
+						</ECUC-PARAM-CONF-CONTAINER-DEF>
+						<!-- Container Definition: EthSMNetwork -->
+						<ECUC-PARAM-CONF-CONTAINER-DEF UUID="5210a71a-1bcc-407c-b1b9-46326c62ecf2">
+							<SHORT-NAME>EthSMNetwork</SHORT-NAME>
+							<DESC>
+								<L-2 L="EN">This container contains the Ethernet network-specific parameters of each Ethernet network.</L-2>
+							</DESC>
+							<ADMIN-DATA>
+								<SDGS>
+									<SDG GID="DV:CfgPostBuild">
+										<SD GID="DV:postBuildSelectableChangeable">false</SD>
+										<SD GID="DV:postBuildNotDeletable">false</SD>
+									</SDG>
+								</SDGS>
+							</ADMIN-DATA>
+							<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+							<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+							<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+							<MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+							<PARAMETERS>
+								<!-- PARAMETER DEFINITION: EthSMConfirmationTimeout -->
+								<ECUC-FLOAT-PARAM-DEF UUID="68aa6945-fa51-49aa-9d0d-a0bf94e1c00b">
+									<SHORT-NAME>EthSMConfirmationTimeout</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">EthIf API Confirmation Timeout</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">This value specifes the time gap between the retries of the calls to EthIf:
+-EthIf_ControllerInit
+-EthIf_TransceiverInit
+-EthIf_SetControllerMode
+-EthIf_SetTransceiverMode
+
+For further information of EthIf API timeout handling please refere to the description of 'EthSMEnableEthIfApiTimeout'.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:BaseUnit">SEC</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<INTRODUCTION>
+										<P>
+											<L-1 L="EN">EthIf_ControllerInit
+                                        EthIf_TransceiverInit
+                                        EthIf_SetControllerMode
+                                        EthIf_SetTransceiverMode</L-1>
+										</P>
+									</INTRODUCTION>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>0.1</DEFAULT-VALUE>
+									<MAX>10</MAX>
+									<MIN>0.001</MIN>
+								</ECUC-FLOAT-PARAM-DEF>
+								<ECUC-INTEGER-PARAM-DEF UUID="6355895e-672f-4def-a13b-cee7254b48e8">
+									<SHORT-NAME>EthSMMaxNumRetry</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Max Number of EthIf API Retries</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">This value specifies the maximum number of retries for EthIf API calls.
+
+One try to call the EthIf API successfully is done without taking the specified value into account.
+
+For further information of EthIf API timeout handling please refere to the description of 'EthSMEnableEthIfApiTimeout'.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>0</DEFAULT-VALUE>
+									<MAX>10</MAX>
+									<MIN>0</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<ECUC-ENUMERATION-PARAM-DEF UUID="812e69c7-90ec-48cb-b6c2-a64e1bd0b7ec">
+									<SHORT-NAME>EthSMStackType</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Stack Type</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">Parameter defines the communication stack using this Ethernet network.
+
+TcpIp:
+
+The Ethernet network is used by a TcpIp communication stack. The two-stage communication request for this network specified by AUTOSAR will be used.
+The EthIf APIs are used to change activate/deactivate the Ethernet controller and transceiver and the TcpIp API is used to change the TcpIp mode.
+Also the EthSM relies on the indications of the transceiver link and the TcpIp mode for state handling.
+
+Avb:
+
+The Ethernet network is used by a Avb communication stack. The two-stage communication request for this network specified by AUTOSAR will be tailored into a one-stage request.
+The EthIf APIs are used to change activate/deactivate the Ethernet controller and transceiver. The TcpIp APIs aren't used anymore.
+Also the EthSM only relies on the indications of the transceiver link for state handling.
+</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>TcpIp</DEFAULT-VALUE>
+									<LITERALS>
+										<ECUC-ENUMERATION-LITERAL-DEF UUID="0a9f8535-5695-4515-97ea-1c4600450f8c">
+											<SHORT-NAME>TcpIp</SHORT-NAME>
+											<ORIGIN>Vector Informatik</ORIGIN>
+										</ECUC-ENUMERATION-LITERAL-DEF>
+										<ECUC-ENUMERATION-LITERAL-DEF UUID="1f928c3b-d9bf-487c-96a8-d235f5e7d186">
+											<SHORT-NAME>Avb</SHORT-NAME>
+											<ORIGIN>Vector Informatik</ORIGIN>
+										</ECUC-ENUMERATION-LITERAL-DEF>
+									</LITERALS>
+								</ECUC-ENUMERATION-PARAM-DEF>
+							</PARAMETERS>
+							<REFERENCES>
+								<!-- Symbolic Name Reference Definition: EthSMComMNetworkHandleRef -->
+								<ECUC-SYMBOLIC-NAME-REFERENCE-DEF UUID="d07d2204-ee6a-401e-9149-645b4e8974a1">
+									<SHORT-NAME>EthSMComMNetworkHandleRef</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">ComM Network</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">Reference to a ComM channel representing this Ethernet network in ComM configuration.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/ComM/ComMConfigSet/ComMChannel</DESTINATION-REF>
+								</ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+								<!-- Symbolic Name Reference Definition: EthSMEthIfControllerRef -->
+								<ECUC-SYMBOLIC-NAME-REFERENCE-DEF UUID="ea0847a2-4a45-44dd-a7e2-31712972cbdd">
+									<SHORT-NAME>EthSMEthIfControllerRef</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">EthIf Controller</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">Reference to a EthIfController which abstracts the underlying Ethernet controller and transceiver to be controlled.</L-2>
+									</DESC>
+									<INTRODUCTION>
+										<P>
+											<L-1 L="EN">transceiver (optional) combination is configured.</L-1>
+										</P>
+									</INTRODUCTION>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/EthIf/EthIfConfigSet/EthIfController</DESTINATION-REF>
+								</ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+							</REFERENCES>
+							<SUB-CONTAINERS>
+								<!-- Container Definition: EthSMDemEventParameterRefs -->
+								<ECUC-PARAM-CONF-CONTAINER-DEF UUID="afdf76a4-6b26-4c74-a996-1c8d94b4a8c6">
+									<SHORT-NAME>EthSMDemEventParameterRefs</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This container includes the references to DemEventParameter elements which shall be invoked using the API Dem_ReportErrorStatus API in case the corresponding error occurs. The EventId is taken from the referenced DemEventParameter's DemEventId value.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:postBuildSelectableChangeable">false</SD>
+												<SD GID="DV:postBuildNotDeletable">false</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+									<MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+									<REFERENCES>
+										<!-- Symbolic Name Reference Definition: ETHSM_E_LINK_DOWN -->
+										<ECUC-SYMBOLIC-NAME-REFERENCE-DEF UUID="03d7a0df-c7c6-464f-be5b-6c627a832ed4">
+											<SHORT-NAME>ETHSM_E_LINK_DOWN</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">ETHSM_E_LINK_DOWN</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">Reference to configured DEM event to report bus off errors for this Ethernet network.
+
+The event will be reported in two situations:
+
+1) Ethernet network is in STATE_ONLINE and loses transceiver link
+
+The event will be reported to the DEM by calling Dem_ReportErrorStatus with the status DEM_EVENT_STATUS_FAILED.
+
+2) Ethernet network is in STATE_ONHOLD and gains transceiver link
+
+The event will be reported to the DEM by calling Dem_ReportErrorStatus with the status DEM_EVENT_STATUS_PASSED.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Dem/DemConfigSet/DemEventParameter</DESTINATION-REF>
+										</ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+										<ECUC-SYMBOLIC-NAME-REFERENCE-DEF UUID="f5d50caf-477d-411a-bcd4-3a2672449ffd">
+											<SHORT-NAME>ETHSM_E_TIMEOUT</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">ETHSM_E_TIMEOUT</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">Reference to configured DEM event to report a timeout of EthIf API calls.
+
+The event will be reported to the DEM if the EthIf API error handling is processed by calling Dem_ReportErrorStatus with the status DEM_EVENT_STATUS_FAILED.
+</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Dem/DemConfigSet/DemEventParameter</DESTINATION-REF>
+										</ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+									</REFERENCES>
+								</ECUC-PARAM-CONF-CONTAINER-DEF>
+							</SUB-CONTAINERS>
+						</ECUC-PARAM-CONF-CONTAINER-DEF>
+					</CONTAINERS>
+				</ECUC-MODULE-DEF>
+				<BSW-IMPLEMENTATION UUID="14ed274d-8604-44d3-8079-226fc493758d">
+					<SHORT-NAME>EthSM_Impl</SHORT-NAME>
+					<PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+					<SW-VERSION>3.01.03</SW-VERSION>
+					<USED-CODE-GENERATOR>DaVinci Configurator</USED-CODE-GENERATOR>
+					<VENDOR-ID>30</VENDOR-ID>
+					<AR-RELEASE-VERSION>4.01.01</AR-RELEASE-VERSION>
+					<BEHAVIOR-REF DEST="BSW-INTERNAL-BEHAVIOR">/MICROSAR/EthSM_ib_bswmd/BswModuleDescriptions/EthSM/EthSMBehavior</BEHAVIOR-REF>
+					<PRECONFIGURED-CONFIGURATION-REFS>
+						<PRECONFIGURED-CONFIGURATION-REF DEST="ECUC-MODULE-CONFIGURATION-VALUES">/MICROSAR/EthSM_Pre</PRECONFIGURED-CONFIGURATION-REF>
+					</PRECONFIGURED-CONFIGURATION-REFS>
+					<RECOMMENDED-CONFIGURATION-REFS>
+						<RECOMMENDED-CONFIGURATION-REF DEST="ECUC-MODULE-CONFIGURATION-VALUES">/MICROSAR/EthSM_Rec</RECOMMENDED-CONFIGURATION-REF>
+					</RECOMMENDED-CONFIGURATION-REFS>
+					<VENDOR-SPECIFIC-MODULE-DEF-REFS>
+						<VENDOR-SPECIFIC-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/MICROSAR/EthSM</VENDOR-SPECIFIC-MODULE-DEF-REF>
+					</VENDOR-SPECIFIC-MODULE-DEF-REFS>
+				</BSW-IMPLEMENTATION>
+				<ECUC-MODULE-CONFIGURATION-VALUES UUID="9423647c-c41a-4516-8b70-4d187e71fe3b">
+					<SHORT-NAME>EthSM_Pre</SHORT-NAME>
+					<DEFINITION-REF DEST="ECUC-MODULE-DEF">/MICROSAR/EthSM</DEFINITION-REF>
+					<CONTAINERS></CONTAINERS>
+				</ECUC-MODULE-CONFIGURATION-VALUES>
+				<ECUC-MODULE-CONFIGURATION-VALUES UUID="639ad405-41e5-44d0-9769-0c223d03cb1a">
+					<SHORT-NAME>EthSM_Rec</SHORT-NAME>
+					<DEFINITION-REF DEST="ECUC-MODULE-DEF">/MICROSAR/EthSM</DEFINITION-REF>
+					<CONTAINERS></CONTAINERS>
+				</ECUC-MODULE-CONFIGURATION-VALUES>
+			</ELEMENTS>
+		</AR-PACKAGE>
+	</AR-PACKAGES>
+</AUTOSAR>

@@ -1,0 +1,1588 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-0-3.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://autosar.org/schema/r4.0">
+	<AR-PACKAGES>
+		<AR-PACKAGE UUID="ff55d029-386d-43a2-b3c2-dfef4c7a5e36">
+			<SHORT-NAME>MICROSAR</SHORT-NAME>
+			<ELEMENTS>
+				<ECUC-MODULE-DEF UUID="57d4c796-d2e6-472d-810d-575693788167">
+					<SHORT-NAME>Ea</SHORT-NAME>
+					<LONG-NAME>
+						<L-4 L="EN">Eeprom Abstraction</L-4>
+					</LONG-NAME>
+					<DESC>
+						<L-2 L="EN">Configuration of the Ea (EEPROM Abstraction) module.</L-2>
+					</DESC>
+					<CATEGORY>VENDOR_SPECIFIC_MODULE_DEFINITION</CATEGORY>
+					<ADMIN-DATA>
+						<DOC-REVISIONS>
+							<DOC-REVISION>
+								<REVISION-LABEL>2.3.1</REVISION-LABEL>
+								<STATE>released</STATE>
+								<ISSUED-BY>virdu</ISSUED-BY>
+								<DATE>2012-10-30T09:16:02+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Only SW version incremented due to changes in Implementation</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00062615</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>3.0.0</REVISION-LABEL>
+								<STATE>released</STATE>
+								<ISSUED-BY>virdu</ISSUED-BY>
+								<DATE>2013-02-06T04:52:03+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Update for Java Generator. Changes in complete structure of container and parameters.</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ASR 4 version with JavaGenerator</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>4.00.00</REVISION-LABEL>
+								<STATE>released</STATE>
+								<ISSUED-BY>virdu</ISSUED-BY>
+								<DATE>2013-07-05T11:11:57+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">VectorCommonData deleted, version corrected to Almplus</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00068600</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>--</REVISION-LABEL>
+								<STATE>--</STATE>
+								<ISSUED-BY>virjas</ISSUED-BY>
+								<DATE>2013-09-16T02:07:03+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Improve BSWMD Description Text</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00070352</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>--</REVISION-LABEL>
+								<STATE>--</STATE>
+								<ISSUED-BY>virdu</ISSUED-BY>
+								<DATE>2013-09-19T11:05:41+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Added Busy Check and updated all Development Error Checks to AUTOSAR 4</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">AUTOSAR 4 features</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>4.01.00</REVISION-LABEL>
+								<STATE>released</STATE>
+								<ISSUED-BY>virdu</ISSUED-BY>
+								<DATE>2013-10-15T10:34:51+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">increased multiplicity of EaPartitionConfiguration and added EaBlockId</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">AR4-576: ESCAN00070041</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>--</REVISION-LABEL>
+								<STATE>released</STATE>
+								<ISSUED-BY>virdu</ISSUED-BY>
+								<DATE>2013-10-18T08:18:09+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">set DeviceIndex of EaBlockConfiguration to not used</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">only device index in EaPartitionConfiguration used</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>4.02.00</REVISION-LABEL>
+								<STATE>released</STATE>
+								<ISSUED-BY>virdu</ISSUED-BY>
+								<DATE>2013-11-15T08:14:30+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Changed Multiplicity of EepApi Container to 0..1</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00070940</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>--</REVISION-LABEL>
+								<STATE>released</STATE>
+								<ISSUED-BY>virdu</ISSUED-BY>
+								<DATE>2013-11-15T08:16:31+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">updated Long Names</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00055489</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>4.02.01</REVISION-LABEL>
+								<STATE>released</STATE>
+								<ISSUED-BY>virgmi</ISSUED-BY>
+								<DATE>2014-04-07T10:05:55+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Changed implementation version</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">newer version of implementation was released</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>4.03.00</REVISION-LABEL>
+								<STATE>released</STATE>
+								<ISSUED-BY>virgmi</ISSUED-BY>
+								<DATE>2014-04-07T04:13:45+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Added new parameter EaMainFunctionPeriod to EaGeneral</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00074352</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>4.03.00</REVISION-LABEL>
+								<STATE>released</STATE>
+								<ISSUED-BY>virgmi</ISSUED-BY>
+								<DATE>2014-06-12T11:13:33+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Changed implementation version to 2.04.03</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">--</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>4.03.01</REVISION-LABEL>
+								<STATE>released</STATE>
+								<ISSUED-BY>virgmi</ISSUED-BY>
+								<DATE>2014-09-11T09:24:14+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Changed implementation version</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">newer version of implementation was released</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>4.04.00</REVISION-LABEL>
+								<STATE>released</STATE>
+								<ISSUED-BY>virgmi</ISSUED-BY>
+								<DATE>2015-02-19T11:23:08+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Removed some parameters, changed container multiplicity, changed implementation version</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00081348</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<STATE>released</STATE>
+								<ISSUED-BY>virgmi</ISSUED-BY>
+								<DATE>2015-03-23T11:24:31+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Parameter EaMainFunctionTriggering was added due to Background Task Handling</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00079973</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<STATE>released</STATE>
+								<ISSUED-BY>virgmi</ISSUED-BY>
+								<DATE>2015-06-08T10:14:58+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Max value of some parameters was corrected</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00083278</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>4.05.00</REVISION-LABEL>
+								<STATE>released</STATE>
+								<ISSUED-BY>virgmi</ISSUED-BY>
+								<DATE>2015-09-18T02:55:01+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Changed implementation version</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00085107</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>4.06.00</REVISION-LABEL>
+								<STATE>released</STATE>
+								<ISSUED-BY>virgmi</ISSUED-BY>
+								<DATE>2016-02-08T10:56:56+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Removed obsolete container and parameters</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00088145</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>4.07.00</REVISION-LABEL>
+								<STATE>released</STATE>
+								<ISSUED-BY>virgmi</ISSUED-BY>
+								<DATE>2016-12-19T01:18:51+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Added EaSafeBswChecks switch</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">FEAT-1824</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>4.07.01</REVISION-LABEL>
+								<STATE>released</STATE>
+								<ISSUED-BY>virgmi</ISSUED-BY>
+								<DATE>2017-02-28T05:53:51+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Default value of EaSafeBswChecks was set to false</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00094206</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>4.07.02</REVISION-LABEL>
+								<STATE>released</STATE>
+								<ISSUED-BY>virgmi</ISSUED-BY>
+								<DATE>2017-06-13T10:06:47+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Changed implementation version</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">Bugfix in implementation</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+						</DOC-REVISIONS>
+					</ADMIN-DATA>
+					<INTRODUCTION>
+						<P>
+							<L-1 L="EN">The module shall abstract from the device specific addressing scheme and segmentation and provide the upper layers with a virtual addressing scheme and segmentation as well as a 'virtually' unlimited number of erase cycles.</L-1>
+						</P>
+					</INTRODUCTION>
+					<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+					<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+					<REFINED-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/AUTOSAR/EcucDefs/Ea</REFINED-MODULE-DEF-REF>
+					<SUPPORTED-CONFIG-VARIANTS>
+						<SUPPORTED-CONFIG-VARIANT>VARIANT-PRE-COMPILE</SUPPORTED-CONFIG-VARIANT>
+					</SUPPORTED-CONFIG-VARIANTS>
+					<CONTAINERS>
+						<!-- Container Definition: EaBlockConfiguration -->
+						<ECUC-PARAM-CONF-CONTAINER-DEF UUID="4fc4a484-3d7e-4a37-9bfc-62a177529945">
+							<SHORT-NAME>EaBlockConfiguration</SHORT-NAME>
+							<LONG-NAME>
+								<L-4 L="EN">Block Configuration</L-4>
+							</LONG-NAME>
+							<DESC>
+								<L-2 L="EN">This container includes the configuration of block specific parameters for the EEPROM abstraction module.</L-2>
+							</DESC>
+							<ADMIN-DATA>
+								<SDGS>
+									<SDG GID="DV:CfgPostBuild">
+										<SD GID="DV:postBuildSelectableChangeable">false</SD>
+										<SD GID="DV:postBuildNotDeletable">false</SD>
+									</SDG>
+								</SDGS>
+							</ADMIN-DATA>
+							<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+							<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+							<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+							<MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+							<PARAMETERS>
+								<!-- PARAMETER DEFINITION: EaBlockNumber -->
+								<ECUC-INTEGER-PARAM-DEF UUID="a0950ae8-bc5d-461e-b01b-7c9185f9f6bb">
+									<SHORT-NAME>EaBlockNumber</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Block Number</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">This value specifies the block identifier (handle).</L-2>
+									</DESC>
+									<INTRODUCTION>
+										<P>
+											<L-1 L="EN">0x0000 and 0xFFFF shall not be used for block numbers (see EA006).
+
+                                        Range: 
+                                          min = 2^NVM_DATASET_SELECTION_BITS 
+                                          max = 0xFFFF -2^NVM_DATASET_SELECTION_BITS
+
+                                        Note: Depending on the number of bits set aside for dataset selection several other block numbers shall also be left out to ease implementation.</L-1>
+										</P>
+									</INTRODUCTION>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>1</DEFAULT-VALUE>
+									<MAX>65534</MAX>
+									<MIN>1</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: EaBlockSize -->
+								<ECUC-INTEGER-PARAM-DEF UUID="b3f849d3-f819-4750-a588-7552a7bf93d5">
+									<SHORT-NAME>EaBlockSize</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Block Size</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">This value specifies the size of a logical block in bytes.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>8</DEFAULT-VALUE>
+									<MAX>65535</MAX>
+									<MIN>1</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: EaImmediateData -->
+								<ECUC-BOOLEAN-PARAM-DEF UUID="a7ea8732-56b7-4505-a990-64077c42328c">
+									<SHORT-NAME>EaImmediateData</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Immediate Data</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter defines if this block has high priority data.</L-2>
+									</DESC>
+									<INTRODUCTION>
+										<P>
+											<L-1 L="EN">true: 	Block contains immediate data.
+                                        false:	Block does not contain immediate data.</L-1>
+										</P>
+									</INTRODUCTION>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: EaNumberOfWriteCycles -->
+								<ECUC-INTEGER-PARAM-DEF UUID="3200f341-e4b6-444f-a8cf-9028d913c653">
+									<SHORT-NAME>EaNumberOfWriteCycles</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Number Of Write Cycles</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">This value specifies the number of write cycles required for this block.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>10000</DEFAULT-VALUE>
+									<MAX>4294967295</MAX>
+									<MIN>0</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<ECUC-INTEGER-PARAM-DEF UUID="50b42feb-50c2-47b6-93c2-d33a54ddae61">
+									<SHORT-NAME>EaNumberOfDatasets</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Number Of Datasets</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">This value specifies the number of datasets/clones. This specfies how often an individual block exists.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>LINK</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>1</DEFAULT-VALUE>
+									<MAX>255</MAX>
+									<MIN>1</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<ECUC-INTEGER-PARAM-DEF UUID="a3fc8b62-21da-45c2-860c-7cd5367cb889">
+									<SHORT-NAME>EaNumberOfInstances</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Number Of Instances</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">This value specifies the number of instances needed for one dataset/clone. The value depends on the number of write cycles the EEPROM supports and the number of write cycles of the specific dataset/clone.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>LINK</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>1</DEFAULT-VALUE>
+									<MAX>255</MAX>
+									<MIN>1</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="b412a92c-2c7a-4e9d-ab0f-16c6031ffdfe">
+									<SHORT-NAME>EaVerifyWrittenData</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Verify Written Data</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter defines if the written data shall be verified for consistency.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>LINK</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-INTEGER-PARAM-DEF UUID="c4e6e3cf-8fd1-4172-ab8a-3ed95b448f98">
+									<SHORT-NAME>EaBlockId</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Block Id</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">This value specifies the BlockID which indicates the base (aka: "tag") of a Block within its associated partition.
+The Block can be uniquely identified using partition.
+The ID must be unique within block's partition; blocks within different partitions may share the same value.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>0</DEFAULT-VALUE>
+									<MAX>65534</MAX>
+									<MIN>0</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+							</PARAMETERS>
+							<REFERENCES>
+								<!-- Symbolic Name Reference Definition: EaDeviceIndex -->
+								<ECUC-SYMBOLIC-NAME-REFERENCE-DEF UUID="5e5b5e91-aea9-4637-87cf-44b316a4c46e">
+									<SHORT-NAME>EaDeviceIndex</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Device Index</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">Not used!
+
+Reference to EEP Driver.</L-2>
+									</DESC>
+									<INTRODUCTION>
+										<P>
+											<L-1 L="EN">Range: 0 .. 254 (0xFF reserved for broadcast call to GetStatus function).</L-1>
+										</P>
+									</INTRODUCTION>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Eep/EepGeneral</DESTINATION-REF>
+								</ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+								<ECUC-REFERENCE-DEF UUID="dc0d87d8-bcd7-40c2-a080-ef31227bbc64">
+									<SHORT-NAME>EaPartition</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Partition</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">Reference to the partition within the EA configuration.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Ea/EaPartitionConfiguration</DESTINATION-REF>
+								</ECUC-REFERENCE-DEF>
+							</REFERENCES>
+						</ECUC-PARAM-CONF-CONTAINER-DEF>
+						<!-- Container Definition: EaGeneral -->
+						<ECUC-PARAM-CONF-CONTAINER-DEF UUID="c1ac6d73-8930-4dde-8466-dacf030cf389">
+							<SHORT-NAME>EaGeneral</SHORT-NAME>
+							<LONG-NAME>
+								<L-4 L="EN">General</L-4>
+							</LONG-NAME>
+							<DESC>
+								<L-2 L="EN">General configuration parameters of the EA.</L-2>
+							</DESC>
+							<ADMIN-DATA>
+								<SDGS>
+									<SDG GID="DV:CfgPostBuild">
+										<SD GID="DV:postBuildSelectableChangeable">false</SD>
+										<SD GID="DV:postBuildNotDeletable">false</SD>
+									</SDG>
+								</SDGS>
+							</ADMIN-DATA>
+							<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+							<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+							<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+							<MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+							<PARAMETERS>
+								<!-- PARAMETER DEFINITION: EaDevErrorDetect -->
+								<ECUC-BOOLEAN-PARAM-DEF UUID="9043b15e-3de8-4e5d-85a2-b00eeeb69ee9">
+									<SHORT-NAME>EaDevErrorDetect</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Development Error Detection</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter switches the Development Error Detection and Reporting ON or OFF.
+true:	Development error detection and reporting is enabled.
+false:	Development error detection and reporting is disabled.
+
+Note: In general, the development error detection is recommended during pre-test phase. It is not recommended to enable the development error detection in production code due to increased runtime and ROM needs.</L-2>
+									</DESC>
+									<INTRODUCTION>
+										<P>
+											<L-1 L="EN">true:	Development error detection enabled.
+                                        false:	Development error detection disabled.</L-1>
+										</P>
+									</INTRODUCTION>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>true</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: EaIndex -->
+								<ECUC-INTEGER-PARAM-DEF UUID="539b925d-f28e-4a5f-bb9a-d7986111ab72">
+									<SHORT-NAME>EaIndex</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Index</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">This value specifies the InstanceId of this module instance. If only one instance is present it shall have the Id 0.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>0</DEFAULT-VALUE>
+									<MAX>254</MAX>
+									<MIN>0</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: EaNvmJobEndNotification -->
+								<ECUC-FUNCTION-NAME-DEF UUID="8efa5c36-799c-4e9b-8744-41c1d81794a4">
+									<SHORT-NAME>EaNvmJobEndNotification</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">NvMJobEnd Notification</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter defines the job end notification routine provided by the upper layer module (normally NvM_JobEndNotification).</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<ECUC-FUNCTION-NAME-DEF-VARIANTS>
+										<ECUC-FUNCTION-NAME-DEF-CONDITIONAL>
+											<DEFAULT-VALUE>NvM_JobEndNotification</DEFAULT-VALUE>
+										</ECUC-FUNCTION-NAME-DEF-CONDITIONAL>
+									</ECUC-FUNCTION-NAME-DEF-VARIANTS>
+								</ECUC-FUNCTION-NAME-DEF>
+								<!-- PARAMETER DEFINITION: EaNvmJobErrorNotification -->
+								<ECUC-FUNCTION-NAME-DEF UUID="9725eab3-b874-4c72-bbee-c64af3d724ba">
+									<SHORT-NAME>EaNvmJobErrorNotification</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">NvMJobError Notification</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter defines the job error notification routine provided by the upper layer module (normally NvM_JobErrorNotification).</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<ECUC-FUNCTION-NAME-DEF-VARIANTS>
+										<ECUC-FUNCTION-NAME-DEF-CONDITIONAL>
+											<DEFAULT-VALUE>NvM_JobErrorNotification</DEFAULT-VALUE>
+										</ECUC-FUNCTION-NAME-DEF-CONDITIONAL>
+									</ECUC-FUNCTION-NAME-DEF-VARIANTS>
+								</ECUC-FUNCTION-NAME-DEF>
+								<!-- PARAMETER DEFINITION: EaPollingMode -->
+								<ECUC-BOOLEAN-PARAM-DEF UUID="08bd0b4b-dd91-4c20-8064-a7e0778e6f74">
+									<SHORT-NAME>EaPollingMode</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Polling Mode</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter defines if the polling mode for this module is enabled.</L-2>
+									</DESC>
+									<INTRODUCTION>
+										<P>
+											<L-1 L="EN">true:	Polling mode enabled, callback functions (provided to EEP module) disabled.
+
+                                        false:	Polling mode disabled, callback functions (provided to EEP module) enabled.</L-1>
+										</P>
+									</INTRODUCTION>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>true</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: EaSetModeSupported -->
+								<ECUC-BOOLEAN-PARAM-DEF UUID="d3e9bc0e-a0f9-42ec-a46c-e27a64f7b6b4">
+									<SHORT-NAME>EaSetModeSupported</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Set Mode Api</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter defines if the function Ea_SetMode API is available.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>true</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: EaVersionInfoApi -->
+								<ECUC-BOOLEAN-PARAM-DEF UUID="3c58c789-c4b5-404d-9e67-b82eda0f46ba">
+									<SHORT-NAME>EaVersionInfoApi</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Version Info Api</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter enables/disables the function Ea_GetVersionInfo() to get major, minor and patch version information.</L-2>
+									</DESC>
+									<INTRODUCTION>
+										<P>
+											<L-1 L="EN">true:	Version info API enabled.
+                                        false:	Version info API disabled.</L-1>
+										</P>
+									</INTRODUCTION>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: EaVirtualPageSize -->
+								<ECUC-INTEGER-PARAM-DEF UUID="c338c430-1339-48d2-8221-b454b610f365">
+									<SHORT-NAME>EaVirtualPageSize</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Virtual Page Size</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">Not used!
+EA provides configuration of partitions with different address and write alignments due to the fact that multiple EEP modules can be referenced and their alignments may not match.
+EaBlocks are always assigned to a certain EaPartition. Therefore, EaBlocks are aligned to EaPartitionAddressAlignment of its EaPartitions.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>8</DEFAULT-VALUE>
+									<MAX>65535</MAX>
+									<MIN>1</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<ECUC-STRING-PARAM-DEF UUID="05eaee3a-9e20-41d4-92a0-270e0a8efc52">
+									<SHORT-NAME>EaNvMCallbackIncludeFile</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">NvM Cbk Include File</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter defines the name of the include file for callback function declaration of the NvM.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<ECUC-STRING-PARAM-DEF-VARIANTS>
+										<ECUC-STRING-PARAM-DEF-CONDITIONAL>
+											<DEFAULT-VALUE>NvM_Cbk.h</DEFAULT-VALUE>
+										</ECUC-STRING-PARAM-DEF-CONDITIONAL>
+									</ECUC-STRING-PARAM-DEF-VARIANTS>
+								</ECUC-STRING-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="8d15c173-072f-4c30-ac08-e6f519ae4109">
+									<SHORT-NAME>EaCorrectSingleBitFlips</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Correct Single Bit Flips</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter defines if the correction of single bit flips is enabled.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>true</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-FLOAT-PARAM-DEF UUID="35b7d68a-d9b6-4b35-a949-9894b756a6df">
+									<SHORT-NAME>EaMainFunctionPeriod</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Specify fixed call cycle for Ea_MainFunction.
+This information affects RTE's (SchM's) settings.
+
+It is not necessary to trigger Ea faster than its lower layer (EEP).
+The faster you want Ea_MainFunction being triggered, the smaller this value should be and vice versa.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:BaseUnit">SEC</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>0.005</DEFAULT-VALUE>
+									<MAX>1</MAX>
+									<MIN>0.0001</MIN>
+								</ECUC-FLOAT-PARAM-DEF>
+								<ECUC-ENUMERATION-PARAM-DEF UUID="0181d945-56cf-410b-b49e-a34d1fb85e46">
+									<SHORT-NAME>EaMainFunctionTriggering</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">The MainFunction can be scheduled in different ways, which allows adapting the runtime behavior
+- FixedCycleTime: All activities are executed in the MainFunction with the defined cycle time.
+- BackgroundTask: Activities that do not require a fixed cycle time run in the background task. The response time of such activities will depend on the current CPU load.
+Note
+If the system is overloaded, it may happen that the background task is no longer called.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PUBLISHED-INFORMATION</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>FixedCycleTime</DEFAULT-VALUE>
+									<LITERALS>
+										<ECUC-ENUMERATION-LITERAL-DEF UUID="35356fab-f0c7-4ed3-acbf-2c1d65faec96">
+											<SHORT-NAME>FixedCycleTime</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">Task for Fixed Cycle Time</L-4>
+											</LONG-NAME>
+											<ORIGIN>Vector Informatik</ORIGIN>
+										</ECUC-ENUMERATION-LITERAL-DEF>
+										<ECUC-ENUMERATION-LITERAL-DEF UUID="c7117780-791d-414d-96b9-2d4344d27c00">
+											<SHORT-NAME>BackgroundTask</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">Background Task</L-4>
+											</LONG-NAME>
+											<ORIGIN>Vector Informatik</ORIGIN>
+										</ECUC-ENUMERATION-LITERAL-DEF>
+									</LITERALS>
+								</ECUC-ENUMERATION-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="90abfd92-904b-4c94-a484-7ffa03350a68">
+									<SHORT-NAME>EaSafeBswChecks</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Safe Bsw Checks</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">Selects if safety checks are used. These checks improve robustness as e.g. invalid parameters are checked before function is executed. This attribute has to be enabled for safety projects where this component is mapped to an ASIL partition.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+							</PARAMETERS>
+							<SUB-CONTAINERS>
+								<ECUC-PARAM-CONF-CONTAINER-DEF UUID="99f02ccb-179a-4bb7-8057-9dac3ea1fa9b">
+									<SHORT-NAME>EaEepApi</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Eep Api</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">This container is used to announce the API service names and the include file of an Eep instance manually.
+API service names and include file can be typed manually and assigned to the corresponding Eep instance via "Eeprom Device" reference.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:postBuildSelectableChangeable">false</SD>
+												<SD GID="DV:postBuildNotDeletable">false</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+									<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+									<PARAMETERS>
+										<ECUC-STRING-PARAM-DEF UUID="4372fc82-ae6f-4979-a0cb-8923c46cb9e4">
+											<SHORT-NAME>EaEepIncludeFile</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">Eep Include File</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter defines the name of the header file of the EEPROM Driver.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<ECUC-STRING-PARAM-DEF-VARIANTS>
+												<ECUC-STRING-PARAM-DEF-CONDITIONAL>
+													<DEFAULT-VALUE>Eep.h</DEFAULT-VALUE>
+												</ECUC-STRING-PARAM-DEF-CONDITIONAL>
+											</ECUC-STRING-PARAM-DEF-VARIANTS>
+										</ECUC-STRING-PARAM-DEF>
+										<ECUC-FUNCTION-NAME-DEF UUID="a482636f-8b88-4029-842a-56cf46e5431f">
+											<SHORT-NAME>EaEepSetMode</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">Eep SetMode API</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter defines the name of the EEPROM SetMode API.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<ECUC-FUNCTION-NAME-DEF-VARIANTS>
+												<ECUC-FUNCTION-NAME-DEF-CONDITIONAL>
+													<DEFAULT-VALUE>Eep_SetMode</DEFAULT-VALUE>
+												</ECUC-FUNCTION-NAME-DEF-CONDITIONAL>
+											</ECUC-FUNCTION-NAME-DEF-VARIANTS>
+										</ECUC-FUNCTION-NAME-DEF>
+										<ECUC-FUNCTION-NAME-DEF UUID="949fbca2-7b03-4d59-afae-6a31b02c6243">
+											<SHORT-NAME>EaEepRead</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">Eep Read API</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter defines the name of the EEPROM Read API</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<ECUC-FUNCTION-NAME-DEF-VARIANTS>
+												<ECUC-FUNCTION-NAME-DEF-CONDITIONAL>
+													<DEFAULT-VALUE>Eep_Read</DEFAULT-VALUE>
+												</ECUC-FUNCTION-NAME-DEF-CONDITIONAL>
+											</ECUC-FUNCTION-NAME-DEF-VARIANTS>
+										</ECUC-FUNCTION-NAME-DEF>
+										<ECUC-FUNCTION-NAME-DEF UUID="e7ecec45-893b-4ad3-945b-04a2d49f66f3">
+											<SHORT-NAME>EaEepWrite</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">Eep Write API</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter defines the name of the EEPROM Write API.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<ECUC-FUNCTION-NAME-DEF-VARIANTS>
+												<ECUC-FUNCTION-NAME-DEF-CONDITIONAL>
+													<DEFAULT-VALUE>Eep_Write</DEFAULT-VALUE>
+												</ECUC-FUNCTION-NAME-DEF-CONDITIONAL>
+											</ECUC-FUNCTION-NAME-DEF-VARIANTS>
+										</ECUC-FUNCTION-NAME-DEF>
+										<ECUC-FUNCTION-NAME-DEF UUID="14f97b30-d098-40cc-875f-4bda00f131b5">
+											<SHORT-NAME>EaEepCancel</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">Eep Cancel API</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter defines the name of the EEPROM Cancel API.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<ECUC-FUNCTION-NAME-DEF-VARIANTS>
+												<ECUC-FUNCTION-NAME-DEF-CONDITIONAL>
+													<DEFAULT-VALUE>Eep_Cancel</DEFAULT-VALUE>
+												</ECUC-FUNCTION-NAME-DEF-CONDITIONAL>
+											</ECUC-FUNCTION-NAME-DEF-VARIANTS>
+										</ECUC-FUNCTION-NAME-DEF>
+										<ECUC-FUNCTION-NAME-DEF UUID="be50198d-0bc3-4c99-af77-91be0a2a2a64">
+											<SHORT-NAME>EaEepGetStatus</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">Eep GetStatus API</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter defines the name of the EEPROM GetStatus API.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<ECUC-FUNCTION-NAME-DEF-VARIANTS>
+												<ECUC-FUNCTION-NAME-DEF-CONDITIONAL>
+													<DEFAULT-VALUE>Eep_GetStatus</DEFAULT-VALUE>
+												</ECUC-FUNCTION-NAME-DEF-CONDITIONAL>
+											</ECUC-FUNCTION-NAME-DEF-VARIANTS>
+										</ECUC-FUNCTION-NAME-DEF>
+										<ECUC-FUNCTION-NAME-DEF UUID="c5196124-98d2-4a21-85b9-370d653f159c">
+											<SHORT-NAME>EaEepGetJobResult</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">Eep GetJobResult API</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter defines the name of the EEPROM GetJobResult API.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<ECUC-FUNCTION-NAME-DEF-VARIANTS>
+												<ECUC-FUNCTION-NAME-DEF-CONDITIONAL>
+													<DEFAULT-VALUE>Eep_GetJobResult</DEFAULT-VALUE>
+												</ECUC-FUNCTION-NAME-DEF-CONDITIONAL>
+											</ECUC-FUNCTION-NAME-DEF-VARIANTS>
+										</ECUC-FUNCTION-NAME-DEF>
+										<ECUC-FUNCTION-NAME-DEF UUID="7d53f550-6d52-4a3d-bbe6-d3f6ced420f4">
+											<SHORT-NAME>EaEepErase</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">Eep Erase API</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter defines the name of the EEPROM Erase API.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<ECUC-FUNCTION-NAME-DEF-VARIANTS>
+												<ECUC-FUNCTION-NAME-DEF-CONDITIONAL>
+													<DEFAULT-VALUE>Eep_Erase</DEFAULT-VALUE>
+												</ECUC-FUNCTION-NAME-DEF-CONDITIONAL>
+											</ECUC-FUNCTION-NAME-DEF-VARIANTS>
+										</ECUC-FUNCTION-NAME-DEF>
+										<ECUC-FUNCTION-NAME-DEF UUID="7e51e371-6053-4d0b-bcbc-823b58f6963d">
+											<SHORT-NAME>EaEepCompare</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">Eep Compare API</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter defines the name of the EEPROM Compare API.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<ECUC-FUNCTION-NAME-DEF-VARIANTS>
+												<ECUC-FUNCTION-NAME-DEF-CONDITIONAL>
+													<DEFAULT-VALUE>Eep_Compare</DEFAULT-VALUE>
+												</ECUC-FUNCTION-NAME-DEF-CONDITIONAL>
+											</ECUC-FUNCTION-NAME-DEF-VARIANTS>
+										</ECUC-FUNCTION-NAME-DEF>
+									</PARAMETERS>
+									<REFERENCES>
+										<ECUC-SYMBOLIC-NAME-REFERENCE-DEF UUID="7cb354b3-86a5-4730-9f3f-240a4244991b">
+											<SHORT-NAME>EaDeviceIndex</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">Eeprom Device</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">Reference to an EEP driver.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Eep/EepGeneral</DESTINATION-REF>
+										</ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+									</REFERENCES>
+								</ECUC-PARAM-CONF-CONTAINER-DEF>
+							</SUB-CONTAINERS>
+						</ECUC-PARAM-CONF-CONTAINER-DEF>
+						<!-- Container Definition: EaPublishedInformation -->
+						<ECUC-PARAM-CONF-CONTAINER-DEF UUID="32d29839-c565-4f97-84aa-2e20fa40eeba">
+							<SHORT-NAME>EaPublishedInformation</SHORT-NAME>
+							<LONG-NAME>
+								<L-4 L="EN">Published Information</L-4>
+							</LONG-NAME>
+							<DESC>
+								<L-2 L="EN">This container includes additional published parameters.</L-2>
+							</DESC>
+							<ADMIN-DATA>
+								<SDGS>
+									<SDG GID="DV:CfgPostBuild">
+										<SD GID="DV:postBuildSelectableChangeable">false</SD>
+										<SD GID="DV:postBuildNotDeletable">false</SD>
+									</SDG>
+								</SDGS>
+							</ADMIN-DATA>
+							<INTRODUCTION>
+								<P>
+									<L-1 L="EN">Note that these parameters do not have any configuration class setting, since they are published information.</L-1>
+								</P>
+							</INTRODUCTION>
+							<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+							<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+							<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+							<MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+							<PARAMETERS>
+								<!-- PARAMETER DEFINITION: EaBlockOverhead -->
+								<ECUC-INTEGER-PARAM-DEF UUID="d83c5aeb-efca-40da-b9b1-c8fb7c3bb384">
+									<SHORT-NAME>EaBlockOverhead</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Block Overhead</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">This value specifies the management overhead per logical block.</L-2>
+									</DESC>
+									<INTRODUCTION>
+										<P>
+											<L-1 L="EN">Note: If the management overhead depends on the block size or block location a formula has to be provided that allows the configurator to calculate the management overhead correctly.</L-1>
+										</P>
+									</INTRODUCTION>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PUBLISHED-INFORMATION</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>2</DEFAULT-VALUE>
+									<MAX>65535</MAX>
+									<MIN>0</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: EaMaximumBlockingTime -->
+								<ECUC-FLOAT-PARAM-DEF UUID="322c71be-08ad-465d-b64a-c05831a21a7c">
+									<SHORT-NAME>EaMaximumBlockingTime</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Maximum Blocking Time</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">This value specifies the maximum time the EA module's API routines shall be blocked (delayed) by internal operations.</L-2>
+									</DESC>
+									<INTRODUCTION>
+										<P>
+											<L-1 L="EN">Note: Internal operations in that case means operations that are not explicitly invoked from the upper layer module but need to be handled for proper operation of this module or the underlying memory driver.</L-1>
+										</P>
+									</INTRODUCTION>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PUBLISHED-INFORMATION</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>0</DEFAULT-VALUE>
+									<MAX>Inf</MAX>
+									<MIN>0</MIN>
+								</ECUC-FLOAT-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: EaPageOverhead -->
+								<ECUC-INTEGER-PARAM-DEF UUID="3e3e6161-1580-46f3-9378-b7742474d817">
+									<SHORT-NAME>EaPageOverhead</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Page Overhead</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">This value specifies the management overhead per page.</L-2>
+									</DESC>
+									<INTRODUCTION>
+										<P>
+											<L-1 L="EN">Note: If the management overhead depends on the block size or block location a formula has to be provided that allows the configurator to calculate the management overhead correctly.</L-1>
+										</P>
+									</INTRODUCTION>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PUBLISHED-INFORMATION</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>0</DEFAULT-VALUE>
+									<MAX>65535</MAX>
+									<MIN>0</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+							</PARAMETERS>
+						</ECUC-PARAM-CONF-CONTAINER-DEF>
+						<ECUC-PARAM-CONF-CONTAINER-DEF UUID="590c12a2-8134-4449-a9be-438e96b70cb4">
+							<SHORT-NAME>EaPartitionConfiguration</SHORT-NAME>
+							<LONG-NAME>
+								<L-4 L="EN">Partition Configuration</L-4>
+							</LONG-NAME>
+							<DESC>
+								<L-2 L="EN">This container includes the configuration of partition specific parameters for the EEPROM abstraction module.</L-2>
+							</DESC>
+							<ADMIN-DATA>
+								<SDGS>
+									<SDG GID="DV:CfgPostBuild">
+										<SD GID="DV:postBuildSelectableChangeable">false</SD>
+										<SD GID="DV:postBuildNotDeletable">false</SD>
+									</SDG>
+								</SDGS>
+							</ADMIN-DATA>
+							<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+							<UPPER-MULTIPLICITY>256</UPPER-MULTIPLICITY>
+							<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+							<PARAMETERS>
+								<ECUC-INTEGER-PARAM-DEF UUID="f5d32c43-55a7-48dc-987c-dc47a17dacb7">
+									<SHORT-NAME>EaPartitionStartAddress</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Partition Start Address</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">This value specifies the physical start address of the partition.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>0</DEFAULT-VALUE>
+									<MAX>4294967295</MAX>
+									<MIN>0</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<ECUC-INTEGER-PARAM-DEF UUID="829a8808-38b5-40a8-86e0-c3a1e7460ca1">
+									<SHORT-NAME>EaPartitionSize</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Partition Size</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">This value specifies size of the partition in bytes.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>256</DEFAULT-VALUE>
+									<MAX>4294967295</MAX>
+									<MIN>0</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<ECUC-INTEGER-PARAM-DEF UUID="0aef0018-386b-4feb-99ff-372290e8e1c0">
+									<SHORT-NAME>EaPartitionAddressAlignment</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Address Alignment</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">Address Alignment influences the way EA stores data entities in EEPROM. 
+All single entities will start at addresses being an integral multiple of EaPartitionAddressAlignment.
+This alignment itself must be equal to or greater than this partition's write alignment.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>1</DEFAULT-VALUE>
+									<MAX>65535</MAX>
+									<MIN>1</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<ECUC-INTEGER-PARAM-DEF UUID="a09833d4-fc63-4dd5-8d6f-28193b42993c">
+									<SHORT-NAME>EaPartitionWriteAlignment</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Write Alignment</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">Page size of EEPROM device for write jobs in bytes.
+This is the alignment of Eep_Write requests the EA issues to the EEPROM: Both EEP addresses and lengths are always multiples of this value.
+This value shall be at least equal to EEPROM's write unit size.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>1</DEFAULT-VALUE>
+									<MAX>65535</MAX>
+									<MIN>1</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+							</PARAMETERS>
+							<REFERENCES>
+								<ECUC-REFERENCE-DEF UUID="ae30e25a-482a-43b5-963a-df4b9ada1042">
+									<SHORT-NAME>EaPartitionDevice</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Partition Device</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">Reference to the EEP module.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Eep/EepInitConfiguration</DESTINATION-REF>
+								</ECUC-REFERENCE-DEF>
+							</REFERENCES>
+						</ECUC-PARAM-CONF-CONTAINER-DEF>
+					</CONTAINERS>
+				</ECUC-MODULE-DEF>
+				<BSW-IMPLEMENTATION UUID="19f05bf2-39e9-48ff-95c2-47986517a29f">
+					<SHORT-NAME>Ea_Impl</SHORT-NAME>
+					<PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+					<SW-VERSION>3.02.02</SW-VERSION>
+					<USED-CODE-GENERATOR>DaVinci Configurator</USED-CODE-GENERATOR>
+					<VENDOR-ID>30</VENDOR-ID>
+					<AR-RELEASE-VERSION>4.00.03</AR-RELEASE-VERSION>
+					<BEHAVIOR-REF DEST="BSW-INTERNAL-BEHAVIOR">/MICROSAR/Ea_ib_bswmd/BswModuleDescriptions/Ea/EaBehavior</BEHAVIOR-REF>
+					<PRECONFIGURED-CONFIGURATION-REFS>
+						<PRECONFIGURED-CONFIGURATION-REF DEST="ECUC-MODULE-CONFIGURATION-VALUES">/MICROSAR/Ea_Pre</PRECONFIGURED-CONFIGURATION-REF>
+					</PRECONFIGURED-CONFIGURATION-REFS>
+					<RECOMMENDED-CONFIGURATION-REFS>
+						<RECOMMENDED-CONFIGURATION-REF DEST="ECUC-MODULE-CONFIGURATION-VALUES">/MICROSAR/Ea_Rec</RECOMMENDED-CONFIGURATION-REF>
+					</RECOMMENDED-CONFIGURATION-REFS>
+					<VENDOR-SPECIFIC-MODULE-DEF-REFS>
+						<VENDOR-SPECIFIC-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/MICROSAR/Ea</VENDOR-SPECIFIC-MODULE-DEF-REF>
+					</VENDOR-SPECIFIC-MODULE-DEF-REFS>
+				</BSW-IMPLEMENTATION>
+				<ECUC-MODULE-CONFIGURATION-VALUES UUID="0dcc9a88-beb5-4772-a20a-bce54a5aa729">
+					<SHORT-NAME>Ea_Pre</SHORT-NAME>
+					<DEFINITION-REF DEST="ECUC-MODULE-DEF">/MICROSAR/Ea</DEFINITION-REF>
+					<CONTAINERS>
+						<ECUC-CONTAINER-VALUE UUID="18a2856a-391a-47b6-a975-462132059f66">
+							<SHORT-NAME>EaGeneral</SHORT-NAME>
+							<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Ea/EaGeneral</DEFINITION-REF>
+							<PARAMETER-VALUES>
+								<ECUC-NUMERICAL-PARAM-VALUE>
+									<DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/Ea/EaGeneral/EaSetModeSupported</DEFINITION-REF>
+									<VALUE>1</VALUE>
+								</ECUC-NUMERICAL-PARAM-VALUE>
+							</PARAMETER-VALUES>
+						</ECUC-CONTAINER-VALUE>
+					</CONTAINERS>
+				</ECUC-MODULE-CONFIGURATION-VALUES>
+				<ECUC-MODULE-CONFIGURATION-VALUES UUID="696438dc-786d-499f-9f28-3c4997257bf2">
+					<SHORT-NAME>Ea_Rec</SHORT-NAME>
+					<DEFINITION-REF DEST="ECUC-MODULE-DEF">/MICROSAR/Ea</DEFINITION-REF>
+					<CONTAINERS></CONTAINERS>
+				</ECUC-MODULE-CONFIGURATION-VALUES>
+			</ELEMENTS>
+		</AR-PACKAGE>
+	</AR-PACKAGES>
+</AUTOSAR>

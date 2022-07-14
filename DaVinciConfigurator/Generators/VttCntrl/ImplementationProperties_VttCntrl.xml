@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Settings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Settings Name="com.vector.cfg.core.sip.ISIPService">
+    <Settings Name="ModuleList">
+      <Settings Name="VttCntrl">
+        <Settings Name="Vtt">
+          <Setting Name="Compiler" Value="Ansi[DFDD3B47-BB56-4B45-BEC9-BE0B2C58DC11]" />
+          <Setting Name="NameForCpuDefine" Value="CANoe" />
+        </Settings>
+      </Settings>
+    </Settings>
+  </Settings>
+</Settings>

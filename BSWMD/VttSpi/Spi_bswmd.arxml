@@ -1,0 +1,1649 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-0-3.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://autosar.org/schema/r4.0">
+	<AR-PACKAGES>
+		<AR-PACKAGE UUID="7f837aa3-c2cb-4fd8-89c8-16a6c4430e17">
+			<SHORT-NAME>MICROSAR</SHORT-NAME>
+			<ELEMENTS>
+				<ECUC-MODULE-DEF UUID="4b6b8a1a-6418-446c-a7e4-fe12e271aa71">
+					<SHORT-NAME>Spi</SHORT-NAME>
+					<DESC>
+						<L-2 L="EN">Configuration of the Spi (Serial Peripheral Interface) module.</L-2>
+					</DESC>
+					<CATEGORY>VENDOR_SPECIFIC_MODULE_DEFINITION</CATEGORY>
+					<ADMIN-DATA>
+						<DOC-REVISIONS>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.00.00</REVISION-LABEL>
+								<ISSUED-BY>virchl</ISSUED-BY>
+								<DATE>2014-02-07T02:47:00+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Initial creation</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.00.01</REVISION-LABEL>
+								<ISSUED-BY>virchl</ISSUED-BY>
+								<DATE>2014-05-15T10:35:35+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Modification</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00070801, ESCAN00074741</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.00.02</REVISION-LABEL>
+								<ISSUED-BY>virchl</ISSUED-BY>
+								<DATE>2014-11-24T04:10:20+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">No modifications here</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>2.00.00</REVISION-LABEL>
+								<ISSUED-BY>virchl</ISSUED-BY>
+								<DATE>2015-01-20T12:13:41+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Default value of SpiVersionInfoApi set to false</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>2.00.00</REVISION-LABEL>
+								<ISSUED-BY>virchl</ISSUED-BY>
+								<DATE>2015-01-20T12:13:41+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">SwVersion set to 2.00.00</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>2.00.01</REVISION-LABEL>
+								<ISSUED-BY>virchl</ISSUED-BY>
+								<DATE>2015-04-28T02:38:12+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">SwVersion set to 2.00.01</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00082464</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>2.01.00</REVISION-LABEL>
+								<ISSUED-BY>virchl</ISSUED-BY>
+								<DATE>2015-07-08T10:35:08+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">SwVersion set to 2.01.00</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>2.01.00</REVISION-LABEL>
+								<ISSUED-BY>virchl</ISSUED-BY>
+								<DATE>2015-07-08T10:35:08+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">DisplaySettings for CFG5-Integer-Parameters added</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>2.01.00</REVISION-LABEL>
+								<ISSUED-BY>virchl</ISSUED-BY>
+								<DATE>2015-07-22T12:47:06+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">SpiHwUnit extended with enums CSIB4...CSIB11</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>2.02.00</REVISION-LABEL>
+								<ISSUED-BY>virchl</ISSUED-BY>
+								<DATE>2015-08-27T12:49:47+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">SwVersion set to 2.02.00</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">FEAT-1372</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>2.02.00</REVISION-LABEL>
+								<ISSUED-BY>virchl</ISSUED-BY>
+								<DATE>2015-09-09T09:49:05+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Parameter SpiIncludeList deleted</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00085034</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>2.03.00</REVISION-LABEL>
+								<ISSUED-BY>virchl</ISSUED-BY>
+								<DATE>2016-02-25T01:10:27+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">SwVersion set to 2.03.00</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00088544</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>2.04.00</REVISION-LABEL>
+								<ISSUED-BY>virchl</ISSUED-BY>
+								<DATE>2016-07-28T08:46:11+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Lower Multiplicity of SpiChannelIndex set to 1</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>2.04.00</REVISION-LABEL>
+								<ISSUED-BY>virchl</ISSUED-BY>
+								<DATE>2016-07-28T08:46:57+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Upper Multiplicity of SpiChannelAssignment set to 1</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>2.04.00</REVISION-LABEL>
+								<ISSUED-BY>virchl</ISSUED-BY>
+								<DATE>2016-09-05T03:37:12+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">SwVersion set to 2.04.00</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00091739, ESCAN00091748</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>2.05.00</REVISION-LABEL>
+								<ISSUED-BY>virbmz</ISSUED-BY>
+								<DATE>2017-01-19T04:16:34+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">FEAT1824 Support a component-specific SafeBSW configuration switch (Vtt Mcal), Version updates</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">FEAT1824</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+						</DOC-REVISIONS>
+					</ADMIN-DATA>
+					<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+					<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+					<REFINED-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/AUTOSAR/EcucDefs/Spi</REFINED-MODULE-DEF-REF>
+					<SUPPORTED-CONFIG-VARIANTS>
+						<SUPPORTED-CONFIG-VARIANT>VARIANT-PRE-COMPILE</SUPPORTED-CONFIG-VARIANT>
+					</SUPPORTED-CONFIG-VARIANTS>
+					<CONTAINERS>
+						<!-- Container Definition: SpiDriver -->
+						<ECUC-PARAM-CONF-CONTAINER-DEF UUID="e0c3a7ad-7ff1-4085-9148-5f599f41c1ca">
+							<SHORT-NAME>SpiDriver</SHORT-NAME>
+							<DESC>
+								<L-2 L="EN">This container includes the configuration of one instance (if multiplicity is 1, it is the sole configuration) of an SPI driver.
+</L-2>
+							</DESC>
+							<ADMIN-DATA>
+								<SDGS>
+									<SDG GID="DV:CfgPostBuild">
+										<SD GID="DV:postBuildSelectableChangeable">false</SD>
+										<SD GID="DV:postBuildNotDeletable">false</SD>
+									</SDG>
+								</SDGS>
+							</ADMIN-DATA>
+							<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+							<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+							<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+							<MULTIPLE-CONFIGURATION-CONTAINER>true</MULTIPLE-CONFIGURATION-CONTAINER>
+							<PARAMETERS>
+								<!-- PARAMETER DEFINITION: SpiMaxChannel -->
+								<ECUC-INTEGER-PARAM-DEF UUID="51863326-b5d9-4c3a-a6c7-f8ffeef30f50">
+									<SHORT-NAME>SpiMaxChannel</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Parameter not used.
+
+This parameter defines the number of channels configured. It will be gathered by tools during the configuration stage.
+</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:DefaultFormat">DEC</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<MAX>255</MAX>
+									<MIN>0</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: SpiMaxJob -->
+								<ECUC-INTEGER-PARAM-DEF UUID="06c2f976-80f1-44f8-a199-3cef0cc53beb">
+									<SHORT-NAME>SpiMaxJob</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Parameter not used.
+
+This parameter defines the total number of jobs configured.
+</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:DefaultFormat">DEC</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<MAX>65535</MAX>
+									<MIN>0</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: SpiMaxSequence -->
+								<ECUC-INTEGER-PARAM-DEF UUID="8a5ec5ac-88e9-49df-ae91-15859ef30586">
+									<SHORT-NAME>SpiMaxSequence</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Parameter not used.
+
+This parameter defines the total number of sequences configured.
+</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:DefaultFormat">DEC</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<MAX>255</MAX>
+									<MIN>0</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+							</PARAMETERS>
+							<SUB-CONTAINERS>
+								<!-- Container Definition: SpiChannel -->
+								<ECUC-PARAM-CONF-CONTAINER-DEF UUID="97a0e5d5-14a2-474b-8167-3d3ad150442b">
+									<SHORT-NAME>SpiChannel</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This container includes all data needed to configure one SPI-channel
+</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:postBuildSelectableChangeable">false</SD>
+												<SD GID="DV:postBuildNotDeletable">false</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+									<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+									<MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+									<PARAMETERS>
+										<!-- PARAMETER DEFINITION: SpiChannelId -->
+										<ECUC-INTEGER-PARAM-DEF UUID="c5a5de7b-2651-4370-bd77-5bfaed7dc232">
+											<SHORT-NAME>SpiChannelId</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter defines the SPI Channel ID, used as parameter in SPI API functions.
+</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>0</DEFAULT-VALUE>
+											<MAX>255</MAX>
+											<MIN>0</MIN>
+										</ECUC-INTEGER-PARAM-DEF>
+										<!-- PARAMETER DEFINITION: SpiChannelType -->
+										<ECUC-ENUMERATION-PARAM-DEF UUID="da276da9-6905-4426-a717-c536b168bab4">
+											<SHORT-NAME>SpiChannelType</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter defines the buffer usage with EB/IB channel.
+
+EB: External Buffer
+IB: Spi Handler/Driver Internal Buffer 
+</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>EB</DEFAULT-VALUE>
+											<LITERALS>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="a22d09a4-85d2-4830-9433-36becf7757fb">
+													<SHORT-NAME>EB</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">External Buffer</L-4>
+													</LONG-NAME>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="c77b0004-ef65-436f-ae89-dbefa1522dc3">
+													<SHORT-NAME>IB</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Internal Buffer</L-4>
+													</LONG-NAME>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+											</LITERALS>
+										</ECUC-ENUMERATION-PARAM-DEF>
+										<!-- PARAMETER DEFINITION: SpiDataWidth -->
+										<ECUC-INTEGER-PARAM-DEF UUID="efcfeb05-3d26-42d1-86b6-271374ef162f">
+											<SHORT-NAME>SpiDataWidth</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Parameter not used.
+
+This parameter defines the width of a transmitted data unit.
+</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:Display">
+														<SD GID="DV:BaseUnit">BIT</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>8</DEFAULT-VALUE>
+											<MAX>32</MAX>
+											<MIN>1</MIN>
+										</ECUC-INTEGER-PARAM-DEF>
+										<!-- PARAMETER DEFINITION: SpiDefaultData -->
+										<ECUC-INTEGER-PARAM-DEF UUID="439b118e-10a6-4b6d-9a94-d40e02764de1">
+											<SHORT-NAME>SpiDefaultData</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter defines the default data to be transmitted when (for internal buffer or external buffer) the pointer passed to Spi_WriteIB (for internal buffer) or to Spi_SetupEB (for external buffer) is NULL.
+</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:Display">
+														<SD GID="DV:DefaultFormat">HEX</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>255</DEFAULT-VALUE>
+											<MAX>255</MAX>
+											<MIN>0</MIN>
+										</ECUC-INTEGER-PARAM-DEF>
+										<!-- PARAMETER DEFINITION: SpiEbMaxLength -->
+										<ECUC-INTEGER-PARAM-DEF UUID="3cb06535-87f3-4b36-99e1-5d18fbbbe12e">
+											<SHORT-NAME>SpiEbMaxLength</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter defines the maximum size (in bytes) of data buffers in case of EB Channels and only.
+</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:Display">
+														<SD GID="DV:BaseUnit">BYTE</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>1</DEFAULT-VALUE>
+											<MAX>65535</MAX>
+											<MIN>0</MIN>
+										</ECUC-INTEGER-PARAM-DEF>
+										<!-- PARAMETER DEFINITION: SpiIbNBuffers -->
+										<ECUC-INTEGER-PARAM-DEF UUID="b2385290-6855-49e8-8532-1aebb13fde5e">
+											<SHORT-NAME>SpiIbNBuffers</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter defines the maximum number of data buffers in case of IB Channels and only.</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:Display">
+														<SD GID="DV:BaseUnit">BYTE</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>1</DEFAULT-VALUE>
+											<MAX>65535</MAX>
+											<MIN>0</MIN>
+										</ECUC-INTEGER-PARAM-DEF>
+										<!-- PARAMETER DEFINITION: SpiTransferStart -->
+										<ECUC-ENUMERATION-PARAM-DEF UUID="84acb55d-73be-472a-a611-bc5d0baaac61">
+											<SHORT-NAME>SpiTransferStart</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter defines the first starting bit for transmission.
+
+LSB: Transmission starts with Least Significant Bit first.
+MSB: Transmission starts with Most Significant Bit first.
+</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>LSB</DEFAULT-VALUE>
+											<LITERALS>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="4de8c88c-833d-4ec1-a653-6d9ec2d5ea1a">
+													<SHORT-NAME>LSB</SHORT-NAME>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="0ab59aa3-9b6b-4230-b149-8f1c814d69cf">
+													<SHORT-NAME>MSB</SHORT-NAME>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+											</LITERALS>
+										</ECUC-ENUMERATION-PARAM-DEF>
+									</PARAMETERS>
+								</ECUC-PARAM-CONF-CONTAINER-DEF>
+								<!-- Container Definition: SpiDemEventParameterRefs -->
+								<ECUC-PARAM-CONF-CONTAINER-DEF UUID="68829d1a-f592-42e0-b786-c1666f6652a6">
+									<SHORT-NAME>SpiDemEventParameterRefs</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Container not used.
+
+This container includes the references to DemEventParameter elements which shall be invoked using the API Dem_ReportErrorStatus API in case the corresponding error occurs. The EventId is taken from the referenced DemEventParameter's DemEventId value. The standardized errors are provided in the container and can be extended by vendor specific error references.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:postBuildSelectableChangeable">false</SD>
+												<SD GID="DV:postBuildNotDeletable">false</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+									<MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+									<REFERENCES>
+										<!-- Symbolic Name Reference Definition: SPI_E_HARDWARE_ERROR -->
+										<ECUC-SYMBOLIC-NAME-REFERENCE-DEF UUID="f3f54b1f-362e-4fdd-99c4-1b638331b23f">
+											<SHORT-NAME>SPI_E_HARDWARE_ERROR</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Reference to the DemEventParameter which shall be issued when a hardware error was detected. If the reference is not configured the error shall not be reported.
+</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Dem/DemConfigSet/DemEventParameter</DESTINATION-REF>
+										</ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+									</REFERENCES>
+								</ECUC-PARAM-CONF-CONTAINER-DEF>
+								<!-- Container Definition: SpiExternalDevice -->
+								<ECUC-PARAM-CONF-CONTAINER-DEF UUID="262af772-dc41-4949-805f-9635bb4e527a">
+									<SHORT-NAME>SpiExternalDevice</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This container includes the communication settings of an external device. Closely linked to SpiJob.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:postBuildSelectableChangeable">false</SD>
+												<SD GID="DV:postBuildNotDeletable">false</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+									<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+									<MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+									<PARAMETERS>
+										<!-- PARAMETER DEFINITION: SpiBaudrate -->
+										<ECUC-FLOAT-PARAM-DEF UUID="76c24ee2-d230-4a5b-bdbe-7c2fa4c13892">
+											<SHORT-NAME>SpiBaudrate</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Parameter not used.
+
+This parameter defines the communication baudrate.
+</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:Display">
+														<SD GID="DV:BaseUnit">baud</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<INTRODUCTION>
+												<P>
+													<L-1 L="EN">using a range of values, from the point of view of configuration tools,
+                                                from Hz up to MHz.</L-1>
+												</P>
+											</INTRODUCTION>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<MAX>Inf</MAX>
+											<MIN>0</MIN>
+										</ECUC-FLOAT-PARAM-DEF>
+										<!-- PARAMETER DEFINITION: SpiCsIdentifier -->
+										<ECUC-STRING-PARAM-DEF UUID="113743db-269e-4612-80c6-98d2d0a5227a">
+											<SHORT-NAME>SpiCsIdentifier</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Parameter not used.
+
+This parameter defines the symbolic name to identify the Chip Select (CS) allocated to this Job.
+</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+										</ECUC-STRING-PARAM-DEF>
+										<!-- PARAMETER DEFINITION: SpiCsPolarity -->
+										<ECUC-ENUMERATION-PARAM-DEF UUID="b744f596-34c0-40c3-baca-8d0d1138a6c0">
+											<SHORT-NAME>SpiCsPolarity</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Parameter not used.
+
+This parameter defines the active polarity of chip select.
+</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<LITERALS>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="1d9e71b2-4220-4b46-b388-38e8e63284f6">
+													<SHORT-NAME>HIGH</SHORT-NAME>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="c37877d5-a897-4939-8f66-d3caf13ea744">
+													<SHORT-NAME>LOW</SHORT-NAME>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+											</LITERALS>
+										</ECUC-ENUMERATION-PARAM-DEF>
+										<!-- PARAMETER DEFINITION: SpiCsSelection -->
+										<ECUC-ENUMERATION-PARAM-DEF UUID="bb9f3ebd-6b0b-4aec-9f00-fb1e73594821">
+											<SHORT-NAME>SpiCsSelection</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Parameter not used.
+
+When the chip select handling is enabled (see SpiEnableCs), then this parameter specifies if the chip select is handled automatically by Peripheral HW engine or via general purpose IO by Spi driver.
+</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>CS_VIA_PERIPHERAL_ENGINE</DEFAULT-VALUE>
+											<LITERALS>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="cfa9e2d9-7b7d-4b42-b91d-0c47f25596c6">
+													<SHORT-NAME>CS_VIA_GPIO</SHORT-NAME>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="896f7b13-cb48-4fc3-8741-7aac9b83f9e7">
+													<SHORT-NAME>CS_VIA_PERIPHERAL_ENGINE</SHORT-NAME>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+											</LITERALS>
+										</ECUC-ENUMERATION-PARAM-DEF>
+										<!-- PARAMETER DEFINITION: SpiDataShiftEdge -->
+										<ECUC-ENUMERATION-PARAM-DEF UUID="d3c455e9-c0dc-4902-b12b-92768c65a208">
+											<SHORT-NAME>SpiDataShiftEdge</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Parameter not used.
+
+This parameter defines the SPI data shift edge.
+
+</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<LITERALS>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="8846554e-e502-4583-8441-cd65eef944d1">
+													<SHORT-NAME>LEADING</SHORT-NAME>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="f7b0b6f2-edcd-40e1-b1df-959c364925b8">
+													<SHORT-NAME>TRAILING</SHORT-NAME>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+											</LITERALS>
+										</ECUC-ENUMERATION-PARAM-DEF>
+										<!-- PARAMETER DEFINITION: SpiEnableCs -->
+										<ECUC-BOOLEAN-PARAM-DEF UUID="17e716f8-6d21-43ba-8ecb-a8b5679cde6b">
+											<SHORT-NAME>SpiEnableCs</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter defines whether the chip select handling functions are enabled or disabled.
+
+True: Chip select handling functions are enabled.
+False: Chip select handling functions are disabled.
+</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>true</DEFAULT-VALUE>
+										</ECUC-BOOLEAN-PARAM-DEF>
+										<!-- PARAMETER DEFINITION: SpiHwUnit -->
+										<ECUC-ENUMERATION-PARAM-DEF UUID="2bc034aa-0657-4781-a3d8-ed7fde0ceee6">
+											<SHORT-NAME>SpiHwUnit</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter is the symbolic name to identify the HW SPI Hardware microcontroller peripheral allocated to this Job.</L-2>
+											</DESC>
+											<INTRODUCTION>
+												<P>
+													<L-1 L="EN">microcontroller peripheral allocated to this Job.</L-1>
+												</P>
+											</INTRODUCTION>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>CSIB0</DEFAULT-VALUE>
+											<LITERALS>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="a5d1d95d-59cb-4e8c-bf97-3ad8e707f060">
+													<SHORT-NAME>CSIB0</SHORT-NAME>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="21a94d71-4003-4704-a25a-22d7efe12cc4">
+													<SHORT-NAME>CSIB1</SHORT-NAME>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="9fe52033-06fb-4996-9d9c-b9b97c323229">
+													<SHORT-NAME>CSIB2</SHORT-NAME>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="e5cc02c4-f8b3-407c-bbf6-6c1eb91509b4">
+													<SHORT-NAME>CSIB3</SHORT-NAME>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="0fce8919-e181-461d-b284-ac2120d9faf0">
+													<SHORT-NAME>CSIB4</SHORT-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="53c5c9a3-5bdd-4d90-ad9b-6813dcaeab0a">
+													<SHORT-NAME>CSIB5</SHORT-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="db70bfa7-a85b-4510-866b-4a1fa7c78e6c">
+													<SHORT-NAME>CSIB6</SHORT-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="d916869d-032c-4316-8a6e-95f6c6925086">
+													<SHORT-NAME>CSIB7</SHORT-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="508df8f7-f272-4974-b6c5-d1c5ad283921">
+													<SHORT-NAME>CSIB8</SHORT-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="0c4c8df7-36bb-495d-9a27-de28aed8ee81">
+													<SHORT-NAME>CSIB9</SHORT-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="b5c066e4-5442-4914-8921-a1c239437ced">
+													<SHORT-NAME>CSIB10</SHORT-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="ebfa6249-bff3-42ed-a00a-01668ffdce7f">
+													<SHORT-NAME>CSIB11</SHORT-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+											</LITERALS>
+										</ECUC-ENUMERATION-PARAM-DEF>
+										<!-- PARAMETER DEFINITION: SpiShiftClockIdleLevel -->
+										<ECUC-ENUMERATION-PARAM-DEF UUID="7adc7641-4d4a-4952-8b51-821349cd2fe6">
+											<SHORT-NAME>SpiShiftClockIdleLevel</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Parameter not used.
+
+This parameter defines the SPI shift clock idle level.
+</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<LITERALS>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="feace7d7-3297-43ed-bd20-9a70748a6432">
+													<SHORT-NAME>HIGH</SHORT-NAME>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="6c2c4a3a-0923-46a5-b3fc-c64a74e4e783">
+													<SHORT-NAME>LOW</SHORT-NAME>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+											</LITERALS>
+										</ECUC-ENUMERATION-PARAM-DEF>
+										<!-- PARAMETER DEFINITION: SpiTimeClk2Cs -->
+										<ECUC-FLOAT-PARAM-DEF UUID="7901a73f-135b-4bde-ba6b-de930aef0e36">
+											<SHORT-NAME>SpiTimeClk2Cs</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Parameter not used.
+
+This parameter defines the timing between clock and chip select (in seconds) - This parameter allows to use a range of values from 0 up to 0.0001 seconds.
+</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:Display">
+														<SD GID="DV:BaseUnit">SEC</SD>
+														<SD GID="DV:Unit">MSEC</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<INTRODUCTION>
+												<P>
+													<L-1 L="EN">The real configuration-value used in software BSW-SPI is calculated out of this by the generator-tools</L-1>
+												</P>
+											</INTRODUCTION>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<MAX>1E-4</MAX>
+											<MIN>0</MIN>
+										</ECUC-FLOAT-PARAM-DEF>
+									</PARAMETERS>
+								</ECUC-PARAM-CONF-CONTAINER-DEF>
+								<!-- Container Definition: SpiJob -->
+								<ECUC-PARAM-CONF-CONTAINER-DEF UUID="933d1447-afc2-4a9b-b9a7-71efe1c40e01">
+									<SHORT-NAME>SpiJob</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This container includes all data needed to configure one SPI-Job, amongst others the connection between the internal SPI unit and the special settings for an external device is done.
+</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:postBuildSelectableChangeable">false</SD>
+												<SD GID="DV:postBuildNotDeletable">false</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+									<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+									<MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+									<PARAMETERS>
+										<!-- PARAMETER DEFINITION: SpiHwUnitSynchronous -->
+										<ECUC-ENUMERATION-PARAM-DEF UUID="38a0ec56-e39c-4814-9f29-64a804af2c17">
+											<SHORT-NAME>SpiHwUnitSynchronous</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter defines whether the SpiJob should use its containing SpiDriver in a sychnronous or assynchronos manner.  If the parameter is not set, the SpiChannel uses the driver in an asynchronous way.
+
+SYNCHRONOUS: The the SpiJob uses its containing SpiDriver in a synchronous manner.
+ASYNCHRONOUS: The the SpiJob uses its containing SpiDriver in a asynchronous manner.
+</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<LITERALS>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="b9330d6a-8d62-4e11-8b5a-30cbb94e6743">
+													<SHORT-NAME>ASYNCHRONOUS</SHORT-NAME>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="cc5c5fdf-9ab9-4dc7-9b30-dc74fe37e2f7">
+													<SHORT-NAME>SYNCHRONOUS</SHORT-NAME>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+											</LITERALS>
+										</ECUC-ENUMERATION-PARAM-DEF>
+										<!-- PARAMETER DEFINITION: SpiJobEndNotification -->
+										<ECUC-FUNCTION-NAME-DEF UUID="9a6ba900-c576-4e49-860e-9dcac1b44cad">
+											<SHORT-NAME>SpiJobEndNotification</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter defines the name of a callback function for job end notification.
+
+If no notification should be called for job end notification, please use one of the following capabilities:
+ - Delete the parameter SpiJobEndNotification
+ - Leave the parameter empty
+ - Configure the parameter with "NULL_PTR"
+
+If the parameter has an invalid expression, the behaviour is undefined.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+										</ECUC-FUNCTION-NAME-DEF>
+										<!-- PARAMETER DEFINITION: SpiJobId -->
+										<ECUC-INTEGER-PARAM-DEF UUID="3ba9f475-bc2b-467f-a6b8-2fbf2eeb7431">
+											<SHORT-NAME>SpiJobId</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Parameter not used.
+
+This parameter defines the SPI Job ID, used as parameter in SPI API functions.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>0</DEFAULT-VALUE>
+											<MAX>65535</MAX>
+											<MIN>0</MIN>
+										</ECUC-INTEGER-PARAM-DEF>
+										<!-- PARAMETER DEFINITION: SpiJobPriority -->
+										<ECUC-INTEGER-PARAM-DEF UUID="331da018-dca0-47cc-8a60-ea94ee6ecc63">
+											<SHORT-NAME>SpiJobPriority</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter defines the job priority: 0, lowest, 3, highest priority
+</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:Display">
+														<SD GID="DV:DefaultFormat">DEC</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>0</DEFAULT-VALUE>
+											<MAX>3</MAX>
+											<MIN>0</MIN>
+										</ECUC-INTEGER-PARAM-DEF>
+									</PARAMETERS>
+									<REFERENCES>
+										<!-- Reference Definition: SpiDeviceAssignment -->
+										<ECUC-REFERENCE-DEF UUID="650709d0-04b1-45c8-bd69-b3e5f5e7f4c9">
+											<SHORT-NAME>SpiDeviceAssignment</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Reference to the external device used by this job
+</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Spi/SpiDriver/SpiExternalDevice</DESTINATION-REF>
+										</ECUC-REFERENCE-DEF>
+									</REFERENCES>
+									<SUB-CONTAINERS>
+										<!-- Container Definition: SpiChannelList -->
+										<ECUC-PARAM-CONF-CONTAINER-DEF UUID="189927f2-9abb-4c28-a1d5-34372d8407e5">
+											<SHORT-NAME>SpiChannelList</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">This container includes references to SPI channels and their order within the job.
+</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:CfgPostBuild">
+														<SD GID="DV:postBuildSelectableChangeable">false</SD>
+														<SD GID="DV:postBuildNotDeletable">false</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+											<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+											<MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+											<PARAMETERS>
+												<!-- PARAMETER DEFINITION: SpiChannelIndex -->
+												<ECUC-INTEGER-PARAM-DEF UUID="947246de-784d-4a44-961a-fb983140ea31">
+													<SHORT-NAME>SpiChannelIndex</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Parameter not used.
+
+This parameter defines  the order of channels within the job.
+</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<MAX>255</MAX>
+													<MIN>0</MIN>
+												</ECUC-INTEGER-PARAM-DEF>
+											</PARAMETERS>
+											<REFERENCES>
+												<!-- Reference Definition: SpiChannelAssignment -->
+												<ECUC-REFERENCE-DEF UUID="0ec2110e-7ced-4e37-916c-ea36fc70459a">
+													<SHORT-NAME>SpiChannelAssignment</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Reference to an SPI channel.
+</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Spi/SpiDriver/SpiChannel</DESTINATION-REF>
+												</ECUC-REFERENCE-DEF>
+											</REFERENCES>
+										</ECUC-PARAM-CONF-CONTAINER-DEF>
+									</SUB-CONTAINERS>
+								</ECUC-PARAM-CONF-CONTAINER-DEF>
+								<!-- Container Definition: SpiSequence -->
+								<ECUC-PARAM-CONF-CONTAINER-DEF UUID="3571b8e6-e9d4-46fe-afa5-909d9352eee8">
+									<SHORT-NAME>SpiSequence</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This container includes all data needed to configure one SPI-sequence.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:postBuildSelectableChangeable">false</SD>
+												<SD GID="DV:postBuildNotDeletable">false</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+									<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+									<MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+									<PARAMETERS>
+										<!-- PARAMETER DEFINITION: SpiInterruptibleSequence -->
+										<ECUC-BOOLEAN-PARAM-DEF UUID="6c1c2130-60d7-412c-867c-a3735508fc6c">
+											<SHORT-NAME>SpiInterruptibleSequence</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter defines whether this sequence can be suspended by another one.
+
+True: This sequence can be suspended by another one.
+False: This sequence can not be suspended by another one.
+</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>false</DEFAULT-VALUE>
+										</ECUC-BOOLEAN-PARAM-DEF>
+										<!-- PARAMETER DEFINITION: SpiSeqEndNotification -->
+										<ECUC-FUNCTION-NAME-DEF UUID="24f82ada-a780-4940-8a7f-9fdae7a31141">
+											<SHORT-NAME>SpiSeqEndNotification</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter defines the name of a callback function for sequence end notification.
+
+If no notification should be called for sequence end notification, please use one of the following capabilities:
+ - Delete the parameter SpiSeqEndNotification
+ - Leave the parameter empty
+ - Configure the parameter with "NULL_PTR"
+
+If the parameter has an invalid expression, the behaviour is undefined.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+										</ECUC-FUNCTION-NAME-DEF>
+										<!-- PARAMETER DEFINITION: SpiSequenceId -->
+										<ECUC-INTEGER-PARAM-DEF UUID="632996fb-d6f4-48e3-a190-61ba8a1c0120">
+											<SHORT-NAME>SpiSequenceId</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter defines the SPI Sequence ID, used as parameter in SPI API functions.
+</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>0</DEFAULT-VALUE>
+											<MAX>255</MAX>
+											<MIN>0</MIN>
+										</ECUC-INTEGER-PARAM-DEF>
+									</PARAMETERS>
+									<REFERENCES>
+										<!-- Reference Definition: SpiJobAssignment -->
+										<ECUC-REFERENCE-DEF UUID="afe32e43-5ccb-4fbe-804b-dcffcd4dc9dd">
+											<SHORT-NAME>SpiJobAssignment</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Reference to an SpiJob (A sequence references several jobs, which are executed during a communication sequence)
+</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Spi/SpiDriver/SpiJob</DESTINATION-REF>
+										</ECUC-REFERENCE-DEF>
+									</REFERENCES>
+								</ECUC-PARAM-CONF-CONTAINER-DEF>
+							</SUB-CONTAINERS>
+						</ECUC-PARAM-CONF-CONTAINER-DEF>
+						<!-- Container Definition: SpiGeneral -->
+						<ECUC-PARAM-CONF-CONTAINER-DEF UUID="35596e3b-fa48-452c-90c6-db133862083c">
+							<SHORT-NAME>SpiGeneral</SHORT-NAME>
+							<DESC>
+								<L-2 L="EN">General configuration parameteres of the SPI module.
+</L-2>
+							</DESC>
+							<ADMIN-DATA>
+								<SDGS>
+									<SDG GID="DV:CfgPostBuild">
+										<SD GID="DV:postBuildSelectableChangeable">false</SD>
+										<SD GID="DV:postBuildNotDeletable">false</SD>
+									</SDG>
+								</SDGS>
+							</ADMIN-DATA>
+							<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+							<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+							<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+							<MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+							<PARAMETERS>
+								<!-- PARAMETER DEFINITION: SpiCancelApi -->
+								<ECUC-BOOLEAN-PARAM-DEF UUID="a368b00d-6d84-4357-8197-9c56bee34366">
+									<SHORT-NAME>SpiCancelApi</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter defines whether the function Spi_Cancel() is enabled or disabled.
+
+True: API Spi_Cancel()  is supported (function provided)
+False: API Spi_Cancel() is not supported (function not provided)
+</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>true</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: SpiChannelBuffersAllowed -->
+								<ECUC-INTEGER-PARAM-DEF UUID="585e298f-53c4-441b-8c77-c00c3da27066">
+									<SHORT-NAME>SpiChannelBuffersAllowed</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter defines whether the SPI Handler/Driver Channel Buffers usage is allowed and delivered.
+
+0: The SPI Handler/Driver manages only Internal Buffers
+1: The SPI Handler/Driver manages only External Buffers
+2: The SPI Handler/Driver manages both buffers types</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:DefaultFormat">DEC</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<INTRODUCTION>
+										<P>
+											<L-1 L="EN">delivered.
+
+                                        IB = 0; 
+                                        EB = 1;  
+                                        IB/EB = 2;</L-1>
+										</P>
+									</INTRODUCTION>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>2</DEFAULT-VALUE>
+									<MAX>2</MAX>
+									<MIN>0</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: SpiDevErrorDetect -->
+								<ECUC-BOOLEAN-PARAM-DEF UUID="d2dce023-f4b2-4d24-8bf3-3e9adb770983">
+									<SHORT-NAME>SpiDevErrorDetect</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter switches the Development Error Detection and Notification ON or OFF.
+
+True: Development error detection is enabled.
+False: Development error detection is disabeld.
+
+Note: In general, the development error detection is recommended during pre-test phase. It is not recommended to enable the development error detection in production code due to increased runtime and ROM needs.
+
+</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>true</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: SpiHwStatusApi -->
+								<ECUC-BOOLEAN-PARAM-DEF UUID="37ac55e1-95b9-485d-ae0a-6ceb98366bbf">
+									<SHORT-NAME>SpiHwStatusApi</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter defines whether the function Spi_GetHWUnitStatus() is enabled or disabled.
+
+True: API Spi_GetHWUnitStatus()  is supported (function provided)
+False: API Spi_GetHWUnitStatus() is not supported (function not provided)
+</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>true</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: SpiInterruptibleSeqAllowed -->
+								<ECUC-BOOLEAN-PARAM-DEF UUID="ebb4d673-aeb4-47d4-b5e0-11d7883bed91">
+									<SHORT-NAME>SpiInterruptibleSeqAllowed</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This paramater defines whether the Interruptible Sequences handling functionality is ON or OFF.
+
+True: Interruptible Sequences handling functionality is ON.
+False: Interruptible Sequences handling functionality is OFF.
+</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>true</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: SpiLevelDelivered -->
+								<ECUC-INTEGER-PARAM-DEF UUID="396f7511-7760-4ed5-aef6-ac697126b56c">
+									<SHORT-NAME>SpiLevelDelivered</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter defines the SPI Handler/Driver level of scalable functionality that is available and delivered.
+
+LEVEL 0, Simple Synchronous SPI Handler/Driver
+LEVEL 1, Basic Asynchronous SPI Handler/Driver
+LEVEL 2, Enhanced (Synchronous/Asynchronous) SPI Handler/Driver</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:DefaultFormat">DEC</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<INTRODUCTION>
+										<P>
+											<L-1 L="EN">available and delivered.</L-1>
+										</P>
+									</INTRODUCTION>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>2</DEFAULT-VALUE>
+									<MAX>2</MAX>
+									<MIN>0</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: SpiSupportConcurrentSyncTransmit -->
+								<ECUC-BOOLEAN-PARAM-DEF UUID="6e028ccb-1570-4767-84a6-36a49ed97f6a">
+									<SHORT-NAME>SpiSupportConcurrentSyncTransmit</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Parameter not used.
+
+This parameter defines whether concurrent Spi_SyncTransmit() calls for different sequences shall be configurable.
+</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: SpiVersionInfoApi -->
+								<ECUC-BOOLEAN-PARAM-DEF UUID="4b9abd80-720e-43be-818c-5701777d9479">
+									<SHORT-NAME>SpiVersionInfoApi</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter enables/disables the function Spi_GetVersionInfo() to get major, minor and patch version information.
+</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-FLOAT-PARAM-DEF UUID="64174cfc-3477-474b-a024-a88adf00c858">
+									<SHORT-NAME>SpiMainFunctionPeriod</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter defines the cycle time of the function Spi_MainFunction_Handling in seconds. The parameter is not used by the driver it self, but it is used by upper layer.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:BaseUnit">SEC</SD>
+												<SD GID="DV:Unit">MSEC</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>0.01</DEFAULT-VALUE>
+									<MAX>1</MAX>
+									<MIN>1E-07</MIN>
+								</ECUC-FLOAT-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="f3398602-b013-43a1-8ef3-7758f09593f3">
+									<SHORT-NAME>SpiSafeBswChecks</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Selects if safety checks are used. These checks improve robustness as e.g. invalid parameters are checked before function is executed. This attribute has to be enabled for safety projects where this component is mapped to an ASIL partition.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+							</PARAMETERS>
+						</ECUC-PARAM-CONF-CONTAINER-DEF>
+						<!-- Container Definition: SpiPublishedInformation -->
+						<ECUC-PARAM-CONF-CONTAINER-DEF UUID="7b7c8c9e-a780-40a6-b97d-ad883fe9637e">
+							<SHORT-NAME>SpiPublishedInformation</SHORT-NAME>
+							<DESC>
+								<L-2 L="EN">This container includes all SPI specific published information parameters.
+</L-2>
+							</DESC>
+							<ADMIN-DATA>
+								<SDGS>
+									<SDG GID="DV:CfgPostBuild">
+										<SD GID="DV:postBuildSelectableChangeable">false</SD>
+										<SD GID="DV:postBuildNotDeletable">false</SD>
+									</SDG>
+								</SDGS>
+							</ADMIN-DATA>
+							<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+							<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+							<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+							<MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+							<PARAMETERS>
+								<!-- PARAMETER DEFINITION: SpiMaxHwUnit -->
+								<ECUC-INTEGER-PARAM-DEF UUID="ccaff10e-d894-4143-985b-cd5884ad6169">
+									<SHORT-NAME>SpiMaxHwUnit</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter defines the number of different SPI hardware microcontroller peripherals (units/busses) available and handled by this SPI Handler/Driver module.
+</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PUBLISHED-INFORMATION</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>12</DEFAULT-VALUE>
+									<MAX>18446744073709551615</MAX>
+									<MIN>0</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+							</PARAMETERS>
+						</ECUC-PARAM-CONF-CONTAINER-DEF>
+					</CONTAINERS>
+				</ECUC-MODULE-DEF>
+				<BSW-IMPLEMENTATION UUID="ff6c62b5-a9b9-47ea-a5a3-c745a412f225">
+					<SHORT-NAME>Spi_Impl</SHORT-NAME>
+					<PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+					<SW-VERSION>2.05.00</SW-VERSION>
+					<USED-CODE-GENERATOR>cMSR</USED-CODE-GENERATOR>
+					<VENDOR-ID>30</VENDOR-ID>
+					<AR-RELEASE-VERSION>4.00.03</AR-RELEASE-VERSION>
+					<BEHAVIOR-REF DEST="BSW-INTERNAL-BEHAVIOR">/MICROSAR/Spi_ib_bswmd/BswModuleDescriptions/Spi/SpiBehavior</BEHAVIOR-REF>
+					<PRECONFIGURED-CONFIGURATION-REFS>
+						<PRECONFIGURED-CONFIGURATION-REF DEST="ECUC-MODULE-CONFIGURATION-VALUES">/MICROSAR/Spi_Pre</PRECONFIGURED-CONFIGURATION-REF>
+					</PRECONFIGURED-CONFIGURATION-REFS>
+					<RECOMMENDED-CONFIGURATION-REFS>
+						<RECOMMENDED-CONFIGURATION-REF DEST="ECUC-MODULE-CONFIGURATION-VALUES">/MICROSAR/Spi_Rec</RECOMMENDED-CONFIGURATION-REF>
+					</RECOMMENDED-CONFIGURATION-REFS>
+					<VENDOR-SPECIFIC-MODULE-DEF-REFS>
+						<VENDOR-SPECIFIC-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/MICROSAR/Spi</VENDOR-SPECIFIC-MODULE-DEF-REF>
+					</VENDOR-SPECIFIC-MODULE-DEF-REFS>
+				</BSW-IMPLEMENTATION>
+				<ECUC-MODULE-CONFIGURATION-VALUES UUID="c2218851-7537-4872-9497-b48ad0dec592">
+					<SHORT-NAME>Spi_Pre</SHORT-NAME>
+					<DEFINITION-REF DEST="ECUC-MODULE-DEF">/MICROSAR/Spi</DEFINITION-REF>
+				</ECUC-MODULE-CONFIGURATION-VALUES>
+				<ECUC-MODULE-CONFIGURATION-VALUES UUID="5ae94cd1-cd45-4be8-85a0-9fbfc6fde009">
+					<SHORT-NAME>Spi_Rec</SHORT-NAME>
+					<DEFINITION-REF DEST="ECUC-MODULE-DEF">/MICROSAR/Spi</DEFINITION-REF>
+				</ECUC-MODULE-CONFIGURATION-VALUES>
+			</ELEMENTS>
+		</AR-PACKAGE>
+	</AR-PACKAGES>
+</AUTOSAR>

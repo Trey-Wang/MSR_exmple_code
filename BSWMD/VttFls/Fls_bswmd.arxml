@@ -1,0 +1,1713 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-0-3.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://autosar.org/schema/r4.0">
+	<AR-PACKAGES>
+		<AR-PACKAGE UUID="9bfa930c-6183-434c-ae23-6ec32f33221f">
+			<SHORT-NAME>MICROSAR</SHORT-NAME>
+			<ELEMENTS>
+				<ECUC-MODULE-DEF UUID="47642829-7d7e-4e99-bf31-b1b8f76731c0">
+					<SHORT-NAME>Fls</SHORT-NAME>
+					<DESC>
+						<L-2 L="EN">Configuration of the Fls (internal or external flash driver) module.</L-2>
+					</DESC>
+					<CATEGORY>VENDOR_SPECIFIC_MODULE_DEFINITION</CATEGORY>
+					<ADMIN-DATA>
+						<DOC-REVISIONS>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.00.00</REVISION-LABEL>
+								<ISSUED-BY>virlg</ISSUED-BY>
+								<DATE>2013-09-18T10:59:58+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Initial Creation</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00068488</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.00.01</REVISION-LABEL>
+								<ISSUED-BY>virchl</ISSUED-BY>
+								<DATE>2014-03-06T01:59:10+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Modification</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">Totalsize parameter changed</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.00.02</REVISION-LABEL>
+								<ISSUED-BY>virchl</ISSUED-BY>
+								<DATE>2014-05-15T10:05:42+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Modification</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00070801, ESCAN00074741</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.00.03</REVISION-LABEL>
+								<ISSUED-BY>virchl</ISSUED-BY>
+								<DATE>2014-11-21T01:00:16+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">No modifications here</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.00.04</REVISION-LABEL>
+								<ISSUED-BY>virchl</ISSUED-BY>
+								<DATE>2014-11-25T06:48:14+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Multiplicity of FlsCfgIncludeList set to 0:n</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>2.00.00</REVISION-LABEL>
+								<ISSUED-BY>virchl</ISSUED-BY>
+								<DATE>2015-01-20T11:02:05+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">SwVersion set to 2.00.00</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">FEAT-254</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>2.00.00</REVISION-LABEL>
+								<ISSUED-BY>virchl</ISSUED-BY>
+								<DATE>2015-01-20T11:02:25+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Default value of FlsVersionInfoApi set to false</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>2.00.01</REVISION-LABEL>
+								<ISSUED-BY>virchl</ISSUED-BY>
+								<DATE>2015-04-07T10:40:34+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">SwVersion set to 2.00.01</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00082264</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>2.01.00</REVISION-LABEL>
+								<ISSUED-BY>virchl</ISSUED-BY>
+								<DATE>2015-07-08T10:10:27+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">SwVersion set to 2.01.00</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>2.01.00</REVISION-LABEL>
+								<ISSUED-BY>virchl</ISSUED-BY>
+								<DATE>2015-07-08T10:10:49+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">DisplaySettings for CFG5-Integer-Parameters added</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>2.02.00</REVISION-LABEL>
+								<ISSUED-BY>virchl</ISSUED-BY>
+								<DATE>2015-08-27T11:23:29+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">SwVersion set to 2.02.00</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">FEAT-1372</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>2.02.00</REVISION-LABEL>
+								<ISSUED-BY>virchl</ISSUED-BY>
+								<DATE>2015-09-09T08:17:52+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Parameter FlsCfgIncludeList deleted</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00085073</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>2.02.00</REVISION-LABEL>
+								<ISSUED-BY>virchl</ISSUED-BY>
+								<DATE>2015-10-06T04:59:53+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Multiplicity of Container FlsSectorList set to 1:1</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00085086</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>2.03.00</REVISION-LABEL>
+								<ISSUED-BY>virbmz</ISSUED-BY>
+								<DATE>2016-04-27T05:03:27+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">SwVersion set to 3.00.00</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00089564</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>2.03.02</REVISION-LABEL>
+								<ISSUED-BY>virbmz</ISSUED-BY>
+								<DATE>2016-04-27T05:03:27+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">SwVersion set to 3.00.02</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00090667, FEAT1842</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>2.04.00</REVISION-LABEL>
+								<ISSUED-BY>virbmz</ISSUED-BY>
+								<DATE>2017-01-05T05:03:03+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">FEAT1824  Support a component-specific SafeBSW configuration switch (Vtt Mcal), Version updates</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">FEAT-1824</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>2.05.00</REVISION-LABEL>
+								<ISSUED-BY>virbmz</ISSUED-BY>
+								<DATE>2017-05-18T10:52:57+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">SwVersion set</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">TASK-33340 - Replace API-Infixed Init Function with Define</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>2.06.00</REVISION-LABEL>
+								<ISSUED-BY>virbmz</ISSUED-BY>
+								<DATE>2017-06-29T09:59:47+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">SwVersion set</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">STORY-1303 - Add Support of TC3xx FEE in VTT</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+						</DOC-REVISIONS>
+					</ADMIN-DATA>
+					<INTRODUCTION>
+						<P>
+							<L-1 L="EN">Its multiplicity describes the number of flash drivers present, so there will be one container for each flash driver in the ECUC template. When no flash driver is present then the multiplicity is 0.</L-1>
+						</P>
+					</INTRODUCTION>
+					<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+					<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+					<REFINED-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/AUTOSAR/EcucDefs/Fls</REFINED-MODULE-DEF-REF>
+					<SUPPORTED-CONFIG-VARIANTS>
+						<SUPPORTED-CONFIG-VARIANT>VARIANT-PRE-COMPILE</SUPPORTED-CONFIG-VARIANT>
+					</SUPPORTED-CONFIG-VARIANTS>
+					<CONTAINERS>
+						<!-- Container Definition: FlsConfigSet -->
+						<ECUC-PARAM-CONF-CONTAINER-DEF UUID="4aea1db0-891e-48dc-b339-697cc0a6cb89">
+							<SHORT-NAME>FlsConfigSet</SHORT-NAME>
+							<DESC>
+								<L-2 L="EN">This container includes runtime configuration parameters of the flash driver.
+</L-2>
+							</DESC>
+							<ADMIN-DATA>
+								<SDGS>
+									<SDG GID="DV:CfgPostBuild">
+										<SD GID="DV:postBuildSelectableChangeable">false</SD>
+										<SD GID="DV:postBuildNotDeletable">false</SD>
+									</SDG>
+								</SDGS>
+							</ADMIN-DATA>
+							<INTRODUCTION>
+								<P>
+									<L-1 L="EN">Implementation Type: Fls_ConfigType.</L-1>
+								</P>
+							</INTRODUCTION>
+							<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+							<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+							<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+							<MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+							<PARAMETERS>
+								<!-- PARAMETER DEFINITION: FlsAcErase -->
+								<ECUC-INTEGER-PARAM-DEF UUID="bf31c18f-d5e2-4bd5-a772-88e168a02ea2">
+									<SHORT-NAME>FlsAcErase</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Parameter not used.
+
+This parameter defines the address offset in RAM to which the erase flash access code shall be loaded.
+</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:DefaultFormat">HEX</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<INTRODUCTION>
+										<P>
+											<L-1 L="EN">Used as function pointer to access the erase flash access code.</L-1>
+										</P>
+									</INTRODUCTION>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<MAX>4294967295</MAX>
+									<MIN>0</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: FlsAcWrite -->
+								<ECUC-INTEGER-PARAM-DEF UUID="68e4a24c-ab12-427d-a510-01f1cb68fd37">
+									<SHORT-NAME>FlsAcWrite</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Parameter not used.
+
+This parameter defines the address offset in RAM to which the write flash access code shall be loaded.
+</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:DefaultFormat">HEX</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<INTRODUCTION>
+										<P>
+											<L-1 L="EN">Used as function pointer to access the write flash access code.</L-1>
+										</P>
+									</INTRODUCTION>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<MAX>4294967295</MAX>
+									<MIN>0</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: FlsCallCycle -->
+								<ECUC-FLOAT-PARAM-DEF UUID="25c5b442-fc68-4851-861a-3167029dfe8a">
+									<SHORT-NAME>FlsCallCycle</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter defines the cycle time of calls of the flash driver's main function (in seconds).
+</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:BaseUnit">SEC</SD>
+												<SD GID="DV:Unit">MSEC</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>0.01</DEFAULT-VALUE>
+									<MAX>1</MAX>
+									<MIN>1E-07</MIN>
+								</ECUC-FLOAT-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: FlsDefaultMode -->
+								<ECUC-ENUMERATION-PARAM-DEF UUID="b3be0c00-5036-49e7-8c3b-ca2b5020f14d">
+									<SHORT-NAME>FlsDefaultMode</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter defines the default FLS device mode after initialization.
+
+MEMIF_MODE_FAST: The driver is working in fast mode (fast read access / SPI burst access).
+MEMIF_MODE_SLOW: The driver is working in slow mode (default)
+</L-2>
+									</DESC>
+									<INTRODUCTION>
+										<P>
+											<L-1 L="EN">Implementation Type: MemIf_ModeType.</L-1>
+										</P>
+									</INTRODUCTION>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>MEMIF_MODE_SLOW</DEFAULT-VALUE>
+									<LITERALS>
+										<ECUC-ENUMERATION-LITERAL-DEF UUID="88dc6c16-e7d5-416f-9e7b-95ec3acf7442">
+											<SHORT-NAME>MEMIF_MODE_FAST</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">Fast</L-4>
+											</LONG-NAME>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+										</ECUC-ENUMERATION-LITERAL-DEF>
+										<ECUC-ENUMERATION-LITERAL-DEF UUID="223aad30-79bf-4329-899d-64ca4e194d7b">
+											<SHORT-NAME>MEMIF_MODE_SLOW</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">Slow</L-4>
+											</LONG-NAME>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+										</ECUC-ENUMERATION-LITERAL-DEF>
+									</LITERALS>
+								</ECUC-ENUMERATION-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: FlsJobEndNotification -->
+								<ECUC-FUNCTION-NAME-DEF UUID="7377db62-10e0-4594-9abf-d67b97295d82">
+									<SHORT-NAME>FlsJobEndNotification</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter defines the name of a callback function for positive job result.
+
+If no notification should be called for a positive job result, please use one of the following capabilities:
+ - Delete the parameter FlsJobEndNotification
+ - Leave the parameter empty
+ - Configure the parameter with "NULL_PTR"
+
+If the parameter has an invalid expression, the behaviour is undefined.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+								</ECUC-FUNCTION-NAME-DEF>
+								<!-- PARAMETER DEFINITION: FlsJobErrorNotification -->
+								<ECUC-FUNCTION-NAME-DEF UUID="588d9b2f-6bb9-4314-b704-d3a87011f036">
+									<SHORT-NAME>FlsJobErrorNotification</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter defines the name of a callback function for negative job result.
+
+If no notification should be called for a negative job result, please use one of the following capabilities:
+ - Delete the parameter FlsJobErrorNotification
+ - Leave the parameter empty
+ - Configure the parameter with "NULL_PTR"
+
+If the parameter has an invalid expression, the behaviour is undefined.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+								</ECUC-FUNCTION-NAME-DEF>
+								<!-- PARAMETER DEFINITION: FlsMaxReadFastMode -->
+								<ECUC-INTEGER-PARAM-DEF UUID="4c781f98-ddaa-49f9-a3fc-c462adacb596">
+									<SHORT-NAME>FlsMaxReadFastMode</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter defines the maximum number of bytes to read or compare in one cycle of the flash driver's job processing function in fast mode.
+</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:BaseUnit">BYTE</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>16</DEFAULT-VALUE>
+									<MAX>4294967295</MAX>
+									<MIN>0</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: FlsMaxReadNormalMode -->
+								<ECUC-INTEGER-PARAM-DEF UUID="835b3231-3de9-43be-883a-ddf5e8fc2f38">
+									<SHORT-NAME>FlsMaxReadNormalMode</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter defines the maximum number of bytes to read or compare in one cycle of the flash driver's job processing function in normal mode.
+</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:BaseUnit">BYTE</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>8</DEFAULT-VALUE>
+									<MAX>4294967295</MAX>
+									<MIN>0</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: FlsMaxWriteFastMode -->
+								<ECUC-INTEGER-PARAM-DEF UUID="e1058f60-6210-47b8-a9e8-feabdfa8cb14">
+									<SHORT-NAME>FlsMaxWriteFastMode</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter defines the maximum number of bytes to write in one cycle of the flash driver's job processing function in fast mode.
+</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:BaseUnit">BYTE</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>16</DEFAULT-VALUE>
+									<MAX>4294967295</MAX>
+									<MIN>0</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: FlsMaxWriteNormalMode -->
+								<ECUC-INTEGER-PARAM-DEF UUID="cfa9516c-9ead-432f-91ed-236cf015aea9">
+									<SHORT-NAME>FlsMaxWriteNormalMode</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter defines the maximum number of bytes to write in one cycle of the flash driver's job processing function in normal mode.
+</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:BaseUnit">BYTE</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>8</DEFAULT-VALUE>
+									<MAX>4294967295</MAX>
+									<MIN>0</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: FlsProtection -->
+								<ECUC-INTEGER-PARAM-DEF UUID="46834914-2484-45b0-aa54-5d2c08cd6596">
+									<SHORT-NAME>FlsProtection</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Parameter not used.
+
+This parameter defines erase/write protection settings. Only relevant if supported by hardware.
+</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<MAX>4294967295</MAX>
+									<MIN>0</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+							</PARAMETERS>
+							<SUB-CONTAINERS>
+								<!-- Container Definition: FlsDemEventParameterRefs -->
+								<ECUC-PARAM-CONF-CONTAINER-DEF UUID="a3ee72eb-fcf9-4d75-81b3-ab1680534836">
+									<SHORT-NAME>FlsDemEventParameterRefs</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Container not used.
+
+This container includes references to DemEventParameter elements which shall be invoked using the Dem_ReportErrorStatus API in case the corresponding error occurs. The EventId is taken from the referenced DemEventParameter's DemEventId value.
+</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:postBuildSelectableChangeable">false</SD>
+												<SD GID="DV:postBuildNotDeletable">false</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+									<MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+									<REFERENCES>
+										<!-- Symbolic Name Reference Definition: FLS_E_COMPARE_FAILED -->
+										<ECUC-SYMBOLIC-NAME-REFERENCE-DEF UUID="cade02ee-cb34-4bc4-9e97-e47391da81d7">
+											<SHORT-NAME>FLS_E_COMPARE_FAILED</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Reference to the DemEventParameter which shall be issued when the error "Flash compare failed (HW)" has occurred.
+</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Dem/DemConfigSet/DemEventParameter</DESTINATION-REF>
+										</ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+										<!-- Symbolic Name Reference Definition: FLS_E_ERASE_FAILED -->
+										<ECUC-SYMBOLIC-NAME-REFERENCE-DEF UUID="838ccca2-75c3-48c3-bd0a-3b52aa173dd0">
+											<SHORT-NAME>FLS_E_ERASE_FAILED</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Reference to the DemEventParameter which shall be issued when the error "Flash erase failed (HW)" has occurred.
+</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Dem/DemConfigSet/DemEventParameter</DESTINATION-REF>
+										</ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+										<!-- Symbolic Name Reference Definition: FLS_E_READ_FAILED -->
+										<ECUC-SYMBOLIC-NAME-REFERENCE-DEF UUID="fbc3b9fe-f550-4bb5-a989-9d078627f1c5">
+											<SHORT-NAME>FLS_E_READ_FAILED</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Reference to the DemEventParameter which shall be issued when the error "Flash read failed (HW)" has occurred.
+</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Dem/DemConfigSet/DemEventParameter</DESTINATION-REF>
+										</ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+										<!-- Symbolic Name Reference Definition: FLS_E_UNEXPECTED_FLASH_ID -->
+										<ECUC-SYMBOLIC-NAME-REFERENCE-DEF UUID="20290c29-7c16-471f-9760-86aa9ed9f4f2">
+											<SHORT-NAME>FLS_E_UNEXPECTED_FLASH_ID</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Reference to the DemEventParameter which shall be issued when the error "Expected hardware ID not matched" has occurred.
+</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Dem/DemConfigSet/DemEventParameter</DESTINATION-REF>
+										</ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+										<!-- Symbolic Name Reference Definition: FLS_E_WRITE_FAILED -->
+										<ECUC-SYMBOLIC-NAME-REFERENCE-DEF UUID="547e2c77-0c01-454d-abae-07978519d75d">
+											<SHORT-NAME>FLS_E_WRITE_FAILED</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Reference to the DemEventParameter which shall be issued when the error "Flash write failed (HW)" has occurred.
+</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Dem/DemConfigSet/DemEventParameter</DESTINATION-REF>
+										</ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+									</REFERENCES>
+								</ECUC-PARAM-CONF-CONTAINER-DEF>
+								<!-- Container Definition: FlsExternalDriver -->
+								<ECUC-PARAM-CONF-CONTAINER-DEF UUID="746ceac9-19c8-4554-b5ae-d35a83a045cf">
+									<SHORT-NAME>FlsExternalDriver</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Container not used.
+
+This container includes configuration data for external Flash drivers only. Internal Flash drivers do not use the parameter listed in this container, hence its multiplicity is 0 for internal drivers.
+
+</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:postBuildSelectableChangeable">false</SD>
+												<SD GID="DV:postBuildNotDeletable">false</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+									<MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+									<REFERENCES>
+										<!-- Symbolic Name Reference Definition: FlsSpiReference -->
+										<ECUC-SYMBOLIC-NAME-REFERENCE-DEF UUID="79926ffc-b653-4301-9990-d82cbc2402cf">
+											<SHORT-NAME>FlsSpiReference</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Reference to SPI sequence (required for external Flash drivers).
+</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Spi/SpiDriver/SpiSequence</DESTINATION-REF>
+										</ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+									</REFERENCES>
+								</ECUC-PARAM-CONF-CONTAINER-DEF>
+								<!-- Container Definition: FlsSectorList -->
+								<ECUC-PARAM-CONF-CONTAINER-DEF UUID="a2b10407-a624-40f1-bbef-09c4d7e76ca5">
+									<SHORT-NAME>FlsSectorList</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This container includes a list of flashable sectors and pages.
+
+This container is required by the MICROSAR Fee.The emulated Fls does not need this container itself.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:postBuildSelectableChangeable">false</SD>
+												<SD GID="DV:postBuildNotDeletable">false</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+									<MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+									<SUB-CONTAINERS>
+										<!-- Container Definition: FlsSector -->
+										<ECUC-PARAM-CONF-CONTAINER-DEF UUID="59a1b9cb-2a7d-46fa-9022-b85e6c59541a">
+											<SHORT-NAME>FlsSector</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">This container includes the configuration description of a flashable sector
+</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:CfgPostBuild">
+														<SD GID="DV:postBuildSelectableChangeable">false</SD>
+														<SD GID="DV:postBuildNotDeletable">false</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+											<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+											<MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+											<PARAMETERS>
+												<!-- PARAMETER DEFINITION: FlsNumberOfSectors -->
+												<ECUC-INTEGER-PARAM-DEF UUID="0571496a-223f-4c69-a726-db298a3fb2e6">
+													<SHORT-NAME>FlsNumberOfSectors</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">This parameter defines the number of continuous sectors with identical values for FlsSectorSize and FlsSectorPageSize. The parameter FlsSectorStartAddress denotes the start address of the first sector.</L-2>
+													</DESC>
+													<INTRODUCTION>
+														<P>
+															<L-1 L="EN">FlsPageSize. The parameter FlsSectorStartAddress denotes the start address of the first sector.</L-1>
+														</P>
+													</INTRODUCTION>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>16</DEFAULT-VALUE>
+													<MAX>65535</MAX>
+													<MIN>0</MIN>
+												</ECUC-INTEGER-PARAM-DEF>
+												<!-- PARAMETER DEFINITION: FlsPageSize -->
+												<ECUC-INTEGER-PARAM-DEF UUID="c00c76dc-9150-47df-9deb-afcc7c3eb018">
+													<SHORT-NAME>FlsPageSize</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">This parameter defines the size of one page of this sector.
+</L-2>
+													</DESC>
+													<ADMIN-DATA>
+														<SDGS>
+															<SDG GID="DV:Display">
+																<SD GID="DV:BaseUnit">BYTE</SD>
+															</SDG>
+														</SDGS>
+													</ADMIN-DATA>
+													<INTRODUCTION>
+														<P>
+															<L-1 L="EN">Implementation Type: Fls_LengthType.</L-1>
+														</P>
+													</INTRODUCTION>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>8</DEFAULT-VALUE>
+													<MAX>4294967295</MAX>
+													<MIN>0</MIN>
+												</ECUC-INTEGER-PARAM-DEF>
+												<!-- PARAMETER DEFINITION: FlsSectorSize -->
+												<ECUC-INTEGER-PARAM-DEF UUID="4d21e360-3252-42cd-9445-5add356d9180">
+													<SHORT-NAME>FlsSectorSize</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">This parameter defines the size of this sector.
+</L-2>
+													</DESC>
+													<ADMIN-DATA>
+														<SDGS>
+															<SDG GID="DV:Display">
+																<SD GID="DV:BaseUnit">BYTE</SD>
+															</SDG>
+														</SDGS>
+													</ADMIN-DATA>
+													<INTRODUCTION>
+														<P>
+															<L-1 L="EN">Implementation Type: Fls_LengthType.</L-1>
+														</P>
+													</INTRODUCTION>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>8192</DEFAULT-VALUE>
+													<MAX>4294967295</MAX>
+													<MIN>0</MIN>
+												</ECUC-INTEGER-PARAM-DEF>
+												<!-- PARAMETER DEFINITION: FlsSectorStartaddress -->
+												<ECUC-INTEGER-PARAM-DEF UUID="19f36dab-4bbb-4b52-bfb7-5af34b7d1506">
+													<SHORT-NAME>FlsSectorStartaddress</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">This parameter defines the start address of this sector.
+</L-2>
+													</DESC>
+													<ADMIN-DATA>
+														<SDGS>
+															<SDG GID="DV:Display">
+																<SD GID="DV:DefaultFormat">HEX</SD>
+															</SDG>
+														</SDGS>
+													</ADMIN-DATA>
+													<INTRODUCTION>
+														<P>
+															<L-1 L="EN">Implementation Type: Fls_AddressType.</L-1>
+														</P>
+													</INTRODUCTION>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>0</DEFAULT-VALUE>
+													<MAX>4294967295</MAX>
+													<MIN>0</MIN>
+												</ECUC-INTEGER-PARAM-DEF>
+											</PARAMETERS>
+										</ECUC-PARAM-CONF-CONTAINER-DEF>
+									</SUB-CONTAINERS>
+								</ECUC-PARAM-CONF-CONTAINER-DEF>
+							</SUB-CONTAINERS>
+						</ECUC-PARAM-CONF-CONTAINER-DEF>
+						<!-- Container Definition: FlsGeneral -->
+						<ECUC-PARAM-CONF-CONTAINER-DEF UUID="5dd56a70-8d03-4a75-aca8-58464e7dc838">
+							<SHORT-NAME>FlsGeneral</SHORT-NAME>
+							<DESC>
+								<L-2 L="EN">General configuration parameteres of the FLS module.
+</L-2>
+							</DESC>
+							<ADMIN-DATA>
+								<SDGS>
+									<SDG GID="DV:CfgPostBuild">
+										<SD GID="DV:postBuildSelectableChangeable">false</SD>
+										<SD GID="DV:postBuildNotDeletable">false</SD>
+									</SDG>
+								</SDGS>
+							</ADMIN-DATA>
+							<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+							<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+							<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+							<MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+							<PARAMETERS>
+								<!-- PARAMETER DEFINITION: FlsAcLoadOnJobStart -->
+								<ECUC-BOOLEAN-PARAM-DEF UUID="4e0ed739-3f1a-4c04-a3ed-789e3134e89b">
+									<SHORT-NAME>FlsAcLoadOnJobStart</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Parameter not used.
+
+This parameter defines whether the flash access code should be loaded to RAM whenever an erase or write job is startet and unload (overwrite) it after the job has been finished or canceled.
+
+True: Flash access code loaded on job start / unloaded on job end or error.
+False: Flash access code not loaded to / unloaded from RAM at all.
+</L-2>
+									</DESC>
+									<INTRODUCTION>
+										<P>
+											<L-1 L="EN">true:	Flash access code loaded on job start / unloaded on job end  
+                                        	or error.
+                                        false:	Flash access code not loaded to / unloaded from RAM at all.</L-1>
+										</P>
+									</INTRODUCTION>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: FlsBaseAddress -->
+								<ECUC-INTEGER-PARAM-DEF UUID="91a0270e-4c76-4eb9-9569-7d8cdb270f93">
+									<SHORT-NAME>FlsBaseAddress</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Parameter not used.
+
+This parameter defines the flash memory start address.
+</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:DefaultFormat">HEX</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<INTRODUCTION>
+										<P>
+											<L-1 L="EN">FLS169_Conf: This parameter defines the lower boundary for read / write / erase and compare jobs.</L-1>
+										</P>
+									</INTRODUCTION>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>0</DEFAULT-VALUE>
+									<MAX>4294967295</MAX>
+									<MIN>0</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: FlsCancelApi -->
+								<ECUC-BOOLEAN-PARAM-DEF UUID="82b1495d-40ec-4627-a8d3-c4737ecf7f22">
+									<SHORT-NAME>FlsCancelApi</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter defines whether the function Fls_Cancel() is enabled or disabled.
+
+True: API Fls_Cancel()  is supported (function provided)
+False: API Fls_Cancel()  is not supported (function not provided)
+</L-2>
+									</DESC>
+									<INTRODUCTION>
+										<P>
+											<L-1 L="EN">true:	API supported / function provided.
+                                        false:	API not supported / function not provided</L-1>
+										</P>
+									</INTRODUCTION>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: FlsCompareApi -->
+								<ECUC-BOOLEAN-PARAM-DEF UUID="0d489687-d840-4cea-a22c-50549e3bc182">
+									<SHORT-NAME>FlsCompareApi</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter defines whether the function Fls_Compare() is enabled or disabled.
+
+True: API Fls_Compare()  is supported (function provided)
+False: API Fls_Compare()  is not supported (function not provided)
+</L-2>
+									</DESC>
+									<INTRODUCTION>
+										<P>
+											<L-1 L="EN">true:	API supported / function provided.
+                                        false:	API not supported / function not provided</L-1>
+										</P>
+									</INTRODUCTION>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: FlsDevErrorDetect -->
+								<ECUC-BOOLEAN-PARAM-DEF UUID="911862fe-bdc5-4e19-be25-520d07f8efb6">
+									<SHORT-NAME>FlsDevErrorDetect</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter switches the Development Error Detection and Notification ON or OFF.
+
+True: Development error detection is enabled.
+False: Development error detection is disabeld.
+
+Note: In general, the development error detection is recommended during pre-test phase. It is not recommended to enable the development error detection in production code due to increased runtime and ROM needs.
+
+</L-2>
+									</DESC>
+									<INTRODUCTION>
+										<P>
+											<L-1 L="EN">true:	Development error detection enabled.
+                                        false:	Development error detection disabled.</L-1>
+										</P>
+									</INTRODUCTION>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: FlsDriverIndex -->
+								<ECUC-INTEGER-PARAM-DEF UUID="031dbc76-5006-43ff-a307-db34fcc28efd">
+									<SHORT-NAME>FlsDriverIndex</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter defines the index of the driver, used by FEE.
+</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>0</DEFAULT-VALUE>
+									<MAX>254</MAX>
+									<MIN>0</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: FlsGetJobResultApi -->
+								<ECUC-BOOLEAN-PARAM-DEF UUID="73d32141-ad88-4942-b958-e3cef14ee986">
+									<SHORT-NAME>FlsGetJobResultApi</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter defines whether the function Fls_GetJobResult is enabled or disabled.
+
+True: API Fls_GetJobResult() is supported (function provided)
+False: API Fls_GetJobResult() is not supported (function not provided)
+</L-2>
+									</DESC>
+									<INTRODUCTION>
+										<P>
+											<L-1 L="EN">true:	API supported / function provided.
+                                        false:	API not supported / function not provided</L-1>
+										</P>
+									</INTRODUCTION>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: FlsGetStatusApi -->
+								<ECUC-BOOLEAN-PARAM-DEF UUID="d316204e-24d2-41ed-a79e-9e53953b665c">
+									<SHORT-NAME>FlsGetStatusApi</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter defines whether the function Fls_GetStatus() is enabled or disabled.
+
+True: API Fls_GetStatus() is supported (function provided)
+False: API Fls_GetStatus() is not supported (function not provided)
+</L-2>
+									</DESC>
+									<INTRODUCTION>
+										<P>
+											<L-1 L="EN">true:	API supported / function provided.
+                                        false:	API not supported / function not provided</L-1>
+										</P>
+									</INTRODUCTION>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: FlsSetModeApi -->
+								<ECUC-BOOLEAN-PARAM-DEF UUID="08d126df-93e7-460c-8e6b-419b59ccf703">
+									<SHORT-NAME>FlsSetModeApi</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter defines whether the function Fls_SetMode() is enabled or disabled.
+
+True: API Fls_SetMode() is supported (function provided)
+False: API Fls_SetMode() is not supported (function not provided)
+</L-2>
+									</DESC>
+									<INTRODUCTION>
+										<P>
+											<L-1 L="EN">true:	API supported / function provided.
+                                        false:	API not supported / function not provided</L-1>
+										</P>
+									</INTRODUCTION>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: FlsTotalSize -->
+								<ECUC-INTEGER-PARAM-DEF UUID="64d3aaf0-27e5-4c51-9e09-1a129cd70ae3">
+									<SHORT-NAME>FlsTotalSize</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter defines the total amount of flash memory in bytes.
+
+Note: FlsTotalSize must be greater than the total amount of all configured FlsSectors.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:BaseUnit">BYTE</SD>
+												<SD GID="DV:Unit">KBYTE</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<INTRODUCTION>
+										<P>
+											<L-1 L="EN">FLS170_Conf: This parameter in conjunction with FLS_BASE_ADDRESS defines the upper boundary for read / write / erase and compare jobs.</L-1>
+										</P>
+									</INTRODUCTION>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>131072</DEFAULT-VALUE>
+									<MAX>20971520</MAX>
+									<MIN>0</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: FlsUseInterrupts -->
+								<ECUC-BOOLEAN-PARAM-DEF UUID="ac8a6ca4-cd25-4ccb-b285-00e5d6776dd4">
+									<SHORT-NAME>FlsUseInterrupts</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Parameter not used.
+
+This parameter defines whether the job processing is  triggered by hardware interrupt.
+
+True: Job processing triggerd by interrupt (hardware controlled)
+False: Job processing not triggered by interrupt (software controlled)
+</L-2>
+									</DESC>
+									<INTRODUCTION>
+										<P>
+											<L-1 L="EN">true:	Job processing triggered by interrupt (hardware controlled).
+                                        false:	Job processing not triggered by interrupt (software controlled)</L-1>
+										</P>
+									</INTRODUCTION>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: FlsVersionInfoApi -->
+								<ECUC-BOOLEAN-PARAM-DEF UUID="40724b35-d30d-4e6e-8676-f9f8db0b79bf">
+									<SHORT-NAME>FlsVersionInfoApi</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter enables/disables the function Fls_VersionInfo()  to get major, minor and patch version information.
+</L-2>
+									</DESC>
+									<INTRODUCTION>
+										<P>
+											<L-1 L="EN">true:	Version info API enabled.
+                                        false:	Version info API disabled.</L-1>
+										</P>
+									</INTRODUCTION>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="cf7ff985-004c-4495-bd1d-3c1ca36d45cb">
+									<SHORT-NAME>FlsSafeBswChecks</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Selects if safety checks are used. These checks improve robustness as e.g. invalid parameters are checked before function is executed. This attribute has to be enabled for safety projects where this component is mapped to an ASIL partition.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+							</PARAMETERS>
+						</ECUC-PARAM-CONF-CONTAINER-DEF>
+						<!-- Container Definition: FlsPublishedInformation -->
+						<ECUC-PARAM-CONF-CONTAINER-DEF UUID="ff3762ac-7983-4164-ac48-35a3bc8e8dcd">
+							<SHORT-NAME>FlsPublishedInformation</SHORT-NAME>
+							<DESC>
+								<L-2 L="EN">This container includes additional parameters not covered by CommonPublishedInformation container.
+</L-2>
+							</DESC>
+							<ADMIN-DATA>
+								<SDGS>
+									<SDG GID="DV:CfgPostBuild">
+										<SD GID="DV:postBuildSelectableChangeable">false</SD>
+										<SD GID="DV:postBuildNotDeletable">false</SD>
+									</SDG>
+								</SDGS>
+							</ADMIN-DATA>
+							<INTRODUCTION>
+								<P>
+									<L-1 L="EN">Note that these parameters do not have any configuration class setting, since they are published information.</L-1>
+								</P>
+							</INTRODUCTION>
+							<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+							<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+							<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+							<MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+							<PARAMETERS>
+								<!-- PARAMETER DEFINITION: FlsAcLocationErase -->
+								<ECUC-INTEGER-PARAM-DEF UUID="e3007ad7-696f-4b84-9245-5ce6bc47f7d4">
+									<SHORT-NAME>FlsAcLocationErase</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Parameter not used.
+
+This parameter defines the position in RAM, to which the erase flash access code has to be loaded.
+</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:DefaultFormat">HEX</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<INTRODUCTION>
+										<P>
+											<L-1 L="EN">Only relevant if the erase flash access code is not position independent. If this information is not provided it is assumed that the erase flash access code is position independent and that therefore the RAM position can be freely configured.</L-1>
+										</P>
+									</INTRODUCTION>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PUBLISHED-INFORMATION</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<MAX>4294967295</MAX>
+									<MIN>0</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: FlsAcLocationWrite -->
+								<ECUC-INTEGER-PARAM-DEF UUID="de6cef43-c8e6-4adc-bf4a-e5a3fc2e5d2b">
+									<SHORT-NAME>FlsAcLocationWrite</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Parameter not used.
+
+This parameter defines the position in RAM, to which the write flash access code has to be loaded.
+</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:DefaultFormat">HEX</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<INTRODUCTION>
+										<P>
+											<L-1 L="EN">Only relevant if the write flash access code is not position independent. If this information is not provided it is assumed that the write flash access code is position independent and that therefore the RAM position can be freely configured.</L-1>
+										</P>
+									</INTRODUCTION>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PUBLISHED-INFORMATION</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<MAX>4294967295</MAX>
+									<MIN>0</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: FlsAcSizeErase -->
+								<ECUC-INTEGER-PARAM-DEF UUID="e31cecdb-6242-45c4-ad8e-65da377ce344">
+									<SHORT-NAME>FlsAcSizeErase</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Parameter not used.
+
+This parameter defines the number of bytes in RAM needed for the erase flash access code.
+</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:BaseUnit">BYTE</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PUBLISHED-INFORMATION</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<MAX>4294967295</MAX>
+									<MIN>0</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: FlsAcSizeWrite -->
+								<ECUC-INTEGER-PARAM-DEF UUID="53d390dd-3845-4e3e-8c76-53d2c5d81a65">
+									<SHORT-NAME>FlsAcSizeWrite</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Parameter not used.
+
+This parameter defines the number of bytes in RAM needed for the write flash access code.
+
+</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:BaseUnit">BYTE</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PUBLISHED-INFORMATION</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<MAX>4294967295</MAX>
+									<MIN>0</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: FlsEraseTime -->
+								<ECUC-FLOAT-PARAM-DEF UUID="36028f68-fd42-41d2-b619-3ca125f1125b">
+									<SHORT-NAME>FlsEraseTime</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Parameter not used.
+
+This parameter defines the maximum time to erase one complete flash sector.
+</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PUBLISHED-INFORMATION</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<MAX>Inf</MAX>
+									<MIN>0</MIN>
+								</ECUC-FLOAT-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: FlsErasedValue -->
+								<ECUC-INTEGER-PARAM-DEF UUID="dd9c2d68-ce52-4302-9f91-f814fae7e3bd">
+									<SHORT-NAME>FlsErasedValue</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter defines the contents of an erased flash memory cell.
+</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:DefaultFormat">HEX</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PUBLISHED-INFORMATION</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>255</DEFAULT-VALUE>
+									<MAX>255</MAX>
+									<MIN>0</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: FlsExpectedHwId -->
+								<ECUC-STRING-PARAM-DEF UUID="a36548b4-eaa3-4c5b-9728-d3b3a55f9d65">
+									<SHORT-NAME>FlsExpectedHwId</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Parameter not used.
+
+This parameter defines a unique identifier of the hardware device that is expected by this driver (the device for which this driver has been implemented)
+</L-2>
+									</DESC>
+									<INTRODUCTION>
+										<P>
+											<L-1 L="EN">Only relevant for external flash drivers.</L-1>
+										</P>
+									</INTRODUCTION>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PUBLISHED-INFORMATION</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+								</ECUC-STRING-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: FlsSpecifiedEraseCycles -->
+								<ECUC-INTEGER-PARAM-DEF UUID="c4ad846f-c3d9-467c-9d0b-9fe30924a7ad">
+									<SHORT-NAME>FlsSpecifiedEraseCycles</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Parameter not used.
+
+This parameter defines the number of erase cycles specified for the flash device (usually given in the device data sheet).
+</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:BaseUnit">erase cycle</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<INTRODUCTION>
+										<P>
+											<L-1 L="EN">FLS198: If the number of specified erase cycles depends on the operating environment (temperature, voltage, ...) during reprogramming of the flash device, the minimum number for which a data retention of at least 15 years over the temperature range from -40°C .. +125°C can be guaranteed shall be given.
+
+                                        Note: If there are different numbers of specified erase cycles for different flash sectors of the device this parameter has to be extended to a parameter list (similar to the sector list above).</L-1>
+										</P>
+									</INTRODUCTION>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PUBLISHED-INFORMATION</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<MAX>4294967295</MAX>
+									<MIN>0</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: FlsWriteTime -->
+								<ECUC-FLOAT-PARAM-DEF UUID="bad512ad-5288-4704-afb3-36bb0a2e5eae">
+									<SHORT-NAME>FlsWriteTime</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Parameter not used.
+
+This parameter defines the maximum time to program one complete flash page.
+</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PUBLISHED-INFORMATION</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<MAX>Inf</MAX>
+									<MIN>0</MIN>
+								</ECUC-FLOAT-PARAM-DEF>
+							</PARAMETERS>
+						</ECUC-PARAM-CONF-CONTAINER-DEF>
+					</CONTAINERS>
+				</ECUC-MODULE-DEF>
+				<BSW-IMPLEMENTATION UUID="56645a52-1cb4-45a8-8951-e0ae7c681f0d">
+					<SHORT-NAME>Fls_Impl</SHORT-NAME>
+					<PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+					<SW-VERSION>3.03.00</SW-VERSION>
+					<USED-CODE-GENERATOR>cMSR</USED-CODE-GENERATOR>
+					<VENDOR-ID>30</VENDOR-ID>
+					<AR-RELEASE-VERSION>4.00.03</AR-RELEASE-VERSION>
+					<BEHAVIOR-REF DEST="BSW-INTERNAL-BEHAVIOR">/MICROSAR/Fls_ib_bswmd/BswModuleDescriptions/Fls/FlsBehavior</BEHAVIOR-REF>
+					<PRECONFIGURED-CONFIGURATION-REFS>
+						<PRECONFIGURED-CONFIGURATION-REF DEST="ECUC-MODULE-CONFIGURATION-VALUES">/MICROSAR/Fls_Pre</PRECONFIGURED-CONFIGURATION-REF>
+					</PRECONFIGURED-CONFIGURATION-REFS>
+					<RECOMMENDED-CONFIGURATION-REFS>
+						<RECOMMENDED-CONFIGURATION-REF DEST="ECUC-MODULE-CONFIGURATION-VALUES">/MICROSAR/Fls_Rec</RECOMMENDED-CONFIGURATION-REF>
+					</RECOMMENDED-CONFIGURATION-REFS>
+					<VENDOR-SPECIFIC-MODULE-DEF-REFS>
+						<VENDOR-SPECIFIC-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/MICROSAR/Fls</VENDOR-SPECIFIC-MODULE-DEF-REF>
+					</VENDOR-SPECIFIC-MODULE-DEF-REFS>
+				</BSW-IMPLEMENTATION>
+				<ECUC-MODULE-CONFIGURATION-VALUES UUID="2e7d39c4-e876-462b-b133-23f521cf6021">
+					<SHORT-NAME>Fls_Pre</SHORT-NAME>
+					<DEFINITION-REF DEST="ECUC-MODULE-DEF">/MICROSAR/Fls</DEFINITION-REF>
+					<IMPLEMENTATION-CONFIG-VARIANT>VARIANT-PRE-COMPILE</IMPLEMENTATION-CONFIG-VARIANT>
+					<CONTAINERS></CONTAINERS>
+				</ECUC-MODULE-CONFIGURATION-VALUES>
+				<ECUC-MODULE-CONFIGURATION-VALUES UUID="e814caf9-9db3-4580-a11f-efe4169348a8">
+					<SHORT-NAME>Fls_Rec</SHORT-NAME>
+					<DEFINITION-REF DEST="ECUC-MODULE-DEF">/MICROSAR/Fls</DEFINITION-REF>
+					<IMPLEMENTATION-CONFIG-VARIANT>VARIANT-PRE-COMPILE</IMPLEMENTATION-CONFIG-VARIANT>
+					<CONTAINERS></CONTAINERS>
+				</ECUC-MODULE-CONFIGURATION-VALUES>
+			</ELEMENTS>
+		</AR-PACKAGE>
+	</AR-PACKAGES>
+</AUTOSAR>

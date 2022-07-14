@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-0-3.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://autosar.org/schema/r4.0">
+	<AR-PACKAGES>
+		<AR-PACKAGE UUID="65cda363-9262-46c1-a0f4-50e648d8fd0e">
+			<SHORT-NAME>MICROSAR</SHORT-NAME>
+			<AR-PACKAGES>
+				<AR-PACKAGE UUID="ae2f0602-ecca-40dd-8822-2efe13c05ff4">
+					<SHORT-NAME>Lin_Canoeemu</SHORT-NAME>
+					<ELEMENTS>
+						<ECUC-MODULE-CONFIGURATION-VALUES UUID="45ff7d7d-234d-4c7e-ab70-1ca4129be9c8">
+							<SHORT-NAME>Lin_Pre</SHORT-NAME>
+							<DEFINITION-REF DEST="ECUC-MODULE-DEF">/MICROSAR/Lin_Canoeemu/Lin</DEFINITION-REF>
+													<CONTAINERS />
+						</ECUC-MODULE-CONFIGURATION-VALUES>
+					</ELEMENTS>
+				</AR-PACKAGE>
+			</AR-PACKAGES>
+		</AR-PACKAGE>
+	</AR-PACKAGES>
+</AUTOSAR>

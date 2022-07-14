@@ -1,0 +1,36 @@
+def RegisterPlugin()
+{
+  var reg = ModulePluginRegistration()
+  reg.SetVersion(0x010000)
+  reg.SetPackageName("SysService_Asr4FiM")
+  reg.SetInputFiles(["FiM_Lcfg.c", "FiM_PBcfg.c"])
+  return reg
+}
+
+def CheckVersions()
+{
+  AssertDefineEquals("FIM_SW_MAJOR_VERSION", "(0x04)")
+  AssertDefineEquals("FIM_SW_MINOR_VERSION", "(0x02)")
+  AssertDefineEquals("FIM_SW_PATCH_VERSION", "(0x00)")
+}
+
+def main()
+{
+  InvokeRule("Check QM only features are deactivated / Safe Runtime Checks are activated", CheckQMDefines)
+}
+
+
+/**********************************************************************************************************************
+* Name         : CheckQMDefines
+* Parameter    : None
+* Return value : None
+* Description  : This rule checks the setting of QM-related preprocessor defines.
+*                Typically it checks that QM features are inactive in safety context.
+*                It also checks that runtime checks for SafeBSW are activated.
+* Requirements : N/A
+**********************************************************************************************************************/
+def CheckQMDefines()
+{
+  AssertDefineIsStdOn("FIM_DEV_ERROR_DETECT")
+  AssertDefineIsStdOn("FIM_DEV_RUNTIME_CHECKS")	/* CM_FIM_CSL01_ENABLE_RUNTIME_CHECKS */
+}

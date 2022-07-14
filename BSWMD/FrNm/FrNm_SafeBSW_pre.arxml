@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+***********************************************************************************************************************
+COPYRIGHT
+===============================================================================
+Copyright (c) 2017 by Vector Informatik GmbH.                                         All rights reserved.
+
+    This software is copyright protected and proprietary to Vector Informatik GmbH.
+    Vector Informatik GmbH grants to you only those rights as set out in the license conditions.
+    All other rights remain with Vector Informatik GmbH.
+===============================================================================
+FILE DESCRIPTION
+===============================================================================
+File:           FrNm_SafeBSW_pre.arxml
+Component:      -
+Module:         FrNm_Rec
+Generator:      -
+Description:    -
+*********************************************************************************************************************** 
+-->
+<AUTOSAR xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-0-3.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://autosar.org/schema/r4.0">
+	<AR-PACKAGES>
+		<AR-PACKAGE UUID="990e3e0f-5428-4233-984c-e2311e191340">
+			<SHORT-NAME>MICROSAR</SHORT-NAME>
+			<ELEMENTS>
+				<ECUC-MODULE-CONFIGURATION-VALUES UUID="DCE:7892bc44-033a-4d34-bcbf-bfa64a6fb21a">
+					<SHORT-NAME>FrNm_Rec</SHORT-NAME>
+					<DEFINITION-REF DEST="ECUC-MODULE-DEF">/MICROSAR/FrNm</DEFINITION-REF>
+					<CONTAINERS>
+						<ECUC-CONTAINER-VALUE UUID="09385e74-efdc-4bff-b46e-b2828caa1522">
+							<SHORT-NAME>FrNmGlobalConfig</SHORT-NAME>
+							<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/FrNm/FrNmGlobalConfig</DEFINITION-REF>
+							<SUB-CONTAINERS>
+								<ECUC-CONTAINER-VALUE UUID="7e6f6611-77e7-459e-b33c-df0d031de493">
+									<SHORT-NAME>FrNmGlobalProperties</SHORT-NAME>
+									<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/FrNm/FrNmGlobalConfig/FrNmGlobalProperties</DEFINITION-REF>
+									<PARAMETER-VALUES>
+										<ECUC-NUMERICAL-PARAM-VALUE>
+											<DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/FrNm/FrNmGlobalConfig/FrNmGlobalProperties/FrNmSafeBswChecks</DEFINITION-REF>
+											<VALUE>1</VALUE>
+										</ECUC-NUMERICAL-PARAM-VALUE>
+									</PARAMETER-VALUES>
+								</ECUC-CONTAINER-VALUE>
+							</SUB-CONTAINERS>
+						</ECUC-CONTAINER-VALUE>
+					</CONTAINERS>
+				</ECUC-MODULE-CONFIGURATION-VALUES>
+			</ELEMENTS>
+		</AR-PACKAGE>
+	</AR-PACKAGES>
+</AUTOSAR>

@@ -1,0 +1,2402 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-1-3.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://autosar.org/schema/r4.0">
+	<AR-PACKAGES>
+		<AR-PACKAGE UUID="40911707-49f4-4190-a5af-bb113fcf6b20">
+			<SHORT-NAME>MICROSAR</SHORT-NAME>
+			<ELEMENTS>
+				<ECUC-MODULE-DEF UUID="00680e61-3772-40bf-ad69-f20ee0e5520c">
+					<SHORT-NAME>J1939Rm</SHORT-NAME>
+					<DESC>
+						<L-2 L="EN">Configuration of the J1939Rm (SAE J1939 Request Manager) module.</L-2>
+					</DESC>
+					<CATEGORY>VENDOR_SPECIFIC_MODULE_DEFINITION</CATEGORY>
+					<ADMIN-DATA>
+						<DOC-REVISIONS>
+							<DOC-REVISION>
+								<REVISION-LABEL>0.0.1</REVISION-LABEL>
+								<STATE>Beta</STATE>
+								<ISSUED-BY>Vector Informatik</ISSUED-BY>
+								<DATE>2013-07-15</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Beta release</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>0.0.2</REVISION-LABEL>
+								<STATE>Beta</STATE>
+								<ISSUED-BY>vismsr</ISSUED-BY>
+								<DATE>2013-09-03</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Added reference to internal behavior, fixed version information</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>0.0.3</REVISION-LABEL>
+								<STATE>Beta</STATE>
+								<ISSUED-BY>vismsr</ISSUED-BY>
+								<DATE>2013-09-09</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Removed MultiConfContainer flag</L-2>
+										</CHANGE>
+									</MODIFICATION>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Changed to VARIANT-POST-BUILD-LOADABLE</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>0.0.4</REVISION-LABEL>
+								<STATE>Beta</STATE>
+								<ISSUED-BY>vismsr</ISSUED-BY>
+								<DATE>2013-09-09</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Fixed display settings</L-2>
+										</CHANGE>
+									</MODIFICATION>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Removed J1939RmComIPdu</L-2>
+										</CHANGE>
+									</MODIFICATION>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Removed J1939RmUserComIPduRequestQueueSize</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>0.0.5</REVISION-LABEL>
+								<STATE>Beta</STATE>
+								<ISSUED-BY>vismsr</ISSUED-BY>
+								<DATE>2013-10-07</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Added missing default values</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>0.0.6</REVISION-LABEL>
+								<STATE>Beta</STATE>
+								<ISSUED-BY>vismsr</ISSUED-BY>
+								<DATE>2013-10-22</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Reworked descriptions according to SREQ00024631</L-2>
+										</CHANGE>
+									</MODIFICATION>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Added default values for timing values</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>0.1.0</REVISION-LABEL>
+								<STATE>Beta</STATE>
+								<ISSUED-BY>vismsr</ISSUED-BY>
+								<DATE>2014-01-25</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Added default values for PDU IDs</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>0.3.0</REVISION-LABEL>
+								<STATE>Beta</STATE>
+								<ISSUED-BY>vismsr</ISSUED-BY>
+								<DATE>2014-06-11</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Added ComIPdu configuration</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00075917</L-2>
+										</REASON>
+									</MODIFICATION>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Cleaned up configuration classes.</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00076214</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>0.4.0</REVISION-LABEL>
+								<STATE>Beta</STATE>
+								<ISSUED-BY>vismsr</ISSUED-BY>
+								<DATE>2014-12-15</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Added IsobusSupport parameter.</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00079918</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>0.5.0</REVISION-LABEL>
+								<STATE>Beta</STATE>
+								<ISSUED-BY>vismsr</ISSUED-BY>
+								<DATE>2015-02-20</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Version increment for minor release.</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>0.5.1</REVISION-LABEL>
+								<STATE>Beta</STATE>
+								<ISSUED-BY>vismsr</ISSUED-BY>
+								<DATE>2015-06-03</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Version increment for bugfix release.</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.00.00</REVISION-LABEL>
+								<STATE>Released</STATE>
+								<ISSUED-BY>vismsr</ISSUED-BY>
+								<DATE>2015-07-07</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Added global switch for COM users.</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00081595</L-2>
+										</REASON>
+									</MODIFICATION>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Cleaned up descriptions and long names.</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00081441</L-2>
+										</REASON>
+									</MODIFICATION>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Added missing default values.</L-2>
+										</CHANGE>
+									</MODIFICATION>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Updated descriptions from AUTOSAR 4.2.2.</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.00.01</REVISION-LABEL>
+								<STATE>Released</STATE>
+								<ISSUED-BY>vismsr</ISSUED-BY>
+								<DATE>2015-08-28</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Version increment for bugfix release.</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.00.02</REVISION-LABEL>
+								<STATE>Released</STATE>
+								<ISSUED-BY>vismsr</ISSUED-BY>
+								<DATE>2015-10-05</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Nodes are no longer post-build changeable.</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00084846</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.01.00</REVISION-LABEL>
+								<STATE>Released</STATE>
+								<ISSUED-BY>vismsr</ISSUED-BY>
+								<DATE>2015-12-04</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Added configuration of Request2 handling.</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00084688</L-2>
+										</REASON>
+									</MODIFICATION>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Improved descriptions.</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.01.01</REVISION-LABEL>
+								<STATE>Released</STATE>
+								<ISSUED-BY>vismsr</ISSUED-BY>
+								<DATE>2016-01-15</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Version increment for bugfix release.</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.02.00</REVISION-LABEL>
+								<STATE>Released</STATE>
+								<ISSUED-BY>vismsr</ISSUED-BY>
+								<DATE>2016-01-29</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Added configuration of Request2 transmission.</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00087851</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.02.01</REVISION-LABEL>
+								<STATE>Released</STATE>
+								<ISSUED-BY>vismsr</ISSUED-BY>
+								<DATE>2016-03-08</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Fixed description of J1939RmSupportRequest2.</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00088773</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.03.00</REVISION-LABEL>
+								<STATE>Released</STATE>
+								<ISSUED-BY>vismsr</ISSUED-BY>
+								<DATE>2016-04-27</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Support variant handling.</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00089143</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.04.00</REVISION-LABEL>
+								<STATE>Released</STATE>
+								<ISSUED-BY>visgsi</ISSUED-BY>
+								<DATE>2016-07-07</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Added configuration of runtime error reporting.</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00090610</L-2>
+										</REASON>
+									</MODIFICATION>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Added separate configuration of Request2 queue.</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00090892</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.04.01</REVISION-LABEL>
+								<STATE>Released</STATE>
+								<ISSUED-BY>visgsi</ISSUED-BY>
+								<DATE>2017-02-13T11:35:15+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Fixed wrong ESCAN number</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.04.02</REVISION-LABEL>
+								<ISSUED-BY>visgsi</ISSUED-BY>
+								<DATE>2017-02-13T11:35:51+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Version increment for bugfix release.</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>2.00.00</REVISION-LABEL>
+								<ISSUED-BY>visgsi</ISSUED-BY>
+								<DATE>2017-05-02</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Support for request of NameManagement PGN from J1939Nm</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">STORYC-782</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>2.00.01</REVISION-LABEL>
+								<ISSUED-BY>visgsi</ISSUED-BY>
+								<DATE>2017-06-26</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Version increment for bugfix release.</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>2.00.02</REVISION-LABEL>
+								<ISSUED-BY>visgsi</ISSUED-BY>
+								<DATE>2017-07-27</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Version increment for bugfix release.</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+						</DOC-REVISIONS>
+					</ADMIN-DATA>
+					<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+					<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+					<REFINED-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/AUTOSAR/EcucDefs/J1939Rm</REFINED-MODULE-DEF-REF>
+					<SUPPORTED-CONFIG-VARIANTS>
+						<SUPPORTED-CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</SUPPORTED-CONFIG-VARIANT>
+						<SUPPORTED-CONFIG-VARIANT>VARIANT-PRE-COMPILE</SUPPORTED-CONFIG-VARIANT>
+						<SUPPORTED-CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</SUPPORTED-CONFIG-VARIANT>
+					</SUPPORTED-CONFIG-VARIANTS>
+					<CONTAINERS>
+						<!-- Container Definition: J1939RmConfigSet -->
+						<ECUC-PARAM-CONF-CONTAINER-DEF UUID="340dc580-8290-4b60-b974-0905543be332">
+							<SHORT-NAME>J1939RmConfigSet</SHORT-NAME>
+							<DESC>
+								<L-2 L="EN">Configuration parameters and sub containers of the J1939Rm module.</L-2>
+							</DESC>
+							<ADMIN-DATA>
+								<SDGS>
+									<SDG GID="DV:CfgPostBuild">
+										<SD GID="DV:postBuildSelectableChangeable">false</SD>
+										<SD GID="DV:postBuildNotDeletable">false</SD>
+									</SDG>
+								</SDGS>
+							</ADMIN-DATA>
+							<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+							<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+							<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+							<REQUIRES-INDEX>false</REQUIRES-INDEX>
+							<MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+							<SUB-CONTAINERS>
+								<!-- Container Definition: J1939RmChannel -->
+								<ECUC-PARAM-CONF-CONTAINER-DEF UUID="18106309-ee9e-4a46-b747-8ea36121d710">
+									<SHORT-NAME>J1939RmChannel</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Contains the parameters for a CAN channel supported by the J1939 Request Manager.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:postBuildSelectableChangeable">false</SD>
+												<SD GID="DV:postBuildNotDeletable">false</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+									<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<PARAMETERS>
+										<!-- PARAMETER DEFINITION: J1939RmAckQueueSize -->
+										<ECUC-INTEGER-PARAM-DEF UUID="9df40f77-e064-4412-b708-0b6ba7801861">
+											<SHORT-NAME>J1939RmAckQueueSize</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Number of Acknowledgement messages that can be stored for later transmission. When set to 0, only one Acknowledgement message can be transmitted at any time.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>10</DEFAULT-VALUE>
+											<MAX>255</MAX>
+											<MIN>0</MIN>
+										</ECUC-INTEGER-PARAM-DEF>
+										<!-- PARAMETER DEFINITION: J1939RmRequestQueueSize -->
+										<ECUC-INTEGER-PARAM-DEF UUID="093d9d96-7302-4194-ae1b-f947f015adc8">
+											<SHORT-NAME>J1939RmRequestQueueSize</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Number of Request messages that can be stored for later transmission. When set to 0, only one Request message can be transmitted at any time.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>10</DEFAULT-VALUE>
+											<MAX>255</MAX>
+											<MIN>0</MIN>
+										</ECUC-INTEGER-PARAM-DEF>
+										<!-- PARAMETER DEFINITION: J1939RmRequestTimeoutMonitors -->
+										<ECUC-INTEGER-PARAM-DEF UUID="c28f12bd-81ba-4df3-b317-a5f3fbcec5c9">
+											<SHORT-NAME>J1939RmRequestTimeoutMonitors</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Number of transmitted requests that can be monitored for timeout.
+
+Please note: This feature is not yet supported.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>10</DEFAULT-VALUE>
+											<MAX>255</MAX>
+											<MIN>0</MIN>
+										</ECUC-INTEGER-PARAM-DEF>
+										<ECUC-BOOLEAN-PARAM-DEF UUID="de720c98-647c-4bef-a910-6887fa65df17">
+											<SHORT-NAME>J1939RmIsobusChannel</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">ISOBUS Channel</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">Identifies this channel as an ISOBUS (ISO 11873) channel. If enabled, the handling of the Acknowledge (ACKM) message conforms with ISO 11783, otherwise with SAE J1939. In contrast to J1939, which uses the AddressAcknowledged field (and corresponding fields for the other acknowledgement types), ISO 11783 uses the destination address of the ACKM message to identify the node which originated the acknowledged action.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>false</DEFAULT-VALUE>
+										</ECUC-BOOLEAN-PARAM-DEF>
+										<ECUC-INTEGER-PARAM-DEF UUID="bbbe6ca7-e87d-4fc0-85ce-a28f1a2c8359">
+											<SHORT-NAME>J1939RmRequest2QueueSize</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Number of Request2 messages that can be stored for later transmission. When set to 0, only one Request2 message can be transmitted at any time.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>10</DEFAULT-VALUE>
+											<MAX>255</MAX>
+											<MIN>0</MIN>
+										</ECUC-INTEGER-PARAM-DEF>
+									</PARAMETERS>
+									<REFERENCES>
+										<!-- Symbolic Name Reference Definition: J1939RmComMNetworkHandleRef -->
+										<ECUC-SYMBOLIC-NAME-REFERENCE-DEF UUID="c44ab6d3-690a-4903-9d13-a39e4f7e7139">
+											<SHORT-NAME>J1939RmComMNetworkHandleRef</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">ComM Network Handle Ref</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">Reference to the channel defined by the ComMChannel providing access to the unique channel index ComMChannelId.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/ComM/ComMConfigSet/ComMChannel</DESTINATION-REF>
+										</ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+									</REFERENCES>
+									<SUB-CONTAINERS>
+										<!-- Container Definition: J1939RmAckmRxPdu -->
+										<ECUC-PARAM-CONF-CONTAINER-DEF UUID="e36eaafb-790a-493d-8482-ef342710e397">
+											<SHORT-NAME>J1939RmAckmRxPdu</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">ACKM Rx Pdu</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">Contains the configuration of the I-PDU used to receive the Acknowledgement PG.</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:CfgPostBuild">
+														<SD GID="DV:postBuildSelectableChangeable">true</SD>
+														<SD GID="DV:postBuildNotDeletable">false</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<POST-BUILD-CHANGEABLE>true</POST-BUILD-CHANGEABLE>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<PARAMETERS>
+												<!-- PARAMETER DEFINITION: J1939RmAckmRxPduId -->
+												<ECUC-INTEGER-PARAM-DEF UUID="5ea4f3e9-2e8a-4af6-82d8-9957bef157b1">
+													<SHORT-NAME>J1939RmAckmRxPduId</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">ACKM Rx Pdu ID</L-4>
+													</LONG-NAME>
+													<DESC>
+														<L-2 L="EN">The I-PDU identifier used for RxIndication from PduR.</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<SCOPE>ECU</SCOPE>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>0</DEFAULT-VALUE>
+													<MAX>65535</MAX>
+													<MIN>0</MIN>
+												</ECUC-INTEGER-PARAM-DEF>
+											</PARAMETERS>
+											<REFERENCES>
+												<!-- Reference Definition: J1939RmAckmRxPduRef -->
+												<ECUC-REFERENCE-DEF UUID="cdfefc44-343a-43e6-979d-3a9b171eac9e">
+													<SHORT-NAME>J1939RmAckmRxPduRef</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">ACKM Rx Pdu Ref</L-4>
+													</LONG-NAME>
+													<DESC>
+														<L-2 L="EN">Reference to the Pdu object representing the I-PDU.</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<SCOPE>LOCAL</SCOPE>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucPduCollection/Pdu</DESTINATION-REF>
+												</ECUC-REFERENCE-DEF>
+											</REFERENCES>
+										</ECUC-PARAM-CONF-CONTAINER-DEF>
+										<!-- Container Definition: J1939RmAckmTxPdu -->
+										<ECUC-PARAM-CONF-CONTAINER-DEF UUID="fcd40ccb-6c3e-4e45-b4fc-db8cd1258403">
+											<SHORT-NAME>J1939RmAckmTxPdu</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">ACKM Tx Pdu</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">Contains the configuration of the I-PDU used to transmit the Acknowledgement PG.</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:CfgPostBuild">
+														<SD GID="DV:postBuildSelectableChangeable">false</SD>
+														<SD GID="DV:postBuildNotDeletable">false</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<PARAMETERS>
+												<!-- PARAMETER DEFINITION: J1939RmAckmTxPduId -->
+												<ECUC-INTEGER-PARAM-DEF UUID="baab1050-49e8-421c-b0e0-187da90ac27c">
+													<SHORT-NAME>J1939RmAckmTxPduId</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">ACKM Tx Pdu ID</L-4>
+													</LONG-NAME>
+													<DESC>
+														<L-2 L="EN">The I-PDU identifier used for TxConfirmation from PduR.</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<SCOPE>ECU</SCOPE>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>0</DEFAULT-VALUE>
+													<MAX>65535</MAX>
+													<MIN>0</MIN>
+												</ECUC-INTEGER-PARAM-DEF>
+											</PARAMETERS>
+											<REFERENCES>
+												<!-- Reference Definition: J1939RmAckmTxPduRef -->
+												<ECUC-REFERENCE-DEF UUID="822a8ca2-ac5b-44d2-b986-b0737ec250d8">
+													<SHORT-NAME>J1939RmAckmTxPduRef</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">ACKM Tx Pdu Ref</L-4>
+													</LONG-NAME>
+													<DESC>
+														<L-2 L="EN">Reference to the Pdu object representing the I-PDU.</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<SCOPE>LOCAL</SCOPE>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucPduCollection/Pdu</DESTINATION-REF>
+												</ECUC-REFERENCE-DEF>
+											</REFERENCES>
+										</ECUC-PARAM-CONF-CONTAINER-DEF>
+										<!-- Container Definition: J1939RmRqstRxPdu -->
+										<ECUC-PARAM-CONF-CONTAINER-DEF UUID="514ec1f6-d9e0-4c45-8c43-d7cd54efce9a">
+											<SHORT-NAME>J1939RmRqstRxPdu</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">RQST Rx Pdu</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">Contains the configuration of the I-PDU used to receive the Request PG.</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:CfgPostBuild">
+														<SD GID="DV:postBuildSelectableChangeable">false</SD>
+														<SD GID="DV:postBuildNotDeletable">false</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<PARAMETERS>
+												<!-- PARAMETER DEFINITION: J1939RmRqstRxPduId -->
+												<ECUC-INTEGER-PARAM-DEF UUID="5b8e171b-dc12-4657-9f26-38dff4717402">
+													<SHORT-NAME>J1939RmRqstRxPduId</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">RQST Rx Pdu ID</L-4>
+													</LONG-NAME>
+													<DESC>
+														<L-2 L="EN">The I-PDU identifier used for RxIndication from PduR.</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<SCOPE>ECU</SCOPE>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>0</DEFAULT-VALUE>
+													<MAX>65535</MAX>
+													<MIN>0</MIN>
+												</ECUC-INTEGER-PARAM-DEF>
+											</PARAMETERS>
+											<REFERENCES>
+												<!-- Reference Definition: J1939RmRqstRxPduRef -->
+												<ECUC-REFERENCE-DEF UUID="3244385d-4c39-481d-a29f-211407bb0c38">
+													<SHORT-NAME>J1939RmRqstRxPduRef</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">RQST Rx Pdu Ref</L-4>
+													</LONG-NAME>
+													<DESC>
+														<L-2 L="EN">Reference to the Pdu object representing the I-PDU.</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<SCOPE>LOCAL</SCOPE>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucPduCollection/Pdu</DESTINATION-REF>
+												</ECUC-REFERENCE-DEF>
+											</REFERENCES>
+										</ECUC-PARAM-CONF-CONTAINER-DEF>
+										<!-- Container Definition: J1939RmRqstTxPdu -->
+										<ECUC-PARAM-CONF-CONTAINER-DEF UUID="32968780-89a4-464a-8189-f8706ec7e74d">
+											<SHORT-NAME>J1939RmRqstTxPdu</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">RQST Tx Pdu</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">Contains the configuration of the I-PDU used to transmit the Request PG.</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:CfgPostBuild">
+														<SD GID="DV:postBuildSelectableChangeable">true</SD>
+														<SD GID="DV:postBuildNotDeletable">false</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<POST-BUILD-CHANGEABLE>true</POST-BUILD-CHANGEABLE>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<PARAMETERS>
+												<!-- PARAMETER DEFINITION: J1939RmRqstTxPduId -->
+												<ECUC-INTEGER-PARAM-DEF UUID="72e25e15-eafd-4957-9175-28a3e56660f2">
+													<SHORT-NAME>J1939RmRqstTxPduId</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">RQST Tx Pdu ID</L-4>
+													</LONG-NAME>
+													<DESC>
+														<L-2 L="EN">The I-PDU identifier used for TxConfirmation from PduR.</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<SCOPE>ECU</SCOPE>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>0</DEFAULT-VALUE>
+													<MAX>65535</MAX>
+													<MIN>0</MIN>
+												</ECUC-INTEGER-PARAM-DEF>
+											</PARAMETERS>
+											<REFERENCES>
+												<!-- Reference Definition: J1939RmRqstTxPduRef -->
+												<ECUC-REFERENCE-DEF UUID="7ca77258-f04c-42fc-acbe-9a5fe2e67172">
+													<SHORT-NAME>J1939RmRqstTxPduRef</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">RQST Tx Pdu Ref</L-4>
+													</LONG-NAME>
+													<DESC>
+														<L-2 L="EN">Reference to the Pdu object representing the I-PDU.</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<SCOPE>LOCAL</SCOPE>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucPduCollection/Pdu</DESTINATION-REF>
+												</ECUC-REFERENCE-DEF>
+											</REFERENCES>
+										</ECUC-PARAM-CONF-CONTAINER-DEF>
+										<ECUC-PARAM-CONF-CONTAINER-DEF UUID="02378ad3-9b6e-46f6-9f64-8ca53ee6c0da">
+											<SHORT-NAME>J1939RmRqst2RxPdu</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">RQST2 Rx Pdu</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">Contains the configuration of the I-PDU used to receive the Request2 PG.</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:CfgPostBuild">
+														<SD GID="DV:postBuildSelectableChangeable">true</SD>
+														<SD GID="DV:postBuildNotDeletable">false</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<POST-BUILD-CHANGEABLE>true</POST-BUILD-CHANGEABLE>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<PARAMETERS>
+												<ECUC-INTEGER-PARAM-DEF UUID="70ee8fba-d69b-48bd-a116-79ee99bf5201">
+													<SHORT-NAME>J1939RmRqst2RxPduId</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">RQST2 Rx Pdu ID</L-4>
+													</LONG-NAME>
+													<DESC>
+														<L-2 L="EN">The I-PDU identifier used for RxIndication from PduR.</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<SCOPE>ECU</SCOPE>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>0</DEFAULT-VALUE>
+													<MAX>65535</MAX>
+													<MIN>0</MIN>
+												</ECUC-INTEGER-PARAM-DEF>
+											</PARAMETERS>
+											<REFERENCES>
+												<ECUC-REFERENCE-DEF UUID="a2266e49-361e-40c5-be76-9e52196219b8">
+													<SHORT-NAME>J1939RmRqst2RxPduRef</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">RQST2 Rx Pdu Ref</L-4>
+													</LONG-NAME>
+													<DESC>
+														<L-2 L="EN">Reference to the Pdu object representing the I-PDU.</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<SCOPE>LOCAL</SCOPE>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucPduCollection/Pdu</DESTINATION-REF>
+												</ECUC-REFERENCE-DEF>
+											</REFERENCES>
+										</ECUC-PARAM-CONF-CONTAINER-DEF>
+										<ECUC-PARAM-CONF-CONTAINER-DEF UUID="9ec78a02-9501-4212-b853-4bffd91469bf">
+											<SHORT-NAME>J1939RmRqst2TxPdu</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">RQST2 Tx Pdu</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">Contains the configuration of the I-PDU used to transmit the Request2 PG.</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:CfgPostBuild">
+														<SD GID="DV:postBuildSelectableChangeable">true</SD>
+														<SD GID="DV:postBuildNotDeletable">false</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<POST-BUILD-CHANGEABLE>true</POST-BUILD-CHANGEABLE>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<PARAMETERS>
+												<ECUC-INTEGER-PARAM-DEF UUID="c39cd26d-627a-4fbb-b7b4-46a110716dd5">
+													<SHORT-NAME>J1939RmRqst2TxPduId</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">RQST2 Tx Pdu ID</L-4>
+													</LONG-NAME>
+													<DESC>
+														<L-2 L="EN">The I-PDU identifier used for TxConfirmation from PduR.</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<SCOPE>ECU</SCOPE>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>0</DEFAULT-VALUE>
+													<MAX>65535</MAX>
+													<MIN>0</MIN>
+												</ECUC-INTEGER-PARAM-DEF>
+											</PARAMETERS>
+											<REFERENCES>
+												<ECUC-REFERENCE-DEF UUID="d8b5a245-d4a5-442e-b9ac-07eced794061">
+													<SHORT-NAME>J1939RmRqst2TxPduRef</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">RQST2 Tx Pdu Ref</L-4>
+													</LONG-NAME>
+													<DESC>
+														<L-2 L="EN">Reference to the Pdu object representing the I-PDU.</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<SCOPE>LOCAL</SCOPE>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucPduCollection/Pdu</DESTINATION-REF>
+												</ECUC-REFERENCE-DEF>
+											</REFERENCES>
+										</ECUC-PARAM-CONF-CONTAINER-DEF>
+									</SUB-CONTAINERS>
+								</ECUC-PARAM-CONF-CONTAINER-DEF>
+								<!-- Container Definition: J1939RmNode -->
+								<ECUC-PARAM-CONF-CONTAINER-DEF UUID="4a66f8cd-f94d-4f62-a2a1-3e309e5055b2">
+									<SHORT-NAME>J1939RmNode</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Contains the parameters for the support of a logical J1939 node (identified by an ECU address).</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:postBuildSelectableChangeable">false</SD>
+												<SD GID="DV:postBuildNotDeletable">false</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+									<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<REFERENCES>
+										<!-- Reference Definition: J1939RmNodeChannelRef -->
+										<ECUC-REFERENCE-DEF UUID="fbed4fbe-c2d4-4930-a114-f4e90b0de539">
+											<SHORT-NAME>J1939RmNodeChannelRef</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">Channel Ref</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">Reference to the channels this node has access to.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+											<SCOPE>LOCAL</SCOPE>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/J1939Rm/J1939RmConfigSet/J1939RmChannel</DESTINATION-REF>
+										</ECUC-REFERENCE-DEF>
+										<!-- Symbolic Name Reference Definition: J1939RmNmNodeRef -->
+										<ECUC-SYMBOLIC-NAME-REFERENCE-DEF UUID="bf7651e3-9f4e-44ae-b5d9-1bef8f6e3777">
+											<SHORT-NAME>J1939RmNmNodeRef</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">J1939Nm Node Ref</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">Reference to the corresponding J1939Nm node.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/J1939Nm/J1939NmConfigSet/J1939NmNode</DESTINATION-REF>
+										</ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+									</REFERENCES>
+									<SUB-CONTAINERS>
+										<!-- Container Definition: J1939RmUser -->
+										<ECUC-PARAM-CONF-CONTAINER-DEF UUID="8082d915-0dd0-44f2-ac82-add134fd6faa">
+											<SHORT-NAME>J1939RmUser</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Contains the configuration of a module that uses the request and acknowledgement interfaces of J1939Rm.</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:CfgPostBuild">
+														<SD GID="DV:postBuildSelectableChangeable">true</SD>
+														<SD GID="DV:postBuildNotDeletable">false</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+											<POST-BUILD-CHANGEABLE>true</POST-BUILD-CHANGEABLE>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<PARAMETERS>
+												<!-- PARAMETER DEFINITION: J1939RmUserAckIndication -->
+												<ECUC-BOOLEAN-PARAM-DEF UUID="bcfb190d-fedc-463c-bcdc-e2816816357f">
+													<SHORT-NAME>J1939RmUserAckIndication</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Ack Indication</L-4>
+													</LONG-NAME>
+													<DESC>
+														<L-2 L="EN">Enable AckIndication for this module.
+
+In case of CDD, the name is &lt;apiServicePrefix&gt;_AckIndication.
+In case of RTE, the operation AckIndication of the required port J1939Rm_AckIndication_{user} is called.
+
+This parameter shall not be set for J1939RmUserType J1939RM_USER_J1939NM, J1939RM_USER_J1939DCM, or J1939RM_USER_COM.</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<SCOPE>LOCAL</SCOPE>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>false</DEFAULT-VALUE>
+												</ECUC-BOOLEAN-PARAM-DEF>
+												<!-- PARAMETER DEFINITION: J1939RmUserComIPduRequestQueueSize -->
+												<!-- PARAMETER DEFINITION: J1939RmUserId -->
+												<ECUC-INTEGER-PARAM-DEF UUID="f8da9502-eedc-40bb-8d68-c9ab28bed565">
+													<SHORT-NAME>J1939RmUserId</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Identifier used by a module using J1939Rm.
+
+This parameter is only required when the module uses transmission of requests.</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<SCOPE>ECU</SCOPE>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>0</DEFAULT-VALUE>
+													<MAX>65535</MAX>
+													<MIN>0</MIN>
+												</ECUC-INTEGER-PARAM-DEF>
+												<!-- PARAMETER DEFINITION: J1939RmUserPGN -->
+												<ECUC-INTEGER-PARAM-DEF UUID="5907d1b6-4762-4b90-8275-c909a5d6397d">
+													<SHORT-NAME>J1939RmUserPGN</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Request PGN</L-4>
+													</LONG-NAME>
+													<DESC>
+														<L-2 L="EN">PGN supported to be requested from this module. The PGNs supported by different modules should usually be disjunctive.
+
+This parameter is predefined to AC (0x0EE00) and NM (0x9300) for J1939RmUserType J1939RM_USER_J1939NM and is derived from the J1939Dcm PDUs in the system description for J1939RmUserType J1939RM_USER_J1939DCM. It shall not be set for J1939RmUserType J1939RM_USER_COM.</L-2>
+													</DESC>
+													<ADMIN-DATA>
+														<SDGS>
+															<SDG GID="DV:Display">
+																<SD GID="DV:DefaultFormat">HEX</SD>
+															</SDG>
+														</SDGS>
+													</ADMIN-DATA>
+													<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+													<SCOPE>LOCAL</SCOPE>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>65535</DEFAULT-VALUE>
+													<MAX>262143</MAX>
+													<MIN>0</MIN>
+												</ECUC-INTEGER-PARAM-DEF>
+												<!-- PARAMETER DEFINITION: J1939RmUserRequestIndication -->
+												<ECUC-BOOLEAN-PARAM-DEF UUID="f7e5bb04-c976-4a94-b913-17588f1f5757">
+													<SHORT-NAME>J1939RmUserRequestIndication</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Request Indication</L-4>
+													</LONG-NAME>
+													<DESC>
+														<L-2 L="EN">Enable RequestIndication for this module.
+
+In case of J1939Nm or J1939Dcm, the name is fixed.
+In case of CDD, the name is &lt;apiServicePrefix&gt;_RequestIndication.
+In case of RTE, J1939Rm will call the operation RequestIndication of the required port J1939Rm_RequestIndication_{user}.
+
+This parameter shall not be set for J1939RmUserType J1939RM_USER_COM.</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<SCOPE>LOCAL</SCOPE>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>false</DEFAULT-VALUE>
+												</ECUC-BOOLEAN-PARAM-DEF>
+												<!-- PARAMETER DEFINITION: J1939RmUserSendAck -->
+												<ECUC-BOOLEAN-PARAM-DEF UUID="2fd2e4e3-30c5-40ca-ac42-360559e18069">
+													<SHORT-NAME>J1939RmUserSendAck</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Send Ack</L-4>
+													</LONG-NAME>
+													<DESC>
+														<L-2 L="EN">Enable the SendAck API for this module.
+
+In case of RTE, the operation SendAck of the provided port J1939Rm_SendAck_{user} is called.
+
+This parameter shall not be set for J1939RmUserType J1939RM_USER_J1939NM or J1939RM_USER_COM.</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<SCOPE>LOCAL</SCOPE>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>false</DEFAULT-VALUE>
+												</ECUC-BOOLEAN-PARAM-DEF>
+												<!-- PARAMETER DEFINITION: J1939RmUserSendRequest -->
+												<ECUC-BOOLEAN-PARAM-DEF UUID="aeedb988-ccf0-4c0f-bf25-8539d3489248">
+													<SHORT-NAME>J1939RmUserSendRequest</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Send Request</L-4>
+													</LONG-NAME>
+													<DESC>
+														<L-2 L="EN">Enable the SendRequest API for this module.
+
+In case of RTE, the operation SendRequest of the provided port J1939Rm_SendRequest_{user} is called.
+
+This parameter shall not be set for J1939RmUserType J1939RM_USER_J1939NM, J1939RM_USER_J1939DCM, or J1939RM_USER_COM.</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<SCOPE>LOCAL</SCOPE>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>false</DEFAULT-VALUE>
+												</ECUC-BOOLEAN-PARAM-DEF>
+												<!-- PARAMETER DEFINITION: J1939RmUserTimeoutSupervision -->
+												<ECUC-BOOLEAN-PARAM-DEF UUID="74169a4e-9ed5-4e48-ae4a-8aa47fc63cd7">
+													<SHORT-NAME>J1939RmUserTimeoutSupervision</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Timeout Supervision</L-4>
+													</LONG-NAME>
+													<DESC>
+														<L-2 L="EN">Enable RequestTimeoutIndication and CancelRequestTimeout for this module.
+
+RequestTimeoutIndication:
+In case of CDD, the name is &lt;apiServicePrefix&gt;_RequestTimeoutIndication.
+In case of RTE, the operation RequestTimeoutIndication of the required port J1939Rm_RequestTimeoutIndication_{user} is called.
+
+CancelRequestTimeout:
+In case of RTE, the operation CancelRequestTimeout of the provided port J1939Rm_CancelRequestTimeout_{user} is called.
+
+This parameter shall not be set for J1939RmUserType J1939RM_USER_J1939NM, J1939RM_USER_J1939DCM, or J1939RM_USER_COM.
+
+Please note: This feature is not yet supported.</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<SCOPE>LOCAL</SCOPE>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>false</DEFAULT-VALUE>
+												</ECUC-BOOLEAN-PARAM-DEF>
+												<!-- PARAMETER DEFINITION: J1939RmUserType -->
+												<ECUC-ENUMERATION-PARAM-DEF UUID="0a813437-5966-46ce-b3ea-2c9330d27699">
+													<SHORT-NAME>J1939RmUserType</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Type of module using J1939Rm.
+
+J1939RM_USER_COM: Represents the COM module, and can be used to directly trigger transmission of messages configured for transmission by COM. Supported messages are configured using J1939RmComIPdu containers, Request PGN and Ack PGN are not used.
+
+J1939RM_USER_J1939DCM: Represents the J1939 Diagnotic Communication Manager. Supported diagnostic messages are configured using Request PGN, J1939RmComIPdu containers and Ack PGN are not used.
+
+J1939RM_USER_J1939NM: Represents the J1939 Network Management module. Only the AC (0xEE00) and NM (0x9300) messages are supported and configured using Request PGN, J1939RmComIPdu containers and Ack PGN are not used.
+
+J1939RM_USER_CDD: Represents a complex driver (CDD). Supported messages are configured using Request PGN and Ack PGN, J1939RmComIPdu containers are not used.
+
+J1939RM_USER_RTE: Represents an SW-C located above the RTE. Supported messages are configured using Request PGN and Ack PGN, J1939RmComIPdu containers are not used.</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<SCOPE>LOCAL</SCOPE>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>J1939RM_USER_CDD</DEFAULT-VALUE>
+													<LITERALS>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="fccd08fa-1f8b-4b64-a6d4-6c89c3b3264d">
+															<SHORT-NAME>J1939RM_USER_COM</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">Represents the COM module.</L-4>
+															</LONG-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="81cbcf6d-fb53-4390-b7d3-64d985d7ae6a">
+															<SHORT-NAME>J1939RM_USER_J1939DCM</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">Represents the J1939 Diagnotic Communication Manager.</L-4>
+															</LONG-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="f0a69ed4-5ba0-4345-8f79-3b737851fd8f">
+															<SHORT-NAME>J1939RM_USER_J1939NM</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">Represents the J1939 Network Management module.</L-4>
+															</LONG-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="e94e412e-53e7-4c22-8c73-f0805e1bfef5">
+															<SHORT-NAME>J1939RM_USER_CDD</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">Represents a complex driver (CDD).</L-4>
+															</LONG-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="3752362a-1291-4337-b180-7f4ab07ee2ad">
+															<SHORT-NAME>J1939RM_USER_RTE</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">Represents an SW-C located above the RTE.</L-4>
+															</LONG-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+													</LITERALS>
+												</ECUC-ENUMERATION-PARAM-DEF>
+												<ECUC-INTEGER-PARAM-DEF UUID="bd43ae93-7a4a-4928-8d8d-d8a21edebc24">
+													<SHORT-NAME>J1939RmUserAckPGN</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Ack PGN</L-4>
+													</LONG-NAME>
+													<DESC>
+														<L-2 L="EN">PGN supported to be acknowledged to this module. The PGNs supported by different modules should usually be disjunctive.
+
+This parameter shall not be set for J1939RmUserType J1939RM_USER_J1939NM, J1939RM_USER_J1939DCM, and J1939RM_USER_COM.</L-2>
+													</DESC>
+													<ADMIN-DATA>
+														<SDGS>
+															<SDG GID="DV:Display">
+																<SD GID="DV:DefaultFormat">HEX</SD>
+															</SDG>
+														</SDGS>
+													</ADMIN-DATA>
+													<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+													<SCOPE>LOCAL</SCOPE>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>65535</DEFAULT-VALUE>
+													<MAX>262143</MAX>
+													<MIN>0</MIN>
+												</ECUC-INTEGER-PARAM-DEF>
+											</PARAMETERS>
+											<REFERENCES>
+												<!-- Foreign Reference Definition: J1939RmUserCddRef -->
+												<ECUC-FOREIGN-REFERENCE-DEF UUID="75c3bbb4-b437-4096-87d2-978fa9d78f88">
+													<SHORT-NAME>J1939RmUserCddRef</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">CDD Ref</L-4>
+													</LONG-NAME>
+													<DESC>
+														<L-2 L="EN">Reference to CDD module.
+
+This parameter is only required for J1939RmUserType J1939RM_USER_CDD.</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<SCOPE>LOCAL</SCOPE>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<DESTINATION-TYPE>ECUC-MODULE-CONFIGURATION-VALUES</DESTINATION-TYPE>
+												</ECUC-FOREIGN-REFERENCE-DEF>
+											</REFERENCES>
+											<SUB-CONTAINERS>
+												<ECUC-PARAM-CONF-CONTAINER-DEF UUID="83ae20c1-14dc-45b3-92da-aa493235c495">
+													<SHORT-NAME>J1939RmComIPdu</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">COM I-Pdu</L-4>
+													</LONG-NAME>
+													<DESC>
+														<L-2 L="EN">Contains the configuration of an I-PDU that is to be transmitted on request by COM. This configuration container is only relevant for J1939RmUserType J1939RM_USER_COM.</L-2>
+													</DESC>
+													<ADMIN-DATA>
+														<SDGS>
+															<SDG GID="DV:CfgPostBuild">
+																<SD GID="DV:postBuildSelectableChangeable">true</SD>
+																<SD GID="DV:postBuildNotDeletable">false</SD>
+															</SDG>
+														</SDGS>
+													</ADMIN-DATA>
+													<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+													<POST-BUILD-CHANGEABLE>true</POST-BUILD-CHANGEABLE>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<PARAMETERS>
+														<ECUC-INTEGER-PARAM-DEF UUID="7ea66e84-a7d4-4c0a-8691-f11dd2122069">
+															<SHORT-NAME>J1939RmComIPduPGN</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">PGN</L-4>
+															</LONG-NAME>
+															<DESC>
+																<L-2 L="EN">PGN of the COM I-PDU.</L-2>
+															</DESC>
+															<ADMIN-DATA>
+																<SDGS>
+																	<SDG GID="DV:Display">
+																		<SD GID="DV:DefaultFormat">HEX</SD>
+																	</SDG>
+																</SDGS>
+															</ADMIN-DATA>
+															<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+															<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+															<SCOPE>LOCAL</SCOPE>
+															<IMPLEMENTATION-CONFIG-CLASSES>
+																<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+																</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+																</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															</IMPLEMENTATION-CONFIG-CLASSES>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+															<REQUIRES-INDEX>false</REQUIRES-INDEX>
+															<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+															<DEFAULT-VALUE>65535</DEFAULT-VALUE>
+															<MAX>262143</MAX>
+															<MIN>0</MIN>
+														</ECUC-INTEGER-PARAM-DEF>
+														<ECUC-INTEGER-PARAM-DEF UUID="9582b3a6-5d72-4fa8-a923-9cc5cef31b44">
+															<SHORT-NAME>J1939RmComIPduExtId1</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">Extended ID Byte 1</L-4>
+															</LONG-NAME>
+															<DESC>
+																<L-2 L="EN">Extended Identifier Byte 1 of the COM I-PDU.
+
+Only relevant for multiplexed PDUs which are requested using Request2.</L-2>
+															</DESC>
+															<ADMIN-DATA>
+																<SDGS>
+																	<SDG GID="DV:Display">
+																		<SD GID="DV:DefaultFormat">HEX</SD>
+																	</SDG>
+																</SDGS>
+															</ADMIN-DATA>
+															<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+															<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+															<SCOPE>LOCAL</SCOPE>
+															<IMPLEMENTATION-CONFIG-CLASSES>
+																<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+																</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+																</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															</IMPLEMENTATION-CONFIG-CLASSES>
+															<ORIGIN>Vector Informatik</ORIGIN>
+															<REQUIRES-INDEX>false</REQUIRES-INDEX>
+															<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+															<DEFAULT-VALUE>0</DEFAULT-VALUE>
+															<MAX>255</MAX>
+															<MIN>0</MIN>
+														</ECUC-INTEGER-PARAM-DEF>
+														<ECUC-INTEGER-PARAM-DEF UUID="cf7806f8-f9d8-415c-98ae-50336ed40fda">
+															<SHORT-NAME>J1939RmComIPduExtId2</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">Extended ID Byte 2</L-4>
+															</LONG-NAME>
+															<DESC>
+																<L-2 L="EN">Extended Identifier Byte 2 of the COM I-PDU.
+
+Only relevant for multiplexed PDUs which are requested using Request2.</L-2>
+															</DESC>
+															<ADMIN-DATA>
+																<SDGS>
+																	<SDG GID="DV:Display">
+																		<SD GID="DV:DefaultFormat">HEX</SD>
+																	</SDG>
+																</SDGS>
+															</ADMIN-DATA>
+															<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+															<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+															<SCOPE>LOCAL</SCOPE>
+															<IMPLEMENTATION-CONFIG-CLASSES>
+																<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+																</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+																</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															</IMPLEMENTATION-CONFIG-CLASSES>
+															<ORIGIN>Vector Informatik</ORIGIN>
+															<REQUIRES-INDEX>false</REQUIRES-INDEX>
+															<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+															<DEFAULT-VALUE>0</DEFAULT-VALUE>
+															<MAX>255</MAX>
+															<MIN>0</MIN>
+														</ECUC-INTEGER-PARAM-DEF>
+														<ECUC-INTEGER-PARAM-DEF UUID="603c7d99-48f6-44f1-8513-e8ca843945ed">
+															<SHORT-NAME>J1939RmComIPduExtId3</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">Extended ID Byte 3</L-4>
+															</LONG-NAME>
+															<DESC>
+																<L-2 L="EN">Extended Identifier Byte 3 of the COM I-PDU.
+
+Only relevant for multiplexed PDUs which are requested using Request2.</L-2>
+															</DESC>
+															<ADMIN-DATA>
+																<SDGS>
+																	<SDG GID="DV:Display">
+																		<SD GID="DV:DefaultFormat">HEX</SD>
+																	</SDG>
+																</SDGS>
+															</ADMIN-DATA>
+															<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+															<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+															<SCOPE>LOCAL</SCOPE>
+															<IMPLEMENTATION-CONFIG-CLASSES>
+																<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+																</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+																</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															</IMPLEMENTATION-CONFIG-CLASSES>
+															<ORIGIN>Vector Informatik</ORIGIN>
+															<REQUIRES-INDEX>false</REQUIRES-INDEX>
+															<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+															<DEFAULT-VALUE>0</DEFAULT-VALUE>
+															<MAX>255</MAX>
+															<MIN>0</MIN>
+														</ECUC-INTEGER-PARAM-DEF>
+													</PARAMETERS>
+													<REFERENCES>
+														<ECUC-SYMBOLIC-NAME-REFERENCE-DEF UUID="50462b95-a096-4d57-84b4-6718120305a7">
+															<SHORT-NAME>J1939RmComIPduRef</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">COM I-Pdu Ref</L-4>
+															</LONG-NAME>
+															<DESC>
+																<L-2 L="EN">Reference to the COM I-PDU.</L-2>
+															</DESC>
+															<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+															<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+															<SCOPE>LOCAL</SCOPE>
+															<IMPLEMENTATION-CONFIG-CLASSES>
+																<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+																</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+																</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															</IMPLEMENTATION-CONFIG-CLASSES>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+															<REQUIRES-INDEX>false</REQUIRES-INDEX>
+															<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Com/ComConfig/ComIPdu</DESTINATION-REF>
+														</ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+														<ECUC-CHOICE-REFERENCE-DEF UUID="e51db20a-527c-4ef3-a4c4-6863fd7783f3">
+															<SHORT-NAME>J1939RmMultiplexedPduRef</SHORT-NAME>
+															<DESC>
+																<L-2 L="EN">Reference to the multiplexed PDU, which is either a CanIf Tx PDU, or a J1939Tp Tx N-SDU.
+
+Only relevant for multiplexed PDUs which are requested using Request2.</L-2>
+															</DESC>
+															<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+															<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+															<SCOPE>LOCAL</SCOPE>
+															<IMPLEMENTATION-CONFIG-CLASSES>
+																<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+																</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+																</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															</IMPLEMENTATION-CONFIG-CLASSES>
+															<ORIGIN>Vector Informatik</ORIGIN>
+															<REQUIRES-INDEX>false</REQUIRES-INDEX>
+															<DESTINATION-REFS>
+																<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/CanIf/CanIfInitCfg/CanIfTxPduCfg</DESTINATION-REF>
+																<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/J1939Tp/J1939TpConfiguration/J1939TpTxChannel/J1939TpTxPg/J1939TpTxNSdu</DESTINATION-REF>
+															</DESTINATION-REFS>
+														</ECUC-CHOICE-REFERENCE-DEF>
+													</REFERENCES>
+												</ECUC-PARAM-CONF-CONTAINER-DEF>
+											</SUB-CONTAINERS>
+										</ECUC-PARAM-CONF-CONTAINER-DEF>
+									</SUB-CONTAINERS>
+								</ECUC-PARAM-CONF-CONTAINER-DEF>
+							</SUB-CONTAINERS>
+						</ECUC-PARAM-CONF-CONTAINER-DEF>
+						<!-- Container Definition: J1939RmGeneral -->
+						<ECUC-PARAM-CONF-CONTAINER-DEF UUID="96ad35d5-18d3-4644-937c-40a19551616c">
+							<SHORT-NAME>J1939RmGeneral</SHORT-NAME>
+							<DESC>
+								<L-2 L="EN">General configuration parameters of the J1939Rm module.</L-2>
+							</DESC>
+							<ADMIN-DATA>
+								<SDGS>
+									<SDG GID="DV:CfgPostBuild">
+										<SD GID="DV:postBuildSelectableChangeable">false</SD>
+										<SD GID="DV:postBuildNotDeletable">false</SD>
+									</SDG>
+								</SDGS>
+							</ADMIN-DATA>
+							<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+							<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+							<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+							<REQUIRES-INDEX>false</REQUIRES-INDEX>
+							<PARAMETERS>
+								<!-- PARAMETER DEFINITION: J1939RmDevErrorDetect -->
+								<ECUC-BOOLEAN-PARAM-DEF UUID="8ffdd82d-746e-4a5e-98f1-28dc60820dcc">
+									<SHORT-NAME>J1939RmDevErrorDetect</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Enables/disables the development error detection.
+
+Note: In general, the development error detection is recommended during pre-test phase. It is not recommended to enable the development error detection in production code due to increased runtime and ROM needs.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<SCOPE>LOCAL</SCOPE>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>true</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: J1939RmMainFunctionPeriod -->
+								<ECUC-FLOAT-PARAM-DEF UUID="cdb42cd6-f296-4049-860e-44a832beb321">
+									<SHORT-NAME>J1939RmMainFunctionPeriod</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Execution cycle of J1939Rm_MainFunction.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:BaseUnit">SEC</SD>
+												<SD GID="DV:Unit">MSEC</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<SCOPE>ECU</SCOPE>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>0.01</DEFAULT-VALUE>
+									<MAX>0.255</MAX>
+									<MIN>0.001</MIN>
+								</ECUC-FLOAT-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: J1939RmSupportAckIndication -->
+								<ECUC-BOOLEAN-PARAM-DEF UUID="d7aee2fd-96ab-41c9-b1bf-2b239469ef4e">
+									<SHORT-NAME>J1939RmSupportAckIndication</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Enables/disables support of acknowledgement indications.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<SCOPE>LOCAL</SCOPE>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>true</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: J1939RmSupportAckTransmission -->
+								<ECUC-BOOLEAN-PARAM-DEF UUID="42c915cd-214f-48f2-b31a-7229350142bb">
+									<SHORT-NAME>J1939RmSupportAckTransmission</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Enables/disables support of acknowledgement transmission.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<SCOPE>LOCAL</SCOPE>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>true</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: J1939RmSupportRequestIndication -->
+								<ECUC-BOOLEAN-PARAM-DEF UUID="c60b1a67-5f1a-4a42-9d36-fc63f83ef428">
+									<SHORT-NAME>J1939RmSupportRequestIndication</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Enables/disables support of request indications.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<SCOPE>LOCAL</SCOPE>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>true</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: J1939RmSupportRequestTransmission -->
+								<ECUC-BOOLEAN-PARAM-DEF UUID="64207ce2-6d48-4b0b-893a-25282cd56a4b">
+									<SHORT-NAME>J1939RmSupportRequestTransmission</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Enables/disables support of request transmission.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<SCOPE>LOCAL</SCOPE>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>true</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: J1939RmSupportTimeoutSupervision -->
+								<ECUC-BOOLEAN-PARAM-DEF UUID="27050087-de87-402f-9d40-30f4131e1572">
+									<SHORT-NAME>J1939RmSupportTimeoutSupervision</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Enables/disables support of request timeout supervision.
+
+Please note: This feature is not yet supported.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<SCOPE>LOCAL</SCOPE>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>true</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: J1939RmTxConfirmationTimeout -->
+								<ECUC-FLOAT-PARAM-DEF UUID="5a3bf84b-8ae1-444e-97a6-61e95b0d046c">
+									<SHORT-NAME>J1939RmTxConfirmationTimeout</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Time to wait for a confirmation after transmission of a message. After this time, TxConfirmation is not expected to be called for the last transmission, and the message is assumed to have been lost.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:BaseUnit">SEC</SD>
+												<SD GID="DV:Unit">MSEC</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<SCOPE>LOCAL</SCOPE>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>1.5</DEFAULT-VALUE>
+									<MAX>65.535</MAX>
+									<MIN>0</MIN>
+								</ECUC-FLOAT-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: J1939RmVersionInfoApi -->
+								<ECUC-BOOLEAN-PARAM-DEF UUID="2d111e70-89bd-4a43-8c2c-a05eb5a1eb5a">
+									<SHORT-NAME>J1939RmVersionInfoApi</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Version Info API</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">Enables/disables the function J1939Rm_GetVersionInfo() to get major, minor and patch version information.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<SCOPE>LOCAL</SCOPE>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-STRING-PARAM-DEF UUID="265feeff-5b5a-4791-84ad-81355bc31ff8">
+									<SHORT-NAME>J1939RmUserConfigurationFile</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Reference to an external user configuration file that will be included during generation.
+
+The content of the user configuration file will be added at the end of the generated module configuration file and allows altering or extending the generated code.
+
+Caution: User configuration files can cause the software module to malfunction and must only be used with great care!</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<SCOPE>LOCAL</SCOPE>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+								</ECUC-STRING-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="dbc01ed3-6a80-4878-b9f6-746d0875ecbb">
+									<SHORT-NAME>J1939RmSupportComUser</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Support COM User</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">Enables/disables support for COM users.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<SCOPE>LOCAL</SCOPE>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>true</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="a4ad143a-633c-426e-8c0d-150f051e0b34">
+									<SHORT-NAME>J1939RmSupportRequest2</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Enables/disables support of the Request2 PG.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<SCOPE>LOCAL</SCOPE>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="f8a1c297-96a6-4cae-8f01-4ca706ad0e6b">
+									<SHORT-NAME>J1939RmRuntimeErrorReport</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Enables/disables the reporting of runtime errors.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<SCOPE>LOCAL</SCOPE>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>true</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+							</PARAMETERS>
+						</ECUC-PARAM-CONF-CONTAINER-DEF>
+					</CONTAINERS>
+				</ECUC-MODULE-DEF>
+				<BSW-IMPLEMENTATION UUID="f9df0718-c78b-43e7-93b9-570fa7d3efcb">
+					<SHORT-NAME>J1939Rm_Impl</SHORT-NAME>
+					<PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+					<SW-VERSION>2.02.04</SW-VERSION>
+					<USED-CODE-GENERATOR>DaVinci Configurator</USED-CODE-GENERATOR>
+					<VENDOR-ID>30</VENDOR-ID>
+					<AR-RELEASE-VERSION>4.02.02</AR-RELEASE-VERSION>
+					<BEHAVIOR-REF DEST="BSW-INTERNAL-BEHAVIOR">/MICROSAR/J1939Rm_ib_bswmd/BswModuleDescriptions/J1939Rm/J1939RmBehavior</BEHAVIOR-REF>
+					<PRECONFIGURED-CONFIGURATION-REFS>
+						<PRECONFIGURED-CONFIGURATION-REF DEST="ECUC-MODULE-CONFIGURATION-VALUES">/MICROSAR/J1939Rm_Pre</PRECONFIGURED-CONFIGURATION-REF>
+					</PRECONFIGURED-CONFIGURATION-REFS>
+					<RECOMMENDED-CONFIGURATION-REFS>
+						<RECOMMENDED-CONFIGURATION-REF DEST="ECUC-MODULE-CONFIGURATION-VALUES">/MICROSAR/J1939Rm_Rec</RECOMMENDED-CONFIGURATION-REF>
+					</RECOMMENDED-CONFIGURATION-REFS>
+					<VENDOR-SPECIFIC-MODULE-DEF-REFS>
+						<VENDOR-SPECIFIC-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/MICROSAR/J1939Rm</VENDOR-SPECIFIC-MODULE-DEF-REF>
+					</VENDOR-SPECIFIC-MODULE-DEF-REFS>
+				</BSW-IMPLEMENTATION>
+				<ECUC-MODULE-CONFIGURATION-VALUES UUID="13fa9bff-8c13-4c5e-9f41-937cec0034f2">
+					<SHORT-NAME>J1939Rm_Pre</SHORT-NAME>
+					<DEFINITION-REF DEST="ECUC-MODULE-DEF">/MICROSAR/J1939Rm</DEFINITION-REF>
+					<CONTAINERS></CONTAINERS>
+				</ECUC-MODULE-CONFIGURATION-VALUES>
+				<ECUC-MODULE-CONFIGURATION-VALUES UUID="1be4ed86-c658-4a5a-b5c2-9938a580c963">
+					<SHORT-NAME>J1939Rm_Rec</SHORT-NAME>
+					<DEFINITION-REF DEST="ECUC-MODULE-DEF">/MICROSAR/J1939Rm</DEFINITION-REF>
+					<CONTAINERS></CONTAINERS>
+				</ECUC-MODULE-CONFIGURATION-VALUES>
+			</ELEMENTS>
+		</AR-PACKAGE>
+	</AR-PACKAGES>
+</AUTOSAR>

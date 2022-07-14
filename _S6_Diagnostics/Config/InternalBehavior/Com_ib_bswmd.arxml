@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-2-1.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="4a1f5e4e-1b37-4ab3-9756-524419074e03">
+      <SHORT-NAME>MICROSAR</SHORT-NAME>
+      <ELEMENTS>
+        <BSW-IMPLEMENTATION UUID="f9df0718-c78b-43e7-93b9-570fa7d3efcb">
+          <SHORT-NAME>Com_Impl</SHORT-NAME>
+          <MC-SUPPORT/>
+          <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+          <SW-VERSION>13.03.01</SW-VERSION>
+          <USED-CODE-GENERATOR>DaVinci Configurator</USED-CODE-GENERATOR>
+          <VENDOR-ID>30</VENDOR-ID>
+          <AR-RELEASE-VERSION>4.00.03</AR-RELEASE-VERSION>
+        </BSW-IMPLEMENTATION>
+      </ELEMENTS>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="38ddc00a-2c8b-4a46-b1b3-3db1c7477677">
+          <SHORT-NAME>Com_ib_bswmd</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="ceb85236-983e-4198-aa4c-7f7b2f377203">
+              <SHORT-NAME>BswModuleDescriptions</SHORT-NAME>
+              <ELEMENTS>
+                <BSW-MODULE-DESCRIPTION UUID="87db1c9e-f9ad-4678-954a-373a6bb5e514">
+                  <SHORT-NAME>Com</SHORT-NAME>
+                  <PROVIDED-ENTRYS>
+                    <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                      <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/MICROSAR/Com_ib_bswmd/BswModuleDescriptions/Com_MainFunctionTx</BSW-MODULE-ENTRY-REF>
+                    </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                    <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                      <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/MICROSAR/Com_ib_bswmd/BswModuleDescriptions/Com_MainFunctionRx</BSW-MODULE-ENTRY-REF>
+                    </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  </PROVIDED-ENTRYS>
+                  <INTERNAL-BEHAVIORS>
+                    <BSW-INTERNAL-BEHAVIOR UUID="fad7325c-d828-490c-9d5d-053d3598d5a0">
+                      <SHORT-NAME>ComBehavior</SHORT-NAME>
+                      <EXCLUSIVE-AREAS>
+                        <EXCLUSIVE-AREA UUID="5214d010-f653-4f0c-9c55-bfa0f4dde2fe">
+                          <SHORT-NAME>COM_EXCLUSIVE_AREA_TX</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL">This critical section protects Tx ressources that can be accessed from various contexts. Therefore the critical section enclosed with COM_EXCLUSIVE_AREA_TX should never be interrupted by any Com API which accesses Tx ressources. For more details, see DocTechRef.</L-2>
+                          </DESC>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="38f175ff-4182-44db-a093-fed6e6549ff3">
+                          <SHORT-NAME>COM_EXCLUSIVE_AREA_RX</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL">This critical section protects Rx ressources that can be accessed from various contexts.Therefore the critical section enclosed with COM_EXCLUSIVE_AREA_RX should never be interrupted by any Com API which accesses Rx ressources. For more details, see DocTechRef.</L-2>
+                          </DESC>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="b71bdabb-5c03-4efc-a972-ef80cf6a60a0">
+                          <SHORT-NAME>COM_EXCLUSIVE_AREA_BOTH</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL">This critical section protects Rx and Tx ressources that are being accessed in context of Com_MainFunctionRouteSignals for signal gateway routings or description routings with configured deferred description source.  For more details, see DocTechRef.</L-2>
+                          </DESC>
+                        </EXCLUSIVE-AREA>
+                      </EXCLUSIVE-AREAS>
+                      <ENTITYS>
+                        <BSW-SCHEDULABLE-ENTITY UUID="06d78fc0-5764-4024-ad31-7c8273dfa17f">
+                          <SHORT-NAME>Com_MainFunctionTx</SHORT-NAME>
+                          <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/MICROSAR/Com_ib_bswmd/BswModuleDescriptions/Com_MainFunctionTx</IMPLEMENTED-ENTRY-REF>
+                        </BSW-SCHEDULABLE-ENTITY>
+                        <BSW-SCHEDULABLE-ENTITY UUID="e0aaa9d7-d96c-4fdb-aba9-a8e446542bad">
+                          <SHORT-NAME>Com_MainFunctionRx</SHORT-NAME>
+                          <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/MICROSAR/Com_ib_bswmd/BswModuleDescriptions/Com_MainFunctionRx</IMPLEMENTED-ENTRY-REF>
+                        </BSW-SCHEDULABLE-ENTITY>
+                      </ENTITYS>
+                      <EVENTS>
+                        <BSW-TIMING-EVENT UUID="443ced23-1c8b-4700-9c3a-d6d56d80c2f5">
+                          <SHORT-NAME>Com_MainFunctionTxTimingEvent0</SHORT-NAME>
+                          <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/MICROSAR/Com_ib_bswmd/BswModuleDescriptions/Com/ComBehavior/Com_MainFunctionTx</STARTS-ON-EVENT-REF>
+                          <PERIOD>0.01</PERIOD>
+                        </BSW-TIMING-EVENT>
+                        <BSW-TIMING-EVENT UUID="79a6f48e-7d1a-405b-94a2-7284d172debc">
+                          <SHORT-NAME>Com_MainFunctionRxTimingEvent0</SHORT-NAME>
+                          <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/MICROSAR/Com_ib_bswmd/BswModuleDescriptions/Com/ComBehavior/Com_MainFunctionRx</STARTS-ON-EVENT-REF>
+                          <PERIOD>0.01</PERIOD>
+                        </BSW-TIMING-EVENT>
+                      </EVENTS>
+                    </BSW-INTERNAL-BEHAVIOR>
+                  </INTERNAL-BEHAVIORS>
+                </BSW-MODULE-DESCRIPTION>
+                <BSW-MODULE-ENTRY UUID="8f00ced4-743a-4e0e-9478-7b16c553fc66">
+                  <SHORT-NAME>Com_MainFunctionTx</SHORT-NAME>
+                  <CALL-TYPE>SCHEDULED</CALL-TYPE>
+                  <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                </BSW-MODULE-ENTRY>
+                <BSW-MODULE-ENTRY UUID="083bd70d-95fb-4b1c-9123-93532f110efe">
+                  <SHORT-NAME>Com_MainFunctionRx</SHORT-NAME>
+                  <CALL-TYPE>SCHEDULED</CALL-TYPE>
+                  <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                </BSW-MODULE-ENTRY>
+              </ELEMENTS>
+            </AR-PACKAGE>
+            <AR-PACKAGE UUID="3a12e7aa-b2b0-4918-ac14-08a3ac7c965b">
+              <SHORT-NAME>XcpEvents</SHORT-NAME>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

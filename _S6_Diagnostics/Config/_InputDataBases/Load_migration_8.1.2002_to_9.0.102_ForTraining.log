@@ -1,0 +1,47 @@
+Encoding: iso-8859-1
+Detected dtd version 8.1.2002
+VCANdelaPersistorImpl::GetFileVersion: DTD version '8.1.2002' detected
+Loading 'C:\cancollege\MSR_Exercises_AIP4\_S6_Diagnostics\Config\_InputDataBases\ForTraining.cdd'...
+  dtd version: file 8.1.2002, program 9.0.102
+Document supports the languages (en-US)
+Document contains the uptodate languages (en-US)
+Template: Qualifier : Door, SaveNo : 2, Label : --DDM_VALIDATE_BEGIN00281d7c-1e88-46b6-8add-59d7d2106c31DDM_VALIDATE_END
+  template data loaded
+  variant 'CommonDiagnostics' loaded
+DIDs migration 8.5.1: start
+DIDs migration 8.5.1: Add DID 'New_Data_Type_5, 0x0444' to all variants
+DIDs migration 8.5.1: Add DID 'DID_definition_Example, 0xF190' to all variants
+DIDs migration 8.5.1: end
+Migration 5.0.1: setting author of last revision ('CW') as 'responsible'
+Check Identifier for uniqueness 9.0.101 migration: start
+Check Identifier for uniqueness 9.0.101 migration: checking diagnostic identifier..
+Check Identifier for uniqueness 9.0.101 migration: all diagnostic identifiers in this document are unique.
+Check Identifier for uniqueness 9.0.101 migration: attribute "Check Identifier for Uniqueness" will be not created.
+Check Identifier for uniqueness 9.0.101 migration: success
+Document version: 1
+Done loading.
+Checking consistency of document. This may take a while, please be patient...
+Warning: Qualifier detected in 'qpath://[PROTOCOLSERVICE]_19_ReadDtcInformation_Report_DTC_extended_data_record_by_DTC_number' is too long.
+Warning:  The maximal allowed qualifier length is 64 characters. See Qualifier generation options dialog.
+Warning: Text table data type 'SID-RQ-NR' contains 1 entries without any assigned text.
+Warning: Text table data type 'Identifier' contains 1 entries without any assigned text.
+Warning: Text table data type 'Short Identifier' contains 1 entries without any assigned text.
+Warning: Text table data type 'MemoryRanges_01' contains 3 entries without any assigned text.
+Warning: Text table data type 'DTC SnapshotRecordNumber' contains 1 entries without any assigned text.
+ComParamMan: Setting COM parameter 'BusType' to value 'FlexRay' failed. Invalid value!
+ComParamMan: Setting COM parameter 'TransportProtocolType' to value 'Autosar' failed. Invalid value!
+ComParamMan: Unidentified ComParam PayloadLengthReqPhys
+ComParamMan: Unidentified ComParam PayloadLengthRes
+ComParamMan: Unidentified ComParam ConnectionModePhys
+ComParamMan: Unidentified ComParam AddressTypePhys
+ComParamMan: Unidentified ComParam SlotIdReqPhys
+ComParamMan: Unidentified ComParam BaseCycleReqPhys
+ComParamMan: Unidentified ComParam CycleRepetitionReqPhys
+ComParamMan: Unidentified ComParam SlotIdRes
+ComParamMan: Unidentified ComParam BaseCycleRes
+ComParamMan: Unidentified ComParam CycleRepetitionRes
+ComParamMan: Unidentified ComParam FlexRayFrameFillerByte
+ComParamMan: Unidentified ComParam FrChannelPhys
+ComParamMan: Unidentified ComParam MessageLengthPhys
+Checking service prefixes in base variant 'CommonDiagnostics' ... OK
+Document is consistent.

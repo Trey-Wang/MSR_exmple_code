@@ -1,0 +1,983 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-2-1.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="4a1f5e4e-1b37-4ab3-9756-524419074e03">
+      <SHORT-NAME>MICROSAR</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="f2777c35-05f9-4123-8324-8fde4b93e541">
+          <SHORT-NAME>NvM_swc</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="086a2c19-49b7-430a-a49b-99f44c64e65d">
+              <SHORT-NAME>DataTypes</SHORT-NAME>
+              <ELEMENTS>
+                <IMPLEMENTATION-DATA-TYPE UUID="9f7fb64d-33e1-4d5d-a874-c5d4ae5ea1ea">
+                  <SHORT-NAME>NvM_RequestResultType</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <COMPU-METHOD-REF DEST="COMPU-METHOD">/MICROSAR/NvM_swc/DataTypes/CompuMethods/NvM_RequestResultType</COMPU-METHOD-REF>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </IMPLEMENTATION-DATA-TYPE>
+                <IMPLEMENTATION-DATA-TYPE UUID="9e7cdc76-453d-4ea0-a8c6-c3373bc015e2">
+                  <SHORT-NAME>NvM_BlockIdType</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <DATA-CONSTR-REF DEST="DATA-CONSTR">/MICROSAR/NvM_swc/DataTypes/DataConstrs/NvM_BlockIdType_Constr</DATA-CONSTR-REF>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </IMPLEMENTATION-DATA-TYPE>
+                <IMPLEMENTATION-DATA-TYPE UUID="0e279bf7-5fc2-4093-8086-56d88d97d83c">
+                  <SHORT-NAME>NvM_ServiceIdType</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <COMPU-METHOD-REF DEST="COMPU-METHOD">/MICROSAR/NvM_swc/DataTypes/CompuMethods/NvM_ServiceIdType</COMPU-METHOD-REF>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </IMPLEMENTATION-DATA-TYPE>
+              </ELEMENTS>
+              <AR-PACKAGES>
+                <AR-PACKAGE UUID="174115d0-55b3-4850-b644-6c84fdfc5fc1">
+                  <SHORT-NAME>CompuMethods</SHORT-NAME>
+                  <ELEMENTS>
+                    <COMPU-METHOD UUID="1a4c8a03-4a7c-4f44-af3c-ef110d9adc6f">
+                      <SHORT-NAME>NvM_RequestResultType</SHORT-NAME>
+                      <CATEGORY>TEXTTABLE</CATEGORY>
+                      <COMPU-INTERNAL-TO-PHYS>
+                        <COMPU-SCALES>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>NVM_REQ_OK</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>NVM_REQ_OK</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>NVM_REQ_NOT_OK</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">1</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>NVM_REQ_NOT_OK</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>NVM_REQ_PENDING</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">2</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">2</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>NVM_REQ_PENDING</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>NVM_REQ_INTEGRITY_FAILED</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">3</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">3</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>NVM_REQ_INTEGRITY_FAILED</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>NVM_REQ_BLOCK_SKIPPED</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">4</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">4</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>NVM_REQ_BLOCK_SKIPPED</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>NVM_REQ_NV_INVALIDATED</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">5</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">5</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>NVM_REQ_NV_INVALIDATED</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>NVM_REQ_CANCELED</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">6</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">6</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>NVM_REQ_CANCELED</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>NVM_REQ_REDUNDANCY_FAILED</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">7</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">7</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>NVM_REQ_REDUNDANCY_FAILED</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>NVM_REQ_RESTORED_FROM_ROM</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">8</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">8</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>NVM_REQ_RESTORED_FROM_ROM</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                        </COMPU-SCALES>
+                      </COMPU-INTERNAL-TO-PHYS>
+                    </COMPU-METHOD>
+                    <COMPU-METHOD UUID="c2d217a8-18ea-4c8f-b976-45ff7e48a76d">
+                      <SHORT-NAME>NvM_ServiceIdType</SHORT-NAME>
+                      <CATEGORY>TEXTTABLE</CATEGORY>
+                      <COMPU-INTERNAL-TO-PHYS>
+                        <COMPU-SCALES>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>NVM_READ_BLOCK</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">6</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">6</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>NVM_READ_BLOCK</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>NVM_WRITE_BLOCK</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">7</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">7</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>NVM_WRITE_BLOCK</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>NVM_RESTORE_BLOCK_DEFAULTS</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">8</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">8</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>NVM_RESTORE_BLOCK_DEFAULTS</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>NVM_ERASE_BLOCK</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">9</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">9</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>NVM_ERASE_BLOCK</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>NVM_INVALIDATE_NV_BLOCK</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">11</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">11</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>NVM_INVALIDATE_NV_BLOCK</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>NVM_READ_ALL</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">12</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">12</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>NVM_READ_ALL</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                        </COMPU-SCALES>
+                      </COMPU-INTERNAL-TO-PHYS>
+                    </COMPU-METHOD>
+                  </ELEMENTS>
+                </AR-PACKAGE>
+                <AR-PACKAGE UUID="986ffed4-947c-4d07-b911-d685e6770d35">
+                  <SHORT-NAME>DataConstrs</SHORT-NAME>
+                  <ELEMENTS>
+                    <DATA-CONSTR UUID="a2608473-60a3-4eb7-8232-b19e5924a3c4">
+                      <SHORT-NAME>NvM_BlockIdType_Constr</SHORT-NAME>
+                      <DATA-CONSTR-RULES>
+                        <DATA-CONSTR-RULE>
+                          <INTERNAL-CONSTRS>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">1</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">32767</UPPER-LIMIT>
+                          </INTERNAL-CONSTRS>
+                        </DATA-CONSTR-RULE>
+                      </DATA-CONSTR-RULES>
+                    </DATA-CONSTR>
+                  </ELEMENTS>
+                </AR-PACKAGE>
+              </AR-PACKAGES>
+            </AR-PACKAGE>
+            <AR-PACKAGE UUID="72f3bd23-1007-4666-8e86-81e9be1764bd">
+              <SHORT-NAME>Interfaces</SHORT-NAME>
+              <ELEMENTS>
+                <CLIENT-SERVER-INTERFACE UUID="b50b2982-5d11-4585-bccd-860315aac02c">
+                  <SHORT-NAME>NvMAdministration</SHORT-NAME>
+                  <IS-SERVICE>true</IS-SERVICE>
+                  <SERVICE-KIND>NON-VOLATILE-RAM-MANAGER</SERVICE-KIND>
+                  <OPERATIONS>
+                    <CLIENT-SERVER-OPERATION UUID="6ed49ae9-5a12-4e56-b431-8ffee101d9c9">
+                      <SHORT-NAME>SetBlockProtection</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="FOR-ALL"/>
+                      </DESC>
+                      <ARGUMENTS>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="3c6f869d-0884-414a-bd27-8970d897f3d9">
+                          <SHORT-NAME>ProtectionEnabled</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</TYPE-TREF>
+                          <DIRECTION>IN</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                      </ARGUMENTS>
+                      <POSSIBLE-ERROR-REFS>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/NvM_swc/Interfaces/NvMAdministration/E_NOT_OK</POSSIBLE-ERROR-REF>
+                      </POSSIBLE-ERROR-REFS>
+                    </CLIENT-SERVER-OPERATION>
+                  </OPERATIONS>
+                  <POSSIBLE-ERRORS>
+                    <APPLICATION-ERROR UUID="03af7f61-c699-4289-a1bd-9db54076b077">
+                      <SHORT-NAME>E_NOT_OK</SHORT-NAME>
+                      <ERROR-CODE>1</ERROR-CODE>
+                    </APPLICATION-ERROR>
+                  </POSSIBLE-ERRORS>
+                </CLIENT-SERVER-INTERFACE>
+                <CLIENT-SERVER-INTERFACE UUID="40c45d2e-99ef-4712-aa04-2c6922d7a822">
+                  <SHORT-NAME>NvMService_AC3_SRBS</SHORT-NAME>
+                  <IS-SERVICE>true</IS-SERVICE>
+                  <SERVICE-KIND>NON-VOLATILE-RAM-MANAGER</SERVICE-KIND>
+                  <OPERATIONS>
+                    <CLIENT-SERVER-OPERATION UUID="1cb8d14d-0f7b-426b-a978-dcbe590aed45">
+                      <SHORT-NAME>GetErrorStatus</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="FOR-ALL"/>
+                      </DESC>
+                      <ARGUMENTS>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="59b8030a-8dcf-4ba1-97c7-f2d58c56525b">
+                          <SHORT-NAME>ErrorStatus</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/NvM_swc/DataTypes/NvM_RequestResultType</TYPE-TREF>
+                          <DIRECTION>OUT</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                      </ARGUMENTS>
+                      <POSSIBLE-ERROR-REFS>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/NvM_swc/Interfaces/NvMService_AC3_SRBS/E_NOT_OK</POSSIBLE-ERROR-REF>
+                      </POSSIBLE-ERROR-REFS>
+                    </CLIENT-SERVER-OPERATION>
+                    <CLIENT-SERVER-OPERATION UUID="cdf3fa92-5b48-4d9a-b2b1-03e57b8ced5d">
+                      <SHORT-NAME>SetRamBlockStatus</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="FOR-ALL"/>
+                      </DESC>
+                      <ARGUMENTS>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="9b9b9c3e-0c44-47b5-91f7-023b50fd8c8e">
+                          <SHORT-NAME>RamBlockStatus</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</TYPE-TREF>
+                          <DIRECTION>IN</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                      </ARGUMENTS>
+                      <POSSIBLE-ERROR-REFS>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/NvM_swc/Interfaces/NvMService_AC3_SRBS/E_NOT_OK</POSSIBLE-ERROR-REF>
+                      </POSSIBLE-ERROR-REFS>
+                    </CLIENT-SERVER-OPERATION>
+                    <CLIENT-SERVER-OPERATION UUID="318fd360-b1af-4ec5-a34d-adbe8f3c469d">
+                      <SHORT-NAME>ReadBlock</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="FOR-ALL"/>
+                      </DESC>
+                      <ARGUMENTS>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="4d8e45f3-1c67-4fe7-a547-56cafa058a8d">
+                          <SHORT-NAME>DstPtr</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/dtRef_VOID</TYPE-TREF>
+                          <DIRECTION>IN</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                      </ARGUMENTS>
+                      <POSSIBLE-ERROR-REFS>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/NvM_swc/Interfaces/NvMService_AC3_SRBS/E_NOT_OK</POSSIBLE-ERROR-REF>
+                      </POSSIBLE-ERROR-REFS>
+                    </CLIENT-SERVER-OPERATION>
+                    <CLIENT-SERVER-OPERATION UUID="b1e0c9c7-4df0-44ee-a1c2-76a31c6b6e60">
+                      <SHORT-NAME>WriteBlock</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="FOR-ALL"/>
+                      </DESC>
+                      <ARGUMENTS>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="5d0f8b9d-e4a5-4b03-812f-41eb4c8458d7">
+                          <SHORT-NAME>SrcPtr</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/dtRef_const_VOID</TYPE-TREF>
+                          <DIRECTION>IN</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                      </ARGUMENTS>
+                      <POSSIBLE-ERROR-REFS>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/NvM_swc/Interfaces/NvMService_AC3_SRBS/E_NOT_OK</POSSIBLE-ERROR-REF>
+                      </POSSIBLE-ERROR-REFS>
+                    </CLIENT-SERVER-OPERATION>
+                    <CLIENT-SERVER-OPERATION UUID="210781df-acc6-42d8-94e0-b012be3b565b">
+                      <SHORT-NAME>InvalidateNvBlock</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="FOR-ALL"/>
+                      </DESC>
+                      <POSSIBLE-ERROR-REFS>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/NvM_swc/Interfaces/NvMService_AC3_SRBS/E_NOT_OK</POSSIBLE-ERROR-REF>
+                      </POSSIBLE-ERROR-REFS>
+                    </CLIENT-SERVER-OPERATION>
+                    <CLIENT-SERVER-OPERATION UUID="e92aac8c-9c51-46ab-8504-7682b7df6b56">
+                      <SHORT-NAME>EraseBlock</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="FOR-ALL"/>
+                      </DESC>
+                      <POSSIBLE-ERROR-REFS>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/NvM_swc/Interfaces/NvMService_AC3_SRBS/E_NOT_OK</POSSIBLE-ERROR-REF>
+                      </POSSIBLE-ERROR-REFS>
+                    </CLIENT-SERVER-OPERATION>
+                  </OPERATIONS>
+                  <POSSIBLE-ERRORS>
+                    <APPLICATION-ERROR UUID="f56b9674-254b-4708-aaca-402de36ea35e">
+                      <SHORT-NAME>E_NOT_OK</SHORT-NAME>
+                      <ERROR-CODE>1</ERROR-CODE>
+                    </APPLICATION-ERROR>
+                  </POSSIBLE-ERRORS>
+                </CLIENT-SERVER-INTERFACE>
+                <CLIENT-SERVER-INTERFACE UUID="97d7ae0b-4e83-4ab3-a2bd-5353bccfb0a7">
+                  <SHORT-NAME>NvMService_AC3_SRBS_Defs</SHORT-NAME>
+                  <IS-SERVICE>true</IS-SERVICE>
+                  <SERVICE-KIND>NON-VOLATILE-RAM-MANAGER</SERVICE-KIND>
+                  <OPERATIONS>
+                    <CLIENT-SERVER-OPERATION UUID="f66995b2-d509-47d7-b724-f73eb0f0096e">
+                      <SHORT-NAME>GetErrorStatus</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="FOR-ALL"/>
+                      </DESC>
+                      <ARGUMENTS>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="4e59bb5e-f4dd-4ae3-94d7-2a662b8e39c3">
+                          <SHORT-NAME>ErrorStatus</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/NvM_swc/DataTypes/NvM_RequestResultType</TYPE-TREF>
+                          <DIRECTION>OUT</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                      </ARGUMENTS>
+                      <POSSIBLE-ERROR-REFS>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/NvM_swc/Interfaces/NvMService_AC3_SRBS_Defs/E_NOT_OK</POSSIBLE-ERROR-REF>
+                      </POSSIBLE-ERROR-REFS>
+                    </CLIENT-SERVER-OPERATION>
+                    <CLIENT-SERVER-OPERATION UUID="4f8184c1-4326-4c01-bedf-37ae6b1c908d">
+                      <SHORT-NAME>SetRamBlockStatus</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="FOR-ALL"/>
+                      </DESC>
+                      <ARGUMENTS>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="531ff16d-5b5e-4a96-a65e-f141818d1d29">
+                          <SHORT-NAME>RamBlockStatus</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</TYPE-TREF>
+                          <DIRECTION>IN</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                      </ARGUMENTS>
+                      <POSSIBLE-ERROR-REFS>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/NvM_swc/Interfaces/NvMService_AC3_SRBS_Defs/E_NOT_OK</POSSIBLE-ERROR-REF>
+                      </POSSIBLE-ERROR-REFS>
+                    </CLIENT-SERVER-OPERATION>
+                    <CLIENT-SERVER-OPERATION UUID="be30f4ec-4ebf-4274-befc-e5bf2bb6080c">
+                      <SHORT-NAME>ReadBlock</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="FOR-ALL"/>
+                      </DESC>
+                      <ARGUMENTS>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="84a06be2-e222-47dc-b04a-0fbefdf76a4a">
+                          <SHORT-NAME>DstPtr</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/dtRef_VOID</TYPE-TREF>
+                          <DIRECTION>IN</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                      </ARGUMENTS>
+                      <POSSIBLE-ERROR-REFS>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/NvM_swc/Interfaces/NvMService_AC3_SRBS_Defs/E_NOT_OK</POSSIBLE-ERROR-REF>
+                      </POSSIBLE-ERROR-REFS>
+                    </CLIENT-SERVER-OPERATION>
+                    <CLIENT-SERVER-OPERATION UUID="9ccb65db-9539-4821-a546-2ae548687f78">
+                      <SHORT-NAME>WriteBlock</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="FOR-ALL"/>
+                      </DESC>
+                      <ARGUMENTS>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="7e9b33a7-6d1a-4715-9353-d8aef1c5d717">
+                          <SHORT-NAME>SrcPtr</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/dtRef_const_VOID</TYPE-TREF>
+                          <DIRECTION>IN</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                      </ARGUMENTS>
+                      <POSSIBLE-ERROR-REFS>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/NvM_swc/Interfaces/NvMService_AC3_SRBS_Defs/E_NOT_OK</POSSIBLE-ERROR-REF>
+                      </POSSIBLE-ERROR-REFS>
+                    </CLIENT-SERVER-OPERATION>
+                    <CLIENT-SERVER-OPERATION UUID="a6b09ecc-3407-4509-a463-7af8d49c1a13">
+                      <SHORT-NAME>RestoreBlockDefaults</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="FOR-ALL"/>
+                      </DESC>
+                      <ARGUMENTS>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="a82ed886-de63-4cda-981c-4b4e520af5ff">
+                          <SHORT-NAME>DstPtr</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/dtRef_VOID</TYPE-TREF>
+                          <DIRECTION>IN</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                      </ARGUMENTS>
+                      <POSSIBLE-ERROR-REFS>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/NvM_swc/Interfaces/NvMService_AC3_SRBS_Defs/E_NOT_OK</POSSIBLE-ERROR-REF>
+                      </POSSIBLE-ERROR-REFS>
+                    </CLIENT-SERVER-OPERATION>
+                    <CLIENT-SERVER-OPERATION UUID="85903acc-142f-4990-805e-c0e865241ee9">
+                      <SHORT-NAME>InvalidateNvBlock</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="FOR-ALL"/>
+                      </DESC>
+                      <POSSIBLE-ERROR-REFS>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/NvM_swc/Interfaces/NvMService_AC3_SRBS_Defs/E_NOT_OK</POSSIBLE-ERROR-REF>
+                      </POSSIBLE-ERROR-REFS>
+                    </CLIENT-SERVER-OPERATION>
+                    <CLIENT-SERVER-OPERATION UUID="6dfcab6c-da5f-4c17-87f5-13300324fe5c">
+                      <SHORT-NAME>EraseBlock</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="FOR-ALL"/>
+                      </DESC>
+                      <POSSIBLE-ERROR-REFS>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/NvM_swc/Interfaces/NvMService_AC3_SRBS_Defs/E_NOT_OK</POSSIBLE-ERROR-REF>
+                      </POSSIBLE-ERROR-REFS>
+                    </CLIENT-SERVER-OPERATION>
+                  </OPERATIONS>
+                  <POSSIBLE-ERRORS>
+                    <APPLICATION-ERROR UUID="f1ed4585-797f-4b33-9821-54df553bbe7b">
+                      <SHORT-NAME>E_NOT_OK</SHORT-NAME>
+                      <ERROR-CODE>1</ERROR-CODE>
+                    </APPLICATION-ERROR>
+                  </POSSIBLE-ERRORS>
+                </CLIENT-SERVER-INTERFACE>
+                <CLIENT-SERVER-INTERFACE UUID="edf13b76-1861-4b8c-8ea2-501c932f4c73">
+                  <SHORT-NAME>NvMNotifyJobFinished</SHORT-NAME>
+                  <IS-SERVICE>true</IS-SERVICE>
+                  <SERVICE-KIND>NON-VOLATILE-RAM-MANAGER</SERVICE-KIND>
+                  <OPERATIONS>
+                    <CLIENT-SERVER-OPERATION UUID="7babce25-18e8-40e3-ac3c-2ba8a81dfbfc">
+                      <SHORT-NAME>JobFinished</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="FOR-ALL"/>
+                      </DESC>
+                      <ARGUMENTS>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="e49d288c-4116-4f6e-95b6-c738a48c6186">
+                          <SHORT-NAME>ServiceId</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/NvM_swc/DataTypes/NvM_ServiceIdType</TYPE-TREF>
+                          <DIRECTION>IN</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="dae91c75-d599-41c2-bc76-18fc3026afbc">
+                          <SHORT-NAME>JobResult</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/NvM_swc/DataTypes/NvM_RequestResultType</TYPE-TREF>
+                          <DIRECTION>IN</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                      </ARGUMENTS>
+                    </CLIENT-SERVER-OPERATION>
+                  </OPERATIONS>
+                </CLIENT-SERVER-INTERFACE>
+              </ELEMENTS>
+            </AR-PACKAGE>
+            <AR-PACKAGE UUID="6653cab1-6e69-4265-b916-299197cedc94">
+              <SHORT-NAME>ComponentTypes</SHORT-NAME>
+              <ELEMENTS>
+                <SERVICE-SW-COMPONENT-TYPE UUID="484e973f-b906-4ceb-8295-0931c0ee70bd">
+                  <SHORT-NAME>NvM</SHORT-NAME>
+                  <CATEGORY>SERVICE_COMPONENT</CATEGORY>
+                  <PORTS>
+                    <P-PORT-PROTOTYPE UUID="2913ac29-e90a-4881-89c2-c6a049ce9570">
+                      <SHORT-NAME>PS_NvMConfigBlock</SHORT-NAME>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="DV:DerivedFromReferrables">
+                            <SDG GID="DV:DerivedFromReferrablesVariant">
+                              <SD GID="DV:InvariantValuesView"/>
+                              <SDX-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/NvM/NvMConfigBlock</SDX-REF>
+                            </SDG>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/MICROSAR/NvM_swc/Interfaces/NvMService_AC3_SRBS</PROVIDED-INTERFACE-TREF>
+                    </P-PORT-PROTOTYPE>
+                    <P-PORT-PROTOTYPE UUID="7fe03012-2c90-4c3d-9aee-c8f33ccfa31a">
+                      <SHORT-NAME>PAdmin_NvMConfigBlock</SHORT-NAME>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="DV:DerivedFromReferrables">
+                            <SDG GID="DV:DerivedFromReferrablesVariant">
+                              <SD GID="DV:InvariantValuesView"/>
+                              <SDX-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/NvM/NvMConfigBlock</SDX-REF>
+                            </SDG>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/MICROSAR/NvM_swc/Interfaces/NvMAdministration</PROVIDED-INTERFACE-TREF>
+                    </P-PORT-PROTOTYPE>
+                    <P-PORT-PROTOTYPE UUID="7c69c660-50f4-4f8f-974e-1f2bcd5e8968">
+                      <SHORT-NAME>PS_CpApMySwcSnNvMPimLightOnOffCounter</SHORT-NAME>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="DV:DerivedFromReferrables">
+                            <SDG GID="DV:DerivedFromReferrablesVariant">
+                              <SD GID="DV:InvariantValuesView"/>
+                              <SDX-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/NvM/CpApMySwcSnNvMPimLightOnOffCounter</SDX-REF>
+                            </SDG>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/MICROSAR/NvM_swc/Interfaces/NvMService_AC3_SRBS</PROVIDED-INTERFACE-TREF>
+                    </P-PORT-PROTOTYPE>
+                    <P-PORT-PROTOTYPE UUID="931bf0bc-0cbf-4935-b41e-af44b87a4102">
+                      <SHORT-NAME>PAdmin_CpApMySwcSnNvMPimLightOnOffCounter</SHORT-NAME>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="DV:DerivedFromReferrables">
+                            <SDG GID="DV:DerivedFromReferrablesVariant">
+                              <SD GID="DV:InvariantValuesView"/>
+                              <SDX-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/NvM/CpApMySwcSnNvMPimLightOnOffCounter</SDX-REF>
+                            </SDG>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/MICROSAR/NvM_swc/Interfaces/NvMAdministration</PROVIDED-INTERFACE-TREF>
+                    </P-PORT-PROTOTYPE>
+                    <P-PORT-PROTOTYPE UUID="4cf74d85-d858-4acc-af38-ca5c3dd9c932">
+                      <SHORT-NAME>PS_CpApMySwcSnNvMPimOdometer</SHORT-NAME>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="DV:DerivedFromReferrables">
+                            <SDG GID="DV:DerivedFromReferrablesVariant">
+                              <SD GID="DV:InvariantValuesView"/>
+                              <SDX-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/NvM/CpApMySwcSnNvMPimOdometer</SDX-REF>
+                            </SDG>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/MICROSAR/NvM_swc/Interfaces/NvMService_AC3_SRBS_Defs</PROVIDED-INTERFACE-TREF>
+                    </P-PORT-PROTOTYPE>
+                    <P-PORT-PROTOTYPE UUID="3c2cece4-bb06-4cea-a5ee-3a93c1700648">
+                      <SHORT-NAME>PAdmin_CpApMySwcSnNvMPimOdometer</SHORT-NAME>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="DV:DerivedFromReferrables">
+                            <SDG GID="DV:DerivedFromReferrablesVariant">
+                              <SD GID="DV:InvariantValuesView"/>
+                              <SDX-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/NvM/CpApMySwcSnNvMPimOdometer</SDX-REF>
+                            </SDG>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/MICROSAR/NvM_swc/Interfaces/NvMAdministration</PROVIDED-INTERFACE-TREF>
+                    </P-PORT-PROTOTYPE>
+                    <R-PORT-PROTOTYPE UUID="b48956f2-f61d-40fb-8884-fd7f7474afe0">
+                      <SHORT-NAME>NvM_RpNotifyJobEnd_CpApMySwcSnNvMPimOdometer</SHORT-NAME>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="DV:DerivedFromReferrables">
+                            <SDG GID="DV:DerivedFromReferrablesVariant">
+                              <SD GID="DV:InvariantValuesView"/>
+                              <SDX-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/NvM/CpApMySwcSnNvMPimOdometer</SDX-REF>
+                            </SDG>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/MICROSAR/NvM_swc/Interfaces/NvMNotifyJobFinished</REQUIRED-INTERFACE-TREF>
+                    </R-PORT-PROTOTYPE>
+                  </PORTS>
+                  <INTERNAL-BEHAVIORS>
+                    <SWC-INTERNAL-BEHAVIOR UUID="ee844099-bb54-45e0-81e4-c62fb31d2574">
+                      <SHORT-NAME>NvMInternalBehavior</SHORT-NAME>
+                      <EVENTS>
+                        <TIMING-EVENT UUID="5dc0e3db-58b4-446d-bafb-60d1e80fa1f4">
+                          <SHORT-NAME>Timer_NvM_MainFunction</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/NvM_swc/ComponentTypes/NvM/NvMInternalBehavior/NvM_MainFunction</START-ON-EVENT-REF>
+                          <PERIOD>0.01</PERIOD>
+                        </TIMING-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="a129acbc-c8a5-4ecf-a876-0b0dfe775a2f">
+                          <SHORT-NAME>OpEventGetErrorStatus_GetErrorStatus_PS_NvMConfigBlock</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/NvM_swc/ComponentTypes/NvM/NvMInternalBehavior/GetErrorStatus</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/NvM_swc/ComponentTypes/NvM/PS_NvMConfigBlock</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/NvM_swc/Interfaces/NvMService_AC3_SRBS/GetErrorStatus</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="4dbb854a-cfc8-44c0-a00d-09537064e5fa">
+                          <SHORT-NAME>OpEventSetRamBlockStatus_SetRamBlockStatus_PS_NvMConfigBlock</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/NvM_swc/ComponentTypes/NvM/NvMInternalBehavior/SetRamBlockStatus</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/NvM_swc/ComponentTypes/NvM/PS_NvMConfigBlock</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/NvM_swc/Interfaces/NvMService_AC3_SRBS/SetRamBlockStatus</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="37a168f8-95ad-4c60-b4f5-064232c507be">
+                          <SHORT-NAME>OpEventReadBlock_ReadBlock_PS_NvMConfigBlock</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/NvM_swc/ComponentTypes/NvM/NvMInternalBehavior/ReadBlock</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/NvM_swc/ComponentTypes/NvM/PS_NvMConfigBlock</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/NvM_swc/Interfaces/NvMService_AC3_SRBS/ReadBlock</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="b9ad6d47-4a14-472e-b4ce-0ded61d051cb">
+                          <SHORT-NAME>OpEventWriteBlock_WriteBlock_PS_NvMConfigBlock</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/NvM_swc/ComponentTypes/NvM/NvMInternalBehavior/WriteBlock</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/NvM_swc/ComponentTypes/NvM/PS_NvMConfigBlock</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/NvM_swc/Interfaces/NvMService_AC3_SRBS/WriteBlock</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="aa764e8b-141a-4fb9-9282-6c0865187d05">
+                          <SHORT-NAME>OpEventInvalidateNvBlock_InvalidateNvBlock_PS_NvMConfigBlock</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/NvM_swc/ComponentTypes/NvM/NvMInternalBehavior/InvalidateNvBlock</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/NvM_swc/ComponentTypes/NvM/PS_NvMConfigBlock</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/NvM_swc/Interfaces/NvMService_AC3_SRBS/InvalidateNvBlock</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="4d37b5c6-2f8f-442a-99ec-d858d9b0d088">
+                          <SHORT-NAME>OpEventEraseBlock_EraseBlock_PS_NvMConfigBlock</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/NvM_swc/ComponentTypes/NvM/NvMInternalBehavior/EraseBlock</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/NvM_swc/ComponentTypes/NvM/PS_NvMConfigBlock</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/NvM_swc/Interfaces/NvMService_AC3_SRBS/EraseBlock</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="88b8bca4-36e5-4391-ba25-d12f93ef0255">
+                          <SHORT-NAME>OpEventSetBlockProtection_SetBlockProtection_PAdmin_NvMConfigBlock</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/NvM_swc/ComponentTypes/NvM/NvMInternalBehavior/SetBlockProtection</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/NvM_swc/ComponentTypes/NvM/PAdmin_NvMConfigBlock</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/NvM_swc/Interfaces/NvMAdministration/SetBlockProtection</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="d1c3f4b4-13e9-44d7-8394-5ca74460903c">
+                          <SHORT-NAME>OpEventGetErrorStatus_GetErrorStatus_PS_CpApMySwcSnNvMPimLightOnOffCounter</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/NvM_swc/ComponentTypes/NvM/NvMInternalBehavior/GetErrorStatus</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/NvM_swc/ComponentTypes/NvM/PS_CpApMySwcSnNvMPimLightOnOffCounter</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/NvM_swc/Interfaces/NvMService_AC3_SRBS/GetErrorStatus</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="5fc59f14-f9a8-456f-8d9a-bf63730c51d6">
+                          <SHORT-NAME>OpEventGetErrorStatus_GetErrorStatus_PS_CpApMySwcSnNvMPimOdometer</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/NvM_swc/ComponentTypes/NvM/NvMInternalBehavior/GetErrorStatus</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/NvM_swc/ComponentTypes/NvM/PS_CpApMySwcSnNvMPimOdometer</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/NvM_swc/Interfaces/NvMService_AC3_SRBS_Defs/GetErrorStatus</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="2d5b2191-a5ae-4f04-99b8-ed7ff800659d">
+                          <SHORT-NAME>OpEventSetRamBlockStatus_SetRamBlockStatus_PS_CpApMySwcSnNvMPimLightOnOffCounter</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/NvM_swc/ComponentTypes/NvM/NvMInternalBehavior/SetRamBlockStatus</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/NvM_swc/ComponentTypes/NvM/PS_CpApMySwcSnNvMPimLightOnOffCounter</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/NvM_swc/Interfaces/NvMService_AC3_SRBS/SetRamBlockStatus</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="2c334c80-28b9-4f35-b1df-d7bbded89784">
+                          <SHORT-NAME>OpEventSetRamBlockStatus_SetRamBlockStatus_PS_CpApMySwcSnNvMPimOdometer</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/NvM_swc/ComponentTypes/NvM/NvMInternalBehavior/SetRamBlockStatus</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/NvM_swc/ComponentTypes/NvM/PS_CpApMySwcSnNvMPimOdometer</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/NvM_swc/Interfaces/NvMService_AC3_SRBS_Defs/SetRamBlockStatus</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="2078fde7-1f0b-4cc1-898f-942e094dd449">
+                          <SHORT-NAME>OpEventReadBlock_ReadBlock_PS_CpApMySwcSnNvMPimLightOnOffCounter</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/NvM_swc/ComponentTypes/NvM/NvMInternalBehavior/ReadBlock</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/NvM_swc/ComponentTypes/NvM/PS_CpApMySwcSnNvMPimLightOnOffCounter</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/NvM_swc/Interfaces/NvMService_AC3_SRBS/ReadBlock</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="3d63fe28-0a86-48e6-bb9b-39fb94b57bed">
+                          <SHORT-NAME>OpEventReadBlock_ReadBlock_PS_CpApMySwcSnNvMPimOdometer</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/NvM_swc/ComponentTypes/NvM/NvMInternalBehavior/ReadBlock</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/NvM_swc/ComponentTypes/NvM/PS_CpApMySwcSnNvMPimOdometer</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/NvM_swc/Interfaces/NvMService_AC3_SRBS_Defs/ReadBlock</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="324d7ccf-c50f-4289-9695-413e1816f8a8">
+                          <SHORT-NAME>OpEventWriteBlock_WriteBlock_PS_CpApMySwcSnNvMPimLightOnOffCounter</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/NvM_swc/ComponentTypes/NvM/NvMInternalBehavior/WriteBlock</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/NvM_swc/ComponentTypes/NvM/PS_CpApMySwcSnNvMPimLightOnOffCounter</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/NvM_swc/Interfaces/NvMService_AC3_SRBS/WriteBlock</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="e5312cf4-d13c-4858-afcb-b122ee9ec4b6">
+                          <SHORT-NAME>OpEventWriteBlock_WriteBlock_PS_CpApMySwcSnNvMPimOdometer</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/NvM_swc/ComponentTypes/NvM/NvMInternalBehavior/WriteBlock</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/NvM_swc/ComponentTypes/NvM/PS_CpApMySwcSnNvMPimOdometer</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/NvM_swc/Interfaces/NvMService_AC3_SRBS_Defs/WriteBlock</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="da230f5f-57da-4b6a-8468-946af173b4a5">
+                          <SHORT-NAME>OpEventInvalidateNvBlock_InvalidateNvBlock_PS_CpApMySwcSnNvMPimLightOnOffCounter</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/NvM_swc/ComponentTypes/NvM/NvMInternalBehavior/InvalidateNvBlock</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/NvM_swc/ComponentTypes/NvM/PS_CpApMySwcSnNvMPimLightOnOffCounter</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/NvM_swc/Interfaces/NvMService_AC3_SRBS/InvalidateNvBlock</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="ab811d0e-0c58-4607-836e-8a0cfb1baf98">
+                          <SHORT-NAME>OpEventInvalidateNvBlock_InvalidateNvBlock_PS_CpApMySwcSnNvMPimOdometer</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/NvM_swc/ComponentTypes/NvM/NvMInternalBehavior/InvalidateNvBlock</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/NvM_swc/ComponentTypes/NvM/PS_CpApMySwcSnNvMPimOdometer</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/NvM_swc/Interfaces/NvMService_AC3_SRBS_Defs/InvalidateNvBlock</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="224bed21-c3a7-4dc8-899a-52da05150df2">
+                          <SHORT-NAME>OpEventEraseBlock_EraseBlock_PS_CpApMySwcSnNvMPimLightOnOffCounter</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/NvM_swc/ComponentTypes/NvM/NvMInternalBehavior/EraseBlock</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/NvM_swc/ComponentTypes/NvM/PS_CpApMySwcSnNvMPimLightOnOffCounter</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/NvM_swc/Interfaces/NvMService_AC3_SRBS/EraseBlock</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="fc214d75-a807-434e-b57c-8efdba8cdda5">
+                          <SHORT-NAME>OpEventEraseBlock_EraseBlock_PS_CpApMySwcSnNvMPimOdometer</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/NvM_swc/ComponentTypes/NvM/NvMInternalBehavior/EraseBlock</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/NvM_swc/ComponentTypes/NvM/PS_CpApMySwcSnNvMPimOdometer</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/NvM_swc/Interfaces/NvMService_AC3_SRBS_Defs/EraseBlock</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="1872bbea-c104-447d-9986-cb811c916566">
+                          <SHORT-NAME>OpEventSetBlockProtection_SetBlockProtection_PAdmin_CpApMySwcSnNvMPimLightOnOffCounter</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/NvM_swc/ComponentTypes/NvM/NvMInternalBehavior/SetBlockProtection</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/NvM_swc/ComponentTypes/NvM/PAdmin_CpApMySwcSnNvMPimLightOnOffCounter</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/NvM_swc/Interfaces/NvMAdministration/SetBlockProtection</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="9cfb8d41-1c85-4afa-8db2-9ca819690cf8">
+                          <SHORT-NAME>OpEventSetBlockProtection_SetBlockProtection_PAdmin_CpApMySwcSnNvMPimOdometer</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/NvM_swc/ComponentTypes/NvM/NvMInternalBehavior/SetBlockProtection</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/NvM_swc/ComponentTypes/NvM/PAdmin_CpApMySwcSnNvMPimOdometer</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/NvM_swc/Interfaces/NvMAdministration/SetBlockProtection</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="719d1a99-6a77-41d0-85d5-639b2f64acd8">
+                          <SHORT-NAME>OpEventRestoreBlockDefaults_RestoreBlockDefaults_PS_CpApMySwcSnNvMPimOdometer</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/NvM_swc/ComponentTypes/NvM/NvMInternalBehavior/RestoreBlockDefaults</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/NvM_swc/ComponentTypes/NvM/PS_CpApMySwcSnNvMPimOdometer</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/NvM_swc/Interfaces/NvMService_AC3_SRBS_Defs/RestoreBlockDefaults</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                      </EVENTS>
+                      <HANDLE-TERMINATION-AND-RESTART>NO-SUPPORT</HANDLE-TERMINATION-AND-RESTART>
+                      <PORT-API-OPTIONS>
+                        <PORT-API-OPTION>
+                          <ENABLE-TAKE-ADDRESS>true</ENABLE-TAKE-ADDRESS>
+                          <INDIRECT-API>false</INDIRECT-API>
+                          <PORT-ARG-VALUES>
+                            <PORT-DEFINED-ARGUMENT-VALUE>
+                              <VALUE>
+                                <NUMERICAL-VALUE-SPECIFICATION>
+                                  <VALUE>1</VALUE>
+                                </NUMERICAL-VALUE-SPECIFICATION>
+                              </VALUE>
+                              <VALUE-TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/NvM_swc/DataTypes/NvM_BlockIdType</VALUE-TYPE-TREF>
+                            </PORT-DEFINED-ARGUMENT-VALUE>
+                          </PORT-ARG-VALUES>
+                          <PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/NvM_swc/ComponentTypes/NvM/PS_NvMConfigBlock</PORT-REF>
+                        </PORT-API-OPTION>
+                        <PORT-API-OPTION>
+                          <ENABLE-TAKE-ADDRESS>true</ENABLE-TAKE-ADDRESS>
+                          <INDIRECT-API>false</INDIRECT-API>
+                          <PORT-ARG-VALUES>
+                            <PORT-DEFINED-ARGUMENT-VALUE>
+                              <VALUE>
+                                <NUMERICAL-VALUE-SPECIFICATION>
+                                  <VALUE>1</VALUE>
+                                </NUMERICAL-VALUE-SPECIFICATION>
+                              </VALUE>
+                              <VALUE-TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/NvM_swc/DataTypes/NvM_BlockIdType</VALUE-TYPE-TREF>
+                            </PORT-DEFINED-ARGUMENT-VALUE>
+                          </PORT-ARG-VALUES>
+                          <PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/NvM_swc/ComponentTypes/NvM/PAdmin_NvMConfigBlock</PORT-REF>
+                        </PORT-API-OPTION>
+                        <PORT-API-OPTION>
+                          <ENABLE-TAKE-ADDRESS>true</ENABLE-TAKE-ADDRESS>
+                          <INDIRECT-API>false</INDIRECT-API>
+                          <PORT-ARG-VALUES>
+                            <PORT-DEFINED-ARGUMENT-VALUE>
+                              <VALUE>
+                                <NUMERICAL-VALUE-SPECIFICATION>
+                                  <VALUE>3</VALUE>
+                                </NUMERICAL-VALUE-SPECIFICATION>
+                              </VALUE>
+                              <VALUE-TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/NvM_swc/DataTypes/NvM_BlockIdType</VALUE-TYPE-TREF>
+                            </PORT-DEFINED-ARGUMENT-VALUE>
+                          </PORT-ARG-VALUES>
+                          <PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/NvM_swc/ComponentTypes/NvM/PS_CpApMySwcSnNvMPimLightOnOffCounter</PORT-REF>
+                        </PORT-API-OPTION>
+                        <PORT-API-OPTION>
+                          <ENABLE-TAKE-ADDRESS>true</ENABLE-TAKE-ADDRESS>
+                          <INDIRECT-API>false</INDIRECT-API>
+                          <PORT-ARG-VALUES>
+                            <PORT-DEFINED-ARGUMENT-VALUE>
+                              <VALUE>
+                                <NUMERICAL-VALUE-SPECIFICATION>
+                                  <VALUE>3</VALUE>
+                                </NUMERICAL-VALUE-SPECIFICATION>
+                              </VALUE>
+                              <VALUE-TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/NvM_swc/DataTypes/NvM_BlockIdType</VALUE-TYPE-TREF>
+                            </PORT-DEFINED-ARGUMENT-VALUE>
+                          </PORT-ARG-VALUES>
+                          <PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/NvM_swc/ComponentTypes/NvM/PAdmin_CpApMySwcSnNvMPimLightOnOffCounter</PORT-REF>
+                        </PORT-API-OPTION>
+                        <PORT-API-OPTION>
+                          <ENABLE-TAKE-ADDRESS>true</ENABLE-TAKE-ADDRESS>
+                          <INDIRECT-API>false</INDIRECT-API>
+                          <PORT-ARG-VALUES>
+                            <PORT-DEFINED-ARGUMENT-VALUE>
+                              <VALUE>
+                                <NUMERICAL-VALUE-SPECIFICATION>
+                                  <VALUE>4</VALUE>
+                                </NUMERICAL-VALUE-SPECIFICATION>
+                              </VALUE>
+                              <VALUE-TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/NvM_swc/DataTypes/NvM_BlockIdType</VALUE-TYPE-TREF>
+                            </PORT-DEFINED-ARGUMENT-VALUE>
+                          </PORT-ARG-VALUES>
+                          <PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/NvM_swc/ComponentTypes/NvM/PS_CpApMySwcSnNvMPimOdometer</PORT-REF>
+                        </PORT-API-OPTION>
+                        <PORT-API-OPTION>
+                          <ENABLE-TAKE-ADDRESS>true</ENABLE-TAKE-ADDRESS>
+                          <INDIRECT-API>false</INDIRECT-API>
+                          <PORT-ARG-VALUES>
+                            <PORT-DEFINED-ARGUMENT-VALUE>
+                              <VALUE>
+                                <NUMERICAL-VALUE-SPECIFICATION>
+                                  <VALUE>4</VALUE>
+                                </NUMERICAL-VALUE-SPECIFICATION>
+                              </VALUE>
+                              <VALUE-TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/NvM_swc/DataTypes/NvM_BlockIdType</VALUE-TYPE-TREF>
+                            </PORT-DEFINED-ARGUMENT-VALUE>
+                          </PORT-ARG-VALUES>
+                          <PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/NvM_swc/ComponentTypes/NvM/PAdmin_CpApMySwcSnNvMPimOdometer</PORT-REF>
+                        </PORT-API-OPTION>
+                        <PORT-API-OPTION>
+                          <ENABLE-TAKE-ADDRESS>true</ENABLE-TAKE-ADDRESS>
+                          <INDIRECT-API>false</INDIRECT-API>
+                          <PORT-REF DEST="R-PORT-PROTOTYPE">/MICROSAR/NvM_swc/ComponentTypes/NvM/NvM_RpNotifyJobEnd_CpApMySwcSnNvMPimOdometer</PORT-REF>
+                        </PORT-API-OPTION>
+                      </PORT-API-OPTIONS>
+                      <RUNNABLES>
+                        <RUNNABLE-ENTITY UUID="70c6155b-ca05-44ae-befa-c64c9e0f300f">
+                          <SHORT-NAME>NvM_MainFunction</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SERVER-CALL-POINTS>
+                            <SYNCHRONOUS-SERVER-CALL-POINT UUID="b05d4078-4bad-4544-a7d4-a9e59f0b60db">
+                              <SHORT-NAME>OpServerCallNvM_MainFunction_JobFinished_NvM_RpNotifyJobEnd_CpApMySwcSnNvMPimOdometer</SHORT-NAME>
+                              <OPERATION-IREF>
+                                <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/MICROSAR/NvM_swc/ComponentTypes/NvM/NvM_RpNotifyJobEnd_CpApMySwcSnNvMPimOdometer</CONTEXT-R-PORT-REF>
+                                <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/NvM_swc/Interfaces/NvMNotifyJobFinished/JobFinished</TARGET-REQUIRED-OPERATION-REF>
+                              </OPERATION-IREF>
+                              <TIMEOUT>0</TIMEOUT>
+                            </SYNCHRONOUS-SERVER-CALL-POINT>
+                          </SERVER-CALL-POINTS>
+                          <SYMBOL>NvM_MainFunction</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="ffbe0016-0278-4844-978d-6fc62b7ebdb8">
+                          <SHORT-NAME>GetErrorStatus</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>NvM_GetErrorStatus</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="96793f2b-e882-4bb3-a2b4-f572da1b0450">
+                          <SHORT-NAME>SetRamBlockStatus</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>NvM_SetRamBlockStatus</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="62248c5c-e357-456f-934a-f986382e9c44">
+                          <SHORT-NAME>ReadBlock</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>NvM_ReadBlock</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="f8595a22-9b68-4d5d-91ff-7b27d784c69e">
+                          <SHORT-NAME>WriteBlock</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>NvM_WriteBlock</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="92a91ac7-f99b-42ef-a276-cd6b7e7f9653">
+                          <SHORT-NAME>InvalidateNvBlock</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>NvM_InvalidateNvBlock</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="3021723b-e36f-4b7c-b57c-10d27ce9bfaa">
+                          <SHORT-NAME>EraseBlock</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>NvM_EraseNvBlock</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="b7c0e4fd-2d21-45d0-97b0-2917c70ed711">
+                          <SHORT-NAME>SetBlockProtection</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>NvM_SetBlockProtection</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="71d4cc2a-7f63-4e9a-a569-7f7008a2e09c">
+                          <SHORT-NAME>RestoreBlockDefaults</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>NvM_RestoreBlockDefaults</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                      </RUNNABLES>
+                      <SUPPORTS-MULTIPLE-INSTANTIATION>false</SUPPORTS-MULTIPLE-INSTANTIATION>
+                    </SWC-INTERNAL-BEHAVIOR>
+                  </INTERNAL-BEHAVIORS>
+                </SERVICE-SW-COMPONENT-TYPE>
+                <SWC-IMPLEMENTATION UUID="eeb4cf3a-2e0f-49d6-88ca-0745c7f8c2ba">
+                  <SHORT-NAME>NvMImplementation</SHORT-NAME>
+                  <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+                  <BEHAVIOR-REF DEST="SWC-INTERNAL-BEHAVIOR">/MICROSAR/NvM_swc/ComponentTypes/NvM/NvMInternalBehavior</BEHAVIOR-REF>
+                </SWC-IMPLEMENTATION>
+              </ELEMENTS>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

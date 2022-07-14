@@ -1,0 +1,1 @@
+CC_INCLUDE_PATH     += $(SSC_ROOT)\VttLin $(GENDATA_DIR)

@@ -1,0 +1,2771 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!---->
+<!---->
+<AUTOSAR xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-2-1.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://autosar.org/schema/r4.0">
+	<AR-PACKAGES>
+		<AR-PACKAGE UUID="ff55d029-386d-43a2-b3c2-dfef4c7a5e36">
+			<SHORT-NAME>MICROSAR</SHORT-NAME>
+			<ELEMENTS>
+				<BSW-IMPLEMENTATION UUID="d51a211c-d63d-48e9-93e5-e993d8b01fee">
+					<SHORT-NAME>EthFw_Impl</SHORT-NAME>
+					<PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+					<SW-VERSION>1.00.01</SW-VERSION>
+					<USED-CODE-GENERATOR>DaVinci Configurator</USED-CODE-GENERATOR>
+					<VENDOR-ID>30</VENDOR-ID>
+					<AR-RELEASE-VERSION>4.02.01</AR-RELEASE-VERSION>
+					<BEHAVIOR-REF DEST="BSW-INTERNAL-BEHAVIOR">/MICROSAR/EthFw_ib_bswmd/BswModuleDescriptions/EthFw/EthFwBehavior</BEHAVIOR-REF>
+					<RECOMMENDED-CONFIGURATION-REFS>
+						<RECOMMENDED-CONFIGURATION-REF DEST="ECUC-MODULE-CONFIGURATION-VALUES">/MICROSAR/EthFw_Rec</RECOMMENDED-CONFIGURATION-REF>
+					</RECOMMENDED-CONFIGURATION-REFS>
+					<VENDOR-SPECIFIC-MODULE-DEF-REFS>
+						<VENDOR-SPECIFIC-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/MICROSAR/EthFw</VENDOR-SPECIFIC-MODULE-DEF-REF>
+					</VENDOR-SPECIFIC-MODULE-DEF-REFS>
+				</BSW-IMPLEMENTATION>
+				<ECUC-MODULE-DEF UUID="1c643155-6321-4321-a506-68d361ceef8a">
+					<SHORT-NAME>EthFw</SHORT-NAME>
+					<LONG-NAME>
+						<L-4 L="EN">Ethernet Firewall</L-4>
+					</LONG-NAME>
+					<DESC>
+						<L-2 L="EN">Configuration of the Ethernet Firewall module.</L-2>
+					</DESC>
+					<CATEGORY>VENDOR_SPECIFIC_MODULE_DEFINITION</CATEGORY>
+					<ADMIN-DATA>
+						<DOC-REVISIONS>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.00.00</REVISION-LABEL>
+								<STATE>beta</STATE>
+								<ISSUED-BY>vispcn</ISSUED-BY>
+								<DATE>2016-08-05T10:39:07+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">FEAT-2354: Firewall concept for Ethernet</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">FEATC-889</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.00.01</REVISION-LABEL>
+								<STATE>beta</STATE>
+								<ISSUED-BY>vispcn</ISSUED-BY>
+								<DATE>2017-08-07T10:41:21+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">SW version number update</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+						</DOC-REVISIONS>
+					</ADMIN-DATA>
+					<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+					<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+					<POST-BUILD-VARIANT-SUPPORT>false</POST-BUILD-VARIANT-SUPPORT>
+					<SUPPORTED-CONFIG-VARIANTS>
+						<SUPPORTED-CONFIG-VARIANT>VARIANT-PRE-COMPILE</SUPPORTED-CONFIG-VARIANT>
+						<SUPPORTED-CONFIG-VARIANT>VARIANT-POST-BUILD</SUPPORTED-CONFIG-VARIANT>
+					</SUPPORTED-CONFIG-VARIANTS>
+					<CONTAINERS>
+						<ECUC-PARAM-CONF-CONTAINER-DEF UUID="eb649df9-1e2a-4df4-bfac-a578ef0a9bbb">
+							<SHORT-NAME>EthFwConfig</SHORT-NAME>
+							<DESC>
+								<L-2 L="EN">This container contains the configuration parameters for the Ethernet Firewall (EthFw) module.</L-2>
+							</DESC>
+							<ADMIN-DATA>
+								<SDGS>
+									<SDG GID="DV:CfgPostBuild">
+										<SD GID="DV:postBuildNotDeletable">true</SD>
+										<SD GID="DV:postBuildSelectableChangeable">false</SD>
+									</SDG>
+								</SDGS>
+							</ADMIN-DATA>
+							<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+							<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+							<MULTIPLICITY-CONFIG-CLASSES>
+								<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+									<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+									<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+								</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+								<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+									<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+									<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+								</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+							</MULTIPLICITY-CONFIG-CLASSES>
+							<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+							<REQUIRES-INDEX>false</REQUIRES-INDEX>
+							<PARAMETERS>
+								<ECUC-FUNCTION-NAME-DEF UUID="4a9acf48-b3ec-416d-9f55-40777a8bc739">
+									<SHORT-NAME>EthFwRxFrameDiscardedCbk</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">User-Callout which is called if a received frame is discarded by the firewall module.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<SCOPE>LOCAL</SCOPE>
+									<MULTIPLICITY-CONFIG-CLASSES>
+										<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+										</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+										<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+									</MULTIPLICITY-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<VALUE-CONFIG-CLASSES>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+									</VALUE-CONFIG-CLASSES>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<ECUC-FUNCTION-NAME-DEF-VARIANTS>
+										<ECUC-FUNCTION-NAME-DEF-CONDITIONAL>
+											<MIN-LENGTH>1</MIN-LENGTH>
+										</ECUC-FUNCTION-NAME-DEF-CONDITIONAL>
+									</ECUC-FUNCTION-NAME-DEF-VARIANTS>
+								</ECUC-FUNCTION-NAME-DEF>
+								<ECUC-FUNCTION-NAME-DEF UUID="5988fae2-bf57-4d69-b822-f606dc7dac1e">
+									<SHORT-NAME>EthFwTxFrameDiscardedCbk</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">User-Callout which is called if a transmitted frame is discarded by the firewall module and will not be forwarded to the physical layer.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<SCOPE>LOCAL</SCOPE>
+									<MULTIPLICITY-CONFIG-CLASSES>
+										<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+										</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+										<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+									</MULTIPLICITY-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<VALUE-CONFIG-CLASSES>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+									</VALUE-CONFIG-CLASSES>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<ECUC-FUNCTION-NAME-DEF-VARIANTS>
+										<ECUC-FUNCTION-NAME-DEF-CONDITIONAL>
+											<MIN-LENGTH>1</MIN-LENGTH>
+										</ECUC-FUNCTION-NAME-DEF-CONDITIONAL>
+									</ECUC-FUNCTION-NAME-DEF-VARIANTS>
+								</ECUC-FUNCTION-NAME-DEF>
+							</PARAMETERS>
+							<SUB-CONTAINERS>
+								<ECUC-PARAM-CONF-CONTAINER-DEF UUID="c6fc1cb4-1bf3-4a95-9485-7dc6b37696c9">
+									<SHORT-NAME>EthFwRule</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Contains configuration parameter for each individual firewall rule.
+The firewall is implemented as DENY-ALL firewall. Each rule is interpreted as WHITELIST.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:postBuildNotDeletable">false</SD>
+												<SD GID="DV:postBuildSelectableChangeable">false</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+									<MULTIPLICITY-CONFIG-CLASSES>
+										<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+										</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+										<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+									</MULTIPLICITY-CONFIG-CLASSES>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<REFERENCES>
+										<ECUC-SYMBOLIC-NAME-REFERENCE-DEF UUID="b7baed55-987d-4dc3-82a0-6fe76a9ea035">
+											<SHORT-NAME>EthFwControllerRef</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Firewall rule is only relevant for the referenced controller. (VLAN)</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<MULTIPLICITY-CONFIG-CLASSES>
+												<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+												<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											</MULTIPLICITY-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<VALUE-CONFIG-CLASSES>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+											</VALUE-CONFIG-CLASSES>
+											<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EthIf/EthIfConfigSet/EthIfController</DESTINATION-REF>
+										</ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+										<ECUC-REFERENCE-DEF UUID="3eb078ce-40cb-45db-a213-3ff1ad5a301a">
+											<SHORT-NAME>EthFwFrameOwnerRef</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Firewall rule is only relevant for the referenced frame type. (Ethertype)</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<MULTIPLICITY-CONFIG-CLASSES>
+												<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+												<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											</MULTIPLICITY-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<VALUE-CONFIG-CLASSES>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+											</VALUE-CONFIG-CLASSES>
+											<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EthIf/EthIfConfigSet/EthIfFrameOwnerConfig</DESTINATION-REF>
+										</ECUC-REFERENCE-DEF>
+									</REFERENCES>
+									<SUB-CONTAINERS>
+										<ECUC-PARAM-CONF-CONTAINER-DEF UUID="a2e6134d-e152-44f5-bd7c-682d6e25252e">
+											<SHORT-NAME>EthFwMacAddr</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Contains information about the allowed MAC addresses.
+Three different types of configuration are possible:
+ - Enable "AllowAll" switch and do not configure start and end addresses
+ - Configure start address. (Single address)
+ - Configure start and end address. (Range of addresses)</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:CfgPostBuild">
+														<SD GID="DV:postBuildNotDeletable">false</SD>
+														<SD GID="DV:postBuildSelectableChangeable">false</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+											<MULTIPLICITY-CONFIG-CLASSES>
+												<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+												<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											</MULTIPLICITY-CONFIG-CLASSES>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<PARAMETERS>
+												<ECUC-STRING-PARAM-DEF UUID="2411971e-1b45-416c-be81-4fffe915eb91">
+													<SHORT-NAME>EthFwLocalMacAddrStart</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Allowed LOCAL MAC address.</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<SCOPE>LOCAL</SCOPE>
+													<MULTIPLICITY-CONFIG-CLASSES>
+														<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+														</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+														<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													</MULTIPLICITY-CONFIG-CLASSES>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+													<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<VALUE-CONFIG-CLASSES>
+														<ECUC-VALUE-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+														</ECUC-VALUE-CONFIGURATION-CLASS>
+														<ECUC-VALUE-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-VALUE-CONFIGURATION-CLASS>
+													</VALUE-CONFIG-CLASSES>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+												</ECUC-STRING-PARAM-DEF>
+												<ECUC-STRING-PARAM-DEF UUID="d6f2396b-ec9f-4b30-bb2d-86b6087b7f76">
+													<SHORT-NAME>EthFwLocalMacAddrEnd</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Allowed range of LOCAL MAC addresses (in combination with EthFwLocalMacAddrStart).</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<SCOPE>LOCAL</SCOPE>
+													<MULTIPLICITY-CONFIG-CLASSES>
+														<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+														</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+														<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													</MULTIPLICITY-CONFIG-CLASSES>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+													<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<VALUE-CONFIG-CLASSES>
+														<ECUC-VALUE-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+														</ECUC-VALUE-CONFIGURATION-CLASS>
+														<ECUC-VALUE-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-VALUE-CONFIGURATION-CLASS>
+													</VALUE-CONFIG-CLASSES>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+												</ECUC-STRING-PARAM-DEF>
+												<ECUC-BOOLEAN-PARAM-DEF UUID="86c78138-8193-4b4b-807a-71719f3b5cce">
+													<SHORT-NAME>EthFwLocalMacAddrAllowAll</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Allowes all LOCAL MAC addresses.</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<SCOPE>LOCAL</SCOPE>
+													<MULTIPLICITY-CONFIG-CLASSES>
+														<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+														<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+														</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													</MULTIPLICITY-CONFIG-CLASSES>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+													<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<VALUE-CONFIG-CLASSES>
+														<ECUC-VALUE-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+														</ECUC-VALUE-CONFIGURATION-CLASS>
+														<ECUC-VALUE-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-VALUE-CONFIGURATION-CLASS>
+													</VALUE-CONFIG-CLASSES>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>false</DEFAULT-VALUE>
+												</ECUC-BOOLEAN-PARAM-DEF>
+												<ECUC-STRING-PARAM-DEF UUID="4b18a2d9-4ca3-4853-8d82-95ae8395af9f">
+													<SHORT-NAME>EthFwRemoteMacAddrStart</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Allowed REMOTE MAC address.</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<SCOPE>LOCAL</SCOPE>
+													<MULTIPLICITY-CONFIG-CLASSES>
+														<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+														</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+														<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													</MULTIPLICITY-CONFIG-CLASSES>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+													<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<VALUE-CONFIG-CLASSES>
+														<ECUC-VALUE-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+														</ECUC-VALUE-CONFIGURATION-CLASS>
+														<ECUC-VALUE-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-VALUE-CONFIGURATION-CLASS>
+													</VALUE-CONFIG-CLASSES>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+												</ECUC-STRING-PARAM-DEF>
+												<ECUC-STRING-PARAM-DEF UUID="2a954606-81d0-408f-b7cd-ff3723579f15">
+													<SHORT-NAME>EthFwRemoteMacAddrEnd</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Allowed range of REMOTE MAC addresses (in combination with EthFwRemoteMacAddrStart).</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<SCOPE>LOCAL</SCOPE>
+													<MULTIPLICITY-CONFIG-CLASSES>
+														<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+														</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+														<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													</MULTIPLICITY-CONFIG-CLASSES>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+													<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<VALUE-CONFIG-CLASSES>
+														<ECUC-VALUE-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+														</ECUC-VALUE-CONFIGURATION-CLASS>
+														<ECUC-VALUE-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-VALUE-CONFIGURATION-CLASS>
+													</VALUE-CONFIG-CLASSES>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+												</ECUC-STRING-PARAM-DEF>
+												<ECUC-BOOLEAN-PARAM-DEF UUID="318d44e2-e4f1-4c64-ab32-458b543ea882">
+													<SHORT-NAME>EthFwRemoteMacAddrAllowAll</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Allowes all REMOTE MAC addresses.</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<SCOPE>LOCAL</SCOPE>
+													<MULTIPLICITY-CONFIG-CLASSES>
+														<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+														<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+														</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													</MULTIPLICITY-CONFIG-CLASSES>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+													<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<VALUE-CONFIG-CLASSES>
+														<ECUC-VALUE-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+														</ECUC-VALUE-CONFIGURATION-CLASS>
+														<ECUC-VALUE-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-VALUE-CONFIGURATION-CLASS>
+													</VALUE-CONFIG-CLASSES>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>false</DEFAULT-VALUE>
+												</ECUC-BOOLEAN-PARAM-DEF>
+											</PARAMETERS>
+										</ECUC-PARAM-CONF-CONTAINER-DEF>
+										<ECUC-PARAM-CONF-CONTAINER-DEF UUID="eb99c6db-9ee6-4320-9ba3-2dbaa76a382d">
+											<SHORT-NAME>EthFwMacProtocol</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Contains information about the next higher layer protocol.</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:CfgPostBuild">
+														<SD GID="DV:postBuildNotDeletable">true</SD>
+														<SD GID="DV:postBuildSelectableChangeable">false</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<MULTIPLICITY-CONFIG-CLASSES>
+												<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+												<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											</MULTIPLICITY-CONFIG-CLASSES>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SUB-CONTAINERS>
+												<ECUC-PARAM-CONF-CONTAINER-DEF UUID="31635736-7263-4a36-8e7f-595cf045924d">
+													<SHORT-NAME>EthFwIpRule</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Contains information about the next higher layer: IP</L-2>
+													</DESC>
+													<ADMIN-DATA>
+														<SDGS>
+															<SDG GID="DV:CfgPostBuild">
+																<SD GID="DV:postBuildNotDeletable">false</SD>
+																<SD GID="DV:postBuildSelectableChangeable">false</SD>
+															</SDG>
+														</SDGS>
+													</ADMIN-DATA>
+													<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+													<MULTIPLICITY-CONFIG-CLASSES>
+														<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+														</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+														<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													</MULTIPLICITY-CONFIG-CLASSES>
+													<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SUB-CONTAINERS>
+														<ECUC-PARAM-CONF-CONTAINER-DEF UUID="8a3f50eb-03fb-4bbf-9b3e-c876f2282293">
+															<SHORT-NAME>EthFwIpProtocol</SHORT-NAME>
+															<DESC>
+																<L-2 L="EN">Contains information about the next higher layer protocol.</L-2>
+															</DESC>
+															<ADMIN-DATA>
+																<SDGS>
+																	<SDG GID="DV:CfgPostBuild">
+																		<SD GID="DV:postBuildNotDeletable">true</SD>
+																		<SD GID="DV:postBuildSelectableChangeable">false</SD>
+																	</SDG>
+																</SDGS>
+															</ADMIN-DATA>
+															<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+															<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+															<MULTIPLICITY-CONFIG-CLASSES>
+																<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+																</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															</MULTIPLICITY-CONFIG-CLASSES>
+															<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+															<REQUIRES-INDEX>false</REQUIRES-INDEX>
+															<SUB-CONTAINERS>
+																<ECUC-PARAM-CONF-CONTAINER-DEF UUID="361676a8-043d-429f-82d9-33cbb3c1c824">
+																	<SHORT-NAME>EthFwRawProtocolRule</SHORT-NAME>
+																	<DESC>
+																		<L-2 L="EN">Contains information about the allowed next higher layers.</L-2>
+																	</DESC>
+																	<ADMIN-DATA>
+																		<SDGS>
+																			<SDG GID="DV:CfgPostBuild">
+																				<SD GID="DV:postBuildNotDeletable">false</SD>
+																				<SD GID="DV:postBuildSelectableChangeable">false</SD>
+																			</SDG>
+																		</SDGS>
+																	</ADMIN-DATA>
+																	<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+																	<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+																	<MULTIPLICITY-CONFIG-CLASSES>
+																		<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																			<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																			<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+																		</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																		<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																			<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																			<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																		</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																	</MULTIPLICITY-CONFIG-CLASSES>
+																	<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+																	<REQUIRES-INDEX>false</REQUIRES-INDEX>
+																	<PARAMETERS>
+																		<ECUC-INTEGER-PARAM-DEF UUID="779d65dd-9bc6-4dca-8896-95efa33898a8">
+																			<SHORT-NAME>EthFwProtocolType</SHORT-NAME>
+																			<DESC>
+																				<L-2 L="EN">Allowed protocol types.</L-2>
+																			</DESC>
+																			<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+																			<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+																			<SCOPE>LOCAL</SCOPE>
+																			<MULTIPLICITY-CONFIG-CLASSES>
+																				<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																					<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																					<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+																				</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																				<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																					<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																					<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																				</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																			</MULTIPLICITY-CONFIG-CLASSES>
+																			<ORIGIN>Vector Informatik</ORIGIN>
+																			<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+																			<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+																			<REQUIRES-INDEX>false</REQUIRES-INDEX>
+																			<VALUE-CONFIG-CLASSES>
+																				<ECUC-VALUE-CONFIGURATION-CLASS>
+																					<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																					<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+																				</ECUC-VALUE-CONFIGURATION-CLASS>
+																				<ECUC-VALUE-CONFIGURATION-CLASS>
+																					<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																					<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																				</ECUC-VALUE-CONFIGURATION-CLASS>
+																			</VALUE-CONFIG-CLASSES>
+																			<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+																			<MAX>255</MAX>
+																			<MIN>0</MIN>
+																		</ECUC-INTEGER-PARAM-DEF>
+																		<ECUC-BOOLEAN-PARAM-DEF UUID="6151988d-725d-49ed-9f47-73f92821cdad">
+																			<SHORT-NAME>EthFwAllowAllProtocolTypes</SHORT-NAME>
+																			<DESC>
+																				<L-2 L="EN">Switch allows all porotocols of IP messages.</L-2>
+																			</DESC>
+																			<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+																			<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+																			<SCOPE>LOCAL</SCOPE>
+																			<MULTIPLICITY-CONFIG-CLASSES>
+																				<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																					<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																					<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																				</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																				<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																					<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																					<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+																				</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																			</MULTIPLICITY-CONFIG-CLASSES>
+																			<ORIGIN>Vector Informatik</ORIGIN>
+																			<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+																			<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+																			<REQUIRES-INDEX>false</REQUIRES-INDEX>
+																			<VALUE-CONFIG-CLASSES>
+																				<ECUC-VALUE-CONFIGURATION-CLASS>
+																					<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																					<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+																				</ECUC-VALUE-CONFIGURATION-CLASS>
+																				<ECUC-VALUE-CONFIGURATION-CLASS>
+																					<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																					<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																				</ECUC-VALUE-CONFIGURATION-CLASS>
+																			</VALUE-CONFIG-CLASSES>
+																			<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+																			<DEFAULT-VALUE>false</DEFAULT-VALUE>
+																		</ECUC-BOOLEAN-PARAM-DEF>
+																	</PARAMETERS>
+																</ECUC-PARAM-CONF-CONTAINER-DEF>
+																<ECUC-PARAM-CONF-CONTAINER-DEF UUID="d1250b61-a27d-4e2a-86d1-acba4b143230">
+																	<SHORT-NAME>EthFwTcpRule</SHORT-NAME>
+																	<DESC>
+																		<L-2 L="EN">Contains information about the next higher layer: TCP</L-2>
+																	</DESC>
+																	<ADMIN-DATA>
+																		<SDGS>
+																			<SDG GID="DV:CfgPostBuild">
+																				<SD GID="DV:postBuildNotDeletable">false</SD>
+																				<SD GID="DV:postBuildSelectableChangeable">false</SD>
+																			</SDG>
+																		</SDGS>
+																	</ADMIN-DATA>
+																	<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+																	<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+																	<MULTIPLICITY-CONFIG-CLASSES>
+																		<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																			<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																			<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+																		</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																		<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																			<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																			<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																		</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																	</MULTIPLICITY-CONFIG-CLASSES>
+																	<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+																	<REQUIRES-INDEX>false</REQUIRES-INDEX>
+																	<SUB-CONTAINERS>
+																		<ECUC-PARAM-CONF-CONTAINER-DEF UUID="edcd6e6e-acef-4af4-aaac-c65640694232">
+																			<SHORT-NAME>EthFwTcpPort</SHORT-NAME>
+																			<DESC>
+																				<L-2 L="EN">Contains information about the allowed TCP ports.
+Three different types of configuration are possible:
+ - Enable "AllowAll" switch and do not configure start and end ports
+ - Configure start port. (Single port)
+ - Configure start and end port. (Range of ports)</L-2>
+																			</DESC>
+																			<ADMIN-DATA>
+																				<SDGS>
+																					<SDG GID="DV:CfgPostBuild">
+																						<SD GID="DV:postBuildNotDeletable">false</SD>
+																						<SD GID="DV:postBuildSelectableChangeable">false</SD>
+																					</SDG>
+																				</SDGS>
+																			</ADMIN-DATA>
+																			<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+																			<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+																			<MULTIPLICITY-CONFIG-CLASSES>
+																				<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																					<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																					<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+																				</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																				<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																					<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																					<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																				</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																			</MULTIPLICITY-CONFIG-CLASSES>
+																			<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+																			<REQUIRES-INDEX>false</REQUIRES-INDEX>
+																			<PARAMETERS>
+																				<ECUC-INTEGER-PARAM-DEF UUID="1871028c-2f4c-4aaa-b7a6-f1cddc9c02c5">
+																					<SHORT-NAME>EthFwLocalPortStart</SHORT-NAME>
+																					<DESC>
+																						<L-2 L="EN">Allowed LOCAL PORT.</L-2>
+																					</DESC>
+																					<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+																					<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+																					<SCOPE>LOCAL</SCOPE>
+																					<MULTIPLICITY-CONFIG-CLASSES>
+																						<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																							<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																							<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+																						</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																						<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																							<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																							<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																						</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																					</MULTIPLICITY-CONFIG-CLASSES>
+																					<ORIGIN>Vector Informatik</ORIGIN>
+																					<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+																					<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+																					<REQUIRES-INDEX>false</REQUIRES-INDEX>
+																					<VALUE-CONFIG-CLASSES>
+																						<ECUC-VALUE-CONFIGURATION-CLASS>
+																							<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																							<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+																						</ECUC-VALUE-CONFIGURATION-CLASS>
+																						<ECUC-VALUE-CONFIGURATION-CLASS>
+																							<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																							<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																						</ECUC-VALUE-CONFIGURATION-CLASS>
+																					</VALUE-CONFIG-CLASSES>
+																					<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+																					<MAX>65535</MAX>
+																					<MIN>0</MIN>
+																				</ECUC-INTEGER-PARAM-DEF>
+																				<ECUC-INTEGER-PARAM-DEF UUID="86003eee-fe5e-4079-8793-c58d485c1ad5">
+																					<SHORT-NAME>EthFwLocalPortEnd</SHORT-NAME>
+																					<DESC>
+																						<L-2 L="EN">Allowed range of LOCAL PORTS (in combination with EthFwLocalPortStart).</L-2>
+																					</DESC>
+																					<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+																					<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+																					<SCOPE>LOCAL</SCOPE>
+																					<MULTIPLICITY-CONFIG-CLASSES>
+																						<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																							<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																							<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+																						</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																						<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																							<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																							<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																						</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																					</MULTIPLICITY-CONFIG-CLASSES>
+																					<ORIGIN>Vector Informatik</ORIGIN>
+																					<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+																					<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+																					<REQUIRES-INDEX>false</REQUIRES-INDEX>
+																					<VALUE-CONFIG-CLASSES>
+																						<ECUC-VALUE-CONFIGURATION-CLASS>
+																							<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																							<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+																						</ECUC-VALUE-CONFIGURATION-CLASS>
+																						<ECUC-VALUE-CONFIGURATION-CLASS>
+																							<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																							<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																						</ECUC-VALUE-CONFIGURATION-CLASS>
+																					</VALUE-CONFIG-CLASSES>
+																					<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+																					<MAX>65535</MAX>
+																					<MIN>0</MIN>
+																				</ECUC-INTEGER-PARAM-DEF>
+																				<ECUC-BOOLEAN-PARAM-DEF UUID="ceb9e525-2b71-4e8b-a4e3-e1635a0379c2">
+																					<SHORT-NAME>EthFwLocalPortAllowAll</SHORT-NAME>
+																					<DESC>
+																						<L-2 L="EN">Allowes all LOCAL PORTS.</L-2>
+																					</DESC>
+																					<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+																					<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+																					<SCOPE>LOCAL</SCOPE>
+																					<MULTIPLICITY-CONFIG-CLASSES>
+																						<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																							<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																							<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																						</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																						<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																							<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																							<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+																						</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																					</MULTIPLICITY-CONFIG-CLASSES>
+																					<ORIGIN>Vector Informatik</ORIGIN>
+																					<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+																					<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+																					<REQUIRES-INDEX>false</REQUIRES-INDEX>
+																					<VALUE-CONFIG-CLASSES>
+																						<ECUC-VALUE-CONFIGURATION-CLASS>
+																							<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																							<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+																						</ECUC-VALUE-CONFIGURATION-CLASS>
+																						<ECUC-VALUE-CONFIGURATION-CLASS>
+																							<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																							<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																						</ECUC-VALUE-CONFIGURATION-CLASS>
+																					</VALUE-CONFIG-CLASSES>
+																					<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+																					<DEFAULT-VALUE>false</DEFAULT-VALUE>
+																				</ECUC-BOOLEAN-PARAM-DEF>
+																				<ECUC-INTEGER-PARAM-DEF UUID="755d9dd0-db42-417c-9bc9-4fc34a0bd958">
+																					<SHORT-NAME>EthFwRemotePortStart</SHORT-NAME>
+																					<DESC>
+																						<L-2 L="EN">Allowed REMOTE PORT.</L-2>
+																					</DESC>
+																					<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+																					<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+																					<SCOPE>LOCAL</SCOPE>
+																					<MULTIPLICITY-CONFIG-CLASSES>
+																						<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																							<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																							<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+																						</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																						<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																							<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																							<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																						</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																					</MULTIPLICITY-CONFIG-CLASSES>
+																					<ORIGIN>Vector Informatik</ORIGIN>
+																					<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+																					<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+																					<REQUIRES-INDEX>false</REQUIRES-INDEX>
+																					<VALUE-CONFIG-CLASSES>
+																						<ECUC-VALUE-CONFIGURATION-CLASS>
+																							<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																							<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+																						</ECUC-VALUE-CONFIGURATION-CLASS>
+																						<ECUC-VALUE-CONFIGURATION-CLASS>
+																							<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																							<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																						</ECUC-VALUE-CONFIGURATION-CLASS>
+																					</VALUE-CONFIG-CLASSES>
+																					<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+																					<MAX>65535</MAX>
+																					<MIN>0</MIN>
+																				</ECUC-INTEGER-PARAM-DEF>
+																				<ECUC-INTEGER-PARAM-DEF UUID="f984b99b-b544-40fa-a71e-87961b2a414b">
+																					<SHORT-NAME>EthFwRemotePortEnd</SHORT-NAME>
+																					<DESC>
+																						<L-2 L="EN">Allowed range of REMOTE PORTS (in combination with EthFwRemotePortStart).</L-2>
+																					</DESC>
+																					<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+																					<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+																					<SCOPE>LOCAL</SCOPE>
+																					<MULTIPLICITY-CONFIG-CLASSES>
+																						<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																							<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																							<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+																						</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																						<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																							<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																							<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																						</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																					</MULTIPLICITY-CONFIG-CLASSES>
+																					<ORIGIN>Vector Informatik</ORIGIN>
+																					<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+																					<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+																					<REQUIRES-INDEX>false</REQUIRES-INDEX>
+																					<VALUE-CONFIG-CLASSES>
+																						<ECUC-VALUE-CONFIGURATION-CLASS>
+																							<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																							<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+																						</ECUC-VALUE-CONFIGURATION-CLASS>
+																						<ECUC-VALUE-CONFIGURATION-CLASS>
+																							<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																							<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																						</ECUC-VALUE-CONFIGURATION-CLASS>
+																					</VALUE-CONFIG-CLASSES>
+																					<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+																					<MAX>65535</MAX>
+																					<MIN>0</MIN>
+																				</ECUC-INTEGER-PARAM-DEF>
+																				<ECUC-BOOLEAN-PARAM-DEF UUID="3b83962c-c648-4615-8203-52185955e0af">
+																					<SHORT-NAME>EthFwRemotePortAllowAll</SHORT-NAME>
+																					<DESC>
+																						<L-2 L="EN">Allowes all REMOTE PORTS.</L-2>
+																					</DESC>
+																					<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+																					<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+																					<SCOPE>LOCAL</SCOPE>
+																					<MULTIPLICITY-CONFIG-CLASSES>
+																						<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																							<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																							<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																						</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																						<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																							<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																							<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+																						</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																					</MULTIPLICITY-CONFIG-CLASSES>
+																					<ORIGIN>Vector Informatik</ORIGIN>
+																					<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+																					<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+																					<REQUIRES-INDEX>false</REQUIRES-INDEX>
+																					<VALUE-CONFIG-CLASSES>
+																						<ECUC-VALUE-CONFIGURATION-CLASS>
+																							<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																							<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+																						</ECUC-VALUE-CONFIGURATION-CLASS>
+																						<ECUC-VALUE-CONFIGURATION-CLASS>
+																							<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																							<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																						</ECUC-VALUE-CONFIGURATION-CLASS>
+																					</VALUE-CONFIG-CLASSES>
+																					<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+																					<DEFAULT-VALUE>false</DEFAULT-VALUE>
+																				</ECUC-BOOLEAN-PARAM-DEF>
+																			</PARAMETERS>
+																		</ECUC-PARAM-CONF-CONTAINER-DEF>
+																	</SUB-CONTAINERS>
+																</ECUC-PARAM-CONF-CONTAINER-DEF>
+																<ECUC-PARAM-CONF-CONTAINER-DEF UUID="0553927c-50e1-4320-b395-601135cd2135">
+																	<SHORT-NAME>EthFwUdpRule</SHORT-NAME>
+																	<DESC>
+																		<L-2 L="EN">Contains information about the next higher layer: UDP</L-2>
+																	</DESC>
+																	<ADMIN-DATA>
+																		<SDGS>
+																			<SDG GID="DV:CfgPostBuild">
+																				<SD GID="DV:postBuildNotDeletable">false</SD>
+																				<SD GID="DV:postBuildSelectableChangeable">false</SD>
+																			</SDG>
+																		</SDGS>
+																	</ADMIN-DATA>
+																	<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+																	<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+																	<MULTIPLICITY-CONFIG-CLASSES>
+																		<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																			<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																			<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+																		</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																		<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																			<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																			<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																		</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																	</MULTIPLICITY-CONFIG-CLASSES>
+																	<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+																	<REQUIRES-INDEX>false</REQUIRES-INDEX>
+																	<SUB-CONTAINERS>
+																		<ECUC-PARAM-CONF-CONTAINER-DEF UUID="e445cf77-e46d-42b7-ad50-748e37c578b3">
+																			<SHORT-NAME>EthFwUdpPort</SHORT-NAME>
+																			<DESC>
+																				<L-2 L="EN">Contains information about the allowed UDP ports.
+Three different types of configuration are possible:
+ - Enable "AllowAll" switch and do not configure start and end ports
+ - Configure start port. (Single port)
+ - Configure start and end port. (Range of ports)</L-2>
+																			</DESC>
+																			<ADMIN-DATA>
+																				<SDGS>
+																					<SDG GID="DV:CfgPostBuild">
+																						<SD GID="DV:postBuildNotDeletable">false</SD>
+																						<SD GID="DV:postBuildSelectableChangeable">false</SD>
+																					</SDG>
+																				</SDGS>
+																			</ADMIN-DATA>
+																			<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+																			<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+																			<MULTIPLICITY-CONFIG-CLASSES>
+																				<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																					<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																					<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+																				</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																				<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																					<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																					<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																				</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																			</MULTIPLICITY-CONFIG-CLASSES>
+																			<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+																			<REQUIRES-INDEX>false</REQUIRES-INDEX>
+																			<PARAMETERS>
+																				<ECUC-INTEGER-PARAM-DEF UUID="8d7f6e57-9a0d-4614-bea4-2dd44986fbab">
+																					<SHORT-NAME>EthFwLocalPortStart</SHORT-NAME>
+																					<DESC>
+																						<L-2 L="EN">Allowed LOCAL PORT.</L-2>
+																					</DESC>
+																					<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+																					<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+																					<SCOPE>LOCAL</SCOPE>
+																					<MULTIPLICITY-CONFIG-CLASSES>
+																						<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																							<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																							<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+																						</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																						<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																							<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																							<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																						</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																					</MULTIPLICITY-CONFIG-CLASSES>
+																					<ORIGIN>Vector Informatik</ORIGIN>
+																					<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+																					<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+																					<REQUIRES-INDEX>false</REQUIRES-INDEX>
+																					<VALUE-CONFIG-CLASSES>
+																						<ECUC-VALUE-CONFIGURATION-CLASS>
+																							<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																							<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+																						</ECUC-VALUE-CONFIGURATION-CLASS>
+																						<ECUC-VALUE-CONFIGURATION-CLASS>
+																							<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																							<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																						</ECUC-VALUE-CONFIGURATION-CLASS>
+																					</VALUE-CONFIG-CLASSES>
+																					<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+																					<MAX>65535</MAX>
+																					<MIN>0</MIN>
+																				</ECUC-INTEGER-PARAM-DEF>
+																				<ECUC-INTEGER-PARAM-DEF UUID="d50594d1-5678-44df-96a9-db34b1d30b52">
+																					<SHORT-NAME>EthFwLocalPortEnd</SHORT-NAME>
+																					<DESC>
+																						<L-2 L="EN">Allowed range of LOCAL PORTS (in combination with EthFwLocalPortStart).</L-2>
+																					</DESC>
+																					<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+																					<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+																					<SCOPE>LOCAL</SCOPE>
+																					<MULTIPLICITY-CONFIG-CLASSES>
+																						<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																							<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																							<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+																						</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																						<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																							<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																							<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																						</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																					</MULTIPLICITY-CONFIG-CLASSES>
+																					<ORIGIN>Vector Informatik</ORIGIN>
+																					<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+																					<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+																					<REQUIRES-INDEX>false</REQUIRES-INDEX>
+																					<VALUE-CONFIG-CLASSES>
+																						<ECUC-VALUE-CONFIGURATION-CLASS>
+																							<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																							<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+																						</ECUC-VALUE-CONFIGURATION-CLASS>
+																						<ECUC-VALUE-CONFIGURATION-CLASS>
+																							<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																							<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																						</ECUC-VALUE-CONFIGURATION-CLASS>
+																					</VALUE-CONFIG-CLASSES>
+																					<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+																					<MAX>65535</MAX>
+																					<MIN>0</MIN>
+																				</ECUC-INTEGER-PARAM-DEF>
+																				<ECUC-BOOLEAN-PARAM-DEF UUID="b09c397c-257f-41ef-a7dc-3a14986130a5">
+																					<SHORT-NAME>EthFwLocalPortAllowAll</SHORT-NAME>
+																					<DESC>
+																						<L-2 L="EN">Allowes all LOCAL PORTS.</L-2>
+																					</DESC>
+																					<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+																					<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+																					<SCOPE>LOCAL</SCOPE>
+																					<MULTIPLICITY-CONFIG-CLASSES>
+																						<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																							<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																							<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																						</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																						<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																							<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																							<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+																						</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																					</MULTIPLICITY-CONFIG-CLASSES>
+																					<ORIGIN>Vector Informatik</ORIGIN>
+																					<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+																					<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+																					<REQUIRES-INDEX>false</REQUIRES-INDEX>
+																					<VALUE-CONFIG-CLASSES>
+																						<ECUC-VALUE-CONFIGURATION-CLASS>
+																							<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																							<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+																						</ECUC-VALUE-CONFIGURATION-CLASS>
+																						<ECUC-VALUE-CONFIGURATION-CLASS>
+																							<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																							<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																						</ECUC-VALUE-CONFIGURATION-CLASS>
+																					</VALUE-CONFIG-CLASSES>
+																					<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+																					<DEFAULT-VALUE>false</DEFAULT-VALUE>
+																				</ECUC-BOOLEAN-PARAM-DEF>
+																				<ECUC-INTEGER-PARAM-DEF UUID="966584db-20d4-44f0-ad4d-04c47e584e19">
+																					<SHORT-NAME>EthFwRemotePortStart</SHORT-NAME>
+																					<DESC>
+																						<L-2 L="EN">Allowed REMOTE PORT.</L-2>
+																					</DESC>
+																					<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+																					<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+																					<SCOPE>LOCAL</SCOPE>
+																					<MULTIPLICITY-CONFIG-CLASSES>
+																						<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																							<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																							<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+																						</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																						<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																							<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																							<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																						</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																					</MULTIPLICITY-CONFIG-CLASSES>
+																					<ORIGIN>Vector Informatik</ORIGIN>
+																					<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+																					<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+																					<REQUIRES-INDEX>false</REQUIRES-INDEX>
+																					<VALUE-CONFIG-CLASSES>
+																						<ECUC-VALUE-CONFIGURATION-CLASS>
+																							<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																							<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+																						</ECUC-VALUE-CONFIGURATION-CLASS>
+																						<ECUC-VALUE-CONFIGURATION-CLASS>
+																							<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																							<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																						</ECUC-VALUE-CONFIGURATION-CLASS>
+																					</VALUE-CONFIG-CLASSES>
+																					<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+																					<MAX>65535</MAX>
+																					<MIN>0</MIN>
+																				</ECUC-INTEGER-PARAM-DEF>
+																				<ECUC-INTEGER-PARAM-DEF UUID="298710b9-7733-4ec2-abbf-5c0c685763ed">
+																					<SHORT-NAME>EthFwRemotePortEnd</SHORT-NAME>
+																					<DESC>
+																						<L-2 L="EN">Allowed range of REMOTE PORTS (in combination with EthFwRemotePortStart).</L-2>
+																					</DESC>
+																					<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+																					<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+																					<SCOPE>LOCAL</SCOPE>
+																					<MULTIPLICITY-CONFIG-CLASSES>
+																						<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																							<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																							<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+																						</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																						<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																							<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																							<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																						</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																					</MULTIPLICITY-CONFIG-CLASSES>
+																					<ORIGIN>Vector Informatik</ORIGIN>
+																					<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+																					<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+																					<REQUIRES-INDEX>false</REQUIRES-INDEX>
+																					<VALUE-CONFIG-CLASSES>
+																						<ECUC-VALUE-CONFIGURATION-CLASS>
+																							<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																							<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+																						</ECUC-VALUE-CONFIGURATION-CLASS>
+																						<ECUC-VALUE-CONFIGURATION-CLASS>
+																							<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																							<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																						</ECUC-VALUE-CONFIGURATION-CLASS>
+																					</VALUE-CONFIG-CLASSES>
+																					<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+																					<MAX>65535</MAX>
+																					<MIN>0</MIN>
+																				</ECUC-INTEGER-PARAM-DEF>
+																				<ECUC-BOOLEAN-PARAM-DEF UUID="38dae786-b870-47f9-986a-051d6093e511">
+																					<SHORT-NAME>EthFwRemotePortAllowAll</SHORT-NAME>
+																					<DESC>
+																						<L-2 L="EN">Allowes all REMOTE PORTS.</L-2>
+																					</DESC>
+																					<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+																					<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+																					<SCOPE>LOCAL</SCOPE>
+																					<MULTIPLICITY-CONFIG-CLASSES>
+																						<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																							<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																							<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																						</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																						<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																							<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																							<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+																						</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																					</MULTIPLICITY-CONFIG-CLASSES>
+																					<ORIGIN>Vector Informatik</ORIGIN>
+																					<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+																					<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+																					<REQUIRES-INDEX>false</REQUIRES-INDEX>
+																					<VALUE-CONFIG-CLASSES>
+																						<ECUC-VALUE-CONFIGURATION-CLASS>
+																							<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																							<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+																						</ECUC-VALUE-CONFIGURATION-CLASS>
+																						<ECUC-VALUE-CONFIGURATION-CLASS>
+																							<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																							<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																						</ECUC-VALUE-CONFIGURATION-CLASS>
+																					</VALUE-CONFIG-CLASSES>
+																					<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+																					<DEFAULT-VALUE>false</DEFAULT-VALUE>
+																				</ECUC-BOOLEAN-PARAM-DEF>
+																			</PARAMETERS>
+																		</ECUC-PARAM-CONF-CONTAINER-DEF>
+																	</SUB-CONTAINERS>
+																</ECUC-PARAM-CONF-CONTAINER-DEF>
+															</SUB-CONTAINERS>
+														</ECUC-PARAM-CONF-CONTAINER-DEF>
+														<ECUC-PARAM-CONF-CONTAINER-DEF UUID="220d0010-04f7-419e-bf54-eb1ba3c7c176">
+															<SHORT-NAME>EthFwIpAddr</SHORT-NAME>
+															<DESC>
+																<L-2 L="EN">Contains information about the allowed IP addresses.
+Three different types of configuration are possible:
+ - Enable "AllowAll" switch and do not configure start and end addresses
+ - Configure start address. (Single address)
+ - Configure start and end address. (Range of addresses)</L-2>
+															</DESC>
+															<ADMIN-DATA>
+																<SDGS>
+																	<SDG GID="DV:CfgPostBuild">
+																		<SD GID="DV:postBuildNotDeletable">false</SD>
+																		<SD GID="DV:postBuildSelectableChangeable">false</SD>
+																	</SDG>
+																</SDGS>
+															</ADMIN-DATA>
+															<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+															<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+															<MULTIPLICITY-CONFIG-CLASSES>
+																<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+																</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															</MULTIPLICITY-CONFIG-CLASSES>
+															<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+															<REQUIRES-INDEX>false</REQUIRES-INDEX>
+															<PARAMETERS>
+																<ECUC-STRING-PARAM-DEF UUID="c0f29ba5-7e2c-477e-93cc-eedfc3c476ae">
+																	<SHORT-NAME>EthFwLocalIpAddrStart</SHORT-NAME>
+																	<DESC>
+																		<L-2 L="EN">Allowed LOCAL IP address.</L-2>
+																	</DESC>
+																	<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+																	<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+																	<SCOPE>LOCAL</SCOPE>
+																	<MULTIPLICITY-CONFIG-CLASSES>
+																		<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																			<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																			<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+																		</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																		<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																			<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																			<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																		</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																	</MULTIPLICITY-CONFIG-CLASSES>
+																	<ORIGIN>Vector Informatik</ORIGIN>
+																	<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+																	<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+																	<REQUIRES-INDEX>false</REQUIRES-INDEX>
+																	<VALUE-CONFIG-CLASSES>
+																		<ECUC-VALUE-CONFIGURATION-CLASS>
+																			<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																			<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+																		</ECUC-VALUE-CONFIGURATION-CLASS>
+																		<ECUC-VALUE-CONFIGURATION-CLASS>
+																			<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																			<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																		</ECUC-VALUE-CONFIGURATION-CLASS>
+																	</VALUE-CONFIG-CLASSES>
+																	<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+																</ECUC-STRING-PARAM-DEF>
+																<ECUC-STRING-PARAM-DEF UUID="8d6f8731-9a0b-4acc-81a3-7dc865e74c85">
+																	<SHORT-NAME>EthFwLocalIpAddrEnd</SHORT-NAME>
+																	<DESC>
+																		<L-2 L="EN">Allowed range of LOCAL IP addresses (in combination with EthFwLocalIpAddrStart).</L-2>
+																	</DESC>
+																	<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+																	<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+																	<SCOPE>LOCAL</SCOPE>
+																	<MULTIPLICITY-CONFIG-CLASSES>
+																		<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																			<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																			<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+																		</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																		<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																			<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																			<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																		</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																	</MULTIPLICITY-CONFIG-CLASSES>
+																	<ORIGIN>Vector Informatik</ORIGIN>
+																	<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+																	<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+																	<REQUIRES-INDEX>false</REQUIRES-INDEX>
+																	<VALUE-CONFIG-CLASSES>
+																		<ECUC-VALUE-CONFIGURATION-CLASS>
+																			<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																			<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+																		</ECUC-VALUE-CONFIGURATION-CLASS>
+																		<ECUC-VALUE-CONFIGURATION-CLASS>
+																			<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																			<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																		</ECUC-VALUE-CONFIGURATION-CLASS>
+																	</VALUE-CONFIG-CLASSES>
+																	<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+																</ECUC-STRING-PARAM-DEF>
+																<ECUC-BOOLEAN-PARAM-DEF UUID="ce30d395-e812-4150-aa80-dc3d5671d196">
+																	<SHORT-NAME>EthFwLocalIpAddrAllowAll</SHORT-NAME>
+																	<DESC>
+																		<L-2 L="EN">Allowes all LOCAL IP addresses.</L-2>
+																	</DESC>
+																	<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+																	<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+																	<SCOPE>LOCAL</SCOPE>
+																	<MULTIPLICITY-CONFIG-CLASSES>
+																		<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																			<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																			<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																		</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																		<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																			<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																			<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+																		</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																	</MULTIPLICITY-CONFIG-CLASSES>
+																	<ORIGIN>Vector Informatik</ORIGIN>
+																	<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+																	<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+																	<REQUIRES-INDEX>false</REQUIRES-INDEX>
+																	<VALUE-CONFIG-CLASSES>
+																		<ECUC-VALUE-CONFIGURATION-CLASS>
+																			<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																			<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+																		</ECUC-VALUE-CONFIGURATION-CLASS>
+																		<ECUC-VALUE-CONFIGURATION-CLASS>
+																			<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																			<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																		</ECUC-VALUE-CONFIGURATION-CLASS>
+																	</VALUE-CONFIG-CLASSES>
+																	<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+																	<DEFAULT-VALUE>false</DEFAULT-VALUE>
+																</ECUC-BOOLEAN-PARAM-DEF>
+																<ECUC-STRING-PARAM-DEF UUID="f285fcb3-5145-41e0-823b-e0e0561e8bc3">
+																	<SHORT-NAME>EthFwRemoteIpAddrStart</SHORT-NAME>
+																	<DESC>
+																		<L-2 L="EN">Allowed REMOTE IP address.</L-2>
+																	</DESC>
+																	<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+																	<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+																	<SCOPE>LOCAL</SCOPE>
+																	<MULTIPLICITY-CONFIG-CLASSES>
+																		<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																			<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																			<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+																		</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																		<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																			<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																			<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																		</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																	</MULTIPLICITY-CONFIG-CLASSES>
+																	<ORIGIN>Vector Informatik</ORIGIN>
+																	<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+																	<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+																	<REQUIRES-INDEX>false</REQUIRES-INDEX>
+																	<VALUE-CONFIG-CLASSES>
+																		<ECUC-VALUE-CONFIGURATION-CLASS>
+																			<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																			<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+																		</ECUC-VALUE-CONFIGURATION-CLASS>
+																		<ECUC-VALUE-CONFIGURATION-CLASS>
+																			<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																			<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																		</ECUC-VALUE-CONFIGURATION-CLASS>
+																	</VALUE-CONFIG-CLASSES>
+																	<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+																</ECUC-STRING-PARAM-DEF>
+																<ECUC-STRING-PARAM-DEF UUID="f61c9c9a-ff16-42e4-a961-51f82c25578e">
+																	<SHORT-NAME>EthFwRemoteIpAddrEnd</SHORT-NAME>
+																	<DESC>
+																		<L-2 L="EN">Allowed range of REMOTE IP addresses (in combination with EthFwRemoteIpAddrStart).</L-2>
+																	</DESC>
+																	<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+																	<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+																	<SCOPE>LOCAL</SCOPE>
+																	<MULTIPLICITY-CONFIG-CLASSES>
+																		<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																			<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																			<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+																		</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																		<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																			<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																			<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																		</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																	</MULTIPLICITY-CONFIG-CLASSES>
+																	<ORIGIN>Vector Informatik</ORIGIN>
+																	<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+																	<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+																	<REQUIRES-INDEX>false</REQUIRES-INDEX>
+																	<VALUE-CONFIG-CLASSES>
+																		<ECUC-VALUE-CONFIGURATION-CLASS>
+																			<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																			<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+																		</ECUC-VALUE-CONFIGURATION-CLASS>
+																		<ECUC-VALUE-CONFIGURATION-CLASS>
+																			<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																			<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																		</ECUC-VALUE-CONFIGURATION-CLASS>
+																	</VALUE-CONFIG-CLASSES>
+																	<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+																</ECUC-STRING-PARAM-DEF>
+																<ECUC-BOOLEAN-PARAM-DEF UUID="d75fbc06-fcb1-4d54-9ddb-a933581c8f2f">
+																	<SHORT-NAME>EthFwRemoteIpAddrAllowAll</SHORT-NAME>
+																	<DESC>
+																		<L-2 L="EN">Allowes all REMOTE IP addresses.</L-2>
+																	</DESC>
+																	<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+																	<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+																	<SCOPE>LOCAL</SCOPE>
+																	<MULTIPLICITY-CONFIG-CLASSES>
+																		<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																			<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																			<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																		</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																		<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																			<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																			<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+																		</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																	</MULTIPLICITY-CONFIG-CLASSES>
+																	<ORIGIN>Vector Informatik</ORIGIN>
+																	<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+																	<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+																	<REQUIRES-INDEX>false</REQUIRES-INDEX>
+																	<VALUE-CONFIG-CLASSES>
+																		<ECUC-VALUE-CONFIGURATION-CLASS>
+																			<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																			<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+																		</ECUC-VALUE-CONFIGURATION-CLASS>
+																		<ECUC-VALUE-CONFIGURATION-CLASS>
+																			<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																			<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																		</ECUC-VALUE-CONFIGURATION-CLASS>
+																	</VALUE-CONFIG-CLASSES>
+																	<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+																	<DEFAULT-VALUE>false</DEFAULT-VALUE>
+																</ECUC-BOOLEAN-PARAM-DEF>
+															</PARAMETERS>
+														</ECUC-PARAM-CONF-CONTAINER-DEF>
+													</SUB-CONTAINERS>
+												</ECUC-PARAM-CONF-CONTAINER-DEF>
+												<ECUC-PARAM-CONF-CONTAINER-DEF UUID="79e10c01-ddfa-4da9-b8fe-afb1bdc49172">
+													<SHORT-NAME>EthFwAvbRule</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Contains information about the next higher layer: AVB</L-2>
+													</DESC>
+													<ADMIN-DATA>
+														<SDGS>
+															<SDG GID="DV:CfgPostBuild">
+																<SD GID="DV:postBuildNotDeletable">false</SD>
+																<SD GID="DV:postBuildSelectableChangeable">false</SD>
+															</SDG>
+														</SDGS>
+													</ADMIN-DATA>
+													<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<MULTIPLICITY-CONFIG-CLASSES>
+														<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+														</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+														<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													</MULTIPLICITY-CONFIG-CLASSES>
+													<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<PARAMETERS>
+														<ECUC-INTEGER-PARAM-DEF UUID="fd38fcfb-dd5b-438b-8bf5-b76fa615d546">
+															<SHORT-NAME>EthFwStreamId</SHORT-NAME>
+															<DESC>
+																<L-2 L="EN">Allowed AVB stream IDs.</L-2>
+															</DESC>
+															<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+															<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+															<SCOPE>LOCAL</SCOPE>
+															<MULTIPLICITY-CONFIG-CLASSES>
+																<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+																</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															</MULTIPLICITY-CONFIG-CLASSES>
+															<ORIGIN>Vector Informatik</ORIGIN>
+															<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+															<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+															<REQUIRES-INDEX>false</REQUIRES-INDEX>
+															<VALUE-CONFIG-CLASSES>
+																<ECUC-VALUE-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+																</ECUC-VALUE-CONFIGURATION-CLASS>
+																<ECUC-VALUE-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																</ECUC-VALUE-CONFIGURATION-CLASS>
+															</VALUE-CONFIG-CLASSES>
+															<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+															<MAX>18446744073709551615</MAX>
+															<MIN>0</MIN>
+														</ECUC-INTEGER-PARAM-DEF>
+													</PARAMETERS>
+												</ECUC-PARAM-CONF-CONTAINER-DEF>
+											</SUB-CONTAINERS>
+										</ECUC-PARAM-CONF-CONTAINER-DEF>
+										<ECUC-PARAM-CONF-CONTAINER-DEF UUID="2d910ceb-d418-45cd-a119-84f9015676eb">
+											<SHORT-NAME>EthFwFramePriority</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Configuration of allowed frame priorities.</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:CfgPostBuild">
+														<SD GID="DV:postBuildNotDeletable">false</SD>
+														<SD GID="DV:postBuildSelectableChangeable">false</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<MULTIPLICITY-CONFIG-CLASSES>
+												<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+												<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											</MULTIPLICITY-CONFIG-CLASSES>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<PARAMETERS>
+												<ECUC-INTEGER-PARAM-DEF UUID="ad681d83-410e-4533-835c-15185cfc15b9">
+													<SHORT-NAME>EthFwFramePriority</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Allowed frame priorities.</L-2>
+													</DESC>
+													<ADMIN-DATA>
+														<SDGS>
+															<SDG GID="DV:Display">
+																<SD GID="DV:DefaultFormat">DEC</SD>
+															</SDG>
+														</SDGS>
+													</ADMIN-DATA>
+													<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>7</UPPER-MULTIPLICITY>
+													<SCOPE>LOCAL</SCOPE>
+													<MULTIPLICITY-CONFIG-CLASSES>
+														<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+														</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+														<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													</MULTIPLICITY-CONFIG-CLASSES>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+													<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<VALUE-CONFIG-CLASSES>
+														<ECUC-VALUE-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+														</ECUC-VALUE-CONFIGURATION-CLASS>
+														<ECUC-VALUE-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-VALUE-CONFIGURATION-CLASS>
+													</VALUE-CONFIG-CLASSES>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<MAX>7</MAX>
+													<MIN>0</MIN>
+												</ECUC-INTEGER-PARAM-DEF>
+												<ECUC-BOOLEAN-PARAM-DEF UUID="eb0b0e70-c233-4b39-9ebb-20d9be6af8b9">
+													<SHORT-NAME>EthFwAllowAllFramePriorities</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Switch allows all frame priorities.</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<SCOPE>LOCAL</SCOPE>
+													<MULTIPLICITY-CONFIG-CLASSES>
+														<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+														<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+														</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													</MULTIPLICITY-CONFIG-CLASSES>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+													<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<VALUE-CONFIG-CLASSES>
+														<ECUC-VALUE-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+														</ECUC-VALUE-CONFIGURATION-CLASS>
+														<ECUC-VALUE-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-VALUE-CONFIGURATION-CLASS>
+													</VALUE-CONFIG-CLASSES>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>false</DEFAULT-VALUE>
+												</ECUC-BOOLEAN-PARAM-DEF>
+											</PARAMETERS>
+										</ECUC-PARAM-CONF-CONTAINER-DEF>
+									</SUB-CONTAINERS>
+								</ECUC-PARAM-CONF-CONTAINER-DEF>
+							</SUB-CONTAINERS>
+						</ECUC-PARAM-CONF-CONTAINER-DEF>
+						<ECUC-PARAM-CONF-CONTAINER-DEF UUID="b4096388-21c2-408c-a097-3aa42c7c2538">
+							<SHORT-NAME>EthFwGeneral</SHORT-NAME>
+							<DESC>
+								<L-2 L="EN">This container lists the general configuration parameters for the ETHFW module.</L-2>
+							</DESC>
+							<ADMIN-DATA>
+								<SDGS>
+									<SDG GID="DV:CfgPostBuild">
+										<SD GID="DV:postBuildNotDeletable">true</SD>
+										<SD GID="DV:postBuildSelectableChangeable">false</SD>
+									</SDG>
+								</SDGS>
+							</ADMIN-DATA>
+							<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+							<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+							<MULTIPLICITY-CONFIG-CLASSES>
+								<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+									<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+									<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+								</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+								<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+									<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+									<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+								</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+							</MULTIPLICITY-CONFIG-CLASSES>
+							<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+							<REQUIRES-INDEX>false</REQUIRES-INDEX>
+							<PARAMETERS>
+								<ECUC-STRING-PARAM-DEF UUID="139fc45c-e71b-4da7-9cc6-f2119228b373">
+									<SHORT-NAME>EthFwUserConfigFile</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Reference to an external user configuration file that will be included during generation.
+The content of the user configuration file will be added at the end of the generated module configuration file and allows altering or extending the generated code.
+Caution: User configuration files can cause the software module to malfunction and must only be used with great care!</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<SCOPE>LOCAL</SCOPE>
+									<MULTIPLICITY-CONFIG-CLASSES>
+										<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+										</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+										<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+									</MULTIPLICITY-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<VALUE-CONFIG-CLASSES>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+									</VALUE-CONFIG-CLASSES>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<ECUC-STRING-PARAM-DEF-VARIANTS>
+										<ECUC-STRING-PARAM-DEF-CONDITIONAL>
+											<DEFAULT-VALUE>X:\xyz\EthFw_UserConfig.txt</DEFAULT-VALUE>
+											<MIN-LENGTH>1</MIN-LENGTH>
+										</ECUC-STRING-PARAM-DEF-CONDITIONAL>
+									</ECUC-STRING-PARAM-DEF-VARIANTS>
+								</ECUC-STRING-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="f39964ed-69a7-4daa-9077-874702147e2b">
+									<SHORT-NAME>EthFwDevErrorDetect</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Enables and disables the development error detection and notification mechanism.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<SCOPE>LOCAL</SCOPE>
+									<MULTIPLICITY-CONFIG-CLASSES>
+										<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+										<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+										</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+									</MULTIPLICITY-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<VALUE-CONFIG-CLASSES>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+									</VALUE-CONFIG-CLASSES>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>true</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="f9590310-f1a1-425f-a14d-f192641ca352">
+									<SHORT-NAME>EthFwVersionInfoApi</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Enables and disables the version info API.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<SCOPE>LOCAL</SCOPE>
+									<MULTIPLICITY-CONFIG-CLASSES>
+										<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+										<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+										</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+									</MULTIPLICITY-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<VALUE-CONFIG-CLASSES>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+									</VALUE-CONFIG-CLASSES>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="baf94eac-4a54-45d9-8842-6eff2e8ec677">
+									<SHORT-NAME>EthFwEnabled</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Enables and disables the firewall module.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<SCOPE>LOCAL</SCOPE>
+									<MULTIPLICITY-CONFIG-CLASSES>
+										<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+										<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+										</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+									</MULTIPLICITY-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<VALUE-CONFIG-CLASSES>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+									</VALUE-CONFIG-CLASSES>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>true</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="03470b46-88a4-451e-a6e3-5bbae7c4a23e">
+									<SHORT-NAME>EthFwSafeBswChecks</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Selects if safety checks are used. These checks improve robustness as e.g. invalid parameters are checked before function is executed. This attribute has to be enabled for safety projects where this component is mapped to an ASIL partition.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<SCOPE>LOCAL</SCOPE>
+									<MULTIPLICITY-CONFIG-CLASSES>
+										<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+										<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+										</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+									</MULTIPLICITY-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<VALUE-CONFIG-CLASSES>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+									</VALUE-CONFIG-CLASSES>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+							</PARAMETERS>
+							<SUB-CONTAINERS>
+								<ECUC-PARAM-CONF-CONTAINER-DEF UUID="e14c1bc9-6625-4062-be5e-9574251fec1f">
+									<SHORT-NAME>EthFwGeneration</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Contains the generation configuration parameters of the module EthFw.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:postBuildSelectableChangeable">false</SD>
+												<SD GID="DV:postBuildNotDeletable">true</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<MULTIPLICITY-CONFIG-CLASSES>
+										<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+										<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+										</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+									</MULTIPLICITY-CONFIG-CLASSES>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<PARAMETERS>
+										<!--EthFwOutOfBoundsWriteProtectionStrategy-->
+										<ECUC-ENUMERATION-PARAM-DEF UUID="83c566f6-5330-4683-8b86-66ffcea2d181">
+											<SHORT-NAME>EthFwOutOfBoundsWriteProtectionStrategy</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter is used to configure a strategy to protect the code to write out of bounds.
+
+NONE: no protection strategy is generated in the data access.
+INDEX_SATURATION: arrays are blown up and the data access index is saturated by an appropriate mask. The advantage is the speed of the data access, but own data elements at other indexes of the same variable can be overridden.
+INDEX_CHECKING: the data access index is validated by a runtime check. The advantage is that values are never written to incorrect indexes of the data access.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<MULTIPLICITY-CONFIG-CLASSES>
+												<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+												<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											</MULTIPLICITY-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<VALUE-CONFIG-CLASSES>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+											</VALUE-CONFIG-CLASSES>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>NONE</DEFAULT-VALUE>
+											<LITERALS>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="0d03d90a-1c6f-4051-903f-ea11642229a8">
+													<SHORT-NAME>NONE</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">none</L-4>
+													</LONG-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="ce8532d7-2913-44e0-b5ee-6b9af01e49c7">
+													<SHORT-NAME>INDEX_SATURATION</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">index saturation</L-4>
+													</LONG-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="d5e81e03-2d7a-4c38-9726-990146b519a7">
+													<SHORT-NAME>INDEX_CHECKING</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">index checking</L-4>
+													</LONG-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+											</LITERALS>
+										</ECUC-ENUMERATION-PARAM-DEF>
+										<!--EthFwOutOfBoundsWriteSanitizer-->
+										<ECUC-BOOLEAN-PARAM-DEF UUID="cfd4f273-edaa-4414-be8b-bd899d77b898">
+											<SHORT-NAME>EthFwOutOfBoundsWriteSanitizer</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter activates/deactivates the generation of runtime checks which call a DET error notification function to find easily out of bounds write problems.
+
+FALSE:  no checks are generated in the data access.
+TRUE: the data access is enriched with DET checks to validate indexes.
+</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<MULTIPLICITY-CONFIG-CLASSES>
+												<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+												<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											</MULTIPLICITY-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<VALUE-CONFIG-CLASSES>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+											</VALUE-CONFIG-CLASSES>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>false</DEFAULT-VALUE>
+										</ECUC-BOOLEAN-PARAM-DEF>
+										<!--EthFwOutOfBoundsReadSanitizer-->
+										<ECUC-BOOLEAN-PARAM-DEF UUID="2d81eb8f-8b74-4e49-9c72-88755a782486">
+											<SHORT-NAME>EthFwOutOfBoundsReadSanitizer</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter activates/deactivates the generation of runtime checks which call a DET error notification function to find easily out of bounds read problems.
+
+FALSE:  no checks are generated in the data access.
+TRUE: the data access is enriched with DET checks to validate indexes.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<MULTIPLICITY-CONFIG-CLASSES>
+												<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+												<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											</MULTIPLICITY-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<VALUE-CONFIG-CLASSES>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+											</VALUE-CONFIG-CLASSES>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>false</DEFAULT-VALUE>
+										</ECUC-BOOLEAN-PARAM-DEF>
+										<!--EthFwNumericalDataTypeMinimizationStrategy-->
+										<ECUC-ENUMERATION-PARAM-DEF UUID="0c8a9419-2239-48b9-b2a4-65f7fa3ee07c">
+											<SHORT-NAME>EthFwNumericalDataTypeMinimizationStrategy</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter is used to minimize the datatypes of CONFIG-CLASS PRE-COMPILE numerical data based on the used values.
+
+NONE: the datatype is not minimized.
+MINIMIZE_NUMERICAL_DATA_TYPES_WITHOUT_CAST: the datatype of numerical data is minimized. Unsigned data types are not changed to signed datatypes.
+MINIMIZE_NUMERICAL_DATA_TYPES_WITH_CAST: the datatype of numerical data is minimized. Unsigned data types can be optimized to signed datatypes.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<MULTIPLICITY-CONFIG-CLASSES>
+												<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+												<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											</MULTIPLICITY-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<VALUE-CONFIG-CLASSES>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+											</VALUE-CONFIG-CLASSES>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>MINIMIZE_NUMERICAL_DATA_TYPES_WITH_CAST</DEFAULT-VALUE>
+											<LITERALS>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="09377926-c9d8-4e96-89bb-a70bc3b606b7">
+													<SHORT-NAME>NONE</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">none</L-4>
+													</LONG-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="efbf5d0c-0229-477d-a100-04044d31b956">
+													<SHORT-NAME>MINIMIZE_NUMERICAL_DATA_TYPES_WITHOUT_CAST</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">minimize numerical data types without cast</L-4>
+													</LONG-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="780660bd-1542-40fe-bb18-cbda7785e05d">
+													<SHORT-NAME>MINIMIZE_NUMERICAL_DATA_TYPES_WITH_CAST</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">minimize numerical data types with cast</L-4>
+													</LONG-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+											</LITERALS>
+										</ECUC-ENUMERATION-PARAM-DEF>
+										<!--EthFwReduceIdenticalValues2Define-->
+										<ECUC-BOOLEAN-PARAM-DEF UUID="ce290205-ac87-43e8-ba88-c4de7ff102d5">
+											<SHORT-NAME>EthFwReduceConstantData2Define</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">Reduce Constant Data To a Define</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter activates/deactivates the capability to generate CONFIG-CLASS PRE-COMPILE ROM arrays as constant define.
+
+FALSE: ROM arrays are generated as data even if all values are identical.
+TRUE: ROM arrays are generated as constant define if all values are identical.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<MULTIPLICITY-CONFIG-CLASSES>
+												<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+												<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											</MULTIPLICITY-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<VALUE-CONFIG-CLASSES>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+											</VALUE-CONFIG-CLASSES>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>false</DEFAULT-VALUE>
+										</ECUC-BOOLEAN-PARAM-DEF>
+										<!--EthFwBoolDataInArrayOfStructStrategy-->
+										<ECUC-ENUMERATION-PARAM-DEF UUID="d75b73e8-cd8d-4fdb-ac1f-4703f7188ae9">
+											<SHORT-NAME>EthFwBoolDataInArrayOfStructStrategy</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter is used to tailor the usage of boolean data in structures in all CONFIG-CLASSES ROM data. The difference between BITFIELD and BITMASKING depends on your compiler options and memory mapping.
+
+BOOLEAN: the datatype of boolean data is native boolean.
+BITFIELD: the bitfield type is used and the compiler extracts the boolean data from structures.
+BITMASKING: generated masks are used to extract the boolean data from structures.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<MULTIPLICITY-CONFIG-CLASSES>
+												<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+												<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											</MULTIPLICITY-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<VALUE-CONFIG-CLASSES>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+											</VALUE-CONFIG-CLASSES>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>BITMASKING</DEFAULT-VALUE>
+											<LITERALS>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="db3ea2cc-5688-48c4-8af0-fe5a0a9fd552">
+													<SHORT-NAME>BOOLEAN</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">boolean</L-4>
+													</LONG-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="abe3a33f-797c-4290-8cfc-c11cc36de9d3">
+													<SHORT-NAME>BITFIELD</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">bitfield</L-4>
+													</LONG-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="c5fae111-066e-4d93-abd3-39fcac3fbc6e">
+													<SHORT-NAME>BITMASKING</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">bitmasking</L-4>
+													</LONG-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+											</LITERALS>
+										</ECUC-ENUMERATION-PARAM-DEF>
+										<!--EthFwDeduplicateIndirectedData-->
+										<ECUC-BOOLEAN-PARAM-DEF UUID="e5136020-030a-40c9-8b6c-87570b2dc0c8">
+											<SHORT-NAME>EthFwDeduplicateIndirectedData</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter activates/deactivates the capability to compress 0:N relational ROM data in all CONFIG-CLASSES without increasing the runtime.
+
+FALSE: 0:N relational ROM data is not compressed.
+TRUE: 0:N relational ROM data is compressed without increasing the runtime.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<MULTIPLICITY-CONFIG-CLASSES>
+												<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+												<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											</MULTIPLICITY-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<VALUE-CONFIG-CLASSES>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+											</VALUE-CONFIG-CLASSES>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>true</DEFAULT-VALUE>
+										</ECUC-BOOLEAN-PARAM-DEF>
+										<!--EthFwDataDeduplicationStrategy-->
+										<ECUC-ENUMERATION-PARAM-DEF UUID="0906a3d0-2597-4e7a-9df4-6620b4270717">
+											<SHORT-NAME>EthFwDataDeduplicationStrategy</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter is used to taylor the the deduplication of CONFIG-CLASS PRE-COMPILE  ROM data.
+
+NONE: The generated data is not deduplicated.
+DEDUPLICATE_CONST_DATA_WITHOUT_CAST: The data is deduplicated without using casts.
+DEDUPLICATE_CONST_DATA_WITH_CAST: The data is deduplicated using casts.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<MULTIPLICITY-CONFIG-CLASSES>
+												<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+												<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											</MULTIPLICITY-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<VALUE-CONFIG-CLASSES>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+											</VALUE-CONFIG-CLASSES>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>DEDUPLICATE_CONST_DATA_WITH_CAST</DEFAULT-VALUE>
+											<LITERALS>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="2cf27911-d77f-49e5-8207-b0f09b41896a">
+													<SHORT-NAME>NONE</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">none</L-4>
+													</LONG-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="40b4dd15-59d0-4651-b2e3-3cd7fa0c8169">
+													<SHORT-NAME>DEDUPLICATE_CONST_DATA_WITHOUT_CAST</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">deduplicate const data without cast</L-4>
+													</LONG-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="17a270d3-e7ff-486f-95a1-fa165af21dce">
+													<SHORT-NAME>DEDUPLICATE_CONST_DATA_WITH_CAST</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">deduplicate const data with cast</L-4>
+													</LONG-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+											</LITERALS>
+										</ECUC-ENUMERATION-PARAM-DEF>
+										<!--EthFwReduceBoolDataByNegationThreshold-->
+										<ECUC-INTEGER-PARAM-DEF UUID="8b385f24-062b-4004-bd3a-ef17c5c55752">
+											<SHORT-NAME>EthFwReduceBoolDataByNegationThreshold</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter activates/deactivates the capability to compress boolean CONFIG-CLASS PRE-COMPILE ROM data by using the negation operator.
+
+0: The optimization is deactivated.
+&gt;0: If the number of deduplicateable elements is greater than this threshold the data optimization can be performed.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<MULTIPLICITY-CONFIG-CLASSES>
+												<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+												<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											</MULTIPLICITY-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<VALUE-CONFIG-CLASSES>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+											</VALUE-CONFIG-CLASSES>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>2</DEFAULT-VALUE>
+											<MAX>9223372036854775807</MAX>
+											<MIN>0</MIN>
+										</ECUC-INTEGER-PARAM-DEF>
+										<!--EthFwReduceBoolDataByNumericalComparisonThreshold-->
+										<ECUC-INTEGER-PARAM-DEF UUID="87df98d5-831f-4e88-9404-fecfd0d7f307">
+											<SHORT-NAME>EthFwReduceBoolDataByNumericalComparisonThreshold</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter activates/deactivates the capability to compress boolean CONFIG-CLASS PRE-COMPILE ROM data by using numerical comparison with other ROM data.
+
+0: The optimization is deactivated.
+&gt;0: If the number of deduplicateable elements is greater than this threshold the data optimization can be performed.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<MULTIPLICITY-CONFIG-CLASSES>
+												<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+												<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											</MULTIPLICITY-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<VALUE-CONFIG-CLASSES>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+											</VALUE-CONFIG-CLASSES>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>2</DEFAULT-VALUE>
+											<MAX>9223372036854775807</MAX>
+											<MIN>0</MIN>
+										</ECUC-INTEGER-PARAM-DEF>
+										<!--EthFwReduceBoolDataByNumericalRelationThreshold-->
+										<ECUC-INTEGER-PARAM-DEF UUID="8104126d-49bc-4d67-b53e-846a76d89e63">
+											<SHORT-NAME>EthFwReduceBoolDataByNumericalRelationThreshold</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter activates/deactivates the capability to compress boolean CONFIG-CLASS PRE-COMPILE ROM data by using relational comparison with other ROM data.
+
+0: The optimization is deactivated.
+&gt;0: If the number of deduplicateable elements is greater than this threshold the data optimization can be performed.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<MULTIPLICITY-CONFIG-CLASSES>
+												<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+												<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											</MULTIPLICITY-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<VALUE-CONFIG-CLASSES>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+											</VALUE-CONFIG-CLASSES>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>2</DEFAULT-VALUE>
+											<MAX>9223372036854775807</MAX>
+											<MIN>0</MIN>
+										</ECUC-INTEGER-PARAM-DEF>
+										<!--EthFwReduceBoolDataByNumericalOperandStrategy-->
+										<ECUC-ENUMERATION-PARAM-DEF UUID="0c5ad32f-140a-404f-8f7c-3ad94b540836">
+											<SHORT-NAME>EthFwReduceBoolDataByNumericalOperandStrategy</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter is used to taylor the CONFIG-CLASS PRE-COMPILE ROM bool data with number deduplication mechanisms. A comparison with 0 is very efficient, but a numerical comparison with a value not 0 can be used to increase the ROM data compression rate.
+
+NONE: ROM data deduplications are switched off.
+DEDUPLICATE_DATA_WITH_ZERO: ROM data deduplications can be applied with the value 0.
+DEDUPLICATE_DATA_WITH_ANY_VALUE: ROM data deduplications can be applied with any numerical value.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<MULTIPLICITY-CONFIG-CLASSES>
+												<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+												<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											</MULTIPLICITY-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<VALUE-CONFIG-CLASSES>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+											</VALUE-CONFIG-CLASSES>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>DEDUPLICATE_DATA_WITH_ANY_VALUE</DEFAULT-VALUE>
+											<LITERALS>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="d8265d43-9b43-428e-ae68-e0090e51c9ce">
+													<SHORT-NAME>NONE</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">none</L-4>
+													</LONG-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="5c83e3a8-7f67-4f38-82be-885d9ec16dfb">
+													<SHORT-NAME>DEDUPLICATE_DATA_WITH_ZERO</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">deduplicate data with zero</L-4>
+													</LONG-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="f85e7e9f-fd1f-4f22-9100-7fb2b8638701">
+													<SHORT-NAME>DEDUPLICATE_DATA_WITH_ANY_VALUE</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">deduplicate data with any value</L-4>
+													</LONG-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+											</LITERALS>
+										</ECUC-ENUMERATION-PARAM-DEF>
+										<!--EthFwReduceNumericalDataByOffsetThreshold-->
+										<ECUC-INTEGER-PARAM-DEF UUID="68c3851b-557e-4540-8073-d96a4af91e16">
+											<SHORT-NAME>EthFwReduceNumericalDataByOffsetThreshold</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter activates/deactivates the capability to compress numerical CONFIG-CLASS PRE-COMPILE ROM data by using a constant offset.
+
+0: The optimization is deactivated.
+&gt;0: If the number of deduplicateable elements is greater than this threshold the data optimization can be performed.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<MULTIPLICITY-CONFIG-CLASSES>
+												<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+												<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											</MULTIPLICITY-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<VALUE-CONFIG-CLASSES>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+											</VALUE-CONFIG-CLASSES>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>2</DEFAULT-VALUE>
+											<MAX>9223372036854775807</MAX>
+											<MIN>0</MIN>
+										</ECUC-INTEGER-PARAM-DEF>
+										<!--EthFwReduceNumericalDataByArraySubtractionThreshold-->
+										<ECUC-INTEGER-PARAM-DEF UUID="6b2e12ba-ff8b-474e-a5fb-39b0bc2ad65c">
+											<SHORT-NAME>EthFwReduceNumericalDataByArraySubtractionThreshold</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter activates/deactivates the capability to compress numerical CONFIG-CLASS PRE-COMPILE ROM data by using a subtraction with other ROM data.
+
+0: The optimization is deactivated.
+&gt;0: If the number of deduplicateable elements is greater than this threshold the data optimization can be performed.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<MULTIPLICITY-CONFIG-CLASSES>
+												<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+												<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											</MULTIPLICITY-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<VALUE-CONFIG-CLASSES>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+											</VALUE-CONFIG-CLASSES>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>2</DEFAULT-VALUE>
+											<MAX>9223372036854775807</MAX>
+											<MIN>0</MIN>
+										</ECUC-INTEGER-PARAM-DEF>
+										<!--EthFwReduceDataByStreaming-->
+										<ECUC-BOOLEAN-PARAM-DEF UUID="4f7b6a13-ed9c-46de-b5cb-8fe70562d701">
+											<SHORT-NAME>EthFwReduceDataByStreaming</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter activates/deactivates the capability to pack generated CONFIG-CLASS PRE-COMPILE ROM data into a data type dependent stream.
+
+FALSE: generated const data is not packed into a data type dependent stream.
+TRUE: generated const data is packed into a data type dependent stream.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<MULTIPLICITY-CONFIG-CLASSES>
+												<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+												<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											</MULTIPLICITY-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<VALUE-CONFIG-CLASSES>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+											</VALUE-CONFIG-CLASSES>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>false</DEFAULT-VALUE>
+										</ECUC-BOOLEAN-PARAM-DEF>
+										<!--EthFwShortSymbols-->
+										<ECUC-BOOLEAN-PARAM-DEF UUID="1155d069-8e34-4d09-8434-b1b9b083de4b">
+											<SHORT-NAME>EthFwShortSymbols</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter activates/deactivates the capability to generate shortened symbol names.
+
+FALSE: symbol names are generated in a human readable style based on the MIP, tags and variant names.
+TRUE: symbol names are generated based on the MIP and a CRC32.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<MULTIPLICITY-CONFIG-CLASSES>
+												<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+												<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											</MULTIPLICITY-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<VALUE-CONFIG-CLASSES>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+											</VALUE-CONFIG-CLASSES>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>false</DEFAULT-VALUE>
+										</ECUC-BOOLEAN-PARAM-DEF>
+										<!--EthFwInterfacesForDeactivatedData-->
+										<ECUC-BOOLEAN-PARAM-DEF UUID="e179f65b-4182-4427-9fdf-10a1e3d922c7">
+											<SHORT-NAME>EthFwInterfacesForDeactivatedData</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter activates/deactivates the capability to generate bsw data interfaces for deactivated data elements. This is an advantage for the BSW developer to reduce the time to market with a development environment using auto completition and to investigate potential interfaces.
+
+FALSE: data interfaces are not generated if the data elementis deactivated.
+TRUE: data interfaces are generated as e.g. emty macros.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<MULTIPLICITY-CONFIG-CLASSES>
+												<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+												<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											</MULTIPLICITY-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<VALUE-CONFIG-CLASSES>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+											</VALUE-CONFIG-CLASSES>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>false</DEFAULT-VALUE>
+										</ECUC-BOOLEAN-PARAM-DEF>
+										<!--EthFwReferringKeysInComments-->
+										<ECUC-BOOLEAN-PARAM-DEF UUID="399edb73-1d10-4d55-b930-51e699d852ab">
+											<SHORT-NAME>EthFwReferringKeysInComments</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter activates/deactivates the capability to generate referring keys in comments. This is an advantage for the developer to investigate indirections, but this feature reduces the overall readability of the generated data.
+
+FALSE: referring keys are not generated in comments.
+TRUE: referring keys are generated in comments.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<MULTIPLICITY-CONFIG-CLASSES>
+												<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+												<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											</MULTIPLICITY-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<VALUE-CONFIG-CLASSES>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+											</VALUE-CONFIG-CLASSES>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>false</DEFAULT-VALUE>
+										</ECUC-BOOLEAN-PARAM-DEF>
+									</PARAMETERS>
+								</ECUC-PARAM-CONF-CONTAINER-DEF>
+							</SUB-CONTAINERS>
+						</ECUC-PARAM-CONF-CONTAINER-DEF>
+					</CONTAINERS>
+				</ECUC-MODULE-DEF>
+			</ELEMENTS>
+		</AR-PACKAGE>
+	</AR-PACKAGES>
+</AUTOSAR>

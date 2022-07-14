@@ -1,0 +1,101 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: Charger Vehicle
+
+
+BO_ 265 C2V_H109: 8 Charger
+ SG_ StateFaultFlag : 32|8@1+ (1,0) [0|63] ""  Vehicle
+ SG_ RemainingChargingTime1MIN : 48|8@1+ (1,0) [0|255] "min"  Vehicle
+ SG_ RemainingChargingTime10s : 40|8@1+ (1,0) [0|255] "10s"  Vehicle
+ SG_ PresentOutputVoltage : 8|16@1+ (1,0) [0|600] "V"  Vehicle
+ SG_ PresentChargingCurrent : 24|8@1+ (1,0) [0|255] "A"  Vehicle
+ SG_ CHAdeMOProtocolNumber : 0|8@1+ (1,0) [0|255] ""  Vehicle
+
+BO_ 264 C2V_H108: 8 Charger
+ SG_ ThresholdVoltage : 32|16@1+ (1,0) [0|600] "V"  Vehicle
+ SG_ IdentifierOfWeldingDetection : 0|8@1+ (1,0) [1|255] ""  Vehicle
+ SG_ AvailableOutputVoltage : 8|16@1+ (1,0) [0|600] "V"  Vehicle
+ SG_ AvailableOutputCurrent : 24|8@1+ (1,0) [0|255] "A"  Vehicle
+
+BO_ 258 V2C_H102: 8 Vehicle
+ SG_ TargetBatteryVoltage : 8|16@1+ (1,0) [0|600] "V"  Charger
+ SG_ StatusFlag : 40|8@1+ (1,0) [0|31] ""  Charger
+ SG_ StateOfCharge : 48|8@1+ (1,0) [0|100] "%"  Charger
+ SG_ FaultFlag : 32|8@1+ (1,0) [0|31] ""  Charger
+ SG_ ChargingCurrentRequest : 24|8@1+ (1,0) [0|255] "A"  Charger
+ SG_ CHAdeMOProtocolNumber : 0|8@1+ (1,0) [0|255] ""  Charger
+
+BO_ 257 V2C_H101: 8 Vehicle
+ SG_ TotalCapacityOfTractionBattery : 40|16@1+ (1,0) [0|65535] "0.1kWh"  Charger
+ SG_ MaximumChargingTime1MIN : 16|8@1+ (1,0) [0|255] "min"  Charger
+ SG_ MaximumChargingTime10S : 8|8@1+ (1,0) [0|255] "10s"  Charger
+ SG_ EstimatedChargingTime1Min : 24|8@1+ (1,0) [0|255] "min"  Charger
+
+BO_ 256 V2C_H100: 8 Vehicle
+ SG_ ChargedRateConstantValue : 48|8@1+ (1,0) [100|100] "%"  Charger
+ SG_ MaximumBatteryVoltage : 32|16@1+ (1,0) [0|600] "V"  Charger
+ SG_ MinimumCurrent : 0|8@1+ (1,0) [0|255] "A"  Charger
+
+
+
+BA_DEF_ BU_  "NmAsrNode" ENUM  "no","yes";
+BA_DEF_ BO_  "GenMsgILSupport" ENUM  "no","yes";
+BA_DEF_ BO_  "CddType" STRING ;
+BA_DEF_  "DBName" STRING ;
+BA_DEF_  "Baudrate" INT 0 1000000;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_DEF_  "NmAsrNode" "yes";
+BA_DEF_DEF_  "GenMsgILSupport" "yes";
+BA_DEF_DEF_  "CddType" "";
+BA_DEF_DEF_  "DBName" "";
+BA_DEF_DEF_  "Baudrate" 50000;
+BA_DEF_DEF_  "BusType" "";
+BA_ "BusType" "CAN";
+BA_ "Baudrate" 500000;
+BA_ "DBName" "Chademo";
+BA_ "NmAsrNode" BU_ Charger 0;
+BA_ "NmAsrNode" BU_ Vehicle 0;
+BA_ "CddType" BO_ 265 "vCanCcCdm";
+BA_ "GenMsgILSupport" BO_ 265 0;
+BA_ "CddType" BO_ 264 "vCanCcCdm";
+BA_ "GenMsgILSupport" BO_ 264 0;
+BA_ "CddType" BO_ 258 "vCanCcCdm";
+BA_ "GenMsgILSupport" BO_ 258 0;
+BA_ "CddType" BO_ 257 "vCanCcCdm";
+BA_ "GenMsgILSupport" BO_ 257 0;
+BA_ "CddType" BO_ 256 "vCanCcCdm";
+BA_ "GenMsgILSupport" BO_ 256 0;
+

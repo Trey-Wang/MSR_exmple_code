@@ -1,0 +1,832 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-0-3.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://autosar.org/schema/r4.0">
+	<AR-PACKAGES>
+		<AR-PACKAGE UUID="bc8efa4c-d327-4aef-8e0e-7e398f93313f">
+			<SHORT-NAME>MICROSAR</SHORT-NAME>
+			<ELEMENTS>
+				<ECUC-MODULE-DEF UUID="c48e99e3-4d66-4540-9c81-1d9478387699">
+					<SHORT-NAME>Port</SHORT-NAME>
+					<DESC>
+						<L-2 L="EN">Configuration of the Port module.</L-2>
+					</DESC>
+					<CATEGORY>VENDOR_SPECIFIC_MODULE_DEFINITION</CATEGORY>
+					<ADMIN-DATA>
+						<DOC-REVISIONS>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.00.00</REVISION-LABEL>
+								<ISSUED-BY>virlg</ISSUED-BY>
+								<DATE>2013-09-20T12:40:27+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Initial Creation</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00068492</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.00.01</REVISION-LABEL>
+								<ISSUED-BY>virchl</ISSUED-BY>
+								<DATE>2014-04-09T01:29:15+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Modification</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">Port_Rec deleted</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.00.02</REVISION-LABEL>
+								<ISSUED-BY>virchl</ISSUED-BY>
+								<DATE>2014-05-15T11:27:46+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Modification</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00070801</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.00.03</REVISION-LABEL>
+								<ISSUED-BY>virchl</ISSUED-BY>
+								<DATE>2014-11-21T04:47:41+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">No modifications here</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.00.04</REVISION-LABEL>
+								<ISSUED-BY>virchl</ISSUED-BY>
+								<DATE>2014-11-25T09:36:23+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">No modifications here</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>2.00.00</REVISION-LABEL>
+								<ISSUED-BY>virchl</ISSUED-BY>
+								<DATE>2015-01-20T12:03:58+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Default value of PortVersionInfoApi set to false</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>2.00.00</REVISION-LABEL>
+								<ISSUED-BY>virchl</ISSUED-BY>
+								<DATE>2015-01-20T12:03:58+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">SwVersion set to 2.00.00</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>2.01.00</REVISION-LABEL>
+								<ISSUED-BY>virchl</ISSUED-BY>
+								<DATE>2015-07-08T10:30:03+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">SwVersion set to 2.01.00</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>2.01.00</REVISION-LABEL>
+								<ISSUED-BY>virchl</ISSUED-BY>
+								<DATE>2015-07-08T10:30:04+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">DisplaySettings for CFG5-Integer-Parameters added</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>2.02.00</REVISION-LABEL>
+								<ISSUED-BY>virchl</ISSUED-BY>
+								<DATE>2015-08-27T12:29:37+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">SwVersion set to 2.02.00</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">FEAT-1372</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>2.03.00</REVISION-LABEL>
+								<ISSUED-BY>virbmz</ISSUED-BY>
+								<DATE>2017-01-13T03:29:44+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">FEAT1824 Support a component-specific SafeBSW configuration switch (Vtt Mcal), Version updates</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">FEAT1824</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+						</DOC-REVISIONS>
+					</ADMIN-DATA>
+					<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+					<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+					<REFINED-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/AUTOSAR/EcucDefs/Port</REFINED-MODULE-DEF-REF>
+					<SUPPORTED-CONFIG-VARIANTS>
+						<SUPPORTED-CONFIG-VARIANT>VARIANT-PRE-COMPILE</SUPPORTED-CONFIG-VARIANT>
+					</SUPPORTED-CONFIG-VARIANTS>
+					<CONTAINERS>
+						<!-- Container Definition: PortConfigSet -->
+						<ECUC-PARAM-CONF-CONTAINER-DEF UUID="33e72b65-1a95-4ceb-b3b5-1c1b59678523">
+							<SHORT-NAME>PortConfigSet</SHORT-NAME>
+							<DESC>
+								<L-2 L="EN">This container is the base of a multiple configuration set</L-2>
+							</DESC>
+							<ADMIN-DATA>
+								<SDGS>
+									<SDG GID="DV:CfgPostBuild">
+										<SD GID="DV:postBuildSelectableChangeable">false</SD>
+										<SD GID="DV:postBuildNotDeletable">false</SD>
+									</SDG>
+								</SDGS>
+							</ADMIN-DATA>
+							<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+							<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+							<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+							<MULTIPLE-CONFIGURATION-CONTAINER>true</MULTIPLE-CONFIGURATION-CONTAINER>
+							<SUB-CONTAINERS>
+								<!-- Container Definition: PortContainer -->
+								<ECUC-PARAM-CONF-CONTAINER-DEF UUID="26e294a5-dee8-45e3-afb2-a7ca034596ad">
+									<SHORT-NAME>PortContainer</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This container includes the port configuration set.
+</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:postBuildSelectableChangeable">false</SD>
+												<SD GID="DV:postBuildNotDeletable">false</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+									<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+									<MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+									<PARAMETERS>
+										<!-- PARAMETER DEFINITION: PortNumberOfPortPins -->
+										<ECUC-INTEGER-PARAM-DEF UUID="2f4745ec-e9dc-4ede-bfa2-6350a50f3b56">
+											<SHORT-NAME>PortNumberOfPortPins</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Parameter not used.
+
+This parameter defines the number of specified PortPins in this PortContainer.
+</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<MAX>65535</MAX>
+											<MIN>1</MIN>
+										</ECUC-INTEGER-PARAM-DEF>
+									</PARAMETERS>
+									<SUB-CONTAINERS>
+										<!-- Container Definition: PortPin -->
+										<ECUC-PARAM-CONF-CONTAINER-DEF UUID="a355c979-75e2-4fbc-95eb-96072dc97e21">
+											<SHORT-NAME>PortPin</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">This container includes the configuration of the individual port pins.
+</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:CfgPostBuild">
+														<SD GID="DV:postBuildSelectableChangeable">false</SD>
+														<SD GID="DV:postBuildNotDeletable">false</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+											<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+											<MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+											<PARAMETERS>
+												<!-- PARAMETER DEFINITION: PortPinDirection -->
+												<ECUC-ENUMERATION-PARAM-DEF UUID="cf708fe2-a924-46d0-86ad-9cc6f4c3ac54">
+													<SHORT-NAME>PortPinDirection</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">This parameter defines the initial direction of the pin (IN or OUT). If the direction is not changeable, the value configured here is fixed.
+
+PORT_PIN_IN: Port Pin direction set as input.
+PORT_PIN_OUT: Port Pin direction set as output.
+</L-2>
+													</DESC>
+													<INTRODUCTION>
+														<P>
+															<L-1 L="EN">The direction must match the pin mode. E.g. a pin used for an ADC must be configured to be an in port.
+
+                                                        Implementation Type: Port_PinDirectionType</L-1>
+														</P>
+													</INTRODUCTION>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>PORT_PIN_IN</DEFAULT-VALUE>
+													<LITERALS>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="8924d389-991b-4957-97f5-0bb046878a21">
+															<SHORT-NAME>PORT_PIN_IN</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">In</L-4>
+															</LONG-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="d3bfff3b-2ecf-4b55-a937-5c3b0735877d">
+															<SHORT-NAME>PORT_PIN_OUT</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">Out</L-4>
+															</LONG-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+													</LITERALS>
+												</ECUC-ENUMERATION-PARAM-DEF>
+												<!-- PARAMETER DEFINITION: PortPinDirectionChangeable -->
+												<ECUC-BOOLEAN-PARAM-DEF UUID="cfbaec66-8699-4ac4-a98e-2e6802bcef94">
+													<SHORT-NAME>PortPinDirectionChangeable</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">This parameter defines if the direction is changeable on a port pin during runtime.
+</L-2>
+													</DESC>
+													<INTRODUCTION>
+														<P>
+															<L-1 L="EN">true: Port Pin direction changeable enabled.
+                                                        false: Port Pin direction changeable disabled.</L-1>
+														</P>
+													</INTRODUCTION>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>false</DEFAULT-VALUE>
+												</ECUC-BOOLEAN-PARAM-DEF>
+												<!-- PARAMETER DEFINITION: PortPinId -->
+												<ECUC-INTEGER-PARAM-DEF UUID="a8c633b4-ab2d-4340-a6fd-0f3011b2991f">
+													<SHORT-NAME>PortPinId</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Parameter not used.
+
+This parameter defines the pin id of the port pin. This value will be assigned to the symbolic name derived from the port pin container short name.
+</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>0</DEFAULT-VALUE>
+													<MAX>65535</MAX>
+													<MIN>0</MIN>
+												</ECUC-INTEGER-PARAM-DEF>
+												<!-- PARAMETER DEFINITION: PortPinInitialMode -->
+												<ECUC-ENUMERATION-PARAM-DEF UUID="bc244166-02c4-40df-9782-b1a0347cdba5">
+													<SHORT-NAME>PortPinInitialMode</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Parameter not used.
+
+This paramater defines the port pin mode from mode list for use with Port_Init() function.
+
+PORT_PIN_MODE_ADC: Port Pin used by ADC
+PORT_PIN_MODE_CAN: Port Pin used for CAN
+PORT_PIN_MODE_DIO: Port Pin configured for DIO. It shall be used under control of the DIO driver.
+PORT_PIN_MODE_DIO_GPT: Port Pin configured for DIO. It shall be used under control of the general purpose timer driver.
+PORT_PIN_MODE_DIO_WDG: Port Pin configured for DIO. It shall be used under control of the watchdog driver.
+PORT_PIN_MODE_FLEXRAY: Port Pin used for FlexRay
+PORT_PIN_MODE_ICU: Port Pin used by ICU
+PORT_PIN_MODE_LIN: Port Pin used for LIN
+PORT_PIN_MODE_MEM: Port Pin used for external memory under control of a memory driver.
+PORT_PIN_MODE_PWM: Port Pin used by PWM.
+PORT_PIN_MODE_SPI: Port Pin used by SPI.
+</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<LITERALS>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="8c7243ea-b6a3-48d8-a593-32fd70ea2167">
+															<SHORT-NAME>PORT_PIN_MODE_ADC</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">ADC</L-4>
+															</LONG-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="f8f1fa56-f6f8-490b-beda-c61a3def22a2">
+															<SHORT-NAME>PORT_PIN_MODE_CAN</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">CAN</L-4>
+															</LONG-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="a74a9ca6-683b-463c-af6b-0e3a713b6a0d">
+															<SHORT-NAME>PORT_PIN_MODE_DIO</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">DIO</L-4>
+															</LONG-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="c190c60b-c308-4d72-9e89-c29010414078">
+															<SHORT-NAME>PORT_PIN_MODE_DIO_GPT</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">GPT</L-4>
+															</LONG-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="1d8eb0e0-5b40-47a6-b203-996ac83b0722">
+															<SHORT-NAME>PORT_PIN_MODE_DIO_WDG</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">WDG</L-4>
+															</LONG-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="dde60f03-a613-4b14-9364-f5c97184a0de">
+															<SHORT-NAME>PORT_PIN_MODE_FLEXRAY</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">FlexRay</L-4>
+															</LONG-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="d80b791b-7d9f-4a81-b182-d7d68b22fd11">
+															<SHORT-NAME>PORT_PIN_MODE_ICU</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">ICU</L-4>
+															</LONG-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="d617ef9e-37fe-4aa9-8934-8ec0cfa67004">
+															<SHORT-NAME>PORT_PIN_MODE_LIN</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">LIN</L-4>
+															</LONG-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="10556257-0ac3-433a-b964-09ba3cd56462">
+															<SHORT-NAME>PORT_PIN_MODE_MEM</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">External Memory</L-4>
+															</LONG-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="29d44249-ab54-4f66-bcdd-43122e86124b">
+															<SHORT-NAME>PORT_PIN_MODE_PWM</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">PWM</L-4>
+															</LONG-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="33c7944b-9396-4b36-ab22-6c030e0b3543">
+															<SHORT-NAME>PORT_PIN_MODE_SPI</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">SPI</L-4>
+															</LONG-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+													</LITERALS>
+												</ECUC-ENUMERATION-PARAM-DEF>
+												<!-- PARAMETER DEFINITION: PortPinLevelValue -->
+												<ECUC-ENUMERATION-PARAM-DEF UUID="6fe3d5b3-73ab-4121-aad4-a939dea8c91a">
+													<SHORT-NAME>PortPinLevelValue</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">This parameter defines the port pin level value from port pin list.
+
+PORT_PIN_LEVEL_HIGH: Port pin level is High
+PORT_PIN_LEVEL_LOW: Port pin level is Low
+</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>PORT_PIN_LEVEL_LOW</DEFAULT-VALUE>
+													<LITERALS>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="59d6bd28-f9a2-4b06-88ba-41b2cd470c1c">
+															<SHORT-NAME>PORT_PIN_LEVEL_HIGH</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">High</L-4>
+															</LONG-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="f31b7f74-d1ee-4dd1-b83a-cdeaa026eb64">
+															<SHORT-NAME>PORT_PIN_LEVEL_LOW</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">Low</L-4>
+															</LONG-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+													</LITERALS>
+												</ECUC-ENUMERATION-PARAM-DEF>
+												<!-- PARAMETER DEFINITION: PortPinMode -->
+												<ECUC-ENUMERATION-PARAM-DEF UUID="44c391bb-a8fb-4448-a22f-f4eaf86b259b">
+													<SHORT-NAME>PortPinMode</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Parameter not used.
+
+This parameter defines the port pin mode from mode list.
+
+PORT_PIN_MODE_ADC: Port Pin used by ADC.
+PORT_PIN_MODE_CAN: Port Pin used for CAN.
+PORT_PIN_MODE_DIO: Port Pin configured for DIO. It shall be used under control of the DIO driver.
+PORT_PIN_MODE_DIO_GPT: Port Pin configured for DIO. It shall be used under control of the general purpose timer driver.
+PORT_PIN_MODE_DIO_WDG: Port Pin configured for DIO. It shall be used under control of the watchdog driver.
+PORT_PIN_MODE_FLEXRAY: Port Pin used for FlexRay.
+PORT_PIN_MODE_ICU: Port Pin used by ICU.
+PORT_PIN_MODE_LIN: Port Pin used for LIN.
+PORT_PIN_MODE_MEM: Port Pin used for external memory under control of a memory driver.
+PORT_PIN_MODE_PWM: Port Pin used by PWM.
+PORT_PIN_MODE_SPI: Port Pin used by SPI.
+</L-2>
+													</DESC>
+													<INTRODUCTION>
+														<P>
+															<L-1 L="EN">Note that more than one mode is allowed by default. That way it is e.g. possible to combine DIO with another mode such as ICU.</L-1>
+														</P>
+													</INTRODUCTION>
+													<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>*</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<LITERALS>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="a0d89d11-63fc-4392-8e42-110ec299ab8f">
+															<SHORT-NAME>PORT_PIN_MODE_ADC</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">ADC</L-4>
+															</LONG-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="da5b1d53-0f0d-470b-a773-d76ca8e77b7f">
+															<SHORT-NAME>PORT_PIN_MODE_CAN</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">CAN</L-4>
+															</LONG-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="5fed4189-956c-4e64-9bad-35caa4a2e6b7">
+															<SHORT-NAME>PORT_PIN_MODE_DIO</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">DIO</L-4>
+															</LONG-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="dbcf5880-41ed-44ec-baab-fec29da75f9e">
+															<SHORT-NAME>PORT_PIN_MODE_DIO_GPT</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">GPT</L-4>
+															</LONG-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="9ea5cc7f-0d91-42db-ba50-2128ddc72e1e">
+															<SHORT-NAME>PORT_PIN_MODE_DIO_WDG</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">WDG</L-4>
+															</LONG-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="82b51b0e-aa13-4d18-a74c-986fb9e39bbb">
+															<SHORT-NAME>PORT_PIN_MODE_FLEXRAY</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">FlexRay</L-4>
+															</LONG-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="47ead2f9-ec5a-45ad-98a5-22bac90e3b58">
+															<SHORT-NAME>PORT_PIN_MODE_ICU</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">ICU</L-4>
+															</LONG-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="a7bce11e-a7a2-4602-aee8-c7e8dd46b87f">
+															<SHORT-NAME>PORT_PIN_MODE_LIN</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">LIN</L-4>
+															</LONG-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="476354e4-973c-4cd4-b24c-fe0313bfabfd">
+															<SHORT-NAME>PORT_PIN_MODE_MEM</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">External Memory</L-4>
+															</LONG-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="1bcc62d0-2882-4925-8e7c-399eaeecfed1">
+															<SHORT-NAME>PORT_PIN_MODE_PWM</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">PWM</L-4>
+															</LONG-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="4a01bf3c-730f-45a5-8c10-9897157092f6">
+															<SHORT-NAME>PORT_PIN_MODE_SPI</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">SPI</L-4>
+															</LONG-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+													</LITERALS>
+												</ECUC-ENUMERATION-PARAM-DEF>
+												<!-- PARAMETER DEFINITION: PortPinModeChangeable -->
+												<ECUC-BOOLEAN-PARAM-DEF UUID="f7bb97ba-3384-43c7-a424-b0ccbd15bbc4">
+													<SHORT-NAME>PortPinModeChangeable</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">This parameter defines if the mode is changeable on a port pin during runtime. 
+
+True: Port Pin mode changeable allowed. 
+False: Port Pin mode changeable not permitted.
+</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>true</DEFAULT-VALUE>
+												</ECUC-BOOLEAN-PARAM-DEF>
+											</PARAMETERS>
+										</ECUC-PARAM-CONF-CONTAINER-DEF>
+									</SUB-CONTAINERS>
+								</ECUC-PARAM-CONF-CONTAINER-DEF>
+							</SUB-CONTAINERS>
+						</ECUC-PARAM-CONF-CONTAINER-DEF>
+						<!-- Container Definition: PortGeneral -->
+						<ECUC-PARAM-CONF-CONTAINER-DEF UUID="8726fbba-28fd-4a70-b5a3-5ecf0ee3c7bd">
+							<SHORT-NAME>PortGeneral</SHORT-NAME>
+							<DESC>
+								<L-2 L="EN">General configuration parameteres of the PORT module.
+</L-2>
+							</DESC>
+							<ADMIN-DATA>
+								<SDGS>
+									<SDG GID="DV:CfgPostBuild">
+										<SD GID="DV:postBuildSelectableChangeable">false</SD>
+										<SD GID="DV:postBuildNotDeletable">false</SD>
+									</SDG>
+								</SDGS>
+							</ADMIN-DATA>
+							<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+							<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+							<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+							<MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+							<PARAMETERS>
+								<!-- PARAMETER DEFINITION: PortDevErrorDetect -->
+								<ECUC-BOOLEAN-PARAM-DEF UUID="e28aab43-fc7a-43b2-bc7d-fdafe14d25d4">
+									<SHORT-NAME>PortDevErrorDetect</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter switches the Development Error Detection and Notification ON or OFF.
+
+True: Development error detection is enabled.
+False: Development error detection is disabeld.
+
+Note: In general, the development error detection is recommended during pre-test phase. It is not recommended to enable the development error detection in production code due to increased runtime and ROM needs.
+
+</L-2>
+									</DESC>
+									<INTRODUCTION>
+										<P>
+											<L-1 L="EN">true: Enabled.
+                                        false: Disabled.</L-1>
+										</P>
+									</INTRODUCTION>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>true</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: PortSetPinDirectionApi -->
+								<ECUC-BOOLEAN-PARAM-DEF UUID="5fb0fb61-7cc3-4a3c-b613-abff7fde0f6f">
+									<SHORT-NAME>PortSetPinDirectionApi</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter defines whether the function Port_SetPinDirection() is enabled or disabled.
+
+True: API Port_SetPinDirection() is supported (function provided)
+False: API Port_SetPinDirection() is not supported (function not provided)
+</L-2>
+									</DESC>
+									<INTRODUCTION>
+										<P>
+											<L-1 L="EN">TRUE: Enabled - Function Port_SetPinDirection() is available.
+                                        FALSE: Disabled - Function Port_SetPinDirection() is not available.</L-1>
+										</P>
+									</INTRODUCTION>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>true</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: PortSetPinModeApi -->
+								<ECUC-BOOLEAN-PARAM-DEF UUID="1fcb7cdc-3501-4611-9cd2-9c718893f8d3">
+									<SHORT-NAME>PortSetPinModeApi</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter defines whether the function Port_SetPinMode() is enabled or disabled.
+
+True: API Port_SetPinMode() is supported (function provided)
+False: API Port_SetPinMode() is not supported (function not provided)
+
+</L-2>
+									</DESC>
+									<INTRODUCTION>
+										<P>
+											<L-1 L="EN">true: Enabled - Function Port_SetPinMode() is available.
+                                        false: Disabled - Function Port_SetPinMode() is not available.</L-1>
+										</P>
+									</INTRODUCTION>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>true</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: PortVersionInfoApi -->
+								<ECUC-BOOLEAN-PARAM-DEF UUID="1ae45912-82d7-4faf-a4ba-a3716eb3851b">
+									<SHORT-NAME>PortVersionInfoApi</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter enables/disables the function Port_GetVersionInfo() to get major, minor and patch version information.
+</L-2>
+									</DESC>
+									<INTRODUCTION>
+										<P>
+											<L-1 L="EN">true: Version info API enabled.
+                                        false: Version info API disabled.</L-1>
+										</P>
+									</INTRODUCTION>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="eec46fa2-be9a-46a7-bf82-5262f225137f">
+									<SHORT-NAME>PortSafeBswChecks</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Selects if safety checks are used. These checks improve robustness as e.g. invalid parameters are checked before function is executed. This attribute has to be enabled for safety projects where this component is mapped to an ASIL partition.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+							</PARAMETERS>
+						</ECUC-PARAM-CONF-CONTAINER-DEF>
+					</CONTAINERS>
+				</ECUC-MODULE-DEF>
+				<BSW-IMPLEMENTATION UUID="9f88fb7c-9778-43ef-a3b0-a7135b5419ea">
+					<SHORT-NAME>Port_Impl</SHORT-NAME>
+					<PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+					<SW-VERSION>2.03.00</SW-VERSION>
+					<USED-CODE-GENERATOR>cMSR</USED-CODE-GENERATOR>
+					<VENDOR-ID>30</VENDOR-ID>
+					<AR-RELEASE-VERSION>4.00.03</AR-RELEASE-VERSION>
+					<PRECONFIGURED-CONFIGURATION-REFS>
+						<PRECONFIGURED-CONFIGURATION-REF DEST="ECUC-MODULE-CONFIGURATION-VALUES">/MICROSAR/Port_Pre</PRECONFIGURED-CONFIGURATION-REF>
+					</PRECONFIGURED-CONFIGURATION-REFS>
+					<RECOMMENDED-CONFIGURATION-REFS>
+						<RECOMMENDED-CONFIGURATION-REF DEST="ECUC-MODULE-CONFIGURATION-VALUES">/MICROSAR/Port_Rec</RECOMMENDED-CONFIGURATION-REF>
+					</RECOMMENDED-CONFIGURATION-REFS>
+					<VENDOR-SPECIFIC-MODULE-DEF-REFS>
+						<VENDOR-SPECIFIC-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/MICROSAR/Port</VENDOR-SPECIFIC-MODULE-DEF-REF>
+					</VENDOR-SPECIFIC-MODULE-DEF-REFS>
+				</BSW-IMPLEMENTATION>
+				<ECUC-MODULE-CONFIGURATION-VALUES UUID="144abcac-4a93-4e8a-a547-563bab86d231">
+					<SHORT-NAME>Port_Pre</SHORT-NAME>
+					<DEFINITION-REF DEST="ECUC-MODULE-DEF">/MICROSAR/Port</DEFINITION-REF>
+				</ECUC-MODULE-CONFIGURATION-VALUES>
+				<ECUC-MODULE-CONFIGURATION-VALUES UUID="388b93fa-c889-49dc-a2a2-bafeb33e517c">
+					<SHORT-NAME>Port_Rec</SHORT-NAME>
+					<DEFINITION-REF DEST="ECUC-MODULE-DEF">/MICROSAR/Port</DEFINITION-REF>
+					<IMPLEMENTATION-CONFIG-VARIANT>VARIANT-PRE-COMPILE</IMPLEMENTATION-CONFIG-VARIANT>
+				</ECUC-MODULE-CONFIGURATION-VALUES>
+			</ELEMENTS>
+		</AR-PACKAGE>
+	</AR-PACKAGES>
+</AUTOSAR>

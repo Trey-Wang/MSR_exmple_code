@@ -1,0 +1,57 @@
+
+using System.Collections.Generic;
+using System.Linq;
+
+namespace Vector.VTT.VsProjectGenerator
+{
+  class ModuleScc : IModule
+  {
+    public string Name
+    {
+      get { return "Scc"; }
+    }
+
+    public string DefinitionPath
+    {
+      get { return "/MICROSAR/Scc"; }
+    }
+
+    public void Configure(IEcucProvider ecuc, IGeneratorModel model)
+    {
+      if (ecuc.IsConfigured)
+      {
+        string SccDir = System.IO.Path.Combine(model.Directory.BSW, "Scc");
+        string genDataDir = model.Directory.GenData;
+
+        model.Project.AddIncludeDirectory(SccDir);
+
+        // Select all header-files in BSW directory
+        foreach (string file in System.IO.Directory.EnumerateFiles(SccDir, "Scc*.h", System.IO.SearchOption.TopDirectoryOnly))
+        {
+          model.Project.AddBswFile(file, Name);
+        }
+
+        // Select all C-files in BSW directory
+        foreach (string file in System.IO.Directory.EnumerateFiles(SccDir, "Scc*.c", System.IO.SearchOption.TopDirectoryOnly))
+        {
+          model.Project.AddBswFile(file, Name);
+        }
+
+        // Select all header-files in GenData directory
+        // Set of generated file is SIP specific. Generator will overwrite unused files with empty ones.
+        foreach (string file in System.IO.Directory.EnumerateFiles(genDataDir, "Scc_*.h", System.IO.SearchOption.TopDirectoryOnly))
+        {
+          model.Project.AddBswFile(file, Name);
+        }
+
+        // Select all source-files in GenData directory
+        // Set of generated file is SIP specific. Generator will overwrite unused files with empty ones.
+        foreach (string file in System.IO.Directory.EnumerateFiles(genDataDir, "Scc_*.c", System.IO.SearchOption.TopDirectoryOnly))
+        {
+          model.Project.AddBswFile(file, Name);
+        }
+      }
+    }
+  }
+}
+

@@ -1,0 +1,1066 @@
+{
+   "description" : "RTE Analyzer configuration file",
+   "version" : "1.0.2",
+   "BswOsApplication" : "",
+   "DataConsistencyAPIGroupList" : [
+      {
+         "CanBeNested" : "0",
+         "HandleIndex" : "-1",
+         "LockAPIList" : [
+            {
+               "CanBeUsedInISRContext" : "1",
+               "Name" : "DisableAllInterrupts",
+               "RequiresTrustedContext" : "0"
+            }
+         ],
+         "LocksOtherCores" : "0",
+         "LocksSameCore" : "1",
+         "ProhibitedAPIFunctions" : [
+            "^(Wait|Set)Event",
+            "^(Activate|Chain|Terminate)Task",
+            "^Suspend(All|OS)Interrupts",
+            "^GetResource",
+            "^osDisable.",
+            "^Schedule"
+         ],
+         "Type" : "INTERRUPT",
+         "UnlockAPIList" : [
+            {
+               "CanBeUsedInISRContext" : "1",
+               "Name" : "EnableAllInterrupts",
+               "RequiresTrustedContext" : "0"
+            }
+         ]
+      },
+      {
+         "CanBeNested" : "0",
+         "HandleIndex" : "-1",
+         "LockAPIList" : [
+            {
+               "CanBeUsedInISRContext" : "0",
+               "Name" : "osDisableGlobalAM",
+               "RequiresTrustedContext" : "0"
+            },
+            {
+               "CanBeUsedInISRContext" : "0",
+               "Name" : "osDisableGlobalKM",
+               "RequiresTrustedContext" : "1"
+            },
+            {
+               "CanBeUsedInISRContext" : "0",
+               "Name" : "osDisableGlobalUM",
+               "RequiresTrustedContext" : "0"
+            }
+         ],
+         "LocksOtherCores" : "0",
+         "LocksSameCore" : "1",
+         "ProhibitedAPIFunctions" : [
+            "^(Wait|Set)Event",
+            "^(Activate|Chain|Terminate)Task",
+            "^DisableAllInterrupts",
+            "^GetResource",
+            "^osDisable.",
+            "^Schedule"
+         ],
+         "Type" : "INTERRUPT",
+         "UnlockAPIList" : [
+            {
+               "CanBeUsedInISRContext" : "0",
+               "Name" : "osEnableGlobalAM",
+               "RequiresTrustedContext" : "0"
+            },
+            {
+               "CanBeUsedInISRContext" : "0",
+               "Name" : "osEnableGlobalKM",
+               "RequiresTrustedContext" : "1"
+            },
+            {
+               "CanBeUsedInISRContext" : "0",
+               "Name" : "osEnableGlobalUM",
+               "RequiresTrustedContext" : "0"
+            }
+         ]
+      },
+      {
+         "CanBeNested" : "0",
+         "HandleIndex" : "-1",
+         "LockAPIList" : [
+            {
+               "CanBeUsedInISRContext" : "0",
+               "Name" : "osDisableLevelAM",
+               "RequiresTrustedContext" : "0"
+            },
+            {
+               "CanBeUsedInISRContext" : "0",
+               "Name" : "osDisableLevelKM",
+               "RequiresTrustedContext" : "1"
+            },
+            {
+               "CanBeUsedInISRContext" : "0",
+               "Name" : "osDisableLevelUM",
+               "RequiresTrustedContext" : "0"
+            }
+         ],
+         "LocksOtherCores" : "0",
+         "LocksSameCore" : "1",
+         "ProhibitedAPIFunctions" : [
+            "^(Wait|Set)Event",
+            "^(Activate|Chain|Terminate)Task",
+            "^DisableAllInterrupts",
+            "^GetResource",
+            "^osDisable.",
+            "^Schedule"
+         ],
+         "Type" : "INTERRUPT",
+         "UnlockAPIList" : [
+            {
+               "CanBeUsedInISRContext" : "0",
+               "Name" : "osEnableLevelAM",
+               "RequiresTrustedContext" : "0"
+            },
+            {
+               "CanBeUsedInISRContext" : "0",
+               "Name" : "osEnableLevelKM",
+               "RequiresTrustedContext" : "1"
+            },
+            {
+               "CanBeUsedInISRContext" : "0",
+               "Name" : "osEnableLevelUM",
+               "RequiresTrustedContext" : "0"
+            }
+         ]
+      },
+      {
+         "CanBeNested" : "1",
+         "HandleIndex" : "-1",
+         "LockAPIList" : [
+            {
+               "CanBeUsedInISRContext" : "1",
+               "Name" : "SuspendAllInterrupts",
+               "RequiresTrustedContext" : "0"
+            }
+         ],
+         "LocksOtherCores" : "0",
+         "LocksSameCore" : "1",
+         "ProhibitedAPIFunctions" : [
+            "^(Wait|Set)Event",
+            "^(Activate|Chain|Terminate)Task",
+            "^DisableAllInterrupts",
+            "^GetResource",
+            "^osDisable.",
+            "^Schedule"
+         ],
+         "Type" : "INTERRUPT",
+         "UnlockAPIList" : [
+            {
+               "CanBeUsedInISRContext" : "1",
+               "Name" : "ResumeAllInterrupts",
+               "RequiresTrustedContext" : "0"
+            }
+         ]
+      },
+      {
+         "CanBeNested" : "1",
+         "HandleIndex" : "-1",
+         "LockAPIList" : [
+            {
+               "CanBeUsedInISRContext" : "1",
+               "Name" : "SuspendOSInterrupts",
+               "RequiresTrustedContext" : "0"
+            }
+         ],
+         "LocksOtherCores" : "0",
+         "LocksSameCore" : "1",
+         "ProhibitedAPIFunctions" : [
+            "^(Wait|Set)Event",
+            "^(Activate|Chain|Terminate)Task",
+            "^DisableAllInterrupts",
+            "^GetResource",
+            "^osDisable.",
+            "^Schedule"
+         ],
+         "Type" : "INTERRUPT",
+         "UnlockAPIList" : [
+            {
+               "CanBeUsedInISRContext" : "1",
+               "Name" : "ResumeOSInterrupts",
+               "RequiresTrustedContext" : "0"
+            }
+         ]
+      },
+      {
+         "CanBeNested" : "0",
+         "HandleIndex" : "0",
+         "LockAPIList" : [
+            {
+               "CanBeUsedInISRContext" : "1",
+               "Name" : "GetResource",
+               "RequiresTrustedContext" : "0"
+            }
+         ],
+         "LocksOtherCores" : "0",
+         "LocksSameCore" : "1",
+         "ProhibitedAPIFunctions" : [
+            "^(Wait|Set)Event",
+            "^(Activate|Chain|Terminate)Task",
+            "^Schedule"
+         ],
+         "Type" : "RESOURCE",
+         "UnlockAPIList" : [
+            {
+               "CanBeUsedInISRContext" : "1",
+               "Name" : "ReleaseResource",
+               "RequiresTrustedContext" : "0"
+            }
+         ]
+      },
+      {
+         "CanBeNested" : "0",
+         "HandleIndex" : "0",
+         "LockAPIList" : [
+            {
+               "CanBeUsedInISRContext" : "1",
+               "Name" : "GetSpinlock",
+               "RequiresTrustedContext" : "0"
+            }
+         ],
+         "LocksOtherCores" : "1",
+         "LocksSameCore" : "0",
+         "ProhibitedAPIFunctions" : [
+            "^(Wait|Set)Event",
+            "^(Activate|Chain|Terminate)Task",
+            "^Schedule"
+         ],
+         "Type" : "SPINLOCK",
+         "UnlockAPIList" : [
+            {
+               "CanBeUsedInISRContext" : "1",
+               "Name" : "ReleaseSpinlock",
+               "RequiresTrustedContext" : "0"
+            }
+         ]
+      }
+   ],
+   "ISRList" : [
+      {
+         "ExecutedOnTaskLevel" : "0",
+         "NamePattern" : "Rte_LdComCbk.*"
+      },
+      {
+         "ExecutedOnTaskLevel" : "1",
+         "NamePattern" : "Rte_GetMirror.*"
+      },
+      {
+         "ExecutedOnTaskLevel" : "1",
+         "NamePattern" : "Rte_SetMirror.*"
+      },
+      {
+         "ExecutedOnTaskLevel" : "1",
+         "NamePattern" : "Rte_NvMNotifyJobFinished.*"
+      },
+      {
+         "ExecutedOnTaskLevel" : "1",
+         "NamePattern" : "Rte_NvMNotifyInitBlock.*"
+      },
+      {
+         "ExecutedOnTaskLevel" : "1",
+         "NamePattern" : "Rte_COMCbk_sig_RearInteriorLight_0723e95e"
+      },
+      {
+         "ExecutedOnTaskLevel" : "1",
+         "NamePattern" : "Rte_COMCbkTAck_sig_RearInteriorLight_0723e95e"
+      },
+      {
+         "ExecutedOnTaskLevel" : "1",
+         "NamePattern" : "Rte_COMCbkTErr_sig_RearInteriorLight_0723e95e"
+      },
+      {
+         "ExecutedOnTaskLevel" : "1",
+         "NamePattern" : "Rte_COMCbkTxTOut_sig_RearInteriorLight_0723e95e"
+      },
+      {
+         "ExecutedOnTaskLevel" : "1",
+         "NamePattern" : "Rte_COMCbkTOut_sig_RearInteriorLight_0723e95e"
+      },
+      {
+         "ExecutedOnTaskLevel" : "1",
+         "NamePattern" : "Rte_COMCbkRxTOut_sig_RearInteriorLight_0723e95e"
+      },
+      {
+         "ExecutedOnTaskLevel" : "1",
+         "NamePattern" : "Rte_COMCbkInv_sig_RearInteriorLight_0723e95e"
+      },
+      {
+         "ExecutedOnTaskLevel" : "1",
+         "NamePattern" : "Rte_COMCbk_sig_State_RearLeftDoor_2b456e3f"
+      },
+      {
+         "ExecutedOnTaskLevel" : "1",
+         "NamePattern" : "Rte_COMCbkTAck_sig_State_RearLeftDoor_2b456e3f"
+      },
+      {
+         "ExecutedOnTaskLevel" : "1",
+         "NamePattern" : "Rte_COMCbkTErr_sig_State_RearLeftDoor_2b456e3f"
+      },
+      {
+         "ExecutedOnTaskLevel" : "1",
+         "NamePattern" : "Rte_COMCbkTxTOut_sig_State_RearLeftDoor_2b456e3f"
+      },
+      {
+         "ExecutedOnTaskLevel" : "1",
+         "NamePattern" : "Rte_COMCbkTOut_sig_State_RearLeftDoor_2b456e3f"
+      },
+      {
+         "ExecutedOnTaskLevel" : "1",
+         "NamePattern" : "Rte_COMCbkRxTOut_sig_State_RearLeftDoor_2b456e3f"
+      },
+      {
+         "ExecutedOnTaskLevel" : "1",
+         "NamePattern" : "Rte_COMCbkInv_sig_State_RearLeftDoor_2b456e3f"
+      },
+      {
+         "ExecutedOnTaskLevel" : "1",
+         "NamePattern" : "Rte_COMCbk_sig_State_RearRightDoor_2b456e3f"
+      },
+      {
+         "ExecutedOnTaskLevel" : "1",
+         "NamePattern" : "Rte_COMCbkTAck_sig_State_RearRightDoor_2b456e3f"
+      },
+      {
+         "ExecutedOnTaskLevel" : "1",
+         "NamePattern" : "Rte_COMCbkTErr_sig_State_RearRightDoor_2b456e3f"
+      },
+      {
+         "ExecutedOnTaskLevel" : "1",
+         "NamePattern" : "Rte_COMCbkTxTOut_sig_State_RearRightDoor_2b456e3f"
+      },
+      {
+         "ExecutedOnTaskLevel" : "1",
+         "NamePattern" : "Rte_COMCbkTOut_sig_State_RearRightDoor_2b456e3f"
+      },
+      {
+         "ExecutedOnTaskLevel" : "1",
+         "NamePattern" : "Rte_COMCbkRxTOut_sig_State_RearRightDoor_2b456e3f"
+      },
+      {
+         "ExecutedOnTaskLevel" : "1",
+         "NamePattern" : "Rte_COMCbkInv_sig_State_RearRightDoor_2b456e3f"
+      }
+   ],
+   "InitFunctionNamePatternList" : [
+      "Rte_InitMemory",
+      "SchM_Init",
+      "Rte_Start"
+   ],
+   "InlineFunctionNamePatternList" : [
+      "Rte_QAddElement.*",
+      "Rte_QUnqueueElement.*",
+      "Rte_MemCmp.*",
+      "Rte_DecDisableFlags.*",
+      "Rte_IncDisableFlags.*",
+      "E2EXf_.*"
+   ],
+   "MemCpyFunctionNamePatternList" : [
+      "^llvm.memcpy",
+      "^memcpy",
+      "^Rte_MemCpy.*",
+      "^SomeIpXf_MemCpy.*",
+      "^VStdMemCpy_Func",
+      "^CanTSyn_MemCpy",
+      "^CanTp_Util_MemCpy",
+      "^IpBase_Copy"
+   ],
+   "MemSetFunctionNamePatternList" : [
+      "^.*memset",
+      "^.*MemSet",
+      "^Rte_MemClr"
+   ],
+   "NonReentrantFunctionList" : [
+      {
+         "HandleIndex" : "0",
+         "NamePatternList" : [
+            "Com_SendSignal",
+            "Com_InvalidateSignal",
+            "Com_UpdateShadowSignal",
+            "Com_InvalidateSignalGroup"
+         ],
+         "NoConcurrentCallsOnDifferentCores" : "0",
+         "NoConcurrentCallsOnSameCore" : "1"
+      },
+      {
+         "HandleIndex" : "0",
+         "NamePatternList" : [
+            "Com_ReceiveShadowSignal",
+            "Com_ReceiveSignalGroup"
+         ],
+         "NoConcurrentCallsOnDifferentCores" : "0",
+         "NoConcurrentCallsOnSameCore" : "1"
+      },
+      {
+         "HandleIndex" : "0",
+         "NamePatternList" : [
+            "LdCom_TriggerTransmit"
+         ],
+         "NoConcurrentCallsOnDifferentCores" : "0",
+         "NoConcurrentCallsOnSameCore" : "1"
+      },
+      {
+         "HandleIndex" : "-1",
+         "NamePatternList" : [
+            "^IocSend_(.+)(_[:digit:]+)?",
+            "^IocWrite_(.+)(_[:digit:]+)?",
+            "^IocReceive_(.+)",
+            "^IocRead_(.+)"
+         ],
+         "NoConcurrentCallsOnDifferentCores" : "1",
+         "NoConcurrentCallsOnSameCore" : "1"
+      }
+   ],
+   "NotReportedConcurrentAccessList" : [
+      {
+         "Justification" : "Accesses to the server queue are synchronized with SetEvent and WaitEvent",
+         "NamePattern" : "Rte_CS_ServerQueue_.*",
+         "Type" : "VARIABLE"
+      },
+      {
+         "Justification" : "Accesses to the client queue are synchronized with SetEvent and WaitEvent",
+         "NamePattern" : "Rte_CS_ClientQueue_.*",
+         "Type" : "VARIABLE"
+      },
+      {
+         "Justification" : "Accesses to the client queue are synchronized with SetEvent and WaitEvent",
+         "NamePattern" : "Rte_CS_ClientQueue2_.*",
+         "Type" : "VARIABLE"
+      },
+      {
+         "Justification" : "Only error in runnable stubs. Will be fixed with ESCAN00085617",
+         "NamePattern" : ".*_FctPtr",
+         "Type" : "VARIABLE"
+      },
+      {
+         "Justification" : "Accesses to the waiting task list are synchronized with SetEvent and WaitEvent",
+         "NamePattern" : "Rte_CS_WaitingTaskList_.*",
+         "Type" : "VARIABLE"
+      },
+      {
+         "Justification" : "Concurrent access is prevented by idle flags and sequence",
+         "NamePattern" : "^Ioc(Read|Write)_Rte_CS_OutParams_",
+         "Type" : "FUNCTION"
+      }
+   ],
+   "OsAPIFunctions" : [
+      "^os.",
+      "^Com_.",
+      "^LdCom_.",
+      "^(Get|Wait|Clear|Set)Event$",
+      "^(Disable|Enable|Suspend|Resume)AllInterrupts$",
+      "^(Suspend|Resume)OSInterrupts$",
+      "^(Activate|Terminate|Chain)Task$",
+      "^(SetRel|Cancel)Alarm$",
+      "^Get(Core|Task)ID$",
+      "^(Get|Release)(Resource|Spinlock)$",
+      "^Schedule$"
+   ],
+   "OsApplicationList" : [],
+   "PlatformSettings" : {
+      "MaxAtomicMemoryAccess" : "4"
+   },
+   "SIPDirectories" : [
+      "E:\\usr\\usage\\Presentations\\MSR_Exercises\\MSR_Exercises_AiP4_R19\\MSR_Exercises_AiP4\\"
+   ],
+   "SourceFileList" : [
+      {
+         "IncludeDirectoryList" : [
+            "E:/usr/usage/Presentations/MSR_Exercises/MSR_Exercises_AiP4_R19/MSR_Exercises_AiP4/Misc/RteAnalyzer/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/TestControl"
+         ],
+         "SourceFile" : "Source/TestControl.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/usr/usage/Presentations/MSR_Exercises/MSR_Exercises_AiP4_R19/MSR_Exercises_AiP4/Misc/RteAnalyzer/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/Rte"
+         ],
+         "SourceFile" : "../Rte.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/usr/usage/Presentations/MSR_Exercises/MSR_Exercises_AiP4_R19/MSR_Exercises_AiP4/Misc/RteAnalyzer/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/BswM"
+         ],
+         "SourceFile" : "Source/BswM.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/usr/usage/Presentations/MSR_Exercises/MSR_Exercises_AiP4_R19/MSR_Exercises_AiP4/Misc/RteAnalyzer/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/TSC_SchM_BswM"
+         ],
+         "SourceFile" : "Source/TSC_SchM_BswM.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/usr/usage/Presentations/MSR_Exercises/MSR_Exercises_AiP4_R19/MSR_Exercises_AiP4/Misc/RteAnalyzer/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/Can"
+         ],
+         "SourceFile" : "Source/Can.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/usr/usage/Presentations/MSR_Exercises/MSR_Exercises_AiP4_R19/MSR_Exercises_AiP4/Misc/RteAnalyzer/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/TSC_SchM_Can"
+         ],
+         "SourceFile" : "Source/TSC_SchM_Can.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/usr/usage/Presentations/MSR_Exercises/MSR_Exercises_AiP4_R19/MSR_Exercises_AiP4/Misc/RteAnalyzer/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/CanIf"
+         ],
+         "SourceFile" : "Source/CanIf.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/usr/usage/Presentations/MSR_Exercises/MSR_Exercises_AiP4_R19/MSR_Exercises_AiP4/Misc/RteAnalyzer/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/TSC_SchM_CanIf"
+         ],
+         "SourceFile" : "Source/TSC_SchM_CanIf.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/usr/usage/Presentations/MSR_Exercises/MSR_Exercises_AiP4_R19/MSR_Exercises_AiP4/Misc/RteAnalyzer/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/CanNm"
+         ],
+         "SourceFile" : "Source/CanNm.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/usr/usage/Presentations/MSR_Exercises/MSR_Exercises_AiP4_R19/MSR_Exercises_AiP4/Misc/RteAnalyzer/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/TSC_SchM_CanNm"
+         ],
+         "SourceFile" : "Source/TSC_SchM_CanNm.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/usr/usage/Presentations/MSR_Exercises/MSR_Exercises_AiP4_R19/MSR_Exercises_AiP4/Misc/RteAnalyzer/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/CanSM"
+         ],
+         "SourceFile" : "Source/CanSM.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/usr/usage/Presentations/MSR_Exercises/MSR_Exercises_AiP4_R19/MSR_Exercises_AiP4/Misc/RteAnalyzer/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/TSC_SchM_CanSM"
+         ],
+         "SourceFile" : "Source/TSC_SchM_CanSM.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/usr/usage/Presentations/MSR_Exercises/MSR_Exercises_AiP4_R19/MSR_Exercises_AiP4/Misc/RteAnalyzer/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/CanTp"
+         ],
+         "SourceFile" : "Source/CanTp.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/usr/usage/Presentations/MSR_Exercises/MSR_Exercises_AiP4_R19/MSR_Exercises_AiP4/Misc/RteAnalyzer/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/TSC_SchM_CanTp"
+         ],
+         "SourceFile" : "Source/TSC_SchM_CanTp.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/usr/usage/Presentations/MSR_Exercises/MSR_Exercises_AiP4_R19/MSR_Exercises_AiP4/Misc/RteAnalyzer/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/Com"
+         ],
+         "SourceFile" : "Source/Com.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/usr/usage/Presentations/MSR_Exercises/MSR_Exercises_AiP4_R19/MSR_Exercises_AiP4/Misc/RteAnalyzer/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/TSC_SchM_Com"
+         ],
+         "SourceFile" : "Source/TSC_SchM_Com.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/usr/usage/Presentations/MSR_Exercises/MSR_Exercises_AiP4_R19/MSR_Exercises_AiP4/Misc/RteAnalyzer/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/ComM"
+         ],
+         "SourceFile" : "Source/ComM.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/usr/usage/Presentations/MSR_Exercises/MSR_Exercises_AiP4_R19/MSR_Exercises_AiP4/Misc/RteAnalyzer/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/TSC_SchM_ComM"
+         ],
+         "SourceFile" : "Source/TSC_SchM_ComM.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/usr/usage/Presentations/MSR_Exercises/MSR_Exercises_AiP4_R19/MSR_Exercises_AiP4/Misc/RteAnalyzer/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/Dcm"
+         ],
+         "SourceFile" : "Source/Dcm.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/usr/usage/Presentations/MSR_Exercises/MSR_Exercises_AiP4_R19/MSR_Exercises_AiP4/Misc/RteAnalyzer/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/TSC_SchM_Dcm"
+         ],
+         "SourceFile" : "Source/TSC_SchM_Dcm.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/usr/usage/Presentations/MSR_Exercises/MSR_Exercises_AiP4_R19/MSR_Exercises_AiP4/Misc/RteAnalyzer/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/Dem"
+         ],
+         "SourceFile" : "Source/Dem.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/usr/usage/Presentations/MSR_Exercises/MSR_Exercises_AiP4_R19/MSR_Exercises_AiP4/Misc/RteAnalyzer/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/TSC_SchM_Dem"
+         ],
+         "SourceFile" : "Source/TSC_SchM_Dem.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/usr/usage/Presentations/MSR_Exercises/MSR_Exercises_AiP4_R19/MSR_Exercises_AiP4/Misc/RteAnalyzer/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/Det"
+         ],
+         "SourceFile" : "Source/Det.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/usr/usage/Presentations/MSR_Exercises/MSR_Exercises_AiP4_R19/MSR_Exercises_AiP4/Misc/RteAnalyzer/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/TSC_SchM_Det"
+         ],
+         "SourceFile" : "Source/TSC_SchM_Det.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/usr/usage/Presentations/MSR_Exercises/MSR_Exercises_AiP4_R19/MSR_Exercises_AiP4/Misc/RteAnalyzer/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/EcuM"
+         ],
+         "SourceFile" : "Source/EcuM.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/usr/usage/Presentations/MSR_Exercises/MSR_Exercises_AiP4_R19/MSR_Exercises_AiP4/Misc/RteAnalyzer/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/TSC_SchM_EcuM"
+         ],
+         "SourceFile" : "Source/TSC_SchM_EcuM.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/usr/usage/Presentations/MSR_Exercises/MSR_Exercises_AiP4_R19/MSR_Exercises_AiP4/Misc/RteAnalyzer/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/Fee"
+         ],
+         "SourceFile" : "Source/Fee.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/usr/usage/Presentations/MSR_Exercises/MSR_Exercises_AiP4_R19/MSR_Exercises_AiP4/Misc/RteAnalyzer/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/TSC_SchM_Fee"
+         ],
+         "SourceFile" : "Source/TSC_SchM_Fee.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/usr/usage/Presentations/MSR_Exercises/MSR_Exercises_AiP4_R19/MSR_Exercises_AiP4/Misc/RteAnalyzer/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/Fls"
+         ],
+         "SourceFile" : "Source/Fls.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/usr/usage/Presentations/MSR_Exercises/MSR_Exercises_AiP4_R19/MSR_Exercises_AiP4/Misc/RteAnalyzer/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/TSC_SchM_Fls"
+         ],
+         "SourceFile" : "Source/TSC_SchM_Fls.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/usr/usage/Presentations/MSR_Exercises/MSR_Exercises_AiP4_R19/MSR_Exercises_AiP4/Misc/RteAnalyzer/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/Nm"
+         ],
+         "SourceFile" : "Source/Nm.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/usr/usage/Presentations/MSR_Exercises/MSR_Exercises_AiP4_R19/MSR_Exercises_AiP4/Misc/RteAnalyzer/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/TSC_SchM_Nm"
+         ],
+         "SourceFile" : "Source/TSC_SchM_Nm.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/usr/usage/Presentations/MSR_Exercises/MSR_Exercises_AiP4_R19/MSR_Exercises_AiP4/Misc/RteAnalyzer/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/NvM"
+         ],
+         "SourceFile" : "Source/NvM.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/usr/usage/Presentations/MSR_Exercises/MSR_Exercises_AiP4_R19/MSR_Exercises_AiP4/Misc/RteAnalyzer/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/TSC_SchM_NvM"
+         ],
+         "SourceFile" : "Source/TSC_SchM_NvM.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/usr/usage/Presentations/MSR_Exercises/MSR_Exercises_AiP4_R19/MSR_Exercises_AiP4/Misc/RteAnalyzer/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/PduR"
+         ],
+         "SourceFile" : "Source/PduR.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/usr/usage/Presentations/MSR_Exercises/MSR_Exercises_AiP4_R19/MSR_Exercises_AiP4/Misc/RteAnalyzer/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/TSC_SchM_PduR"
+         ],
+         "SourceFile" : "Source/TSC_SchM_PduR.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/usr/usage/Presentations/MSR_Exercises/MSR_Exercises_AiP4_R19/MSR_Exercises_AiP4/Misc/RteAnalyzer/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/TSC_BswM"
+         ],
+         "SourceFile" : "Source/TSC_BswM.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/usr/usage/Presentations/MSR_Exercises/MSR_Exercises_AiP4_R19/MSR_Exercises_AiP4/Misc/RteAnalyzer/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/TSC_ComM"
+         ],
+         "SourceFile" : "Source/TSC_ComM.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/usr/usage/Presentations/MSR_Exercises/MSR_Exercises_AiP4_R19/MSR_Exercises_AiP4/Misc/RteAnalyzer/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/CtApMySwc"
+         ],
+         "SourceFile" : "Source/CtApMySwc.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/usr/usage/Presentations/MSR_Exercises/MSR_Exercises_AiP4_R19/MSR_Exercises_AiP4/Misc/RteAnalyzer/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/TSC_CtApMySwc"
+         ],
+         "SourceFile" : "Source/TSC_CtApMySwc.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/usr/usage/Presentations/MSR_Exercises/MSR_Exercises_AiP4_R19/MSR_Exercises_AiP4/Misc/RteAnalyzer/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/CtCddIoHwAb"
+         ],
+         "SourceFile" : "Source/CtCddIoHwAb.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/usr/usage/Presentations/MSR_Exercises/MSR_Exercises_AiP4_R19/MSR_Exercises_AiP4/Misc/RteAnalyzer/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/TSC_CtCddIoHwAb"
+         ],
+         "SourceFile" : "Source/TSC_CtCddIoHwAb.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/usr/usage/Presentations/MSR_Exercises/MSR_Exercises_AiP4_R19/MSR_Exercises_AiP4/Misc/RteAnalyzer/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/CtSaDisplay"
+         ],
+         "SourceFile" : "Source/CtSaDisplay.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/usr/usage/Presentations/MSR_Exercises/MSR_Exercises_AiP4_R19/MSR_Exercises_AiP4/Misc/RteAnalyzer/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/TSC_CtSaDisplay"
+         ],
+         "SourceFile" : "Source/TSC_CtSaDisplay.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/usr/usage/Presentations/MSR_Exercises/MSR_Exercises_AiP4_R19/MSR_Exercises_AiP4/Misc/RteAnalyzer/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/CtSaDoor"
+         ],
+         "SourceFile" : "Source/CtSaDoor.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/usr/usage/Presentations/MSR_Exercises/MSR_Exercises_AiP4_R19/MSR_Exercises_AiP4/Misc/RteAnalyzer/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/TSC_CtSaDoor"
+         ],
+         "SourceFile" : "Source/TSC_CtSaDoor.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/usr/usage/Presentations/MSR_Exercises/MSR_Exercises_AiP4_R19/MSR_Exercises_AiP4/Misc/RteAnalyzer/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/CtSaInteriorLight"
+         ],
+         "SourceFile" : "Source/CtSaInteriorLight.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/usr/usage/Presentations/MSR_Exercises/MSR_Exercises_AiP4_R19/MSR_Exercises_AiP4/Misc/RteAnalyzer/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/TSC_CtSaInteriorLight"
+         ],
+         "SourceFile" : "Source/TSC_CtSaInteriorLight.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/usr/usage/Presentations/MSR_Exercises/MSR_Exercises_AiP4_R19/MSR_Exercises_AiP4/Misc/RteAnalyzer/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/TSC_Dcm"
+         ],
+         "SourceFile" : "Source/TSC_Dcm.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/usr/usage/Presentations/MSR_Exercises/MSR_Exercises_AiP4_R19/MSR_Exercises_AiP4/Misc/RteAnalyzer/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/DemMaster_0"
+         ],
+         "SourceFile" : "Source/DemMaster_0.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/usr/usage/Presentations/MSR_Exercises/MSR_Exercises_AiP4_R19/MSR_Exercises_AiP4/Misc/RteAnalyzer/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/TSC_DemMaster_0"
+         ],
+         "SourceFile" : "Source/TSC_DemMaster_0.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/usr/usage/Presentations/MSR_Exercises/MSR_Exercises_AiP4_R19/MSR_Exercises_AiP4/Misc/RteAnalyzer/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/DemSatellite_0"
+         ],
+         "SourceFile" : "Source/DemSatellite_0.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/usr/usage/Presentations/MSR_Exercises/MSR_Exercises_AiP4_R19/MSR_Exercises_AiP4/Misc/RteAnalyzer/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/TSC_DemSatellite_0"
+         ],
+         "SourceFile" : "Source/TSC_DemSatellite_0.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/usr/usage/Presentations/MSR_Exercises/MSR_Exercises_AiP4_R19/MSR_Exercises_AiP4/Misc/RteAnalyzer/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/TSC_Det"
+         ],
+         "SourceFile" : "Source/TSC_Det.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/usr/usage/Presentations/MSR_Exercises/MSR_Exercises_AiP4_R19/MSR_Exercises_AiP4/Misc/RteAnalyzer/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/TSC_EcuM"
+         ],
+         "SourceFile" : "Source/TSC_EcuM.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/usr/usage/Presentations/MSR_Exercises/MSR_Exercises_AiP4_R19/MSR_Exercises_AiP4/Misc/RteAnalyzer/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/TSC_NvM"
+         ],
+         "SourceFile" : "Source/TSC_NvM.c"
+      }
+   ],
+   "TaskList" : [
+      {
+         "OsApplication" : "",
+         "Preemptive" : "0",
+         "Priority" : "2",
+         "TaskName" : "IO_Task"
+      },
+      {
+         "OsApplication" : "",
+         "Preemptive" : "1",
+         "Priority" : "4294967295",
+         "TaskName" : "IdleTask_OsCore"
+      },
+      {
+         "OsApplication" : "",
+         "Preemptive" : "0",
+         "Priority" : "4",
+         "TaskName" : "Init_Task"
+      },
+      {
+         "OsApplication" : "",
+         "Preemptive" : "0",
+         "Priority" : "3",
+         "TaskName" : "My_Task"
+      },
+      {
+         "OsApplication" : "",
+         "Preemptive" : "1",
+         "Priority" : "6",
+         "TaskName" : "SchM_Task"
+      }
+   ],
+   "TemplateDataBaseDirectory" : "E:\\usr\\usage\\Presentations\\MSR_Exercises\\MSR_Exercises_AiP4_R19\\MSR_Exercises_AiP4\\Generators\\Rte"
+}

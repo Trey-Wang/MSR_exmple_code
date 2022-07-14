@@ -1,0 +1,2522 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-0-3.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://autosar.org/schema/r4.0">
+	<AR-PACKAGES>
+		<AR-PACKAGE UUID="2e94f931-eac6-4b63-b933-e6f889a90939">
+			<SHORT-NAME>MICROSAR</SHORT-NAME>
+			<ELEMENTS>
+				<ECUC-MODULE-DEF UUID="4c0ffd4a-3c50-4a84-abbe-346c2ce3cc04">
+					<SHORT-NAME>Fee</SHORT-NAME>
+					<DESC>
+						<L-2 L="EN">Configuration of the Fee (Flash EEPROM Emulation) module.</L-2>
+					</DESC>
+					<CATEGORY>VENDOR_SPECIFIC_MODULE_DEFINITION</CATEGORY>
+					<ADMIN-DATA>
+						<DOC-REVISIONS>
+							<DOC-REVISION>
+								<REVISION-LABEL>8.01.00</REVISION-LABEL>
+								<STATE>released</STATE>
+								<ISSUED-BY>virck</ISSUED-BY>
+								<DATE>2012-07-17T02:32:05+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Added Configuration Support for AUTOSAR4 - BSMWD according to ASR4</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00058818</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>8.01.01</REVISION-LABEL>
+								<STATE>released</STATE>
+								<ISSUED-BY>virck</ISSUED-BY>
+								<DATE>2012-09-24T11:37:01+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Updated SW Version</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">Changes in Implementation</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>8.01.02</REVISION-LABEL>
+								<STATE>released</STATE>
+								<ISSUED-BY>virck</ISSUED-BY>
+								<DATE>2012-11-16T11:37:01+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Updated SW Version</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">Changes in Implementation</L-2>
+										</REASON>
+									</MODIFICATION>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Corrected Version numbering scheme (x.yy.zz); Code Generator name</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00062158</L-2>
+										</REASON>
+									</MODIFICATION>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Corrected Version History (e.g. 8.01.01 added)</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00062158</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>8.01.03</REVISION-LABEL>
+								<STATE>released</STATE>
+								<ISSUED-BY>virck</ISSUED-BY>
+								<DATE>2013-02-07T02:38:44+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Updated SW Version</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">Changes in Implementation</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>8.01.04</REVISION-LABEL>
+								<STATE>released</STATE>
+								<ISSUED-BY>virck</ISSUED-BY>
+								<DATE>2013-02-27T03:47:52+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Increased FeePartitionConfiguration's upper multiplicity</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00062909</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>8.01.05</REVISION-LABEL>
+								<STATE>released</STATE>
+								<ISSUED-BY>virck</ISSUED-BY>
+								<DATE>2013-03-21T07:29:01+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Updated SW Version</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">Changes in Implementation</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>8.01.06</REVISION-LABEL>
+								<STATE>released</STATE>
+								<ISSUED-BY>virck</ISSUED-BY>
+								<DATE>2013-06-24T01:25:34+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Updated SW Version</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">Changes in Implementation</L-2>
+										</REASON>
+									</MODIFICATION>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Added description to container FeeDevErrorChecks</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00067596</L-2>
+										</REASON>
+									</MODIFICATION>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Set FeeDevErrorDetect's default value to "true"</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00067572</L-2>
+										</REASON>
+									</MODIFICATION>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Set FeeVersionInfoApi's default value to "false"</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00067542</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>8.02.00</REVISION-LABEL>
+								<STATE>released</STATE>
+								<ISSUED-BY>virck</ISSUED-BY>
+								<DATE>2013-09-13T16:54:27+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Improve BSWMD Description Text</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00070340</L-2>
+										</REASON>
+									</MODIFICATION>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Added BaseUnits/Default Displayformats for numeric parameters</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00065510</L-2>
+										</REASON>
+									</MODIFICATION>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">updated SW Version, AUTOSAR Version</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">changes in Implementation</L-2>
+										</REASON>
+									</MODIFICATION>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">container VectorCommonData and its contents are optional and "not used"</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00068603</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>8.02.01</REVISION-LABEL>
+								<STATE>released</STATE>
+								<ISSUED-BY>virck</ISSUED-BY>
+								<DATE>2013-12-11T02:54:07+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">AUTOSAR 3 support (with DaVinci CFG5.5; no changes here)</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00072611</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>8.02.02</REVISION-LABEL>
+								<STATE>released</STATE>
+								<ISSUED-BY>virck</ISSUED-BY>
+								<DATE>2014-02-05T07:26:20+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">updated SW Version</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">changes in Implementation</L-2>
+										</REASON>
+									</MODIFICATION>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Corrected default of FeeNvmJobErrorNotification</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00073487</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>8.03.00</REVISION-LABEL>
+								<STATE>released</STATE>
+								<ISSUED-BY>virck</ISSUED-BY>
+								<DATE>2014-05-17T08:01:56+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Changed default value of FeeAddressAlignments; updated descriptions</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00075576</L-2>
+										</REASON>
+									</MODIFICATION>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Added parameter FeeMainFunctionPeriod</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00074351</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>8.3.01</REVISION-LABEL>
+								<STATE>released</STATE>
+								<ISSUED-BY>virck</ISSUED-BY>
+								<DATE>2015-01-15T12:25:01+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">updated SW Version</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">changes in Implementation</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>8.04.00</REVISION-LABEL>
+								<STATE>released</STATE>
+								<ISSUED-BY>virmz</ISSUED-BY>
+								<DATE>2015-01-15T12:25:01+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">add new parameter Fee_MainFunctionTriggering SREQ-34373</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">changes in Description and Generation</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>8.05.00</REVISION-LABEL>
+								<STATE>released</STATE>
+								<ISSUED-BY>virck</ISSUED-BY>
+								<DATE>2015-04-27T03:51:40+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">new minor</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">changes in implementation</L-2>
+										</REASON>
+									</MODIFICATION>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">corrected description of parameter FeeAddressAlignment</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">-</L-2>
+										</REASON>
+									</MODIFICATION>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">removed cointainer VectorCommonData</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">obsolete</L-2>
+										</REASON>
+									</MODIFICATION>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">removed all specific Development Error Check switches</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">SafeBsw (ESCAN00081774)</L-2>
+										</REASON>
+									</MODIFICATION>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Added default values for Threshold Reserves</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00080543</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>8.05.01</REVISION-LABEL>
+								<STATE>released</STATE>
+								<ISSUED-BY>virck</ISSUED-BY>
+								<DATE>2016-06-24T03:01:58+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Updatd SW Version info</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">changes in implementation</L-2>
+										</REASON>
+									</MODIFICATION>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">fixed typos</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">typos</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>8.05.02</REVISION-LABEL>
+								<STATE>released</STATE>
+								<ISSUED-BY>virck</ISSUED-BY>
+								<DATE>2016-09-07T03:27:34+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Updatd SW Version info</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">changes in implementation</L-2>
+										</REASON>
+									</MODIFICATION>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">fixed typos, corrected descriptions</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">Rework after review</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>8.05.03</REVISION-LABEL>
+								<STATE>released</STATE>
+								<ISSUED-BY>virck</ISSUED-BY>
+								<DATE>2016-11-15T05:51:49+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Updatd SW Version info</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">changes in implementation</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>8.05.04</REVISION-LABEL>
+								<STATE>released</STATE>
+								<ISSUED-BY>virck</ISSUED-BY>
+								<DATE>2016-12-19T13:42:23+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Updatd SW Version info</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">changes in implementation</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>8.05.05</REVISION-LABEL>
+								<STATE>released</STATE>
+								<ISSUED-BY>virck</ISSUED-BY>
+								<DATE>2017-02-21T03:08:38+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Added Parameter "FeeSafeBswChecks"</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">FEAT-1824</L-2>
+										</REASON>
+									</MODIFICATION>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">removed parameter "DebugReporting"</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00094143</L-2>
+										</REASON>
+									</MODIFICATION>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Updated SW Version Info</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">changes in implementation</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+						</DOC-REVISIONS>
+					</ADMIN-DATA>
+					<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+					<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+					<REFINED-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/AUTOSAR/EcucDefs/Fee</REFINED-MODULE-DEF-REF>
+					<SUPPORTED-CONFIG-VARIANTS>
+						<SUPPORTED-CONFIG-VARIANT>VARIANT-PRE-COMPILE</SUPPORTED-CONFIG-VARIANT>
+					</SUPPORTED-CONFIG-VARIANTS>
+					<CONTAINERS>
+						<!-- Container Definition: FeeBlockConfiguration -->
+						<ECUC-PARAM-CONF-CONTAINER-DEF UUID="26875663-5aa3-412f-883c-3610c2caa40e">
+							<SHORT-NAME>FeeBlockConfiguration</SHORT-NAME>
+							<LONG-NAME>
+								<L-4 L="EN">Block Configuration</L-4>
+							</LONG-NAME>
+							<DESC>
+								<L-2 L="EN">This container includes the configuration of block specific parameters for the FEE module.</L-2>
+							</DESC>
+							<ADMIN-DATA>
+								<SDGS>
+									<SDG GID="DV:CfgPostBuild">
+										<SD GID="DV:postBuildSelectableChangeable">false</SD>
+										<SD GID="DV:postBuildNotDeletable">false</SD>
+									</SDG>
+								</SDGS>
+							</ADMIN-DATA>
+							<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+							<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+							<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+							<MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+							<PARAMETERS>
+								<!-- PARAMETER DEFINITION: FeeBlockNumber -->
+								<ECUC-INTEGER-PARAM-DEF UUID="6aec8ae0-09c0-4e2e-8303-ff083f9e6c46">
+									<SHORT-NAME>FeeBlockNumber</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Block Number</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">This value specifies the block identifier (handle).</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:DefaultFormat">HEX</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<INTRODUCTION>
+										<P>
+											<L-1 L="EN">0x0000 and 0xFFFF shall not be used for block numbers (see FEE006).
+
+                                        Range: 
+                                        min = 2^NVM_DATASET_SELECTION_BITS 
+                                        max = 0xFFFF -2^NVM_DATASET_SELECTION_BITS
+
+                                        Note: Depending on the number of bits set aside for dataset selection several other block numbers shall also be left out to ease implementation.</L-1>
+										</P>
+									</INTRODUCTION>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>2</DEFAULT-VALUE>
+									<MAX>65534</MAX>
+									<MIN>1</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: FeeBlockSize -->
+								<ECUC-INTEGER-PARAM-DEF UUID="0971bad8-60ca-4ce2-80fe-8e220f3716dc">
+									<SHORT-NAME>FeeBlockSize</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Block Size</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">This value specifies the size of a logical block.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:BaseUnit">BYTE</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>1</DEFAULT-VALUE>
+									<MAX>65535</MAX>
+									<MIN>1</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: FeeImmediateData -->
+								<ECUC-BOOLEAN-PARAM-DEF UUID="92525d1f-7021-4112-87c2-73939c17498c">
+									<SHORT-NAME>FeeImmediateData</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Immediate Data</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter defines if this block has high priority data.</L-2>
+									</DESC>
+									<INTRODUCTION>
+										<P>
+											<L-1 L="EN">true: 	Block contains immediate data.
+                                        false:	Block does not contain immediate data.</L-1>
+										</P>
+									</INTRODUCTION>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: FeeNumberOfWriteCycles -->
+								<ECUC-INTEGER-PARAM-DEF UUID="af349f0a-14ce-42ef-8f4e-574b8af4cadd">
+									<SHORT-NAME>FeeNumberOfWriteCycles</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Number Of Write Cycles</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">This value specifies the number of write cycles required for this block.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:DefaultFormat">DEC</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>10000</DEFAULT-VALUE>
+									<MAX>10000000</MAX>
+									<MIN>0</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<ECUC-INTEGER-PARAM-DEF UUID="8794d292-91a9-4e4a-ba6b-4a067d0635f1">
+									<SHORT-NAME>FeeNumberOfChunkInstances</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Number Of Instances In Chunk</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">This value specifies the number of instances in one chunk of a certain block.
+Hint: The number of chunks must be a value of (2^n) - 1.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:DefaultFormat">DEC</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>1</DEFAULT-VALUE>
+									<MAX>32767</MAX>
+									<MIN>1</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<ECUC-INTEGER-PARAM-DEF UUID="e1a7170f-1792-405d-a48a-76e636926ed4">
+									<SHORT-NAME>FeeNumberOfDatasets</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Number Of Datasets</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">This value specifies the number of datasets/clones. This is the value how often an individual block exists.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:DefaultFormat">DEC</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>1</DEFAULT-VALUE>
+									<MAX>255</MAX>
+									<MIN>1</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="4d7079cc-1959-40cd-aeb5-1586a50d6192">
+									<SHORT-NAME>FeeBlockIdFixed</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Block Id Fixed</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter controls whether the BlockId is fixed. If fixed, the BlockId value can be (and must be) manually assigned.
+										It remains constant, even if Block Configuration changes (add/insert new blocks, remove blocks)
+										Hint: Make all BlockIds fixed after an initial configuration was created. For later updates they must not change in order to keep existing data.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-INTEGER-PARAM-DEF UUID="a2dce880-8f47-4578-b797-458f02214e5e">
+									<SHORT-NAME>FeeBlockId</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Block Id</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">This value specifies the BlockID which indicates the base (aka: "tag") of a Block within its associated partition.
+The Block can be uniquely identified using partition, FeeBlockId and block's DataIndex. 
+Being able to uniquely identify each Block accross different configurations, is a prerequisite for supporting confiuration updates, especially:
+- which blocks were changed, which were not (ant thus should remain readable)
+- which block(s) is/are used to share information between FBL and Application
+FeeBlockNumber cannot serve for this purpose, because its interpretation changes, if dataset selection bit (thus the maximum number of Datasets used in NVM) changes.
+
+The ID must be unique within block's partition; blocks within different partitions may share the same value.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:DefaultFormat">DEC</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>0</DEFAULT-VALUE>
+									<MAX>65534</MAX>
+									<MIN>0</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="5ec50f17-ccbf-4163-aa33-0e69592b6eb7">
+									<SHORT-NAME>FeeBlockIsCritical</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Critical Data</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter defines the criticality of Data, regarding data losses in exceptional situations (especially Sector Overflow).
+TRUE: Most recent data must never be lost
+FALSE: Most recent data may be lost in order to keep FEE writable
+
+Usually the criticality depends on the write frequency: The more often a block is being written, the lower its criticality. 
+
+It is not recommended to check this option while "immediate data" is also set!</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+							</PARAMETERS>
+							<REFERENCES>
+								<!-- Symbolic Name Reference Definition: FeeDeviceIndex -->
+								<ECUC-SYMBOLIC-NAME-REFERENCE-DEF UUID="4d697b75-b639-4f1e-ae65-4488ce6ddbeb">
+									<SHORT-NAME>FeeDeviceIndex</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Device Index</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">Not used!
+Reference to Fls driver.</L-2>
+									</DESC>
+									<INTRODUCTION>
+										<P>
+											<L-1 L="EN">Range: 0 .. 254 (0xFF reserved for broadcast call to GetStatus function).</L-1>
+										</P>
+									</INTRODUCTION>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Fls/FlsGeneral</DESTINATION-REF>
+								</ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+								<ECUC-REFERENCE-DEF UUID="56cd4efd-12ea-4b0e-aaa2-2e019c3f1a16">
+									<SHORT-NAME>FeePartition</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Partition</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">Reference to the partition within the FEE configuration.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Fee/FeePartitionConfiguration</DESTINATION-REF>
+								</ECUC-REFERENCE-DEF>
+							</REFERENCES>
+						</ECUC-PARAM-CONF-CONTAINER-DEF>
+						<!-- Container Definition: FeeGeneral -->
+						<ECUC-PARAM-CONF-CONTAINER-DEF UUID="94179817-25dc-43d6-b099-74f822627f56">
+							<SHORT-NAME>FeeGeneral</SHORT-NAME>
+							<LONG-NAME>
+								<L-4 L="EN">General</L-4>
+							</LONG-NAME>
+							<DESC>
+								<L-2 L="EN">General configuration parameters of the FEE.</L-2>
+							</DESC>
+							<ADMIN-DATA>
+								<SDGS>
+									<SDG GID="DV:CfgPostBuild">
+										<SD GID="DV:postBuildSelectableChangeable">false</SD>
+										<SD GID="DV:postBuildNotDeletable">false</SD>
+									</SDG>
+								</SDGS>
+							</ADMIN-DATA>
+							<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+							<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+							<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+							<MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+							<PARAMETERS>
+								<!-- PARAMETER DEFINITION: FeeDevErrorDetect -->
+								<ECUC-BOOLEAN-PARAM-DEF UUID="13918c69-73fc-414e-871b-0226b4e187f3">
+									<SHORT-NAME>FeeDevErrorDetect</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Development Error Detection</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter controls the Development Error Detection.
+true:	Development error detection is enabled.
+false:	Development error detection is disabled.
+
+If Development error detection was enabled, reporting (to DET) can be separately controlled.
+</L-2>
+									</DESC>
+									<INTRODUCTION>
+										<P>
+											<L-1 L="EN">true:	Development error detection enabled.
+                                        false:	Development error detection disabled.</L-1>
+										</P>
+									</INTRODUCTION>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>true</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: FeeIndex -->
+								<ECUC-INTEGER-PARAM-DEF UUID="5773f0c2-cc69-4b7a-b8ea-25704eb212b3">
+									<SHORT-NAME>FeeIndex</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Instance Id</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">
+										Not used!
+										This value specifies the InstanceId of this module instance. If only one instance is present it shall have the Id 0.
+										This parameter is not used by FEE, but it must have a value.
+										</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:DefaultFormat">DEC</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>0</DEFAULT-VALUE>
+									<MAX>254</MAX>
+									<MIN>0</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: FeeNvmJobEndNotification -->
+								<ECUC-FUNCTION-NAME-DEF UUID="cc3029b1-7816-49b9-8e7a-3258753e705c">
+									<SHORT-NAME>FeeNvmJobEndNotification</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">NvM Job End Notification</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter defines the job end notification routine provided by the upper layer module (normally NvM_JobEndNotification).</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<ECUC-FUNCTION-NAME-DEF-VARIANTS>
+										<ECUC-FUNCTION-NAME-DEF-CONDITIONAL>
+											<DEFAULT-VALUE>NvM_JobEndNotification</DEFAULT-VALUE>
+											<MAX-LENGTH>64</MAX-LENGTH>
+											<MIN-LENGTH>1</MIN-LENGTH>
+										</ECUC-FUNCTION-NAME-DEF-CONDITIONAL>
+									</ECUC-FUNCTION-NAME-DEF-VARIANTS>
+								</ECUC-FUNCTION-NAME-DEF>
+								<!-- PARAMETER DEFINITION: FeeNvmJobErrorNotification -->
+								<ECUC-FUNCTION-NAME-DEF UUID="85b64286-ad53-41d3-8a18-ccb51923d468">
+									<SHORT-NAME>FeeNvmJobErrorNotification</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">NvM Job Error Notification</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter defines the job error notification routine provided by the upper layer module (normally NvM_JobErrorNotification).</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<ECUC-FUNCTION-NAME-DEF-VARIANTS>
+										<ECUC-FUNCTION-NAME-DEF-CONDITIONAL>
+											<DEFAULT-VALUE>NvM_JobErrorNotification</DEFAULT-VALUE>
+											<MAX-LENGTH>64</MAX-LENGTH>
+											<MIN-LENGTH>1</MIN-LENGTH>
+										</ECUC-FUNCTION-NAME-DEF-CONDITIONAL>
+									</ECUC-FUNCTION-NAME-DEF-VARIANTS>
+								</ECUC-FUNCTION-NAME-DEF>
+								<!-- PARAMETER DEFINITION: FeePollingMode -->
+								<ECUC-BOOLEAN-PARAM-DEF UUID="42321414-0bb2-406f-bbb9-e55129e75f4b">
+									<SHORT-NAME>FeePollingMode</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Polling Mode</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter defines if the polling mode for this module is enabled.</L-2>
+									</DESC>
+									<INTRODUCTION>
+										<P>
+											<L-1 L="EN">true:	Polling mode enabled, callback functions (provided to FLS module) disabled.
+
+                                        false:	Polling mode disabled, callback functions (provided to FLS module) enabled.</L-1>
+										</P>
+									</INTRODUCTION>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>true</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: FeeSetModeSupported -->
+								<ECUC-BOOLEAN-PARAM-DEF UUID="975bca05-c4f9-481e-b498-3b3548f46984">
+									<SHORT-NAME>FeeSetModeSupported</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Provide Fee_SetMode API</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">Not used!
+This parameter defines if the 'SetMode' functionality of the FEE module is available.
+Fee always provides SetMode API, it is an important control feature.</L-2>
+									</DESC>
+									<INTRODUCTION>
+										<P>
+											<L-1 L="EN">TRUE: SetMode functionality supported / code present, 
+                                        FALSE: SetMode functionality not supported / code not present. 
+
+                                        Note: 
+                                        This configuration setting has to be consistent with that of all 
+                                        underlying flash device drivers (configuration parameter FlsSetModeApi).</L-1>
+										</P>
+									</INTRODUCTION>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>true</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: FeeVersionInfoApi -->
+								<ECUC-BOOLEAN-PARAM-DEF UUID="a6de24c8-06f7-4a50-8198-334b7f22cdd4">
+									<SHORT-NAME>FeeVersionInfoApi</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Version Information Api</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter enables/disables the function Fee_GetVersionInfo() to get major, minor and patch version information.</L-2>
+									</DESC>
+									<INTRODUCTION>
+										<P>
+											<L-1 L="EN">true:	Version info API enabled.
+                                        false:	Version info API disabled.</L-1>
+										</P>
+									</INTRODUCTION>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: FeeVirtualPageSize -->
+								<ECUC-INTEGER-PARAM-DEF UUID="299dcb90-9965-4034-af3f-7733c9e3bc4f">
+									<SHORT-NAME>FeeVirtualPageSize</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Virtual Page Size</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">Not used!
+This value specifies the size to which logical blocks shall be aligned.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>8</DEFAULT-VALUE>
+									<MAX>1024</MAX>
+									<MIN>0</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<ECUC-INTEGER-PARAM-DEF UUID="be4f0d11-1b49-40fc-98b2-daf7692c7c25">
+									<SHORT-NAME>FeeInternalBufferSize</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Internal Buffer Size</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">This value specifies the size of the internal buffer.
+
+The internal buffer is used to assemble management information, to merge these management information with user data (to reduce alignment gaps), and as read buffer when copying data during sector switch processing.
+Note:
+The buffer must always be larger than write page size.
+It may be smaller than largest block, because FEE adapts its copy process to internal buffer size.
+However, the larger the buffer, the fewer read-write sequences (from Fls, to Fls) the FEE has to perform in order to copy data.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:BaseUnit">BYTE</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>64</DEFAULT-VALUE>
+									<MAX>1024</MAX>
+									<MIN>64</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<ECUC-STRING-PARAM-DEF UUID="a99147fb-6bdd-48d3-9817-a533b6a1ab2a">
+									<SHORT-NAME>FeeNvmCbkIncludeFile</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">NvM Callback Include File</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter defines the name of the include file for callback functions declaration of the NvM.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<ECUC-STRING-PARAM-DEF-VARIANTS>
+										<ECUC-STRING-PARAM-DEF-CONDITIONAL>
+											<DEFAULT-VALUE>NvM_Cbk.h</DEFAULT-VALUE>
+											<MAX-LENGTH>32</MAX-LENGTH>
+											<MIN-LENGTH>1</MIN-LENGTH>
+										</ECUC-STRING-PARAM-DEF-CONDITIONAL>
+									</ECUC-STRING-PARAM-DEF-VARIANTS>
+								</ECUC-STRING-PARAM-DEF>
+								<ECUC-FLOAT-PARAM-DEF UUID="1d1334ab-061c-4bd2-9fcb-c2c9fd146d55">
+									<SHORT-NAME>FeeMainFunctionPeriod</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Call Cycle of Fee_MainFunction</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">Specify fixed call cycle for Fee_MainFunction.
+This information affects RTE's (SchM's) settings.
+
+Fee itself does not depend on a fixed cycle time; in can be triggered at arbitrary rates.
+
+In general, Fee_MainFunction should be called as fast as possible, because it has to perform search operations in Flash, which may result in many read requests issued to FLS, at most one per MainFunction cycle.
+Increasing trigger rates also helps to decrease write times themselves, which results in less time the flash is intermediately in inconsistent state, vulnerable to aborts (resets).
+
+It is not necessary to trigger FEE faster than FLS
+Also note that large values in FeeInternalBufferSize influence maximum duration of a Fee_MainFunction call.
+The faster you want Fee_MainFunction being triggered, the smaller this value should be and vice versa.
+
+Also note, that notification functions may arbitrarily extend Fee_MainFunction's maximum duration.
+
+</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:BaseUnit">SEC</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PUBLISHED-INFORMATION</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>0.005</DEFAULT-VALUE>
+									<MAX>1</MAX>
+									<MIN>0.0001</MIN>
+								</ECUC-FLOAT-PARAM-DEF>
+								<ECUC-ENUMERATION-PARAM-DEF UUID="0688e004-5e8b-4479-b503-a435e3d1aa45">
+									<SHORT-NAME>FeeMainFunctionTriggering</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">The MainFunction can be scheduled in different ways, which allows adapting the runtime behavior
+- FixedCycleTime: All activities are executed in the MainFunction with the defined cycle time.
+- BackgroundTask: Activities that do not require a fixed cycle time run in the background task. The response time of such activities will depend on the current CPU load.
+Note
+If the system is overloaded, it may happen that the background task is no longer called.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PUBLISHED-INFORMATION</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>FixedCycleTime</DEFAULT-VALUE>
+									<LITERALS>
+										<ECUC-ENUMERATION-LITERAL-DEF UUID="b4ce365f-a511-4cbb-bb65-1011da07c226">
+											<SHORT-NAME>FixedCycleTime</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">Task for Fixed Cycle Time</L-4>
+											</LONG-NAME>
+											<ORIGIN>Vector Informatik</ORIGIN>
+										</ECUC-ENUMERATION-LITERAL-DEF>
+										<ECUC-ENUMERATION-LITERAL-DEF UUID="4a03bca9-5ca8-4b5f-a2cf-08c41b752dcb">
+											<SHORT-NAME>BackgroundTask</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">Background Task</L-4>
+											</LONG-NAME>
+											<ORIGIN>Vector Informatik</ORIGIN>
+										</ECUC-ENUMERATION-LITERAL-DEF>
+									</LITERALS>
+								</ECUC-ENUMERATION-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="dbaecedc-3305-4301-ae82-d038513fbcf2">
+									<SHORT-NAME>FeeSafeBswChecks</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Selects if safety checks are used. These checks improve robustness as e.g. invalid parameters are checked before function is executed. This attribute has to be enabled for safety projects where this component is mapped to an ASIL partition.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:variantMultiplicityPBL">false</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+							</PARAMETERS>
+							<SUB-CONTAINERS>
+								<ECUC-PARAM-CONF-CONTAINER-DEF UUID="c05f077d-bb18-4750-83bb-f1507b8656f1">
+									<SHORT-NAME>FeeFlsApi</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Fls Api</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">This container includes Flash API parameters. The parameters can be used to announce Flash API's for non AUTOSAR compliant Flash drivers.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:postBuildSelectableChangeable">false</SD>
+												<SD GID="DV:postBuildNotDeletable">false</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+									<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+									<PARAMETERS>
+										<ECUC-STRING-PARAM-DEF UUID="69f27fd3-2a06-405d-99ca-1f8e906c4252">
+											<SHORT-NAME>FeeFlsIncludeFile</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">Fls Include File</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter defines the name of the header File of the Flash Driver.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<ECUC-STRING-PARAM-DEF-VARIANTS>
+												<ECUC-STRING-PARAM-DEF-CONDITIONAL>
+													<DEFAULT-VALUE>Fls.h</DEFAULT-VALUE>
+												</ECUC-STRING-PARAM-DEF-CONDITIONAL>
+											</ECUC-STRING-PARAM-DEF-VARIANTS>
+										</ECUC-STRING-PARAM-DEF>
+										<ECUC-FUNCTION-NAME-DEF UUID="41822ff2-4b2e-469b-a126-0227480aed33">
+											<SHORT-NAME>FeeFlsSetMode</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">Fls SetMode API</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter defines the name of the Flash SetMode API.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<ECUC-FUNCTION-NAME-DEF-VARIANTS>
+												<ECUC-FUNCTION-NAME-DEF-CONDITIONAL>
+													<DEFAULT-VALUE>Fls_SetMode</DEFAULT-VALUE>
+												</ECUC-FUNCTION-NAME-DEF-CONDITIONAL>
+											</ECUC-FUNCTION-NAME-DEF-VARIANTS>
+										</ECUC-FUNCTION-NAME-DEF>
+										<ECUC-FUNCTION-NAME-DEF UUID="15566d92-ed4d-4bfa-a4d1-a7a66826e395">
+											<SHORT-NAME>FeeFlsRead</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">Fls Read API</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter defines the name of the Flash Read API.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<ECUC-FUNCTION-NAME-DEF-VARIANTS>
+												<ECUC-FUNCTION-NAME-DEF-CONDITIONAL>
+													<DEFAULT-VALUE>Fls_Read</DEFAULT-VALUE>
+												</ECUC-FUNCTION-NAME-DEF-CONDITIONAL>
+											</ECUC-FUNCTION-NAME-DEF-VARIANTS>
+										</ECUC-FUNCTION-NAME-DEF>
+										<ECUC-FUNCTION-NAME-DEF UUID="59a08d4f-77cf-4977-abf8-084d9cca1cb9">
+											<SHORT-NAME>FeeFlsWrite</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">Fls Write API</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter defines the name of the Flash Write API.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<ECUC-FUNCTION-NAME-DEF-VARIANTS>
+												<ECUC-FUNCTION-NAME-DEF-CONDITIONAL>
+													<DEFAULT-VALUE>Fls_Write</DEFAULT-VALUE>
+												</ECUC-FUNCTION-NAME-DEF-CONDITIONAL>
+											</ECUC-FUNCTION-NAME-DEF-VARIANTS>
+										</ECUC-FUNCTION-NAME-DEF>
+										<ECUC-FUNCTION-NAME-DEF UUID="c81a54d8-a231-4fb9-8e63-6da5bbb2b9b2">
+											<SHORT-NAME>FeeFlsCancel</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">Fls Cancel API</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter defines the name of the Flash Cancel API.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<ECUC-FUNCTION-NAME-DEF-VARIANTS>
+												<ECUC-FUNCTION-NAME-DEF-CONDITIONAL>
+													<DEFAULT-VALUE>Fls_Cancel</DEFAULT-VALUE>
+												</ECUC-FUNCTION-NAME-DEF-CONDITIONAL>
+											</ECUC-FUNCTION-NAME-DEF-VARIANTS>
+										</ECUC-FUNCTION-NAME-DEF>
+										<ECUC-FUNCTION-NAME-DEF UUID="13985822-24b0-431c-bb24-2005a9fbf30f">
+											<SHORT-NAME>FeeFlsGetStatus</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">Fls GetStatus API</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter defines the name of the Flash GetStatus API.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<ECUC-FUNCTION-NAME-DEF-VARIANTS>
+												<ECUC-FUNCTION-NAME-DEF-CONDITIONAL>
+													<DEFAULT-VALUE>Fls_GetStatus</DEFAULT-VALUE>
+												</ECUC-FUNCTION-NAME-DEF-CONDITIONAL>
+											</ECUC-FUNCTION-NAME-DEF-VARIANTS>
+										</ECUC-FUNCTION-NAME-DEF>
+										<ECUC-FUNCTION-NAME-DEF UUID="4e9b692b-2d60-4d5d-9dcc-ac46282c05ea">
+											<SHORT-NAME>FeeFlsGetJobResult</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">Fls GetJobResult API</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter defines the name of the Flash GetJobResult API.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<ECUC-FUNCTION-NAME-DEF-VARIANTS>
+												<ECUC-FUNCTION-NAME-DEF-CONDITIONAL>
+													<DEFAULT-VALUE>Fls_GetJobResult</DEFAULT-VALUE>
+												</ECUC-FUNCTION-NAME-DEF-CONDITIONAL>
+											</ECUC-FUNCTION-NAME-DEF-VARIANTS>
+										</ECUC-FUNCTION-NAME-DEF>
+										<ECUC-FUNCTION-NAME-DEF UUID="10ac0c43-930f-4bc9-aefa-ee91a2daf444">
+											<SHORT-NAME>FeeFlsErase</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">Fls Erase API</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter defines the name of the Flash Erase API.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<ECUC-FUNCTION-NAME-DEF-VARIANTS>
+												<ECUC-FUNCTION-NAME-DEF-CONDITIONAL>
+													<DEFAULT-VALUE>Fls_Erase</DEFAULT-VALUE>
+												</ECUC-FUNCTION-NAME-DEF-CONDITIONAL>
+											</ECUC-FUNCTION-NAME-DEF-VARIANTS>
+										</ECUC-FUNCTION-NAME-DEF>
+										<ECUC-FUNCTION-NAME-DEF UUID="4e064c56-fc9b-49b4-88d3-1ef99f6e72da">
+											<SHORT-NAME>FeeFlsCompare</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">Fls Compare API</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter defines the name of the Flash Compare API.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<ECUC-FUNCTION-NAME-DEF-VARIANTS>
+												<ECUC-FUNCTION-NAME-DEF-CONDITIONAL>
+													<DEFAULT-VALUE>Fls_Compare</DEFAULT-VALUE>
+												</ECUC-FUNCTION-NAME-DEF-CONDITIONAL>
+											</ECUC-FUNCTION-NAME-DEF-VARIANTS>
+										</ECUC-FUNCTION-NAME-DEF>
+									</PARAMETERS>
+									<REFERENCES>
+										<ECUC-SYMBOLIC-NAME-REFERENCE-DEF UUID="6564205c-dc26-4927-b908-1039d23ca187">
+											<SHORT-NAME>FeeFlsDeviceIndex</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">Device Index</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">Reference to a Flash driver.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Fls/FlsGeneral</DESTINATION-REF>
+										</ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+									</REFERENCES>
+								</ECUC-PARAM-CONF-CONTAINER-DEF>
+								<ECUC-PARAM-CONF-CONTAINER-DEF UUID="ecd46773-42c1-4879-84ce-ea2599fe8a01">
+									<SHORT-NAME>FeeDevErrorChecks</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Development Error Checks</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">This container includes additional configuration items for the development error detection.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:postBuildSelectableChangeable">false</SD>
+												<SD GID="DV:postBuildNotDeletable">false</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+									<PARAMETERS>
+										<ECUC-FUNCTION-NAME-DEF UUID="5d2512e9-6c86-452d-822a-349b83b5fae2">
+											<SHORT-NAME>FeeDetErrorhook</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">Det Error Hook</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter defines the Errorhook function for development error reporting.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<ECUC-FUNCTION-NAME-DEF-VARIANTS>
+												<ECUC-FUNCTION-NAME-DEF-CONDITIONAL>
+													<DEFAULT-VALUE>Det_ReportError</DEFAULT-VALUE>
+												</ECUC-FUNCTION-NAME-DEF-CONDITIONAL>
+											</ECUC-FUNCTION-NAME-DEF-VARIANTS>
+										</ECUC-FUNCTION-NAME-DEF>
+										<ECUC-STRING-PARAM-DEF UUID="397e637b-4fd5-471a-b4b9-0a6c03a93799">
+											<SHORT-NAME>FeeDetIncludeFile</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">Det Include File</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter defines the include file of the Errorhook function for development error reporting.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<ECUC-STRING-PARAM-DEF-VARIANTS>
+												<ECUC-STRING-PARAM-DEF-CONDITIONAL>
+													<DEFAULT-VALUE>Det.h</DEFAULT-VALUE>
+												</ECUC-STRING-PARAM-DEF-CONDITIONAL>
+											</ECUC-STRING-PARAM-DEF-VARIANTS>
+										</ECUC-STRING-PARAM-DEF>
+									</PARAMETERS>
+								</ECUC-PARAM-CONF-CONTAINER-DEF>
+							</SUB-CONTAINERS>
+						</ECUC-PARAM-CONF-CONTAINER-DEF>
+						<!-- Container Definition: FeePublishedInformation -->
+						<ECUC-PARAM-CONF-CONTAINER-DEF UUID="8a727c14-a431-400f-906e-ae0932dd53da">
+							<SHORT-NAME>FeePublishedInformation</SHORT-NAME>
+							<LONG-NAME>
+								<L-4 L="EN">Published Information</L-4>
+							</LONG-NAME>
+							<DESC>
+								<L-2 L="EN">This container includes additional published parameters.</L-2>
+							</DESC>
+							<ADMIN-DATA>
+								<SDGS>
+									<SDG GID="DV:CfgPostBuild">
+										<SD GID="DV:postBuildSelectableChangeable">false</SD>
+										<SD GID="DV:postBuildNotDeletable">false</SD>
+									</SDG>
+								</SDGS>
+							</ADMIN-DATA>
+							<INTRODUCTION>
+								<P>
+									<L-1 L="EN">Note that these parameters do not have any configuration class setting, since they are published information.</L-1>
+								</P>
+							</INTRODUCTION>
+							<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+							<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+							<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+							<MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+							<PARAMETERS>
+								<!-- PARAMETER DEFINITION: FeeBlockOverhead -->
+								<ECUC-INTEGER-PARAM-DEF UUID="fe446311-5b33-4dbd-ac52-2d1bf9d09e2a">
+									<SHORT-NAME>FeeBlockOverhead</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Block Overhead</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">This value specifies the management overhead per logical block.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:BaseUnit">BYTE</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<INTRODUCTION>
+										<P>
+											<L-1 L="EN">Note: If the management overhead depends on the block size or block location a formula has to be provided that allows the configurator to calculate the management overhead correctly.</L-1>
+										</P>
+									</INTRODUCTION>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PUBLISHED-INFORMATION</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>2</DEFAULT-VALUE>
+									<MAX>2</MAX>
+									<MIN>0</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: FeeMaximumBlockingTime -->
+								<ECUC-FLOAT-PARAM-DEF UUID="9ca86f28-7dc2-40e4-a5dd-fd41517287b9">
+									<SHORT-NAME>FeeMaximumBlockingTime</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Maximum Blocking Time</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">
+										Not used!
+										This value specifies the maximum time the FEE module's API routines shall be blocked (delayed) by internal operations.
+
+Note: Internal operations in that case means operations that are not explicitly invoked from the upper layer module but need to be handled for proper operation of this module or the underlying memory driver.</L-2>
+									</DESC>
+									<INTRODUCTION>
+										<P>
+											<L-1 L="EN">Note: Internal operations in that case means operations that are not explicitly invoked from the upper layer module but need to be handled for proper operation of this module or the underlying memory driver.</L-1>
+										</P>
+									</INTRODUCTION>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PUBLISHED-INFORMATION</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>1</DEFAULT-VALUE>
+									<MAX>1</MAX>
+									<MIN>0</MIN>
+								</ECUC-FLOAT-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: FeePageOverhead -->
+								<ECUC-INTEGER-PARAM-DEF UUID="0c83dc36-bd7c-4e65-a009-6715f7f70718">
+									<SHORT-NAME>FeePageOverhead</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Page Overhead</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">This value specifies the management overhead per page.
+
+Note: If the management overhead depends on the block size or block location a formula has to be provided that allows the configurator to calculate the management overhead correctly.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:BaseUnit">BYTE</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<INTRODUCTION>
+										<P>
+											<L-1 L="EN">Note: If the management overhead depends on the block size or block location a formula has to be provided that allows the configurator to calculate the management overhead correctly.</L-1>
+										</P>
+									</INTRODUCTION>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PUBLISHED-INFORMATION</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>0</DEFAULT-VALUE>
+									<MAX>0</MAX>
+									<MIN>0</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<ECUC-INTEGER-PARAM-DEF UUID="4a55bed9-5f89-49f1-8918-2a7f2c2e9d9e">
+									<SHORT-NAME>FeeChunkHeader</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Chunk Header</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">This value specifies the chunk header size. This parameter is constant and can not be configured by the user.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:BaseUnit">BYTE</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>16</DEFAULT-VALUE>
+									<MAX>16</MAX>
+									<MIN>16</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<ECUC-INTEGER-PARAM-DEF UUID="46c39af6-fc0b-4d9b-ad3a-615dccc76ea0">
+									<SHORT-NAME>FeeChunkLink</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Chunk Link</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">This value specifies the chunk link size. This parameter is constant and can not be configured by the user.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:BaseUnit">BYTE</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>8</DEFAULT-VALUE>
+									<MAX>8</MAX>
+									<MIN>8</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<ECUC-INTEGER-PARAM-DEF UUID="e5d6c1c3-ec9a-4b73-ac5e-9f80a55f9bb4">
+									<SHORT-NAME>FeeSectorHeader</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Sector Header</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">This value specifies the sector header size. This parameter is constant and can not be configured by the user.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:BaseUnit">BYTE</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>8</DEFAULT-VALUE>
+									<MAX>8</MAX>
+									<MIN>8</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+							</PARAMETERS>
+						</ECUC-PARAM-CONF-CONTAINER-DEF>
+						<ECUC-PARAM-CONF-CONTAINER-DEF UUID="1c2c1c7c-9b2e-4ef4-b415-7b9df0237484">
+							<SHORT-NAME>FeePartitionConfiguration</SHORT-NAME>
+							<LONG-NAME>
+								<L-4 L="EN">Partition Configuration</L-4>
+							</LONG-NAME>
+							<DESC>
+								<L-2 L="EN">Configuration of partition specific parameters for the Flash EEPROM Emulation module.</L-2>
+							</DESC>
+							<ADMIN-DATA>
+								<SDGS>
+									<SDG GID="DV:CfgPostBuild">
+										<SD GID="DV:postBuildSelectableChangeable">false</SD>
+										<SD GID="DV:postBuildNotDeletable">false</SD>
+									</SDG>
+								</SDGS>
+							</ADMIN-DATA>
+							<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+							<UPPER-MULTIPLICITY>4</UPPER-MULTIPLICITY>
+							<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+							<PARAMETERS>
+								<ECUC-INTEGER-PARAM-DEF UUID="21668fce-d7ed-42be-86ec-7f6b4a0aca26">
+									<SHORT-NAME>FeeBssThresholdReserved</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">BSS Threshold Reserved</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">BSS = Background Sector Switch; Copying data has less priority than serving user requests (including write).
+SectorSwitch becomes effictive, only if Fee was set to SLOW mode (via Fee_SetMode)
+
+This values affects the threshold the FEE starts a sector switch in Background Mode.
+It specifies the EXTRA amount of flash that shall be remaining when BSS starts.
+FEE automatically reserves the whole space all blocks in a partition will occupy.
+This is equal to at least one copy attempt per block.
+The extra reserve specified here makes room for additional attempts (in case of aborts).
+
+"BSS Threshold Reserved" shall be greater than "FSS Threshold Reserved".
+</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:BaseUnit">BYTE</SD>
+												<SD GID="DV:Unit">KBYTE</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>8192</DEFAULT-VALUE>
+									<MAX>2147483648</MAX>
+									<MIN>0</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<ECUC-INTEGER-PARAM-DEF UUID="bbf7e145-f597-4cd4-a4c0-513a7ab68ab5">
+									<SHORT-NAME>FeeFssThresholdReserved</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">FSS Threshold Reserved</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">FSS = Foreground Sector Switch; this is "last" chance handling of FFE - Sector Switch becomes urgent in order to keep Flash area writeable without using data.
+"Flash is almost full; clean-up is ugently necessary."
+Therefore it has higher priority than write jobs (directed to same partition).
+
+This values affects the threshold the FEE starts a sector switch in Background Mode.
+It specifies the EXTRA amount of flash that shall be remaining when BSS starts.
+FEE automatically reserves the whole space all blocks in a partition will occupy.
+This is equal to at least one copy attempt per block.
+The extra reserve specified here makes room for additional attempts (in case of aborts).
+
+"FSS Threshold Reserved" shall be smaller than "BSS Threshold Reserved".
+
+Note:
+Once the FSS Threshold was exceeded, Fee_DisableFss() (see "Enable API to allow/prohibit FSS"), would become effective - FEE inhibits any write access.
+Stopping write accesses this way is the only way to prevent FEE from performing Sector Switches at all.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:BaseUnit">BYTE</SD>
+												<SD GID="DV:Unit">KBYTE</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>4096</DEFAULT-VALUE>
+									<MAX>2147483648</MAX>
+									<MIN>0</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<ECUC-INTEGER-PARAM-DEF UUID="1eb8e2c1-2d5e-4156-8dd0-038b73253063">
+									<SHORT-NAME>FeeLowerSectorAddress</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Lower Sector Address</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">Logical start address of the lower sector.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:DefaultFormat">HEX</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>0</DEFAULT-VALUE>
+									<MAX>2147483648</MAX>
+									<MIN>0</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<ECUC-INTEGER-PARAM-DEF UUID="b85a6e24-d9b1-4471-afb4-63951f996fe6">
+									<SHORT-NAME>FeeLowerSectorSize</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Lower Sector Size</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">The size of the lower sector in bytes.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:BaseUnit">BYTE</SD>
+												<SD GID="DV:Unit">KBYTE</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>1024</DEFAULT-VALUE>
+									<MAX>2147483648</MAX>
+									<MIN>1</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<ECUC-INTEGER-PARAM-DEF UUID="1e013ba7-94d6-48db-a903-efc57c24c7a8">
+									<SHORT-NAME>FeeUpperSectorAddress</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Upper Sector Address</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">Logical start address of the upper sector.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:DefaultFormat">HEX</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>1024</DEFAULT-VALUE>
+									<MAX>2147483648</MAX>
+									<MIN>1</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<ECUC-INTEGER-PARAM-DEF UUID="653fa5a2-4d70-4624-8152-05ecabbc55b7">
+									<SHORT-NAME>FeeUpperSectorSize</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Upper Sector Size</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">The size of the upper sector in bytes.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:BaseUnit">BYTE</SD>
+												<SD GID="DV:Unit">KBYTE</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>1024</DEFAULT-VALUE>
+									<MAX>2147483648</MAX>
+									<MIN>1</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<ECUC-INTEGER-PARAM-DEF UUID="dad3da7f-ab6c-46c1-ab8e-1c729ca6dc14">
+									<SHORT-NAME>FeeAddressAlignment</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Address Alignment</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">Address Alignment influences the way FEE stores data entities in Flash memory.
+(Most, but not all) single Entities will start at addresses being an integral  multiple of FeeAdressAlignment.
+
+This alignment itself must be equal to or greater than this partition's FeeWrite alignment.
+
+It needs to be set in a way that distinct data entities cannot influence other entities already stored in flash memory, especially if programming accesses get aborted, e.g. due to a reset.
+If this value is too small, a reset, aborting a programm access (e.g. writing some data related to a Block A) might cause structures related to another block B becoming unreadable.
+Unfortunately this is very hardware dependent; some platforms require an even stricter alignment for reading than for writing data.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:BaseUnit">BYTE</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>16</DEFAULT-VALUE>
+									<MAX>1024</MAX>
+									<MIN>8</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<ECUC-INTEGER-PARAM-DEF UUID="daba137b-c5fc-43af-b012-d77b6aeed4a4">
+									<SHORT-NAME>FeeWriteAlignment</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Write Alignment</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">Page Size of Flash Device for write jobs in bytes.
+This is the alignment of Fls_Write requests the FEE issues to the FLS: As well FlsAddresses as lengths are always multiples of this value.
+This affects the way FEE manages the flash memory. User data buffers are _not_ affected, i.e. RAM buffers, containing actuall data do not need to obey any specific alignment.
+
+This value shall be at least the maximum page size of all fls sectors being used by this partition.
+
+Using this value, an even stricter write alignment may be chosen, if it becomes necessary, for some HW specific reason. Such reasons could be consistency limitations caused by error detecting/error correcting codes implemented in HW. E.g.: Some devices support page sizes of 4bytes (which is the smallest writeable entity), but ECC is calculated and stored for 8byte entities.
+Please read the Fls driver and HW manuals carefully.
+
+Note that FEE does not suppport write alignments smaller than 8bytes, even if a Fls driver allows it.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:BaseUnit">BYTE</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>8</DEFAULT-VALUE>
+									<MAX>1024</MAX>
+									<MIN>8</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+							</PARAMETERS>
+							<REFERENCES>
+								<ECUC-REFERENCE-DEF UUID="9ffc80f3-ba1c-40ea-aa57-eb859a16951c">
+									<SHORT-NAME>FeePartitionDevice</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Partition Device</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">Reference to the device containing the partition.
+In general pertitions must not refer to different ConfigSets of one device.
+Currently all partitions must be located in same device.
+</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Fls/FlsConfigSet</DESTINATION-REF>
+								</ECUC-REFERENCE-DEF>
+							</REFERENCES>
+						</ECUC-PARAM-CONF-CONTAINER-DEF>
+						<ECUC-PARAM-CONF-CONTAINER-DEF UUID="5cd804f5-75f9-43f9-b136-347196aeef3c">
+							<SHORT-NAME>FeeSpecificFeatures</SHORT-NAME>
+							<LONG-NAME>
+								<L-4 L="EN">Specific Features</L-4>
+							</LONG-NAME>
+							<DESC>
+								<L-2 L="EN">Container for specific features. These parameters are not specific to a block.</L-2>
+							</DESC>
+							<ADMIN-DATA>
+								<SDGS>
+									<SDG GID="DV:CfgPostBuild">
+										<SD GID="DV:postBuildSelectableChangeable">false</SD>
+										<SD GID="DV:postBuildNotDeletable">false</SD>
+									</SDG>
+								</SDGS>
+							</ADMIN-DATA>
+							<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+							<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+							<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+							<PARAMETERS>
+								<!-- PARAMETER DEFINITION: FeeApplErrorCallbackFunction -->
+								<ECUC-FUNCTION-NAME-DEF UUID="028b16c4-872b-4f14-8bd1-d508df071cdd">
+									<SHORT-NAME>FeeApplErrorCallbackFunction</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Application Error Callback Function</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">Name of user-defined error callback.
+
+Prototype:
+Fee_ErrorCallbackReturnType Fee_ErrorCallbackNotification(uint8 partitionId, Fee_SectorErrorType err)</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<ECUC-FUNCTION-NAME-DEF-VARIANTS>
+										<ECUC-FUNCTION-NAME-DEF-CONDITIONAL>
+											<DEFAULT-VALUE>Appl_CriticalErrorCallback</DEFAULT-VALUE>
+										</ECUC-FUNCTION-NAME-DEF-CONDITIONAL>
+									</ECUC-FUNCTION-NAME-DEF-VARIANTS>
+								</ECUC-FUNCTION-NAME-DEF>
+								<!-- PARAMETER DEFINITION: FeeApplErrorCallbackIncludeFile -->
+								<ECUC-STRING-PARAM-DEF UUID="78f83fa3-aad8-464f-8675-ecfccdc23531">
+									<SHORT-NAME>FeeApplErrorCallbackIncludeFile</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Application Error Callback Include File</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">Include file, declaring the "Application Error Callback Function"</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<ECUC-STRING-PARAM-DEF-VARIANTS>
+										<ECUC-STRING-PARAM-DEF-CONDITIONAL>
+											<DEFAULT-VALUE>Appl_Include.h</DEFAULT-VALUE>
+										</ECUC-STRING-PARAM-DEF-CONDITIONAL>
+									</ECUC-STRING-PARAM-DEF-VARIANTS>
+								</ECUC-STRING-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: FeeGetEraseCycleApi -->
+								<ECUC-BOOLEAN-PARAM-DEF UUID="9892394e-c5fc-4d5d-9881-fbb63ef205ca">
+									<SHORT-NAME>FeeGetEraseCycleApi</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">GetEraseCycle Api</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">Pre-processor switch to enable and disable the API to read out the erase cycles of a specific sector.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: FeeGetWriteCycleApi -->
+								<ECUC-BOOLEAN-PARAM-DEF UUID="986f26a8-5af7-4106-9b9d-a4e28be2f757">
+									<SHORT-NAME>FeeGetWriteCycleApi</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">GetWriteCycleApi</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">Pre-processor switch to enable and disable the API to read out the write cycles of a specific block.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: FeeUseApplErrorCallback -->
+								<ECUC-BOOLEAN-PARAM-DEF UUID="88756610-457c-4a1b-adfb-b4f9726fc249">
+									<SHORT-NAME>FeeUseApplErrorCallback</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Application Error Callback</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">Switch to enable and disable the usage of user-defined Error Callback (named as specified in "Application Error Callback Function")
+
+It is called by FEE in case of serious error detected within a partition, such as:
+- no valid sector header found
+- formatting sector failed (erase or write sector header)
+- sector overflow
+
+Calback's return value decides, how to coninue:
+- resolve automatically (accepting the risk of losing data)
+- force FEE into read only mode
+- force FEE into reject all mode (even all subsequent reads will fail)</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: FeeUseJobCache -->
+								<ECUC-BOOLEAN-PARAM-DEF UUID="3784fedd-d49c-483b-a328-2bcd4332ac4c">
+									<SHORT-NAME>FeeUseJobCache</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Use Job Cache</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">Not used!
+Switch to enable and disable the usage of the job cache functionality.
+This feature is currently not implemented; this switch will be ignored.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: FeeForceSectorSwitchApi -->
+								<ECUC-BOOLEAN-PARAM-DEF UUID="a65f233d-809a-498f-9d03-a21d3c34cbd8">
+									<SHORT-NAME>FeeForceSectorSwitchApi</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Force Sector Switch Api</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">Pre-processor switch to enable and disable the API to force two sector switches.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: FeeDataConversionApi -->
+								<ECUC-BOOLEAN-PARAM-DEF UUID="afe25124-2de0-4bf1-b975-72cfc8b73881">
+									<SHORT-NAME>FeeDataConversionApi</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Data Conversion Api</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">Enable/Disable DataConversion API.
+
+Availability of this API is an optional feature that must be explicitly ordered.
+If it is not available, this parameter's setting is without any effect.
+</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="6ad2cfe8-136b-4134-82c4-1c457e7c2b92">
+									<SHORT-NAME>FeeFblConfig</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Flash Bootloader Configuration</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter indicates, if this configuration is a block configuration for the FBL or the application. It is important to set this value correct, because with this parameter the Fee detects an incomplete configuration.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-INTEGER-PARAM-DEF UUID="e31d8608-0636-413b-8b78-1732200d8b77">
+									<SHORT-NAME>FeeMaxLinkTableSize</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Maximum Number of LinkTable Entries</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">Limit the maximum number of LinkTable entries.
+The LinkTable size that will be actually used is the smaller one out of this value and the maximum Id used in Block Configuration.
+Any Block with a BlockId exceeding maximum Table Size will always be searched using ChunkHopping.
+
+A size-limited LinkTable saves flash, at the cost of increased search efforts (for all blocks whose IDs exceed LinkTable size).
+Limiting the size is only  recommended when using rather small flashes (partitions) with large "Write Alignment" (&gt;&gt; 8Bytes), i.e. if Link-Table requires comparably much flash space.
+</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:DefaultFormat">DEC</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<CONFIGURATION-CLASS-AFFECTION>
+										<AFFECTION-KIND>NO-AFFECT</AFFECTION-KIND>
+									</CONFIGURATION-CLASS-AFFECTION>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>4095</DEFAULT-VALUE>
+									<MAX>4095</MAX>
+									<MIN>0</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<ECUC-STRING-PARAM-DEF UUID="4febd5cd-2cfa-419a-b073-7060db19b821">
+									<SHORT-NAME>FeeDbgCallbackIncludeFile</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Include File for Debug Callbacks</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">To aid debugging and testing FEE may be configured to invoke callbacks at certain points of operation.
+For more details please refer to the TechRef. </L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+								</ECUC-STRING-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="61b198e6-677b-4acb-86f0-cb590437dd54">
+									<SHORT-NAME>FeeFssControlApi</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Enable API to allow/prohibit FSS</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">- Fee_EnableFss
+- Fee_DisableFss
+
+Note that if this API is used, Fee_Write requests do not affect FSS enabling.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+							</PARAMETERS>
+						</ECUC-PARAM-CONF-CONTAINER-DEF>
+					</CONTAINERS>
+				</ECUC-MODULE-DEF>
+				<BSW-IMPLEMENTATION UUID="353aeec3-1f5b-40ae-b3c2-72e88d6b5e1a">
+					<SHORT-NAME>Fee_Impl</SHORT-NAME>
+					<PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+					<SW-VERSION>8.01.05</SW-VERSION>
+					<USED-CODE-GENERATOR>DaVinci Configurator</USED-CODE-GENERATOR>
+					<VENDOR-ID>30</VENDOR-ID>
+					<AR-RELEASE-VERSION>4.00.03</AR-RELEASE-VERSION>
+					<BEHAVIOR-REF DEST="BSW-INTERNAL-BEHAVIOR">/MICROSAR/Fee_ib_bswmd/BswModuleDescriptions/Fee/FeeBehavior</BEHAVIOR-REF>
+					<PRECONFIGURED-CONFIGURATION-REFS>
+						<PRECONFIGURED-CONFIGURATION-REF DEST="ECUC-MODULE-CONFIGURATION-VALUES">/MICROSAR/Fee_Pre</PRECONFIGURED-CONFIGURATION-REF>
+					</PRECONFIGURED-CONFIGURATION-REFS>
+					<RECOMMENDED-CONFIGURATION-REFS>
+						<RECOMMENDED-CONFIGURATION-REF DEST="ECUC-MODULE-CONFIGURATION-VALUES">/MICROSAR/Fee_Rec</RECOMMENDED-CONFIGURATION-REF>
+					</RECOMMENDED-CONFIGURATION-REFS>
+					<VENDOR-SPECIFIC-MODULE-DEF-REFS>
+						<VENDOR-SPECIFIC-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/MICROSAR/Fee</VENDOR-SPECIFIC-MODULE-DEF-REF>
+					</VENDOR-SPECIFIC-MODULE-DEF-REFS>
+				</BSW-IMPLEMENTATION>
+				<ECUC-MODULE-CONFIGURATION-VALUES UUID="16792b1f-5e0a-4611-a039-0c88746927f5">
+					<SHORT-NAME>Fee_Pre</SHORT-NAME>
+					<DEFINITION-REF DEST="ECUC-MODULE-DEF">/MICROSAR/Fee</DEFINITION-REF>
+					<CONTAINERS></CONTAINERS>
+				</ECUC-MODULE-CONFIGURATION-VALUES>
+				<ECUC-MODULE-CONFIGURATION-VALUES UUID="42c6682f-508c-4b26-a9a6-b24e9b91d3e9">
+					<SHORT-NAME>Fee_Rec</SHORT-NAME>
+					<DEFINITION-REF DEST="ECUC-MODULE-DEF">/MICROSAR/Fee</DEFINITION-REF>
+					<CONTAINERS></CONTAINERS>
+				</ECUC-MODULE-CONFIGURATION-VALUES>
+			</ELEMENTS>
+		</AR-PACKAGE>
+	</AR-PACKAGES>
+</AUTOSAR>

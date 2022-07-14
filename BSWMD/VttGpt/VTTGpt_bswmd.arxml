@@ -1,0 +1,970 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-0-3.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://autosar.org/schema/r4.0">
+	<AR-PACKAGES>
+		<AR-PACKAGE UUID="ff62c97b-4299-4a0d-8d76-0353f64a34ee">
+			<SHORT-NAME>MICROSAR</SHORT-NAME>
+			<AR-PACKAGES>
+				<AR-PACKAGE UUID="462fb0a2-423a-4a1c-9614-dd094dd68cea">
+					<SHORT-NAME>VTT</SHORT-NAME>
+					<ELEMENTS>
+						<ECUC-MODULE-DEF UUID="9987ed3b-521b-46b3-9c49-d50a76f3123c">
+							<SHORT-NAME>VTTGpt</SHORT-NAME>
+							<DESC>
+								<L-2 L="EN">Configuration of the Gpt (General Purpose Timer) module.
+
+</L-2>
+							</DESC>
+							<CATEGORY>VENDOR_SPECIFIC_MODULE_DEFINITION</CATEGORY>
+							<ADMIN-DATA>
+								<DOC-REVISIONS>
+									<DOC-REVISION>
+										<REVISION-LABEL>1.00.00</REVISION-LABEL>
+										<ISSUED-BY>virlg</ISSUED-BY>
+										<DATE>2013-09-17T10:22:06+02:00</DATE>
+										<MODIFICATIONS>
+											<MODIFICATION>
+												<CHANGE>
+													<L-2 L="EN">Bswmd created for VIPGpt</L-2>
+												</CHANGE>
+												<REASON>
+													<L-2 L="EN">ESCAN00068489</L-2>
+												</REASON>
+											</MODIFICATION>
+										</MODIFICATIONS>
+									</DOC-REVISION>
+									<DOC-REVISION>
+										<REVISION-LABEL>1.00.01</REVISION-LABEL>
+										<ISSUED-BY>virlg</ISSUED-BY>
+										<DATE>2014-03-12T09:59:16+01:00</DATE>
+										<MODIFICATIONS>
+											<MODIFICATION>
+												<CHANGE>
+													<L-2 L="EN">Modification</L-2>
+												</CHANGE>
+												<REASON>
+													<L-2 L="EN">Multipl Conf Container removed</L-2>
+												</REASON>
+											</MODIFICATION>
+										</MODIFICATIONS>
+									</DOC-REVISION>
+									<DOC-REVISION>
+										<REVISION-LABEL>1.00.02</REVISION-LABEL>
+										<ISSUED-BY>virchl</ISSUED-BY>
+										<DATE>2014-05-15T11:05:15+02:00</DATE>
+										<MODIFICATIONS>
+											<MODIFICATION>
+												<CHANGE>
+													<L-2 L="EN">Modification</L-2>
+												</CHANGE>
+												<REASON>
+													<L-2 L="EN">ESCAN00070801</L-2>
+												</REASON>
+											</MODIFICATION>
+										</MODIFICATIONS>
+									</DOC-REVISION>
+									<DOC-REVISION>
+										<REVISION-LABEL>1.00.03</REVISION-LABEL>
+										<ISSUED-BY>virchl</ISSUED-BY>
+										<DATE>2014-08-26T01:46:11+02:00</DATE>
+										<MODIFICATIONS>
+											<MODIFICATION>
+												<CHANGE>
+													<L-2 L="EN">Modification</L-2>
+												</CHANGE>
+												<REASON>
+													<L-2 L="EN">Upper Multiplicity of GptChannelConfiguration set to 20</L-2>
+												</REASON>
+											</MODIFICATION>
+										</MODIFICATIONS>
+									</DOC-REVISION>
+									<DOC-REVISION>
+										<REVISION-LABEL>1.00.03</REVISION-LABEL>
+										<ISSUED-BY>virchl</ISSUED-BY>
+										<DATE>2014-08-26T01:46:54+02:00</DATE>
+										<MODIFICATIONS>
+											<MODIFICATION>
+												<CHANGE>
+													<L-2 L="EN">Modification</L-2>
+												</CHANGE>
+												<REASON>
+													<L-2 L="EN">Multiplicity of GptCfgIncludeList set to 0:n</L-2>
+												</REASON>
+											</MODIFICATION>
+										</MODIFICATIONS>
+									</DOC-REVISION>
+									<DOC-REVISION>
+										<REVISION-LABEL>1.00.03</REVISION-LABEL>
+										<ISSUED-BY>virchl</ISSUED-BY>
+										<DATE>2014-08-26T01:48:53+02:00</DATE>
+										<MODIFICATIONS>
+											<MODIFICATION>
+												<CHANGE>
+													<L-2 L="EN">Modification</L-2>
+												</CHANGE>
+												<REASON>
+													<L-2 L="EN">SW Version set to 1.00.02</L-2>
+												</REASON>
+											</MODIFICATION>
+										</MODIFICATIONS>
+									</DOC-REVISION>
+									<DOC-REVISION>
+										<REVISION-LABEL>1.00.04</REVISION-LABEL>
+										<ISSUED-BY>virchl</ISSUED-BY>
+										<DATE>2014-11-21T01:35:27+01:00</DATE>
+										<MODIFICATIONS>
+											<MODIFICATION>
+												<CHANGE>
+													<L-2 L="EN">Multiplicity of GptChannelConfiguration set to 0:20 instead of 1:20</L-2>
+												</CHANGE>
+												<REASON>
+													<L-2 L="EN">ESCAN00079355</L-2>
+												</REASON>
+											</MODIFICATION>
+										</MODIFICATIONS>
+									</DOC-REVISION>
+									<DOC-REVISION>
+										<REVISION-LABEL>1.00.05</REVISION-LABEL>
+										<ISSUED-BY>virchl</ISSUED-BY>
+										<DATE>2014-11-25T07:19:29+01:00</DATE>
+										<MODIFICATIONS>
+											<MODIFICATION>
+												<CHANGE>
+													<L-2 L="EN">Multiplicity of GptChannelConfigSet set to 0:1</L-2>
+												</CHANGE>
+												<REASON>
+													<L-2 L="EN">ESCAN00079355</L-2>
+												</REASON>
+											</MODIFICATION>
+										</MODIFICATIONS>
+									</DOC-REVISION>
+									<DOC-REVISION>
+										<REVISION-LABEL>2.00.00</REVISION-LABEL>
+										<ISSUED-BY>virchl</ISSUED-BY>
+										<DATE>2015-01-20T11:09:55+01:00</DATE>
+										<MODIFICATIONS>
+											<MODIFICATION>
+												<CHANGE>
+													<L-2 L="EN">Global Renaming of VIP to VTT</L-2>
+												</CHANGE>
+												<REASON>
+													<L-2 L="EN">FEAT-254</L-2>
+												</REASON>
+											</MODIFICATION>
+										</MODIFICATIONS>
+									</DOC-REVISION>
+									<DOC-REVISION>
+										<REVISION-LABEL>2.00.00</REVISION-LABEL>
+										<ISSUED-BY>virchl</ISSUED-BY>
+										<DATE>2015-01-20T11:09:57+01:00</DATE>
+										<MODIFICATIONS>
+											<MODIFICATION>
+												<CHANGE>
+													<L-2 L="EN">SwVersion set to 2.00.00</L-2>
+												</CHANGE>
+											</MODIFICATION>
+										</MODIFICATIONS>
+									</DOC-REVISION>
+									<DOC-REVISION>
+										<REVISION-LABEL>2.00.00</REVISION-LABEL>
+										<ISSUED-BY>virchl</ISSUED-BY>
+										<DATE>2015-01-20T11:09:57+01:00</DATE>
+										<MODIFICATIONS>
+											<MODIFICATION>
+												<CHANGE>
+													<L-2 L="EN">Default value of GptVersionInfoApi set to false</L-2>
+												</CHANGE>
+											</MODIFICATION>
+										</MODIFICATIONS>
+									</DOC-REVISION>
+									<DOC-REVISION>
+										<REVISION-LABEL>2.01.00</REVISION-LABEL>
+										<ISSUED-BY>virchl</ISSUED-BY>
+										<DATE>2015-07-08T10:14:05+02:00</DATE>
+										<MODIFICATIONS>
+											<MODIFICATION>
+												<CHANGE>
+													<L-2 L="EN">SwVersion set to 2.01.00</L-2>
+												</CHANGE>
+											</MODIFICATION>
+										</MODIFICATIONS>
+									</DOC-REVISION>
+									<DOC-REVISION>
+										<REVISION-LABEL>2.01.00</REVISION-LABEL>
+										<ISSUED-BY>virchl</ISSUED-BY>
+										<DATE>2015-07-08T10:14:10+02:00</DATE>
+										<MODIFICATIONS>
+											<MODIFICATION>
+												<CHANGE>
+													<L-2 L="EN">DisplaySettings for CFG5-Integer-Parameters added</L-2>
+												</CHANGE>
+											</MODIFICATION>
+										</MODIFICATIONS>
+									</DOC-REVISION>
+									<DOC-REVISION>
+										<REVISION-LABEL>2.02.00</REVISION-LABEL>
+										<ISSUED-BY>virchl</ISSUED-BY>
+										<DATE>2015-08-27T11:36:10+02:00</DATE>
+										<MODIFICATIONS>
+											<MODIFICATION>
+												<CHANGE>
+													<L-2 L="EN">SwVersion set to 2.02.00</L-2>
+												</CHANGE>
+												<REASON>
+													<L-2 L="EN">FEAT-1372</L-2>
+												</REASON>
+											</MODIFICATION>
+										</MODIFICATIONS>
+									</DOC-REVISION>
+									<DOC-REVISION>
+										<REVISION-LABEL>2.02.00</REVISION-LABEL>
+										<ISSUED-BY>virchl</ISSUED-BY>
+										<DATE>2015-09-09T09:28:21+02:00</DATE>
+										<MODIFICATIONS>
+											<MODIFICATION>
+												<CHANGE>
+													<L-2 L="EN">Parameter GptCfgIncludeList deleted</L-2>
+												</CHANGE>
+												<REASON>
+													<L-2 L="EN">ESCAN00085041</L-2>
+												</REASON>
+											</MODIFICATION>
+										</MODIFICATIONS>
+									</DOC-REVISION>
+									<DOC-REVISION>
+										<REVISION-LABEL>2.02.00</REVISION-LABEL>
+										<ISSUED-BY>virchl</ISSUED-BY>
+										<DATE>2015-09-14T05:09:56+02:00</DATE>
+										<MODIFICATIONS>
+											<MODIFICATION>
+												<CHANGE>
+													<L-2 L="EN">Multiplicity of container GptChannelConfiguration set to 0:50</L-2>
+												</CHANGE>
+												<REASON>
+													<L-2 L="EN">ESCAN00083485</L-2>
+												</REASON>
+											</MODIFICATION>
+										</MODIFICATIONS>
+									</DOC-REVISION>
+									<DOC-REVISION>
+										<REVISION-LABEL>2.03.00</REVISION-LABEL>
+										<ISSUED-BY>virchl</ISSUED-BY>
+										<DATE>2016-02-25T01:04:37+01:00</DATE>
+										<MODIFICATIONS>
+											<MODIFICATION>
+												<CHANGE>
+													<L-2 L="EN">SwVersion set to 2.03.00</L-2>
+												</CHANGE>
+												<REASON>
+													<L-2 L="EN">ESCAN00088374</L-2>
+												</REASON>
+											</MODIFICATION>
+										</MODIFICATIONS>
+									</DOC-REVISION>
+									<DOC-REVISION>
+										<REVISION-LABEL>2.04.00</REVISION-LABEL>
+										<ISSUED-BY>virchl</ISSUED-BY>
+										<DATE>2016-09-05T03:33:23+02:00</DATE>
+										<MODIFICATIONS>
+											<MODIFICATION>
+												<CHANGE>
+													<L-2 L="EN">SwVersion set to 2.04.00</L-2>
+												</CHANGE>
+												<REASON>
+													<L-2 L="EN">ESCAN00091736</L-2>
+												</REASON>
+											</MODIFICATION>
+										</MODIFICATIONS>
+									</DOC-REVISION>
+									<DOC-REVISION>
+										<REVISION-LABEL>2.04.01</REVISION-LABEL>
+										<ISSUED-BY>virchl</ISSUED-BY>
+										<DATE>2016-11-21T05:16:57+01:00</DATE>
+										<MODIFICATIONS>
+											<MODIFICATION>
+												<CHANGE>
+													<L-2 L="EN">Default of unused parameter GptChannelTickFrequency set to 1000000. Other components need this</L-2>
+												</CHANGE>
+												<REASON>
+													<L-2 L="EN">ESCAN00092927</L-2>
+												</REASON>
+											</MODIFICATION>
+										</MODIFICATIONS>
+									</DOC-REVISION>
+									<DOC-REVISION>
+										<REVISION-LABEL>2.05.00</REVISION-LABEL>
+										<ISSUED-BY>virbmz</ISSUED-BY>
+										<DATE>2017-01-13T10:24:54+01:00</DATE>
+										<MODIFICATIONS>
+											<MODIFICATION>
+												<CHANGE>
+													<L-2 L="EN">FEAT1824 Support a component-specific SafeBSW configuration switch (Vtt Mcal), destination ref for GptClockReference changed</L-2>
+												</CHANGE>
+												<REASON>
+													<L-2 L="EN">FEAT1824, OI-2064</L-2>
+												</REASON>
+											</MODIFICATION>
+										</MODIFICATIONS>
+									</DOC-REVISION>
+								</DOC-REVISIONS>
+							</ADMIN-DATA>
+							<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+							<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+							<SUPPORTED-CONFIG-VARIANTS>
+								<SUPPORTED-CONFIG-VARIANT>VARIANT-PRE-COMPILE</SUPPORTED-CONFIG-VARIANT>
+							</SUPPORTED-CONFIG-VARIANTS>
+							<CONTAINERS>
+								<!-- Container Definition: GptChannelConfigSet -->
+								<ECUC-PARAM-CONF-CONTAINER-DEF UUID="13b4b6fd-9e71-4aaa-bf6c-54d3cabfcdf4">
+									<SHORT-NAME>GptChannelConfigSet</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This container includes the configuration set which contains the configured GPT channels. This way, different configuration sets can be defined for post-build process.
+
+</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:postBuildSelectableChangeable">false</SD>
+												<SD GID="DV:postBuildNotDeletable">false</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+									<MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+									<SUB-CONTAINERS>
+										<!-- Container Definition: GptChannelConfiguration -->
+										<ECUC-PARAM-CONF-CONTAINER-DEF UUID="f2efd335-1668-4e33-ba6f-c3c0aa24bab6">
+											<SHORT-NAME>GptChannelConfiguration</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">This container includes the configuration of an individual GPT channel.
+
+</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:CfgPostBuild">
+														<SD GID="DV:postBuildSelectableChangeable">false</SD>
+														<SD GID="DV:postBuildNotDeletable">false</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>50</UPPER-MULTIPLICITY>
+											<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+											<MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+											<PARAMETERS>
+												<!-- PARAMETER DEFINITION: GptChannelId -->
+												<ECUC-INTEGER-PARAM-DEF UUID="0d52f76a-d23c-42d2-accf-818b43515e87">
+													<SHORT-NAME>GptChannelId</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Parameter not used.
+
+This parameter defines the channel Id of the GPT channel. This value will be assigned to the symbolic name derived of the GptChannelConfiguration container short name.
+
+
+</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>0</DEFAULT-VALUE>
+													<MAX>4294967295</MAX>
+													<MIN>0</MIN>
+												</ECUC-INTEGER-PARAM-DEF>
+												<!-- PARAMETER DEFINITION: GptChannelMode -->
+												<ECUC-ENUMERATION-PARAM-DEF UUID="023b9ff2-3c68-41a3-9ef8-b78d72cbdf6a">
+													<SHORT-NAME>GptChannelMode</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">This parameter defines the behaviour of the timer channel after the target time is reached.
+
+GPT_MODE_CONTINOUS: Timerchannel is restarted automatically after reaching its end value.
+GPT_MODE_ONESHOT: Timerchannel stops after reaching its end value.
+
+</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>GPT_CH_MODE_ONESHOT</DEFAULT-VALUE>
+													<LITERALS>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="403796a3-f326-4613-97dd-97dc1f233da6">
+															<SHORT-NAME>GPT_CH_MODE_CONTINUOUS</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">Continuous</L-4>
+															</LONG-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="2a200bf7-1570-4f4a-ae58-5f2e70f90269">
+															<SHORT-NAME>GPT_CH_MODE_ONESHOT</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">One Shot</L-4>
+															</LONG-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+													</LITERALS>
+												</ECUC-ENUMERATION-PARAM-DEF>
+												<!-- PARAMETER DEFINITION: GptChannelTickFrequency -->
+												<ECUC-FLOAT-PARAM-DEF UUID="e9d60005-13fd-4603-bd4b-8c1945343354">
+													<SHORT-NAME>GptChannelTickFrequency</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Parameter not used.
+
+This parameter defines the tick frequency of the timer channel in Hz.
+
+</L-2>
+													</DESC>
+													<ADMIN-DATA>
+														<SDGS>
+															<SDG GID="DV:Display">
+																<SD GID="DV:BaseUnit">HZ</SD>
+																<SD GID="DV:Unit">KHZ</SD>
+															</SDG>
+														</SDGS>
+													</ADMIN-DATA>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>1000000</DEFAULT-VALUE>
+													<MAX>1000000</MAX>
+													<MIN>1000000</MIN>
+												</ECUC-FLOAT-PARAM-DEF>
+												<!-- PARAMETER DEFINITION: GptChannelTickValueMax -->
+												<ECUC-INTEGER-PARAM-DEF UUID="0c11c48f-59d1-43b2-b78b-82f0e9e3dbd8">
+													<SHORT-NAME>GptChannelTickValueMax</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Parameter not used.
+
+This parameter defines the maximum value in ticks, the timer channel is able to count. With the next tick, the timer rolls over to zero.
+
+</L-2>
+													</DESC>
+													<ADMIN-DATA>
+														<SDGS>
+															<SDG GID="DV:Display">
+																<SD GID="DV:DefaultFormat">DEC</SD>
+															</SDG>
+														</SDGS>
+													</ADMIN-DATA>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>4294967295</DEFAULT-VALUE>
+													<MAX>4294967295</MAX>
+													<MIN>0</MIN>
+												</ECUC-INTEGER-PARAM-DEF>
+												<!-- PARAMETER DEFINITION: GptEnableWakeup -->
+												<ECUC-BOOLEAN-PARAM-DEF UUID="07ded4f6-ef87-477f-82ab-865e54fe1f24">
+													<SHORT-NAME>GptEnableWakeup</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">This parameter defines whether the wakeup capability of MCU for a channel is enabled.
+
+True: Wakeup capability of MCU for a channel is enabled.
+False: Wakeup capability of MCU for a channel is not enabled.
+
+</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>false</DEFAULT-VALUE>
+												</ECUC-BOOLEAN-PARAM-DEF>
+												<!-- PARAMETER DEFINITION: GptNotification -->
+												<ECUC-FUNCTION-NAME-DEF UUID="05b7ed5b-2455-49a6-95bd-c8b26c1a2f29">
+													<SHORT-NAME>GptNotification</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">This parameter defines a function pointer to callback function (for non-wakeup notification).
+
+If no notification should be called, please use one of the following capabilities:
+ - Delete the parameter GptNotification
+ - Leave the parameter empty
+ - Configure the parameter with "NULL_PTR"
+
+If the parameter has an invalid expression, the behaviour is undefined.
+
+In case of an invalid synchronization from the real target, the parameter has to be set user defined and one of the capabilities above should be followed.</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+												</ECUC-FUNCTION-NAME-DEF>
+											</PARAMETERS>
+											<REFERENCES>
+												<!-- Reference Definition: GptChannelClkSrcRef -->
+												<ECUC-REFERENCE-DEF UUID="7492371a-e3b5-4c2c-af0e-aed4f5b2184b">
+													<SHORT-NAME>GptChannelClkSrcRef</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Parameter not used.
+
+Reference to the GptClockReferencePoint from which the channel
+
+</L-2>
+													</DESC>
+													<INTRODUCTION>
+														<P>
+															<L-1 L="EN">clock is derived.</L-1>
+														</P>
+													</INTRODUCTION>
+													<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/VTT/VTTGpt/GptDriverConfiguration/GptClockReferencePoint</DESTINATION-REF>
+												</ECUC-REFERENCE-DEF>
+											</REFERENCES>
+											<SUB-CONTAINERS>
+												<!-- Container Definition: GptWakeupConfiguration -->
+												<ECUC-PARAM-CONF-CONTAINER-DEF UUID="2f2c870a-060d-4c38-a147-dcf6167c58b4">
+													<SHORT-NAME>GptWakeupConfiguration</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">This container includes configuration data for wakeup configuration.
+</L-2>
+													</DESC>
+													<ADMIN-DATA>
+														<SDGS>
+															<SDG GID="DV:CfgPostBuild">
+																<SD GID="DV:postBuildSelectableChangeable">false</SD>
+																<SD GID="DV:postBuildNotDeletable">false</SD>
+															</SDG>
+														</SDGS>
+													</ADMIN-DATA>
+													<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+													<MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+													<REFERENCES>
+														<!-- Symbolic Name Reference Definition: GptWakeupSourceRef -->
+														<ECUC-SYMBOLIC-NAME-REFERENCE-DEF UUID="0499c9eb-e3aa-45ba-896a-aa672b01c039">
+															<SHORT-NAME>GptWakeupSourceRef</SHORT-NAME>
+															<DESC>
+																<L-2 L="EN">Reference to Ecu State Manager. In case the wakeup-capability is true this value is transmitted to the Ecu State Manager.
+
+</L-2>
+															</DESC>
+															<INTRODUCTION>
+																<P>
+																	<L-1 L="EN">Implementation Type: reference to EcuM_WakeupSourceType</L-1>
+																</P>
+															</INTRODUCTION>
+															<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+															<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+															<IMPLEMENTATION-CONFIG-CLASSES>
+																<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															</IMPLEMENTATION-CONFIG-CLASSES>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+															<REQUIRES-INDEX>false</REQUIRES-INDEX>
+															<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuM/EcuMConfiguration/EcuMCommonConfiguration/EcuMWakeupSource</DESTINATION-REF>
+														</ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+													</REFERENCES>
+												</ECUC-PARAM-CONF-CONTAINER-DEF>
+											</SUB-CONTAINERS>
+										</ECUC-PARAM-CONF-CONTAINER-DEF>
+									</SUB-CONTAINERS>
+								</ECUC-PARAM-CONF-CONTAINER-DEF>
+								<!-- Container Definition: GptConfigurationOfOptApiServices -->
+								<ECUC-PARAM-CONF-CONTAINER-DEF UUID="3f60788f-7673-442a-86e5-50a9e5d34138">
+									<SHORT-NAME>GptConfigurationOfOptApiServices</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This container includes all configuration switches for configuring optional API services of the GPT driver.
+
+</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:postBuildSelectableChangeable">false</SD>
+												<SD GID="DV:postBuildNotDeletable">false</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+									<MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+									<PARAMETERS>
+										<!-- PARAMETER DEFINITION: GptDeinitApi -->
+										<ECUC-BOOLEAN-PARAM-DEF UUID="0e081ee2-0fa2-4ae9-94a3-3308d8938fca">
+											<SHORT-NAME>GptDeinitApi</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter defines whether the function Gpt_DeInit() is enabled or disabled.
+
+True: API Gpt_DeInit() is supported (function provided)
+False: API Gpt_DeInit() is not supported (function not provided)
+
+</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>true</DEFAULT-VALUE>
+										</ECUC-BOOLEAN-PARAM-DEF>
+										<!-- PARAMETER DEFINITION: GptEnableDisableNotificationApi -->
+										<ECUC-BOOLEAN-PARAM-DEF UUID="4e249169-53b7-497f-ba94-3d3e8a46d739">
+											<SHORT-NAME>GptEnableDisableNotificationApi</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter defines whether the functions Gpt_EnableNotification() and Gpt_DisableNotification() are enabled or disabled.
+
+True: APIs  Gpt_EnableNotification() and Gpt_DisableNotification() are supported (functions provided)
+False: APIs  Gpt_EnableNotification() and Gpt_DisableNotification() are not supported (functions not provided)
+
+</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>true</DEFAULT-VALUE>
+										</ECUC-BOOLEAN-PARAM-DEF>
+										<!-- PARAMETER DEFINITION: GptTimeElapsedApi -->
+										<ECUC-BOOLEAN-PARAM-DEF UUID="9df3260d-c802-4926-be81-12dd4f1b658c">
+											<SHORT-NAME>GptTimeElapsedApi</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter defines whether the function Gpt_GetTimeElapsed() is enabled or disabled.
+
+True: API Gpt_GetTimeElapsed() is supported (function provided)
+False: API Gpt_GetTimeElapsed() is not supported (function not provided)
+
+</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>true</DEFAULT-VALUE>
+										</ECUC-BOOLEAN-PARAM-DEF>
+										<!-- PARAMETER DEFINITION: GptTimeRemainingApi -->
+										<ECUC-BOOLEAN-PARAM-DEF UUID="38177650-a936-4c28-a8d1-e5b801851c32">
+											<SHORT-NAME>GptTimeRemainingApi</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter defines whether the function Gpt_GetTimeRemaining() is enabled or disabled.
+
+True: API Gpt_GetTimeRemaining() is supported (function provided)
+False: API Gpt_GetTimeRemaining() is not supported (function not provided)
+
+</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>true</DEFAULT-VALUE>
+										</ECUC-BOOLEAN-PARAM-DEF>
+										<!-- PARAMETER DEFINITION: GptVersionInfoApi -->
+										<ECUC-BOOLEAN-PARAM-DEF UUID="05086903-61da-4c00-8901-83f1b57bcc63">
+											<SHORT-NAME>GptVersionInfoApi</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter enables/disables the function Gpt_GetVersionInfo() to get major, minor and patch version information.
+
+</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>false</DEFAULT-VALUE>
+										</ECUC-BOOLEAN-PARAM-DEF>
+										<!-- PARAMETER DEFINITION: GptWakeupFunctionalityApi -->
+										<ECUC-BOOLEAN-PARAM-DEF UUID="fc432c5f-5b7e-458d-bef1-050901baa58a">
+											<SHORT-NAME>GptWakeupFunctionalityApi</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter defines whether the functions Gpt_SetMode(), Gpt_EnableWakeup(), Gpt_DisableWakeup() and Gpt_CheckWakeup() is enabled or disabled.
+
+True: APIs Gpt_SetMode(), Gpt_EnableWakeup(), Gpt_DisableWakeup() and Gpt_CheckWakeup() are supported (functions provided).
+False: APIs Gpt_SetMode(), Gpt_EnableWakeup(), Gpt_DisableWakeup() and Gpt_CheckWakeup() are not supported (functions not provided)
+
+</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>true</DEFAULT-VALUE>
+										</ECUC-BOOLEAN-PARAM-DEF>
+									</PARAMETERS>
+								</ECUC-PARAM-CONF-CONTAINER-DEF>
+								<!-- Container Definition: GptDriverConfiguration -->
+								<ECUC-PARAM-CONF-CONTAINER-DEF UUID="ec1cdb1f-ee36-4a1b-bdbd-3c406dcd7bf6">
+									<SHORT-NAME>GptDriverConfiguration</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">General configuration parameteres of the GPT module.
+
+</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:postBuildSelectableChangeable">false</SD>
+												<SD GID="DV:postBuildNotDeletable">false</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+									<MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+									<PARAMETERS>
+										<!-- PARAMETER DEFINITION: GptDevErrorDetect -->
+										<ECUC-BOOLEAN-PARAM-DEF UUID="cf59d62c-f779-44da-a0bf-5190c8f99c68">
+											<SHORT-NAME>GptDevErrorDetect</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter switches the Development Error Detection and Notification ON or OFF.
+
+True: Development error detection is enabled.
+False: Development error detection is disabeld.
+
+Note: In general, the development error detection is recommended during pre-test phase. It is not recommended to enable the development error detection in production code due to increased runtime and ROM needs.
+
+
+</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>true</DEFAULT-VALUE>
+										</ECUC-BOOLEAN-PARAM-DEF>
+										<!-- PARAMETER DEFINITION: GptReportWakeupSource -->
+										<ECUC-BOOLEAN-PARAM-DEF UUID="7ed9beb4-12d0-49f7-bb44-a528170c7f78">
+											<SHORT-NAME>GptReportWakeupSource</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter defines whether wakeup source reporting is enabled or disabled.
+
+True: Wakeup source reporting is enabled.
+False: Wakeup source reporting is disabled.
+
+</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>false</DEFAULT-VALUE>
+										</ECUC-BOOLEAN-PARAM-DEF>
+										<ECUC-BOOLEAN-PARAM-DEF UUID="c54e10d8-118b-4373-a4c2-5a5a34998d57">
+											<SHORT-NAME>GptSafeBswChecks</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Selects if safety checks are used. These checks improve robustness as e.g. invalid parameters are checked before function is executed. This attribute has to be enabled for safety projects where this component is mapped to an ASIL partition.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>false</DEFAULT-VALUE>
+										</ECUC-BOOLEAN-PARAM-DEF>
+									</PARAMETERS>
+									<SUB-CONTAINERS>
+										<!-- Container Definition: GptClockReferencePoint -->
+										<ECUC-PARAM-CONF-CONTAINER-DEF UUID="f0ea5a49-e0ba-415c-86fc-0177a7c4eec4">
+											<SHORT-NAME>GptClockReferencePoint</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">This container includes a parameter, which represents a reference to a container of the type McuClockReferencePoint (defined in module MCU).
+
+</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:CfgPostBuild">
+														<SD GID="DV:postBuildSelectableChangeable">false</SD>
+														<SD GID="DV:postBuildNotDeletable">false</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<INTRODUCTION>
+												<P>
+													<L-1 L="EN">A container is needed to support multiple clock references (hardware dependent).</L-1>
+												</P>
+											</INTRODUCTION>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+											<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+											<MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+											<REFERENCES>
+												<!-- Reference Definition: GptClockReference -->
+												<ECUC-REFERENCE-DEF UUID="17e94b70-b419-4f48-bc45-b15596c5b42e">
+													<SHORT-NAME>GptClockReference</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Parameter not used.
+
+Reference to a container of the type McuClockReferencePoint, to select an input clock.
+
+</L-2>
+													</DESC>
+													<INTRODUCTION>
+														<P>
+															<L-1 L="EN">The configuration editor for the GPT module can support the integrator by only allowing a selection of those clock reference points that can be connected physically to the GPT hardware peripheral.
+                                                The desired frequency (desired by GPT) has to be the same as the selected and provided frequency of the MCU configuration. This has to be checked automatically.</L-1>
+														</P>
+													</INTRODUCTION>
+													<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/VTT/VTTMcu/McuModuleConfiguration/McuClockSettingConfig/McuClockReferencePoint</DESTINATION-REF>
+												</ECUC-REFERENCE-DEF>
+											</REFERENCES>
+										</ECUC-PARAM-CONF-CONTAINER-DEF>
+									</SUB-CONTAINERS>
+								</ECUC-PARAM-CONF-CONTAINER-DEF>
+							</CONTAINERS>
+						</ECUC-MODULE-DEF>
+						<BSW-IMPLEMENTATION UUID="6502d435-ef39-4b59-9495-f6c3e5a81ddf">
+							<SHORT-NAME>VTTGpt_Impl</SHORT-NAME>
+							<PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+							<SW-VERSION>2.05.00</SW-VERSION>
+							<USED-CODE-GENERATOR>cMSR</USED-CODE-GENERATOR>
+							<VENDOR-ID>30</VENDOR-ID>
+							<AR-RELEASE-VERSION>4.00.03</AR-RELEASE-VERSION>
+							<PRECONFIGURED-CONFIGURATION-REFS>
+								<PRECONFIGURED-CONFIGURATION-REF DEST="ECUC-MODULE-CONFIGURATION-VALUES">/MICROSAR/VTT/VTTGpt_Pre</PRECONFIGURED-CONFIGURATION-REF>
+							</PRECONFIGURED-CONFIGURATION-REFS>
+							<RECOMMENDED-CONFIGURATION-REFS>
+								<RECOMMENDED-CONFIGURATION-REF DEST="ECUC-MODULE-CONFIGURATION-VALUES">/MICROSAR/VTT/VTTGpt_Rec</RECOMMENDED-CONFIGURATION-REF>
+							</RECOMMENDED-CONFIGURATION-REFS>
+							<VENDOR-SPECIFIC-MODULE-DEF-REFS>
+								<VENDOR-SPECIFIC-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/MICROSAR/VTT/VTTGpt</VENDOR-SPECIFIC-MODULE-DEF-REF>
+							</VENDOR-SPECIFIC-MODULE-DEF-REFS>
+						</BSW-IMPLEMENTATION>
+						<ECUC-MODULE-CONFIGURATION-VALUES UUID="b1a1d18e-64d2-4077-835f-281f7e041cd2">
+							<SHORT-NAME>VTTGpt_Pre</SHORT-NAME>
+							<DEFINITION-REF DEST="ECUC-MODULE-DEF">/MICROSAR/VTT/VTTGpt</DEFINITION-REF>
+							<IMPLEMENTATION-CONFIG-VARIANT>VARIANT-PRE-COMPILE</IMPLEMENTATION-CONFIG-VARIANT>
+							<CONTAINERS></CONTAINERS>
+						</ECUC-MODULE-CONFIGURATION-VALUES>
+						<ECUC-MODULE-CONFIGURATION-VALUES UUID="f46b10b9-9a01-4b72-bc32-5bd06987e150">
+							<SHORT-NAME>VTTGpt_Rec</SHORT-NAME>
+							<DEFINITION-REF DEST="ECUC-MODULE-DEF">/MICROSAR/VTT/VTTGpt</DEFINITION-REF>
+							<IMPLEMENTATION-CONFIG-VARIANT>VARIANT-PRE-COMPILE</IMPLEMENTATION-CONFIG-VARIANT>
+							<CONTAINERS></CONTAINERS>
+						</ECUC-MODULE-CONFIGURATION-VALUES>
+					</ELEMENTS>
+				</AR-PACKAGE>
+			</AR-PACKAGES>
+		</AR-PACKAGE>
+	</AR-PACKAGES>
+</AUTOSAR>

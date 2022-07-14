@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Settings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Settings Name="com.vector.cfg.core.sip.ISIPService">
+    <Settings Name="ModuleList">
+      <Settings Name="Fr">
+        <Settings Name="Fr_CanoeEmu">
+          <Setting Name="SIP_Folder" Value="Fr" />
+          <Settings Name="35C34EEE-6A21-4D8B-8B60-1CBFC45B32FC">
+            <Setting Name="Derivative" Value="Canoeemu" />
+            <Setting Name="SIP_Folder" Value="Fr" />
+            <Setting Name="ReleaseType" Value="Tested" />
+          </Settings>
+        </Settings>
+      </Settings>
+    </Settings>
+  </Settings>
+</Settings>

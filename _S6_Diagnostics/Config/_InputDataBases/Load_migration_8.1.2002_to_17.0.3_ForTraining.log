@@ -1,0 +1,83 @@
+Encoding: iso-8859-1
+Detected dtd version 8.1.2002
+VCANdelaPersistorImpl::GetFileVersion: DTD version '8.1.2002' detected
+Detected dtd version 8.1.2002
+VCANdelaPersistorImpl::GetFileVersion: DTD version '8.1.2002' detected
+Searching for registry key Software\Vector\CANdelaPersistors for global persistors path
+  registry key exists, value: 'C:\Program Files (x86)\Common Files\Vector CANdelaPersistors 17.\Bin' (this directory exists)
+  global persistors version: 17.0.00100
+Using persistors path: "C:\Program Files (x86)\Common Files\Vector CANdelaPersistors 17.\Bin\" for loading from other version.
+Detected dtd version 8.1.2002
+VCANdelaPersistorImpl::GetFileVersion: DTD version '8.1.2002' detected
+Load file: Converting from version '8.1.2002' to version '8.2.99999'
+VPersistorCaller::LoadDatabase: BEGIN logging of 'C:\Program Files (x86)\Common Files\Vector CANdelaPersistors 17.\Bin\5.0.1_8.0.1_8.2.99999\'
+
+VPersistorCaller::LoadDatabase: END logging of 'C:\Program Files (x86)\Common Files\Vector CANdelaPersistors 17.\Bin\5.0.1_8.0.1_8.2.99999\'
+Detected dtd version 8.2.3105
+VCANdelaPersistorImpl::GetFileVersion: DTD version '8.2.3105' detected
+Load file: Converting from version '8.2.3105' to version '12.5.99999'
+VPersistorCaller::LoadDatabase: BEGIN logging of 'C:\Program Files (x86)\Common Files\Vector CANdelaPersistors 17.\Bin\8.2.1_12.0.1_12.5.99999\'
+
+VPersistorCaller::LoadDatabase: END logging of 'C:\Program Files (x86)\Common Files\Vector CANdelaPersistors 17.\Bin\8.2.1_12.0.1_12.5.99999\'
+Detected dtd version 12.5.103
+VCANdelaPersistorImpl::GetFileVersion: DTD version '12.5.103' detected
+Loading 'C:\Users\vksykm\AppData\Local\Temp\CDLB242.tmp'...
+  dtd version: file 12.5.103, program 17.0.3
+Document supports the languages (en-US)
+Document contains the uptodate languages (en-US)
+Template: Qualifier : Door, SaveNo : 2, Label : --DDM_VALIDATE_BEGIN00281d7c-1e88-46b6-8add-59d7d2106c31DDM_VALIDATE_END
+  template data loaded
+  variant 'CommonDiagnostics' loaded
+Migrate DIDs: ...
+Migrate DIDs: Diagnostic Class Template(s) with DID semantics:
+Migrate DIDs:  Read Only Data Identifiers
+Migrate DIDs:  Read/Write Data Identifiers
+Migrate DIDs:  Write Only Data Identifiers
+Migrate DIDs:  IO Control
+Migrate DIDs:  Periodic Data Identifier
+Migrate DIDs: Created attribute "qpath://[DIAGINSTDEFATTR]DIDDataReferenceQualifier17"
+Migrate DIDs: Created attribute "qpath://[DIAGINSTDEFATTR]DIDDataReferenceName17"
+Migrate DIDs: Moved DID data of DID "New Data Type 5", 0x0444 to the existing DID Diagnostic Instance "qpath:/CommonDiagnostics/Read_Only_Data_Identifiers/Example2_ReadOnlyDID"
+Migrate DIDs: Moved DID data of DID "DID_definition_Example", 0xF190 to the existing DID Diagnostic Instance "qpath:/CommonDiagnostics/Read_Only_Data_Identifiers/Example1_ReadOnlyDID"
+Migrate DIDs: Number of DID(s) moved to 2 DID Diagnostic Instance(s): 2
+Migrate DIDs: Created attribute "qpath://[DIAGINSTDEFATTR]DIDQualifier17"
+Migrate DIDs: Created attribute "qpath://[DIAGINSTDEFATTR]DIDName17"
+Migrate DIDs: ...Done
+AUTOSAR fault memory migration, Read snapshots: protocol service 1904 "($19) ReadDtcInformation - Report DTC snapshot record by DTC number" has unsupported format:
+AUTOSAR fault memory migration, Read snapshots:  Snapshot record numbers in request have invalid format or do not match with Snapshot record numbers in response.
+AUTOSAR fault memory migration, Read snapshots: cannot migrate Read Snapshot Data services to AUTOSAR fault memory format.
+AUTOSAR fault memory migration, Read extended data records: migrating diagnostic instance "qpath:/CommonDiagnostics/FaultMemory"...
+AUTOSAR fault memory migration, Read extended data records: Extended Data Records:
+AUTOSAR fault memory migration, Read extended data records:  0x01 OccurrenceCounter
+AUTOSAR fault memory migration, Read extended data records:  0x02 OdometerValue
+AUTOSAR fault memory migration, Read extended data records: ...Success
+AUTOSAR fault memory migration, Read extended data records: migrating protocol service 1906 "($19) ReadDtcInformation - Report DTC extended data record by DTC number"...
+AUTOSAR fault memory migration, Read extended data records: ...Success
+Document version: 1
+Done loading.
+  Logging turned on again
+Checking consistency of document. This may take a while, please be patient...
+Warning: Qualifier detected in 'qpath://[PROTOCOLSERVICE]_19_ReadDtcInformation_Report_DTC_extended_data_record_by_DTC_number' is too long.
+Warning:  The maximal allowed qualifier length is 64 characters. See Qualifier generation options dialog.
+Warning: Text table data type 'SID-RQ-NR' contains 1 entries without any assigned text.
+Warning: Text table data type 'Identifier' contains 1 entries without any assigned text.
+Warning: Text table data type 'Short Identifier' contains 1 entries without any assigned text.
+Warning: Text table data type 'MemoryRanges_01' contains 3 entries without any assigned text.
+Warning: Text table data type 'DTC SnapshotRecordNumber' contains 1 entries without any assigned text.
+ComParamMan: Setting COM parameter 'BusType' to value 'FlexRay' failed. Invalid value!
+ComParamMan: Setting COM parameter 'TransportProtocolType' to value 'Autosar' failed. Invalid value!
+ComParamMan: Unidentified ComParam PayloadLengthReqPhys
+ComParamMan: Unidentified ComParam PayloadLengthRes
+ComParamMan: Unidentified ComParam ConnectionModePhys
+ComParamMan: Unidentified ComParam AddressTypePhys
+ComParamMan: Unidentified ComParam SlotIdReqPhys
+ComParamMan: Unidentified ComParam BaseCycleReqPhys
+ComParamMan: Unidentified ComParam CycleRepetitionReqPhys
+ComParamMan: Unidentified ComParam SlotIdRes
+ComParamMan: Unidentified ComParam BaseCycleRes
+ComParamMan: Unidentified ComParam CycleRepetitionRes
+ComParamMan: Unidentified ComParam FlexRayFrameFillerByte
+ComParamMan: Unidentified ComParam FrChannelPhys
+ComParamMan: Unidentified ComParam MessageLengthPhys
+Checking service prefixes in base variant "CommonDiagnostics" ... OK
+Document is consistent.

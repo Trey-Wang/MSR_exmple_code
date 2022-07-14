@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--This file was saved with a tool from Vector Informatik GmbH-->
+<AUTOSAR xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-3-0.xsd" xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="EF715741-57A4-499B-8956-5D86123151BB">
+      <SHORT-NAME>ComponentTypes</SHORT-NAME>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

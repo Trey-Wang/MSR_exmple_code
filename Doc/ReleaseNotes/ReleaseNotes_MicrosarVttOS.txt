@@ -1,0 +1,131 @@
+Readme.txt  CANoe VTT OS Library,  Version 5.00 2013-09-12
+
+****************************************************************
+
+                CANoe VTT OS Emulation
+
+****************************************************************
+
+Delivery version: 5.01.00
+
+This file describes hints to the installation and last changes
+on the products
+
+Contents
+========
+1.  Installation
+2.  Examples
+3.  OIL-Configurator
+4.  MICROSAR OS Version
+5.  Supported Compilers and Linkers
+6.  Supported CANoe/DENoe
+7.  Documentation
+21. Code generation from XML files 
+22. Known problems and limitations
+
+1. Installation
+==============
+
+This installation copies the current version of the OSEK/Autosar operating 
+system and the OIL-configurator onto the local disk.
+
+2. Examples
+===========
+
+The delivered examples are adapted by the installation.
+
+The subdirectory 
+ - appl\Projects (osCAN style installation) or
+ - Demo\Os\Projects (Microsar style installation)
+contains a Workspace-File for the Visual C++-Environment. 
+To compile the examples the files in the tcb subdirectory 
+have to be generated with the OIL Configurator.
+
+By starting an application (e.g. by using the F5 button) the Visual 
+C++-Environment will prompt for the executable. Here the 'canoe32.exe'-
+Application has to be specified.
+
+For all example applications exist CANdb network files and CANoe 
+configurations.
+
+
+3. OIL-Configurator
+===================
+
+The included OIL-Configurator has the version 4.02.09
+
+
+4. MICROSAR OS Version
+======================
+
+The version of the CANoe VTT OS is v5.00
+
+
+5. Supported Compilers and Linkers
+==================================
+
+   - Microsoft Visual C++ 10.0
+
+6. Supported CANoe/DENoe
+========================
+
+As runtime environment for the emulation, an installation of CANoe/DENoe
+8.1.32 or newer is required.
+
+7. Documentation
+================
+
+The installation contains all documentation in electronically 
+readable format (PDF-files). The documentation files are:
+
+ MicrosarOS_CANoeEmuVTT.pdf         : CANoe MICROSAR OS Library specific documentation
+ TechnicalReference_Microsar_Os.pdf : General documentation of Vector MICROSAR OS 
+ Tutorial_osCAN.pdf                 : Tutorial of Vector MICROSAR OS
+
+21. Code generation from XML files 
+===================================
+In order to generate the MICROSAR OS application specific code for the
+examples from XML files, you need to adapt the template xmlgen.bat 
+given in 
+ - \%InstallationPath%\CANoeEmu\appl\ (osCAN style installation) or
+ - \%InstallationPath%\Demo\Os\ (Microsar style installation)
+
+Just set the respective value to the following parameters:
+
+   - XML_FILE="XML_file_name.arxml"
+   
+   osCAN style installation:
+   - GEN_PATH="Your_Installation_Path\OILTool\gen"
+   - CONV_PATH="Your_Installation_Path\OILTool"
+   
+   Microsar style installation:
+   - GEN_PATH="Your_Installation_Path\Generators\Os"
+   - CONV_PATH="Your_Installation_Path\Generators\Os"
+
+Copy this file to the respective example's folder and execute it.
+
+22. Known problems and limitations
+==================================
+- Do not use "SetAbsAlarm" with alarms that are related to the system counter.
+- The internal trace feature is not supported.
+- The following values are fixed in this library version despite of the configuration:
+      - CC = ECC2
+      - SCHEDULE = MIXED
+      - STACKMONITORING = FALSE
+- The following values are fixed in this library version and are not configurable:
+      - UseGeneratedFastAlarms = TRUE
+      - ErrorInfoLevel = Modulnames
+      - OSInternalChecks = Additional
+      - ORTIDebugSupport = FALSE
+
+****************************************************************
+
+                    Vector Informatik GmbH
+                     Ingersheimer Str. 24
+                      D-70499 Stuttgart
+                     Tel. +49 711 80670-0
+                     Fax  +49 711 80670-399
+                     OSEKSupport@vector.com
+
+****************************************************************
+

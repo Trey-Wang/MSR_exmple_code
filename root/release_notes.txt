@@ -1,0 +1,166 @@
+training preparation: vismin -3847 (contact person)
+last updated: 2020-04-17 11:16
+==========[Training ]===========================================================
+     _   _   _ _____ ___  ____    _    ____  _  _   
+    / \ | | | |_   _/ _ \/ ___|  / \  |  _ \| || |  
+   / _ \| | | | | || | | \___ \ / _ \ | |_) | || |_ 
+  / ___ \ |_| | | || |_| |___) / ___ \|  _ <|__   _|
+ /_/   \_\___/  |_| \___/|____/_/   \_\_| \_\  |_|  
+                                                                                                   
+  _         ____                 _   _          
+ (_)_ __   |  _ \ _ __ __ _  ___| |_(_) ___ ___ 
+ | | '_ \  | |_) | '__/ _` |/ __| __| |/ __/ _ \
+ | | | | | |  __/| | | (_| | (__| |_| | (__  __/
+ |_|_| |_| |_|   |_|  \__,_|\___|\__|_|\___\___|
+
+==========[Version History]=====================================================
+
+date		version		description
+--------------------------------------------------------------------------------
+2013-08-01 	1.00.00		initial AUTOSAR 4 Training based on 1:1 content 
+				from AUTOSAR 3.x.
+2013-09-02 	1.01.00   	amendmend of mode management in exercise 4. not 
+				Startup Rule becomes configured.
+2013-09-03	1.01.01		Visual Studio Filters adapted to simplify 
+				project structure. BSW, Gendata and Source.
+2013-09-06	1.01.02		fixed genata\fls_cfg.h pathes to fit target
+				installation directory.
+2013-09-06	1.01.03		fixed ALM issue
+2013-12-16      1.01.04		fixed Typo CtCoApplication --> CpCoApplication
+2014-03-27	1.02.01		MSR4 R9, Diagnostics. Fixed CtCoApplication again
+				changed ECU shutdown request
+
+2014-08-06    trunk		bug fixes, complete rollout and review
+2014-11-17	1.02.02		minor corrections, simplification of mem, diag
+2016-07-29	2.00.02		Update to R14
+2016-11-09	2.00.03		attach directly to runtimekernel.exe E4, S1-S6
+2018-05-08	trunk		  Complete update to R19
+2019-02-18 	3.00.00		Updated Slides and exercises according to R19
+2019-09-02 	3.01.00		Reworked Slides and exercises, fixed mistakes
+2020-02-16 	trunk		  Added changed information to Release_Note.txt
+2020-02-17 	3.01.01		Released finished version after R19 Review
+--------------------------------------------------------------------------------
+
+
+==========[what has changed?]===================================================
+
+-BSW Update from R9 to R14
+-IOHWAB as Application CDD, not as IOHWAB Service Component
+-Bottom-Up Service Configuration using "Create New Port..." at SWCs
+-Top-Down Service Configuration using Service Needs and Port Assignments
+-usage of the task mapping assistant, selecting the task positions automatically
+-usage of the rule creation assistant in the BSWM
+-usage of mode notification R-port instead of mode switch R-Port
+
+-reworked memory abstraction, corrected job handling for odometer. maintained
+race condition in writing Pim LightOnOffCounter.
+-added new batch file to mass erase flash memory
+-removed Diagnostics Addon II because it was an improper implementation 
+of the hard reset subservice.
+-left open unnneeded client ports at the BSW in order to demonstrate NRC generation
+and avoid dummy runnables in the application.
+
+BSW Update from R14 to R19:
+-Reworked training slides according to new tool versions
+-The note sections below the PowerPoint slides were integrated inside the slides
+-Added new graphics for a better understanding e.g. CAN transceiver graphic
+-Added new Mode Management Add-On II, here a "goodbye" light will be configured
+
+
+==========[GET PACKAGE]========================================================
+
+VERSIONS of Exercise and Training slides:
+MAJOR-VERSION.MINOR-VERSION of root packages must be identical such that the 
+pptx slides fit to the exercices.
+However the Exercises package has been integrated into the Training ALM
+package. recommendation is to use the training package which attracts this
+exercise package:
+
+https://vglobpessvn1.vg.vector.int/svn/Presentations/MSR_Training/MSR_Training_AiP4
+Presentations.MSR_Training:MSR_Training_AiP4 <alm:entity?guid=PCKGBASE-CAA80935-A6D0-415C-BCAC-0CAD64BE0C29>
+
+
+==========[prepare local file structure]========================================
+
+after getting the package:
+[1] execute correctpaths.bat in folder:
+D:\usr\usage\Presentations\MSR_Training\MSR_Training_AiP4\MSR_Training_AiP4\root
+[2] execute correctpaths.bat in folder:
+D:\usr\usage\Presentations\MSR_Training\MSR_Training_AiP4\MSR_Exercises_AiP4\root
+
+
+==========[Installation Guidelines]=============================================
+
+default destination directory is 
+
+c:\cancollege\AUTOSAR4 
+
+as base folder for the trainings
+
+however, other locations are also valid. Please verify you do a generation run
+before you compile, link and run the software because components 
+like fls driver contain absolute path information and won't work if the wrong
+path is used.
+
+Please copy the root directory contents of this package into the main directory
+of the package (call correctpaths.bat)
+
+
+==========[Licensing for external trainings @customer's]========================
+
+contact Jochen Neuffer (PND) to obtain Licenses for the tools.
+DaVinci Developer: 
+	usually a DVdevstat.dll is used but also .asr file can be
+	used.
+Configurator Pro v5.3: P
+	RO and RTE license required. 
+	(RTE lic required if Dev licensed over DVdevstat)
+
+
+*.asr files can be used to install the lics locally.
+(install_asr-Tool)
+
+Licenses for Trainings can be found at:
+\\vistrfs1\text\PTR\Licences
+\\vistrfs1\data\PTR\VI\PES\MSR_Training_Licenses
+
+
+==========[Required Tools]======================================================
+
+v3.0.00>=v2.0.02
+Visual Studio Express 2013 (ADP or DSM software Shop)
+
+DaVinci Developer 3.12.22 SP1
+\\vgfs1.vg.vector.int\Sync\_Vector-Tools\PES\DaVinci_Developer\Install\DaVinci_Developer_3.12.12_SP1
+
+
+Configurator Pro 5.11.16 SP1 (contained)
+
+CANoe-V9.0.65_SP2
+\\vgfs1.vg.vector.int\Sync\_Vector-Tools\PND\CANoe_CANalyzer\SetupPrograms\9.0\9.0_SP2\CANoe_CANalyzer_All_Options-V9.0.65_SP2
+
+DaVinci_ExternalComponentsSetup.exe
+\\vgfs1.vg.vector.int\sync\_Vector-Tools\PES\DaVinci\ExternalComponents\2.03.01.00\DaVinci_ExternalComponentsSetup.exe
+
+
+
+>=v3.0.00
+Visual Studio Express 2017 (ADP or DSM software Shop)
+
+DaVinci Developer 4.4.35 SP2
+Y:\_Vector-Tools\PES\DaVinci_Developer\SetupPrograms\DaVinci_Developer_4.4.35_SP2.exe
+
+
+Configurator Pro 5.16.50 SP5 (contained)
+
+CANoe-V12.0.189_SP4
+Y:\_Vector-Tools\PND\CANoe_CANalyzer\SetupPrograms\12.0\12.0_SP4\CANoeCANalyzer-V12.0.189_SP4\SetupCANoeCANalyzer64.exe
+
+DaVinci_ExternalComponentsSetup.exe
+Y:\_Vector-Tools\PES\DaVinci\ExternalComponents\2.12.01.00\DaVinci_ExternalComponentsSetup_2_12_1_0.exe
+
+
+
+
+
+

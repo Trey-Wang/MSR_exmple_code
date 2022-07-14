@@ -1,0 +1,74 @@
+<!--<?xml version="1.0" encoding="UTF-8"?>
+-->
+<VttVsProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.vector.com/vtt/projectgenerator">
+   <Settings
+     Compiler="VisualStudio2013"
+     RootDirectory="C:\cancollege\MSR_Exercises_AIP4\_E1_SoftwareComponents\Config\VTT"
+     SutOutputDirectory="C:\cancollege\MSR_Exercises_AIP4\_E1_SoftwareComponents\Config\VTT\SUT" 
+     CompilerOutDirSuffix="_vc120" />
+   <Debug
+      KernelPath="RuntimeKernel.exe"
+      KernelConfigurationPath=".\..\SUT\MyECU.xml" />
+   <Solution
+      SolutionName="MyECU"
+      SolutionGuid="FE5F2213-D6C6-4ACD-B2CD-9F8B33521E82"
+      SolutionDirectory="C:\cancollege\MSR_Exercises_AIP4\_E1_SoftwareComponents\Config\VTT\Solution" />
+   <Project
+      EcuInstance="MyECU"
+      ProjectGuid="2968972A-0FA6-417B-83D6-5B106C0D9009"
+      ProjectDirectory="C:\cancollege\MSR_Exercises_AIP4\_E1_SoftwareComponents\Config\VTT\Solution\MyECU"
+      BswDirectory="C:\cancollege\MSR_Exercises_AIP4\BSW"
+      GenDataDirectory="C:\cancollege\MSR_Exercises_AIP4\_E1_SoftwareComponents\Appl\GenDataVtt" 
+      SourceDirectory="C:\cancollege\MSR_Exercises_AIP4\_E1_SoftwareComponents\Appl\Source"
+      AdditionalCompileOptions=""
+      AdditionalLinkOptions=""
+      PowerSupplyInitValue="1"
+      ExecutionMode="PREEMPTIVE_MULTITHREAD"
+      OverwriteVisualStudioUserConfigFile="true">
+      <EcucFile Path="C:\cancollege\MSR_Exercises_AIP4\_E1_SoftwareComponents\Config\ECUC\MyECU.ecuc.arxml" />
+      <EcucFile Path="C:\cancollege\MSR_Exercises_AIP4\_E1_SoftwareComponents\Config\ECUC\MyECU_Rte_ecuc.arxml" />
+      <EcucFile Path="C:\cancollege\MSR_Exercises_AIP4\_E1_SoftwareComponents\Config\ECUC\MyECU_Os_ecuc.arxml" />
+      <EcucFile Path="C:\cancollege\MSR_Exercises_AIP4\_E1_SoftwareComponents\Config\ECUC\MyECU_VTTCntrl_ecuc.arxml" />
+      <EcucFile Path="C:\cancollege\MSR_Exercises_AIP4\_E1_SoftwareComponents\Config\ECUC\MyECU_VTTCan_ecuc.arxml" />
+      <EcucFile Path="C:\cancollege\MSR_Exercises_AIP4\_E1_SoftwareComponents\Config\ECUC\MyECU_VTTEcuC_ecuc.arxml" />
+      <EcucFile Path="C:\cancollege\MSR_Exercises_AIP4\_E1_SoftwareComponents\Config\ECUC\MyECU_VTTMcu_ecuc.arxml" />
+      <EcucFile Path="C:\cancollege\MSR_Exercises_AIP4\_E1_SoftwareComponents\Config\ECUC\MyECU_BswM_ecuc.arxml" />
+      <EcucFile Path="C:\cancollege\MSR_Exercises_AIP4\_E1_SoftwareComponents\Config\ECUC\MyECU_VTTOs_ecuc.arxml" />
+      <EcucFile Path="C:\cancollege\MSR_Exercises_AIP4\_E1_SoftwareComponents\Config\ECUC\MyECU_VTTDio_ecuc.arxml" />
+      <EcucFile Path="C:\cancollege\MSR_Exercises_AIP4\_E1_SoftwareComponents\Config\ECUC\MyECU_VTTFls_ecuc.arxml" />
+      <EcucFile Path="C:\cancollege\MSR_Exercises_AIP4\_E1_SoftwareComponents\Config\ECUC\MyECU_CanIf_ecuc.arxml" />
+      <EcucFile Path="C:\cancollege\MSR_Exercises_AIP4\_E1_SoftwareComponents\Config\ECUC\MyECU_CanNm_ecuc.arxml" />
+      <EcucFile Path="C:\cancollege\MSR_Exercises_AIP4\_E1_SoftwareComponents\Config\ECUC\MyECU_CanSM_ecuc.arxml" />
+      <EcucFile Path="C:\cancollege\MSR_Exercises_AIP4\_E1_SoftwareComponents\Config\ECUC\MyECU_Can_ecuc.arxml" />
+      <EcucFile Path="C:\cancollege\MSR_Exercises_AIP4\_E1_SoftwareComponents\Config\ECUC\MyECU_ComM_ecuc.arxml" />
+      <EcucFile Path="C:\cancollege\MSR_Exercises_AIP4\_E1_SoftwareComponents\Config\ECUC\MyECU_Com_ecuc.arxml" />
+      <EcucFile Path="C:\cancollege\MSR_Exercises_AIP4\_E1_SoftwareComponents\Config\ECUC\MyECU_Crc_ecuc.arxml" />
+      <EcucFile Path="C:\cancollege\MSR_Exercises_AIP4\_E1_SoftwareComponents\Config\ECUC\MyECU_Det_ecuc.arxml" />
+      <EcucFile Path="C:\cancollege\MSR_Exercises_AIP4\_E1_SoftwareComponents\Config\ECUC\MyECU_EcuC_ecuc.arxml" />
+      <EcucFile Path="C:\cancollege\MSR_Exercises_AIP4\_E1_SoftwareComponents\Config\ECUC\MyECU_EcuM_ecuc.arxml" />
+      <EcucFile Path="C:\cancollege\MSR_Exercises_AIP4\_E1_SoftwareComponents\Config\ECUC\MyECU_Fee_ecuc.arxml" />
+      <EcucFile Path="C:\cancollege\MSR_Exercises_AIP4\_E1_SoftwareComponents\Config\ECUC\MyECU_Fls_ecuc.arxml" />
+      <EcucFile Path="C:\cancollege\MSR_Exercises_AIP4\_E1_SoftwareComponents\Config\ECUC\MyECU_Mcu_ecuc.arxml" />
+      <EcucFile Path="C:\cancollege\MSR_Exercises_AIP4\_E1_SoftwareComponents\Config\ECUC\MyECU_MemIf_ecuc.arxml" />
+      <EcucFile Path="C:\cancollege\MSR_Exercises_AIP4\_E1_SoftwareComponents\Config\ECUC\MyECU_Nm_ecuc.arxml" />
+      <EcucFile Path="C:\cancollege\MSR_Exercises_AIP4\_E1_SoftwareComponents\Config\ECUC\MyECU_NvM_ecuc.arxml" />
+      <EcucFile Path="C:\cancollege\MSR_Exercises_AIP4\_E1_SoftwareComponents\Config\ECUC\MyECU_PduR_ecuc.arxml" />
+      <EcucFile Path="C:\cancollege\MSR_Exercises_AIP4\_E1_SoftwareComponents\Config\ECUC\MyECU_Dem_ecuc.arxml" />
+      <EcucFile Path="C:\cancollege\MSR_Exercises_AIP4\_E1_SoftwareComponents\Config\ECUC\MyECU_Dio_ecuc.arxml" />
+      <SwcType ShortName="VTT"  ModuleType="BasicSoftware" >
+          <CompileElements>
+              <File Path="C:\cancollege\MSR_Exercises_AIP4\_E1_SoftwareComponents\Appl\GenDataVtt\Vtt_Hook.h"/>
+              <File Path="C:\cancollege\MSR_Exercises_AIP4\_E1_SoftwareComponents\Appl\GenDataVtt\Vtt_Hook.c"/>
+          </CompileElements>
+      </SwcType>
+      <CompileElements>
+      </CompileElements>
+      <StateChangeFunction FunctionName="VttHook_OnStateChange" IncludeFileName="Vtt_Hook.h" />
+      <AdditionalIncludeDirectory Path="C:\cancollege\MSR_Exercises_AIP4\_E1_SoftwareComponents\Appl\Source" />
+      <Timing Parameter="TICKDURATION" Value="1000" />
+      <Timing Parameter="PREISR" Value="1" />
+      <Timing Parameter="POSTISR" Value="1" />
+      <Timing Parameter="PRETASK" Value="1" />
+      <Timing Parameter="TASKSWITCH" Value="1" />
+   </Project>
+</VttVsProject>

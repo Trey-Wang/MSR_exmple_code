@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-2-1.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="4a1f5e4e-1b37-4ab3-9756-524419074e03">
+      <SHORT-NAME>MICROSAR</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="8bad65ad-fc23-4462-b1e6-76a4aaab6a40">
+          <SHORT-NAME>Can_CanoeemuCanoe_ib_bswmd</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="9ca785e3-856b-4660-9070-594b2bd72599">
+              <SHORT-NAME>BswModuleDescriptions</SHORT-NAME>
+              <ELEMENTS>
+                <BSW-MODULE-DESCRIPTION UUID="52a361cf-a70c-4af3-a18d-57547bdf37b5">
+                  <SHORT-NAME>Can</SHORT-NAME>
+                  <PROVIDED-ENTRYS>
+                    <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                      <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/MICROSAR/Can_CanoeemuCanoe_ib_bswmd/BswModuleDescriptions/Can_MainFunction_BusOff</BSW-MODULE-ENTRY-REF>
+                    </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                    <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                      <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/MICROSAR/Can_CanoeemuCanoe_ib_bswmd/BswModuleDescriptions/Can_MainFunction_Wakeup</BSW-MODULE-ENTRY-REF>
+                    </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                    <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                      <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/MICROSAR/Can_CanoeemuCanoe_ib_bswmd/BswModuleDescriptions/Can_MainFunction_Mode</BSW-MODULE-ENTRY-REF>
+                    </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  </PROVIDED-ENTRYS>
+                  <INTERNAL-BEHAVIORS>
+                    <BSW-INTERNAL-BEHAVIOR UUID="ffac4248-a856-4571-8275-1d48c4b59e68">
+                      <SHORT-NAME>Can_CanoeemuCanoeBehavior</SHORT-NAME>
+                      <EXCLUSIVE-AREAS>
+                        <EXCLUSIVE-AREA UUID="0473c92c-ea8e-4ee2-ae38-d861a2bfe83b">
+                          <SHORT-NAME>CAN_EXCLUSIVE_AREA_0</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="42e764ff-a109-45f0-8bf2-1305bad34f4d">
+                          <SHORT-NAME>CAN_EXCLUSIVE_AREA_1</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="a6d47f40-dfe0-4276-bea4-d2f5f264dca6">
+                          <SHORT-NAME>CAN_EXCLUSIVE_AREA_2</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="c20a1f99-eed4-44db-90d3-734c5d8b6584">
+                          <SHORT-NAME>CAN_EXCLUSIVE_AREA_3</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="1e39f405-436d-48bd-be53-7b1d25879691">
+                          <SHORT-NAME>CAN_EXCLUSIVE_AREA_4</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="704ef579-b0e9-4124-a346-c1028add1a0c">
+                          <SHORT-NAME>CAN_EXCLUSIVE_AREA_5</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="f829431f-39c6-4de9-82f7-5afc5cc4c0d4">
+                          <SHORT-NAME>CAN_EXCLUSIVE_AREA_6</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                      </EXCLUSIVE-AREAS>
+                      <ENTITYS>
+                        <BSW-SCHEDULABLE-ENTITY UUID="c753a8d2-fbd2-4834-a15a-dbd24e85578f">
+                          <SHORT-NAME>Can_MainFunction_BusOff</SHORT-NAME>
+                          <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/MICROSAR/Can_CanoeemuCanoe_ib_bswmd/BswModuleDescriptions/Can_MainFunction_BusOff</IMPLEMENTED-ENTRY-REF>
+                        </BSW-SCHEDULABLE-ENTITY>
+                        <BSW-SCHEDULABLE-ENTITY UUID="1191e7bc-7392-4104-ba68-592c920c4146">
+                          <SHORT-NAME>Can_MainFunction_Wakeup</SHORT-NAME>
+                          <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/MICROSAR/Can_CanoeemuCanoe_ib_bswmd/BswModuleDescriptions/Can_MainFunction_Wakeup</IMPLEMENTED-ENTRY-REF>
+                        </BSW-SCHEDULABLE-ENTITY>
+                        <BSW-SCHEDULABLE-ENTITY UUID="3fc4816f-72d0-4b81-b1ca-75a0c871d128">
+                          <SHORT-NAME>Can_MainFunction_Mode</SHORT-NAME>
+                          <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/MICROSAR/Can_CanoeemuCanoe_ib_bswmd/BswModuleDescriptions/Can_MainFunction_Mode</IMPLEMENTED-ENTRY-REF>
+                        </BSW-SCHEDULABLE-ENTITY>
+                      </ENTITYS>
+                      <EVENTS>
+                        <BSW-TIMING-EVENT UUID="f0fc55e2-b0c1-47a8-a3cf-4c7c7c718b67">
+                          <SHORT-NAME>Can_MainFunction_BusOffTimingEvent0</SHORT-NAME>
+                          <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/MICROSAR/Can_CanoeemuCanoe_ib_bswmd/BswModuleDescriptions/Can/Can_CanoeemuCanoeBehavior/Can_MainFunction_BusOff</STARTS-ON-EVENT-REF>
+                          <PERIOD>0.01</PERIOD>
+                        </BSW-TIMING-EVENT>
+                        <BSW-TIMING-EVENT UUID="3ed113af-1839-4abb-a2d8-04a933c97ac1">
+                          <SHORT-NAME>Can_MainFunction_WakeupTimingEvent0</SHORT-NAME>
+                          <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/MICROSAR/Can_CanoeemuCanoe_ib_bswmd/BswModuleDescriptions/Can/Can_CanoeemuCanoeBehavior/Can_MainFunction_Wakeup</STARTS-ON-EVENT-REF>
+                          <PERIOD>0.01</PERIOD>
+                        </BSW-TIMING-EVENT>
+                        <BSW-TIMING-EVENT UUID="e0022c3b-6f2c-4162-a374-4022a5629116">
+                          <SHORT-NAME>Can_MainFunction_ModeTimingEvent0</SHORT-NAME>
+                          <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/MICROSAR/Can_CanoeemuCanoe_ib_bswmd/BswModuleDescriptions/Can/Can_CanoeemuCanoeBehavior/Can_MainFunction_Mode</STARTS-ON-EVENT-REF>
+                          <PERIOD>0.01</PERIOD>
+                        </BSW-TIMING-EVENT>
+                      </EVENTS>
+                    </BSW-INTERNAL-BEHAVIOR>
+                  </INTERNAL-BEHAVIORS>
+                </BSW-MODULE-DESCRIPTION>
+                <BSW-MODULE-ENTRY UUID="19d8cb65-d7d2-48cd-9f3f-37685d58cc13">
+                  <SHORT-NAME>Can_MainFunction_BusOff</SHORT-NAME>
+                  <CALL-TYPE>SCHEDULED</CALL-TYPE>
+                  <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                </BSW-MODULE-ENTRY>
+                <BSW-MODULE-ENTRY UUID="17e6e9af-21db-45b5-850c-bfb2d0a1d1cb">
+                  <SHORT-NAME>Can_MainFunction_Wakeup</SHORT-NAME>
+                  <CALL-TYPE>SCHEDULED</CALL-TYPE>
+                  <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                </BSW-MODULE-ENTRY>
+                <BSW-MODULE-ENTRY UUID="a8efef21-3eb4-497c-afa7-cfafb262c51f">
+                  <SHORT-NAME>Can_MainFunction_Mode</SHORT-NAME>
+                  <CALL-TYPE>SCHEDULED</CALL-TYPE>
+                  <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                </BSW-MODULE-ENTRY>
+              </ELEMENTS>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

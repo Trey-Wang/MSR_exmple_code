@@ -1,0 +1,728 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-2-1.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="4a1f5e4e-1b37-4ab3-9756-524419074e03">
+      <SHORT-NAME>MICROSAR</SHORT-NAME>
+      <ELEMENTS>
+        <BSW-IMPLEMENTATION UUID="4cd6a036-9bc1-4174-b747-2a4f935551a6">
+          <SHORT-NAME>BswM_Impl</SHORT-NAME>
+          <MC-SUPPORT/>
+          <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+          <SW-VERSION>9.02.00</SW-VERSION>
+          <USED-CODE-GENERATOR>DaVinci Configurator</USED-CODE-GENERATOR>
+          <VENDOR-ID>30</VENDOR-ID>
+          <AR-RELEASE-VERSION>4.00.03</AR-RELEASE-VERSION>
+          <BEHAVIOR-REF DEST="BSW-INTERNAL-BEHAVIOR">/MICROSAR/BswM_ib_bswmd/BswModuleDescriptions/BswM/BswMBehavior</BEHAVIOR-REF>
+        </BSW-IMPLEMENTATION>
+        <BSW-IMPLEMENTATION UUID="3caf2919-5d52-423f-9faf-7b78a8fcdb88">
+          <SHORT-NAME>CanIf_Impl</SHORT-NAME>
+          <MC-SUPPORT/>
+          <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+          <SW-VERSION>6.14.01</SW-VERSION>
+          <USED-CODE-GENERATOR>cMSR</USED-CODE-GENERATOR>
+          <VENDOR-ID>30</VENDOR-ID>
+          <AR-RELEASE-VERSION>4.00.03</AR-RELEASE-VERSION>
+          <BEHAVIOR-REF DEST="BSW-INTERNAL-BEHAVIOR">/MICROSAR/CanIf_ib_bswmd/BswModuleDescriptions/CanIf/CanIf_Behavior</BEHAVIOR-REF>
+        </BSW-IMPLEMENTATION>
+        <BSW-IMPLEMENTATION UUID="f08dba86-dea1-4578-b3c5-7afff8e5298c">
+          <SHORT-NAME>CanNm_Impl</SHORT-NAME>
+          <MC-SUPPORT/>
+          <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+          <SW-VERSION>6.03.00</SW-VERSION>
+          <USED-CODE-GENERATOR>DaVinci Configurator</USED-CODE-GENERATOR>
+          <VENDOR-ID>30</VENDOR-ID>
+          <AR-RELEASE-VERSION>4.00.03</AR-RELEASE-VERSION>
+          <BEHAVIOR-REF DEST="BSW-INTERNAL-BEHAVIOR">/MICROSAR/CanNm_ib_bswmd/BswModuleDescriptions/CanNm/CanNmBehavior</BEHAVIOR-REF>
+        </BSW-IMPLEMENTATION>
+        <BSW-IMPLEMENTATION UUID="b0f546c7-6c38-4e9f-a1bd-0df9c9622c3a">
+          <SHORT-NAME>CanSM_Impl</SHORT-NAME>
+          <MC-SUPPORT/>
+          <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+          <SW-VERSION>2.13.00</SW-VERSION>
+          <USED-CODE-GENERATOR>DaVinci Configurator</USED-CODE-GENERATOR>
+          <VENDOR-ID>30</VENDOR-ID>
+          <AR-RELEASE-VERSION>4.00.03</AR-RELEASE-VERSION>
+          <BEHAVIOR-REF DEST="BSW-INTERNAL-BEHAVIOR">/MICROSAR/CanSM_ib_bswmd/BswModuleDescriptions/CanSM/CanSMBehavior</BEHAVIOR-REF>
+        </BSW-IMPLEMENTATION>
+        <BSW-IMPLEMENTATION UUID="2c9f79b8-f406-4b05-b66d-eba85f3b3340">
+          <SHORT-NAME>CanTp_Impl</SHORT-NAME>
+          <MC-SUPPORT/>
+          <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+          <SW-VERSION>3.03.01</SW-VERSION>
+          <USED-CODE-GENERATOR>DaVinci Configurator</USED-CODE-GENERATOR>
+          <VENDOR-ID>30</VENDOR-ID>
+          <AR-RELEASE-VERSION>4.00.03</AR-RELEASE-VERSION>
+          <BEHAVIOR-REF DEST="BSW-INTERNAL-BEHAVIOR">/MICROSAR/CanTp_ib_bswmd/BswModuleDescriptions/CanTp/CanTpBehavior</BEHAVIOR-REF>
+        </BSW-IMPLEMENTATION>
+        <BSW-IMPLEMENTATION UUID="f9df0718-c78b-43e7-93b9-570fa7d3efcb">
+          <SHORT-NAME>Com_Impl</SHORT-NAME>
+          <MC-SUPPORT/>
+          <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+          <SW-VERSION>13.03.01</SW-VERSION>
+          <USED-CODE-GENERATOR>DaVinci Configurator</USED-CODE-GENERATOR>
+          <VENDOR-ID>30</VENDOR-ID>
+          <AR-RELEASE-VERSION>4.00.03</AR-RELEASE-VERSION>
+          <BEHAVIOR-REF DEST="BSW-INTERNAL-BEHAVIOR">/MICROSAR/Com_ib_bswmd/BswModuleDescriptions/Com/ComBehavior</BEHAVIOR-REF>
+        </BSW-IMPLEMENTATION>
+        <BSW-IMPLEMENTATION UUID="b484d690-bf7b-4b49-8cc0-23ce231b62c3">
+          <SHORT-NAME>ComM_Impl</SHORT-NAME>
+          <MC-SUPPORT/>
+          <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+          <SW-VERSION>8.01.01</SW-VERSION>
+          <USED-CODE-GENERATOR>DaVinci Configurator</USED-CODE-GENERATOR>
+          <VENDOR-ID>30</VENDOR-ID>
+          <AR-RELEASE-VERSION>4.00.03</AR-RELEASE-VERSION>
+          <BEHAVIOR-REF DEST="BSW-INTERNAL-BEHAVIOR">/MICROSAR/ComM_ib_bswmd/BswModuleDescriptions/ComM/ComMBehavior</BEHAVIOR-REF>
+        </BSW-IMPLEMENTATION>
+        <BSW-IMPLEMENTATION UUID="487e2e0d-92c2-4469-a75f-21e4b5b270a5">
+          <SHORT-NAME>EcuM_Impl</SHORT-NAME>
+          <MC-SUPPORT/>
+          <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+          <SW-VERSION>8.00.02</SW-VERSION>
+          <USED-CODE-GENERATOR>DaVinci Configurator</USED-CODE-GENERATOR>
+          <VENDOR-ID>30</VENDOR-ID>
+          <AR-RELEASE-VERSION>4.00.03</AR-RELEASE-VERSION>
+          <BEHAVIOR-REF DEST="BSW-INTERNAL-BEHAVIOR">/MICROSAR/EcuM_ib_bswmd/BswModuleDescriptions/EcuM/EcuMBehavior</BEHAVIOR-REF>
+        </BSW-IMPLEMENTATION>
+        <BSW-IMPLEMENTATION UUID="353aeec3-1f5b-40ae-b3c2-72e88d6b5e1a">
+          <SHORT-NAME>Fee_Impl</SHORT-NAME>
+          <MC-SUPPORT/>
+          <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+          <SW-VERSION>8.01.05</SW-VERSION>
+          <USED-CODE-GENERATOR>DaVinci Configurator</USED-CODE-GENERATOR>
+          <VENDOR-ID>30</VENDOR-ID>
+          <AR-RELEASE-VERSION>4.00.03</AR-RELEASE-VERSION>
+          <BEHAVIOR-REF DEST="BSW-INTERNAL-BEHAVIOR">/MICROSAR/Fee_ib_bswmd/BswModuleDescriptions/Fee/FeeBehavior</BEHAVIOR-REF>
+        </BSW-IMPLEMENTATION>
+        <BSW-IMPLEMENTATION UUID="10e1d426-5838-4dbc-827a-9f03994ff3ed">
+          <SHORT-NAME>Nm_Impl</SHORT-NAME>
+          <MC-SUPPORT/>
+          <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+          <SW-VERSION>10.00.00</SW-VERSION>
+          <USED-CODE-GENERATOR>DaVinci Configurator</USED-CODE-GENERATOR>
+          <VENDOR-ID>30</VENDOR-ID>
+          <AR-RELEASE-VERSION>4.00.03</AR-RELEASE-VERSION>
+          <BEHAVIOR-REF DEST="BSW-INTERNAL-BEHAVIOR">/MICROSAR/Nm_ib_bswmd/BswModuleDescriptions/Nm/NmBehavior</BEHAVIOR-REF>
+        </BSW-IMPLEMENTATION>
+        <BSW-IMPLEMENTATION UUID="8cbb61b5-1e82-4754-827d-46a0b8b7e599">
+          <SHORT-NAME>NvM_Impl</SHORT-NAME>
+          <MC-SUPPORT/>
+          <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+          <SW-VERSION>5.07.00</SW-VERSION>
+          <USED-CODE-GENERATOR>DaVinci Configurator</USED-CODE-GENERATOR>
+          <VENDOR-ID>30</VENDOR-ID>
+          <AR-RELEASE-VERSION>4.00.03</AR-RELEASE-VERSION>
+          <BEHAVIOR-REF DEST="BSW-INTERNAL-BEHAVIOR">/MICROSAR/NvM_ib_bswmd/BswModuleDescriptions/NvM/NvMBehavior</BEHAVIOR-REF>
+        </BSW-IMPLEMENTATION>
+        <BSW-IMPLEMENTATION UUID="4a156671-5151-4f19-a8b4-579effc27f33">
+          <SHORT-NAME>PduR_Impl</SHORT-NAME>
+          <MC-SUPPORT/>
+          <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+          <SW-VERSION>10.00.00</SW-VERSION>
+          <USED-CODE-GENERATOR>DaVinci Configurator</USED-CODE-GENERATOR>
+          <VENDOR-ID>30</VENDOR-ID>
+          <AR-RELEASE-VERSION>4.01.02</AR-RELEASE-VERSION>
+          <BEHAVIOR-REF DEST="BSW-INTERNAL-BEHAVIOR">/MICROSAR/PduR_ib_bswmd/BswModuleDescriptions/PduR/PduRBehavior</BEHAVIOR-REF>
+        </BSW-IMPLEMENTATION>
+      </ELEMENTS>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="a941e512-2eec-4fe1-80ba-3ee13a0ccd27">
+          <SHORT-NAME>BswM_ib_bswmd</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="62469bb2-90ce-45d7-b0a0-d459b4d43068">
+              <SHORT-NAME>BswModuleDescriptions</SHORT-NAME>
+              <ELEMENTS>
+                <BSW-MODULE-DESCRIPTION UUID="d7fe7567-6b0a-4dc2-aceb-50bc0804df6f">
+                  <SHORT-NAME>BswM</SHORT-NAME>
+                  <INTERNAL-BEHAVIORS>
+                    <BSW-INTERNAL-BEHAVIOR UUID="1eeb6c5e-06ae-4f59-8f46-7a64ef4dc89c">
+                      <SHORT-NAME>BswMBehavior</SHORT-NAME>
+                      <EXCLUSIVE-AREAS>
+                        <EXCLUSIVE-AREA UUID="24741bf5-390e-419e-b318-fdd7e79cba01">
+                          <SHORT-NAME>BSWM_EXCLUSIVE_AREA_0</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                      </EXCLUSIVE-AREAS>
+                      <ENTITYS>
+                        <BSW-SCHEDULABLE-ENTITY UUID="fa2477e5-985d-41df-914d-e11178ab3833">
+                          <SHORT-NAME>BswM_MainFunction</SHORT-NAME>
+                          <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/MICROSAR/BswM_ib_bswmd/BswModuleDescriptions/BswM_MainFunction</IMPLEMENTED-ENTRY-REF>
+                        </BSW-SCHEDULABLE-ENTITY>
+                      </ENTITYS>
+                      <EVENTS>
+                        <BSW-TIMING-EVENT UUID="f309ff1a-a259-4c4b-9412-5ea939626bb5">
+                          <SHORT-NAME>BswM_MainFunctionTimingEvent0</SHORT-NAME>
+                          <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/MICROSAR/BswM_ib_bswmd/BswModuleDescriptions/BswM/BswMBehavior/BswM_MainFunction</STARTS-ON-EVENT-REF>
+                          <PERIOD>0.01</PERIOD>
+                        </BSW-TIMING-EVENT>
+                      </EVENTS>
+                    </BSW-INTERNAL-BEHAVIOR>
+                  </INTERNAL-BEHAVIORS>
+                </BSW-MODULE-DESCRIPTION>
+                <BSW-MODULE-ENTRY UUID="4da000d3-325f-4b9d-88de-590b4f2ba2f1">
+                  <SHORT-NAME>BswM_MainFunction</SHORT-NAME>
+                  <CALL-TYPE>SCHEDULED</CALL-TYPE>
+                  <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                </BSW-MODULE-ENTRY>
+              </ELEMENTS>
+            </AR-PACKAGE>
+            <AR-PACKAGE UUID="38925ae4-3081-4c4d-930f-50d2210b1cd8">
+              <SHORT-NAME>XcpEvents</SHORT-NAME>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="f01830ef-97dc-4331-b495-c655061ebbb9">
+          <SHORT-NAME>CanIf_ib_bswmd</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="4c25334d-1e12-4853-ab8d-5d5050474c7e">
+              <SHORT-NAME>BswModuleDescriptions</SHORT-NAME>
+              <ELEMENTS>
+                <BSW-MODULE-DESCRIPTION UUID="53f71a7a-4f9c-4afb-b290-d9f2ab1a51fa">
+                  <SHORT-NAME>CanIf</SHORT-NAME>
+                  <INTERNAL-BEHAVIORS>
+                    <BSW-INTERNAL-BEHAVIOR UUID="42af60f5-9154-4ed2-b901-7b058209df01">
+                      <SHORT-NAME>CanIf_Behavior</SHORT-NAME>
+                      <EXCLUSIVE-AREAS>
+                        <EXCLUSIVE-AREA UUID="b5984a52-f83f-42ee-abae-0cd142846003">
+                          <SHORT-NAME>CANIF_EXCLUSIVE_AREA_0</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="d41698cc-1424-4c61-ac7c-3741d00e723f">
+                          <SHORT-NAME>CANIF_EXCLUSIVE_AREA_1</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="322c6c4e-0755-45ec-9a36-fb3b7a5e2e37">
+                          <SHORT-NAME>CANIF_EXCLUSIVE_AREA_2</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="77cf5c58-cdb7-4ad0-bbfb-1b6b295f66ee">
+                          <SHORT-NAME>CANIF_EXCLUSIVE_AREA_3</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="68555eb4-1a8c-459d-b444-adbb1e7e3956">
+                          <SHORT-NAME>CANIF_EXCLUSIVE_AREA_4</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="05e92b4d-ed54-4b60-8926-f8009afe44a0">
+                          <SHORT-NAME>CANIF_EXCLUSIVE_AREA_5</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="8e516d08-a016-4785-bda7-b4181311fc17">
+                          <SHORT-NAME>CANIF_EXCLUSIVE_AREA_6</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="8cefc0b3-b07b-4ca2-beec-8e2c54dcaf60">
+                          <SHORT-NAME>CANIF_EXCLUSIVE_AREA_7</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                      </EXCLUSIVE-AREAS>
+                    </BSW-INTERNAL-BEHAVIOR>
+                  </INTERNAL-BEHAVIORS>
+                </BSW-MODULE-DESCRIPTION>
+              </ELEMENTS>
+            </AR-PACKAGE>
+            <AR-PACKAGE UUID="0d74efba-9316-422b-ad8a-b5ae6ef15936">
+              <SHORT-NAME>XcpEvents</SHORT-NAME>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="070d3440-c597-4cca-a65d-ac38b709e6fb">
+          <SHORT-NAME>CanNm_ib_bswmd</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="ed65693b-b380-48b3-9258-25da7f7a66a8">
+              <SHORT-NAME>BswModuleDescriptions</SHORT-NAME>
+              <ELEMENTS>
+                <BSW-MODULE-DESCRIPTION UUID="f9cc8ee7-548e-4219-8d18-7ac8696c7e98">
+                  <SHORT-NAME>CanNm</SHORT-NAME>
+                  <INTERNAL-BEHAVIORS>
+                    <BSW-INTERNAL-BEHAVIOR UUID="7f988599-38e4-4b59-99ad-38520631d3b5">
+                      <SHORT-NAME>CanNmBehavior</SHORT-NAME>
+                      <EXCLUSIVE-AREAS>
+                        <EXCLUSIVE-AREA UUID="7ab5189d-b06f-437a-a742-faf2dae33f23">
+                          <SHORT-NAME>CANNM_EXCLUSIVE_AREA_0</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL">No interruption by any interrupt allowed (i.e. global interrupt locks)</L-2>
+                          </DESC>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="ff4c9aad-46d4-4cdc-af71-90acc08f63fa">
+                          <SHORT-NAME>CANNM_EXCLUSIVE_AREA_1</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL">No interruption of CanNm_MainFunction by CanNm_SetUserData, CanNm_SetCoordBits or CanNm_SetDiagGwReqId allowed</L-2>
+                          </DESC>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="aec2696c-484a-4600-b94c-2912e521e9f2">
+                          <SHORT-NAME>CANNM_EXCLUSIVE_AREA_2</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL">No interruption of CanNm_SetUserData by CanNm_MainFunction allowed</L-2>
+                          </DESC>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="f127d7e4-0205-4ba6-a12d-3b410bc17dc3">
+                          <SHORT-NAME>CANNM_EXCLUSIVE_AREA_3</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL">No interruption of CanNm_SetCoordBits by CanNm_MainFunction allowed</L-2>
+                          </DESC>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="1e97d756-62f4-4083-9234-297ff32b52a2">
+                          <SHORT-NAME>CANNM_EXCLUSIVE_AREA_4</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL">No interruption of CanNm_RxIndication by CanNm_GetUserData or CanNm_GetPduData allowed</L-2>
+                          </DESC>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="9be2270b-5464-4520-9a77-847e50144b39">
+                          <SHORT-NAME>CANNM_EXCLUSIVE_AREA_5</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL">No interruption of CanNm_GetUserData or CanNm_GetPduData by CanNm_RxIndication allowed</L-2>
+                          </DESC>
+                        </EXCLUSIVE-AREA>
+                      </EXCLUSIVE-AREAS>
+                      <ENTITYS>
+                        <BSW-SCHEDULABLE-ENTITY UUID="1b922421-76de-401c-b339-b17acdc13384">
+                          <SHORT-NAME>CanNm_MainFunction</SHORT-NAME>
+                          <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/MICROSAR/CanNm_ib_bswmd/BswModuleDescriptions/CanNm_MainFunction</IMPLEMENTED-ENTRY-REF>
+                        </BSW-SCHEDULABLE-ENTITY>
+                      </ENTITYS>
+                      <EVENTS>
+                        <BSW-TIMING-EVENT UUID="f5386e59-09a4-49c6-97e7-167bf537eedb">
+                          <SHORT-NAME>CanNm_MainFunctionTimingEvent0</SHORT-NAME>
+                          <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/MICROSAR/CanNm_ib_bswmd/BswModuleDescriptions/CanNm/CanNmBehavior/CanNm_MainFunction</STARTS-ON-EVENT-REF>
+                          <PERIOD>0.01</PERIOD>
+                        </BSW-TIMING-EVENT>
+                      </EVENTS>
+                    </BSW-INTERNAL-BEHAVIOR>
+                  </INTERNAL-BEHAVIORS>
+                </BSW-MODULE-DESCRIPTION>
+                <BSW-MODULE-ENTRY UUID="b02c15b7-cdb5-496a-9b38-785da07fb53f">
+                  <SHORT-NAME>CanNm_MainFunction</SHORT-NAME>
+                  <CALL-TYPE>SCHEDULED</CALL-TYPE>
+                  <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                </BSW-MODULE-ENTRY>
+              </ELEMENTS>
+            </AR-PACKAGE>
+            <AR-PACKAGE UUID="f5111ed9-07f1-4615-9d1f-6696fb36b6a1">
+              <SHORT-NAME>XcpEvents</SHORT-NAME>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="46d882fe-e5d2-4c26-bb2a-6b11387fc6cb">
+          <SHORT-NAME>CanSM_ib_bswmd</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="5bf80553-95fb-429c-b858-5b200896ff6d">
+              <SHORT-NAME>BswModuleDescriptions</SHORT-NAME>
+              <ELEMENTS>
+                <BSW-MODULE-DESCRIPTION UUID="6c68f2b8-4940-41d0-a3a5-c8fcf9643dc4">
+                  <SHORT-NAME>CanSM</SHORT-NAME>
+                  <INTERNAL-BEHAVIORS>
+                    <BSW-INTERNAL-BEHAVIOR UUID="55c8740e-c498-4917-804f-2f593cc83a1b">
+                      <SHORT-NAME>CanSMBehavior</SHORT-NAME>
+                      <EXCLUSIVE-AREAS>
+                        <EXCLUSIVE-AREA UUID="c9368966-1ebf-4c51-8fc0-52b556428647">
+                          <SHORT-NAME>CANSM_EXCLUSIVE_AREA_1</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="6181c81c-31f6-424b-b649-3155538e4462">
+                          <SHORT-NAME>CANSM_EXCLUSIVE_AREA_2</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="4fba6de9-5382-470c-a355-566ff671dc9f">
+                          <SHORT-NAME>CANSM_EXCLUSIVE_AREA_3</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="dd8d02db-8d3f-427d-bc28-337b51f766df">
+                          <SHORT-NAME>CANSM_EXCLUSIVE_AREA_4</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="ae821beb-3de3-4053-94fe-e04cb746394d">
+                          <SHORT-NAME>CANSM_EXCLUSIVE_AREA_5</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                      </EXCLUSIVE-AREAS>
+                      <ENTITYS>
+                        <BSW-SCHEDULABLE-ENTITY UUID="f1438281-b1ea-41c8-b82e-e733f57fdf3a">
+                          <SHORT-NAME>CanSM_MainFunction</SHORT-NAME>
+                          <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/MICROSAR/CanSM_ib_bswmd/BswModuleDescriptions/CanSM_MainFunction</IMPLEMENTED-ENTRY-REF>
+                        </BSW-SCHEDULABLE-ENTITY>
+                      </ENTITYS>
+                      <EVENTS>
+                        <BSW-TIMING-EVENT UUID="27d66cf5-4aa2-47ef-a072-4868944264b2">
+                          <SHORT-NAME>CanSM_MainFunctionTimingEvent0</SHORT-NAME>
+                          <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/MICROSAR/CanSM_ib_bswmd/BswModuleDescriptions/CanSM/CanSMBehavior/CanSM_MainFunction</STARTS-ON-EVENT-REF>
+                          <PERIOD>0.01</PERIOD>
+                        </BSW-TIMING-EVENT>
+                      </EVENTS>
+                    </BSW-INTERNAL-BEHAVIOR>
+                  </INTERNAL-BEHAVIORS>
+                </BSW-MODULE-DESCRIPTION>
+                <BSW-MODULE-ENTRY UUID="510ac5f0-ad56-4cd5-ba70-7093d078e19c">
+                  <SHORT-NAME>CanSM_MainFunction</SHORT-NAME>
+                  <CALL-TYPE>SCHEDULED</CALL-TYPE>
+                  <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                </BSW-MODULE-ENTRY>
+              </ELEMENTS>
+            </AR-PACKAGE>
+            <AR-PACKAGE UUID="245ecd4b-252d-41bb-b92e-c9ab6622bd50">
+              <SHORT-NAME>XcpEvents</SHORT-NAME>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="05382920-bf9b-4245-b013-4b8baf53d960">
+          <SHORT-NAME>CanTp_ib_bswmd</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="42706325-7b0c-49ea-8259-a6c912ab6a4a">
+              <SHORT-NAME>XcpEvents</SHORT-NAME>
+            </AR-PACKAGE>
+            <AR-PACKAGE UUID="79a501e3-5ce1-42f7-bbb4-1fbed9e6b775">
+              <SHORT-NAME>BswModuleDescriptions</SHORT-NAME>
+              <ELEMENTS>
+                <BSW-MODULE-DESCRIPTION UUID="3bd2b631-e286-4670-9a85-972ff2ab993c">
+                  <SHORT-NAME>CanTp</SHORT-NAME>
+                  <INTERNAL-BEHAVIORS>
+                    <BSW-INTERNAL-BEHAVIOR UUID="81c49eb5-0a40-4a3b-a04c-461c4a7945cc">
+                      <SHORT-NAME>CanTpBehavior</SHORT-NAME>
+                      <EXCLUSIVE-AREAS>
+                        <EXCLUSIVE-AREA UUID="74bf8f7f-5e3c-41b5-9b23-abb5cd7ba58b">
+                          <SHORT-NAME>CANTP_EXCLUSIVE_AREA_0</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                      </EXCLUSIVE-AREAS>
+                      <ENTITYS>
+                        <BSW-SCHEDULABLE-ENTITY UUID="1721821a-173a-4cf5-842f-00be7dce0e84">
+                          <SHORT-NAME>CanTp_MainFunction</SHORT-NAME>
+                          <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/MICROSAR/CanTp_ib_bswmd/BswModuleDescriptions/CanTp_MainFunction</IMPLEMENTED-ENTRY-REF>
+                        </BSW-SCHEDULABLE-ENTITY>
+                      </ENTITYS>
+                      <EVENTS>
+                        <BSW-TIMING-EVENT UUID="0509b275-051d-4df4-97a2-161dcf78e863">
+                          <SHORT-NAME>CanTp_MainFunctionTimingEvent0</SHORT-NAME>
+                          <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/MICROSAR/CanTp_ib_bswmd/BswModuleDescriptions/CanTp/CanTpBehavior/CanTp_MainFunction</STARTS-ON-EVENT-REF>
+                          <PERIOD>0.005</PERIOD>
+                        </BSW-TIMING-EVENT>
+                      </EVENTS>
+                    </BSW-INTERNAL-BEHAVIOR>
+                  </INTERNAL-BEHAVIORS>
+                </BSW-MODULE-DESCRIPTION>
+                <BSW-MODULE-ENTRY UUID="903959ff-2eb6-421c-bdec-0c84495e4499">
+                  <SHORT-NAME>CanTp_MainFunction</SHORT-NAME>
+                  <CALL-TYPE>SCHEDULED</CALL-TYPE>
+                  <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                </BSW-MODULE-ENTRY>
+              </ELEMENTS>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="2bab5284-4610-4e38-add4-7d2168c272a7">
+          <SHORT-NAME>ComM_ib_bswmd</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="804cc441-2b39-4ec8-90f1-ea8b6a0653e7">
+              <SHORT-NAME>BswModuleDescriptions</SHORT-NAME>
+              <ELEMENTS>
+                <BSW-MODULE-DESCRIPTION UUID="15ec1f75-2d92-49b2-9ae2-70652dd2276e">
+                  <SHORT-NAME>ComM</SHORT-NAME>
+                  <INTERNAL-BEHAVIORS>
+                    <BSW-INTERNAL-BEHAVIOR UUID="8a847dfb-cddc-4d6f-98e9-ae06816fb49f">
+                      <SHORT-NAME>ComMBehavior</SHORT-NAME>
+                      <EXCLUSIVE-AREAS>
+                        <EXCLUSIVE-AREA UUID="5f8a6a2b-685c-4a68-aa70-abd913254204">
+                          <SHORT-NAME>COMM_EXCLUSIVE_AREA_0</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="6cff3e84-e8f0-4134-9c69-2b6c86dedb1d">
+                          <SHORT-NAME>COMM_EXCLUSIVE_AREA_1</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                      </EXCLUSIVE-AREAS>
+                      <ENTITYS>
+                        <BSW-SCHEDULABLE-ENTITY UUID="aaa3c47d-cab4-4d82-994c-62d10142ad5f">
+                          <SHORT-NAME>ComM_MainFunction_0</SHORT-NAME>
+                          <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/MICROSAR/ComM_ib_bswmd/BswModuleDescriptions/ComM_MainFunction_0</IMPLEMENTED-ENTRY-REF>
+                        </BSW-SCHEDULABLE-ENTITY>
+                      </ENTITYS>
+                      <EVENTS>
+                        <BSW-TIMING-EVENT UUID="6911bf92-61af-44ce-9d11-b84ffbe172f8">
+                          <SHORT-NAME>ComM_MainFunction_0TimingEvent0</SHORT-NAME>
+                          <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/MICROSAR/ComM_ib_bswmd/BswModuleDescriptions/ComM/ComMBehavior/ComM_MainFunction_0</STARTS-ON-EVENT-REF>
+                          <PERIOD>0.02</PERIOD>
+                        </BSW-TIMING-EVENT>
+                      </EVENTS>
+                    </BSW-INTERNAL-BEHAVIOR>
+                  </INTERNAL-BEHAVIORS>
+                </BSW-MODULE-DESCRIPTION>
+                <BSW-MODULE-ENTRY UUID="b6c59430-5327-4689-b30a-04e57bb760c9">
+                  <SHORT-NAME>ComM_MainFunction_0</SHORT-NAME>
+                  <CALL-TYPE>SCHEDULED</CALL-TYPE>
+                  <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                </BSW-MODULE-ENTRY>
+              </ELEMENTS>
+            </AR-PACKAGE>
+            <AR-PACKAGE UUID="d4301854-e18a-4ce0-ad43-6b199f263ca2">
+              <SHORT-NAME>XcpEvents</SHORT-NAME>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="38ddc00a-2c8b-4a46-b1b3-3db1c7477677">
+          <SHORT-NAME>Com_ib_bswmd</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="ceb85236-983e-4198-aa4c-7f7b2f377203">
+              <SHORT-NAME>BswModuleDescriptions</SHORT-NAME>
+              <ELEMENTS>
+                <BSW-MODULE-DESCRIPTION UUID="87db1c9e-f9ad-4678-954a-373a6bb5e514">
+                  <SHORT-NAME>Com</SHORT-NAME>
+                  <INTERNAL-BEHAVIORS>
+                    <BSW-INTERNAL-BEHAVIOR UUID="fad7325c-d828-490c-9d5d-053d3598d5a0">
+                      <SHORT-NAME>ComBehavior</SHORT-NAME>
+                      <EXCLUSIVE-AREAS>
+                        <EXCLUSIVE-AREA UUID="5214d010-f653-4f0c-9c55-bfa0f4dde2fe">
+                          <SHORT-NAME>COM_EXCLUSIVE_AREA_TX</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL">This critical section protects Tx ressources that can be accessed from various contexts. Therefore the critical section enclosed with COM_EXCLUSIVE_AREA_TX should never be interrupted by any Com API which accesses Tx ressources. For more details, see DocTechRef.</L-2>
+                          </DESC>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="38f175ff-4182-44db-a093-fed6e6549ff3">
+                          <SHORT-NAME>COM_EXCLUSIVE_AREA_RX</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL">This critical section protects Rx ressources that can be accessed from various contexts.Therefore the critical section enclosed with COM_EXCLUSIVE_AREA_RX should never be interrupted by any Com API which accesses Rx ressources. For more details, see DocTechRef.</L-2>
+                          </DESC>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="b71bdabb-5c03-4efc-a972-ef80cf6a60a0">
+                          <SHORT-NAME>COM_EXCLUSIVE_AREA_BOTH</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL">This critical section protects Rx and Tx ressources that are being accessed in context of Com_MainFunctionRouteSignals for signal gateway routings or description routings with configured deferred description source.  For more details, see DocTechRef.</L-2>
+                          </DESC>
+                        </EXCLUSIVE-AREA>
+                      </EXCLUSIVE-AREAS>
+                      <ENTITYS>
+                        <BSW-SCHEDULABLE-ENTITY UUID="06d78fc0-5764-4024-ad31-7c8273dfa17f">
+                          <SHORT-NAME>Com_MainFunctionTx</SHORT-NAME>
+                          <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/MICROSAR/Com_ib_bswmd/BswModuleDescriptions/Com_MainFunctionTx</IMPLEMENTED-ENTRY-REF>
+                        </BSW-SCHEDULABLE-ENTITY>
+                        <BSW-SCHEDULABLE-ENTITY UUID="e0aaa9d7-d96c-4fdb-aba9-a8e446542bad">
+                          <SHORT-NAME>Com_MainFunctionRx</SHORT-NAME>
+                          <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/MICROSAR/Com_ib_bswmd/BswModuleDescriptions/Com_MainFunctionRx</IMPLEMENTED-ENTRY-REF>
+                        </BSW-SCHEDULABLE-ENTITY>
+                      </ENTITYS>
+                      <EVENTS>
+                        <BSW-TIMING-EVENT UUID="443ced23-1c8b-4700-9c3a-d6d56d80c2f5">
+                          <SHORT-NAME>Com_MainFunctionTxTimingEvent0</SHORT-NAME>
+                          <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/MICROSAR/Com_ib_bswmd/BswModuleDescriptions/Com/ComBehavior/Com_MainFunctionTx</STARTS-ON-EVENT-REF>
+                          <PERIOD>0.01</PERIOD>
+                        </BSW-TIMING-EVENT>
+                        <BSW-TIMING-EVENT UUID="79a6f48e-7d1a-405b-94a2-7284d172debc">
+                          <SHORT-NAME>Com_MainFunctionRxTimingEvent0</SHORT-NAME>
+                          <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/MICROSAR/Com_ib_bswmd/BswModuleDescriptions/Com/ComBehavior/Com_MainFunctionRx</STARTS-ON-EVENT-REF>
+                          <PERIOD>0.01</PERIOD>
+                        </BSW-TIMING-EVENT>
+                      </EVENTS>
+                    </BSW-INTERNAL-BEHAVIOR>
+                  </INTERNAL-BEHAVIORS>
+                </BSW-MODULE-DESCRIPTION>
+                <BSW-MODULE-ENTRY UUID="8f00ced4-743a-4e0e-9478-7b16c553fc66">
+                  <SHORT-NAME>Com_MainFunctionTx</SHORT-NAME>
+                  <CALL-TYPE>SCHEDULED</CALL-TYPE>
+                  <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                </BSW-MODULE-ENTRY>
+                <BSW-MODULE-ENTRY UUID="083bd70d-95fb-4b1c-9123-93532f110efe">
+                  <SHORT-NAME>Com_MainFunctionRx</SHORT-NAME>
+                  <CALL-TYPE>SCHEDULED</CALL-TYPE>
+                  <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                </BSW-MODULE-ENTRY>
+              </ELEMENTS>
+            </AR-PACKAGE>
+            <AR-PACKAGE UUID="3a12e7aa-b2b0-4918-ac14-08a3ac7c965b">
+              <SHORT-NAME>XcpEvents</SHORT-NAME>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="405db46a-2903-4070-9d3f-ba50c0b2d7cb">
+          <SHORT-NAME>EcuM_ib_bswmd</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="193d1e60-594b-48d2-8a07-da6502aa4e22">
+              <SHORT-NAME>BswModuleDescriptions</SHORT-NAME>
+              <ELEMENTS>
+                <BSW-MODULE-DESCRIPTION UUID="635dd1fd-3d19-4126-a375-1fccb3efc552">
+                  <SHORT-NAME>EcuM</SHORT-NAME>
+                  <INTERNAL-BEHAVIORS>
+                    <BSW-INTERNAL-BEHAVIOR UUID="f1705f3a-8fb3-4441-a043-737a8b7d56ca">
+                      <SHORT-NAME>EcuMBehavior</SHORT-NAME>
+                      <EXCLUSIVE-AREAS>
+                        <EXCLUSIVE-AREA UUID="7cde133a-69aa-48ab-b7ea-667322984f98">
+                          <SHORT-NAME>ECUM_EXCLUSIVE_AREA_0</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL">This exclusive area shall disable all wake up interrupts to prevent overwriting of some global variables.</L-2>
+                          </DESC>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="d79fc325-2f3d-40d9-a42b-00b1e6748ee3">
+                          <SHORT-NAME>ECUM_EXCLUSIVE_AREA_1</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL">This exclusive area is only used in case of multi core and if the the EcuM is configured to handle also the slave cores. It must be configured as a spinlock to allow access to some variables simultaneously from multiple cores.</L-2>
+                          </DESC>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="a88c0482-9400-4924-b3be-28e78fb9ce38">
+                          <SHORT-NAME>ECUM_EXCLUSIVE_AREA_2</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL">This exclusive area is used for accessing the clock variable. It shall disable GPT interrupts and task changes. Only necessary if 32 Bit access is not atomic and Alarm Clock is present.</L-2>
+                          </DESC>
+                        </EXCLUSIVE-AREA>
+                      </EXCLUSIVE-AREAS>
+                      <ENTITYS>
+                        <BSW-SCHEDULABLE-ENTITY UUID="0f6523a4-de66-4010-96a7-436d41dae566">
+                          <SHORT-NAME>EcuM_MainFunction</SHORT-NAME>
+                          <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/MICROSAR/EcuM_ib_bswmd/BswModuleDescriptions/EcuM_MainFunction</IMPLEMENTED-ENTRY-REF>
+                        </BSW-SCHEDULABLE-ENTITY>
+                      </ENTITYS>
+                      <EVENTS>
+                        <BSW-TIMING-EVENT UUID="89736f33-d642-4341-be31-35c5b29ef530">
+                          <SHORT-NAME>EcuM_MainFunctionTimingEvent0</SHORT-NAME>
+                          <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/MICROSAR/EcuM_ib_bswmd/BswModuleDescriptions/EcuM/EcuMBehavior/EcuM_MainFunction</STARTS-ON-EVENT-REF>
+                          <PERIOD>0.01</PERIOD>
+                        </BSW-TIMING-EVENT>
+                      </EVENTS>
+                    </BSW-INTERNAL-BEHAVIOR>
+                  </INTERNAL-BEHAVIORS>
+                </BSW-MODULE-DESCRIPTION>
+                <BSW-MODULE-ENTRY UUID="974cee21-eab3-418b-950d-d5f4a20d76e3">
+                  <SHORT-NAME>EcuM_MainFunction</SHORT-NAME>
+                  <CALL-TYPE>SCHEDULED</CALL-TYPE>
+                  <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                </BSW-MODULE-ENTRY>
+              </ELEMENTS>
+            </AR-PACKAGE>
+            <AR-PACKAGE UUID="c16866e2-0924-40ba-8c80-2076a247d1b2">
+              <SHORT-NAME>XcpEvents</SHORT-NAME>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="dc9db6b0-eea8-40b1-8d9b-8f837af81ee6">
+          <SHORT-NAME>Fee_ib_bswmd</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="c1d8a12e-08f7-427f-9f5f-e3f7f66fe76d">
+              <SHORT-NAME>BswModuleDescriptions</SHORT-NAME>
+              <ELEMENTS>
+                <BSW-MODULE-DESCRIPTION UUID="a3e1ce70-1892-48ae-a84f-6c83f164fef1">
+                  <SHORT-NAME>Fee</SHORT-NAME>
+                  <INTERNAL-BEHAVIORS>
+                    <BSW-INTERNAL-BEHAVIOR UUID="b0651aa9-d510-4ebe-bd4b-e3891749929f">
+                      <SHORT-NAME>FeeBehavior</SHORT-NAME>
+                      <EXCLUSIVE-AREAS>
+                        <EXCLUSIVE-AREA UUID="85f8743b-e0eb-484d-ae92-7819a217b015">
+                          <SHORT-NAME>FEE_EXCLUSIVE_AREA_0</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                      </EXCLUSIVE-AREAS>
+                      <ENTITYS>
+                        <BSW-SCHEDULABLE-ENTITY UUID="808d34fe-43ca-4208-afa5-2763204b7f34">
+                          <SHORT-NAME>Fee_MainFunction</SHORT-NAME>
+                          <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/MICROSAR/Fee_ib_bswmd/BswModuleDescriptions/Fee_MainFunction</IMPLEMENTED-ENTRY-REF>
+                        </BSW-SCHEDULABLE-ENTITY>
+                      </ENTITYS>
+                      <EVENTS>
+                        <BSW-TIMING-EVENT UUID="a49aeb47-3839-4e4e-b54b-4c6fba9c4508">
+                          <SHORT-NAME>Fee_MainFunctionTimingEvent0</SHORT-NAME>
+                          <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/MICROSAR/Fee_ib_bswmd/BswModuleDescriptions/Fee/FeeBehavior/Fee_MainFunction</STARTS-ON-EVENT-REF>
+                          <PERIOD>0.005</PERIOD>
+                        </BSW-TIMING-EVENT>
+                      </EVENTS>
+                    </BSW-INTERNAL-BEHAVIOR>
+                  </INTERNAL-BEHAVIORS>
+                </BSW-MODULE-DESCRIPTION>
+                <BSW-MODULE-ENTRY UUID="552ecfd5-24bf-4665-ae47-7759f7f03e57">
+                  <SHORT-NAME>Fee_MainFunction</SHORT-NAME>
+                  <CALL-TYPE>SCHEDULED</CALL-TYPE>
+                  <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                </BSW-MODULE-ENTRY>
+              </ELEMENTS>
+            </AR-PACKAGE>
+            <AR-PACKAGE UUID="9f774e9e-49cb-463d-b945-355844f91840">
+              <SHORT-NAME>XcpEvents</SHORT-NAME>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="559d4be4-5381-411c-b891-5698f36104db">
+          <SHORT-NAME>Nm_ib_bswmd</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="62a97c1b-1af7-4197-8cf5-51bf950d724e">
+              <SHORT-NAME>BswModuleDescriptions</SHORT-NAME>
+              <ELEMENTS>
+                <BSW-MODULE-DESCRIPTION UUID="0764751c-00dd-4aee-88e5-077d935694ec">
+                  <SHORT-NAME>Nm</SHORT-NAME>
+                  <INTERNAL-BEHAVIORS>
+                    <BSW-INTERNAL-BEHAVIOR UUID="6ae1b0a6-6d91-4b72-8706-42f751498ba4">
+                      <SHORT-NAME>NmBehavior</SHORT-NAME>
+                      <EXCLUSIVE-AREAS>
+                        <EXCLUSIVE-AREA UUID="f499cb8f-f42a-4089-b9f6-541f25db6529">
+                          <SHORT-NAME>NM_EXCLUSIVE_AREA_0</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL">No interruption by any interrupt allowed</L-2>
+                          </DESC>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="49bb3aaa-3d6a-49b0-847e-a2094ffea912">
+                          <SHORT-NAME>NM_EXCLUSIVE_AREA_1</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL">Interrupt locks are required if any of these functions are executed in an interrupt context: Nm_NetworkMode, Nm_PrepareBusSleepMode, Nm_BusSleepMode, Nm_RemoteSleepIndication, Nm_RemoteSleepCancellation, Nm_CoordReadyToSleepIndication, Nm_CoordReadyToSleepCancellation</L-2>
+                          </DESC>
+                        </EXCLUSIVE-AREA>
+                      </EXCLUSIVE-AREAS>
+                    </BSW-INTERNAL-BEHAVIOR>
+                  </INTERNAL-BEHAVIORS>
+                </BSW-MODULE-DESCRIPTION>
+              </ELEMENTS>
+            </AR-PACKAGE>
+            <AR-PACKAGE UUID="22008652-281b-4cbc-a27b-c4b6750d4665">
+              <SHORT-NAME>XcpEvents</SHORT-NAME>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="8c1612df-2610-4784-8c7c-6c6565ffef6c">
+          <SHORT-NAME>NvM_ib_bswmd</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="362694be-836d-472d-8090-ad16db3f0d9f">
+              <SHORT-NAME>BswModuleDescriptions</SHORT-NAME>
+              <ELEMENTS>
+                <BSW-MODULE-DESCRIPTION UUID="6cc619a4-7ecd-49e5-8861-3332d69de891">
+                  <SHORT-NAME>NvM</SHORT-NAME>
+                  <INTERNAL-BEHAVIORS>
+                    <BSW-INTERNAL-BEHAVIOR UUID="1b0175e3-2755-4a83-b4a9-57da009820e3">
+                      <SHORT-NAME>NvMBehavior</SHORT-NAME>
+                      <EXCLUSIVE-AREAS>
+                        <EXCLUSIVE-AREA UUID="0fb732d7-b490-4f81-adce-f128e809ac68">
+                          <SHORT-NAME>NVM_EXCLUSIVE_AREA_0</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                      </EXCLUSIVE-AREAS>
+                      <ENTITYS>
+                        <BSW-SCHEDULABLE-ENTITY UUID="a226f8f3-a951-4a31-bf11-863ae0b7eb49">
+                          <SHORT-NAME>NvM_MainFunction</SHORT-NAME>
+                          <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/MICROSAR/NvM_ib_bswmd/BswModuleDescriptions/NvM_MainFunction</IMPLEMENTED-ENTRY-REF>
+                        </BSW-SCHEDULABLE-ENTITY>
+                      </ENTITYS>
+                      <EVENTS>
+                        <BSW-TIMING-EVENT UUID="4df160f9-8604-4e64-888e-7064cb24063f">
+                          <SHORT-NAME>NvM_MainFunctionTimingEvent0</SHORT-NAME>
+                          <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/MICROSAR/NvM_ib_bswmd/BswModuleDescriptions/NvM/NvMBehavior/NvM_MainFunction</STARTS-ON-EVENT-REF>
+                          <PERIOD>0.01</PERIOD>
+                        </BSW-TIMING-EVENT>
+                      </EVENTS>
+                    </BSW-INTERNAL-BEHAVIOR>
+                  </INTERNAL-BEHAVIORS>
+                </BSW-MODULE-DESCRIPTION>
+                <BSW-MODULE-ENTRY UUID="33e6fdae-a14b-40d9-8835-5dd5b584b2e7">
+                  <SHORT-NAME>NvM_MainFunction</SHORT-NAME>
+                  <CALL-TYPE>SCHEDULED</CALL-TYPE>
+                  <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                </BSW-MODULE-ENTRY>
+              </ELEMENTS>
+            </AR-PACKAGE>
+            <AR-PACKAGE UUID="2c56432a-5a01-4c0a-b233-3e6f5136fac6">
+              <SHORT-NAME>XcpEvents</SHORT-NAME>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="d18a3cd3-756c-4697-b469-eda50152fbe8">
+          <SHORT-NAME>PduR_ib_bswmd</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="f85fcaae-58d1-47b4-a1a9-e0eb63cc0760">
+              <SHORT-NAME>BswModuleDescriptions</SHORT-NAME>
+              <ELEMENTS>
+                <BSW-MODULE-DESCRIPTION UUID="461ea11e-71ff-44d1-b25e-0e762eed5edd">
+                  <SHORT-NAME>PduR</SHORT-NAME>
+                  <INTERNAL-BEHAVIORS>
+                    <BSW-INTERNAL-BEHAVIOR UUID="5a2821fa-6f3e-4c3e-950d-e23a992cd123">
+                      <SHORT-NAME>PduRBehavior</SHORT-NAME>
+                      <EXCLUSIVE-AREAS>
+                        <EXCLUSIVE-AREA UUID="175139f0-91ac-493d-816c-be6585dc3942">
+                          <SHORT-NAME>PDUR_EXCLUSIVE_AREA_0</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                      </EXCLUSIVE-AREAS>
+                    </BSW-INTERNAL-BEHAVIOR>
+                  </INTERNAL-BEHAVIORS>
+                </BSW-MODULE-DESCRIPTION>
+              </ELEMENTS>
+            </AR-PACKAGE>
+            <AR-PACKAGE UUID="4baf990c-7e5c-4b92-840c-a1fc66768ee8">
+              <SHORT-NAME>XcpEvents</SHORT-NAME>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

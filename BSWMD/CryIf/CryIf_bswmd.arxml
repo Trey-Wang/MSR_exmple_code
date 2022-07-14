@@ -1,0 +1,546 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+***********************************************************************************************************************
+COPYRIGHT
+===============================================================================
+Copyright (c) 2017 by Vector Informatik GmbH.                                         All rights reserved.
+
+    This software is copyright protected and proprietary to Vector Informatik GmbH.
+    Vector Informatik GmbH grants to you only those rights as set out in the license conditions.
+    All other rights remain with Vector Informatik GmbH.
+===============================================================================
+FILE DESCRIPTION
+===============================================================================
+File:           CryIf_bswmd.arxml
+Component:      If_AsrIfCry
+Module:         CryIf
+Generator:      DaVinci Configurator
+Description:    Crypto Interface
+*********************************************************************************************************************** 
+-->
+<AUTOSAR xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-3-0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://autosar.org/schema/r4.0">
+	<AR-PACKAGES>
+		<AR-PACKAGE UUID="dfba0984-0c4a-4dd6-beb7-e300006d8edc">
+			<SHORT-NAME>MICROSAR</SHORT-NAME>
+			<ELEMENTS>
+				<ECUC-MODULE-DEF UUID="35f34d85-2f3c-401f-b109-66568f7df130">
+					<SHORT-NAME>CryIf</SHORT-NAME>
+					<DESC>
+						<L-2 L="EN">Configuration of the Crypto Interface.</L-2>
+					</DESC>
+					<CATEGORY>VENDOR_SPECIFIC_MODULE_DEFINITION</CATEGORY>
+					<ADMIN-DATA>
+						<DOC-REVISIONS>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.00.00</REVISION-LABEL>
+								<STATE>beta</STATE>
+								<ISSUED-BY>visrpp</ISSUED-BY>
+								<DATE>2016-07-13T10:23:09+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Initial creation</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.00.01</REVISION-LABEL>
+								<STATE>beta</STATE>
+								<ISSUED-BY>visrpp</ISSUED-BY>
+								<DATE>2016-12-06T04:28:20+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Set SW Version</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00093184</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.00.02</REVISION-LABEL>
+								<STATE>beta</STATE>
+								<ISSUED-BY>vismss</ISSUED-BY>
+								<DATE>2016-12-16T09:54:01+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Set SW Version</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.00.03</REVISION-LABEL>
+								<STATE>beta</STATE>
+								<ISSUED-BY>vismss</ISSUED-BY>
+								<DATE>2017-01-24T10:47:52+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Set SW Version</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.01.00</REVISION-LABEL>
+								<STATE>beta</STATE>
+								<ISSUED-BY>vismss</ISSUED-BY>
+								<DATE>2017-02-23T11:34:12+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Set SW Version</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.02.00</REVISION-LABEL>
+								<STATE>released</STATE>
+								<ISSUED-BY>visrpp</ISSUED-BY>
+								<DATE>2017-05-05T01:37:14+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Set SW Version</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">FEATC-1228</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>2.00.00</REVISION-LABEL>
+								<STATE>released</STATE>
+								<ISSUED-BY>vismss</ISSUED-BY>
+								<DATE>2017-05-12T02:23:20+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Set SW Version</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>2.01.00</REVISION-LABEL>
+								<STATE>released</STATE>
+								<ISSUED-BY>visrpp</ISSUED-BY>
+								<DATE>2017-07-13T09:26:51+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Adapt to ASR 4.3 Standard Defintition</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">STORYC-1345</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+						</DOC-REVISIONS>
+					</ADMIN-DATA>
+					<RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_CryIf_00001</RELATED-TRACE-ITEM-REF>
+					<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+					<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+					<POST-BUILD-VARIANT-SUPPORT>false</POST-BUILD-VARIANT-SUPPORT>
+					<REFINED-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/AUTOSAR/EcucDefs/CryIf</REFINED-MODULE-DEF-REF>
+					<SUPPORTED-CONFIG-VARIANTS>
+						<SUPPORTED-CONFIG-VARIANT>VARIANT-PRE-COMPILE</SUPPORTED-CONFIG-VARIANT>
+					</SUPPORTED-CONFIG-VARIANTS>
+					<CONTAINERS>
+						<!-- Container Definition: CryIfChannel -->
+						<ECUC-PARAM-CONF-CONTAINER-DEF UUID="7a885e30-624e-4806-a6e4-935d98b2021b">
+							<SHORT-NAME>CryIfChannel</SHORT-NAME>
+							<DESC>
+								<L-2 L="EN">Container for incorporation of CryIfChannel.</L-2>
+							</DESC>
+							<ADMIN-DATA>
+								<SDGS>
+									<SDG GID="DV:CfgPostBuild">
+										<SD GID="DV:postBuildSelectableChangeable">false</SD>
+										<SD GID="DV:postBuildNotDeletable">true</SD>
+									</SDG>
+								</SDGS>
+							</ADMIN-DATA>
+							<RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_CryIf_00002</RELATED-TRACE-ITEM-REF>
+							<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+							<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+							<MULTIPLICITY-CONFIG-CLASSES>
+								<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+									<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+									<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+								</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+							</MULTIPLICITY-CONFIG-CLASSES>
+							<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+							<REQUIRES-INDEX>false</REQUIRES-INDEX>
+							<PARAMETERS>
+								<!-- PARAMETER DEFINITION: CryIfChannelId -->
+								<ECUC-INTEGER-PARAM-DEF UUID="19c3e6d4-cd71-47e1-b53e-87941187b7e7">
+									<SHORT-NAME>CryIfChannelId</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Identifier of the crypto channel.</L-2>
+									</DESC>
+									<INTRODUCTION>
+										<P>
+											<L-1 L="EN">Specifies to which crypto channel the CSM queue is connected to.</L-1>
+										</P>
+									</INTRODUCTION>
+									<RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_CryIf_00004</RELATED-TRACE-ITEM-REF>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<SCOPE>LOCAL</SCOPE>
+									<MULTIPLICITY-CONFIG-CLASSES>
+										<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+									</MULTIPLICITY-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<VALUE-CONFIG-CLASSES>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+									</VALUE-CONFIG-CLASSES>
+									<SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>0</DEFAULT-VALUE>
+									<MAX>4294967295</MAX>
+									<MIN>0</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+							</PARAMETERS>
+							<REFERENCES>
+								<!-- Symbolic Name Reference Definition: CryIfDriverObjectRef -->
+								<ECUC-SYMBOLIC-NAME-REFERENCE-DEF UUID="6d977689-e5ec-432e-a99f-506b5b1f8ed5">
+									<SHORT-NAME>CryIfDriverObjectRef</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter refers to a Crypto Driver Object.</L-2>
+									</DESC>
+									<INTRODUCTION>
+										<P>
+											<L-1 L="EN">Specifies to which Crypto Driver Object the crypto channel is connected to</L-1>
+										</P>
+									</INTRODUCTION>
+									<RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_CryIf_00005</RELATED-TRACE-ITEM-REF>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<SCOPE>LOCAL</SCOPE>
+									<MULTIPLICITY-CONFIG-CLASSES>
+										<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+									</MULTIPLICITY-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<VALUE-CONFIG-CLASSES>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+									</VALUE-CONFIG-CLASSES>
+									<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Crypto/CryptoDriverObjects/CryptoDriverObject</DESTINATION-REF>
+								</ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+							</REFERENCES>
+						</ECUC-PARAM-CONF-CONTAINER-DEF>
+						<!-- Container Definition: CryIfGeneral -->
+						<ECUC-PARAM-CONF-CONTAINER-DEF UUID="5c9afa9c-e1e5-45e6-a6ab-a8d182909321">
+							<SHORT-NAME>CryIfGeneral</SHORT-NAME>
+							<DESC>
+								<L-2 L="EN">Container for incorporation of CryIfGeneral.</L-2>
+							</DESC>
+							<ADMIN-DATA>
+								<SDGS>
+									<SDG GID="DV:CfgPostBuild">
+										<SD GID="DV:postBuildSelectableChangeable">false</SD>
+										<SD GID="DV:postBuildNotDeletable">true</SD>
+									</SDG>
+								</SDGS>
+							</ADMIN-DATA>
+							<RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_CryIf_00009</RELATED-TRACE-ITEM-REF>
+							<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+							<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+							<MULTIPLICITY-CONFIG-CLASSES>
+								<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+									<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+									<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+								</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+							</MULTIPLICITY-CONFIG-CLASSES>
+							<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+							<REQUIRES-INDEX>false</REQUIRES-INDEX>
+							<PARAMETERS>
+								<!-- PARAMETER DEFINITION: CryIfDevErrorDetect -->
+								<ECUC-BOOLEAN-PARAM-DEF UUID="529cbdde-9949-44c3-8b46-e57127772611">
+									<SHORT-NAME>CryIfDevErrorDetect</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Switches the development error detection and notification on or off.</L-2>
+									</DESC>
+									<INTRODUCTION>
+										<P>
+											<L-1 L="EN">true: detection and notification is enabled.
+                                        false: detection and notification is disabled.</L-1>
+										</P>
+									</INTRODUCTION>
+									<RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_CryIf_00010</RELATED-TRACE-ITEM-REF>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<SCOPE>LOCAL</SCOPE>
+									<MULTIPLICITY-CONFIG-CLASSES>
+										<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+									</MULTIPLICITY-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<VALUE-CONFIG-CLASSES>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+									</VALUE-CONFIG-CLASSES>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>true</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: CryIfVersionInfoApi -->
+								<ECUC-BOOLEAN-PARAM-DEF UUID="b70b2cdc-5423-45ff-8609-387c8f5f9940">
+									<SHORT-NAME>CryIfVersionInfoApi</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Pre-processor switch to enable and disable availability of the API CryIf_GetVersionInfo().</L-2>
+									</DESC>
+									<INTRODUCTION>
+										<P>
+											<L-1 L="EN">True: API CryIf_GetVersionInfo() is available
+                                        False: API CryIf_GetVersionInfo() is not available.</L-1>
+										</P>
+									</INTRODUCTION>
+									<RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_CryIf_00011</RELATED-TRACE-ITEM-REF>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<SCOPE>LOCAL</SCOPE>
+									<MULTIPLICITY-CONFIG-CLASSES>
+										<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+									</MULTIPLICITY-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<VALUE-CONFIG-CLASSES>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+									</VALUE-CONFIG-CLASSES>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-INTEGER-PARAM-DEF UUID="37903d9d-cc2b-4acd-bbe7-aae58a8033ff">
+									<SHORT-NAME>CryIfMaxNumberOfKeyElements</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Maximum number of key elements in one key which needs to be copied from one driver to another.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<SCOPE>LOCAL</SCOPE>
+									<MULTIPLICITY-CONFIG-CLASSES>
+										<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+									</MULTIPLICITY-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<VALUE-CONFIG-CLASSES>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+									</VALUE-CONFIG-CLASSES>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>10</DEFAULT-VALUE>
+									<MAX>4294967295</MAX>
+									<MIN>1</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<ECUC-INTEGER-PARAM-DEF UUID="cebab948-8930-4dcc-8e25-afb05a5f5b22">
+									<SHORT-NAME>CryIfMaxSizeOfKeyElement</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Size of the largest key element which needs to be copied from one driver to another.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<SCOPE>LOCAL</SCOPE>
+									<MULTIPLICITY-CONFIG-CLASSES>
+										<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+									</MULTIPLICITY-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<VALUE-CONFIG-CLASSES>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+									</VALUE-CONFIG-CLASSES>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>32</DEFAULT-VALUE>
+									<MAX>4294967295</MAX>
+									<MIN>1</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+							</PARAMETERS>
+						</ECUC-PARAM-CONF-CONTAINER-DEF>
+						<!-- Container Definition: CryIfKey -->
+						<ECUC-PARAM-CONF-CONTAINER-DEF UUID="b2d0f7df-dbc6-4329-980a-351cc558fc63">
+							<SHORT-NAME>CryIfKey</SHORT-NAME>
+							<DESC>
+								<L-2 L="EN">Container for incorporation of CryIfKey.</L-2>
+							</DESC>
+							<ADMIN-DATA>
+								<SDGS>
+									<SDG GID="DV:CfgPostBuild">
+										<SD GID="DV:postBuildSelectableChangeable">false</SD>
+										<SD GID="DV:postBuildNotDeletable">true</SD>
+									</SDG>
+								</SDGS>
+							</ADMIN-DATA>
+							<RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_CryIf_00003</RELATED-TRACE-ITEM-REF>
+							<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+							<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+							<MULTIPLICITY-CONFIG-CLASSES>
+								<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+									<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+									<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+								</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+							</MULTIPLICITY-CONFIG-CLASSES>
+							<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+							<REQUIRES-INDEX>false</REQUIRES-INDEX>
+							<PARAMETERS>
+								<!-- PARAMETER DEFINITION: CryIfKeyId -->
+								<ECUC-INTEGER-PARAM-DEF UUID="326f0a7c-8669-4b5e-88da-2e8af3ca5a54">
+									<SHORT-NAME>CryIfKeyId</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Identifier of the CryIf key.</L-2>
+									</DESC>
+									<INTRODUCTION>
+										<P>
+											<L-1 L="EN">Specifies to which CryIf key the CSM key is mapped to.</L-1>
+										</P>
+									</INTRODUCTION>
+									<RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_CryIf_00007</RELATED-TRACE-ITEM-REF>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<SCOPE>LOCAL</SCOPE>
+									<MULTIPLICITY-CONFIG-CLASSES>
+										<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+									</MULTIPLICITY-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<VALUE-CONFIG-CLASSES>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+									</VALUE-CONFIG-CLASSES>
+									<SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>0</DEFAULT-VALUE>
+									<MAX>4294967295</MAX>
+									<MIN>0</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+							</PARAMETERS>
+							<REFERENCES>
+								<!-- Symbolic Name Reference Definition: CryIfKeyRef -->
+								<ECUC-SYMBOLIC-NAME-REFERENCE-DEF UUID="2b776d9e-016d-402f-b64f-2556a4c9cf02">
+									<SHORT-NAME>CryIfKeyRef</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter refers to the crypto driver key.</L-2>
+									</DESC>
+									<INTRODUCTION>
+										<P>
+											<L-1 L="EN">Specifies to which crypto driver key the CryIf key is mapped to.</L-1>
+										</P>
+									</INTRODUCTION>
+									<RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_CryIf_00008</RELATED-TRACE-ITEM-REF>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<SCOPE>LOCAL</SCOPE>
+									<MULTIPLICITY-CONFIG-CLASSES>
+										<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+									</MULTIPLICITY-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<VALUE-CONFIG-CLASSES>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+									</VALUE-CONFIG-CLASSES>
+									<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Crypto/CryptoKeys/CryptoKey</DESTINATION-REF>
+								</ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+							</REFERENCES>
+						</ECUC-PARAM-CONF-CONTAINER-DEF>
+					</CONTAINERS>
+				</ECUC-MODULE-DEF>
+				<BSW-IMPLEMENTATION UUID="1b928b59-9187-464e-be5b-b87115a6887b">
+					<SHORT-NAME>CryIf_Impl</SHORT-NAME>
+					<PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+					<SW-VERSION>2.01.00</SW-VERSION>
+					<USED-CODE-GENERATOR>DaVinci Configurator</USED-CODE-GENERATOR>
+					<VENDOR-ID>30</VENDOR-ID>
+					<AR-RELEASE-VERSION>4.03.00</AR-RELEASE-VERSION>
+					<BEHAVIOR-REF DEST="BSW-INTERNAL-BEHAVIOR">/MICROSAR/CryIf_ib_bswmd/BswModuleDescriptions/CryIf/Behavior</BEHAVIOR-REF>
+					<PRECONFIGURED-CONFIGURATION-REFS>
+						<PRECONFIGURED-CONFIGURATION-REF DEST="ECUC-MODULE-CONFIGURATION-VALUES">/MICROSAR/CryIf_Pre</PRECONFIGURED-CONFIGURATION-REF>
+					</PRECONFIGURED-CONFIGURATION-REFS>
+					<RECOMMENDED-CONFIGURATION-REFS>
+						<RECOMMENDED-CONFIGURATION-REF DEST="ECUC-MODULE-CONFIGURATION-VALUES">/MICROSAR/CryIf_Rec</RECOMMENDED-CONFIGURATION-REF>
+					</RECOMMENDED-CONFIGURATION-REFS>
+					<VENDOR-SPECIFIC-MODULE-DEF-REFS>
+						<VENDOR-SPECIFIC-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/MICROSAR/CryIf</VENDOR-SPECIFIC-MODULE-DEF-REF>
+					</VENDOR-SPECIFIC-MODULE-DEF-REFS>
+				</BSW-IMPLEMENTATION>
+				<ECUC-MODULE-CONFIGURATION-VALUES UUID="06535b4d-d414-4b2f-a39b-200cd15ac4d8">
+					<SHORT-NAME>CryIf_Pre</SHORT-NAME>
+					<DEFINITION-REF DEST="ECUC-MODULE-DEF">/MICROSAR/CryIf</DEFINITION-REF>
+					<CONTAINERS></CONTAINERS>
+				</ECUC-MODULE-CONFIGURATION-VALUES>
+				<ECUC-MODULE-CONFIGURATION-VALUES UUID="7b16aa88-78d6-47a2-8659-c1016052e587">
+					<SHORT-NAME>CryIf_Rec</SHORT-NAME>
+					<DEFINITION-REF DEST="ECUC-MODULE-DEF">/MICROSAR/CryIf</DEFINITION-REF>
+					<IMPLEMENTATION-CONFIG-VARIANT>VARIANT-PRE-COMPILE</IMPLEMENTATION-CONFIG-VARIANT>
+					<CONTAINERS></CONTAINERS>
+				</ECUC-MODULE-CONFIGURATION-VALUES>
+			</ELEMENTS>
+		</AR-PACKAGE>
+	</AR-PACKAGES>
+</AUTOSAR>

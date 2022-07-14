@@ -1,0 +1,712 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CANbeddedVersionInfo Version="2.6">
+    <Properties>
+        <DeliveryDate>2017-10-06</DeliveryDate>
+        <CreatedDate>2017-10-06</CreatedDate>
+        <CBD>CBD0000000</CBD>
+        <SalesSite>Vector Test Company</SalesSite>
+        <IntegrationSite>N/A</IntegrationSite>
+        <SIP>19.00.00</SIP>
+        <Release>00</Release>
+        <Eval>true</Eval>
+        <ErrataContacts/>
+        <CustomerContact>
+            <Firstname></Firstname>
+            <Surname></Surname>
+            <Email></Email>
+        </CustomerContact>
+        <Customer>N/A</Customer>
+        <DeliveryType>Test delivery - for internal purpose only</DeliveryType>
+        <ReleaseType>N/A</ReleaseType>
+        <OEM>Vector</OEM>
+        <SLP></SLP>
+        <UseCases/>
+        <Controller>Canoeemu</Controller>
+        <CanCell>Canoe</CanCell>
+        <Compiler>Ansi</Compiler>
+        <OrderedDerivative></OrderedDerivative>
+        <NDA>false</NDA>
+        <ShowBetaDisclaimer>false</ShowBetaDisclaimer>
+    </Properties>
+    <ComponentCheck>
+        <Component Version="1.00.00" ScanPattern="CANoeAutomation" Project="CANoeAutomation" Delivered="true" Component="Application"/>
+        <Component Version="8.01.01" ScanPattern="Ccl_Asr4ComMCfg5" Project="Ccl_Asr4ComMCfg5" Delivered="true" Component="Description"/>
+        <Component Version="8.01.02" ScanPattern="Ccl_Asr4ComMCfg5" Project="Ccl_Asr4ComMCfg5" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="8.01.01" ScanPattern="Ccl_Asr4ComMCfg5" Project="Ccl_Asr4ComMCfg5" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>ComM.h;ComM_BusSM.h;ComM_Dcm.h;ComM_EcuMBswM.h;ComM_Nm.h;ComM_Types.h</RelativeFileSpec>
+        </Component>
+        <Component Version="4.09.00" ScanPattern="Ccl_Asr4SmCan" Project="Ccl_Asr4SmCan" Delivered="true" Component="Description"/>
+        <Component Version="4.04.01" ScanPattern="Ccl_Asr4SmCan" Project="Ccl_Asr4SmCan" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="2.13.00" ScanPattern="Ccl_Asr4SmCan" Project="Ccl_Asr4SmCan" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>CanSM.h;CanSM_BswM.h;CanSM_Cbk.h;CanSM_ComM.h;CanSM_Dcm.h;CanSM_EcuM.h;CanSM_Int.h;CanSM_TxTimeoutException.h</RelativeFileSpec>
+        </Component>
+        <Component Version="2.06.00" ScanPattern="Ccl_Asr4SmFr" Project="Ccl_Asr4SmFr" Delivered="true" Component="Description"/>
+        <Component Version="3.01.00" ScanPattern="Ccl_Asr4SmFr" Project="Ccl_Asr4SmFr" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="2.02.00" ScanPattern="Ccl_Asr4SmFr" Project="Ccl_Asr4SmFr" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>FrSM.h;FrSM_Types.h</RelativeFileSpec>
+        </Component>
+        <Component Version="5.02.00" ScanPattern="Ccl_Asr4SmLin" Project="Ccl_Asr4SmLin" Delivered="true" Component="Description"/>
+        <Component Version="5.00.01" ScanPattern="Ccl_Asr4SmLin" Project="Ccl_Asr4SmLin" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="5.02.00" ScanPattern="Ccl_Asr4SmLin" Project="Ccl_Asr4SmLin" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>LinSM.h;LinSM_Cbk.h;LinSM_Types.h</RelativeFileSpec>
+        </Component>
+        <Component Version="3.01.03" ScanPattern="Ccl_AsrSmEth" Project="Ccl_AsrSmEth" Delivered="true" Component="Description"/>
+        <Component Version="3.00.02" ScanPattern="Ccl_AsrSmEth" Project="Ccl_AsrSmEth" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="3.01.03" ScanPattern="Ccl_AsrSmEth" Project="Ccl_AsrSmEth" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>EthSM.h;EthSM_Priv.h;EthSM_Types.h</RelativeFileSpec>
+        </Component>
+        <Component Version="1.00.01" ScanPattern="Cdd_Asr4Des" Project="Cdd_Asr4Des" Delivered="true" Component="Description"/>
+        <Component Version="1.00.01" ScanPattern="Cdd_Asr4Des" Project="Cdd_Asr4Des" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="1.00.00" ScanPattern="Cdd_Asr4Des" Project="Cdd_Asr4Des" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>CddDes.h;CddDes_Cbk.h;CddDes_Priv.h</RelativeFileSpec>
+        </Component>
+        <Component Version="1.00.00" ScanPattern="Cdd_Asr4Drm" Project="Cdd_Asr4Drm" Delivered="true" Component="Description"/>
+        <Component Version="1.00.00" ScanPattern="Cdd_Asr4Drm" Project="Cdd_Asr4Drm" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="1.00.00" ScanPattern="Cdd_Asr4Drm" Project="Cdd_Asr4Drm" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>CddDrm.h;CddDrm_Cbk.h;CddDrm_Types.h</RelativeFileSpec>
+        </Component>
+        <Component Version="3.00.00" ScanPattern="Cdd_AsrCddCfg5" Project="Cdd_AsrCddCfg5" Delivered="true" Component="Description"/>
+        <Component Version="5.01.01" ScanPattern="Cdd_AsrCddCfg5" Project="Cdd_AsrCddCfg5" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="1.00.00" ScanPattern="Cdd_AsrCddCfg5" Project="Cdd_AsrCddCfg5" Delivered="true" Component="Implementation"/>
+        <Component Version="1.02.00" ScanPattern="Cdd_AsrVx1000If" Project="Cdd_AsrVx1000If" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>VX1000If.h</RelativeFileSpec>
+        </Component>
+        <Component Version="5.00.80" ScanPattern="CommonAsr_ComGenericGenLib" Project="CommonAsr_ComGenericGenLib" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="5.02.00" ScanPattern="CommonAsr_ComGenericGenLib" Project="CommonAsr_ComGenericGenLib" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="8.00.00" ScanPattern="CommonAsr_ComStackLib" Project="CommonAsr_ComStackLib" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="8.00.01" ScanPattern="CommonAsr_ComStackLib" Project="CommonAsr_ComStackLib" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="8.03.00" ScanPattern="CommonAsr_ComStackLib" Project="CommonAsr_ComStackLib" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="8.03.01" ScanPattern="CommonAsr_ComStackLib" Project="CommonAsr_ComStackLib" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="8.03.80" ScanPattern="CommonAsr_ComStackLib" Project="CommonAsr_ComStackLib" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="8.03.81" ScanPattern="CommonAsr_ComStackLib" Project="CommonAsr_ComStackLib" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="8.04.01" ScanPattern="CommonAsr_ComStackLib" Project="CommonAsr_ComStackLib" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="8.05.00" ScanPattern="CommonAsr_ComStackLib" Project="CommonAsr_ComStackLib" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="8.05.01" ScanPattern="CommonAsr_ComStackLib" Project="CommonAsr_ComStackLib" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="8.06.00" ScanPattern="CommonAsr_ComStackLib" Project="CommonAsr_ComStackLib" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="8.07.00" ScanPattern="CommonAsr_ComStackLib" Project="CommonAsr_ComStackLib" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="8.07.01" ScanPattern="CommonAsr_ComStackLib" Project="CommonAsr_ComStackLib" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="8.07.80" ScanPattern="CommonAsr_ComStackLib" Project="CommonAsr_ComStackLib" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="8.07.81" ScanPattern="CommonAsr_ComStackLib" Project="CommonAsr_ComStackLib" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="8.09.00" ScanPattern="CommonAsr_ComStackLib" Project="CommonAsr_ComStackLib" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="8.10.00" ScanPattern="CommonAsr_ComStackLib" Project="CommonAsr_ComStackLib" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="8.11.01" ScanPattern="CommonAsr_ComStackLib" Project="CommonAsr_ComStackLib" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="3.00.00" ScanPattern="CommonAsr_ComValidationLib" Project="CommonAsr_ComValidationLib" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="3.00.01" ScanPattern="CommonAsr_ComValidationLib" Project="CommonAsr_ComValidationLib" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="3.01.01" ScanPattern="CommonAsr_ComValidationLib" Project="CommonAsr_ComValidationLib" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="3.01.02" ScanPattern="CommonAsr_ComValidationLib" Project="CommonAsr_ComValidationLib" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="3.02.00" ScanPattern="CommonAsr_ComValidationLib" Project="CommonAsr_ComValidationLib" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="7.00.00" ScanPattern="CommonAsr_DiagLib" Project="CommonAsr_DiagLib" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="7.06.00" ScanPattern="CommonAsr_DiagLib" Project="CommonAsr_DiagLib" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="4.00.00" ScanPattern="CommonAsr_IpStackLib" Project="CommonAsr_IpStackLib" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="1.00.06" ScanPattern="CommonAsr_Vtt" Project="CommonAsr_Vtt" Delivered="true" Component="Impl_CompAbstract_Ansi"/>
+        <Component Version="2.00.00" ScanPattern="CommonAsr_Vtt" Project="CommonAsr_Vtt" Delivered="true" Component="Impl_PlatformTypes">
+            <RelativeFileSpec>Platform_Types.h</RelativeFileSpec>
+        </Component>
+        <Component Version="1.01.00" ScanPattern="CommonAsr__Common" Project="CommonAsr__Common" Delivered="true" Component="Impl_CanGeneralTypes"/>
+        <Component Version="4.00.03" ScanPattern="CommonAsr__Common_Impl_ComStackTypes" Project="CommonAsr__Common" Delivered="true" Component="Impl_ComStackTypes">
+            <RelativeFileSpec>ComStack_Types.h</RelativeFileSpec>
+        </Component>
+        <Component Version="3.04.04" ScanPattern="CommonAsr__Common_Impl_StdTypes" Project="CommonAsr__Common" Delivered="true" Component="Impl_StdTypes">
+            <RelativeFileSpec>Std_Types.h</RelativeFileSpec>
+        </Component>
+        <Component Version="1.07.02" ScanPattern="CommonAsr__Common" Project="CommonAsr__Common" Delivered="true" Component="Impl__Compiler_Cfg"/>
+        <Component Version="1.11.00" ScanPattern="CommonAsr__Common" Project="CommonAsr__Common" Delivered="true" Component="Impl__MemMap"/>
+        <Component Version="1.00.00" ScanPattern="Cp_Asr4Ccp" Project="Cp_Asr4Ccp" Delivered="true" Component="Description"/>
+        <Component Version="1.00.00" ScanPattern="Cp_Asr4Ccp" Project="Cp_Asr4Ccp" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="3.00.00" ScanPattern="Cp_Asr4Ccp" Project="Cp_Asr4Ccp" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>Ccp.h</RelativeFileSpec>
+        </Component>
+        <Component Version="1.01.00" ScanPattern="Cp_Asr4Xcp" Project="Cp_Asr4Xcp" Delivered="true" Component="Description"/>
+        <Component Version="2.01.00" ScanPattern="Cp_Asr4Xcp" Project="Cp_Asr4Xcp" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="2.01.00" ScanPattern="Cp_Asr4Xcp" Project="Cp_Asr4Xcp" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>Xcp.h;Xcp_Priv.h;Xcp_Types.h;_XcpAppl.h</RelativeFileSpec>
+        </Component>
+        <Component Version="2.00.00" ScanPattern="Cp_XcpOnCanAsr" Project="Cp_XcpOnCanAsr" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>CanXcp.h;CanXcp_Types.h</RelativeFileSpec>
+        </Component>
+        <Component Version="4.00.01" ScanPattern="Cp_XcpOnFrAsr" Project="Cp_XcpOnFrAsr" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>FrXcp.h;FrXcp_Cbk.h;FrXcp_Types.h</RelativeFileSpec>
+        </Component>
+        <Component Version="3.00.01" ScanPattern="Cp_XcpOnTcpIpAsr" Project="Cp_XcpOnTcpIpAsr" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>TcpIpXcp.h;TcpIpXcp_Cbk.h;TcpIpXcp_Types.h</RelativeFileSpec>
+        </Component>
+        <Component Version="1.05.00" ScanPattern="Diag_A2lGen" Project="Diag_A2lGen" Delivered="true" Component="Application"/>
+        <Component Version="8.03.01" ScanPattern="Diag_Asr4Dcm" Project="Diag_Asr4Dcm" Delivered="true" Component="Description"/>
+        <Component Version="8.03.01" ScanPattern="Diag_Asr4Dcm" Project="Diag_Asr4Dcm" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="8.03.01" ScanPattern="Diag_Asr4Dcm" Project="Diag_Asr4Dcm" Delivered="true" Component="GenTool_GeneratorMsrCore"/>
+        <Component Version="8.03.01" ScanPattern="Diag_Asr4Dcm" Project="Diag_Asr4Dcm" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>Dcm.h;Dcm_Cbk.h;Dcm_Core.h;Dcm_CoreCbk.h;Dcm_CoreInt.h;Dcm_CoreTypes.h;Dcm_Ext.h;Dcm_Ext.h;Dcm_Ext.h;Dcm_Ext.h;Dcm_Ext.h;Dcm_ExtCbk.h;Dcm_ExtCbk.h;Dcm_ExtCbk.h;Dcm_ExtCbk.h;Dcm_ExtCbk.h;Dcm_ExtInt.h;Dcm_ExtInt.h;Dcm_ExtInt.h;Dcm_ExtInt.h;Dcm_ExtInt.h;Dcm_ExtTypes.h;Dcm_ExtTypes.h;Dcm_ExtTypes.h;Dcm_ExtTypes.h;Dcm_ExtTypes.h;Dcm_Int.h;Dcm_Types.h</RelativeFileSpec>
+        </Component>
+        <Component Version="14.06.01" ScanPattern="Diag_Asr4Dem" Project="Diag_Asr4Dem" Delivered="true" Component="Description"/>
+        <Component Version="11.06.01" ScanPattern="Diag_Asr4Dem" Project="Diag_Asr4Dem" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="13.06.01" ScanPattern="Diag_Asr4Dem" Project="Diag_Asr4Dem" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>Dem.h;Dem_API_Implementation.h;Dem_API_Interface.h;Dem_API_Types.h;Dem_Cbk.h;Dem_Cbk_Implementation.h;Dem_Cbk_Interface.h;Dem_Cbk_Types.h;Dem_Cdd_Types.h;Dem_Cfg_Declarations.h;Dem_Cfg_Definitions.h;Dem_Cfg_Macros.h;Dem_Cfg_Types.h;Dem_ClearDTC_Implementation.h;Dem_ClearDTC_Interface.h;Dem_ClearDTC_Types.h;Dem_ClearTask_Implementation.h;Dem_ClearTask_Interface.h;Dem_ClearTask_Types.h;Dem_ClientAccess_Implementation.h;Dem_ClientAccess_Interface.h;Dem_ClientAccess_Types.h;Dem_ClientData_Implementation.h;Dem_ClientData_Interface.h;Dem_ClientData_Types.h;Dem_Com_Implementation.h;Dem_Com_Interface.h;Dem_Com_Types.h;Dem_DTCInternalStatus_Implementation.h;Dem_DTCInternalStatus_Interface.h;Dem_DTCInternalStatus_Types.h;Dem_DTCReadoutBuffer_Implementation.h;Dem_DTCReadoutBuffer_Interface.h;Dem_DTCReadoutBuffer_Types.h;Dem_DTCReporting_Implementation.h;Dem_DTCReporting_Interface.h;Dem_DTCReporting_Types.h;Dem_DTCSelector_Implementation.h;Dem_DTCSelector_Interface.h;Dem_DTCSelector_Types.h;Dem_DTC_Implementation.h;Dem_DTC_Interface.h;Dem_DTC_Types.h;Dem_DataReportIF_Implementation.h;Dem_DataReportIF_Interface.h;Dem_DataReportIF_Types.h;Dem_DataStorageIF_Implementation.h;Dem_DataStorageIF_Interface.h;Dem_DataStorageIF_Types.h;Dem_Data_Implementation.h;Dem_Data_Interface.h;Dem_Data_Types.h;Dem_Dcm.h;Dem_DcmAPI_Implementation.h;Dem_DcmAPI_Interface.h;Dem_DcmAPI_Types.h;Dem_Dcm_Implementation.h;Dem_Dcm_Interface.h;Dem_Dcm_Types.h;Dem_DebounceBase_Fwd.h;Dem_DebounceBase_Implementation.h;Dem_DebounceBase_Interface.h;Dem_DebounceBase_Types.h;Dem_DebounceCounterBased_Implementation.h;Dem_DebounceCounterBased_Interface.h;Dem_DebounceCounterBased_Types.h;Dem_DebounceMonitorInternal_Implementation.h;Dem_DebounceMonitorInternal_Interface.h;Dem_DebounceMonitorInternal_Types.h;Dem_DebounceTimeBased_Implementation.h;Dem_DebounceTimeBased_Interface.h;Dem_DebounceTimeBased_Types.h;Dem_Debounce_Implementation.h;Dem_Debounce_Interface.h;Dem_Debounce_Types.h;Dem_DebouncingState_Implementation.h;Dem_DebouncingState_Interface.h;Dem_DebouncingState_Types.h;Dem_DtrIF_Implementation.h;Dem_DtrIF_Interface.h;Dem_DtrIF_Types.h;Dem_Dtr_Implementation.h;Dem_Dtr_Interface.h;Dem_Dtr_Types.h;Dem_EnableCondition_Implementation.h;Dem_EnableCondition_Interface.h;Dem_EnableCondition_Types.h;Dem_EnvDataSwcApi_Implementation.h;Dem_EnvDataSwcApi_Interface.h;Dem_EnvDataSwcApi_Types.h;Dem_Error_Implementation.h;Dem_Error_Interface.h;Dem_Error_Types.h;Dem_Esm_Implementation.h;Dem_Esm_Interface.h;Dem_Esm_Types.h;Dem_EventInternalStatus_Implementation.h;Dem_EventInternalStatus_Interface.h;Dem_EventInternalStatus_Types.h;Dem_EventQueue_Implementation.h;Dem_EventQueue_Interface.h;Dem_EventQueue_Types.h;Dem_Event_Implementation.h;Dem_Event_Interface.h;Dem_Event_Types.h;Dem_ExtDataElementIF_Implementation.h;Dem_ExtDataElementIF_Interface.h;Dem_ExtDataElementIF_Types.h;Dem_ExtendedEntry_Implementation.h;Dem_ExtendedEntry_Interface.h;Dem_ExtendedEntry_Types.h;Dem_FilterData_Implementation.h;Dem_FilterData_Interface.h;Dem_FilterData_Types.h;Dem_FreezeFrameIterator_Implementation.h;Dem_FreezeFrameIterator_Interface.h;Dem_FreezeFrameIterator_Types.h;Dem_InitState_Implementation.h;Dem_InitState_Interface.h;Dem_InitState_Types.h;Dem_Int.h;Dem_J1939Dcm.h;Dem_J1939DcmAPI_Implementation.h;Dem_J1939DcmAPI_Interface.h;Dem_J1939DcmAPI_Types.h;Dem_MemAccess_Implementation.h;Dem_MemAccess_Interface.h;Dem_MemAccess_Types.h;Dem_MemCopy.h;Dem_MemState_Implementation.h;Dem_MemState_Interface.h;Dem_MemState_Types.h;Dem_MemStorageManager_Implementation.h;Dem_MemStorageManager_Interface.h;Dem_MemStorageManager_Types.h;Dem_Mem_Implementation.h;Dem_Mem_Interface.h;Dem_Mem_Types.h;Dem_MemoryEntry_Fwd.h;Dem_MemoryEntry_Implementation.h;Dem_MemoryEntry_Interface.h;Dem_MemoryEntry_Types.h;Dem_Memory_Implementation.h;Dem_Memory_Interface.h;Dem_Memory_Types.h;Dem_MidLookup_Implementation.h;Dem_MidLookup_Interface.h;Dem_MidLookup_Types.h;Dem_Monitor_Implementation.h;Dem_Monitor_Interface.h;Dem_Monitor_Types.h;Dem_Nvm_Implementation.h;Dem_Nvm_Interface.h;Dem_Nvm_Types.h;Dem_OperationCycle_Implementation.h;Dem_OperationCycle_Interface.h;Dem_OperationCycle_Types.h;Dem_Prestore_Implementation.h;Dem_Prestore_Interface.h;Dem_Prestore_Types.h;Dem_Queue_Implementation.h;Dem_Queue_Interface.h;Dem_Queue_Types.h;Dem_SatelliteData_Implementation.h;Dem_SatelliteData_Interface.h;Dem_SatelliteData_Types.h;Dem_SatelliteInfo_Implementation.h;Dem_SatelliteInfo_Interface.h;Dem_SatelliteInfo_Types.h;Dem_Satellite_Implementation.h;Dem_Satellite_Interface.h;Dem_Satellite_Types.h;Dem_Scheduler_Implementation.h;Dem_Scheduler_Interface.h;Dem_Scheduler_Types.h;Dem_SnapshotEntry_Implementation.h;Dem_SnapshotEntry_Interface.h;Dem_SnapshotEntry_Types.h;Dem_StorageCondition_Implementation.h;Dem_StorageCondition_Interface.h;Dem_StorageCondition_Types.h;Dem_Types.h;Dem_UDSStatus_Implementation.h;Dem_UDSStatus_Interface.h;Dem_UDSStatus_Types.h;Dem_Validation.h;_Dem_MemMap.h</RelativeFileSpec>
+        </Component>
+        <Component Version="4.02.00" ScanPattern="Diag_Asr4J1939Dcm" Project="Diag_Asr4J1939Dcm" Delivered="true" Component="Description"/>
+        <Component Version="4.03.00" ScanPattern="Diag_Asr4J1939Dcm" Project="Diag_Asr4J1939Dcm" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="4.02.00" ScanPattern="Diag_Asr4J1939Dcm" Project="Diag_Asr4J1939Dcm" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>J1939Dcm.h;J1939Dcm_Cbk.h;J1939Dcm_Priv.h;J1939Dcm_Types.h</RelativeFileSpec>
+        </Component>
+        <Component Version="2.05.00" ScanPattern="DrvAdc_VttCanoe01Asr" Project="DrvAdc_VttCanoe01Asr" Delivered="true" Component="Description"/>
+        <Component Version="3.03.00" ScanPattern="DrvAdc_VttCanoe01Asr" Project="DrvAdc_VttCanoe01Asr" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="2.05.00" ScanPattern="DrvAdc_VttCanoe01Asr" Project="DrvAdc_VttCanoe01Asr" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>Adc.h</RelativeFileSpec>
+        </Component>
+        <Component Version="5.11.00" ScanPattern="DrvCan_CanoeemuCanoeLl" Project="DrvCan_CanoeemuCanoeLl" Delivered="true" Component="Description"/>
+        <Component Version="4.03.00" ScanPattern="DrvCan_CanoeemuCanoeLl" Project="DrvCan_CanoeemuCanoeLl" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="5.07.00" ScanPattern="DrvCan_CanoeemuCanoeLl" Project="DrvCan_CanoeemuCanoeLl" Delivered="true" Component="Implementation"/>
+        <Component Version="5.11.00" ScanPattern="DrvCan_VttCanoeemuCanoeAsr" Project="DrvCan_VttCanoeemuCanoeAsr" Delivered="true" Component="Description"/>
+        <Component Version="4.03.00" ScanPattern="DrvCan_VttCanoeemuCanoeAsr" Project="DrvCan_VttCanoeemuCanoeAsr" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="5.07.00" ScanPattern="DrvCan_VttCanoeemuCanoeAsr" Project="DrvCan_VttCanoeemuCanoeAsr" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>Can.h;Can_Hooks.h;Can_Local.h</RelativeFileSpec>
+        </Component>
+        <Component Version="3.03.00" ScanPattern="DrvCan__base" Project="DrvCan__base" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="3.03.01" ScanPattern="DrvCan__base" Project="DrvCan__base" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="4.04.02" ScanPattern="DrvCan__baseAsr" Project="DrvCan__baseAsr" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="5.07.01" ScanPattern="DrvCan__coreAsr" Project="DrvCan__coreAsr" Delivered="true" Component="Implementation"/>
+        <Component Version="2.01.00" ScanPattern="DrvCrypto_LibCv" Project="DrvCrypto_LibCv" Delivered="true" Component="Description"/>
+        <Component Version="2.01.00" ScanPattern="DrvCrypto_LibCv" Project="DrvCrypto_LibCv" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="2.01.00" ScanPattern="DrvCrypto_LibCv" Project="DrvCrypto_LibCv" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>Crypto_30_LibCv.h;Crypto_30_LibCv_KeyManagement.h;Crypto_30_LibCv_Services.h</RelativeFileSpec>
+        </Component>
+        <Component Version="2.03.00" ScanPattern="DrvDio_VttCanoe01Asr" Project="DrvDio_VttCanoe01Asr" Delivered="true" Component="Description"/>
+        <Component Version="4.01.00" ScanPattern="DrvDio_VttCanoe01Asr" Project="DrvDio_VttCanoe01Asr" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="2.03.00" ScanPattern="DrvDio_VttCanoe01Asr" Project="DrvDio_VttCanoe01Asr" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>Dio.h</RelativeFileSpec>
+        </Component>
+        <Component Version="2.04.00" ScanPattern="DrvEep_VttCanoe01Asr" Project="DrvEep_VttCanoe01Asr" Delivered="true" Component="Description"/>
+        <Component Version="3.03.00" ScanPattern="DrvEep_VttCanoe01Asr" Project="DrvEep_VttCanoe01Asr" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="2.04.02" ScanPattern="DrvEep_VttCanoe01Asr" Project="DrvEep_VttCanoe01Asr" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>Eep.h</RelativeFileSpec>
+        </Component>
+        <Component Version="6.01.00" ScanPattern="DrvEth_CanoeemuEthAsr" Project="DrvEth_CanoeemuEthAsr" Delivered="true" Component="Description"/>
+        <Component Version="6.01.00" ScanPattern="DrvEth_CanoeemuEthAsr" Project="DrvEth_CanoeemuEthAsr" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="5.00.00" ScanPattern="DrvEth_VttEthAsr" Project="DrvEth_VttEthAsr" Delivered="true" Component="Description"/>
+        <Component Version="7.00.00" ScanPattern="DrvEth_VttEthAsr" Project="DrvEth_VttEthAsr" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="6.00.01" ScanPattern="DrvEth_VttEthAsr" Project="DrvEth_VttEthAsr" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>Eth_30_Vtt.h;Eth_30_Vtt_Int.h;Eth_30_Vtt_LL.h;Eth_30_Vtt_LL_Cfg.h;Eth_30_Vtt_LL_Int.h;Eth_30_Vtt_LL_Types.h;Eth_30_Vtt_Types.h</RelativeFileSpec>
+        </Component>
+        <Component Version="6.01.00" ScanPattern="DrvEth__baseAsr" Project="DrvEth__baseAsr" Delivered="true" Component="Description"/>
+        <Component Version="6.02.01" ScanPattern="DrvEth__baseAsr" Project="DrvEth__baseAsr" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="6.02.03" ScanPattern="DrvEth__baseAsr" Project="DrvEth__baseAsr" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="2.00.00" ScanPattern="DrvEth__baseAsr" Project="DrvEth__baseAsr" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>Eth_GeneralTypes.h</RelativeFileSpec>
+        </Component>
+        <Component Version="2.00.00" ScanPattern="DrvEth__coreAsr" Project="DrvEth__coreAsr" Delivered="true" Component="Description"/>
+        <Component Version="2.00.00" ScanPattern="DrvEth__coreAsr" Project="DrvEth__coreAsr" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="2.00.01" ScanPattern="DrvEth__coreAsr" Project="DrvEth__coreAsr" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="2.00.00" ScanPattern="DrvEth__coreAsr" Project="DrvEth__coreAsr" Delivered="true" Component="Implementation"/>
+        <Component Version="2.06.00" ScanPattern="DrvFls_VttCanoe01Asr" Project="DrvFls_VttCanoe01Asr" Delivered="true" Component="Description"/>
+        <Component Version="4.04.00" ScanPattern="DrvFls_VttCanoe01Asr" Project="DrvFls_VttCanoe01Asr" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="3.03.00" ScanPattern="DrvFls_VttCanoe01Asr" Project="DrvFls_VttCanoe01Asr" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>Fls.h;Fls_17_Pmu.h</RelativeFileSpec>
+        </Component>
+        <Component Version="4.00.01" ScanPattern="DrvFr_CanoeemuErayAsr" Project="DrvFr_CanoeemuErayAsr" Delivered="true" Component="Description"/>
+        <Component Version="5.00.01" ScanPattern="DrvFr_CanoeemuErayAsr" Project="DrvFr_CanoeemuErayAsr" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="4.00.01" ScanPattern="DrvFr_VttErayAsr" Project="DrvFr_VttErayAsr" Delivered="true" Component="Description"/>
+        <Component Version="4.00.02" ScanPattern="DrvFr_VttErayAsr" Project="DrvFr_VttErayAsr" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="5.00.01" ScanPattern="DrvFr_VttErayAsr" Project="DrvFr_VttErayAsr" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>Fr.h;Fr_ERay.h;Fr_Ext.h;Fr_Priv.h</RelativeFileSpec>
+        </Component>
+        <Component Version="5.00.01" ScanPattern="DrvFr_XErayAsr" Project="DrvFr_XErayAsr" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="3.00.00" ScanPattern="DrvFr__baseAsr" Project="DrvFr__baseAsr" Delivered="true" Component="Description"/>
+        <Component Version="5.00.01" ScanPattern="DrvFr__baseAsr" Project="DrvFr__baseAsr" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="1.07.00" ScanPattern="DrvFr__baseAsr" Project="DrvFr__baseAsr" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>Fr_GeneralTypes.h</RelativeFileSpec>
+        </Component>
+        <Component Version="2.05.00" ScanPattern="DrvGpt_VttCanoe01Asr" Project="DrvGpt_VttCanoe01Asr" Delivered="true" Component="Description"/>
+        <Component Version="4.03.00" ScanPattern="DrvGpt_VttCanoe01Asr" Project="DrvGpt_VttCanoe01Asr" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="2.05.00" ScanPattern="DrvGpt_VttCanoe01Asr" Project="DrvGpt_VttCanoe01Asr" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>Gpt.h</RelativeFileSpec>
+        </Component>
+        <Component Version="2.05.00" ScanPattern="DrvIcu_VttCanoe01Asr" Project="DrvIcu_VttCanoe01Asr" Delivered="true" Component="Description"/>
+        <Component Version="3.03.00" ScanPattern="DrvIcu_VttCanoe01Asr" Project="DrvIcu_VttCanoe01Asr" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="2.05.00" ScanPattern="DrvIcu_VttCanoe01Asr" Project="DrvIcu_VttCanoe01Asr" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>Icu.h</RelativeFileSpec>
+        </Component>
+        <Component Version="6.01.00" ScanPattern="DrvLin_CanoeemuAsr" Project="DrvLin_CanoeemuAsr" Delivered="true" Component="Description"/>
+        <Component Version="5.00.00" ScanPattern="DrvLin_CanoeemuAsr" Project="DrvLin_CanoeemuAsr" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="1.00.01" ScanPattern="DrvLin_CanoeemuAsr" Project="DrvLin_CanoeemuAsr" Delivered="true" Component="GenTool_GeneratorMsr_Settings"/>
+        <Component Version="7.02.00" ScanPattern="DrvLin_CanoeemuSciCtrlAsr" Project="DrvLin_CanoeemuAsr" Delivered="true" Component="Implementation_SciCtrl">
+            <RelativeFileSpec>Lin.h;Lin_GeneralTypes.h;Lin_Types.h</RelativeFileSpec>
+        </Component>
+        <Component Version="4.00.00" ScanPattern="DrvLin_VttCanoeAsr" Project="DrvLin_VttCanoeAsr" Delivered="true" Component="Description"/>
+        <Component Version="4.00.00" ScanPattern="DrvLin_VttCanoeAsr" Project="DrvLin_VttCanoeAsr" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="7.03.00" ScanPattern="DrvLin_VttCanoeAsr" Project="DrvLin_VttCanoeAsr" Delivered="true" Component="Implementation_SciCtrl">
+            <RelativeFileSpec>Lin.h;Lin_GeneralTypes.h;Lin_Types.h</RelativeFileSpec>
+        </Component>
+        <Component Version="6.01.00" ScanPattern="DrvLin__coreAsr" Project="DrvLin__coreAsr" Delivered="true" Component="Description"/>
+        <Component Version="5.00.00" ScanPattern="DrvLin__coreAsr" Project="DrvLin__coreAsr" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="7.02.00" ScanPattern="DrvLin__coreAsr" Project="DrvLin__coreAsr" Delivered="true" Component="Implementation"/>
+        <Component Version="2.04.00" ScanPattern="DrvMcu_VttCanoe01Asr" Project="DrvMcu_VttCanoe01Asr" Delivered="true" Component="Description"/>
+        <Component Version="4.02.00" ScanPattern="DrvMcu_VttCanoe01Asr" Project="DrvMcu_VttCanoe01Asr" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="2.04.00" ScanPattern="DrvMcu_VttCanoe01Asr" Project="DrvMcu_VttCanoe01Asr" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>Mcu.h</RelativeFileSpec>
+        </Component>
+        <Component Version="2.03.00" ScanPattern="DrvPort_VttCanoe01Asr" Project="DrvPort_VttCanoe01Asr" Delivered="true" Component="Description"/>
+        <Component Version="4.01.00" ScanPattern="DrvPort_VttCanoe01Asr" Project="DrvPort_VttCanoe01Asr" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="2.03.00" ScanPattern="DrvPort_VttCanoe01Asr" Project="DrvPort_VttCanoe01Asr" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>Port.h</RelativeFileSpec>
+        </Component>
+        <Component Version="2.05.00" ScanPattern="DrvPwm_VttCanoe01Asr" Project="DrvPwm_VttCanoe01Asr" Delivered="true" Component="Description"/>
+        <Component Version="3.03.00" ScanPattern="DrvPwm_VttCanoe01Asr" Project="DrvPwm_VttCanoe01Asr" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="2.05.00" ScanPattern="DrvPwm_VttCanoe01Asr" Project="DrvPwm_VttCanoe01Asr" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>Pwm.h</RelativeFileSpec>
+        </Component>
+        <Component Version="1.00.00" ScanPattern="DrvSent_XIcuAsr" Project="DrvSent_XIcuAsr" Delivered="true" Component="Description"/>
+        <Component Version="1.00.00" ScanPattern="DrvSent_XIcuAsr" Project="DrvSent_XIcuAsr" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="1.00.00" ScanPattern="DrvSent_XIcuAsr" Project="DrvSent_XIcuAsr" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>Sent_30_Icu.h;_Sent_30_Icu_Cfg.h</RelativeFileSpec>
+        </Component>
+        <Component Version="2.05.00" ScanPattern="DrvSpi_VttCanoe01Asr" Project="DrvSpi_VttCanoe01Asr" Delivered="true" Component="Description"/>
+        <Component Version="3.03.00" ScanPattern="DrvSpi_VttCanoe01Asr" Project="DrvSpi_VttCanoe01Asr" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="2.05.00" ScanPattern="DrvSpi_VttCanoe01Asr" Project="DrvSpi_VttCanoe01Asr" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>Spi.h</RelativeFileSpec>
+        </Component>
+        <Component Version="4.00.00" ScanPattern="DrvTrans_CanoeemuEthAsr" Project="DrvTrans_CanoeemuEthAsr" Delivered="true" Component="Description"/>
+        <Component Version="4.00.00" ScanPattern="DrvTrans_CanoeemuEthAsr" Project="DrvTrans_CanoeemuEthAsr" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="6.04.01" ScanPattern="DrvTrans_GenericCandioAsr" Project="DrvTrans_GenericCandioAsr" Delivered="true" Component="Description"/>
+        <Component Version="3.00.01" ScanPattern="DrvTrans_GenericCandioAsr" Project="DrvTrans_GenericCandioAsr" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="4.01.01" ScanPattern="DrvTrans_GenericCandioAsr" Project="DrvTrans_GenericCandioAsr" Delivered="true" Component="Implementation"/>
+        <Component Version="4.01.01" ScanPattern="DrvTrans_GenericCandioAsrLl" Project="DrvTrans_GenericCandioAsrLl" Delivered="true" Component="Implementation"/>
+        <Component Version="1.03.00" ScanPattern="DrvTrans_GenericFrAsr" Project="DrvTrans_GenericFrAsr" Delivered="true" Component="Description"/>
+        <Component Version="2.00.00" ScanPattern="DrvTrans_GenericFrAsr" Project="DrvTrans_GenericFrAsr" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="2.00.01" ScanPattern="DrvTrans_GenericFrAsr" Project="DrvTrans_GenericFrAsr" Delivered="true" Component="Implementation"/>
+        <Component Version="6.01.00" ScanPattern="DrvTrans_GenericLindioAsr" Project="DrvTrans_GenericLindioAsr" Delivered="true" Component="Description"/>
+        <Component Version="6.01.00" ScanPattern="DrvTrans_GenericLindioAsr" Project="DrvTrans_GenericLindioAsr" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="5.01.00" ScanPattern="DrvTrans_GenericLindioAsr" Project="DrvTrans_GenericLindioAsr" Delivered="true" Component="Implementation"/>
+        <Component Version="3.00.00" ScanPattern="DrvTrans_VttEthAsr" Project="DrvTrans_VttEthAsr" Delivered="true" Component="Description"/>
+        <Component Version="4.00.00" ScanPattern="DrvTrans_VttEthAsr" Project="DrvTrans_VttEthAsr" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="4.02.02" ScanPattern="DrvTrans_VttEthAsr" Project="DrvTrans_VttEthAsr" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>EthTrcv_30_Vtt.h;EthTrcv_30_Vtt_Priv.h;EthTrcv_30_Vtt_Types.h</RelativeFileSpec>
+        </Component>
+        <Component Version="3.00.01" ScanPattern="DrvTrans__baseCanxAsr" Project="DrvTrans__baseCanxAsr" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="5.00.00" ScanPattern="DrvTrans__baseEthxAsr" Project="DrvTrans__baseEthxAsr" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="5.02.01" ScanPattern="DrvTrans__coreCanxAsr" Project="DrvTrans__coreCanxAsr" Delivered="true" Component="Implementation"/>
+        <Component Version="1.01.00" ScanPattern="DrvTrans__coreEthAsr" Project="DrvTrans__coreEthAsr" Delivered="true" Component="Description"/>
+        <Component Version="1.01.00" ScanPattern="DrvTrans__coreEthAsr" Project="DrvTrans__coreEthAsr" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="1.01.01" ScanPattern="DrvTrans__coreEthAsr" Project="DrvTrans__coreEthAsr" Delivered="true" Component="Impl_GeneralTypes">
+            <RelativeFileSpec>EthTrcv_GeneralTypes.h</RelativeFileSpec>
+        </Component>
+        <Component Version="1.01.00" ScanPattern="DrvTrans__coreEthAsr" Project="DrvTrans__coreEthAsr" Delivered="true" Component="Implementation"/>
+        <Component Version="5.02.00" ScanPattern="DrvTrans__coreLinxAsr" Project="DrvTrans__coreLinxAsr" Delivered="true" Component="Description"/>
+        <Component Version="6.01.00" ScanPattern="DrvTrans__coreLinxAsr" Project="DrvTrans__coreLinxAsr" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="5.02.00" ScanPattern="DrvTrans__coreLinxAsr" Project="DrvTrans__coreLinxAsr" Delivered="true" Component="Implementation"/>
+        <Component Version="3.03.00" ScanPattern="DrvWd_VttCanoe01Asr" Project="DrvWd_VttCanoe01Asr" Delivered="true" Component="Description"/>
+        <Component Version="4.04.00" ScanPattern="DrvWd_VttCanoe01Asr" Project="DrvWd_VttCanoe01Asr" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="3.03.00" ScanPattern="DrvWd_VttCanoe01Asr" Project="DrvWd_VttCanoe01Asr" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>Wdg.h</RelativeFileSpec>
+        </Component>
+        <Component Version="4.01.00" ScanPattern="EcuAb_AsrIoHwAb" Project="EcuAb_AsrIoHwAb" Delivered="true" Component="Description"/>
+        <Component Version="6.00.00" ScanPattern="EcuAb_AsrIoHwAb" Project="EcuAb_AsrIoHwAb" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="3.00.00" ScanPattern="EcuAb_AsrIoHwAb" Project="EcuAb_AsrIoHwAb" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>IoHwAb.h</RelativeFileSpec>
+        </Component>
+        <Component Version="3.05.01" ScanPattern="EcuC_AsrEcuC" Project="EcuC_AsrEcuC" Delivered="true" Component="Description"/>
+        <Component Version="4.02.00" ScanPattern="EcuC_AsrEcuC" Project="EcuC_AsrEcuC" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="2.04.01" ScanPattern="EcuC_VttAsrEcuC" Project="EcuC_VttAsrEcuC" Delivered="true" Component="Description"/>
+        <Component Version="1.00.00" ScanPattern="EcuC_VttAsrEcuC" Project="EcuC_VttAsrEcuC" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="1.08.02" ScanPattern="Elisa__core" Project="Elisa__core" Delivered="true" Component="Application"/>
+        <Component Version="1.00.01" ScanPattern="GenTool_CodeAnalyzerCore" Project="GenTool_CodeAnalyzerCore" Delivered="true" Component="Implementation"/>
+        <Component Version="1.00.02" ScanPattern="GenTool_CodeAnalyzerCoreCLang" Project="GenTool_CodeAnalyzerCoreCLang" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>msvcp100.dll;msvcr100.dll</RelativeFileSpec>
+        </Component>
+        <Component Version="1.03.01" ScanPattern="GenTool_CodeAnalyzerPostBuildXml" Project="GenTool_CodeAnalyzerPostBuildXml" Delivered="true" Component="Application"/>
+        <Component Version="1.00.00" ScanPattern="GenTool_CodeAnalyzerPostBuildXml" Project="GenTool_CodeAnalyzerPostBuildXml" Delivered="true" Component="Preconfig_EcuC"/>
+        <Component Version="5.16.06" ScanPattern="GenTool_ConfiguratorCfg5" Project="GenTool_ConfiguratorCfg5" Delivered="true" Component="Application"/>
+        <Component Version="1.00.00" ScanPattern="GenTool_ConfiguratorCfg5InstallationManager" Project="GenTool_ConfiguratorCfg5InstallationManager" Delivered="true" Component="Application"/>
+        <Component Version="1.00.01" ScanPattern="GenTool_ConfiguratorCfg5PlatformTypes" Project="GenTool_ConfiguratorCfg5PlatformTypes" Delivered="true" Component="Application"/>
+        <Component Version="1.08.17" ScanPattern="GenTool_CsAsrLegacyDb2SystemDescr" Project="GenTool_CsAsrLegacyDb2SystemDescr" Delivered="true" Component="Application"/>
+        <Component Version="1.00.02" ScanPattern="GenTool_IRAnalyzer" Project="GenTool_IRAnalyzer" Delivered="true" Component="Application"/>
+        <Component Version="1.01.00" ScanPattern="GenTool_LicenseLib" Project="GenTool_LicenseLib" Delivered="true" Component="Application"/>
+        <Component Version="1.05.00" ScanPattern="GenTool_LicenseLib" Project="GenTool_LicenseLib" Delivered="true" Component="Application"/>
+        <Component Version="1.01.00" ScanPattern="GenTool_LicenseLibWrapper" Project="GenTool_LicenseLibWrapper" Delivered="true" Component="Application"/>
+        <Component Version="1.02.00" ScanPattern="GenTool_LicenseLibWrapper" Project="GenTool_LicenseLibWrapper" Delivered="true" Component="Application"/>
+        <Component Version="1.00.12" ScanPattern="GenTool_McDataConverter" Project="GenTool_McDataConverter" Delivered="true" Component="Application"/>
+        <Component Version="2.00.00" ScanPattern="GenTool_McDataConverter" Project="GenTool_McDataConverter" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="10.00.00" ScanPattern="Gw_AsrPduRCfg5" Project="Gw_AsrPduRCfg5" Delivered="true" Component="Description"/>
+        <Component Version="12.00.00" ScanPattern="Gw_AsrPduRCfg5" Project="Gw_AsrPduRCfg5" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="10.00.00" ScanPattern="Gw_AsrPduRCfg5" Project="Gw_AsrPduRCfg5" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>PduR.h</RelativeFileSpec>
+        </Component>
+        <Component Version="2.00.00" ScanPattern="Gw_Mirror" Project="Gw_Mirror" Delivered="true" Component="Description"/>
+        <Component Version="2.00.00" ScanPattern="Gw_Mirror" Project="Gw_Mirror" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="2.00.00" ScanPattern="Gw_Mirror" Project="Gw_Mirror" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>CddMirror.h;Mirror.h;Mirror_Cbk.h;Mirror_Types.h</RelativeFileSpec>
+        </Component>
+        <Component Version="5.02.00" ScanPattern="If_Asr4IfLin" Project="If_Asr4IfLin" Delivered="true" Component="Description"/>
+        <Component Version="5.02.01" ScanPattern="If_Asr4IfLin" Project="If_Asr4IfLin" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="5.02.00" ScanPattern="If_Asr4IfLin" Project="If_Asr4IfLin" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>LinIf.h;LinIf_Cbk.h;LinIf_Types.h;LinTp_Types.h</RelativeFileSpec>
+        </Component>
+        <Component Version="6.01.00" ScanPattern="If_Asr4IfWd" Project="If_Asr4IfWd" Delivered="true" Component="Description"/>
+        <Component Version="2.01.00" ScanPattern="If_Asr4IfWd" Project="If_Asr4IfWd" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="5.02.00" ScanPattern="If_Asr4IfWd" Project="If_Asr4IfWd" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>WdgIf.h;WdgIf_Cfg.h;WdgIf_Types.h</RelativeFileSpec>
+        </Component>
+        <Component Version="6.14.01" ScanPattern="If_AsrIfCan" Project="If_AsrIfCan" Delivered="true" Component="Description"/>
+        <Component Version="4.06.02" ScanPattern="If_AsrIfCan" Project="If_AsrIfCan" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="6.14.01" ScanPattern="If_AsrIfCan" Project="If_AsrIfCan" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>CanIf.h;CanIf_Cbk.h;CanIf_GeneralTypes.h;CanIf_Hooks.h;CanIf_Types.h</RelativeFileSpec>
+        </Component>
+        <Component Version="2.01.00" ScanPattern="If_AsrIfCry" Project="If_AsrIfCry" Delivered="true" Component="Description"/>
+        <Component Version="2.01.00" ScanPattern="If_AsrIfCry" Project="If_AsrIfCry" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="2.00.00" ScanPattern="If_AsrIfCry" Project="If_AsrIfCry" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>CryIf.h;CryIf_Cbk.h</RelativeFileSpec>
+        </Component>
+        <Component Version="4.07.02" ScanPattern="If_AsrIfEa" Project="If_AsrIfEa" Delivered="true" Component="Description"/>
+        <Component Version="5.02.02" ScanPattern="If_AsrIfEa" Project="If_AsrIfEa" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="3.02.02" ScanPattern="If_AsrIfEa" Project="If_AsrIfEa" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>Ea.h;Ea_BlockHandler.h;Ea_Cbk.h;Ea_DatasetHandler.h;Ea_EepCoordinator.h;Ea_InstanceHandler.h;Ea_Layer1_Erase.h;Ea_Layer1_Invalidate.h;Ea_Layer1_Read.h;Ea_Layer1_Write.h;Ea_Layer2_InstanceFinder.h;Ea_Layer2_InvalidateInstance.h;Ea_Layer2_WriteInstance.h;Ea_Layer3_ReadManagementBytes.h;Ea_PartitionHandler.h;Ea_TaskManager.h</RelativeFileSpec>
+        </Component>
+        <Component Version="8.00.01" ScanPattern="If_AsrIfEth" Project="If_AsrIfEth" Delivered="true" Component="Description"/>
+        <Component Version="6.01.01" ScanPattern="If_AsrIfEth" Project="If_AsrIfEth" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="8.00.01" ScanPattern="If_AsrIfEth" Project="If_AsrIfEth" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>EthIf.h;EthIf_Cbk.h;EthIf_CfgAccess_Int.h;EthIf_ExtndTrafficHndl_Int.h;EthIf_Int.h;EthIf_Switch.h;EthIf_Switch_Cbk.h;EthIf_Time.h;EthIf_Types.h;EthIf_ZeroCopy.h</RelativeFileSpec>
+        </Component>
+        <Component Version="8.05.05" ScanPattern="If_AsrIfFee" Project="If_AsrIfFee" Delivered="true" Component="Description"/>
+        <Component Version="4.00.04" ScanPattern="If_AsrIfFee" Project="If_AsrIfFee" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="8.01.05" ScanPattern="If_AsrIfFee" Project="If_AsrIfFee" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>Fee.h;Fee_Cbk.h;Fee_ChunkInfo.h;Fee_ChunkInfoDefs.h;Fee_InitEx.h;Fee_Int.h;Fee_IntBase.h;Fee_JobParams.h;Fee_Partition.h;Fee_PartitionDefs.h;Fee_Sector.h;Fee_SectorDefs.h;Fee_Types.h</RelativeFileSpec>
+        </Component>
+        <Component Version="5.01.01" ScanPattern="If_AsrIfFr" Project="If_AsrIfFr" Delivered="true" Component="Description"/>
+        <Component Version="4.01.01" ScanPattern="If_AsrIfFr" Project="If_AsrIfFr" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="5.01.01" ScanPattern="If_AsrIfFr" Project="If_AsrIfFr" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>FrIf.h;FrIf_Cbk.h;FrIf_Ext.h;FrIf_Priv.h</RelativeFileSpec>
+        </Component>
+        <Component Version="4.05.00" ScanPattern="If_AsrIfMem" Project="If_AsrIfMem" Delivered="true" Component="Description"/>
+        <Component Version="5.02.00" ScanPattern="If_AsrIfMem" Project="If_AsrIfMem" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="3.03.01" ScanPattern="If_AsrIfMem" Project="If_AsrIfMem" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>MemIf.h;MemIf_Types.h</RelativeFileSpec>
+        </Component>
+        <Component Version="10.04.01" ScanPattern="If_AsrIfSoAd" Project="If_AsrIfSoAd" Delivered="true" Component="Description"/>
+        <Component Version="8.03.00" ScanPattern="If_AsrIfSoAd" Project="If_AsrIfSoAd" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="10.04.01" ScanPattern="If_AsrIfSoAd" Project="If_AsrIfSoAd" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>SoAd.h;SoAd_Cbk.h;SoAd_Priv.h;SoAd_Types.h</RelativeFileSpec>
+        </Component>
+        <Component Version="13.03.01" ScanPattern="Il_AsrComCfg5" Project="Il_AsrComCfg5" Delivered="true" Component="Description"/>
+        <Component Version="13.03.01" ScanPattern="Il_AsrComCfg5" Project="Il_AsrComCfg5" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="13.03.01" ScanPattern="Il_AsrComCfg5" Project="Il_AsrComCfg5" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>Com.h</RelativeFileSpec>
+        </Component>
+        <Component Version="6.06.03" ScanPattern="Il_AsrIpduMCfg5" Project="Il_AsrIpduMCfg5" Delivered="true" Component="Description"/>
+        <Component Version="7.06.02" ScanPattern="Il_AsrIpduMCfg5" Project="Il_AsrIpduMCfg5" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="6.06.03" ScanPattern="Il_AsrIpduMCfg5" Project="Il_AsrIpduMCfg5" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>IpduM.h;IpduM_Cbk.h</RelativeFileSpec>
+        </Component>
+        <Component Version="2.01.00" ScanPattern="Il_AsrLdCom" Project="Il_AsrLdCom" Delivered="true" Component="Description"/>
+        <Component Version="4.01.01" ScanPattern="Il_AsrLdCom" Project="Il_AsrLdCom" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="2.00.01" ScanPattern="Il_AsrLdCom" Project="Il_AsrLdCom" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>LdCom.h</RelativeFileSpec>
+        </Component>
+        <Component Version="4.03.01" ScanPattern="Il_AsrSecOC" Project="Il_AsrSecOC" Delivered="true" Component="Description"/>
+        <Component Version="6.04.00" ScanPattern="Il_AsrSecOC" Project="Il_AsrSecOC" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="5.04.00" ScanPattern="Il_AsrSecOC" Project="Il_AsrSecOC" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>SecOC.h</RelativeFileSpec>
+        </Component>
+        <Component Version="0.03.00" ScanPattern="Ipc_vIpc" Project="Ipc_vIpc" Delivered="true" Component="Description"/>
+        <Component Version="0.02.01" ScanPattern="Ipc_vIpc" Project="Ipc_vIpc" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="0.03.00" ScanPattern="Ipc_vIpc" Project="Ipc_vIpc" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>vIpc.h;vIpc_Cbk.h;vIpc_PQ.h;vIpc_Priv.h;vIpc_Rx.h;vIpc_Tx.h;vIpc_XCfg.h;vIpc_XCfgImpl.h</RelativeFileSpec>
+        </Component>
+        <Component Version="1.01.00" ScanPattern="Ipc_vIpcMemCp" Project="Ipc_vIpcMemCp" Delivered="true" Component="Description"/>
+        <Component Version="1.01.00" ScanPattern="Ipc_vIpcMemCp" Project="Ipc_vIpcMemCp" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="1.01.00" ScanPattern="Ipc_vIpcMemCp" Project="Ipc_vIpcMemCp" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>vIpcMemCp.h;vIpcMemCp_Int.h;vIpcMemCp_RxInt.h;vIpcMemCp_TxInt.h;vIpcMemCp_Types.h</RelativeFileSpec>
+        </Component>
+        <Component Version="1.00.00" ScanPattern="Ipc_vIpcMemIfCp" Project="Ipc_vIpcMemIfCp" Delivered="true" Component="Description"/>
+        <Component Version="1.00.00" ScanPattern="Ipc_vIpcMemIfCp" Project="Ipc_vIpcMemIfCp" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="1.00.00" ScanPattern="Ipc_vIpcMemIfCp" Project="Ipc_vIpcMemIfCp" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>vIpcMemIfCp.h;vIpcMemIfCp_Int.h;vIpcMemIfCp_RxInt.h;vIpcMemIfCp_TxInt.h;vIpcMemIfCp_Types.h</RelativeFileSpec>
+        </Component>
+        <Component Version="2.00.00" ScanPattern="J1939_AsrGenLib" Project="J1939_AsrGenLib" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="2.01.00" ScanPattern="J1939_AsrGenLib" Project="J1939_AsrGenLib" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="2.00.02" ScanPattern="J1939_AsrJ1939Rm" Project="J1939_AsrJ1939Rm" Delivered="true" Component="Description"/>
+        <Component Version="3.00.02" ScanPattern="J1939_AsrJ1939Rm" Project="J1939_AsrJ1939Rm" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="2.02.04" ScanPattern="J1939_AsrJ1939Rm" Project="J1939_AsrJ1939Rm" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>J1939Rm.h;J1939Rm_Cbk.h;J1939Rm_Int.h;J1939Rm_Types.h</RelativeFileSpec>
+        </Component>
+        <Component Version="19.xx.xx" ScanPattern="MSR_ProductTest" Project="MSR_ProductTest" Delivered="true" Component="Preconfig"/>
+        <Component Version="5.09.00" ScanPattern="MemService_AsrNvM" Project="MemService_AsrNvM" Delivered="true" Component="Description"/>
+        <Component Version="4.04.00" ScanPattern="MemService_AsrNvM" Project="MemService_AsrNvM" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="5.07.00" ScanPattern="MemService_AsrNvM" Project="MemService_AsrNvM" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>NvM.h;NvM_Act.h;NvM_Cbk.h;NvM_Crc.h;NvM_JobProc.h;NvM_Qry.h;NvM_Queue.h;NvM_Types.h</RelativeFileSpec>
+        </Component>
+        <Component Version="1.00.02" ScanPattern="Monitoring_Asr4Dbg" Project="Monitoring_Asr4Dbg" Delivered="true" Component="Description"/>
+        <Component Version="2.00.01" ScanPattern="Monitoring_Asr4Dbg" Project="Monitoring_Asr4Dbg" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="1.00.01" ScanPattern="Monitoring_Asr4Dbg" Project="Monitoring_Asr4Dbg" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>Dbg.h</RelativeFileSpec>
+        </Component>
+        <Component Version="3.01.01" ScanPattern="Monitoring_Asr4Rtm" Project="Monitoring_Asr4Rtm" Delivered="true" Component="Description"/>
+        <Component Version="4.01.02" ScanPattern="Monitoring_Asr4Rtm" Project="Monitoring_Asr4Rtm" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="3.01.01" ScanPattern="Monitoring_Asr4Rtm" Project="Monitoring_Asr4Rtm" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>Rtm.h;Rtm_Types.h</RelativeFileSpec>
+        </Component>
+        <Component Version="1.04.03" ScanPattern="Monitoring_AsrDlt" Project="Monitoring_AsrDlt" Delivered="true" Component="Description"/>
+        <Component Version="2.01.03" ScanPattern="Monitoring_AsrDlt" Project="Monitoring_AsrDlt" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="1.07.02" ScanPattern="Monitoring_AsrDlt" Project="Monitoring_AsrDlt" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>Dlt.h;Dlt.h;Dlt_Types.h;Dlt_Types.h</RelativeFileSpec>
+        </Component>
+        <Component Version="2.00.00" ScanPattern="NmJ1939_AsrJ1939Nm" Project="NmJ1939_AsrJ1939Nm" Delivered="true" Component="Description"/>
+        <Component Version="3.00.00" ScanPattern="NmJ1939_AsrJ1939Nm" Project="NmJ1939_AsrJ1939Nm" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="3.00.00" ScanPattern="NmJ1939_AsrJ1939Nm" Project="NmJ1939_AsrJ1939Nm" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>J1939Nm.h;J1939Nm_Cbk.h;J1939Nm_Dynamic.h;J1939Nm_Int.h;J1939Nm_NvM.h;J1939Nm_Types.h</RelativeFileSpec>
+        </Component>
+        <Component Version="7.03.00" ScanPattern="Nm_Asr4NmCan" Project="Nm_Asr4NmCan" Delivered="true" Component="Description"/>
+        <Component Version="7.02.01" ScanPattern="Nm_Asr4NmCan" Project="Nm_Asr4NmCan" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="6.03.00" ScanPattern="Nm_Asr4NmCan" Project="Nm_Asr4NmCan" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>CanNm.h;CanNm_Cbk.h</RelativeFileSpec>
+        </Component>
+        <Component Version="6.01.01" ScanPattern="Nm_Asr4NmFr" Project="Nm_Asr4NmFr" Delivered="true" Component="Description"/>
+        <Component Version="6.01.01" ScanPattern="Nm_Asr4NmFr" Project="Nm_Asr4NmFr" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="6.01.01" ScanPattern="Nm_Asr4NmFr" Project="Nm_Asr4NmFr" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>FrNm.h;FrNm_Cbk.h</RelativeFileSpec>
+        </Component>
+        <Component Version="10.01.00" ScanPattern="Nm_Asr4NmIf" Project="Nm_Asr4NmIf" Delivered="true" Component="Description"/>
+        <Component Version="9.01.01" ScanPattern="Nm_Asr4NmIf" Project="Nm_Asr4NmIf" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="10.00.00" ScanPattern="Nm_Asr4NmIf" Project="Nm_Asr4NmIf" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>Nm.h;NmStack_Types.h;Nm_Cbk.h</RelativeFileSpec>
+        </Component>
+        <Component Version="7.00.00" ScanPattern="Nm_AsrNmDirOsek" Project="Nm_AsrNmDirOsek" Delivered="true" Component="Description"/>
+        <Component Version="6.00.00" ScanPattern="Nm_AsrNmDirOsek" Project="Nm_AsrNmDirOsek" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="7.00.00" ScanPattern="Nm_AsrNmDirOsek" Project="Nm_AsrNmDirOsek" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>NmOsek.h;NmOsek_Cbk.h</RelativeFileSpec>
+        </Component>
+        <Component Version="2.03.00" ScanPattern="Nm_AsrNmLin" Project="Nm_AsrNmLin" Delivered="true" Component="Description"/>
+        <Component Version="3.01.00" ScanPattern="Nm_AsrNmLin" Project="Nm_AsrNmLin" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="2.02.02" ScanPattern="Nm_AsrNmLin" Project="Nm_AsrNmLin" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>LinNm.h;LinNm_Cbk.h</RelativeFileSpec>
+        </Component>
+        <Component Version="3.02.02" ScanPattern="Nm_AsrNmUdp" Project="Nm_AsrNmUdp" Delivered="true" Component="Description"/>
+        <Component Version="3.01.02" ScanPattern="Nm_AsrNmUdp" Project="Nm_AsrNmUdp" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="3.02.02" ScanPattern="Nm_AsrNmUdp" Project="Nm_AsrNmUdp" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>UdpNm.h;UdpNm_Cbk.h;UdpNm_Priv.h;UdpNm_Types.h</RelativeFileSpec>
+        </Component>
+        <Component Version="2.10.00" ScanPattern="Os_CoreGen7" Project="Os_CoreGen7" Delivered="true" Component="Description"/>
+        <Component Version="2.10.00" ScanPattern="Os_CoreGen7" Project="Os_CoreGen7" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="2.10.01" ScanPattern="Os_CoreGen7" Project="Os_CoreGen7" Delivered="true" Component="Implementation"/>
+        <Component Version="2.08.00" ScanPattern="Os_PlatformVttGen7" Project="Os_PlatformVttGen7" Delivered="true" Component="Description"/>
+        <Component Version="2.07.00" ScanPattern="Os_PlatformVttGen7" Project="Os_PlatformVttGen7" Delivered="true" Component="GenTool_GeneratorMSR"/>
+        <Component Version="2.08.00" ScanPattern="Os_PlatformVttGen7" Project="Os_PlatformVttGen7" Delivered="true" Component="Implementation"/>
+        <Component Version="1.00.00" ScanPattern="PostBuildHexFileGenerator" Project="PostBuildHexFileGenerator" Delivered="true" Component="Application_Dll">
+            <RelativeFileSpec>PBuild.dll</RelativeFileSpec>
+        </Component>
+        <Component Version="1.01.00" ScanPattern="PostBuildHexFileGenerator" Project="PostBuildHexFileGenerator" Delivered="true" Component="Application_Exe"/>
+        <Component Version="1.00.02" ScanPattern="Rte_Analyzer" Project="Rte_Analyzer" Delivered="true" Component="Application"/>
+        <Component Version="0.06.00" ScanPattern="Rte_Analyzer" Project="Rte_Analyzer" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="4.16.00" ScanPattern="Rte_Asr4" Project="Rte_Asr4" Delivered="true" Component="Description"/>
+        <Component Version="4.16.00" ScanPattern="Rte_Asr4" Project="Rte_Asr4" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="4.16.00" ScanPattern="Rte_Asr4" Project="Rte_Asr4" Delivered="true" Component="Generator"/>
+        <Component Version="1.16.00" ScanPattern="Rte_Core" Project="Rte_Core" Delivered="true" Component="Generator"/>
+        <Component Version="1.16.00" ScanPattern="Rte_Core" Project="Rte_Core" Delivered="true" Component="Implementation"/>
+        <Component Version="4.16.01" ScanPattern="Rte_DaVinciBase" Project="Rte_DaVinciBase" Delivered="true" Component="Generator"/>
+        <Component Version="2.03.00" ScanPattern="Security_AsrCsm" Project="Security_AsrCsm" Delivered="true" Component="Description"/>
+        <Component Version="2.03.00" ScanPattern="Security_AsrCsm" Project="Security_AsrCsm" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="2.03.00" ScanPattern="Security_AsrCsm" Project="Security_AsrCsm" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>Csm.h;Csm_Cbk.h;Csm_Types.h</RelativeFileSpec>
+        </Component>
+        <Component Version="2.02.01" ScanPattern="Security_FvM" Project="Security_FvM" Delivered="true" Component="Description"/>
+        <Component Version="2.02.00" ScanPattern="Security_FvM" Project="Security_FvM" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="2.03.00" ScanPattern="Security_FvM" Project="Security_FvM" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>FvM.h</RelativeFileSpec>
+        </Component>
+        <Component Version="1.01.00" ScanPattern="SipModificationChecker" Project="SipModificationChecker" Delivered="true" Component="Application"/>
+        <Component Version="9.02.00" ScanPattern="SysService_Asr4BswMCfg5" Project="SysService_Asr4BswMCfg5" Delivered="true" Component="Description"/>
+        <Component Version="12.00.02" ScanPattern="SysService_Asr4BswMCfg5" Project="SysService_Asr4BswMCfg5" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="9.02.00" ScanPattern="SysService_Asr4BswMCfg5" Project="SysService_Asr4BswMCfg5" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>BswM.h;BswM_CanSM.h;BswM_ComM.h;BswM_Dcm.h;BswM_EcuM.h;BswM_EthIf.h;BswM_EthSM.h;BswM_FrSM.h;BswM_J1939Dcm.h;BswM_J1939Nm.h;BswM_LinSM.h;BswM_LinTp.h;BswM_Nm.h;BswM_NvM.h;BswM_PduR.h;BswM_Sd.h;BswM_WdgM.h</RelativeFileSpec>
+        </Component>
+        <Component Version="8.00.02" ScanPattern="SysService_Asr4EcuM" Project="SysService_Asr4EcuM" Delivered="true" Component="Description"/>
+        <Component Version="8.00.02" ScanPattern="SysService_Asr4EcuM" Project="SysService_Asr4EcuM" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="8.00.02" ScanPattern="SysService_Asr4EcuM" Project="SysService_Asr4EcuM" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>EcuM.h;EcuM_Cbk.h;EcuM_Error.h</RelativeFileSpec>
+        </Component>
+        <Component Version="4.02.00" ScanPattern="SysService_Asr4FiM" Project="SysService_Asr4FiM" Delivered="true" Component="Description"/>
+        <Component Version="4.02.00" ScanPattern="SysService_Asr4FiM" Project="SysService_Asr4FiM" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="4.02.00" ScanPattern="SysService_Asr4FiM" Project="SysService_Asr4FiM" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>FiM.h;FiM_Types.h</RelativeFileSpec>
+        </Component>
+        <Component Version="6.01.00" ScanPattern="SysService_Asr4WdM" Project="SysService_Asr4WdM" Delivered="true" Component="Description"/>
+        <Component Version="2.01.00" ScanPattern="SysService_Asr4WdM" Project="SysService_Asr4WdM" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="5.02.00" ScanPattern="SysService_Asr4WdM" Project="SysService_Asr4WdM" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>WdgM.h;WdgM_Cfg.h</RelativeFileSpec>
+        </Component>
+        <Component Version="5.05.01" ScanPattern="SysService_AsrCrc" Project="SysService_AsrCrc" Delivered="true" Component="Description"/>
+        <Component Version="3.01.00" ScanPattern="SysService_AsrCrc" Project="SysService_AsrCrc" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="5.04.01" ScanPattern="SysService_AsrCrc" Project="SysService_AsrCrc" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>Crc.h</RelativeFileSpec>
+        </Component>
+        <Component Version="10.00.00" ScanPattern="SysService_AsrDet" Project="SysService_AsrDet" Delivered="true" Component="Description"/>
+        <Component Version="10.00.01" ScanPattern="SysService_AsrDet" Project="SysService_AsrDet" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="10.00.00" ScanPattern="SysService_AsrDet" Project="SysService_AsrDet" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>Det.h</RelativeFileSpec>
+        </Component>
+        <Component Version="5.01.00" ScanPattern="SysService_AsrEtm" Project="SysService_AsrEtm" Delivered="true" Component="Description"/>
+        <Component Version="5.01.01" ScanPattern="SysService_AsrEtm" Project="SysService_AsrEtm" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="5.01.01" ScanPattern="SysService_AsrEtm" Project="SysService_AsrEtm" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>Etm.h;Etm_Cbk.h;Etm_Types.h</RelativeFileSpec>
+        </Component>
+        <Component Version="2.03.00" ScanPattern="SysService_AsrRamTst" Project="SysService_AsrRamTst" Delivered="true" Component="Description"/>
+        <Component Version="4.00.00" ScanPattern="SysService_AsrRamTst" Project="SysService_AsrRamTst" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="2.02.00" ScanPattern="SysService_AsrRamTst" Project="SysService_AsrRamTst" Delivered="true" Component="Implementation"/>
+        <Component Version="5.04.00" ScanPattern="SysService_AsrSd" Project="SysService_AsrSd" Delivered="true" Component="Description"/>
+        <Component Version="5.04.00" ScanPattern="SysService_AsrSd" Project="SysService_AsrSd" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="5.04.00" ScanPattern="SysService_AsrSd" Project="SysService_AsrSd" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>Sd.h;Sd_Priv.h;Sd_Types.h</RelativeFileSpec>
+        </Component>
+        <Component Version="5.02.00" ScanPattern="SysService_AsrStbM" Project="SysService_AsrStbM" Delivered="true" Component="Description"/>
+        <Component Version="5.02.00" ScanPattern="SysService_AsrStbM" Project="SysService_AsrStbM" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="5.02.00" ScanPattern="SysService_AsrStbM" Project="SysService_AsrStbM" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>StbM.h;StbM_Cbk.h;StbM_Types.h</RelativeFileSpec>
+        </Component>
+        <Component Version="3.03.00" ScanPattern="SysService_AsrTSynCan" Project="SysService_AsrTSynCan" Delivered="true" Component="Description"/>
+        <Component Version="3.03.00" ScanPattern="SysService_AsrTSynCan" Project="SysService_AsrTSynCan" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="3.03.00" ScanPattern="SysService_AsrTSynCan" Project="SysService_AsrTSynCan" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>CanTSyn.h;CanTSyn_Cbk.h;CanTSyn_Types.h</RelativeFileSpec>
+        </Component>
+        <Component Version="5.01.01" ScanPattern="SysService_AsrTSynEth" Project="SysService_AsrTSynEth" Delivered="true" Component="Description"/>
+        <Component Version="5.01.01" ScanPattern="SysService_AsrTSynEth" Project="SysService_AsrTSynEth" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="5.01.01" ScanPattern="SysService_AsrTSynEth" Project="SysService_AsrTSynEth" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>EthTSyn.h;EthTSyn_Cbk.h;EthTSyn_CfgAccess_Int.h;EthTSyn_Crc_Int.h;EthTSyn_Int.h;EthTSyn_Master_Int.h;EthTSyn_Pdelay_Int.h;EthTSyn_Slave_Int.h;EthTSyn_SwtMgmt_Cbk.h;EthTSyn_SwtMgmt_Int.h;EthTSyn_Types.h;EthTSyn_Util_Int.h</RelativeFileSpec>
+        </Component>
+        <Component Version="3.03.00" ScanPattern="SysService_AsrTSynFr" Project="SysService_AsrTSynFr" Delivered="true" Component="Description"/>
+        <Component Version="3.03.00" ScanPattern="SysService_AsrTSynFr" Project="SysService_AsrTSynFr" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="3.03.00" ScanPattern="SysService_AsrTSynFr" Project="SysService_AsrTSynFr" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>FrTSyn.h;FrTSyn_Cbk.h;FrTSyn_Types.h</RelativeFileSpec>
+        </Component>
+        <Component Version="2.07.00" ScanPattern="SysService_CryptoCv" Project="SysService_CryptoCv" Delivered="true" Component="Impl_ESLib">
+            <RelativeFileSpec>ESLib.h;ESLib_ASN_1.h;ESLib_Config.h;ESLib_ERC.h;ESLib_RNG.h;ESLib_V1.1_compatibility.h;ESLib_t.h;ESLib_types.h;ESLib_version.h</RelativeFileSpec>
+        </Component>
+        <Component Version="2.05.01" ScanPattern="SysService_CryptoCv" Project="SysService_CryptoCv" Delivered="true" Component="Impl_actCLib">
+            <RelativeFileSpec>act25519util.h;actAES.h;actBigNum.h;actBigNumGCD.h;actConfig.h;actDES.h;actECDH.h;actECDSA.h;actECKey.h;actECLengthInfo.h;actECPoint.h;actECTools.h;actEd25519.h;actEd25519core.h;actExternRandom.h;actFIPS186.h;actIAES.h;actICMACAES.h;actIECDH.h;actIECDSA.h;actIECKey.h;actIEd25519.h;actIGCM.h;actIGHash.h;actIHashMAC.h;actIHashMACRMD160.h;actIHashMACSHA256.h;actIKDF2.h;actIKDFX963.h;actIMD5.h;actIRMD160.h;actIRSA.h;actIRSAExp.h;actISHA.h;actISHA2_32.h;actISHA2_64.h;actISipHash.h;actITypes.h;actIX25519.h;actPadding.h;actPlatformTypes.h;actRC2.h;actTDES.h;actUtilities.h;actVersion.h;actWatchdog.h;actX25519core.h</RelativeFileSpec>
+        </Component>
+        <Component Version="1.02.00" ScanPattern="SysService_E2eLib" Project="SysService_E2eLib" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>E2E.h;E2E_P01.h;E2E_P02.h;E2E_P04.h;E2E_P05.h;E2E_P06.h;E2E_P07.h;E2E_PJLR.h;E2E_SM.h</RelativeFileSpec>
+        </Component>
+        <Component Version="1.00.00" ScanPattern="SysService_E2ePw" Project="SysService_E2ePw" Delivered="true" Component="Description"/>
+        <Component Version="1.00.02" ScanPattern="SysService_E2ePw" Project="SysService_E2ePw" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="1.00.00" ScanPattern="SysService_E2ePw" Project="SysService_E2ePw" Delivered="true" Component="Generator"/>
+        <Component Version="1.00.01" ScanPattern="SysService_E2ePw" Project="SysService_E2ePw" Delivered="true" Component="Implementation_CommonAsr"/>
+        <Component Version="3.03.05" ScanPattern="SysService_Exi" Project="SysService_Exi" Delivered="true" Component="Description"/>
+        <Component Version="4.00.01" ScanPattern="SysService_Exi" Project="SysService_Exi" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="3.02.05" ScanPattern="SysService_Exi" Project="SysService_Exi" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>Exi.h;Exi_BMW_ISO_SchemaDecoder.h;Exi_BMW_ISO_SchemaEncoder.h;Exi_BMW_ISO_SchemaTypes.h;Exi_BSDecoder.h;Exi_BSEncoder.h;Exi_BVC_SchemaDecoder.h;Exi_BVC_SchemaEncoder.h;Exi_BVC_SchemaTypes.h;Exi_Cbk.h;Exi_DIN_SchemaDecoder.h;Exi_DIN_SchemaEncoder.h;Exi_DIN_SchemaTypes.h;Exi_ISO_SchemaDecoder.h;Exi_ISO_SchemaEncoder.h;Exi_ISO_SchemaTypes.h;Exi_Lcfg.h;Exi_Priv.h;Exi_SAP_SchemaDecoder.h;Exi_SAP_SchemaEncoder.h;Exi_SAP_SchemaTypes.h;Exi_SchemaDecoder.h;Exi_SchemaEncoder.h;Exi_SchemaTypes.h;Exi_Types.h;Exi_WPT_DENSO_SchemaDecoder.h;Exi_WPT_DENSO_SchemaEncoder.h;Exi_WPT_DENSO_SchemaTypes.h;Exi_XMLSIG_SchemaDecoder.h;Exi_XMLSIG_SchemaEncoder.h;Exi_XMLSIG_SchemaTypes.h</RelativeFileSpec>
+        </Component>
+        <Component Version="1.00.01" ScanPattern="SysService_FwEth" Project="SysService_FwEth" Delivered="true" Component="Description"/>
+        <Component Version="1.00.02" ScanPattern="SysService_FwEth" Project="SysService_FwEth" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="1.00.01" ScanPattern="SysService_FwEth" Project="SysService_FwEth" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>EthFw.h;EthFw_Cbk.h;EthFw_Priv.h;EthFw_Types.h</RelativeFileSpec>
+        </Component>
+        <Component Version="3.00.00" ScanPattern="SysService_IpBase" Project="SysService_IpBase" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>IpBase.h;IpBase_Cfg.h;IpBase_Code.h;IpBase_Copy.h;IpBase_PBuf.h;IpBase_Priv.h;IpBase_Sock.h;IpBase_String.h;IpBase_Types.h;_Appl_Rand.h;_Appl_Time.h</RelativeFileSpec>
+        </Component>
+        <Component Version="3.01.00" ScanPattern="SysService_Srp8021Q" Project="SysService_Srp8021Q" Delivered="true" Component="Description"/>
+        <Component Version="3.01.00" ScanPattern="SysService_Srp8021Q" Project="SysService_Srp8021Q" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="3.01.00" ScanPattern="SysService_Srp8021Q" Project="SysService_Srp8021Q" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>Srp.h;Srp_Cbk.h;Srp_Priv.h;Srp_Types.h</RelativeFileSpec>
+        </Component>
+        <Component Version="9.05.00" ScanPattern="SysService_SswScc" Project="SysService_SswScc" Delivered="true" Component="Description"/>
+        <Component Version="9.06.01" ScanPattern="SysService_SswScc" Project="SysService_SswScc" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="9.06.01" ScanPattern="SysService_SswScc" Project="SysService_SswScc" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>Scc.h;Scc_Cbk.h;Scc_Com_Daimler.h;Scc_ConfigParams_Cfg_ASR3.h;Scc_EthTestMode_Daimler.h;Scc_Exi.h;Scc_Interface_Cfg_Daimler.h;Scc_Lcfg.h;Scc_PduR_Daimler.h;Scc_Priv.h;Scc_Rte_VAG.h;Scc_Rte_Volvo.h;Scc_StateM_Daimler.h;Scc_StateM_Vector.h;Scc_Types.h;Scc_Ul_Cbk.h;_ApplScc_CbkStubs.h</RelativeFileSpec>
+        </Component>
+        <Component Version="7.02.00" ScanPattern="SysService_Tls" Project="SysService_Tls" Delivered="true" Component="Description"/>
+        <Component Version="7.01.00" ScanPattern="SysService_Tls" Project="SysService_Tls" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="8.02.00" ScanPattern="SysService_Tls" Project="SysService_Tls" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>Tls.h;Tls_Cbk.h;Tls_Lcfg.h;Tls_Priv.h;Tls_Types.h</RelativeFileSpec>
+        </Component>
+        <Component Version="1.00.00" ScanPattern="SysService_vCanCcCdm" Project="SysService_vCanCcCdm" Delivered="true" Component="Description"/>
+        <Component Version="1.00.01" ScanPattern="SysService_vCanCcCdm" Project="SysService_vCanCcCdm" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="1.00.01" ScanPattern="SysService_vCanCcCdm" Project="SysService_vCanCcCdm" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>vCanCcCdm.h;vCanCcCdm_Types.h</RelativeFileSpec>
+        </Component>
+        <Component Version="1.00.02" ScanPattern="SysService_vCanCcGbt" Project="SysService_vCanCcGbt" Delivered="true" Component="Description"/>
+        <Component Version="1.00.02" ScanPattern="SysService_vCanCcGbt" Project="SysService_vCanCcGbt" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="1.00.02" ScanPattern="SysService_vCanCcGbt" Project="SysService_vCanCcGbt" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>vCanCcGbt.h;vCanCcGbt_Callout.h;vCanCcGbt_Cbk.h;vCanCcGbt_Int.h;vCanCcGbt_Types.h</RelativeFileSpec>
+        </Component>
+        <Component Version="1.03.02" ScanPattern="TpJ1939_AsrJ1939Tp" Project="TpJ1939_AsrJ1939Tp" Delivered="true" Component="Description"/>
+        <Component Version="2.01.00" ScanPattern="TpJ1939_AsrJ1939Tp" Project="TpJ1939_AsrJ1939Tp" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="1.03.02" ScanPattern="TpJ1939_AsrJ1939Tp" Project="TpJ1939_AsrJ1939Tp" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>J1939Tp.h;J1939Tp_Bam.h;J1939Tp_Cbk.h;J1939Tp_Cmdt.h;J1939Tp_Direct.h;J1939Tp_Etp.h;J1939Tp_Fpp.h;J1939Tp_Int.h;J1939Tp_Types.h</RelativeFileSpec>
+        </Component>
+        <Component Version="3.03.01" ScanPattern="Tp_Asr4TpCan" Project="Tp_Asr4TpCan" Delivered="true" Component="Description"/>
+        <Component Version="4.02.02" ScanPattern="Tp_Asr4TpCan" Project="Tp_Asr4TpCan" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="3.03.01" ScanPattern="Tp_Asr4TpCan" Project="Tp_Asr4TpCan" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>CanTp.h;CanTp_Cbk.h;CanTp_Priv.h;CanTp_Types.h</RelativeFileSpec>
+        </Component>
+        <Component Version="5.00.01" ScanPattern="Tp_Asr4TpLin" Project="Tp_Asr4TpLin" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="4.04.00" ScanPattern="Tp_AsrTpDoIP" Project="Tp_AsrTpDoIP" Delivered="true" Component="Description"/>
+        <Component Version="4.03.00" ScanPattern="Tp_AsrTpDoIP" Project="Tp_AsrTpDoIP" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="4.04.00" ScanPattern="Tp_AsrTpDoIP" Project="Tp_AsrTpDoIP" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>DoIP.h;DoIP_Cbk.h;DoIP_Priv.h;DoIP_Types.h;_Appl_DoIP.h</RelativeFileSpec>
+        </Component>
+        <Component Version="6.03.00" ScanPattern="Tp_AsrTpTcpIp" Project="Tp_AsrTpTcpIp" Delivered="true" Component="Description"/>
+        <Component Version="6.02.00" ScanPattern="Tp_AsrTpTcpIp" Project="Tp_AsrTpTcpIp" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="3.00.00" ScanPattern="Tp_AsrTpTcpIp" Project="Tp_AsrTpTcpIp" Delivered="true" Component="GenTool_GeneratorMsr_DhcpV4Server"/>
+        <Component Version="6.00.00" ScanPattern="Tp_AsrTpTcpIp" Project="Tp_AsrTpTcpIp" Delivered="true" Component="GenTool_GeneratorMsr_IpV4"/>
+        <Component Version="6.01.00" ScanPattern="Tp_AsrTpTcpIp" Project="Tp_AsrTpTcpIp" Delivered="true" Component="GenTool_GeneratorMsr_IpV6"/>
+        <Component Version="6.04.00" ScanPattern="Tp_AsrTpTcpIp" Project="Tp_AsrTpTcpIp" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>TcpIp.h;TcpIp_Cbk.h;TcpIp_Priv.h;TcpIp_Priv_Types.h;TcpIp_Tcp.h;TcpIp_Tcp_Cbk.h;TcpIp_Types.h;TcpIp_Udp.h;TcpIp_Udp_Cbk.h;TcpIp_XCfg.h</RelativeFileSpec>
+        </Component>
+        <Component Version="3.02.00" ScanPattern="Tp_AsrTpTcpIp" Project="Tp_AsrTpTcpIp" Delivered="true" Component="Implementation_DhcpV4Server">
+            <RelativeFileSpec>TcpIp_DhcpV4Server.h</RelativeFileSpec>
+        </Component>
+        <Component Version="6.04.01" ScanPattern="Tp_AsrTpTcpIp" Project="Tp_AsrTpTcpIp" Delivered="true" Component="Implementation_IpV4">
+            <RelativeFileSpec>TcpIp_Arp.h;TcpIp_Arp_Cbk.h;TcpIp_DhcpV4.h;TcpIp_DhcpV4_Cbk.h;TcpIp_IcmpV4.h;TcpIp_IcmpV4_Cbk.h;TcpIp_IpV4.h;TcpIp_IpV4_Cbk.h;TcpIp_IpV4_Priv.h;TcpIp_IpV4_Types.h;TcpIp_IpV4_XCfg.h</RelativeFileSpec>
+        </Component>
+        <Component Version="6.03.00" ScanPattern="Tp_AsrTpTcpIp" Project="Tp_AsrTpTcpIp" Delivered="true" Component="Implementation_IpV6">
+            <RelativeFileSpec>TcpIp_DhcpV6.h;TcpIp_DhcpV6_Cbk.h;TcpIp_IcmpV6.h;TcpIp_IpV6.h;TcpIp_IpV6_Cbk.h;TcpIp_IpV6_Priv.h;TcpIp_IpV6_Types.h;TcpIp_Mld.h;TcpIp_Ndp.h</RelativeFileSpec>
+        </Component>
+        <Component Version="5.00.00" ScanPattern="Tp_Ieee1722AvTp" Project="Tp_Ieee1722AvTp" Delivered="true" Component="Description"/>
+        <Component Version="5.00.00" ScanPattern="Tp_Ieee1722AvTp" Project="Tp_Ieee1722AvTp" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="5.00.00" ScanPattern="Tp_Ieee1722AvTp" Project="Tp_Ieee1722AvTp" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>AvTp.h;AvTp_Cbk.h;AvTp_Priv.h;AvTp_Types.h;_Appl_AvTp.h</RelativeFileSpec>
+        </Component>
+        <Component Version="2.05.00" ScanPattern="Tp_Iso10681" Project="Tp_Iso10681" Delivered="true" Component="Description"/>
+        <Component Version="3.02.00" ScanPattern="Tp_Iso10681" Project="Tp_Iso10681" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="2.04.03" ScanPattern="Tp_Iso10681" Project="Tp_Iso10681" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>FrTp.h;FrTp_Cbk.h;FrTp_Common.h;FrTp_FrIf.h;FrTp_Rsrc.h;FrTp_RxSm.h;FrTp_TxSm.h;FrTp_Types.h;FrTp_Util.h;FrTp_XCfg.h</RelativeFileSpec>
+        </Component>
+        <Component Version="1.01.00" ScanPattern="Tp_Rtp" Project="Tp_Rtp" Delivered="true" Component="Description"/>
+        <Component Version="1.01.00" ScanPattern="Tp_Rtp" Project="Tp_Rtp" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="1.01.00" ScanPattern="Tp_Rtp" Project="Tp_Rtp" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>Rtp.h;Rtp_Cbk.h;Rtp_Priv.h;Rtp_Types.h</RelativeFileSpec>
+        </Component>
+        <Component Version="2.00.02" ScanPattern="VStdLib_GenericAsr" Project="VStdLib_GenericAsr" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>_VStdLib_Cfg.h;vstdlib.h</RelativeFileSpec>
+        </Component>
+        <Component Version="2.30.00" ScanPattern="Vtt_CANoeEmuLib" Project="Vtt_CANoeEmuLib" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>CANoeApi.h;CANoeEmuLin.h;CANoeEmuProcessor.h</RelativeFileSpec>
+        </Component>
+        <Component Version="2.04.00" ScanPattern="Vtt_Cntrl" Project="Vtt_Cntrl" Delivered="true" Component="Description"/>
+        <Component Version="19.00.00" ScanPattern="Vtt_Cntrl" Project="Vtt_Cntrl" Delivered="true" Component="GenTool_GeneratorMsr"/>
+        <Component Version="1.01.00" ScanPattern="Vtt_Cntrl" Project="Vtt_Cntrl" Delivered="true" Component="GenTool_GeneratorMsr_Settings"/>
+        <Component Version="9.01.00" ScanPattern="Vtt_Cntrl" Project="Vtt_Cntrl" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>LinTrcv_GeneralTypes.h;VttCntrl_Adc.h;VttCntrl_Base.h;VttCntrl_Can.h;VttCntrl_Det.h;VttCntrl_Dio.h;VttCntrl_Eep.h;VttCntrl_Eth.h;VttCntrl_Fls.h;VttCntrl_Fr.h;VttCntrl_Gpt.h;VttCntrl_Icu.h;VttCntrl_Mcu.h;VttCntrl_ModuleIncludes.h;VttCntrl_Pwm.h;VttCntrl_SysVar.h;VttCntrl_Wdg.h;_InitFunctionConfiguration.h</RelativeFileSpec>
+        </Component>
+        <Component Version="1.08.00" ScanPattern="Xf_ComXf" Project="Xf_ComXf" Delivered="true" Component="Description"/>
+        <Component Version="1.08.00" ScanPattern="Xf_ComXf" Project="Xf_ComXf" Delivered="true" Component="Generator"/>
+        <Component Version="1.04.00" ScanPattern="Xf_DiagXf" Project="Xf_DiagXf" Delivered="true" Component="Description"/>
+        <Component Version="1.04.00" ScanPattern="Xf_DiagXf" Project="Xf_DiagXf" Delivered="true" Component="Generator"/>
+        <Component Version="1.03.00" ScanPattern="Xf_E2eXf" Project="Xf_E2eXf" Delivered="true" Component="Description"/>
+        <Component Version="1.03.00" ScanPattern="Xf_E2eXf" Project="Xf_E2eXf" Delivered="true" Component="Generator"/>
+        <Component Version="1.03.00" ScanPattern="Xf_E2eXf" Project="Xf_E2eXf" Delivered="true" Component="Implementation">
+            <RelativeFileSpec>E2EXf.h</RelativeFileSpec>
+        </Component>
+        <Component Version="1.08.00" ScanPattern="Xf_SomeIpXf" Project="Xf_SomeIpXf" Delivered="true" Component="Description"/>
+        <Component Version="1.08.00" ScanPattern="Xf_SomeIpXf" Project="Xf_SomeIpXf" Delivered="true" Component="Generator"/>
+    </ComponentCheck>
+    <DeliveryVersionNumber>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+    </DeliveryVersionNumber>
+</CANbeddedVersionInfo>

@@ -1,0 +1,2569 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-0-3.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://autosar.org/schema/r4.0">
+	<AR-PACKAGES>
+		<AR-PACKAGE UUID="928e2631-4dc7-4bd5-9d6b-d8a34bf56517">
+			<SHORT-NAME>MICROSAR</SHORT-NAME>
+			<ELEMENTS>
+				<ECUC-MODULE-DEF UUID="bac1a132-0a17-4cda-a4b1-f1bd8032c94c">
+					<SHORT-NAME>EthIf</SHORT-NAME>
+					<DESC>
+						<L-2 L="EN">Configuration of the EthIf (Ethernet Interface) module.</L-2>
+					</DESC>
+					<CATEGORY>VENDOR_SPECIFIC_MODULE_DEFINITION</CATEGORY>
+					<ADMIN-DATA>
+						<DOC-REVISIONS>
+							<DOC-REVISION>
+								<REVISION-LABEL>2.00.00</REVISION-LABEL>
+								<STATE>released</STATE>
+								<ISSUED-BY>visdd</ISSUED-BY>
+								<DATE>2009-10-07T16:17:12Z</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">EthIf_Impl SW version and Bswmd version set to 2.00.00</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00038253</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>2.00.04</REVISION-LABEL>
+								<STATE>beta</STATE>
+								<ISSUED-BY>visdd</ISSUED-BY>
+								<DATE>2009-11-05T13:50:25Z</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Descriptions Updated</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">Feature #258 (BSWMD Description field shall contain description of all dependencies of an attribute. Also, the GENy attribute description shall be updated accordingly.)</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>2.00.07</REVISION-LABEL>
+								<STATE>beta</STATE>
+								<ISSUED-BY>visdd</ISSUED-BY>
+								<DATE>2010-09-15T10:13:30Z</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Changed multiplicity for EthIfConnection2EthCtrlMapping container</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00045358</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>2.00.09</REVISION-LABEL>
+								<STATE>beta</STATE>
+								<ISSUED-BY>visdd</ISSUED-BY>
+								<DATE>2010-12-01T17:15:30Z</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Support SchM generator, GENy Dll version changed</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00046590, ESCAN00047256</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>2.01.09</REVISION-LABEL>
+								<STATE>released</STATE>
+								<ISSUED-BY>visdd</ISSUED-BY>
+								<DATE>2011-12-01T04:06:51+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Added EthIfMainFunctionPeriod</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00055163</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>3.01.00</REVISION-LABEL>
+								<STATE>released</STATE>
+								<ISSUED-BY>vismha</ISSUED-BY>
+								<DATE>2013-02-21T09:45:57+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">introduced LongNames, changed values of EthIFFrameTypeCollection, changed some default values, removed unsupported config variants, changed default value of ProdErrorDetect</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00065755</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>4.00.00</REVISION-LABEL>
+								<STATE>beta</STATE>
+								<ISSUED-BY>vishaw</ISSUED-BY>
+								<DATE>2013-04-16T12:53:52+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Added VLAN functionality</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00066020</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>4.00.01</REVISION-LABEL>
+								<STATE>released</STATE>
+								<ISSUED-BY>vishaw</ISSUED-BY>
+								<DATE>2013-11-05T10:45:22+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Implementation updated</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>4.01.00</REVISION-LABEL>
+								<STATE>released</STATE>
+								<ISSUED-BY>vishaw</ISSUED-BY>
+								<DATE>2014-01-17T09:35:59+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Multiple ESCANS</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00073155, CAN00070246</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>4.01.01</REVISION-LABEL>
+								<STATE>released</STATE>
+								<ISSUED-BY>visfdn</ISSUED-BY>
+								<DATE>2014-02-12T12:39:33+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Implementation updated</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00073610</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>4.02.00</REVISION-LABEL>
+								<STATE>released</STATE>
+								<ISSUED-BY>vishaw</ISSUED-BY>
+								<DATE>2014-03-04T03:47:01+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Introduced PTP support</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00074061</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>4.02.01</REVISION-LABEL>
+								<STATE>released</STATE>
+								<ISSUED-BY>vishaw</ISSUED-BY>
+								<DATE>2014-03-28T08:11:00+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Implementation updated</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>4.02.02</REVISION-LABEL>
+								<STATE>released</STATE>
+								<ISSUED-BY>vishaw</ISSUED-BY>
+								<DATE>2014-04-11T04:50:29+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Implementation updated</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>4.02.03</REVISION-LABEL>
+								<STATE>released</STATE>
+								<ISSUED-BY>vishaw</ISSUED-BY>
+								<DATE>2014-06-17T04:12:06+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Implementation updated</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>4.02.04</REVISION-LABEL>
+								<STATE>released</STATE>
+								<ISSUED-BY>vishaw</ISSUED-BY>
+								<DATE>2014-07-04T12:43:06+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Implementation updated</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>4.04.00</REVISION-LABEL>
+								<STATE>released</STATE>
+								<ISSUED-BY>vishaw</ISSUED-BY>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">AR4-500: AUTOSAR CONC_600_SwitchConfiguration</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00077149</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>4.05.00</REVISION-LABEL>
+								<STATE>released</STATE>
+								<ISSUED-BY>vishaw</ISSUED-BY>
+								<DATE>2014-09-19T01:58:16+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Multiple ESCANS</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00077495, ESCAN00074529</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>4.06.00</REVISION-LABEL>
+								<STATE>beta</STATE>
+								<ISSUED-BY>vismha</ISSUED-BY>
+								<DATE>2015-02-16T05:39:39+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">FEAT-705: Ethernet wakeup based on Activation Line [AR4-1006]</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00081282</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>4.06.01</REVISION-LABEL>
+								<STATE>beta</STATE>
+								<ISSUED-BY>vismha</ISSUED-BY>
+								<DATE>2015-03-26T11:01:45+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Implementation update</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>4.07.00</REVISION-LABEL>
+								<ISSUED-BY>vismha</ISSUED-BY>
+								<DATE>2015-05-22T05:15:37+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Implementation update</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>4.08.00</REVISION-LABEL>
+								<ISSUED-BY>vismha</ISSUED-BY>
+								<DATE>2015-06-15T07:00:44+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Implementation update</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>4.09.00</REVISION-LABEL>
+								<STATE>beta</STATE>
+								<ISSUED-BY>vismha</ISSUED-BY>
+								<DATE>2015-07-15T04:48:11+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Support of Mirroring/Gateway functionality</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00084011</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>4.09.01</REVISION-LABEL>
+								<ISSUED-BY>vismha</ISSUED-BY>
+								<DATE>2015-10-29T04:47:30+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Impl update</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>5.00.00</REVISION-LABEL>
+								<STATE>beta</STATE>
+								<ISSUED-BY>vismha</ISSUED-BY>
+								<DATE>2015-11-05T02:05:25+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Allow establishing a link on a EthIf Controller if not all related EthSwt Ports have a link established</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00086804</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>5.00.01</REVISION-LABEL>
+								<ISSUED-BY>vismha</ISSUED-BY>
+								<DATE>2016-01-15T04:06:25+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Impl update</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>5.00.02</REVISION-LABEL>
+								<ISSUED-BY>vismha</ISSUED-BY>
+								<DATE>2016-05-04T05:34:38+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Impl update</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>5.00.03</REVISION-LABEL>
+								<ISSUED-BY>vismha</ISSUED-BY>
+								<DATE>2016-06-08T08:13:09+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Impl update</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>6.00.00</REVISION-LABEL>
+								<ISSUED-BY>vismha</ISSUED-BY>
+								<DATE>2016-06-15T08:21:52+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Impl update</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>6.00.01</REVISION-LABEL>
+								<ISSUED-BY>vismha</ISSUED-BY>
+								<DATE>2016-08-24T06:09:34+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Impl update</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>7.00.00</REVISION-LABEL>
+								<ISSUED-BY>vismha</ISSUED-BY>
+								<DATE>2016-08-25T05:19:44+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">FEAT-1998: Support of HW Time Stamping for Switch in EthIf, FEAT-1454: EthIf</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">FEATC-249,FEATC-264</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>7.00.01</REVISION-LABEL>
+								<ISSUED-BY>vismha</ISSUED-BY>
+								<DATE>2016-12-06T08:08:43+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">EthIfSwitchPortGroupIdx isn't defined as symbolic name value</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00093169</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>7.01.00</REVISION-LABEL>
+								<ISSUED-BY>vispcn</ISSUED-BY>
+								<DATE>2016-12-21T10:20:48+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">FEAT-1824: Support a component-specific SafeBSW configuration switch (If_AsrIfEth)</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">FEATC-936</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>7.01.01</REVISION-LABEL>
+								<ISSUED-BY>vismha</ISSUED-BY>
+								<DATE>2017-01-27T04:43:19+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Parameter EthIfSwitchManagementSupport has no default value</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00093593</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>7.02.00</REVISION-LABEL>
+								<ISSUED-BY>vismha</ISSUED-BY>
+								<DATE>2017-02-08T08:38:59+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Impl update</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>7.02.01</REVISION-LABEL>
+								<ISSUED-BY>vismha</ISSUED-BY>
+								<DATE>2017-02-17T09:19:27+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Impl update</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>8.00.00</REVISION-LABEL>
+								<ISSUED-BY>vismha</ISSUED-BY>
+								<DATE>2017-02-21T11:13:10+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Impl update</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>8.00.01</REVISION-LABEL>
+								<ISSUED-BY>vismha</ISSUED-BY>
+								<DATE>2017-05-15T02:53:10+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Impl update</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+						</DOC-REVISIONS>
+					</ADMIN-DATA>
+					<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+					<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+					<REFINED-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/AUTOSAR/EcucDefs/EthIf</REFINED-MODULE-DEF-REF>
+					<SUPPORTED-CONFIG-VARIANTS>
+						<SUPPORTED-CONFIG-VARIANT>VARIANT-PRE-COMPILE</SUPPORTED-CONFIG-VARIANT>
+					</SUPPORTED-CONFIG-VARIANTS>
+					<CONTAINERS>
+						<ECUC-PARAM-CONF-CONTAINER-DEF UUID="326ca057-8d5b-4f84-ae1a-e2eebaa78ad9">
+							<SHORT-NAME>EthIfConfigSet</SHORT-NAME>
+							<DESC>
+								<L-2 L="EN">This container includes containers and parameters that may be part of a multiple configuration set.</L-2>
+							</DESC>
+							<ADMIN-DATA>
+								<SDGS>
+									<SDG GID="DV:CfgPostBuild">
+										<SD GID="DV:postBuildSelectableChangeable">false</SD>
+										<SD GID="DV:postBuildNotDeletable">false</SD>
+									</SDG>
+									<SDG GID="MSR:Process">
+										<SD GID="MSR:TraceRef">SPEC-2393697</SD>
+									</SDG>
+								</SDGS>
+							</ADMIN-DATA>
+							<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+							<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+							<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+							<MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+							<SUB-CONTAINERS>
+								<ECUC-PARAM-CONF-CONTAINER-DEF UUID="1e305e6b-62c7-4a8c-80eb-45afba352186">
+									<SHORT-NAME>EthIfFrameOwnerConfig</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">These containers include the configuration of Ethernet frame owners. Each frame owner registers for a certain Ethertype to receive and transmit Ethernet frames with the respective Ethertype. Each frame owner must implement an RxIndication and TxConfirmation function that need to be configured in the EthIfRxIndicationConfig and EthIfTxConfirmationConfig containers.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:postBuildSelectableChangeable">false</SD>
+												<SD GID="DV:postBuildNotDeletable">false</SD>
+											</SDG>
+											<SDG GID="MSR:Process">
+												<SD GID="MSR:TraceRef">SPEC-2393701</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+									<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+									<PARAMETERS>
+										<ECUC-INTEGER-PARAM-DEF UUID="649efecd-3fd7-4be9-b806-ad7e9af8c917">
+											<SHORT-NAME>EthIfFrameType</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">Frame Type</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">This value selects the Ethernet frame type the frame owner wants to register for.</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:Display">
+														<SD GID="DV:DefaultFormat">HEX</SD>
+													</SDG>
+													<SDG GID="MSR:Process">
+														<SD GID="MSR:TraceRef">SPEC-2393702</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>0</DEFAULT-VALUE>
+											<MAX>65535</MAX>
+											<MIN>0</MIN>
+										</ECUC-INTEGER-PARAM-DEF>
+										<ECUC-INTEGER-PARAM-DEF UUID="e7359c45-6fd7-4f45-afdb-9a941c5970f9">
+											<SHORT-NAME>EthIfOwner</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">Owner Index</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">This value selects the owner of an Ethernet frame type. The owner is a zero based index into the callback function configuration 'EthIfRxIndicationConfig'. I.e. an Ethernet frame of type IPv4 (0x800) at index 0 will call the first callback function configured in 'EthIfRxIndicationConfig'. The EthIfOwner is calculated automatically and is not relevant for the user since it is not used in any external APIs.</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="MSR:Process">
+														<SD GID="MSR:TraceRef">SPEC-2393703</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>0</DEFAULT-VALUE>
+											<MAX>255</MAX>
+											<MIN>0</MIN>
+										</ECUC-INTEGER-PARAM-DEF>
+									</PARAMETERS>
+									<REFERENCES>
+										<ECUC-FOREIGN-REFERENCE-DEF UUID="55af427e-fae7-4503-a90a-543880b6c2ab">
+											<SHORT-NAME>EthIfBswModuleRef</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">Owning BSW Module</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">This is a reference to one BSW module's configuration the frame owner shall be related to.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<DESTINATION-TYPE>ECUC-MODULE-CONFIGURATION-VALUES</DESTINATION-TYPE>
+										</ECUC-FOREIGN-REFERENCE-DEF>
+									</REFERENCES>
+								</ECUC-PARAM-CONF-CONTAINER-DEF>
+								<ECUC-PARAM-CONF-CONTAINER-DEF UUID="bdf8dc20-1991-473e-841f-2b388d96cd08">
+									<SHORT-NAME>EthIfRxIndicationConfig</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">These containers include the configuration of receive callback functions.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:postBuildSelectableChangeable">false</SD>
+												<SD GID="DV:postBuildNotDeletable">false</SD>
+											</SDG>
+											<SDG GID="MSR:Process">
+												<SD GID="MSR:TraceRef">SPEC-2393704</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+									<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+									<PARAMETERS>
+										<ECUC-FUNCTION-NAME-DEF UUID="f072bcea-a317-4cbb-ab48-2d1dfa0cd015">
+											<SHORT-NAME>EthIfRxIndicationFunction</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">Rx Indication</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter defines the name of a receive indication callback function.
+
+The prototype of the function is as specified as followed:
+void &lt;User&gt;_RxIndication(uint8 EthIfCtrlIdx, Eth_FrameType FrameType, boolean IsBroadcast, uint8 *PhysAddrPtr, uint8 *DataPtr, uint16 LenByte);</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="MSR:Process">
+														<SD GID="MSR:TraceRef">SPEC-2393705,SPEC-2393676</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<ECUC-FUNCTION-NAME-DEF-VARIANTS>
+												<ECUC-FUNCTION-NAME-DEF-CONDITIONAL>
+													<DEFAULT-VALUE>Msn_RxIndication</DEFAULT-VALUE>
+												</ECUC-FUNCTION-NAME-DEF-CONDITIONAL>
+											</ECUC-FUNCTION-NAME-DEF-VARIANTS>
+										</ECUC-FUNCTION-NAME-DEF>
+									</PARAMETERS>
+									<REFERENCES>
+										<ECUC-REFERENCE-DEF UUID="5a4cdd5f-54e1-4cfb-9b9c-a6c2e807e9ef">
+											<SHORT-NAME>EthIfFrameOwnerConfigRef</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">Frame Owner Reference</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">Reference to the frame owner to assign the RxIndication function.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/EthIf/EthIfConfigSet/EthIfFrameOwnerConfig</DESTINATION-REF>
+										</ECUC-REFERENCE-DEF>
+									</REFERENCES>
+								</ECUC-PARAM-CONF-CONTAINER-DEF>
+								<ECUC-PARAM-CONF-CONTAINER-DEF UUID="f29804cc-2cf0-416f-8163-cd03aceea544">
+									<SHORT-NAME>EthIfTrcvLinkStateChgConfig</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">These containers include the link state change callback function. In case the transceiver link of ther underlaying hardware changes all transceiver link state change callback functions are called by the EthIf to inform the observers about a link state change.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:postBuildSelectableChangeable">false</SD>
+												<SD GID="DV:postBuildNotDeletable">false</SD>
+											</SDG>
+											<SDG GID="MSR:Process">
+												<SD GID="MSR:TraceRef">SPEC-2393706</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+									<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+									<PARAMETERS>
+										<ECUC-FUNCTION-NAME-DEF UUID="073b07b2-fea2-4516-8476-0d70676f48cc">
+											<SHORT-NAME>EthIfTrcvLinkStateChgFunction</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">Transceiver Link State Change Indication</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter defines the name of a link state change indication function. This function is called in case the transceiver link state of the underlaying hardware changes.
+
+The prototype of the function is as specified as followed:
+void &lt;User&gt;_TrcvLinkStateChg(uint8 EthIfCtrlIdx, EthTrcv_LinkStateType TrcvLinkState);</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="MSR:Process">
+														<SD GID="MSR:TraceRef">SPEC-2393707,SPEC-2393680</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<ECUC-FUNCTION-NAME-DEF-VARIANTS>
+												<ECUC-FUNCTION-NAME-DEF-CONDITIONAL>
+													<DEFAULT-VALUE>Msn_TrcvLinkStateChg</DEFAULT-VALUE>
+												</ECUC-FUNCTION-NAME-DEF-CONDITIONAL>
+											</ECUC-FUNCTION-NAME-DEF-VARIANTS>
+										</ECUC-FUNCTION-NAME-DEF>
+									</PARAMETERS>
+									<REFERENCES>
+										<ECUC-REFERENCE-DEF UUID="3440637a-4cd0-47b3-9f48-e6820a491087">
+											<SHORT-NAME>EthIfFrameOwnerConfigRef</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">Frame Owner Reference</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">Reference to the frame owner to assign the Transceiver Link State Change  function.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/EthIf/EthIfConfigSet/EthIfFrameOwnerConfig</DESTINATION-REF>
+										</ECUC-REFERENCE-DEF>
+									</REFERENCES>
+								</ECUC-PARAM-CONF-CONTAINER-DEF>
+								<ECUC-PARAM-CONF-CONTAINER-DEF UUID="1b5a1669-6466-432a-ac42-00e6581e3ff7">
+									<SHORT-NAME>EthIfTxConfirmationConfig</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">These containers include the configuration of transmit indication callback functions.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:postBuildSelectableChangeable">false</SD>
+												<SD GID="DV:postBuildNotDeletable">false</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+									<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+									<PARAMETERS>
+										<ECUC-FUNCTION-NAME-DEF UUID="4ab89911-d038-4e86-921b-7db0b81886db">
+											<SHORT-NAME>EthIfTxConfirmationFunction</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">Tx Confirmation</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter defines the name of a transmit indication callback function.
+
+The prototype of the function is as specified as followed:
+void &lt;User&gt;_TxConfirmation(uint8 EthIfCtrlIdx, uint8 BufferIdx);</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="MSR:Process">
+														<SD GID="MSR:TraceRef">SPEC-2393709,SPEC-2393678</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<ECUC-FUNCTION-NAME-DEF-VARIANTS>
+												<ECUC-FUNCTION-NAME-DEF-CONDITIONAL>
+													<DEFAULT-VALUE>Msn_TxConfirmation</DEFAULT-VALUE>
+												</ECUC-FUNCTION-NAME-DEF-CONDITIONAL>
+											</ECUC-FUNCTION-NAME-DEF-VARIANTS>
+										</ECUC-FUNCTION-NAME-DEF>
+									</PARAMETERS>
+									<REFERENCES>
+										<ECUC-REFERENCE-DEF UUID="e73e8f7b-a967-4b6e-9cf9-77c007caa260">
+											<SHORT-NAME>EthIfFrameOwnerConfigRef</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">Frame Owner Reference</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">Reference to the frame owner to assign the TxConfirmation  function.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/EthIf/EthIfConfigSet/EthIfFrameOwnerConfig</DESTINATION-REF>
+										</ECUC-REFERENCE-DEF>
+									</REFERENCES>
+								</ECUC-PARAM-CONF-CONTAINER-DEF>
+								<ECUC-PARAM-CONF-CONTAINER-DEF UUID="c519c5c3-3591-4144-9e50-ac6cb675e7c5">
+									<SHORT-NAME>EthIfController</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">These containers include the configuration of virtual controllers. A virtual controller either directly references a physical controller or points to a VLAN that is mapped onto a physical controller. An EthIfController is used by the upper layers to send and receive frames of a certain VLAN or frames that aren't VLAN-tagged.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:postBuildSelectableChangeable">false</SD>
+												<SD GID="DV:postBuildNotDeletable">false</SD>
+											</SDG>
+											<SDG GID="MSR:Process">
+												<SD GID="MSR:TraceRef">SPEC-2393710</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+									<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+									<PARAMETERS>
+										<ECUC-INTEGER-PARAM-DEF UUID="6f45e9b4-afca-495a-8e15-aaec09329508">
+											<SHORT-NAME>EthIfCtrlIdx</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter provides a zero-based consecutive index of the Ethernet Communication Controllers. Upper layer BSW modules and the EthIf itself use this index to identify an Ethernet Interface Controller.</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="MSR:Process">
+														<SD GID="MSR:TraceRef">SPEC-2393711</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>0</DEFAULT-VALUE>
+											<MAX>255</MAX>
+											<MIN>0</MIN>
+										</ECUC-INTEGER-PARAM-DEF>
+										<ECUC-BOOLEAN-PARAM-DEF UUID="6d8dccf6-7097-443d-a4d8-03ae1198d338">
+											<SHORT-NAME>EthIfEnableVLAN</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter defines if the virtual controller is mapped to a VLAN.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>false</DEFAULT-VALUE>
+										</ECUC-BOOLEAN-PARAM-DEF>
+										<ECUC-INTEGER-PARAM-DEF UUID="94434425-04ee-4762-9fbc-9e3776562077">
+											<SHORT-NAME>EthIfVlanId</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">This value specifies a 12 bit VLAN identifier according to IEEE 802.1Q. Only values between 0x000 and 0xffe are valid. All other values are reserved or invalid.
+When VID equals 0x000, the transmitted frames does not belong to any VLAN. The VLAN tag of the transmitted frames only specifies the priority. The receive behavior of a VLAN with VID=0x000 is the same to the behavior of a physical controller. All frames without any VLAN tag or with VID=0x000 are received.</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:Display">
+														<SD GID="DV:DefaultFormat">HEX</SD>
+													</SDG>
+													<SDG GID="MSR:Process">
+														<SD GID="MSR:TraceRef">SPEC-2393713</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>0</DEFAULT-VALUE>
+											<MAX>4095</MAX>
+											<MIN>0</MIN>
+										</ECUC-INTEGER-PARAM-DEF>
+										<ECUC-INTEGER-PARAM-DEF UUID="98bea7bc-5958-4260-be43-619bf45619ab">
+											<SHORT-NAME>EthIfCtrlMtu</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">This value specifies the maximum transmission unit (MTU) of the EthIfController in bytes. The MTU defines the maximum frame size that can be transmitted on the network.
+Note: In case a VLAN tag is used for the EthIfCtrl, the MTU is 4 bytes smaller than the maximum buffer size configured within the Eth module.</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:Display">
+														<SD GID="DV:BaseUnit">BYTE</SD>
+													</SDG>
+													<SDG GID="MSR:Process">
+														<SD GID="MSR:TraceRef">SPEC-2393712</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>1500</DEFAULT-VALUE>
+											<MAX>9000</MAX>
+											<MIN>46</MIN>
+										</ECUC-INTEGER-PARAM-DEF>
+										<ECUC-BOOLEAN-PARAM-DEF UUID="ae13be4c-c865-4dca-a1d9-96ec7fa02660">
+											<SHORT-NAME>EthIfEnableLaxLinkAggregation</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">Enable Lax Link Aggregation</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter defines if Lax Link Aggregation for this EthIf Controller is enabled/disabled.
+
+Unaivailable/Disabled:
+The link for this EthIf Controller is aggregated by retrieving the link information of all switch ports configured in the referenced Hardware Configuration. Only if all of the ports have established a link the EthIf Controller issues also a link to its upper layers.
+
+Enabled:
+The link for the EthIf Controller is aggregated by retrieving the link of all switch ports configured in the reference Hardware Configuration. However the EthIf Controller now issues a link to its upper layers when at least two ports have a link established.
+
+Restriction:
+This parameter is only available if the underlying hardware mapped to this EthIf Controller is a Hardware Configuration containing a switch and its ports.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>false</DEFAULT-VALUE>
+										</ECUC-BOOLEAN-PARAM-DEF>
+									</PARAMETERS>
+									<REFERENCES>
+										<ECUC-SYMBOLIC-NAME-REFERENCE-DEF UUID="5ba040f8-f16d-4294-8a83-3aac96a06c17">
+											<SHORT-NAME>EthIfPhysControllerRef</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">Physical Eth Controller</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">Reference to the Ethernet controller used for sending/receiving Ethernet frames and controlled by the EthIf mode management.</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="MSR:Process">
+														<SD GID="MSR:TraceRef">SPEC-2393714</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Eth/EthConfigSet/EthCtrlConfig</DESTINATION-REF>
+										</ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+										<ECUC-SYMBOLIC-NAME-REFERENCE-DEF UUID="8cd613d2-454c-44ac-bc8b-38c82db000e9">
+											<SHORT-NAME>EthIfTransceiverRef</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">Eth Transceiver</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">Reference to the Ethernet transceiver used to retrieve the link state and controlled by the EthIf mode management.</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="MSR:Process">
+														<SD GID="MSR:TraceRef">SPEC-2393715</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EthTrcv/EthTrcvConfigSet/EthTrcvConfig</DESTINATION-REF>
+										</ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+										<ECUC-SYMBOLIC-NAME-REFERENCE-DEF UUID="e97f73cf-6ce9-4c86-b2bc-87e2eb41d669">
+											<SHORT-NAME>EthIfSwitchRef</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">Eth Switch</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">Reference to the Ethernet switch controlled by the EthIf mode management.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/EthIf/EthIfConfigSet/EthIfSwitch</DESTINATION-REF>
+										</ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+										<ECUC-SYMBOLIC-NAME-REFERENCE-DEF UUID="60a35d6d-1759-4960-abf6-b848cd924052">
+											<SHORT-NAME>EthIfSwitchPortGroupRef</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">Eth Switch Port Group</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">Reference to the EthIf switch port group used to retrieve the link state and controlled by the EthIf mode management.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/EthIf/EthIfConfigSet/EthIfSwitchPortGroup</DESTINATION-REF>
+										</ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+									</REFERENCES>
+								</ECUC-PARAM-CONF-CONTAINER-DEF>
+								<ECUC-PARAM-CONF-CONTAINER-DEF UUID="0bccae29-326e-4940-9b8f-2ad9e756a0ab">
+									<SHORT-NAME>EthIfBufFilterConfig</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This container includes buffer filter rules. A buffer filter rules defines if a reception buffers must be explicitly unlocked by upper layers or not. Explicitly unlocking reception buffers may be necessary to implement zero-copy concepts. By default unlocking of the reception buffers is implicitly done right after the receive indication callback method.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:postBuildSelectableChangeable">false</SD>
+												<SD GID="DV:postBuildNotDeletable">false</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+									<SUB-CONTAINERS>
+										<ECUC-PARAM-CONF-CONTAINER-DEF UUID="4376f802-da45-4b7c-886f-011ebe0c4462">
+											<SHORT-NAME>EthIfVlanFilterConfig</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">VLAN Filter Configuration</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">These containers include buffer filter rules depending on the VLAN ID of an Ethernet frame.
+As far as a filter rule for a specific VLAN ID exists, the buffer must be explicitly unlocked when the VLAN ID of the Ethernet frame matches.</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:CfgPostBuild">
+														<SD GID="DV:postBuildSelectableChangeable">false</SD>
+														<SD GID="DV:postBuildNotDeletable">false</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>255</UPPER-MULTIPLICITY>
+											<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+											<REFERENCES>
+												<ECUC-REFERENCE-DEF UUID="cc352c8b-c147-4999-aacf-0516fc34d5f2">
+													<SHORT-NAME>EthIfControllerRef</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Controller Reference</L-4>
+													</LONG-NAME>
+													<DESC>
+														<L-2 L="EN">Reference to the EthIfController associated with the VLAN that the filter rule shall be applied to.</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/EthIf/EthIfConfigSet/EthIfController</DESTINATION-REF>
+												</ECUC-REFERENCE-DEF>
+											</REFERENCES>
+										</ECUC-PARAM-CONF-CONTAINER-DEF>
+										<ECUC-PARAM-CONF-CONTAINER-DEF UUID="b94fa383-e5f2-438b-afd6-6e996fa69ae0">
+											<SHORT-NAME>EthIfEthTypeFilterConfig</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">Ethertype Filter Configuration</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">These containers include buffer filter rules depending on the Ethertype of an Ethernet frame.
+As far as a filter rule for a specific Ethertype AND VLAN exists, the buffer must be explicitly unlocked when the Ethertype of the Ethernet frame matches.</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:CfgPostBuild">
+														<SD GID="DV:postBuildSelectableChangeable">false</SD>
+														<SD GID="DV:postBuildNotDeletable">false</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>255</UPPER-MULTIPLICITY>
+											<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+											<REFERENCES>
+												<ECUC-REFERENCE-DEF UUID="8583708a-2682-4907-bc7f-25bbc9cf5949">
+													<SHORT-NAME>EthIfFrameOwnerConfigRef</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Frame Owner Reference</L-4>
+													</LONG-NAME>
+													<DESC>
+														<L-2 L="EN">Reference to the frame owner containing the Ethertype to be filtered.</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/EthIf/EthIfConfigSet/EthIfFrameOwnerConfig</DESTINATION-REF>
+												</ECUC-REFERENCE-DEF>
+												<ECUC-REFERENCE-DEF UUID="e6cc0313-7e43-47cc-8256-51b7b14ce3a9">
+													<SHORT-NAME>EthIfControllerRef</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Controller Reference</L-4>
+													</LONG-NAME>
+													<DESC>
+														<L-2 L="EN">Reference to the EthIfController associated with the VLAN that the filter rule shall be applied to.</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/EthIf/EthIfConfigSet/EthIfController</DESTINATION-REF>
+												</ECUC-REFERENCE-DEF>
+											</REFERENCES>
+										</ECUC-PARAM-CONF-CONTAINER-DEF>
+									</SUB-CONTAINERS>
+								</ECUC-PARAM-CONF-CONTAINER-DEF>
+								<ECUC-PARAM-CONF-CONTAINER-DEF UUID="f05282ff-34c0-4432-8112-a6fe901b5411">
+									<SHORT-NAME>EthIfSwitch</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This container is used to globally index all hardware switches that are used by the Ethernet Interface. The index may be used by upper layers like the DHCP server component as a unique identifier when calling a Ethernet Interface API. Besides the global index a reference to a hardware switch configuration container resides in this container.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:postBuildSelectableChangeable">false</SD>
+												<SD GID="DV:postBuildNotDeletable">false</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+									<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+									<PARAMETERS>
+										<ECUC-INTEGER-PARAM-DEF UUID="c71743f3-abe1-4df8-bf94-bb2248e766f9">
+											<SHORT-NAME>EthIfSwitchIndex</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">EthIf Ethernet Switch Index</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">This value specifies a globally unique index for each hardware Ethernet Switch that is used by the Ethernet Interface. The index is zero-based and incremented by one for each hardware switch.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>0</DEFAULT-VALUE>
+											<MAX>255</MAX>
+											<MIN>0</MIN>
+										</ECUC-INTEGER-PARAM-DEF>
+									</PARAMETERS>
+									<REFERENCES>
+										<ECUC-SYMBOLIC-NAME-REFERENCE-DEF UUID="041f35f5-a94e-4247-9fa7-773599508801">
+											<SHORT-NAME>EthIfEthSwtRef</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">Ethernet Switch Reference</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">Reference to a Ethernet Switch configuration container.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EthSwt/EthSwtConfig</DESTINATION-REF>
+										</ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+									</REFERENCES>
+								</ECUC-PARAM-CONF-CONTAINER-DEF>
+								<ECUC-PARAM-CONF-CONTAINER-DEF UUID="f55e997f-f95b-4505-8664-a8ece30c93a3">
+									<SHORT-NAME>EthIfWakeupMap</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This container includes the mapping of EcuM wakeup sources to corresponding hardware drivers for wakeup check.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:postBuildSelectableChangeable">false</SD>
+												<SD GID="DV:postBuildNotDeletable">false</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+									<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+									<REFERENCES>
+										<ECUC-SYMBOLIC-NAME-REFERENCE-DEF UUID="558cf429-c10a-4ebe-b5b2-585c48d81e72">
+											<SHORT-NAME>EthIfEcuMWakeupSourceRef</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Reference to an EcuM wakeup source that is used during wakeup check for calling EthIf_CheckWakeup() API.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuM/EcuMConfiguration/EcuMCommonConfiguration/EcuMWakeupSource</DESTINATION-REF>
+										</ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+										<ECUC-SYMBOLIC-NAME-REFERENCE-DEF UUID="69b24705-dc47-403c-9ce8-48553a173a68">
+											<SHORT-NAME>EthIfEthTrcvRef</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Reference to an Ethernet transceiver which is invoked in the wakeup check if the related EcuM wakeup reason is passed to EthIf.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EthTrcv/EthTrcvConfigSet/EthTrcvConfig</DESTINATION-REF>
+										</ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+									</REFERENCES>
+								</ECUC-PARAM-CONF-CONTAINER-DEF>
+								<ECUC-CHOICE-CONTAINER-DEF UUID="b5fc5d24-1321-414d-b010-f4ee6a768a33">
+									<SHORT-NAME>EthIfExtendedTrafficHandling</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This choice container specifies which extended frame handling feature shall be applied.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:postBuildSelectableChangeable">false</SD>
+												<SD GID="DV:postBuildNotDeletable">false</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+									<CHOICES>
+										<ECUC-PARAM-CONF-CONTAINER-DEF UUID="dab5f7f2-298d-4d31-a97f-8b623deeaef7">
+											<SHORT-NAME>EthIfTrafficMirroring</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">This container includes the general configuration elements and sub containers of the traffic mirroring feature.</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:CfgPostBuild">
+														<SD GID="DV:postBuildSelectableChangeable">false</SD>
+														<SD GID="DV:postBuildNotDeletable">false</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+											<PARAMETERS>
+												<ECUC-INTEGER-PARAM-DEF UUID="eb8462fe-6d20-484d-ab8b-8b1c8c503a8b">
+													<SHORT-NAME>EthIfMaxParallelTxTrafficFrames</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Max Parallel Tx Traffic Frames</L-4>
+													</LONG-NAME>
+													<DESC>
+														<L-2 L="EN">This value defines how many parallel Tx traffic frames can be handled by traffic mirroring.</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>2</DEFAULT-VALUE>
+													<MAX>65535</MAX>
+													<MIN>1</MIN>
+												</ECUC-INTEGER-PARAM-DEF>
+											</PARAMETERS>
+											<SUB-CONTAINERS>
+												<ECUC-PARAM-CONF-CONTAINER-DEF UUID="69770558-9a36-4af1-8a10-ed9cc2c32cff">
+													<SHORT-NAME>EthIfMirroringMap</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">This container contains the configuration elements for one mirroring map.</L-2>
+													</DESC>
+													<ADMIN-DATA>
+														<SDGS>
+															<SDG GID="DV:CfgPostBuild">
+																<SD GID="DV:postBuildSelectableChangeable">false</SD>
+																<SD GID="DV:postBuildNotDeletable">false</SD>
+															</SDG>
+														</SDGS>
+													</ADMIN-DATA>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+													<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+													<PARAMETERS>
+														<ECUC-BOOLEAN-PARAM-DEF UUID="a9566999-7daf-455c-a63a-eaa3c5e58bed">
+															<SHORT-NAME>EthIfKeepOrgSrcMac</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">Keep original Source MAC</L-4>
+															</LONG-NAME>
+															<DESC>
+																<L-2 L="EN">This parameter defines if the original Source MAC of the frame mirrored is keept or substituted on the destination interface.
+
+True:
+Source MAC address of frame to be mirrored is kept for frame mirrored on the Ethernet Controller referenced by "EthIfDestEthCtrlRef".
+
+False:
+Source MAC address of frame to be mirrored is replaced by the source MAC address of the Ethernet Controller referenced by "EthIfDestEthCtrlRef".</L-2>
+															</DESC>
+															<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+															<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+															<IMPLEMENTATION-CONFIG-CLASSES>
+																<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															</IMPLEMENTATION-CONFIG-CLASSES>
+															<ORIGIN>Vector Informatik</ORIGIN>
+															<REQUIRES-INDEX>false</REQUIRES-INDEX>
+															<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+															<DEFAULT-VALUE>true</DEFAULT-VALUE>
+														</ECUC-BOOLEAN-PARAM-DEF>
+													</PARAMETERS>
+													<REFERENCES>
+														<ECUC-SYMBOLIC-NAME-REFERENCE-DEF UUID="be09c572-3177-4785-be4a-8026cdc88b01">
+															<SHORT-NAME>EthIfDestEthCtrlRef</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">Destination Eth Controller</L-4>
+															</LONG-NAME>
+															<DESC>
+																<L-2 L="EN">Reference to the Ethernet Controller the traffic shall be mirrored to.</L-2>
+															</DESC>
+															<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+															<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+															<IMPLEMENTATION-CONFIG-CLASSES>
+																<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															</IMPLEMENTATION-CONFIG-CLASSES>
+															<ORIGIN>Vector Informatik</ORIGIN>
+															<REQUIRES-INDEX>false</REQUIRES-INDEX>
+															<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Eth/EthConfigSet/EthCtrlConfig</DESTINATION-REF>
+														</ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+														<ECUC-SYMBOLIC-NAME-REFERENCE-DEF UUID="d645eda6-7305-4d0d-aa9f-958db38fbc31">
+															<SHORT-NAME>EthIfTxSourceEthIfCtrlRef</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">Tx Source EthIf Controller</L-4>
+															</LONG-NAME>
+															<DESC>
+																<L-2 L="EN">Reference to the Ethernet Interface Controller whose Tx traffic shall be mirrored.</L-2>
+															</DESC>
+															<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+															<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+															<IMPLEMENTATION-CONFIG-CLASSES>
+																<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															</IMPLEMENTATION-CONFIG-CLASSES>
+															<ORIGIN>Vector Informatik</ORIGIN>
+															<REQUIRES-INDEX>false</REQUIRES-INDEX>
+															<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/EthIf/EthIfConfigSet/EthIfController</DESTINATION-REF>
+														</ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+														<ECUC-SYMBOLIC-NAME-REFERENCE-DEF UUID="04963cc1-20f2-4c1b-a811-33c74e1d5b3f">
+															<SHORT-NAME>EthIfRxSourceEthIfCtrlRef</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">Rx Source EthIf Controller</L-4>
+															</LONG-NAME>
+															<DESC>
+																<L-2 L="EN">Reference to the Ethernet Interface Controller whose Rx traffic shall be mirrored.</L-2>
+															</DESC>
+															<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+															<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+															<IMPLEMENTATION-CONFIG-CLASSES>
+																<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															</IMPLEMENTATION-CONFIG-CLASSES>
+															<ORIGIN>Vector Informatik</ORIGIN>
+															<REQUIRES-INDEX>false</REQUIRES-INDEX>
+															<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/EthIf/EthIfConfigSet/EthIfController</DESTINATION-REF>
+														</ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+													</REFERENCES>
+												</ECUC-PARAM-CONF-CONTAINER-DEF>
+											</SUB-CONTAINERS>
+										</ECUC-PARAM-CONF-CONTAINER-DEF>
+										<ECUC-PARAM-CONF-CONTAINER-DEF UUID="cf46c448-bc52-4ebf-bac7-ece1262db889">
+											<SHORT-NAME>EthIfTrafficGateway</SHORT-NAME>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:CfgPostBuild">
+														<SD GID="DV:postBuildSelectableChangeable">false</SD>
+														<SD GID="DV:postBuildNotDeletable">false</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+											<PARAMETERS>
+												<ECUC-STRING-PARAM-DEF UUID="ba4ccab0-9713-4783-be45-4997624dafb1">
+													<SHORT-NAME>EthIfSrcMacBlackListEntry</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Black List Source MAC address</L-4>
+													</LONG-NAME>
+													<DESC>
+														<L-2 L="EN">This parameter defines an entry for the source MAC address list of the traffic gateway.
+
+Ethernet frames containing the MAC address as source address will be ignored for traffic gateway.</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+												</ECUC-STRING-PARAM-DEF>
+											</PARAMETERS>
+											<SUB-CONTAINERS>
+												<ECUC-PARAM-CONF-CONTAINER-DEF UUID="11f592f6-3dfc-4b0f-9dc2-e5f850eb2a5f">
+													<SHORT-NAME>EthIfTrafficGatewayRoute</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">This container containes two Ethernet Interface Controller references which reference the controllers involved in the gateway route.</L-2>
+													</DESC>
+													<ADMIN-DATA>
+														<SDGS>
+															<SDG GID="DV:CfgPostBuild">
+																<SD GID="DV:postBuildSelectableChangeable">false</SD>
+																<SD GID="DV:postBuildNotDeletable">false</SD>
+															</SDG>
+														</SDGS>
+													</ADMIN-DATA>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+													<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+													<REFERENCES>
+														<ECUC-SYMBOLIC-NAME-REFERENCE-DEF UUID="fcce7bd6-ecbe-48c9-91b1-74dd14d34f84">
+															<SHORT-NAME>EthIfRouteEthIfCtrlRef</SHORT-NAME>
+															<DESC>
+																<L-2 L="EN">Reference to the Ethernet Interface Controller participating in the traffic gateway route.</L-2>
+															</DESC>
+															<LOWER-MULTIPLICITY>2</LOWER-MULTIPLICITY>
+															<UPPER-MULTIPLICITY>2</UPPER-MULTIPLICITY>
+															<IMPLEMENTATION-CONFIG-CLASSES>
+																<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															</IMPLEMENTATION-CONFIG-CLASSES>
+															<ORIGIN>Vector Informatik</ORIGIN>
+															<REQUIRES-INDEX>false</REQUIRES-INDEX>
+															<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/EthIf/EthIfConfigSet/EthIfController</DESTINATION-REF>
+														</ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+													</REFERENCES>
+												</ECUC-PARAM-CONF-CONTAINER-DEF>
+											</SUB-CONTAINERS>
+										</ECUC-PARAM-CONF-CONTAINER-DEF>
+									</CHOICES>
+								</ECUC-CHOICE-CONTAINER-DEF>
+								<ECUC-PARAM-CONF-CONTAINER-DEF UUID="c293dd77-474d-4bee-b132-74f57e21fdff">
+									<SHORT-NAME>EthIfSwitchMgmtInfoIndicationConfig</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This container contains all needed configuration elements needed for ingress switch management frame indication processing</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:postBuildSelectableChangeable">false</SD>
+												<SD GID="DV:postBuildNotDeletable">false</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+									<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+									<PARAMETERS>
+										<ECUC-FUNCTION-NAME-DEF UUID="069532a5-25a7-4df8-9c89-d375f3efe734">
+											<SHORT-NAME>EthIfSwitchMgmtInfoIndicationFunction</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">Switch Managment Info Indication</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter defines the function to be called if ingress switch management information shall be indicated.
+
+The prototype of the function is as specified as followed:
+void &lt;User&gt;_SwitchMgmtInfoIndication(uint8 EthIfCtrlIdx, EthSwt_MgmtInfoType *MgmtInfo);</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<ECUC-FUNCTION-NAME-DEF-VARIANTS>
+												<ECUC-FUNCTION-NAME-DEF-CONDITIONAL>
+													<DEFAULT-VALUE>Msn_SwitchMgmtInfoIndication</DEFAULT-VALUE>
+												</ECUC-FUNCTION-NAME-DEF-CONDITIONAL>
+											</ECUC-FUNCTION-NAME-DEF-VARIANTS>
+										</ECUC-FUNCTION-NAME-DEF>
+									</PARAMETERS>
+									<REFERENCES>
+										<ECUC-REFERENCE-DEF UUID="66538d3f-2bbc-4d3c-aaf9-c826d81dc878">
+											<SHORT-NAME>EthIfFrameOwnerConfigRef</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">Frame Owner Reference</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">Reference to the frame owner to assign the Ingress Switch Management Info Indication  function.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/EthIf/EthIfConfigSet/EthIfFrameOwnerConfig</DESTINATION-REF>
+										</ECUC-REFERENCE-DEF>
+									</REFERENCES>
+								</ECUC-PARAM-CONF-CONTAINER-DEF>
+								<ECUC-PARAM-CONF-CONTAINER-DEF UUID="e86c4836-18db-487b-be2a-22677f7bd7eb">
+									<SHORT-NAME>EthIfSwitchTimeStampIndicationConfig</SHORT-NAME>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:postBuildSelectableChangeable">false</SD>
+												<SD GID="DV:postBuildNotDeletable">false</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+									<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+									<PARAMETERS>
+										<ECUC-FUNCTION-NAME-DEF UUID="8a12488f-dfc3-4c73-9cb4-c782c41f6ed4">
+											<SHORT-NAME>EthIfSwitchEgressTimeStampIndicationFunction</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">Switch Egress Time Stamp Indication</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter defines the function to be called if egress time stamp information shall be indicated.
+
+The prototype of the function is as specified as followed:
+void &lt;User&gt;_SwitchEgressTimeStampIndication(uint8 EthIfCtrlIdx, EthSwt_SwitchManagementInfoType *MgmtInfo, Eth_TimeStampType *TimeStamp);</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<ECUC-FUNCTION-NAME-DEF-VARIANTS>
+												<ECUC-FUNCTION-NAME-DEF-CONDITIONAL>
+													<DEFAULT-VALUE>Msn_EgressTimeStampIndication</DEFAULT-VALUE>
+												</ECUC-FUNCTION-NAME-DEF-CONDITIONAL>
+											</ECUC-FUNCTION-NAME-DEF-VARIANTS>
+										</ECUC-FUNCTION-NAME-DEF>
+										<ECUC-FUNCTION-NAME-DEF UUID="2708633a-6953-4183-a555-716ee0ce8e9c">
+											<SHORT-NAME>EthIfSwitchIngressTimeStampIndicationFunction</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">Switch Ingress Time Stamp Indication</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter defines the function to be called if ingress time stamp information shall be indicated.
+
+The prototype of the function is as specified as followed:
+void &lt;User&gt;_SwitchIngressTimeStampIndication(uint8 EthIfCtrlIdx, EthSwt_SwitchManagementInfoType *MgmtInfo, Eth_TimeStampType *TimeStamp);</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<ECUC-FUNCTION-NAME-DEF-VARIANTS>
+												<ECUC-FUNCTION-NAME-DEF-CONDITIONAL>
+													<DEFAULT-VALUE>Msn_IngressTimeStampIndication</DEFAULT-VALUE>
+												</ECUC-FUNCTION-NAME-DEF-CONDITIONAL>
+											</ECUC-FUNCTION-NAME-DEF-VARIANTS>
+										</ECUC-FUNCTION-NAME-DEF>
+									</PARAMETERS>
+									<REFERENCES>
+										<ECUC-REFERENCE-DEF UUID="d98fbe86-b9fd-471f-904c-5e058d53451a">
+											<SHORT-NAME>EthIfFrameOwnerConfigRef</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">Frame Owner Reference</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">Reference to the frame owner to assign the Ingress Switch Management Info Indication  function.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/EthIf/EthIfConfigSet/EthIfFrameOwnerConfig</DESTINATION-REF>
+										</ECUC-REFERENCE-DEF>
+									</REFERENCES>
+								</ECUC-PARAM-CONF-CONTAINER-DEF>
+								<ECUC-PARAM-CONF-CONTAINER-DEF UUID="b58d0d5e-26d3-42c4-be91-6ab74640ac02">
+									<SHORT-NAME>EthIfSwitchPortGroup</SHORT-NAME>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:postBuildSelectableChangeable">false</SD>
+												<SD GID="DV:postBuildNotDeletable">false</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+									<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+									<PARAMETERS>
+										<ECUC-ENUMERATION-PARAM-DEF UUID="5fc966b1-74bb-4938-9f75-40e1acf60928">
+											<SHORT-NAME>EthIfSwitchPortGroupSemantics</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">Port Group Semantic</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter defines the semantics of the port group.
+
+Not existing:
+Port group is handled by BswM
+- mode control with EthIf_SwitchPortGroupRequestMode()
+- link indication to BswM_EthIf_PortGroupLinkStateChg()
+
+Existing:
+Port group is handled by EthIf dependent on the selected semantic
+
+ETHIF_SWITCH_PORT_GROUP_CONTROL:
+EthIf requests mode changes for the ports in the port group and uses the link state to define a link for the EthIf controller using the port group.
+
+ETHIF_SWITCH_PORT_GROUP_LINK_INFO:
+EthIf doesn't request mode changes for the ports but only uses the link state to define a link for the EthIf controller using the port group.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>ETHIF_SWITCH_PORT_GROUP_CONTROL</DEFAULT-VALUE>
+											<LITERALS>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="992ff902-4f2f-4760-a94e-300c8a8a0d1a">
+													<SHORT-NAME>ETHIF_SWITCH_PORT_GROUP_CONTROL</SHORT-NAME>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="0042b2e8-cbd3-4d7f-a8b3-c486436da9c0">
+													<SHORT-NAME>ETHIF_SWITCH_PORT_GROUP_LINK_INFO</SHORT-NAME>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+											</LITERALS>
+										</ECUC-ENUMERATION-PARAM-DEF>
+										<ECUC-INTEGER-PARAM-DEF UUID="0edff56d-0ed7-4d38-91ac-66bc9f8a4e3f">
+											<SHORT-NAME>EthIfSwitchPortGroupIdx</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">Switch Port Group Idx</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter defines the value of the symbolic name representing this switch port group.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>0</DEFAULT-VALUE>
+											<MAX>65535</MAX>
+											<MIN>0</MIN>
+										</ECUC-INTEGER-PARAM-DEF>
+									</PARAMETERS>
+									<REFERENCES>
+										<ECUC-SYMBOLIC-NAME-REFERENCE-DEF UUID="4a1ff3ad-7f51-4367-aad4-d95bc97dedff">
+											<SHORT-NAME>EthIfSwitchPortGroupPortRef</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">Switch Port</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">Reference to an Ethernet switch port that shall be managed by the switch port group.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EthSwt/EthSwtConfig/EthSwtPort</DESTINATION-REF>
+										</ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+									</REFERENCES>
+								</ECUC-PARAM-CONF-CONTAINER-DEF>
+							</SUB-CONTAINERS>
+						</ECUC-PARAM-CONF-CONTAINER-DEF>
+						<ECUC-PARAM-CONF-CONTAINER-DEF UUID="4ba794dd-6a8d-416a-9c88-745af511968d">
+							<SHORT-NAME>EthIfGeneral</SHORT-NAME>
+							<DESC>
+								<L-2 L="EN">General configuration parameters of the EthIf</L-2>
+							</DESC>
+							<ADMIN-DATA>
+								<SDGS>
+									<SDG GID="DV:CfgPostBuild">
+										<SD GID="DV:postBuildSelectableChangeable">false</SD>
+										<SD GID="DV:postBuildNotDeletable">false</SD>
+									</SDG>
+									<SDG GID="MSR:Process">
+										<SD GID="MSR:TraceRef">SPEC-2393684</SD>
+									</SDG>
+								</SDGS>
+							</ADMIN-DATA>
+							<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+							<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+							<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+							<PARAMETERS>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="d96e7397-d399-4538-9fed-276efa818f55">
+									<SHORT-NAME>EthIfDevErrorDetect</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Dev Error Detect</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter switches the Development Error Detection and Notification ON or OFF.
+true:	Development error detection is enabled.
+false:	Development error detection is disabled.
+
+Note: In general, the development error detection is recommended during pre-test phase. It is not recommended to enable the development error detection in production code due to increased runtime and ROM needs.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="MSR:Process">
+												<SD GID="MSR:TraceRef">SPEC-2393685</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>true</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="d09755ef-e386-43de-8839-5ec92f46069a">
+									<SHORT-NAME>EthIfEnableRxInterrupt</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Enable Rx Interrupt</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter defines if the interrupt mode is used by Ethernet interface to receive data. In interrupt mode the reception of a frame is immediately indicated to the upper modules within an interrupt context. If interrupt mode is disabled, the EthIf polls the uderlaying hardware to receive the data.
+
+RESTRICTIONS: 'EthIfEnableRxInterrupt' needs to be set corresponding to Ethernet Drivers 'EthEnableRxInterrupt'.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="MSR:Process">
+												<SD GID="MSR:TraceRef">SPEC-2393686</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>true</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="76c75539-c3fe-4b76-abd4-7c7a48f1f5fc">
+									<SHORT-NAME>EthIfEnableTxInterrupt</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Enable Tx Interrupt</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter defines if the interrupt mode is used by Ethernet interface to send data. In interrupt mode the transmission confirmation is triggered within the interrupt context immediately after frame transmission. If interrupt mode is disabled, the transmission confirmation is triggered when the EthIf polls the Eth module within its EthIf_MainFunctionTx function. The MainFunction is scheduled by the RTE.
+
+RESTRICTIONS: 'EthIfEnableTxInterrupt' needs to be set corresponding to Ethernet Drivers 'EthEnableTxInterrupt'</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="MSR:Process">
+												<SD GID="MSR:TraceRef">SPEC-2393687</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>true</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-INTEGER-PARAM-DEF UUID="effb733f-f98b-4269-823f-8c3837ba911f">
+									<SHORT-NAME>EthIfMaxTrcvsTotal</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Max Trcvs Total</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">This value specifies the the maximum number of transceivers. This value is not relevant to the user since it is only used for internal DET checks.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="MSR:Process">
+												<SD GID="MSR:TraceRef">SPEC-2393690</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>1</DEFAULT-VALUE>
+									<MAX>255</MAX>
+									<MIN>1</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<ECUC-INTEGER-PARAM-DEF UUID="20ef27e2-97f0-48ed-a93f-d6a336a5c2a8">
+									<SHORT-NAME>EthIfMaxTxBufsTotal</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Max Tx Bufs Total</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">This value specifies the maximum number of transmit buffers.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="MSR:Process">
+												<SD GID="MSR:TraceRef">SPEC-2393691</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>10</DEFAULT-VALUE>
+									<MAX>255</MAX>
+									<MIN>1</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<ECUC-INTEGER-PARAM-DEF UUID="28fac000-6d2b-40cb-b58d-96a0a2d00a9c">
+									<SHORT-NAME>EthIfTrcvLinkStateChgMainReload</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Trcv Link State Chg Main Reload</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">This value specifies the frequency of transceiver link state change checks in each period of main function EthIf_MainFunction. The period determines the maximum latency of detecting the transceiver link as beeing ACTIVE or DOWN.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="MSR:Process">
+												<SD GID="MSR:TraceRef">SPEC-2393694</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>5</DEFAULT-VALUE>
+									<MAX>255</MAX>
+									<MIN>1</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="b15491ae-c330-4d94-9ad3-4918fe6cc6d2">
+									<SHORT-NAME>EthIfVersionInfoApi</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Version Info API</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter enables/disables the function EthIf_GetVersionInfo() to get major, minor and patch version information.
+This parameter enables/disables the function EthIf_GetVersionInfo() to get major, minor and patch version information.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="MSR:Process">
+												<SD GID="MSR:TraceRef">SPEC-2393695</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="90a39e3c-4c61-4c29-82f1-292205212a45">
+									<SHORT-NAME>EthIfVersionInfoApiMacro</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Version Info API Macro</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter defines if EthIf_GetVersionInfo() is implemented as a macro.
+
+RESTRICTIONS: 'EthIfVersionInfoApiMacro' is only relevant, if 'EthIfVersionInfoApi' is set to 'true'.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="MSR:Process">
+												<SD GID="MSR:TraceRef">SPEC-2393696</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-STRING-PARAM-DEF UUID="582a8504-015a-4322-a2b2-a09762fd0972">
+									<SHORT-NAME>EthIfUserConfigFile</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">User Config File</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">Reference to an external text file that will be included during generation to EthIf_Cfg.h.
+The content of the user configuration file will be added at the end of the generated module configuration file and allows altering or extending the generated code.
+Caution: User configuration files can cause the software module to malfunction and must only be used with great care!
+</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+								</ECUC-STRING-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="ce3fde1b-e010-41b1-aaae-e0fb350b24d1">
+									<SHORT-NAME>EthIfEnableMainFunctionState</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Enable Main Function State</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter defines if a separate main function for transceiver link state supervision is used. Instead of polling the link within the EthIf_MainFunctionTx function (as specified in Autosar), the link is polled with the function EthIf_MainFunctionState. This function is called by the RTE scheduler directly. Instead of checking that the EthIfLinkStateChgMainReload counter in each period of the EthIf_MainFunctionTx state reaches zero, the scheduler already calls the EthIf_MainFunctionState with the proper period.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>true</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-FLOAT-PARAM-DEF UUID="5164e086-8d8d-424e-bc4f-3812a8755f25">
+									<SHORT-NAME>EthIfMainFunctionPeriod</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This value specifies the the cycle time at which the EthIf_MainFunctionCyclic() is called.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:BaseUnit">SEC</SD>
+											</SDG>
+											<SDG GID="MSR:Process">
+												<SD GID="MSR:TraceRef">SPEC-2393688</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>0.005</DEFAULT-VALUE>
+									<MAX>32.767</MAX>
+									<MIN>0</MIN>
+								</ECUC-FLOAT-PARAM-DEF>
+								<ECUC-FLOAT-PARAM-DEF UUID="bda53715-ae60-4787-af9c-81d3aaaae32b">
+									<SHORT-NAME>EthIfMainFunctionRxTimeout</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">In polling mode (EthIfEnableRxInterrupt = false) the EthIf_MainFunctionRx polls the underlaying hardware for new received frames. This value specifies the timeout after the EthIf stops to receive frames. The current implementation does not support a timeout because it has no suitable time base for the supervision.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:BaseUnit">SEC</SD>
+											</SDG>
+											<SDG GID="MSR:Process">
+												<SD GID="MSR:TraceRef">SPEC-2393689</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>0.005</DEFAULT-VALUE>
+									<MAX>32.767</MAX>
+									<MIN>0</MIN>
+								</ECUC-FLOAT-PARAM-DEF>
+								<ECUC-STRING-PARAM-DEF UUID="ba865953-43b5-4cbf-a03b-fb1d2ef83143">
+									<SHORT-NAME>EthIfPublicCddHeaderFile</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">These parameters defines header files for callback functions which shall be included in case of CDDs.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="MSR:Process">
+												<SD GID="MSR:TraceRef">SPEC-2393692</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>255</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+								</ECUC-STRING-PARAM-DEF>
+								<ECUC-INTEGER-PARAM-DEF UUID="79ad919c-a1a3-4091-88e5-b3bb249c29d3">
+									<SHORT-NAME>EthIfRxIndicationIterations</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">In polling mode (EthIfEnableRxInterrupt = false) the EthIf_MainFunctionRx polls the underlaying hardware for new received frames. This value specifies the maximum number of Ethernet frames that shall be processed within an EthIfMainFunctionPeriod. In case not all frames can be processed by the EthIf, the reception queue of the underlaying hardware gets filled and the hardware drops received frames.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="MSR:Process">
+												<SD GID="MSR:TraceRef">SPEC-2393693</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>5</DEFAULT-VALUE>
+									<MAX>65535</MAX>
+									<MIN>0</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="b9a2ebf8-491a-479a-b47b-e876cf6e1ebf">
+									<SHORT-NAME>EthIfUpdatePhysAddrFilter</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter defines if the optional API EthIf_UpdatePhysAddrFilter is enabled. The API is used to enable and disable the frame reception filter for multicast addresses. If the filter for a certain multicast address is enabled, all frames are received that are destined for that address.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="77551f3f-31cd-4dff-aad0-6e7efa662244">
+									<SHORT-NAME>EthIfEnableZeroCopyExtensions</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Enable Zero-Copy Extensions</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter defines if buffer filtering and usage of external buffers is enabled.
+Depending on the buffer filter, reception buffers must be explicitly unlocked by upper layers or not. Explicitly unlocking reception buffers may be necessary to implement zero-copy concepts. However, default behavior is unlocking the reception buffer is implicitly done by the Eth component right after the receive indication callback method.
+For transmission the upper layer may use own buffers that must not be provided by the Eth component. Analogical to buffer filtering, external transmission buffers may be necessary to implement zero-copy concepts.
+
+RESTRICTIONS: 'EthIfEnableZeroCopyExtensions' needs to be set corresponding to Ethernet Drivers 'EthEnableZeroCopyExtensions'</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-INTEGER-PARAM-DEF UUID="7b2598fe-60ae-4bee-9607-5c6a9ee33a1b">
+									<SHORT-NAME>EthIfMaxExtTxBufsTotal</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Max External Tx Bufs Total</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">This value specifies the maximum number of external transmission buffers.
+
+RESTRICTIONS: 'EthIfEnableZeroCopyExtensions' needs to be enabled for external transmission buffers.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>0</DEFAULT-VALUE>
+									<MAX>255</MAX>
+									<MIN>0</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="0ad575db-b65e-4112-bff3-4d3ac1504e57">
+									<SHORT-NAME>EthIfGlobalTimeSupport</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Global Time Support</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter defines if the global time support is enabled/disabled.
+
+The global time support allows the retrieve time stamping information related to an Ethernet frame either from an local Ethernet controller or from an Ethernet switch.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="MSR:Process">
+												<SD GID="MSR:TraceRef">SPEC-2393942</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="562e69e5-2346-48a2-b35b-cc1dc249818e">
+									<SHORT-NAME>EthIfEnableHeaderAccessApi</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Enable Header Access API</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter defines if APIs are provided to allow access to the Ethernet frame header. Usually the Ethernet header is cut off during reception or is assembled during transmission by the Ethernet driver. To read the header information during reception or to overwrite the header that is assembled by the driver during transmission, further APIs are provided.
+
+RESTRICTIONS: 'EthIfEnableHeaderAccessApi' needs to be set corresponding to Ethernet Drivers 'EthEnableHeaderAccessApi'</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="9abe8c4e-cca3-41ba-bd14-b1507246dcf7">
+									<SHORT-NAME>EthIfGetTransceiverWakeupModeApi</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter defines if the EthIf_GetTransceiverWakeupMode() API is available.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="9a76cac0-669d-4e64-aabe-37675ea81ee3">
+									<SHORT-NAME>EthIfWakeupSupport</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter defines if the wakeup functionallity is supported.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="2a558318-2ddd-4f58-99a8-1ff6ef6c4761">
+									<SHORT-NAME>EthIfSwitchManagementSupport</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Switch Management Support</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter defines if switch frame management is supported</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="b9208246-1cb8-45f4-b8c7-490943b486a1">
+									<SHORT-NAME>EthIfSafeBswChecks</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Selects if safety checks are used. These checks improve robustness as e.g. invalid parameters are checked before function is executed. This attribute has to be enabled for safety projects where this component is mapped to an ASIL partition.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+							</PARAMETERS>
+						</ECUC-PARAM-CONF-CONTAINER-DEF>
+					</CONTAINERS>
+				</ECUC-MODULE-DEF>
+				<BSW-IMPLEMENTATION UUID="ff7bd57a-bcbb-40ec-8b7f-6e68f5e45c79">
+					<SHORT-NAME>EthIf_Impl</SHORT-NAME>
+					<PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+					<SW-VERSION>8.00.01</SW-VERSION>
+					<USED-CODE-GENERATOR>DaVinci Configurator</USED-CODE-GENERATOR>
+					<VENDOR-ID>30</VENDOR-ID>
+					<AR-RELEASE-VERSION>4.01.01</AR-RELEASE-VERSION>
+					<BEHAVIOR-REF DEST="BSW-INTERNAL-BEHAVIOR">/MICROSAR/EthIf_ib_bswmd/BswModuleDescriptions/EthIf/EthIfBehavior</BEHAVIOR-REF>
+					<PRECONFIGURED-CONFIGURATION-REFS>
+						<PRECONFIGURED-CONFIGURATION-REF DEST="ECUC-MODULE-CONFIGURATION-VALUES">/MICROSAR/EthIf_Pre</PRECONFIGURED-CONFIGURATION-REF>
+					</PRECONFIGURED-CONFIGURATION-REFS>
+					<RECOMMENDED-CONFIGURATION-REFS>
+						<RECOMMENDED-CONFIGURATION-REF DEST="ECUC-MODULE-CONFIGURATION-VALUES">/MICROSAR/EthIf_Rec</RECOMMENDED-CONFIGURATION-REF>
+					</RECOMMENDED-CONFIGURATION-REFS>
+					<VENDOR-SPECIFIC-MODULE-DEF-REFS>
+						<VENDOR-SPECIFIC-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/MICROSAR/EthIf</VENDOR-SPECIFIC-MODULE-DEF-REF>
+					</VENDOR-SPECIFIC-MODULE-DEF-REFS>
+				</BSW-IMPLEMENTATION>
+				<ECUC-MODULE-CONFIGURATION-VALUES UUID="606d9f3d-f061-4f3a-8f5b-827a1377126b">
+					<SHORT-NAME>EthIf_Pre</SHORT-NAME>
+					<DEFINITION-REF DEST="ECUC-MODULE-DEF">/MICROSAR/EthIf</DEFINITION-REF>
+					<CONTAINERS></CONTAINERS>
+				</ECUC-MODULE-CONFIGURATION-VALUES>
+				<ECUC-MODULE-CONFIGURATION-VALUES UUID="e6f8bec1-9a0e-4292-b89a-e25048f1374d">
+					<SHORT-NAME>EthIf_Rec</SHORT-NAME>
+					<DEFINITION-REF DEST="ECUC-MODULE-DEF">/MICROSAR/EthIf</DEFINITION-REF>
+					<CONTAINERS></CONTAINERS>
+				</ECUC-MODULE-CONFIGURATION-VALUES>
+			</ELEMENTS>
+		</AR-PACKAGE>
+	</AR-PACKAGES>
+</AUTOSAR>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-2-1.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="4a1f5e4e-1b37-4ab3-9756-524419074e03">
+      <SHORT-NAME>MICROSAR</SHORT-NAME>
+      <ELEMENTS>
+        <BSW-IMPLEMENTATION UUID="3caf2919-5d52-423f-9faf-7b78a8fcdb88">
+          <SHORT-NAME>CanIf_Impl</SHORT-NAME>
+          <MC-SUPPORT/>
+          <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+          <SW-VERSION>6.14.01</SW-VERSION>
+          <USED-CODE-GENERATOR>cMSR</USED-CODE-GENERATOR>
+          <VENDOR-ID>30</VENDOR-ID>
+          <AR-RELEASE-VERSION>4.00.03</AR-RELEASE-VERSION>
+        </BSW-IMPLEMENTATION>
+      </ELEMENTS>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="f01830ef-97dc-4331-b495-c655061ebbb9">
+          <SHORT-NAME>CanIf_ib_bswmd</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="4c25334d-1e12-4853-ab8d-5d5050474c7e">
+              <SHORT-NAME>BswModuleDescriptions</SHORT-NAME>
+              <ELEMENTS>
+                <BSW-MODULE-DESCRIPTION UUID="53f71a7a-4f9c-4afb-b290-d9f2ab1a51fa">
+                  <SHORT-NAME>CanIf</SHORT-NAME>
+                  <INTERNAL-BEHAVIORS>
+                    <BSW-INTERNAL-BEHAVIOR UUID="42af60f5-9154-4ed2-b901-7b058209df01">
+                      <SHORT-NAME>CanIf_Behavior</SHORT-NAME>
+                      <EXCLUSIVE-AREAS>
+                        <EXCLUSIVE-AREA UUID="b5984a52-f83f-42ee-abae-0cd142846003">
+                          <SHORT-NAME>CANIF_EXCLUSIVE_AREA_0</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="d41698cc-1424-4c61-ac7c-3741d00e723f">
+                          <SHORT-NAME>CANIF_EXCLUSIVE_AREA_1</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="322c6c4e-0755-45ec-9a36-fb3b7a5e2e37">
+                          <SHORT-NAME>CANIF_EXCLUSIVE_AREA_2</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="77cf5c58-cdb7-4ad0-bbfb-1b6b295f66ee">
+                          <SHORT-NAME>CANIF_EXCLUSIVE_AREA_3</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="68555eb4-1a8c-459d-b444-adbb1e7e3956">
+                          <SHORT-NAME>CANIF_EXCLUSIVE_AREA_4</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="05e92b4d-ed54-4b60-8926-f8009afe44a0">
+                          <SHORT-NAME>CANIF_EXCLUSIVE_AREA_5</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="8e516d08-a016-4785-bda7-b4181311fc17">
+                          <SHORT-NAME>CANIF_EXCLUSIVE_AREA_6</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="8cefc0b3-b07b-4ca2-beec-8e2c54dcaf60">
+                          <SHORT-NAME>CANIF_EXCLUSIVE_AREA_7</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                      </EXCLUSIVE-AREAS>
+                    </BSW-INTERNAL-BEHAVIOR>
+                  </INTERNAL-BEHAVIORS>
+                </BSW-MODULE-DESCRIPTION>
+              </ELEMENTS>
+            </AR-PACKAGE>
+            <AR-PACKAGE UUID="0d74efba-9316-422b-ad8a-b5ae6ef15936">
+              <SHORT-NAME>XcpEvents</SHORT-NAME>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

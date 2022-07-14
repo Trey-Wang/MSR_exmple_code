@@ -1,0 +1,2065 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-0-3.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://autosar.org/schema/r4.0">
+	<AR-PACKAGES>
+		<AR-PACKAGE UUID="1a558d5f-22b4-4518-b46b-79a97233bf1f">
+			<SHORT-NAME>MICROSAR</SHORT-NAME>
+			<ELEMENTS>
+				<ECUC-MODULE-DEF UUID="e394ce6b-b9e6-407b-925f-8ffdc04bd789">
+					<SHORT-NAME>Adc</SHORT-NAME>
+					<DESC>
+						<L-2 L="EN">Configuration of the Adc (Analog Digital Conversion) module.</L-2>
+					</DESC>
+					<CATEGORY>VENDOR_SPECIFIC_MODULE_DEFINITION</CATEGORY>
+					<ADMIN-DATA>
+						<DOC-REVISIONS>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.00.00</REVISION-LABEL>
+								<ISSUED-BY>virsel</ISSUED-BY>
+								<DATE>2013-10-15T09:33:07+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Initial creation</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.00.01</REVISION-LABEL>
+								<ISSUED-BY>virchl</ISSUED-BY>
+								<DATE>2014-05-15T10:51:38+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Modification</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00070801</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.00.01</REVISION-LABEL>
+								<ISSUED-BY>virchl</ISSUED-BY>
+								<DATE>2014-06-11T03:29:08+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Software version number set to 1.00.01</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00076198</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.00.02</REVISION-LABEL>
+								<ISSUED-BY>virchl</ISSUED-BY>
+								<DATE>2014-11-21T09:04:09+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">No modifications here</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.00.03</REVISION-LABEL>
+								<ISSUED-BY>virchl</ISSUED-BY>
+								<DATE>2014-11-24T06:27:50+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">No modifications here</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>2.00.00</REVISION-LABEL>
+								<ISSUED-BY>virchl</ISSUED-BY>
+								<DATE>2015-01-16T02:58:32+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Global Renaming of VIP to VTT</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">FEAT-254</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>2.00.00</REVISION-LABEL>
+								<ISSUED-BY>virchl</ISSUED-BY>
+								<DATE>2015-01-16T02:58:43+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Default value of AdcVersionInfoApi set to false</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>2.00.00</REVISION-LABEL>
+								<ISSUED-BY>virchl</ISSUED-BY>
+								<DATE>2015-01-19T01:22:51+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">SwVersion set to 2.00.00</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>2.00.01</REVISION-LABEL>
+								<ISSUED-BY>virchl</ISSUED-BY>
+								<DATE>2015-04-28T09:33:45+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">SwVersion set to 2.00.01</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00082673</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>2.01.00</REVISION-LABEL>
+								<ISSUED-BY>virchl</ISSUED-BY>
+								<DATE>2015-07-08T09:59:23+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">SwVersion set to 2.01.00</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>2.01.00</REVISION-LABEL>
+								<ISSUED-BY>virchl</ISSUED-BY>
+								<DATE>2015-07-08T09:59:45+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">DisplaySettings for CFG5-Integer-Parameters added</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>2.02.00</REVISION-LABEL>
+								<ISSUED-BY>virchl</ISSUED-BY>
+								<DATE>2015-08-27T10:38:00+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">SwVersion set to 2.02.00</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">FEAT-1372</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>2.02.00</REVISION-LABEL>
+								<ISSUED-BY>virchl</ISSUED-BY>
+								<DATE>2015-09-08T01:41:09+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Parameter AdcCfgIncludeListCbk deleted</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00085036</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>2.02.00</REVISION-LABEL>
+								<ISSUED-BY>virchl</ISSUED-BY>
+								<DATE>2015-09-08T01:42:04+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Range of parameter AdcChannelResolution set to 1:63</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00085047</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>2.02.00</REVISION-LABEL>
+								<ISSUED-BY>virchl</ISSUED-BY>
+								<DATE>2015-09-11T02:54:35+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Multiplicity of container AdcHwUnit extended to 1 to 50. AdcHwUnitId adjusted</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00083484</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>2.02.00</REVISION-LABEL>
+								<ISSUED-BY>virchl</ISSUED-BY>
+								<DATE>2015-11-23T08:25:07+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Extend range of AdcGroupId</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00086528</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>2.02.00</REVISION-LABEL>
+								<ISSUED-BY>virchl</ISSUED-BY>
+								<DATE>2015-11-23T08:26:05+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Extend range of AdcGroupPriority according to AUTOSAR</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00086528</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>2.03.00</REVISION-LABEL>
+								<ISSUED-BY>virchl</ISSUED-BY>
+								<DATE>2016-02-25T12:46:37+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">SwVersion set to 2.03.00</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00088372</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>2.04.00</REVISION-LABEL>
+								<ISSUED-BY>virchl</ISSUED-BY>
+								<DATE>2016-09-05T03:31:39+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">SwVersion set to 2.04.00</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00091733</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>2.05.00</REVISION-LABEL>
+								<ISSUED-BY>virbmz</ISSUED-BY>
+								<DATE>2017-01-12T09:52:50+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">FEAT1824 Support a component-specific SafeBSW configuration switch (Vtt Mcal), Version updates</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">FEAT-1824</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+						</DOC-REVISIONS>
+					</ADMIN-DATA>
+					<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+					<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+					<REFINED-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/AUTOSAR/EcucDefs/Adc</REFINED-MODULE-DEF-REF>
+					<SUPPORTED-CONFIG-VARIANTS>
+						<SUPPORTED-CONFIG-VARIANT>VARIANT-PRE-COMPILE</SUPPORTED-CONFIG-VARIANT>
+					</SUPPORTED-CONFIG-VARIANTS>
+					<CONTAINERS>
+						<!-- Container Definition: AdcConfigSet -->
+						<ECUC-PARAM-CONF-CONTAINER-DEF UUID="09524623-b6ce-40c3-a0b7-9b75dd2bc950">
+							<SHORT-NAME>AdcConfigSet</SHORT-NAME>
+							<DESC>
+								<L-2 L="EN">This container includes the post-build selectable configuration parameters.</L-2>
+							</DESC>
+							<ADMIN-DATA>
+								<SDGS>
+									<SDG GID="DV:CfgPostBuild">
+										<SD GID="DV:postBuildSelectableChangeable">false</SD>
+										<SD GID="DV:postBuildNotDeletable">false</SD>
+									</SDG>
+								</SDGS>
+							</ADMIN-DATA>
+							<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+							<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+							<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+							<MULTIPLE-CONFIGURATION-CONTAINER>true</MULTIPLE-CONFIGURATION-CONTAINER>
+							<SUB-CONTAINERS>
+								<!-- Container Definition: AdcHwUnit -->
+								<ECUC-PARAM-CONF-CONTAINER-DEF UUID="1b55ff10-3519-4084-8bf8-12af7af7090a">
+									<SHORT-NAME>AdcHwUnit</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This container includes the driver configuration (parameters) depending on grouping of channels.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:postBuildSelectableChangeable">false</SD>
+												<SD GID="DV:postBuildNotDeletable">false</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<INTRODUCTION>
+										<P>
+											<L-1 L="EN">This container could contain HW specific parameters which are not defined in the Standardized Module Definition. They must be added in the Vendor Specific Module Definition.</L-1>
+										</P>
+									</INTRODUCTION>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>50</UPPER-MULTIPLICITY>
+									<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+									<MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+									<PARAMETERS>
+										<!-- PARAMETER DEFINITION: AdcClockSource -->
+										<ECUC-ENUMERATION-PARAM-DEF UUID="afab0a4d-447d-47c7-8437-6d6a5ca41b2f">
+											<SHORT-NAME>AdcClockSource</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Parameter not used.
+
+This parameter defines an ADC module specific clock input for the conversion unit.</L-2>
+											</DESC>
+											<INTRODUCTION>
+												<P>
+													<L-1 L="EN">statically be configured to select different clock sources if provided by 
+                                                hardware. Enumeration literals are defined vendor specific.</L-1>
+												</P>
+											</INTRODUCTION>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>*</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+										</ECUC-ENUMERATION-PARAM-DEF>
+										<!-- PARAMETER DEFINITION: AdcHwUnitId -->
+										<ECUC-ENUMERATION-PARAM-DEF UUID="ef584bd7-f1f7-4e5d-b469-60934f67353c">
+											<SHORT-NAME>AdcHwUnitId</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter defines the numeric ID of the HW Unit. This symbolic name allows accessing HwUnit data.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>Hw0</DEFAULT-VALUE>
+											<LITERALS>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="fd039de8-ac8f-4d8b-8188-00a4a333da16">
+													<SHORT-NAME>Hw0</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Hardware Unit 0</L-4>
+													</LONG-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="db37c151-e3ec-41f5-abbd-b7e457164fda">
+													<SHORT-NAME>Hw1</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Hardware Unit 1</L-4>
+													</LONG-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="8b1f44cc-8d67-4568-bcfb-a2892874669d">
+													<SHORT-NAME>Hw2</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Hardware Unit 2</L-4>
+													</LONG-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="e100be42-261e-4483-b573-efb03261e386">
+													<SHORT-NAME>Hw3</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Hardware Unit 3</L-4>
+													</LONG-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="a8a444b0-8cd3-488b-b6d9-7bc183e60ff2">
+													<SHORT-NAME>Hw4</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Hardware Unit 4</L-4>
+													</LONG-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="2dee574f-ef38-4dfb-b792-6fa46121d8db">
+													<SHORT-NAME>Hw5</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Hardware Unit 5</L-4>
+													</LONG-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="c1ca38cb-44f6-4a81-849c-bb159008cc7e">
+													<SHORT-NAME>Hw6</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Hardware Unit 6</L-4>
+													</LONG-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="2f879d2f-c0b8-4ef0-b8fc-bfef2f5120b6">
+													<SHORT-NAME>Hw7</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Hardware Unit 7</L-4>
+													</LONG-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="562c132c-342b-4ad5-b2a0-a84eb867725b">
+													<SHORT-NAME>Hw8</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Hardware Unit 8</L-4>
+													</LONG-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="c552378b-d401-42a9-a991-cd38e6532f21">
+													<SHORT-NAME>Hw9</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Hardware Unit 9</L-4>
+													</LONG-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="fbca479b-d65f-4bee-800b-0b5ea6decdb5">
+													<SHORT-NAME>Hw10</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Hardware Unit 10</L-4>
+													</LONG-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="876262bb-ca64-4d18-9691-e8a2aed4b8bf">
+													<SHORT-NAME>Hw11</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Hardware Unit 11</L-4>
+													</LONG-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="7c745e84-4a99-4bdf-8115-75029d360910">
+													<SHORT-NAME>Hw12</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Hardware Unit 12</L-4>
+													</LONG-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="174ae540-1c06-4227-8f21-d4e5432f7183">
+													<SHORT-NAME>Hw13</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Hardware Unit 13</L-4>
+													</LONG-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="dab10f26-497b-4dd5-b093-02d359cecf38">
+													<SHORT-NAME>Hw14</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Hardware Unit 14</L-4>
+													</LONG-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="1dc2a2d4-d27b-43f6-8398-76b9fbdefd59">
+													<SHORT-NAME>Hw15</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Hardware Unit 15</L-4>
+													</LONG-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="df346eda-1073-46d5-8114-d6067bdd5e1e">
+													<SHORT-NAME>Hw16</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Hardware Unit 16</L-4>
+													</LONG-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="092f566c-4386-4439-8f4b-adf6f1359b39">
+													<SHORT-NAME>Hw17</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Hardware Unit 17</L-4>
+													</LONG-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="d5341339-e9d3-45bc-92f7-db0412a482ac">
+													<SHORT-NAME>Hw18</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Hardware Unit 18</L-4>
+													</LONG-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="6caef260-9474-4e31-a593-3c88aeef0bc7">
+													<SHORT-NAME>Hw19</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Hardware Unit 19</L-4>
+													</LONG-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="1caeb698-7ffc-451a-9ed7-dc12fd5e7929">
+													<SHORT-NAME>Hw20</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Hardware Unit 20</L-4>
+													</LONG-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="5fb19340-61c1-45b9-9059-9eed2e0cd67d">
+													<SHORT-NAME>Hw21</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Hardware Unit 21</L-4>
+													</LONG-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="91c3f7a1-ebbb-402c-9c9e-6a5836defef5">
+													<SHORT-NAME>Hw22</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Hardware Unit 22</L-4>
+													</LONG-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="033e841b-d2aa-4544-a537-40e921965cb7">
+													<SHORT-NAME>Hw23</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Hardware Unit 23</L-4>
+													</LONG-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="02b9e3de-4d56-4721-b7d9-174d0d753e2d">
+													<SHORT-NAME>Hw24</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Hardware Unit 24</L-4>
+													</LONG-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="63e1ca87-14ca-41b4-8c24-d57fdbcbd64b">
+													<SHORT-NAME>Hw25</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Hardware Unit 25</L-4>
+													</LONG-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="5b558a65-3b1f-4dfc-84a7-d21cfaf88099">
+													<SHORT-NAME>Hw26</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Hardware Unit 26</L-4>
+													</LONG-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="043a1580-c31f-40f8-8171-fb22a6c5755a">
+													<SHORT-NAME>Hw27</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Hardware Unit 27</L-4>
+													</LONG-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="6696807a-87c1-4999-b95a-cd3346eda1e0">
+													<SHORT-NAME>Hw28</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Hardware Unit 28</L-4>
+													</LONG-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="ad5bada2-dedc-4135-80bf-5a89a68dda6a">
+													<SHORT-NAME>Hw29</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Hardware Unit 29</L-4>
+													</LONG-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="08ce8ea6-3bee-4ffb-8dca-632b9d47ebba">
+													<SHORT-NAME>Hw30</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Hardware Unit 30</L-4>
+													</LONG-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="acde6f7f-8607-47a5-a486-6152b1f69819">
+													<SHORT-NAME>Hw31</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Hardware Unit 31</L-4>
+													</LONG-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="1d1644ab-aae5-422f-8e05-27e3ce475444">
+													<SHORT-NAME>Hw32</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Hardware Unit 32</L-4>
+													</LONG-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="2ec9555c-66de-4d72-8468-86bd88e2cff3">
+													<SHORT-NAME>Hw33</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Hardware Unit 33</L-4>
+													</LONG-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="ea0d91d5-f06a-46e2-98f9-dc2e158bb94d">
+													<SHORT-NAME>Hw34</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Hardware Unit 34</L-4>
+													</LONG-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="2f046a24-fff5-47c6-b04f-0ad0444a781c">
+													<SHORT-NAME>Hw35</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Hardware Unit 35</L-4>
+													</LONG-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="458744ac-5ed9-4944-afc9-f6e6d3a121cc">
+													<SHORT-NAME>Hw36</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Hardware Unit 36</L-4>
+													</LONG-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="c217d3a6-21c0-4bda-9023-a0461060fa93">
+													<SHORT-NAME>Hw37</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Hardware Unit 37</L-4>
+													</LONG-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="5dbc8009-62e5-4b0c-a4b2-d4029ba9c751">
+													<SHORT-NAME>Hw38</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Hardware Unit 38</L-4>
+													</LONG-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="cb54ba04-9ba3-4bae-b4b0-65ea6300c7b1">
+													<SHORT-NAME>Hw39</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Hardware Unit 39</L-4>
+													</LONG-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="c64e5883-675d-4f40-af05-f079be8aecaa">
+													<SHORT-NAME>Hw40</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Hardware Unit 40</L-4>
+													</LONG-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="9618e154-ac7b-4668-9f7c-222883be51f6">
+													<SHORT-NAME>Hw41</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Hardware Unit 41</L-4>
+													</LONG-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="4645f04d-f60b-4a46-b1f5-e0a8061b66a6">
+													<SHORT-NAME>Hw42</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Hardware Unit 42</L-4>
+													</LONG-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="db8cc362-65d8-4a33-be15-997cb4aeb03d">
+													<SHORT-NAME>Hw43</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Hardware Unit 43</L-4>
+													</LONG-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="59b468b0-75ad-44f8-8267-6d48f1d80b64">
+													<SHORT-NAME>Hw44</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Hardware Unit 44</L-4>
+													</LONG-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="3fc5fdd0-03c1-41ca-baec-37659b9dcc3b">
+													<SHORT-NAME>Hw45</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Hardware Unit 45</L-4>
+													</LONG-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="ce2ff87c-b10c-4fb3-95de-6c95e808262e">
+													<SHORT-NAME>Hw46</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Hardware Unit 46</L-4>
+													</LONG-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="f89b2a6b-309c-4bbd-ab54-9f7c2d004cea">
+													<SHORT-NAME>Hw47</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Hardware Unit 47</L-4>
+													</LONG-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="aac012bb-a3e4-46b8-bc69-41e85a0a311e">
+													<SHORT-NAME>Hw48</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Hardware Unit 48</L-4>
+													</LONG-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="5a0b6f62-7858-4453-b903-5b67952ef557">
+													<SHORT-NAME>Hw49</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Hardware Unit 49</L-4>
+													</LONG-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+											</LITERALS>
+										</ECUC-ENUMERATION-PARAM-DEF>
+										<!-- PARAMETER DEFINITION: AdcPrescale -->
+										<ECUC-INTEGER-PARAM-DEF UUID="7e06e0fc-f057-4691-b9eb-a96179f25157">
+											<SHORT-NAME>AdcPrescale</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter defines an optional ADC module specific clock prescale factor, if supported by hardware.</L-2>
+											</DESC>
+											<INTRODUCTION>
+												<P>
+													<L-1 L="EN">ImplementationType: Adc_PrescaleType</L-1>
+												</P>
+											</INTRODUCTION>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>10</DEFAULT-VALUE>
+											<MAX>255</MAX>
+											<MIN>1</MIN>
+										</ECUC-INTEGER-PARAM-DEF>
+									</PARAMETERS>
+									<SUB-CONTAINERS>
+										<!-- Container Definition: AdcChannel -->
+										<ECUC-PARAM-CONF-CONTAINER-DEF UUID="e1d70ebf-3df0-40a2-acc0-e8391ea26230">
+											<SHORT-NAME>AdcChannel</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">This container includes the channel configuration (parameters) depending on the hardware capability.</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:CfgPostBuild">
+														<SD GID="DV:postBuildSelectableChangeable">false</SD>
+														<SD GID="DV:postBuildNotDeletable">false</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<INTRODUCTION>
+												<P>
+													<L-1 L="EN">The organization of this data structure could contain dependencies to the microcontroller so this is left up to the implementer and its location is left up to the configuration. 
+                                                Note: Since a AdcChannel can be part of several AdcGroups, this container is not realized as a subcontainer of AdcGroup but instead as a subcontainer of AdcHwUnit.</L-1>
+												</P>
+											</INTRODUCTION>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>255</UPPER-MULTIPLICITY>
+											<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+											<MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+											<PARAMETERS>
+												<!-- PARAMETER DEFINITION: AdcChannelConvTime -->
+												<ECUC-INTEGER-PARAM-DEF UUID="7b0bc38c-f914-4345-bd01-a00695035446">
+													<SHORT-NAME>AdcChannelConvTime</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">This parameter defines the conversion time, i.e. the time during which the analogue value is converted into digital representation, (in clock cycles) for each channel, if supported by hardware.</L-2>
+													</DESC>
+													<ADMIN-DATA>
+														<SDGS>
+															<SDG GID="DV:Display">
+																<SD GID="DV:BaseUnit">clock cycles</SD>
+															</SDG>
+														</SDGS>
+													</ADMIN-DATA>
+													<INTRODUCTION>
+														<P>
+															<L-1 L="EN">ImplementationType: Adc_ConversionTimeType</L-1>
+														</P>
+													</INTRODUCTION>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>1000</DEFAULT-VALUE>
+													<MAX>18446744073709551615</MAX>
+													<MIN>0</MIN>
+												</ECUC-INTEGER-PARAM-DEF>
+												<!-- PARAMETER DEFINITION: AdcChannelHighLimit -->
+												<ECUC-INTEGER-PARAM-DEF UUID="6d616712-05b3-4b81-aeee-75297f951ad3">
+													<SHORT-NAME>AdcChannelHighLimit</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Parameter not used.
+
+This parameter defines the high limit (used for limit checking).</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>5</DEFAULT-VALUE>
+													<MAX>18446744073709551615</MAX>
+													<MIN>0</MIN>
+												</ECUC-INTEGER-PARAM-DEF>
+												<!-- PARAMETER DEFINITION: AdcChannelId -->
+												<ECUC-INTEGER-PARAM-DEF UUID="cb0234b9-5cba-482b-bdf2-08becd0892b0">
+													<SHORT-NAME>AdcChannelId</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">This parameter defines the assignment of the channel to the physical ADC  hardware channel.</L-2>
+													</DESC>
+													<INTRODUCTION>
+														<P>
+															<L-1 L="EN">ImplementationType: Adc_ChannelType</L-1>
+														</P>
+													</INTRODUCTION>
+													<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>0</DEFAULT-VALUE>
+													<MAX>1024</MAX>
+													<MIN>0</MIN>
+												</ECUC-INTEGER-PARAM-DEF>
+												<!-- PARAMETER DEFINITION: AdcChannelLimitCheck -->
+												<ECUC-BOOLEAN-PARAM-DEF UUID="f6f96436-d8e5-4d5a-a464-d30ce64d222d">
+													<SHORT-NAME>AdcChannelLimitCheck</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Parameter not used.
+
+This parameter defines whether limit checking for an ADC channel is enabled or disabled.
+
+True: Limit checking is enabled.
+False: Limit checking is disabled.</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>false</DEFAULT-VALUE>
+												</ECUC-BOOLEAN-PARAM-DEF>
+												<!-- PARAMETER DEFINITION: AdcChannelLowLimit -->
+												<ECUC-INTEGER-PARAM-DEF UUID="2b8a9532-7a96-4afd-87fa-a725a8ceeed6">
+													<SHORT-NAME>AdcChannelLowLimit</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Parameter not used.
+
+This parameter defines the low limit (used for limit checking).</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>0</DEFAULT-VALUE>
+													<MAX>18446744073709551615</MAX>
+													<MIN>0</MIN>
+												</ECUC-INTEGER-PARAM-DEF>
+												<!-- PARAMETER DEFINITION: AdcChannelRangeSelect -->
+												<ECUC-ENUMERATION-PARAM-DEF UUID="ae11750a-4956-4fd3-96b9-bbf667dad2b3">
+													<SHORT-NAME>AdcChannelRangeSelect</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Parameter not used.
+
+This parameter defines which conversion values are taken into account related to the boarders defined with AdcChannelLowLimit and AdcChannelHighLimit (Only in case of active limit checking).
+
+ADC_RANGE_ALWAYS: Complete range - independent from channel limit settings.
+ADC_RANGE_BETWEEN: Range between low limit and high limit - high limit value included.
+ADC_RANGE_NOT_BETWEEN: Range above high limit or below low limit value - low limit value included
+ADC_RANGE_NOT_OVER_HIGH: Range below high limit - high limit value included.
+ADC_RANGE_NOT_UNDER_LOW: Range above low limit.
+ADC_RANGE_NOT_OVER_HIGH: Range above high limit.
+ADC_RANGE_UNDER_LOW: Range below limit - low limit value included.</L-2>
+													</DESC>
+													<INTRODUCTION>
+														<P>
+															<L-1 L="EN">Implementation Type: Adc_ChannelRangeSelectType</L-1>
+														</P>
+													</INTRODUCTION>
+													<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>ADC_RANGE_BETWEEN</DEFAULT-VALUE>
+													<LITERALS>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="55f868ac-1d06-4a00-a446-35d4591e535f">
+															<SHORT-NAME>ADC_RANGE_ALWAYS</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="c1d7a1eb-0489-41fd-b0dc-50652d9fc169">
+															<SHORT-NAME>ADC_RANGE_BETWEEN</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="7ee42d15-8b31-4820-85d6-1ee6f17cd60f">
+															<SHORT-NAME>ADC_RANGE_NOT_BETWEEN</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="712169cf-e08f-42ea-ac2c-6d5f2ecd237c">
+															<SHORT-NAME>ADC_RANGE_NOT_OVER_HIGH</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="627765c9-0d2a-45b2-970d-63ddafb42517">
+															<SHORT-NAME>ADC_RANGE_NOT_UNDER_LOW</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="600bfff8-be14-4d4f-9c89-abf7121f4f05">
+															<SHORT-NAME>ADC_RANGE_OVER_HIGH</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="44980895-55b8-4546-a64c-d1905df23de3">
+															<SHORT-NAME>ADC_RANGE_UNDER_LOW</SHORT-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+													</LITERALS>
+												</ECUC-ENUMERATION-PARAM-DEF>
+												<!-- PARAMETER DEFINITION: AdcChannelRefVoltsrcHigh -->
+												<ECUC-ENUMERATION-PARAM-DEF UUID="06df1736-2df8-4c1d-b4b9-cf48c8a33b33">
+													<SHORT-NAME>AdcChannelRefVoltsrcHigh</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">This parameter defines the upper reference voltage source for each channel.</L-2>
+													</DESC>
+													<INTRODUCTION>
+														<P>
+															<L-1 L="EN">Enumeration literals are defined vendor specific.</L-1>
+														</P>
+													</INTRODUCTION>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>ADC_5V</DEFAULT-VALUE>
+													<LITERALS>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="d15ba6ca-b73b-4327-9396-c8e8d17e5e3f">
+															<SHORT-NAME>ADC_3V3</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">3.3V</L-4>
+															</LONG-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="c48d792c-f0b0-4926-887d-490092b0062a">
+															<SHORT-NAME>ADC_5V</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">5V</L-4>
+															</LONG-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+													</LITERALS>
+												</ECUC-ENUMERATION-PARAM-DEF>
+												<!-- PARAMETER DEFINITION: AdcChannelRefVoltsrcLow -->
+												<ECUC-ENUMERATION-PARAM-DEF UUID="bb5ac3cf-a894-4f7a-a02f-3f0d34b21bca">
+													<SHORT-NAME>AdcChannelRefVoltsrcLow</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">This parameter defines the lower reference voltage source for each channel.</L-2>
+													</DESC>
+													<INTRODUCTION>
+														<P>
+															<L-1 L="EN">Enumeration literals are defined vendor specific.</L-1>
+														</P>
+													</INTRODUCTION>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>ADC_0V</DEFAULT-VALUE>
+													<LITERALS>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="f44a5688-0716-4d05-809e-3108b96a4d16">
+															<SHORT-NAME>ADC_0V</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">0V</L-4>
+															</LONG-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+													</LITERALS>
+												</ECUC-ENUMERATION-PARAM-DEF>
+												<!-- PARAMETER DEFINITION: AdcChannelResolution -->
+												<ECUC-INTEGER-PARAM-DEF UUID="02335b16-63fe-4696-847d-312edcf38510">
+													<SHORT-NAME>AdcChannelResolution</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">This parameter defines the channel resolution in bits.</L-2>
+													</DESC>
+													<ADMIN-DATA>
+														<SDGS>
+															<SDG GID="DV:Display">
+																<SD GID="DV:BaseUnit">BIT</SD>
+															</SDG>
+														</SDGS>
+													</ADMIN-DATA>
+													<INTRODUCTION>
+														<P>
+															<L-1 L="EN">ImplementationType: Adc_ResolutionType</L-1>
+														</P>
+													</INTRODUCTION>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>10</DEFAULT-VALUE>
+													<MAX>63</MAX>
+													<MIN>1</MIN>
+												</ECUC-INTEGER-PARAM-DEF>
+												<!-- PARAMETER DEFINITION: AdcChannelSampTime -->
+												<ECUC-INTEGER-PARAM-DEF UUID="76fafe70-3728-45ee-a4b5-bb7382ffd8f8">
+													<SHORT-NAME>AdcChannelSampTime</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">This parameter defines the sampling time, i.e. the time during which the value is sampled, (in clock cycles) for each channel, if supported by hardware.</L-2>
+													</DESC>
+													<ADMIN-DATA>
+														<SDGS>
+															<SDG GID="DV:Display">
+																<SD GID="DV:BaseUnit">clock cycles</SD>
+															</SDG>
+														</SDGS>
+													</ADMIN-DATA>
+													<INTRODUCTION>
+														<P>
+															<L-1 L="EN">ImplementationType: Adc_SamplingTimeType</L-1>
+														</P>
+													</INTRODUCTION>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>1000</DEFAULT-VALUE>
+													<MAX>65535</MAX>
+													<MIN>1</MIN>
+												</ECUC-INTEGER-PARAM-DEF>
+											</PARAMETERS>
+										</ECUC-PARAM-CONF-CONTAINER-DEF>
+										<!-- Container Definition: AdcGroup -->
+										<ECUC-PARAM-CONF-CONTAINER-DEF UUID="37a708c7-069d-42bf-93f9-c6bce688c870">
+											<SHORT-NAME>AdcGroup</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">This container includes the AdcGroup configuration (parameters).</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:CfgPostBuild">
+														<SD GID="DV:postBuildSelectableChangeable">false</SD>
+														<SD GID="DV:postBuildNotDeletable">false</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>255</UPPER-MULTIPLICITY>
+											<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+											<MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+											<PARAMETERS>
+												<!-- PARAMETER DEFINITION: AdcGroupAccessMode -->
+												<ECUC-ENUMERATION-PARAM-DEF UUID="f8c11da4-b724-4d61-a7ac-6012d320c871">
+													<SHORT-NAME>AdcGroupAccessMode</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">This parameter defines the type of access mode to group conversion results.
+
+ADC_ACCESS_MODE_SINGLE: Single values access mode.
+ADC_ACCESS_MODE_STREAMING: Streaming access mode.</L-2>
+													</DESC>
+													<INTRODUCTION>
+														<P>
+															<L-1 L="EN">ImplementationType: Adc_GroupAccessModeType</L-1>
+														</P>
+													</INTRODUCTION>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>ADC_ACCESS_MODE_SINGLE</DEFAULT-VALUE>
+													<LITERALS>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="084d4eb3-d60c-4016-86e5-3fdccd836dae">
+															<SHORT-NAME>ADC_ACCESS_MODE_SINGLE</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">Single values access mode</L-4>
+															</LONG-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="65350f7f-e311-4e23-8e12-d55ea0a47dfe">
+															<SHORT-NAME>ADC_ACCESS_MODE_STREAMING</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">Streaming access mode</L-4>
+															</LONG-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+													</LITERALS>
+												</ECUC-ENUMERATION-PARAM-DEF>
+												<!-- PARAMETER DEFINITION: AdcGroupConversionMode -->
+												<ECUC-ENUMERATION-PARAM-DEF UUID="5db2f14c-83f1-4570-94e4-2f65856f9334">
+													<SHORT-NAME>AdcGroupConversionMode</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">This parameter defines the type of conversion mode supported by the driver.
+
+ADC_CONV_MODE_CONTINIOUS: Conversions of an ADC channel group are performed continuously  after a software API call (start). The conversions itself are running automaticall (no additional software or hardware trigger needed).
+ADC_CONV_MODE_ONESHOT: The conversion of an ADC channel group is performed once after a trigger.</L-2>
+													</DESC>
+													<INTRODUCTION>
+														<P>
+															<L-1 L="EN">ImplementationType: Adc_GroupConvModeType</L-1>
+														</P>
+													</INTRODUCTION>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>ADC_CONV_MODE_ONESHOT</DEFAULT-VALUE>
+													<LITERALS>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="41957825-7fab-4496-a180-9e95c21babea">
+															<SHORT-NAME>ADC_CONV_MODE_CONTINUOUS</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">Continuous</L-4>
+															</LONG-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="b1cab922-f0bc-49ad-aedb-6ed44191ca59">
+															<SHORT-NAME>ADC_CONV_MODE_ONESHOT</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">One Shot</L-4>
+															</LONG-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+													</LITERALS>
+												</ECUC-ENUMERATION-PARAM-DEF>
+												<!-- PARAMETER DEFINITION: AdcGroupId -->
+												<ECUC-INTEGER-PARAM-DEF UUID="06daff63-4156-41bb-ba32-2d6ad6bc270f">
+													<SHORT-NAME>AdcGroupId</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Parameter not used.
+
+This parameter defines the numeric ID of the group. This parameter is the symbolic name to be used on the API. This symbolic name allows accessing Channel Group data. This value will be assigned to the symbolic name derived of the AdcGroup container shortName.</L-2>
+													</DESC>
+													<INTRODUCTION>
+														<P>
+															<L-1 L="EN">ImplementationType: Adc_GroupType</L-1>
+														</P>
+													</INTRODUCTION>
+													<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+													<MAX>4294967295</MAX>
+													<MIN>0</MIN>
+												</ECUC-INTEGER-PARAM-DEF>
+												<!-- PARAMETER DEFINITION: AdcGroupPriority -->
+												<ECUC-INTEGER-PARAM-DEF UUID="07ebaf38-0cb4-45a4-8a40-2f7e4e744d5d">
+													<SHORT-NAME>AdcGroupPriority</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">This parameter defines the priority level of the AdcGroup.</L-2>
+													</DESC>
+													<INTRODUCTION>
+														<P>
+															<L-1 L="EN">ImplementationType: Adc_GroupPriorityType</L-1>
+														</P>
+													</INTRODUCTION>
+													<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>0</DEFAULT-VALUE>
+													<MAX>255</MAX>
+													<MIN>0</MIN>
+												</ECUC-INTEGER-PARAM-DEF>
+												<!-- PARAMETER DEFINITION: AdcGroupReplacement -->
+												<ECUC-ENUMERATION-PARAM-DEF UUID="81148ac2-7e95-4ab8-92f8-d54483448124">
+													<SHORT-NAME>AdcGroupReplacement</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">This parameter defines the replacement mechanism, which is used on ADC group level, if a group conversion is interrupted by a group which has a higher priority.
+
+ADC_GROUP_REPL_ABORT_RESTART: Abort/Restart mechanism is used on group level, if a group is interrupted by a higher priority group. The complete conversion round of the interrupted group (all group channels) is restarted after the higher priority group conversion is finished. If the group is configured in streaming access mode, only the results of the interrupted conversion round are discarded. Results of pervious conversion rounds which are already written to the result buffer are not affected.
+
+ADC_GROUP_REPL_SUSPEND_RESUME: Suspend/Resume mechanism is used on group level, if a group is interrupted by a converions round (conversion of all group channels) of the inttupted group is competed after the higher priority group conversion is finished. If the group is configured in streaming access mode, only the results of the interrupted conversion round are discarded. Results of previous conversion rounds which are already written to the result buffer are not affected.</L-2>
+													</DESC>
+													<INTRODUCTION>
+														<P>
+															<L-1 L="EN">ImplementationType: Adc_GroupReplacementType</L-1>
+														</P>
+													</INTRODUCTION>
+													<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>*</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<LITERALS>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="2db0c9f2-84a0-45c7-be50-4d496e0591b1">
+															<SHORT-NAME>ADC_GROUP_REPL_ABORT_RESTART</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="ecf3248c-6bf1-4d32-96af-c2540e7e65f3">
+															<SHORT-NAME>ADC_GROUP_REPL_SUSPEND_RESUME</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+													</LITERALS>
+												</ECUC-ENUMERATION-PARAM-DEF>
+												<!-- PARAMETER DEFINITION: AdcGroupTriggSrc -->
+												<ECUC-ENUMERATION-PARAM-DEF UUID="1e10e2b4-4cd9-4296-811f-b34da4d3c2ee">
+													<SHORT-NAME>AdcGroupTriggSrc</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">This parameter defines the type of source event that starts a group conversion.
+
+ADC_TRIG_SRV_HW: Group is triggered by a hardware event.
+ADC_TRIGG_SRV_SW: Group is triggered by a software API call.</L-2>
+													</DESC>
+													<INTRODUCTION>
+														<P>
+															<L-1 L="EN">ImplementationType: Adc_TriggerSourceType</L-1>
+														</P>
+													</INTRODUCTION>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>ADC_TRIGG_SRC_SW</DEFAULT-VALUE>
+													<LITERALS>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="39ceea92-4820-45cf-8c1e-596f7e2d9321">
+															<SHORT-NAME>ADC_TRIGG_SRC_HW</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">Hardware Event</L-4>
+															</LONG-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="7141806f-4973-44c9-8d14-80c966549021">
+															<SHORT-NAME>ADC_TRIGG_SRC_SW</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">Software API Call</L-4>
+															</LONG-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+													</LITERALS>
+												</ECUC-ENUMERATION-PARAM-DEF>
+												<!-- PARAMETER DEFINITION: AdcHwTrigSignal -->
+												<ECUC-ENUMERATION-PARAM-DEF UUID="1d42eaac-fb26-4e6c-aa6a-47d2ff9bc898">
+													<SHORT-NAME>AdcHwTrigSignal</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">This parameter defines on which edge of the hardware trigger signal the driver should react, i.e. start the conversion (only if supported by the ADC hardware).
+
+ADC_HW_TRIG_BOTH_EDGES: React on both edges of the hardware trigger signal (only if supported by the ADC hardware).
+ADC_HW_TRIG_FALLING_EDGE: React on falling edge of the hardware trigger signal (only if supported by the ADC hardware).
+ADC_HW_TRIG_RISING_EDGE: React on the rising edge of the hardware trigger signal (only if supported by the ADC hardware).</L-2>
+													</DESC>
+													<INTRODUCTION>
+														<P>
+															<L-1 L="EN">ImplementationType: Adc_HwTriggerSignalType</L-1>
+														</P>
+													</INTRODUCTION>
+													<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>ADC_HW_TRIG_FALLING_EDGE</DEFAULT-VALUE>
+													<LITERALS>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="9bbb8cf2-c5c9-4887-ae79-66000d6b215b">
+															<SHORT-NAME>ADC_HW_TRIG_BOTH_EDGES</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">Both Edges</L-4>
+															</LONG-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="2efc36d2-0310-46d4-8d98-6b375c8799d9">
+															<SHORT-NAME>ADC_HW_TRIG_FALLING_EDGE</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">Falling Edge</L-4>
+															</LONG-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="9b773302-3b80-42e1-9d8b-e5c309914fb4">
+															<SHORT-NAME>ADC_HW_TRIG_RISING_EDGE</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">Rising Edge</L-4>
+															</LONG-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+													</LITERALS>
+												</ECUC-ENUMERATION-PARAM-DEF>
+												<!-- PARAMETER DEFINITION: AdcHwTrigTimer -->
+												<ECUC-INTEGER-PARAM-DEF UUID="88938e71-67f5-46c3-92e5-488a4e2ca384">
+													<SHORT-NAME>AdcHwTrigTimer</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Parameter not used.
+
+This parameter defines the reload value of the ADC module embedded timer (only if supported by ADC hardware).</L-2>
+													</DESC>
+													<INTRODUCTION>
+														<P>
+															<L-1 L="EN">ImplementationType: Adc_HwTriggerTimerType</L-1>
+														</P>
+													</INTRODUCTION>
+													<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>*</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<MAX>18446744073709551615</MAX>
+													<MIN>0</MIN>
+												</ECUC-INTEGER-PARAM-DEF>
+												<!-- PARAMETER DEFINITION: AdcNotification -->
+												<ECUC-FUNCTION-NAME-DEF UUID="0d2b77a3-62de-4703-bea5-2b89726750c2">
+													<SHORT-NAME>AdcNotification</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">This parameter defines the name of a callback function for each group.
+
+If no notification should be called for this group, please use one of the following capabilities:
+ - Delete the parameter AdcNotification
+ - Leave the parameter empty
+ - Configure the parameter with "NULL_PTR"
+
+If the parameter has an invalid expression, the behaviour is undefined.</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+												</ECUC-FUNCTION-NAME-DEF>
+												<!-- PARAMETER DEFINITION: AdcStreamingBufferMode -->
+												<ECUC-ENUMERATION-PARAM-DEF UUID="2d552651-3057-4868-a18e-41606d5f0340">
+													<SHORT-NAME>AdcStreamingBufferMode</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">This parameter defines the streaming buffer mode. 
+
+ADC_STREAM_BUFFER_CIRULAR: The ADC Driver continues the conversion even if the stream buffer is full (number of samples reached) by wrapping around the stream buffer itstelf.
+ADC_STREAM_BUFFER_LINEAR: The ADC Driver stops the conversion as soon as the stream buffer is full (number of samples reached).</L-2>
+													</DESC>
+													<INTRODUCTION>
+														<P>
+															<L-1 L="EN">ImplementationType: Adc_StreamBufferModeType</L-1>
+														</P>
+													</INTRODUCTION>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>ADC_STREAM_BUFFER_LINEAR</DEFAULT-VALUE>
+													<LITERALS>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="6fe32949-88a7-4a04-b9c8-acf0e38e853e">
+															<SHORT-NAME>ADC_STREAM_BUFFER_CIRCULAR</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">Circular</L-4>
+															</LONG-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="5f7cd09e-9411-4ebb-9333-9ba860d23750">
+															<SHORT-NAME>ADC_STREAM_BUFFER_LINEAR</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">Linear</L-4>
+															</LONG-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+													</LITERALS>
+												</ECUC-ENUMERATION-PARAM-DEF>
+												<!-- PARAMETER DEFINITION: AdcStreamingNumSamples -->
+												<ECUC-INTEGER-PARAM-DEF UUID="b139a5d8-8e72-4ced-afa7-7961771bb141">
+													<SHORT-NAME>AdcStreamingNumSamples</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">This parameter defines the number of ADC values to be acquired per channel in streaming access mode.</L-2>
+													</DESC>
+													<INTRODUCTION>
+														<P>
+															<L-1 L="EN">Note: in single access mode this parameter assumes value 1, since only one sample per channel is processed.
+
+                                                        ImplementationType: Adc_StreamNumSampleType</L-1>
+														</P>
+													</INTRODUCTION>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>1</DEFAULT-VALUE>
+													<MAX>1023</MAX>
+													<MIN>1</MIN>
+												</ECUC-INTEGER-PARAM-DEF>
+											</PARAMETERS>
+											<REFERENCES>
+												<!-- Reference Definition: AdcGroupDefinition -->
+												<ECUC-REFERENCE-DEF UUID="8a4f9337-5ed2-4e9e-ad40-3b8c4629f5ff">
+													<SHORT-NAME>AdcGroupDefinition</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Reference to AdcChannels of the AdcGroups. (Assignement)</L-2>
+													</DESC>
+													<INTRODUCTION>
+														<P>
+															<L-1 L="EN">ImplementationType: Adc_GroupDefType</L-1>
+														</P>
+													</INTRODUCTION>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>255</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Adc/AdcConfigSet/AdcHwUnit/AdcChannel</DESTINATION-REF>
+												</ECUC-REFERENCE-DEF>
+											</REFERENCES>
+										</ECUC-PARAM-CONF-CONTAINER-DEF>
+									</SUB-CONTAINERS>
+								</ECUC-PARAM-CONF-CONTAINER-DEF>
+							</SUB-CONTAINERS>
+						</ECUC-PARAM-CONF-CONTAINER-DEF>
+						<!-- Container Definition: AdcGeneral -->
+						<ECUC-PARAM-CONF-CONTAINER-DEF UUID="104eefca-5f52-478f-93e7-5a61e84eef99">
+							<SHORT-NAME>AdcGeneral</SHORT-NAME>
+							<DESC>
+								<L-2 L="EN">General configuration parameteres of the ADC module.</L-2>
+							</DESC>
+							<ADMIN-DATA>
+								<SDGS>
+									<SDG GID="DV:CfgPostBuild">
+										<SD GID="DV:postBuildSelectableChangeable">false</SD>
+										<SD GID="DV:postBuildNotDeletable">false</SD>
+									</SDG>
+								</SDGS>
+							</ADMIN-DATA>
+							<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+							<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+							<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+							<MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+							<PARAMETERS>
+								<!-- PARAMETER DEFINITION: AdcDeInitApi -->
+								<ECUC-BOOLEAN-PARAM-DEF UUID="9da2c7d4-1083-4821-941b-7b8d4c56e925">
+									<SHORT-NAME>AdcDeInitApi</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter defines whether the function Adc_DeInit() for deinitialization of ADC module and hardware is enabled or disabled.
+
+True: API Adc_DeInit() is supported (function provided)
+False: API Adc_DeInit() is not supported (function not provided)</L-2>
+									</DESC>
+									<INTRODUCTION>
+										<P>
+											<L-1 L="EN">true: Adc_DeInit() can be used.
+                                        false: Adc_DeInit() can not be used.</L-1>
+										</P>
+									</INTRODUCTION>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>true</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: AdcDevErrorDetect -->
+								<ECUC-BOOLEAN-PARAM-DEF UUID="4ed9266a-9a17-4b01-a008-11817bfa7f5b">
+									<SHORT-NAME>AdcDevErrorDetect</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter switches the Development Error Detection and Notification ON or OFF.
+
+True: Development error detection is enabled.
+False: Development error detection is disabeld.
+
+Note: In general, the development error detection is recommended during pre-test phase. It is not recommended to enable the development error detection in production code due to increased runtime and ROM needs.</L-2>
+									</DESC>
+									<INTRODUCTION>
+										<P>
+											<L-1 L="EN">true: Enabled.
+                                        false: Disabled.</L-1>
+										</P>
+									</INTRODUCTION>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>true</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: AdcEnableLimitCheck -->
+								<ECUC-BOOLEAN-PARAM-DEF UUID="25a3e2a8-e9cb-480d-a58a-d90fc83e8af2">
+									<SHORT-NAME>AdcEnableLimitCheck</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter defines whether the limit checking feature in the ADC driver is enabled or disabled.
+
+True: Limit checking feature is enabled.
+False: Limit checking feature is disabled.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: AdcEnableQueuing -->
+								<ECUC-BOOLEAN-PARAM-DEF UUID="51ae036d-6a68-45ed-bf64-e0da1e317d39">
+									<SHORT-NAME>AdcEnableQueuing</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter defines whether the queuing mechanism is active in case of priority mechanism diabled.
+
+True: Queuing mechanism is active in case of priority mechanism disabled
+False: Queuing mechanism is not active in case of priority mechanism disabled.</L-2>
+									</DESC>
+									<INTRODUCTION>
+										<P>
+											<L-1 L="EN">Note: If priority mechanism is enabled, queuing mechanism is always active and the parameter ADC_ENABLE_QUEUING is not evaluated.
+                                        true: Enabled.
+                                        false: Disabled.</L-1>
+										</P>
+									</INTRODUCTION>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: AdcEnableStartStopGroupApi -->
+								<ECUC-BOOLEAN-PARAM-DEF UUID="6d68e763-73f2-4703-8515-3848ae0d2d66">
+									<SHORT-NAME>AdcEnableStartStopGroupApi</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter defines whether the functions Adc_StartGroupConversion() and Adc_StopGroupConversion() are enabled or disabled.
+
+True: APIs Adc_StartGroupConversion() and Adc_StopGroupConversion() are supported (functions provided)
+False: APIs Adc_StartGroupConversion() and Adc_StopGroupConversion() are not supported (functions not provided)</L-2>
+									</DESC>
+									<INTRODUCTION>
+										<P>
+											<L-1 L="EN">true: Adc_StartGroupConversion() and Adc_StopGroupConversion() can be used.
+                                        false: Adc_StartGroupConversion() and Adc_StopGroupConversion() can not be used.</L-1>
+										</P>
+									</INTRODUCTION>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>true</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: AdcGrpNotifCapability -->
+								<ECUC-BOOLEAN-PARAM-DEF UUID="29755aa2-d9cd-43cf-ad85-6218fa641c72">
+									<SHORT-NAME>AdcGrpNotifCapability</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter defines whether the the group notification mechanism (the functions to enable and disable the notifications) is available at runtime.
+
+True: Group notification mechanism is available at runtime
+False: Group notification mechanism is not available at runtime</L-2>
+									</DESC>
+									<INTRODUCTION>
+										<P>
+											<L-1 L="EN">true: Enabled.
+                                        false: Disabled.</L-1>
+										</P>
+									</INTRODUCTION>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>true</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: AdcHwTriggerApi -->
+								<ECUC-BOOLEAN-PARAM-DEF UUID="61fb700b-6963-478e-a3a6-12001d61f586">
+									<SHORT-NAME>AdcHwTriggerApi</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter defines whether the functions Adc_EnableHardwareTrigger() and Adc_DisableHardwareTrigger() are enabled or disabled.
+
+True: APIs Adc_EnableHardwareTrigger() and Adc_DisableHardwareTrigger() are supported (functions provided)
+False: APIs Adc_EnableHardwareTrigger() and Adc_DisableHardwareTrigger() are not supported (functions not provided)</L-2>
+									</DESC>
+									<INTRODUCTION>
+										<P>
+											<L-1 L="EN">true: Adc_EnableHardwareTrigger() and Adc_DisableHardwareTrigger() can be used.
+                                        false: Adc_EnableHardwareTrigger() and Adc_DisableHardwareTrigger() can not be used.</L-1>
+										</P>
+									</INTRODUCTION>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>true</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: AdcPriorityImplementation -->
+								<ECUC-ENUMERATION-PARAM-DEF UUID="c70fdea7-fdd8-4601-87d0-26b51ff4c487">
+									<SHORT-NAME>AdcPriorityImplementation</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter defines whether a priority mechanism is available for prioritization of the conversion requests and if available, the type of prioritization mechanism. The selection applies for groups with trigger source software and trigger source hardware. 
+
+ADC_PRIORITY_HW: Hardware priority mechanism is available only.
+ADC_PRIORITY_HW_SW: Hardware and software priority mechanism is available.
+ADC_PRIORITY_NONE: Priority mechanism is not available.</L-2>
+									</DESC>
+									<INTRODUCTION>
+										<P>
+											<L-1 L="EN">types of prioritization mechanism can be selected. The hardware prioritization mechanism (AdcPriorityHw) uses the ADC hardware features for prioritization of the software conversion requests and hardware trigger signals for groups with trigger source hardware. The mixed hardware and software prioritization mechanism (AdcPriorityHwSw) uses the ADC hardware features for prioritization of ADC hardware trigger for groups with trigger source hardware and a software implemented prioritization mechanism for groups with trigger source software. The group priorities for software triggered groups are typically configured with lower priority levels than the group priorities for hardware triggered groups.
+
+                                        ImplementationType: Adc_PriorityImplementationType</L-1>
+										</P>
+									</INTRODUCTION>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>ADC_PRIORITY_HW</DEFAULT-VALUE>
+									<LITERALS>
+										<ECUC-ENUMERATION-LITERAL-DEF UUID="2cbea3c5-f9a3-46dd-a056-45ae5751b6b6">
+											<SHORT-NAME>ADC_PRIORITY_HW</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">HW priority</L-4>
+											</LONG-NAME>
+										</ECUC-ENUMERATION-LITERAL-DEF>
+										<ECUC-ENUMERATION-LITERAL-DEF UUID="219a380e-2240-4add-9847-e2ccf79d07da">
+											<SHORT-NAME>ADC_PRIORITY_HW_SW</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">HW and SW Priority</L-4>
+											</LONG-NAME>
+										</ECUC-ENUMERATION-LITERAL-DEF>
+										<ECUC-ENUMERATION-LITERAL-DEF UUID="873c24e3-a5b3-44c9-968a-8c303cab7833">
+											<SHORT-NAME>ADC_PRIORITY_NONE</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">No priority</L-4>
+											</LONG-NAME>
+										</ECUC-ENUMERATION-LITERAL-DEF>
+									</LITERALS>
+								</ECUC-ENUMERATION-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: AdcReadGroupApi -->
+								<ECUC-BOOLEAN-PARAM-DEF UUID="bfe6b6d9-8791-4630-8ad3-64e72168a4c0">
+									<SHORT-NAME>AdcReadGroupApi</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter defines whether the function Adc_ReadGroup() is enabled or disabled.
+
+True: API Adc_ReadGroup() is supported (function provided)
+False: API Adc_ReadGroup() is not supported (function not provided)</L-2>
+									</DESC>
+									<INTRODUCTION>
+										<P>
+											<L-1 L="EN">true: Adc_ReadGroup() can be used.
+                                        false: Adc_ReadGroup() can not be used.</L-1>
+										</P>
+									</INTRODUCTION>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>true</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: AdcResultAlignment -->
+								<ECUC-ENUMERATION-PARAM-DEF UUID="d734966b-934a-46aa-b730-cef59b0c5d77">
+									<SHORT-NAME>AdcResultAlignment</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter defines the alignment of ADC raw results in ADC result buffer.
+
+ADC_ALIGN_LEFT: Left alignment
+ADC_ALIGN_RIGH: Right alignment</L-2>
+									</DESC>
+									<INTRODUCTION>
+										<P>
+											<L-1 L="EN">Implementation Type: Adc_ResultAlignmentType</L-1>
+										</P>
+									</INTRODUCTION>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>ADC_ALIGN_RIGHT</DEFAULT-VALUE>
+									<LITERALS>
+										<ECUC-ENUMERATION-LITERAL-DEF UUID="612c14a9-e3a2-4f03-92a4-228b2c4876d4">
+											<SHORT-NAME>ADC_ALIGN_LEFT</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">Left</L-4>
+											</LONG-NAME>
+										</ECUC-ENUMERATION-LITERAL-DEF>
+										<ECUC-ENUMERATION-LITERAL-DEF UUID="e966354c-666c-43bb-a69f-24ffa1fc57b5">
+											<SHORT-NAME>ADC_ALIGN_RIGHT</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">Right</L-4>
+											</LONG-NAME>
+										</ECUC-ENUMERATION-LITERAL-DEF>
+									</LITERALS>
+								</ECUC-ENUMERATION-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: AdcVersionInfoApi -->
+								<ECUC-BOOLEAN-PARAM-DEF UUID="50d85985-c108-48f7-b7b5-2cb08bea2c25">
+									<SHORT-NAME>AdcVersionInfoApi</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter enables/disables the function Adc_GetVersionInfo() to get major, minor and patch version information.</L-2>
+									</DESC>
+									<INTRODUCTION>
+										<P>
+											<L-1 L="EN">true: Adc_GetVersionInfo() can be used.
+                                        false: Adc_GetVersionInfor() can not be used.</L-1>
+										</P>
+									</INTRODUCTION>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="b8bf7fdc-add1-409b-b195-c43033088e80">
+									<SHORT-NAME>AdcSafeBswChecks</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Selects if safety checks are used. These checks improve robustness as e.g. invalid parameters are checked before function is executed. This attribute has to be enabled for safety projects where this component is mapped to an ASIL partition.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+							</PARAMETERS>
+						</ECUC-PARAM-CONF-CONTAINER-DEF>
+						<!-- Container Definition: AdcPublishedInformation -->
+						<ECUC-PARAM-CONF-CONTAINER-DEF UUID="f8995e77-5c05-4b0b-ab62-2ff58bb67227">
+							<SHORT-NAME>AdcPublishedInformation</SHORT-NAME>
+							<DESC>
+								<L-2 L="EN">This container includes additional published parameters not covered by CommonPublishedInformation container.</L-2>
+							</DESC>
+							<ADMIN-DATA>
+								<SDGS>
+									<SDG GID="DV:CfgPostBuild">
+										<SD GID="DV:postBuildSelectableChangeable">false</SD>
+										<SD GID="DV:postBuildNotDeletable">false</SD>
+									</SDG>
+								</SDGS>
+							</ADMIN-DATA>
+							<INTRODUCTION>
+								<P>
+									<L-1 L="EN">Note that these parameters do not have any configuration class setting, since they are published information.</L-1>
+								</P>
+							</INTRODUCTION>
+							<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+							<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+							<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+							<MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+							<PARAMETERS>
+								<!-- PARAMETER DEFINITION: AdcChannelValueSigned -->
+								<ECUC-BOOLEAN-PARAM-DEF UUID="97e78140-aaa2-4681-9210-37fc7118e2fe">
+									<SHORT-NAME>AdcChannelValueSigned</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Adc Channel Value Signed</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter defines whether the result value of the ADC driver has signed information (true) or not (false). If the result shall be interpreted as signed value it shall apply to C-language rules.
+
+True: result value of ADC driver has a signed information.
+False: result value of ADC driver has a unsigned information.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PUBLISHED-INFORMATION</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: AdcGroupFirstChannelFixed -->
+								<ECUC-BOOLEAN-PARAM-DEF UUID="4810d045-529e-422a-932f-78e4a8421164">
+									<SHORT-NAME>AdcGroupFirstChannelFixed</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">First Channel Fixed</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter defines whether the first channel of an ADC Channel group can be configured or is fixed to a value determined by the ADC HW Unit.
+
+True: First channel of an ADC Channel group is fixed to a value determined by the ADC HW Unit.
+False: First channel of an ADC Channel group can be configured to a value determined by the ADC HW Unit.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PUBLISHED-INFORMATION</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<!-- PARAMETER DEFINITION: AdcMaxChannelResolution -->
+								<ECUC-INTEGER-PARAM-DEF UUID="63744215-9cdd-4849-af32-a194308302ff">
+									<SHORT-NAME>AdcMaxChannelResolution</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter defines the maximum channel resolution in bits (does not specify accuracy).</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:BaseUnit">BIT</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PUBLISHED-INFORMATION</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>32</DEFAULT-VALUE>
+									<MAX>32</MAX>
+									<MIN>32</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+							</PARAMETERS>
+						</ECUC-PARAM-CONF-CONTAINER-DEF>
+					</CONTAINERS>
+				</ECUC-MODULE-DEF>
+				<BSW-IMPLEMENTATION UUID="6c5496fa-c4de-418d-bccc-14d5d1e8e1b6">
+					<SHORT-NAME>Adc_Impl</SHORT-NAME>
+					<PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+					<SW-VERSION>2.05.00</SW-VERSION>
+					<USED-CODE-GENERATOR>cMSR</USED-CODE-GENERATOR>
+					<VENDOR-ID>30</VENDOR-ID>
+					<AR-RELEASE-VERSION>4.00.03</AR-RELEASE-VERSION>
+					<PRECONFIGURED-CONFIGURATION-REFS>
+						<PRECONFIGURED-CONFIGURATION-REF DEST="ECUC-MODULE-CONFIGURATION-VALUES">/MICROSAR/Adc_Pre</PRECONFIGURED-CONFIGURATION-REF>
+					</PRECONFIGURED-CONFIGURATION-REFS>
+					<RECOMMENDED-CONFIGURATION-REFS>
+						<RECOMMENDED-CONFIGURATION-REF DEST="ECUC-MODULE-CONFIGURATION-VALUES">/MICROSAR/Adc_Rec</RECOMMENDED-CONFIGURATION-REF>
+					</RECOMMENDED-CONFIGURATION-REFS>
+					<VENDOR-SPECIFIC-MODULE-DEF-REFS>
+						<VENDOR-SPECIFIC-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/MICROSAR/Adc</VENDOR-SPECIFIC-MODULE-DEF-REF>
+					</VENDOR-SPECIFIC-MODULE-DEF-REFS>
+				</BSW-IMPLEMENTATION>
+				<ECUC-MODULE-CONFIGURATION-VALUES UUID="87252f46-bec1-444c-a2e0-b920817373f7">
+					<SHORT-NAME>Adc_Pre</SHORT-NAME>
+					<DEFINITION-REF DEST="ECUC-MODULE-DEF">/MICROSAR/Adc</DEFINITION-REF>
+					<IMPLEMENTATION-CONFIG-VARIANT>VARIANT-PRE-COMPILE</IMPLEMENTATION-CONFIG-VARIANT>
+					<CONTAINERS />
+				</ECUC-MODULE-CONFIGURATION-VALUES>
+				<ECUC-MODULE-CONFIGURATION-VALUES UUID="a1f8181a-e578-4be0-a422-6876a3fc69e6">
+					<SHORT-NAME>Adc_Rec</SHORT-NAME>
+					<DEFINITION-REF DEST="ECUC-MODULE-DEF">/MICROSAR/Adc</DEFINITION-REF>
+					<CONTAINERS />
+				</ECUC-MODULE-CONFIGURATION-VALUES>
+			</ELEMENTS>
+		</AR-PACKAGE>
+	</AR-PACKAGES>
+</AUTOSAR>

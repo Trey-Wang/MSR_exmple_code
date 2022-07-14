@@ -1,0 +1,1644 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2009 sp1 (http://www.altova.com) by Vector Employee (Vector Informatik GmbH) -->
+<AUTOSAR xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-0-3.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://autosar.org/schema/r4.0">
+	<AR-PACKAGES>
+		<AR-PACKAGE UUID="ac3ee8d8-c1c5-4309-8502-d1d087a88072">
+			<SHORT-NAME>MICROSAR</SHORT-NAME>
+			<ELEMENTS>
+				<ECUC-MODULE-DEF UUID="587f21bf-6413-4db9-8b43-b970f4a5317f">
+					<SHORT-NAME>Tls</SHORT-NAME>
+					<DESC>
+						<L-2 L="EN">Configuration of the Transport Layer Security (Tls).</L-2>
+					</DESC>
+					<CATEGORY>VENDOR_SPECIFIC_MODULE_DEFINITION</CATEGORY>
+					<ADMIN-DATA>
+						<DOC-REVISIONS>
+							<DOC-REVISION>
+								<REVISION-LABEL>2.02.00</REVISION-LABEL>
+								<STATE>beta</STATE>
+								<ISSUED-BY>visal</ISSUED-BY>
+								<DATE>2012-10-02T02:28:54+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">implement TLS prot 1.2, add sha256 CipherSuites, add ECDHE CipherSuites, add ASR4 support</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00060860, ESCAN00060862, ESCAN00061183, ESCAN00061889</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>2.02.01</REVISION-LABEL>
+								<STATE>beta</STATE>
+								<ISSUED-BY>visal</ISSUED-BY>
+								<DATE>2012-12-21T02:40:24+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">impl bugfix</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00063867</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>2.03.00</REVISION-LABEL>
+								<STATE>beta</STATE>
+								<ISSUED-BY>vismha</ISSUED-BY>
+								<DATE>2013-03-07T01:14:15+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">added parameter for connection pass through support</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>2.03.01</REVISION-LABEL>
+								<STATE>beta</STATE>
+								<ISSUED-BY>visal</ISSUED-BY>
+								<DATE>2013-07-19T12:18:37+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">impl bugfix</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00068917</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>2.03.02</REVISION-LABEL>
+								<STATE>beta</STATE>
+								<ISSUED-BY>vismha</ISSUED-BY>
+								<DATE>2013-08-06T03:22:49+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">ESCAN00069634</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>2.03.03</REVISION-LABEL>
+								<STATE>beta</STATE>
+								<ISSUED-BY>visal</ISSUED-BY>
+								<DATE>2013-10-09T04:58:47+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">impl bugfixes</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00070984, ESCAN00070860, ESCAN00070194</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>2.03.04</REVISION-LABEL>
+								<STATE>beta</STATE>
+								<ISSUED-BY>visal</ISSUED-BY>
+								<DATE>2014-01-10T04:13:16+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">impl bugfixes</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00072818</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>2.03.05</REVISION-LABEL>
+								<STATE>beta</STATE>
+								<ISSUED-BY>visal</ISSUED-BY>
+								<DATE>2014-03-06T01:09:54+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">code rework, bugfix</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00053453, ESCAN00073262, ESCAN00073854</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>2.04.00</REVISION-LABEL>
+								<STATE>beta</STATE>
+								<ISSUED-BY>vismha</ISSUED-BY>
+								<DATE>2014-03-14T09:55:57+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">additional parameters introduced</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00073687, ESCAN00073688</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>3.00.00</REVISION-LABEL>
+								<STATE>beta</STATE>
+								<ISSUED-BY>vissop</ISSUED-BY>
+								<DATE>2014-06-24T05:33:19+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Update generator to ASR4 R9</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00076410, ESCAN00077253</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>3.01.00</REVISION-LABEL>
+								<STATE>beta</STATE>
+								<ISSUED-BY>vissop</ISSUED-BY>
+								<DATE>2014-12-16T04:50:07+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Add OCSP, Fix ServerRootCertContainer name</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00080322, ESCAN00079284</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>4.00.00</REVISION-LABEL>
+								<STATE>beta</STATE>
+								<ISSUED-BY>visefa</ISSUED-BY>
+								<DATE>2015-07-16T11:00:00+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Adaptation for MSR3 and MSR4R12+</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">MSR12</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>4.00.01</REVISION-LABEL>
+								<STATE>beta</STATE>
+								<ISSUED-BY>visal</ISSUED-BY>
+								<DATE>2015-12-10T03:47:34+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">impl bugfixes</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00057863</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>4.01.00</REVISION-LABEL>
+								<STATE>beta</STATE>
+								<ISSUED-BY>visphh</ISSUED-BY>
+								<DATE>2015-12-07T05:09:29+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Update to R14</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00087196, ESCAN00088558</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>5.00.00</REVISION-LABEL>
+								<STATE>beta</STATE>
+								<ISSUED-BY>visfdn</ISSUED-BY>
+								<DATE>2016-03-03T04:27:39+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Update to R15</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00088717: FEAT-1347: TLS as TcpIp plug-in</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>5.01.00</REVISION-LABEL>
+								<STATE>beta</STATE>
+								<ISSUED-BY>visal</ISSUED-BY>
+								<DATE>2016-04-01T10:21:59+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Update to R15plus</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00087707 FEAT-1741: new TLS cipher suite TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>5.01.01</REVISION-LABEL>
+								<STATE>beta</STATE>
+								<ISSUED-BY>visal</ISSUED-BY>
+								<DATE>2016-05-24T01:51:24+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Implment support of CRL</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">FEAT-1741: Support server certificate validation using Certificate Revocation Lists (CRL)</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>5.01.02</REVISION-LABEL>
+								<STATE>beta</STATE>
+								<ISSUED-BY>visal</ISSUED-BY>
+								<DATE>2016-10-21T10:52:59+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">bugfixes</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00092050, ESCAN00092323</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>6.00.00</REVISION-LABEL>
+								<STATE>beta</STATE>
+								<ISSUED-BY>visal</ISSUED-BY>
+								<DATE>2016-10-21T01:40:36+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">R17</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00092438, ESCAN00092440, ESCAN00092441, ESCAN00092442, ESCAN00092445</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>6.00.01</REVISION-LABEL>
+								<STATE>beta</STATE>
+								<ISSUED-BY>visal</ISSUED-BY>
+								<DATE>2016-12-22T04:27:21+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">bugfixes</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00093081</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>7.00.00</REVISION-LABEL>
+								<STATE>release</STATE>
+								<ISSUED-BY>visal</ISSUED-BY>
+								<DATE>2017-02-14T02:38:10+01:00</DATE>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>7.00.01</REVISION-LABEL>
+								<STATE>release</STATE>
+								<ISSUED-BY>visal</ISSUED-BY>
+								<DATE>2017-04-24T10:21:24+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">bugfix</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00094627, ESCAN00094201, ESCAN00094649, ESCAN00094712</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>7.01.00</REVISION-LABEL>
+								<STATE>release</STATE>
+								<ISSUED-BY>visal</ISSUED-BY>
+								<DATE>2017-04-28T10:54:52+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">R18 + FEAT-2889</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">FEAT-2889, ESCAN00089790</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>7.02.00</REVISION-LABEL>
+								<STATE>release</STATE>
+								<ISSUED-BY>visal</ISSUED-BY>
+								<DATE>2017-05-16T04:16:17+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">R18 + 2 Story-C</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">STORYC-592, STORYC-638</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+						</DOC-REVISIONS>
+					</ADMIN-DATA>
+					<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+					<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+					<SUPPORTED-CONFIG-VARIANTS>
+						<SUPPORTED-CONFIG-VARIANT>VARIANT-PRE-COMPILE</SUPPORTED-CONFIG-VARIANT>
+					</SUPPORTED-CONFIG-VARIANTS>
+					<CONTAINERS>
+						<ECUC-PARAM-CONF-CONTAINER-DEF UUID="bc596e17-8871-4a4d-a967-7a57db697e1c">
+							<SHORT-NAME>TlsGeneral</SHORT-NAME>
+							<ADMIN-DATA>
+								<SDGS>
+									<SDG GID="DV:CfgPostBuild">
+										<SD GID="DV:postBuildSelectableChangeable">false</SD>
+										<SD GID="DV:postBuildNotDeletable">false</SD>
+									</SDG>
+								</SDGS>
+							</ADMIN-DATA>
+							<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+							<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+							<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+							<PARAMETERS>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="ee0af73a-62d9-454f-a7a3-e4433fd18745">
+									<SHORT-NAME>TlsDevErrorDetect</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Dev Error Detect</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">If 'Development Error Detection' is enabled, all development errors are reported to the Development Error Tracer (DET). The errors are described in the [TechnicalReference_Asr_Tls.pdf].
+
+Note: In general, the development error detection is recommended during pre-test phase. It is not recommended to enable the development error detection in production code due to increased runtime and ROM needs.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>true</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="3040a8f7-8f9e-4c62-91cd-ea445a07efc8">
+									<SHORT-NAME>TlsVersionInfoApi</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Version Info API</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">If 'TlsVersionInfoApi' is enabled, the function Tls_GetVersionInfo() is available to get major, minor and patch version information.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="171e8aac-3b4b-42eb-8656-a8093e4d51f2">
+									<SHORT-NAME>TlsProdErrorDetect</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Prod Error Detect</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">If 'Production Error Detection' is enabled, production relevant errors are reported to the Diagnostics Event Manager (DEM).
+Disable this option, if no DEM is present in your system.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>true</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-STRING-PARAM-DEF UUID="c232ce4f-2904-4549-9ee7-0548e1faec77">
+									<SHORT-NAME>TlsUserConfigFile</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">User Config File</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">If a file path will be specified, the file is read and its contents are put at the end of the Tls config file.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:variantMultiplicityPBL">false</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+								</ECUC-STRING-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="2c769157-f754-423e-8a22-aa1e55c0ceb7">
+									<SHORT-NAME>TlsVersionInfoApiMacro</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Version Info API Macro</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">If 'TlsVersionInfoApiMacro' is enabled, macro will be used to get major, minor and patch version information.
+
+RESTRICTIONS: 'TlsVersionInfoApiMacro' is only available, if 'TlsVersionInfoApi' is set to 'true'.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="19494e97-736e-4bab-8ee1-0acf9773d5e6">
+									<SHORT-NAME>TlsRsaWithAes128CbcSha</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">TLS_RSA_WITH_AES_128_CBC_SHA</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">If 'TlsRsaWithAes128CbcSha' is enabled, TLS_RSA_WITH_AES_128_CBC_SHA ciphersuite is supported.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>true</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="02f458e9-23ee-4006-9d40-2a275943b714">
+									<SHORT-NAME>TlsRsaWithNullSha</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">TLS_RSA_WITH_NULL_SHA</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">If 'TlsRsaWithNullSha' is enabled, TLS_RSA_WITH_NULL_SHA ciphersuite is supported.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>true</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="00398f76-359b-478e-b082-4668cde2b3ff">
+									<SHORT-NAME>TlsEnableClientCertSupport</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Enable Client Certificate Support</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">If 'TlsEnableClientCertSupport' is enabled, Client-authenticated TLS handshake will be possible.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>true</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-INTEGER-PARAM-DEF UUID="ef7794e1-49dd-445b-9ccb-5a1b3120223d">
+									<SHORT-NAME>TlsMaxServRsaPubKeyExpSize</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Maximum Server RSA Pbulic Key Exponent Size</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">Maximum RSA Public Key Exponent Size supported for Servers Certificate in Byte</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>3</DEFAULT-VALUE>
+									<MAX>256</MAX>
+									<MIN>1</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<ECUC-INTEGER-PARAM-DEF UUID="19110bff-c525-4b8d-aa16-481d26a116e8">
+									<SHORT-NAME>TlsMaxServPubKeySize</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Maximum Server RSA or ECC Key Size</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">Maximum RSA Public Key Modulus Size or ECC Key Size supported for Servers Certificate in Byte. ECC key size is currently fixed to 64 Byte.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>256</DEFAULT-VALUE>
+									<MAX>256</MAX>
+									<MIN>64</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<ECUC-STRING-PARAM-DEF UUID="fa1fe3d7-9a19-49a2-a6d9-bd3c8afbaa1a">
+									<SHORT-NAME>TlsRandArrayFct</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Random Array Function</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">Random number generator used by TLS</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<ECUC-STRING-PARAM-DEF-VARIANTS>
+										<ECUC-STRING-PARAM-DEF-CONDITIONAL>
+											<DEFAULT-VALUE>Appl_Crypto_GetRandArray</DEFAULT-VALUE>
+										</ECUC-STRING-PARAM-DEF-CONDITIONAL>
+									</ECUC-STRING-PARAM-DEF-VARIANTS>
+								</ECUC-STRING-PARAM-DEF>
+								<ECUC-STRING-PARAM-DEF UUID="d62003a6-5f56-4dd7-bd52-3291436e140c">
+									<SHORT-NAME>TlsRandFctIncludeFile</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Random Function Include File</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">Random number generator include file</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<ECUC-STRING-PARAM-DEF-VARIANTS>
+										<ECUC-STRING-PARAM-DEF-CONDITIONAL>
+											<DEFAULT-VALUE>Appl_Rand.h</DEFAULT-VALUE>
+										</ECUC-STRING-PARAM-DEF-CONDITIONAL>
+									</ECUC-STRING-PARAM-DEF-VARIANTS>
+								</ECUC-STRING-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="f3217d5f-36c1-48a8-9b13-eb1f83c089df">
+									<SHORT-NAME>TlsEcdhEcdsaWithAes128CbcSha</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">If 'TlsEcdhEcdsaWithAes128CbcSha' is enabled, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA ciphersuite is supported.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>true</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-STRING-PARAM-DEF UUID="9aae83ca-3c56-49d7-810c-3f9006e2e34d">
+									<SHORT-NAME>TlsTime32Fct</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Time Function</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">Time function used by TLS to get the current time as uint32</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<ECUC-STRING-PARAM-DEF-VARIANTS>
+										<ECUC-STRING-PARAM-DEF-CONDITIONAL>
+											<DEFAULT-VALUE>Appl_TlsGetTime32</DEFAULT-VALUE>
+										</ECUC-STRING-PARAM-DEF-CONDITIONAL>
+									</ECUC-STRING-PARAM-DEF-VARIANTS>
+								</ECUC-STRING-PARAM-DEF>
+								<ECUC-STRING-PARAM-DEF UUID="1bd0f237-be72-4d05-ad78-21370cd7b046">
+									<SHORT-NAME>TlsTime32IncludeFile</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Time Function Include File</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">Time function include file</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<ECUC-STRING-PARAM-DEF-VARIANTS>
+										<ECUC-STRING-PARAM-DEF-CONDITIONAL>
+											<DEFAULT-VALUE>Appl_Time.h</DEFAULT-VALUE>
+										</ECUC-STRING-PARAM-DEF-CONDITIONAL>
+									</ECUC-STRING-PARAM-DEF-VARIANTS>
+								</ECUC-STRING-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="9a49b11b-8be2-4a31-b7fa-d0b84a247f45">
+									<SHORT-NAME>TlsRealTimeClockSupport</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Real Time Clock Support</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">If 'TlsRealTimeClockSupport' is enabled, certificates valid dates will be checked.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>true</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-INTEGER-PARAM-DEF UUID="74087471-49e6-4cd9-aee5-bdd7b4d19849">
+									<SHORT-NAME>TlsNvmExchData</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">NvM Exchange Data Buffer Size [byte]</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">Buffer for NvM data exchange. Value should be the size of the largest TLS NvM block.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>0</DEFAULT-VALUE>
+									<MAX>65535</MAX>
+									<MIN>0</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="9fab318b-c475-46bb-ae1e-aa6572b8292b">
+									<SHORT-NAME>TlsRsaWithAes128CbcSha256</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">TLS_RSA_WITH_AES_128_CBC_SHA_256</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">If 'TlsRsaWithAes128CbcSha256' is enabled, TLS_RSA_WITH_AES_128_CBC_SHA256 ciphersuite is supported.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>true</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="3a9836b0-ed58-4913-b24e-552765b630cc">
+									<SHORT-NAME>TlsEcdhEcdsaWithAes128CbcSha256</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA_256</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">If 'TlsEcdhEcdsaWithAes128CbcSha256' is enabled, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA256 ciphersuite is supported.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>true</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="19311287-fb7d-42a3-87b3-9ea6a28cca92">
+									<SHORT-NAME>TlsEnableProtocolVer1_0</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Enable Protocol Version 1.0</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">If 'TlsEnableProtocolVer1_0' is enabled, TLS is able to establish a TLS connection using protocol version 1.0.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>true</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="b7bc33bf-aafb-4bb3-86a0-f595776634ad">
+									<SHORT-NAME>TlsEnableProtocolVer1_2</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Enable Protocol Version 1.2</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">If 'TlsEnableProtocolVer1_2' is enabled, TLS is able to establish a TLS connection using protocol version 1.2.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="505c8c30-b842-4ebc-a59d-51897c7a4aea">
+									<SHORT-NAME>TlsRsaWithNullSha256</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">TLS_RSA_WITH_NULL_SHA_256</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">If 'TlsRsaWithNullSha256' is enabled, TLS_RSA_WITH_NULL_SHA256 ciphersuite is supported.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>true</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="16c44a02-f194-4b15-96e3-3889016f3013">
+									<SHORT-NAME>TlsEcdhEcdsaWithNullSha</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">TLS_ECDH_ECDSA_WITH_NULL_SHA</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">If 'TlsEcdhEcdsaWithNullSha' is enabled, TLS_ECDH_ECDSA_WITH_NULL_SHA ciphersuite is supported.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>true</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-FLOAT-PARAM-DEF UUID="1402871c-707b-4971-b612-704cb10e7b9b">
+									<SHORT-NAME>TlsMainFunctionPeriod</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Main Function Period</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">Specifies the period that the MainFunction has to be triggered with.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:BaseUnit">SEC</SD>
+												<SD GID="DV:Unit">MSEC</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>0.005</DEFAULT-VALUE>
+									<MAX>30</MAX>
+									<MIN>0.001</MIN>
+								</ECUC-FLOAT-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="9a96fb65-4345-40e7-a472-8837056c3633">
+									<SHORT-NAME>TlsEcdheEcdsaWithAes128CbcSha</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">If 'TlsEcdheEcdsaWithAes128CbcSha' is enabled, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA ciphersuite is supported.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>true</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="6be6b9de-fb52-417d-8c5e-df6b53995ee9">
+									<SHORT-NAME>TlsEcdheEcdsaWithAes128CbcSha256</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">If 'TlsEcdheEcdsaWithAes128CbcSha256' is enabled, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256 ciphersuite is supported.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>true</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="94951392-18dd-4997-8c9f-99c7713974d3">
+									<SHORT-NAME>TlsSupportGetNvmBlockIdForUsedRootCert</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Enable Get NvM Block ID of used Root Cert API</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">Enable an API to read the NVM block id of the root certificate used to validate the server certificate (received in the ServerCertificate message).</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="5e8a2075-6c4a-463c-bb54-9916b9140421">
+									<SHORT-NAME>TlsSupportRootCertUpdate</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Enable Root Certificate Update Indication API</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">Enable an API to inform TLS that an NVM block containing a TLS root certificate was updated. TLS then will update its internal certificate descriptor for this root certificate.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="25d4053f-04e2-40de-a6b9-63c4ab83ddd3">
+									<SHORT-NAME>TlsEnableSccErrorEventCbk</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Enable SCC Error Event Callback</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">Enable a special error event indication to the module SCC. SCC has to implement a corresponding Callback API.
+
+Note: This may only be relevant for a charger environment ECU for electric vehicles that implements the Vector module SCC. The use may be OEM specific.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="55113d58-012b-431e-8110-7a35da4d40cd">
+									<SHORT-NAME>TlsOcspEnable</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">OCSP Enable</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">Enable support for OCSP. TLS implements the so-called 'OCSP stapling' according to RFC 6066 chapter 8 and RFC 2560 / 6960. This mechanism is used to check the validity of received certificates.
+
+Note: OCSP has to be enabled for each connection to work on a specific connection.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-INTEGER-PARAM-DEF UUID="bc036e8a-6722-4beb-8a0c-765499be5610">
+									<SHORT-NAME>TlsOcspMaxCertChainLen</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">OCSP Max Certificate Chain Length</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">Maximum length of the certificate chain received in the handshake message 'server_certificate'</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:DefaultFormat">DEC</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>3</DEFAULT-VALUE>
+									<MAX>255</MAX>
+									<MIN>0</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<ECUC-INTEGER-PARAM-DEF UUID="d1d5d491-250a-44e9-990e-1a77ba9e9558">
+									<SHORT-NAME>TlsAssumedTimePrecision</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Assumed Time Precision</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">Assumed precision of the local time (in seconds). Allowed values are 0 to 4000. The precision value is needed for comparison with received timestamps during the handshake.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:BaseUnit">SEC</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>60</DEFAULT-VALUE>
+									<MAX>4000</MAX>
+									<MIN>0</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="f0983439-9e0a-49d7-806c-fc5429eeabed">
+									<SHORT-NAME>TlsEcdheEcdsaWithAes128GcmSha256</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">If 'TlsEcdheEcdsaWithAes128GcmSha256' is enabled, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256 ciphersuite is supported.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>true</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="d5ce8b41-84ce-4294-b5d6-459159367c3a">
+									<SHORT-NAME>TlsCrlEnable</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">CRL Enable</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">Enable support for CRL (Certificate Revocation List). TLS implements CRL according to RFC 5280 chapter 5. This mechanism is used to check the validity of received certificates.
+
+Note: Only the validity of the server certificate is checked, not the validity of any other element of the certificate chain!</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-INTEGER-PARAM-DEF UUID="86818687-d67e-45ee-b27d-6e7ad05b4f26">
+									<SHORT-NAME>TlsCrlNvmExchData</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">CRL NvM Exchange Data Buffer Size [byte]</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">Buffer for NvM data exchange used for CRLs. Value should be the size of the largest TLS CRL NvM block.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>0</DEFAULT-VALUE>
+									<MAX>65535</MAX>
+									<MIN>0</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<ECUC-INTEGER-PARAM-DEF UUID="b257239f-429a-4bb2-a945-0a0ef25b95e5">
+									<SHORT-NAME>TlsHeartbeatPeriod</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Heartbeat Period Default Value</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">TLS implements the so-called 'TLS Heartbeat Extension' according to RFC 6520. This mechanism is used to check if the connection is still alive.
+
+This paraneter specifies the default sending period for the heartbeat. The default period can be overwritten by a call of Tls_ChangeParameter. The time is given in seconds.
+If this config parameter exists then the feature is enabled, otherwise it is disabled.
+
+Note: In addition to this global setting, the heartbeat has to be enabled for each connection to work on a specific connection during runtime.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:BaseUnit">SEC</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>20</DEFAULT-VALUE>
+									<MAX>3600</MAX>
+									<MIN>1</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="1afbab2b-dacd-4117-b2db-47159f3a99ae">
+									<SHORT-NAME>TlsSupportMasterSecretAccess</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Support Master Secret Access</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">Enabling this feature grants access to the TLS master secret via an API.
+
+Warning: This feature has to be disabled for any productive code due to security reasons!</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+							</PARAMETERS>
+						</ECUC-PARAM-CONF-CONTAINER-DEF>
+						<ECUC-PARAM-CONF-CONTAINER-DEF UUID="6f32e585-069a-4633-abe7-af6185de8825">
+							<SHORT-NAME>TlsConfigSet</SHORT-NAME>
+							<ADMIN-DATA>
+								<SDGS>
+									<SDG GID="DV:CfgPostBuild">
+										<SD GID="DV:postBuildSelectableChangeable">false</SD>
+										<SD GID="DV:postBuildNotDeletable">false</SD>
+									</SDG>
+								</SDGS>
+							</ADMIN-DATA>
+							<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+							<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+							<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+							<SUB-CONTAINERS>
+								<ECUC-PARAM-CONF-CONTAINER-DEF UUID="9cd07e1e-514b-4c6c-921d-cdcf4c91ad78">
+									<SHORT-NAME>TlsConnectionConfig</SHORT-NAME>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:postBuildSelectableChangeable">false</SD>
+												<SD GID="DV:postBuildNotDeletable">false</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+									<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+									<PARAMETERS>
+										<ECUC-INTEGER-PARAM-DEF UUID="81d8cb0c-e893-4a25-bb25-8938dbc92061">
+											<SHORT-NAME>TlsConnectionId</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">Connection Index</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">Tls Connection Id</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>0</DEFAULT-VALUE>
+											<MAX>255</MAX>
+											<MIN>0</MIN>
+										</ECUC-INTEGER-PARAM-DEF>
+										<ECUC-INTEGER-PARAM-DEF UUID="24e56926-c674-4d86-aac9-0d45aab7679f">
+											<SHORT-NAME>TlsRxMaxPayloadSize</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">RX Max Payload Size</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">The size of the buffer were the TLS record layer payload is collected until all record layer TCP segments are received. This buffer must store the biggest possible TLS RX payload
+
+Note: TLS will stream the TCP segment data into this buffer until a complete TLS record layer is received. There for this buffer should be equal or bigger than the according TCP RX buffer.</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:Display">
+														<SD GID="DV:BaseUnit">BYTE</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>2000</DEFAULT-VALUE>
+											<MAX>65535</MAX>
+											<MIN>0</MIN>
+										</ECUC-INTEGER-PARAM-DEF>
+										<ECUC-INTEGER-PARAM-DEF UUID="f7ed1bf2-ceb0-4bdd-8b25-7235256c773b">
+											<SHORT-NAME>TlsTxMaxPayloadSize</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">TX Max Payload Size</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">The maximum payload that shall be transmitted on this connection. This value will not generate a buffer, it is only used for TCP buffer configuration to add necessary TLS overhead.
+
+Note: TLS needs to store a complete TLS message inside the TCP buffer. There for the TX payload size must be equal to the TCP TX buffer size.</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:Display">
+														<SD GID="DV:BaseUnit">BYTE</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>2000</DEFAULT-VALUE>
+											<MAX>65535</MAX>
+											<MIN>1</MIN>
+										</ECUC-INTEGER-PARAM-DEF>
+										<ECUC-BOOLEAN-PARAM-DEF UUID="b6b7833c-154a-4b55-bba1-b561d78e65b5">
+											<SHORT-NAME>TlsOcspEnableForCon</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">OCSP Enabled for this Connection</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">Enable the usage of OCSP for the specified connection</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>false</DEFAULT-VALUE>
+										</ECUC-BOOLEAN-PARAM-DEF>
+										<ECUC-INTEGER-PARAM-DEF UUID="ea559d7a-ceeb-4e1a-8f9b-58672d27946e">
+											<SHORT-NAME>TlsOcspMaxRespAge</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">OCSP Max Response Age</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">Maximum age of an OCSP response that can be accepted. It specifies the maximum difference between the current local time and the value of 'thisUpdate' in the OCSP response. This value is given in 'seconds'.
+
+Example: The ISO15118 specifies a value of 'not older than 4 weeks' (2419200 seconds).</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:Display">
+														<SD GID="DV:BaseUnit">SEC</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>2419200</DEFAULT-VALUE>
+											<MAX>2147483647</MAX>
+											<MIN>1</MIN>
+										</ECUC-INTEGER-PARAM-DEF>
+										<ECUC-INTEGER-PARAM-DEF UUID="1f4b26ef-d52e-432b-be11-c7f9aca1d249">
+											<SHORT-NAME>TlsRxMaxRecordSize</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">RX Max Record Size</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">The calculated 'RX Max Record Size' is only for notification and has no effect for the configuration (only readable).
+
+TlsRxMaxRecordSize = TlsRxMaxPayloadSize + TlsOverhead (Header, MAC and Padding)
+</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:Display">
+														<SD GID="DV:BaseUnit">BYTE</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>2053</DEFAULT-VALUE>
+											<MAX>65535</MAX>
+											<MIN>1</MIN>
+										</ECUC-INTEGER-PARAM-DEF>
+										<ECUC-INTEGER-PARAM-DEF UUID="80f3cae3-a370-46ce-abf3-76eaefde21a1">
+											<SHORT-NAME>TlsTxMaxRecordSize</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">TX Max Record Size</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">The calculated 'TX Max Record Size' is only for notification (only readable).
+
+TlsTxMaxRecordSize = TlsTxMaxPayloadSize + TlsOverhead (Header, MAC and Padding)
+
+The 'TX Max Record Size' defines together with the 'RX TCP Socket Buffer Size' which 'TcpIpTcpSocketBuffer' is used for the Tls:
+
+The 'TX Max Record Size' (Tls module) has to be the same value as the 'Socket Tx Buffer Size' (TcpIp module) and the 'RX TCP Socket Buffer Size' (Tls module) has to be the same value as the 'Socket Rx Buffer Size' (TcpIp module).</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:Display">
+														<SD GID="DV:BaseUnit">BYTE</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>2053</DEFAULT-VALUE>
+											<MAX>65535</MAX>
+											<MIN>1</MIN>
+										</ECUC-INTEGER-PARAM-DEF>
+										<ECUC-INTEGER-PARAM-DEF UUID="d6e34672-129f-41de-98b5-59919b2ef95a">
+											<SHORT-NAME>TlsTcpIpTcpSocketRxBufferSize</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">RX TCP Socket Buffer Size</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">The 'RX TCP Socket Buffer Size' defines together with the 'TX Max Record Size' which 'TcpIpTcpSocketBuffer' is used for the Tls:
+
+The 'RX TCP Socket Buffer Size' (Tls module) has to be the same value as the 'Socket Rx Buffer Size' (TcpIp module) and the 'TX Max Record Size' (Tls module) has to be the same value as the 'Socket Tx Buffer Size' (TcpIp module).</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>300</DEFAULT-VALUE>
+											<MAX>65535</MAX>
+											<MIN>1</MIN>
+										</ECUC-INTEGER-PARAM-DEF>
+									</PARAMETERS>
+								</ECUC-PARAM-CONF-CONTAINER-DEF>
+								<ECUC-PARAM-CONF-CONTAINER-DEF UUID="afcd3e67-baf1-4844-807d-cc0d99804e97">
+									<SHORT-NAME>TlsServerRootCertificateConfig</SHORT-NAME>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:postBuildSelectableChangeable">false</SD>
+												<SD GID="DV:postBuildNotDeletable">false</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+									<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+									<REFERENCES>
+										<ECUC-REFERENCE-DEF UUID="854eed59-845a-41cf-a502-523572e5f7f2">
+											<SHORT-NAME>TlsNvmBlockDescriptor</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">NvM Block Descriptor</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">Choose NvM block descriptor reference of the Server Root Certificate which is used to load and store the Certificate non-volatile data.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/NvM/NvMBlockDescriptor</DESTINATION-REF>
+										</ECUC-REFERENCE-DEF>
+									</REFERENCES>
+								</ECUC-PARAM-CONF-CONTAINER-DEF>
+								<ECUC-PARAM-CONF-CONTAINER-DEF UUID="e47860bc-6c66-4e75-ba19-2ec833337c36">
+									<SHORT-NAME>TlsCrlConfig</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Configuration for CRL (Certificate Revocation List).</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:postBuildSelectableChangeable">false</SD>
+												<SD GID="DV:postBuildNotDeletable">false</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+									<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+									<REFERENCES>
+										<ECUC-REFERENCE-DEF UUID="f2de6208-982a-4f9f-a460-e875195bb1da">
+											<SHORT-NAME>TlsCrlNvmBlockDescriptor</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">CRL NvM Block Descriptor</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">Choose NvM block descriptor reference of the stored CRL (Certificate Revocation List) which is used to load and store the CRL non-volatile data.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/NvM/NvMBlockDescriptor</DESTINATION-REF>
+										</ECUC-REFERENCE-DEF>
+									</REFERENCES>
+								</ECUC-PARAM-CONF-CONTAINER-DEF>
+							</SUB-CONTAINERS>
+						</ECUC-PARAM-CONF-CONTAINER-DEF>
+					</CONTAINERS>
+				</ECUC-MODULE-DEF>
+				<BSW-IMPLEMENTATION UUID="832276e6-b5e7-4c67-8970-c35632dc26ae">
+					<SHORT-NAME>Tls_Impl</SHORT-NAME>
+					<PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+					<SW-VERSION>8.02.00</SW-VERSION>
+					<USED-CODE-GENERATOR>DaVinci Configurator</USED-CODE-GENERATOR>
+					<VENDOR-ID>30</VENDOR-ID>
+					<AR-RELEASE-VERSION>4.00.03</AR-RELEASE-VERSION>
+					<BEHAVIOR-REF DEST="BSW-INTERNAL-BEHAVIOR">/MICROSAR/Tls_ib_bswmd/BswModuleDescriptions/Tls/TlsBehavior</BEHAVIOR-REF>
+					<PRECONFIGURED-CONFIGURATION-REFS>
+						<PRECONFIGURED-CONFIGURATION-REF DEST="ECUC-MODULE-CONFIGURATION-VALUES">/MICROSAR/Tls_Pre</PRECONFIGURED-CONFIGURATION-REF>
+					</PRECONFIGURED-CONFIGURATION-REFS>
+					<RECOMMENDED-CONFIGURATION-REFS>
+						<RECOMMENDED-CONFIGURATION-REF DEST="ECUC-MODULE-CONFIGURATION-VALUES">/MICROSAR/Tls_Rec</RECOMMENDED-CONFIGURATION-REF>
+					</RECOMMENDED-CONFIGURATION-REFS>
+					<VENDOR-SPECIFIC-MODULE-DEF-REFS>
+						<VENDOR-SPECIFIC-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/MICROSAR/Tls</VENDOR-SPECIFIC-MODULE-DEF-REF>
+					</VENDOR-SPECIFIC-MODULE-DEF-REFS>
+				</BSW-IMPLEMENTATION>
+				<ECUC-MODULE-CONFIGURATION-VALUES UUID="d81d37c2-6baa-40b3-8c42-9f769eaf30f3">
+					<SHORT-NAME>Tls_Pre</SHORT-NAME>
+					<DEFINITION-REF DEST="ECUC-MODULE-DEF">/MICROSAR/Tls</DEFINITION-REF>
+					<CONTAINERS></CONTAINERS>
+				</ECUC-MODULE-CONFIGURATION-VALUES>
+				<ECUC-MODULE-CONFIGURATION-VALUES UUID="141b9ebd-73ae-4035-803d-918cd5f0f306">
+					<SHORT-NAME>Tls_Rec</SHORT-NAME>
+					<DEFINITION-REF DEST="ECUC-MODULE-DEF">/MICROSAR/Tls</DEFINITION-REF>
+					<CONTAINERS></CONTAINERS>
+				</ECUC-MODULE-CONFIGURATION-VALUES>
+			</ELEMENTS>
+		</AR-PACKAGE>
+	</AR-PACKAGES>
+</AUTOSAR>

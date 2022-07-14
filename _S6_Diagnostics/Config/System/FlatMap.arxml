@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-2-1.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="f5c0b8a8-2b06-46fb-a21d-19543e08860f">
+      <SHORT-NAME>COM</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="05349a96-71a1-4c55-a064-42cb7b36a2b1">
+          <SHORT-NAME>VECTOR</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="32bc40cc-4a8d-428b-b1fd-1b8782702a38">
+              <SHORT-NAME>CFG</SHORT-NAME>
+              <AR-PACKAGES>
+                <AR-PACKAGE UUID="816f5367-3a38-43a2-80ad-af8d3551fd80">
+                  <SHORT-NAME>WORKFLOW</SHORT-NAME>
+                  <AR-PACKAGES>
+                    <AR-PACKAGE UUID="c9edbbe8-0379-4189-ad0e-85618dd0ab1a">
+                      <SHORT-NAME>SYSDESC</SHORT-NAME>
+                      <AR-PACKAGES>
+                        <AR-PACKAGE UUID="c4038fe8-920c-4b16-ab1c-dca55b212820">
+                          <SHORT-NAME>SYNC</SHORT-NAME>
+                          <ELEMENTS>
+                            <FLAT-MAP UUID="63701ef5-e891-4512-a4e0-27f20ede4225">
+                              <SHORT-NAME>FLATMAP</SHORT-NAME>
+                              <ADMIN-DATA>
+                                <SDGS>
+                                  <SDG GID="DV:CfgNamedRefs">
+                                    <SDG GID="DV:CfgFlattener">
+                                      <SD GID="DV:CfgFlattenerVersion">1</SD>
+                                    </SDG>
+                                  </SDG>
+                                </SDGS>
+                              </ADMIN-DATA>
+                              <INSTANCES>
+                                <FLAT-INSTANCE-DESCRIPTOR UUID="f9d39480-8aa0-425d-a7ee-22ca9cfcde71">
+                                  <SHORT-NAME>CpSaDoorFrontLeft</SHORT-NAME>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <UPSTREAM-REFERENCE-IREF>
+                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/VehicleProject/System/EcuSwComposition</CONTEXT-ELEMENT-REF>
+                                    <CONTEXT-ELEMENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/CpCoApplication</CONTEXT-ELEMENT-REF>
+                                    <TARGET-REF DEST="SW-COMPONENT-PROTOTYPE">/ComponentTypes/CtCoApplication/CpSaDoorFrontLeft</TARGET-REF>
+                                  </UPSTREAM-REFERENCE-IREF>
+                                  <ECU-EXTRACT-REFERENCE-IREF>
+                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-ELEMENT-REF>
+                                    <TARGET-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/CpSaDoorFrontLeft</TARGET-REF>
+                                  </ECU-EXTRACT-REFERENCE-IREF>
+                                </FLAT-INSTANCE-DESCRIPTOR>
+                                <FLAT-INSTANCE-DESCRIPTOR UUID="4e78f7b0-d230-4d62-b91e-823988ebba07">
+                                  <SHORT-NAME>CpSaInteriorLightFront</SHORT-NAME>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <UPSTREAM-REFERENCE-IREF>
+                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/VehicleProject/System/EcuSwComposition</CONTEXT-ELEMENT-REF>
+                                    <CONTEXT-ELEMENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/CpCoApplication</CONTEXT-ELEMENT-REF>
+                                    <TARGET-REF DEST="SW-COMPONENT-PROTOTYPE">/ComponentTypes/CtCoApplication/CpSaInteriorLightFront</TARGET-REF>
+                                  </UPSTREAM-REFERENCE-IREF>
+                                  <ECU-EXTRACT-REFERENCE-IREF>
+                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-ELEMENT-REF>
+                                    <TARGET-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/CpSaInteriorLightFront</TARGET-REF>
+                                  </ECU-EXTRACT-REFERENCE-IREF>
+                                </FLAT-INSTANCE-DESCRIPTOR>
+                                <FLAT-INSTANCE-DESCRIPTOR UUID="31f0de7a-73f4-4430-8639-c197fbb670ba">
+                                  <SHORT-NAME>CpApMySwc</SHORT-NAME>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <UPSTREAM-REFERENCE-IREF>
+                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/VehicleProject/System/EcuSwComposition</CONTEXT-ELEMENT-REF>
+                                    <CONTEXT-ELEMENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/CpCoApplication</CONTEXT-ELEMENT-REF>
+                                    <TARGET-REF DEST="SW-COMPONENT-PROTOTYPE">/ComponentTypes/CtCoApplication/CpApMySwc</TARGET-REF>
+                                  </UPSTREAM-REFERENCE-IREF>
+                                  <ECU-EXTRACT-REFERENCE-IREF>
+                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-ELEMENT-REF>
+                                    <TARGET-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/CpApMySwc</TARGET-REF>
+                                  </ECU-EXTRACT-REFERENCE-IREF>
+                                </FLAT-INSTANCE-DESCRIPTOR>
+                                <FLAT-INSTANCE-DESCRIPTOR UUID="82aada6e-4980-4c0a-b82e-e7a1e78edb2e">
+                                  <SHORT-NAME>CpSaDoorFrontRight</SHORT-NAME>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <UPSTREAM-REFERENCE-IREF>
+                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/VehicleProject/System/EcuSwComposition</CONTEXT-ELEMENT-REF>
+                                    <CONTEXT-ELEMENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/CpCoApplication</CONTEXT-ELEMENT-REF>
+                                    <TARGET-REF DEST="SW-COMPONENT-PROTOTYPE">/ComponentTypes/CtCoApplication/CpSaDoorFrontRight</TARGET-REF>
+                                  </UPSTREAM-REFERENCE-IREF>
+                                  <ECU-EXTRACT-REFERENCE-IREF>
+                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-ELEMENT-REF>
+                                    <TARGET-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/CpSaDoorFrontRight</TARGET-REF>
+                                  </ECU-EXTRACT-REFERENCE-IREF>
+                                </FLAT-INSTANCE-DESCRIPTOR>
+                                <FLAT-INSTANCE-DESCRIPTOR UUID="4ddd8d73-debc-4224-b696-3789d5719d7f">
+                                  <SHORT-NAME>CpCddIoHwAb</SHORT-NAME>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <UPSTREAM-REFERENCE-IREF>
+                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/VehicleProject/System/EcuSwComposition</CONTEXT-ELEMENT-REF>
+                                    <CONTEXT-ELEMENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/CpCoApplication</CONTEXT-ELEMENT-REF>
+                                    <TARGET-REF DEST="SW-COMPONENT-PROTOTYPE">/ComponentTypes/CtCoApplication/CpCddIoHwAb</TARGET-REF>
+                                  </UPSTREAM-REFERENCE-IREF>
+                                  <ECU-EXTRACT-REFERENCE-IREF>
+                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-ELEMENT-REF>
+                                    <TARGET-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/CpCddIoHwAb</TARGET-REF>
+                                  </ECU-EXTRACT-REFERENCE-IREF>
+                                </FLAT-INSTANCE-DESCRIPTOR>
+                                <FLAT-INSTANCE-DESCRIPTOR UUID="589ed377-fcec-45ff-84fc-b6ff3ff13eab">
+                                  <SHORT-NAME>sig_State_RearLeftDoor</SHORT-NAME>
+                                  <ADMIN-DATA>
+                                    <SDGS>
+                                      <SDG GID="DV:CfgNamedRefs">
+                                        <SDG GID="DV:CfgFlattener">
+                                          <SDG GID="DV:CfgMappedSignalOrSignalGroup">
+                                            <SDX-REF DEST="SYSTEM-SIGNAL">/Signal/sig_State_RearLeftDoor</SDX-REF>
+                                          </SDG>
+                                        </SDG>
+                                      </SDG>
+                                    </SDGS>
+                                  </ADMIN-DATA>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <UPSTREAM-REFERENCE-IREF>
+                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/VehicleProject/System/EcuSwComposition</CONTEXT-ELEMENT-REF>
+                                    <CONTEXT-ELEMENT-REF DEST="R-PORT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/PpDoorStateRearLeft</CONTEXT-ELEMENT-REF>
+                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/PiDoorState/DeDoorState</TARGET-REF>
+                                  </UPSTREAM-REFERENCE-IREF>
+                                  <ECU-EXTRACT-REFERENCE-IREF>
+                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-ELEMENT-REF>
+                                    <CONTEXT-ELEMENT-REF DEST="R-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/PpDoorStateRearLeft</CONTEXT-ELEMENT-REF>
+                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/PiDoorState/DeDoorState</TARGET-REF>
+                                  </ECU-EXTRACT-REFERENCE-IREF>
+                                </FLAT-INSTANCE-DESCRIPTOR>
+                                <FLAT-INSTANCE-DESCRIPTOR UUID="177124cf-4f71-4828-bf8d-b469bed214da">
+                                  <SHORT-NAME>PpDoorStateRearLeft</SHORT-NAME>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <UPSTREAM-REFERENCE-IREF>
+                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/VehicleProject/System/EcuSwComposition</CONTEXT-ELEMENT-REF>
+                                    <TARGET-REF DEST="R-PORT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/PpDoorStateRearLeft</TARGET-REF>
+                                  </UPSTREAM-REFERENCE-IREF>
+                                  <ECU-EXTRACT-REFERENCE-IREF>
+                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-ELEMENT-REF>
+                                    <TARGET-REF DEST="R-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/PpDoorStateRearLeft</TARGET-REF>
+                                  </ECU-EXTRACT-REFERENCE-IREF>
+                                </FLAT-INSTANCE-DESCRIPTOR>
+                                <FLAT-INSTANCE-DESCRIPTOR UUID="e54d1f2c-b9af-4ea5-89a5-6993bcc85fc9">
+                                  <SHORT-NAME>sig_State_RearRightDoor</SHORT-NAME>
+                                  <ADMIN-DATA>
+                                    <SDGS>
+                                      <SDG GID="DV:CfgNamedRefs">
+                                        <SDG GID="DV:CfgFlattener">
+                                          <SDG GID="DV:CfgMappedSignalOrSignalGroup">
+                                            <SDX-REF DEST="SYSTEM-SIGNAL">/Signal/sig_State_RearRightDoor</SDX-REF>
+                                          </SDG>
+                                        </SDG>
+                                      </SDG>
+                                    </SDGS>
+                                  </ADMIN-DATA>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <UPSTREAM-REFERENCE-IREF>
+                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/VehicleProject/System/EcuSwComposition</CONTEXT-ELEMENT-REF>
+                                    <CONTEXT-ELEMENT-REF DEST="R-PORT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/PpDoorStateRearRight</CONTEXT-ELEMENT-REF>
+                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/PiDoorState/DeDoorState</TARGET-REF>
+                                  </UPSTREAM-REFERENCE-IREF>
+                                  <ECU-EXTRACT-REFERENCE-IREF>
+                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-ELEMENT-REF>
+                                    <CONTEXT-ELEMENT-REF DEST="R-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/PpDoorStateRearRight</CONTEXT-ELEMENT-REF>
+                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/PiDoorState/DeDoorState</TARGET-REF>
+                                  </ECU-EXTRACT-REFERENCE-IREF>
+                                </FLAT-INSTANCE-DESCRIPTOR>
+                                <FLAT-INSTANCE-DESCRIPTOR UUID="7e9a3344-2bb6-4b22-94cd-43a12ba0736c">
+                                  <SHORT-NAME>PpDoorStateRearRight</SHORT-NAME>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <UPSTREAM-REFERENCE-IREF>
+                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/VehicleProject/System/EcuSwComposition</CONTEXT-ELEMENT-REF>
+                                    <TARGET-REF DEST="R-PORT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/PpDoorStateRearRight</TARGET-REF>
+                                  </UPSTREAM-REFERENCE-IREF>
+                                  <ECU-EXTRACT-REFERENCE-IREF>
+                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-ELEMENT-REF>
+                                    <TARGET-REF DEST="R-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/PpDoorStateRearRight</TARGET-REF>
+                                  </ECU-EXTRACT-REFERENCE-IREF>
+                                </FLAT-INSTANCE-DESCRIPTOR>
+                                <FLAT-INSTANCE-DESCRIPTOR UUID="98505a6b-b888-4cb6-8923-4306f39b2185">
+                                  <SHORT-NAME>sig_RearInteriorLight</SHORT-NAME>
+                                  <ADMIN-DATA>
+                                    <SDGS>
+                                      <SDG GID="DV:CfgNamedRefs">
+                                        <SDG GID="DV:CfgFlattener">
+                                          <SDG GID="DV:CfgMappedSignalOrSignalGroup">
+                                            <SDX-REF DEST="SYSTEM-SIGNAL">/Signal/sig_RearInteriorLight</SDX-REF>
+                                          </SDG>
+                                        </SDG>
+                                      </SDG>
+                                    </SDGS>
+                                  </ADMIN-DATA>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <UPSTREAM-REFERENCE-IREF>
+                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/VehicleProject/System/EcuSwComposition</CONTEXT-ELEMENT-REF>
+                                    <CONTEXT-ELEMENT-REF DEST="P-PORT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/PpLightStateRear</CONTEXT-ELEMENT-REF>
+                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/PiLightState/DeLightState</TARGET-REF>
+                                  </UPSTREAM-REFERENCE-IREF>
+                                  <ECU-EXTRACT-REFERENCE-IREF>
+                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-ELEMENT-REF>
+                                    <CONTEXT-ELEMENT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/PpLightStateRear</CONTEXT-ELEMENT-REF>
+                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/PiLightState/DeLightState</TARGET-REF>
+                                  </ECU-EXTRACT-REFERENCE-IREF>
+                                </FLAT-INSTANCE-DESCRIPTOR>
+                                <FLAT-INSTANCE-DESCRIPTOR UUID="ba13d9e5-ade6-4a38-86bb-0a7fdf1db870">
+                                  <SHORT-NAME>PpLightStateRear</SHORT-NAME>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <UPSTREAM-REFERENCE-IREF>
+                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/VehicleProject/System/EcuSwComposition</CONTEXT-ELEMENT-REF>
+                                    <TARGET-REF DEST="P-PORT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/PpLightStateRear</TARGET-REF>
+                                  </UPSTREAM-REFERENCE-IREF>
+                                  <ECU-EXTRACT-REFERENCE-IREF>
+                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-ELEMENT-REF>
+                                    <TARGET-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/PpLightStateRear</TARGET-REF>
+                                  </ECU-EXTRACT-REFERENCE-IREF>
+                                </FLAT-INSTANCE-DESCRIPTOR>
+                                <FLAT-INSTANCE-DESCRIPTOR UUID="b6a7a929-f7d7-43e9-9ea3-a89c70336201">
+                                  <SHORT-NAME>CpSaDisplay</SHORT-NAME>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <UPSTREAM-REFERENCE-IREF>
+                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/VehicleProject/System/EcuSwComposition</CONTEXT-ELEMENT-REF>
+                                    <CONTEXT-ELEMENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/CpCoApplication</CONTEXT-ELEMENT-REF>
+                                    <TARGET-REF DEST="SW-COMPONENT-PROTOTYPE">/ComponentTypes/CtCoApplication/CpSaDisplay</TARGET-REF>
+                                  </UPSTREAM-REFERENCE-IREF>
+                                  <ECU-EXTRACT-REFERENCE-IREF>
+                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-ELEMENT-REF>
+                                    <TARGET-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/CpSaDisplay</TARGET-REF>
+                                  </ECU-EXTRACT-REFERENCE-IREF>
+                                </FLAT-INSTANCE-DESCRIPTOR>
+                                <FLAT-INSTANCE-DESCRIPTOR UUID="00935cdf-9096-4556-a43a-acbd658ba5ed">
+                                  <SHORT-NAME>CpApMySwcSnNvMPimLightOnOffCounter</SHORT-NAME>
+                                  <ADMIN-DATA>
+                                    <SDGS>
+                                      <SDG GID="DV:NvBlockNeeds">
+                                        <SDX-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/NvM/CpApMySwcSnNvMPimLightOnOffCounter</SDX-REF>
+                                      </SDG>
+                                    </SDGS>
+                                  </ADMIN-DATA>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:NvBlockNeeds</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <UPSTREAM-REFERENCE-IREF>
+                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-ELEMENT-REF>
+                                    <CONTEXT-ELEMENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/CpApMySwc</CONTEXT-ELEMENT-REF>
+                                    <TARGET-REF DEST="SWC-SERVICE-DEPENDENCY">/ComponentTypes/CtApMySwc/CtApMySwc_InternalBehavior/SnNvMPimLightOnOffCounter</TARGET-REF>
+                                  </UPSTREAM-REFERENCE-IREF>
+                                </FLAT-INSTANCE-DESCRIPTOR>
+                                <FLAT-INSTANCE-DESCRIPTOR UUID="c6f212f2-f900-46a0-a9a8-a7e2af12c95c">
+                                  <SHORT-NAME>CpApMySwcPpNvMNotifyJobFinishedOdometerCtApMySwcNvM_NvM_RpNotifyJobEnd_CpApMySwcSnNvMPimOdometer</SHORT-NAME>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:NvBlockNeeds</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <UPSTREAM-REFERENCE-IREF>
+                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-ELEMENT-REF>
+                                    <CONTEXT-ELEMENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/CpApMySwc</CONTEXT-ELEMENT-REF>
+                                    <TARGET-REF DEST="SWC-SERVICE-DEPENDENCY">/ComponentTypes/CtApMySwc/CtApMySwc_InternalBehavior/SnNvMPimOdometer</TARGET-REF>
+                                  </UPSTREAM-REFERENCE-IREF>
+                                  <ECU-EXTRACT-REFERENCE-IREF>
+                                    <TARGET-REF DEST="ASSEMBLY-SW-CONNECTOR">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/CpApMySwcPpNvMNotifyJobFinishedOdometerCtApMySwcNvM_NvM_RpNotifyJobEnd_CpApMySwcSnNvMPimOdometer</TARGET-REF>
+                                  </ECU-EXTRACT-REFERENCE-IREF>
+                                </FLAT-INSTANCE-DESCRIPTOR>
+                                <FLAT-INSTANCE-DESCRIPTOR UUID="386a2338-43e6-4725-970e-403e547e8250">
+                                  <SHORT-NAME>CpApMySwcSnNvMPimOdometer</SHORT-NAME>
+                                  <ADMIN-DATA>
+                                    <SDGS>
+                                      <SDG GID="DV:NvBlockNeeds">
+                                        <SDX-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/NvM/CpApMySwcSnNvMPimOdometer</SDX-REF>
+                                      </SDG>
+                                    </SDGS>
+                                  </ADMIN-DATA>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:NvBlockNeeds</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <UPSTREAM-REFERENCE-IREF>
+                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-ELEMENT-REF>
+                                    <CONTEXT-ELEMENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/CpApMySwc</CONTEXT-ELEMENT-REF>
+                                    <TARGET-REF DEST="SWC-SERVICE-DEPENDENCY">/ComponentTypes/CtApMySwc/CtApMySwc_InternalBehavior/SnNvMPimOdometer</TARGET-REF>
+                                  </UPSTREAM-REFERENCE-IREF>
+                                </FLAT-INSTANCE-DESCRIPTOR>
+                                <FLAT-INSTANCE-DESCRIPTOR UUID="daf35efd-f616-4b8f-a05c-3648876880cd">
+                                  <SHORT-NAME>CpApMySwcPpNvMLightOnOffCtApMySwcNvM_PS_CpApMySwcSnNvMPimLightOnOffCounter</SHORT-NAME>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:NvBlockNeeds</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <UPSTREAM-REFERENCE-IREF>
+                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-ELEMENT-REF>
+                                    <CONTEXT-ELEMENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/CpApMySwc</CONTEXT-ELEMENT-REF>
+                                    <TARGET-REF DEST="SWC-SERVICE-DEPENDENCY">/ComponentTypes/CtApMySwc/CtApMySwc_InternalBehavior/SnNvMPimLightOnOffCounter</TARGET-REF>
+                                  </UPSTREAM-REFERENCE-IREF>
+                                  <ECU-EXTRACT-REFERENCE-IREF>
+                                    <TARGET-REF DEST="ASSEMBLY-SW-CONNECTOR">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/CpApMySwcPpNvMLightOnOffCtApMySwcNvM_PS_CpApMySwcSnNvMPimLightOnOffCounter</TARGET-REF>
+                                  </ECU-EXTRACT-REFERENCE-IREF>
+                                </FLAT-INSTANCE-DESCRIPTOR>
+                                <FLAT-INSTANCE-DESCRIPTOR UUID="8b32e464-332d-4c44-a5c9-29078ad4ef4e">
+                                  <SHORT-NAME>CpApMySwcPpNvMOdometerCtApMySwcNvM_PS_CpApMySwcSnNvMPimOdometer</SHORT-NAME>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:NvBlockNeeds</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <UPSTREAM-REFERENCE-IREF>
+                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-ELEMENT-REF>
+                                    <CONTEXT-ELEMENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/CpApMySwc</CONTEXT-ELEMENT-REF>
+                                    <TARGET-REF DEST="SWC-SERVICE-DEPENDENCY">/ComponentTypes/CtApMySwc/CtApMySwc_InternalBehavior/SnNvMPimOdometer</TARGET-REF>
+                                  </UPSTREAM-REFERENCE-IREF>
+                                  <ECU-EXTRACT-REFERENCE-IREF>
+                                    <TARGET-REF DEST="ASSEMBLY-SW-CONNECTOR">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/CpApMySwcPpNvMOdometerCtApMySwcNvM_PS_CpApMySwcSnNvMPimOdometer</TARGET-REF>
+                                  </ECU-EXTRACT-REFERENCE-IREF>
+                                </FLAT-INSTANCE-DESCRIPTOR>
+                              </INSTANCES>
+                            </FLAT-MAP>
+                          </ELEMENTS>
+                        </AR-PACKAGE>
+                      </AR-PACKAGES>
+                    </AR-PACKAGE>
+                  </AR-PACKAGES>
+                </AR-PACKAGE>
+              </AR-PACKAGES>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

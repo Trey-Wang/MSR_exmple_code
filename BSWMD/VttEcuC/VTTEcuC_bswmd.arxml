@@ -1,0 +1,2591 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2009 sp1 (http://www.altova.com) by Vector Employee (Vector Informatik GmbH) -->
+<AUTOSAR xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-0-3.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://autosar.org/schema/r4.0">
+	<AR-PACKAGES>
+		<AR-PACKAGE UUID="b0f2f040-773f-418b-883b-7ea4d0326e6d">
+			<SHORT-NAME>MICROSAR</SHORT-NAME>
+			<AR-PACKAGES>
+				<AR-PACKAGE UUID="c3175780-76c4-4e27-8dc2-898f90276418">
+					<SHORT-NAME>VTT</SHORT-NAME>
+					<ELEMENTS>
+						<ECUC-MODULE-DEF UUID="793fce5a-9af1-4507-a655-2ba3264282b9">
+							<SHORT-NAME>VTTEcuC</SHORT-NAME>
+							<DESC>
+								<L-2 L="EN">Virtual module to collect ECU Configuration specific / global configuration information.</L-2>
+							</DESC>
+							<CATEGORY>VENDOR_SPECIFIC_MODULE_DEFINITION</CATEGORY>
+							<ADMIN-DATA>
+								<DOC-REVISIONS>
+									<DOC-REVISION>
+										<REVISION-LABEL>1.00.00</REVISION-LABEL>
+										<DATE>2014-11-18</DATE>
+										<MODIFICATIONS>
+											<MODIFICATION>
+												<CHANGE>
+													<L-2 L="EN">First Version</L-2>
+												</CHANGE>
+											</MODIFICATION>
+										</MODIFICATIONS>
+									</DOC-REVISION>
+									<DOC-REVISION>
+										<REVISION-LABEL>2.01.00</REVISION-LABEL>
+										<STATE>released</STATE>
+										<ISSUED-BY>visbms</ISSUED-BY>
+										<DATE>2015-06-01</DATE>
+										<MODIFICATIONS>
+											<MODIFICATION>
+												<CHANGE>
+													<L-2 L="EN">Added "ASIL" parameter to Partitions.</L-2>
+												</CHANGE>
+												<REASON>
+													<L-2 L="EN">ESCAN00083222</L-2>
+												</REASON>
+											</MODIFICATION>
+										</MODIFICATIONS>
+									</DOC-REVISION>
+									<DOC-REVISION>
+										<REVISION-LABEL>2.02.00</REVISION-LABEL>
+										<STATE>released</STATE>
+										<ISSUED-BY>visbms</ISSUED-BY>
+										<DATE>2015-10-30</DATE>
+										<MODIFICATIONS>
+											<MODIFICATION>
+												<CHANGE>
+													<L-2 L="EN">AR4-1540: Support additional init code for Bsw Initialization </L-2>
+												</CHANGE>
+												<REASON>
+													<L-2 L="EN">ESCAN00086177</L-2>
+												</REASON>
+											</MODIFICATION>
+										</MODIFICATIONS>
+									</DOC-REVISION>
+									<DOC-REVISION>
+										<REVISION-LABEL>2.02.00</REVISION-LABEL>
+										<STATE>released</STATE>
+										<ISSUED-BY>visbms</ISSUED-BY>
+										<DATE>2015-10-30</DATE>
+										<MODIFICATIONS>
+											<MODIFICATION>
+												<CHANGE>
+													<L-2 L="EN">FEAT-1532: Support the new OS core7 bswmd structure</L-2>
+												</CHANGE>
+												<REASON>
+													<L-2 L="EN">ESCAN00086178</L-2>
+												</REASON>
+											</MODIFICATION>
+										</MODIFICATIONS>
+									</DOC-REVISION>
+									<DOC-REVISION>
+										<REVISION-LABEL>2.03.00</REVISION-LABEL>
+										<STATE>released</STATE>
+										<ISSUED-BY>visbms</ISSUED-BY>
+										<DATE>2016-11-24</DATE>
+										<MODIFICATIONS>
+											<MODIFICATION>
+												<CHANGE>
+													<L-2 L="EN">ASR 4.2.2 64 Bit Support</L-2>
+												</CHANGE>
+												<REASON>
+													<L-2 L="EN">ESCAN00092017</L-2>
+												</REASON>
+											</MODIFICATION>
+										</MODIFICATIONS>
+									</DOC-REVISION>
+									<DOC-REVISION>
+										<REVISION-LABEL>2.04.00</REVISION-LABEL>
+										<STATE>released</STATE>
+										<ISSUED-BY>visbms</ISSUED-BY>
+										<DATE>2017-01-13</DATE>
+										<MODIFICATIONS>
+											<MODIFICATION>
+												<CHANGE>
+													<L-2 L="EN">Add /AUTOSAR/EcucDefs/EcuC/EcucPostBuildVariants according to 4.2.2</L-2>
+												</CHANGE>
+												<REASON>
+													<L-2 L="EN">ESCAN00093555</L-2>
+												</REASON>
+											</MODIFICATION>
+										</MODIFICATIONS>
+									</DOC-REVISION>
+								</DOC-REVISIONS>
+							</ADMIN-DATA>
+							<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+							<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+							<SUPPORTED-CONFIG-VARIANTS>
+								<SUPPORTED-CONFIG-VARIANT>VARIANT-PRE-COMPILE</SUPPORTED-CONFIG-VARIANT>
+								<SUPPORTED-CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</SUPPORTED-CONFIG-VARIANT>
+								<SUPPORTED-CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</SUPPORTED-CONFIG-VARIANT>
+							</SUPPORTED-CONFIG-VARIANTS>
+							<CONTAINERS>
+								<!-- Container Definition: EcucPartitionCollection -->
+								<ECUC-PARAM-CONF-CONTAINER-DEF UUID="68273498-4691-497f-8d68-5b761fb5a8fc">
+									<SHORT-NAME>EcucPartitionCollection</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Collection of Partitions defined for this ECU.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:postBuildSelectableChangeable">false</SD>
+												<SD GID="DV:postBuildNotDeletable">false</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+									<MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+									<SUB-CONTAINERS>
+										<!-- Container Definition: EcucPartition -->
+										<ECUC-PARAM-CONF-CONTAINER-DEF UUID="515952be-88f1-4393-825f-eac059db2dbf">
+											<SHORT-NAME>EcucPartition</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Definition of one Partition on this ECU.</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:CfgPostBuild">
+														<SD GID="DV:postBuildSelectableChangeable">false</SD>
+														<SD GID="DV:postBuildNotDeletable">false</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<INTRODUCTION>
+												<P>
+													<L-1 L="EN">One Partition will be implemented using one Os-Application.</L-1>
+												</P>
+											</INTRODUCTION>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+											<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+											<MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+											<PARAMETERS>
+												<!-- PARAMETER DEFINITION: EcucPartitionBswModuleExecution -->
+												<ECUC-BOOLEAN-PARAM-DEF UUID="fb71247c-d8ce-4e70-bd5b-488528ad61a6">
+													<SHORT-NAME>EcucPartitionBswModuleExecution</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Denotes that this partition will execute all BSW Modules. BSW Modules can only be executed in one partition.</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>false</DEFAULT-VALUE>
+												</ECUC-BOOLEAN-PARAM-DEF>
+												<!-- PARAMETER DEFINITION: PartitionCanBeRestarted -->
+												<ECUC-BOOLEAN-PARAM-DEF UUID="082315cd-4145-432d-b66d-ce46a9be8e3e">
+													<SHORT-NAME>PartitionCanBeRestarted</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Specifies the requirement whether the Partition can be restarted. If set to true all software executing in this partition shall be capable of handling a restart.</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>false</DEFAULT-VALUE>
+												</ECUC-BOOLEAN-PARAM-DEF>
+												<!-- PARAMETER DEFINITION: ASIL-->
+												<ECUC-ENUMERATION-PARAM-DEF UUID="42856ba2-d1d7-4518-b770-57d792bc1130">
+													<SHORT-NAME>ASIL</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">ASIL level of this Partition.</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<LITERALS>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="520cc7c7-c528-47d1-a75e-35512f4aa51e">
+															<SHORT-NAME>QM</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">QM</L-4>
+															</LONG-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="e8051ab6-dd46-47bb-9027-2de301cff5b0">
+															<SHORT-NAME>A</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">ASIL A</L-4>
+															</LONG-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="b9d50449-07b0-4b44-89ab-03f5abf5cbc5">
+															<SHORT-NAME>B</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">ASIL B</L-4>
+															</LONG-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="3ed6662a-4803-4e0a-b5b1-f149b58e7e67">
+															<SHORT-NAME>C</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">ASIL C</L-4>
+															</LONG-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="6f4f1e81-3414-44aa-8842-995f0dee9e3e">
+															<SHORT-NAME>D</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">ASIL D</L-4>
+															</LONG-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+													</LITERALS>
+												</ECUC-ENUMERATION-PARAM-DEF>
+											</PARAMETERS>
+											<REFERENCES>
+												<!-- Instance Reference Definition: EcucPartitionSoftwareComponentInstanceRef -->
+												<ECUC-INSTANCE-REFERENCE-DEF UUID="0bb11b2a-1699-4f1b-9b56-b29968f0ac3b">
+													<SHORT-NAME>EcucPartitionSoftwareComponentInstanceRef</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">References the SW Component instances from the Ecu Extract that shall be executed in this partition.</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<DESTINATION-CONTEXT>ROOT-SW-COMPOSITION-PROTOTYPE</DESTINATION-CONTEXT>
+													<DESTINATION-TYPE>SW-COMPONENT-PROTOTYPE</DESTINATION-TYPE>
+												</ECUC-INSTANCE-REFERENCE-DEF>
+											</REFERENCES>
+										</ECUC-PARAM-CONF-CONTAINER-DEF>
+									</SUB-CONTAINERS>
+								</ECUC-PARAM-CONF-CONTAINER-DEF>
+								<!-- Container Definition: EcucPduCollection -->
+								<ECUC-PARAM-CONF-CONTAINER-DEF UUID="06b814ce-ed09-4d69-91ec-c04ff1a78b8c">
+									<SHORT-NAME>EcucPduCollection</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Collection of all Pdu objects flowing through the Com-Stack.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:postBuildSelectableChangeable">false</SD>
+												<SD GID="DV:postBuildNotDeletable">false</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+									<MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+									<PARAMETERS>
+										<!-- PARAMETER DEFINITION: PduIdTypeEnum -->
+										<ECUC-ENUMERATION-PARAM-DEF UUID="43709e0b-df06-4612-b473-4e4100486d4f">
+											<SHORT-NAME>PduIdTypeEnum</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">The PduIdType is used within the entire AUTOSAR Com Stack except for bus drivers. The size of this global type depends on the maximum number of PDUs used within one software module. If no software module deals with more PDUs that 256, this type can be set to uint8. If at least one software module handles more than 256 PDUs, this type must be set to uint16. See AUTOSAR_SWS_CommunicationStackTypes for more details.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>UINT8</DEFAULT-VALUE>
+											<LITERALS>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="0232358d-a84b-4f2b-a52a-dccd34cffb06">
+													<SHORT-NAME>UINT8</SHORT-NAME>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="6858a334-f5df-4d85-9172-b9911a6d7a2a">
+													<SHORT-NAME>UINT16</SHORT-NAME>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+											</LITERALS>
+										</ECUC-ENUMERATION-PARAM-DEF>
+										<!-- PARAMETER DEFINITION: PduLengthTypeEnum -->
+										<ECUC-ENUMERATION-PARAM-DEF UUID="211b9e1d-f1be-4b4a-9ce2-ff8179d5bd33">
+											<SHORT-NAME>PduLengthTypeEnum</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">The PduLengthType is used within the entire AUTOSAR Com Stack except for bus drivers. The size of this global type depends on the maximum length of PDUs to be sent by an ECU. If no segmentation is used the length depends on the maximum payload size of a frame of the underlying communication system (for FlexRay maximum size is 255 bytes, therefore uint8). If segementation is used it depends on the maximum length of a  segmeneted N-PDU (in general uint16 is used). See AUTOSAR_SWS_CommunicationStackTypes for more details.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>UINT8</DEFAULT-VALUE>
+											<LITERALS>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="0ef1cd3b-092d-4bec-aafb-7b5b49cc317e">
+													<SHORT-NAME>UINT8</SHORT-NAME>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="d5438f54-4b3e-48c1-870d-b26ea58ed634">
+													<SHORT-NAME>UINT16</SHORT-NAME>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="e4abf4a7-ae38-46e3-a83b-f00e37d75e14">
+													<SHORT-NAME>UINT32</SHORT-NAME>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+											</LITERALS>
+										</ECUC-ENUMERATION-PARAM-DEF>
+									</PARAMETERS>
+									<SUB-CONTAINERS>
+										<!-- Container Definition: Pdu -->
+										<ECUC-PARAM-CONF-CONTAINER-DEF UUID="2509fe16-7344-4fc9-a9c5-1d217de27a2b">
+											<SHORT-NAME>Pdu</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">One Pdu flowing through the COM-Stack.</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:CfgPostBuild">
+														<SD GID="DV:postBuildSelectableChangeable">true</SD>
+														<SD GID="DV:postBuildNotDeletable">false</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<INTRODUCTION>
+												<P>
+													<L-1 L="EN">This Pdu is used by all Com-Stack modules to agree on referencing the same Pdu.</L-1>
+												</P>
+											</INTRODUCTION>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+											<POST-BUILD-CHANGEABLE>true</POST-BUILD-CHANGEABLE>
+											<MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+											<PARAMETERS>
+												<!-- PARAMETER DEFINITION: MetaDataLength-->
+												<ECUC-INTEGER-PARAM-DEF UUID="29d8a435-88be-417c-a621-2e1ed133e824">
+													<SHORT-NAME>MetaDataLength</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">This Parameter is derived from ASR 4.1.1 to support J1939.
+Number of additional bytes in PDU data that contain auxiliary information (MetaData) for the PDU, e.g. the CAN ID. These bytes are handled as part of the PDU data and increase the PDU data length accordingly.</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<MAX>4</MAX>
+													<MIN>1</MIN>
+												</ECUC-INTEGER-PARAM-DEF>
+												<!-- PARAMETER DEFINITION: PduLength -->
+												<ECUC-INTEGER-PARAM-DEF UUID="aab60381-1287-41f2-bdd7-ab936782540a">
+													<SHORT-NAME>PduLength</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">The maximum used length of the Pdu in bytes.</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<MAX>4294967295</MAX>
+													<MIN>0</MIN>
+												</ECUC-INTEGER-PARAM-DEF>
+												<!-- PARAMETER DEFINITION: J1939Requestable -->
+												<ECUC-BOOLEAN-PARAM-DEF UUID="b4ed4b5e-e89b-49d3-bc8a-a79bb963fac9">
+													<SHORT-NAME>J1939Requestable</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Specifies whether this PDU can be requested on a J1939 bus using the J1939Rm.
+
+The PDU can be transmitted by COM, the RTE, a CDD, J1939Nm, or J1939Dcm. The configuration of J1939Rm for PDUs with J1939Requestable set to TRUE depends strongly on the transmitting module.
+
+RTE: The application receives a callback via service port interface, and triggers one of the signals of the requestable PDU according to the requested PGN.
+
+COM: J1939Rm calls Com_TriggerIPduSendWithMetaData for the requestable PDU.
+
+CDD: J1939Rm calls &lt;Cdd&gt;_RequestIndication, the CDD sends the PDU corresponding to the requested PGN.
+
+J1939Dcm, J1939Nm: J1939Rm calls &lt;Msn&gt;_RequestIndication to trigger transmission of diagnostic messages and the AddressClaimed message.</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>false</DEFAULT-VALUE>
+												</ECUC-BOOLEAN-PARAM-DEF>
+											</PARAMETERS>
+											<REFERENCES>
+												<!-- Foreign Reference Definition: SysTPduToFrameMappingRef -->
+												<ECUC-FOREIGN-REFERENCE-DEF UUID="4f204352-8a48-4aa2-9a3a-388e9ce0d373">
+													<SHORT-NAME>SysTPduToFrameMappingRef</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Optional reference to the PduToFrameMapping from the SystemTemplate which this Pdu represents.</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<DESTINATION-TYPE>PDU-TO-FRAME-MAPPING</DESTINATION-TYPE>
+												</ECUC-FOREIGN-REFERENCE-DEF>
+											</REFERENCES>
+										</ECUC-PARAM-CONF-CONTAINER-DEF>
+									</SUB-CONTAINERS>
+								</ECUC-PARAM-CONF-CONTAINER-DEF>
+								<!-- Container Definition: EcucPostBuildVariants -->
+								<ECUC-PARAM-CONF-CONTAINER-DEF UUID="8ac5809f-cf72-4e13-9d7b-681b882a2f41">
+									<SHORT-NAME>EcucPostBuildVariants</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Collection of toplevel PostBuildSelectable variants. The PredefinedVariants linked inside this container will determine how many PostBuildSelectableVariants exist. If this container exist the name pattern for initialization of BSW modules will be &lt;Mip&gt;_Config_&lt;PredefinedVariant.shortName&gt;. If this container does not exist the name pattern for initialization of BSW modlues will be &lt;Mip&gt;_Config.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<REFERENCES>
+										<!-- Foreign Reference Definition: EcucPostBuildVariantRef -->
+										<ECUC-FOREIGN-REFERENCE-DEF UUID="738bd41b-6919-4154-b518-2d4ba0907391">
+											<SHORT-NAME>EcucPostBuildVariantRef</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Reference to a PredefinedVariant that defines one toplevel postBuild configuration set (covering all post-build capable BSW modules). PredefinedVariants that are referenced here shall contain only PostBuildVariantCriterionValueSets.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<DESTINATION-TYPE>PREDEFINED-VARIANT</DESTINATION-TYPE>
+										</ECUC-FOREIGN-REFERENCE-DEF>
+									</REFERENCES>
+								</ECUC-PARAM-CONF-CONTAINER-DEF>
+								<!-- Container Definition: EcucVariationResolver -->
+								<ECUC-PARAM-CONF-CONTAINER-DEF UUID="0c018e72-4540-46f9-81c5-870756899509">
+									<SHORT-NAME>EcucVariationResolver</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Collection of PredefinedVariant elements containing definition of values for SwSystemconst which shall be applied when resolving the variability during ECU Configuration.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:postBuildSelectableChangeable">false</SD>
+												<SD GID="DV:postBuildNotDeletable">false</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+									<MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+									<REFERENCES>
+										<!-- Foreign Reference Definition: PredefinedVariantRef -->
+										<ECUC-FOREIGN-REFERENCE-DEF UUID="f4a76a1b-0ce1-4f25-978e-6e869f3ef4c7">
+											<SHORT-NAME>PredefinedVariantRef</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Reference to a predefined variant.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<DESTINATION-TYPE>PREDEFINED-VARIANT</DESTINATION-TYPE>
+										</ECUC-FOREIGN-REFERENCE-DEF>
+									</REFERENCES>
+								</ECUC-PARAM-CONF-CONTAINER-DEF>
+								<!-- Container Definition: EcucGeneral-->
+								<ECUC-PARAM-CONF-CONTAINER-DEF UUID="1103906e-148d-4fa6-8b18-432095193fe7">
+									<SHORT-NAME>EcucGeneral</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Global configuration parameters of the EcuC.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:postBuildSelectableChangeable">false</SD>
+												<SD GID="DV:postBuildNotDeletable">false</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+									<PARAMETERS>
+										<!--Compiler and hardware dependent configuration.-->
+										<ECUC-ENUMERATION-PARAM-DEF UUID="2b8d6ea5-967a-495f-8e16-4b3ebb104ecc">
+											<SHORT-NAME>CPUType</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Register width of the CPU in bit.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<LITERALS>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="874929f9-e4bd-4058-924c-1fec4220a0e3">
+													<SHORT-NAME>CPU8Bit</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">8 Bit</L-4>
+													</LONG-NAME>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="58730e47-7904-41b7-a805-58bbbc851427">
+													<SHORT-NAME>CPU16Bit</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">16 Bit</L-4>
+													</LONG-NAME>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="d27716dc-f084-4931-bb62-df19c5d2923a">
+													<SHORT-NAME>CPU32Bit</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">32 Bit</L-4>
+													</LONG-NAME>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="ab3f7b7f-dc3e-4aa1-99e7-754078ffa9c8">
+													<SHORT-NAME>CPU64Bit</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">64 Bit</L-4>
+													</LONG-NAME>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+											</LITERALS>
+										</ECUC-ENUMERATION-PARAM-DEF>
+										<ECUC-ENUMERATION-PARAM-DEF UUID="3f1b1622-8c9d-4d04-8d37-4c4292f677f0">
+											<SHORT-NAME>ByteOrder</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Byte order on memory level.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>LITTLE_ENDIAN</DEFAULT-VALUE>
+											<LITERALS>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="e1eb25bc-5ae9-458a-b7b6-daa33edeee2c">
+													<SHORT-NAME>BIG_ENDIAN</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Big Endian</L-4>
+													</LONG-NAME>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="bcc92237-00f9-47b2-88a7-9824e252bc83">
+													<SHORT-NAME>LITTLE_ENDIAN</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Little Endian</L-4>
+													</LONG-NAME>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+											</LITERALS>
+										</ECUC-ENUMERATION-PARAM-DEF>
+										<ECUC-ENUMERATION-PARAM-DEF UUID="c26c5696-582b-4e9a-a53d-0ad2dbd31b1e">
+											<SHORT-NAME>BitOrder</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Bit order on register level.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<LITERALS>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="b242faa6-17b2-4d29-bb95-22885d393f68">
+													<SHORT-NAME>LSB_to_MSB</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">LSB to MSB</L-4>
+													</LONG-NAME>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="96904352-1d56-4dfd-9aa0-8852364eca55">
+													<SHORT-NAME>MSB_to_LSB</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">MSB to LSB</L-4>
+													</LONG-NAME>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+											</LITERALS>
+										</ECUC-ENUMERATION-PARAM-DEF>
+										<ECUC-BOOLEAN-PARAM-DEF UUID="fd4983ae-a031-4893-88e5-3ee039495e7a">
+											<SHORT-NAME>AtomicBitAccessInBitfield</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Enables optimization for single bit read and write accesses in bit-fields if the compiler creates an atomic access in all cases.
+This is compiler and platform dependent and has to be checked and configured very carefully!
+
+Caution
+Enabling this configuration option requires atomic bit access in bit-fields. This option must only be enabled if the before mentioned access type is supported by the hardware, the compiler and the used compiler options. Enabling this option without verifying those conditions may lead to data consistency issues.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>false</DEFAULT-VALUE>
+										</ECUC-BOOLEAN-PARAM-DEF>
+										<ECUC-ENUMERATION-PARAM-DEF UUID="72bfbe87-109b-42a0-8f78-8dc6ebe88aa3">
+											<SHORT-NAME>AtomicVariableAccess</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Selection of Bit size for atomic read and write accesses of global variables.
+This configuration switch is compiler and platform dependent and has to be checked and configured very carefully!
+
+Caution
+Setting this configuration option to "Atomic16BitAccess" requires atomic access all global 8 Bit and 16 Bit variables.
+Setting this configuration option to "Atomic32BitAccess" requires atomic access all global 8 Bit, 16 Bit and 32 Bit variables.
+Setting this configuration option to "Atomic64BitAccess" requires atomic access all global 8 Bit, 16 Bit, 32 Bit and 64 Bit variables.
+The optimization must only be enabled if the before mentioned access types are supported by the hardware, the compiler and the used compiler options. Enabling the optimization without verifying those conditions may lead to data consistency issues.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<LITERALS>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="7c6f5093-72ab-405b-b4f6-27b773e31416">
+													<SHORT-NAME>Atomic8BitAccess</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">8 Bit</L-4>
+													</LONG-NAME>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="58440c58-c8dc-4b79-a2b3-cfe5a473f03b">
+													<SHORT-NAME>Atomic16BitAccess</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">16 Bit</L-4>
+													</LONG-NAME>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="73c9782a-9f64-4940-ac3c-f0dc1003f0e2">
+													<SHORT-NAME>Atomic32BitAccess</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">32 Bit</L-4>
+													</LONG-NAME>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="5b22d3f4-a22a-4fa5-8545-7aacfc08b3a8">
+													<SHORT-NAME>Atomic64BitAccess</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">64 Bit</L-4>
+													</LONG-NAME>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+											</LITERALS>
+										</ECUC-ENUMERATION-PARAM-DEF>
+										<!--Datatypes
+
+Configure the size of base datatypes. The configuration is compiler and compiler configuration dependent.
+These parameters can be used used to:
+-sort C structs by the size of its elements
+-calculate resource forecasts
+-taylor the access to bitfields-->
+										<ECUC-ENUMERATION-PARAM-DEF UUID="2c942e22-4a4f-469e-9e82-3577d3f8315f">
+											<SHORT-NAME>SizeOfEnum</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Size of type enum in bit.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<LITERALS>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="401ac40f-20f8-41b8-a4c3-0732e2acd4de">
+													<SHORT-NAME>Size8Bit</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">8 Bit</L-4>
+													</LONG-NAME>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="fc107102-7556-452b-99a3-7743a3e66649">
+													<SHORT-NAME>Size16Bit</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">16 Bit</L-4>
+													</LONG-NAME>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="876c0c95-b8ad-49f7-b619-a9d18b176797">
+													<SHORT-NAME>Size32Bit</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">32 Bit</L-4>
+													</LONG-NAME>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+											</LITERALS>
+										</ECUC-ENUMERATION-PARAM-DEF>
+										<ECUC-ENUMERATION-PARAM-DEF UUID="58781005-24f3-4745-b9d6-1352892cdaf9">
+											<SHORT-NAME>SizeOfInt</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Size of type int in bit.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<LITERALS>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="b79c9cb6-e47e-46bd-9f2d-3306c7b2dfad">
+													<SHORT-NAME>Size16Bit</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">16 Bit</L-4>
+													</LONG-NAME>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="82ea1bd6-0870-4b50-8c13-b33e4546474f">
+													<SHORT-NAME>Size32Bit</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">32 Bit</L-4>
+													</LONG-NAME>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+											</LITERALS>
+										</ECUC-ENUMERATION-PARAM-DEF>
+										<ECUC-ENUMERATION-PARAM-DEF UUID="a06cad24-92ca-4815-886e-abf09164c974">
+											<SHORT-NAME>SizeOfROMPointer</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Size of ROM pointer in bit.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<LITERALS>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="21be833f-3ecc-41ad-9d62-7444cf5821a7">
+													<SHORT-NAME>Size16Bit</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">16 Bit</L-4>
+													</LONG-NAME>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="55a47145-4665-4b53-89d3-65466d1d8208">
+													<SHORT-NAME>Size24Bit</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">24 Bit</L-4>
+													</LONG-NAME>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="9129a9d5-5e02-42b1-b1a7-7e97e34a82e1">
+													<SHORT-NAME>Size32Bit</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">32 Bit</L-4>
+													</LONG-NAME>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="583ee30c-26b5-4580-ad99-e37f6ff985fb">
+													<SHORT-NAME>Size64Bit</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">64 Bit</L-4>
+													</LONG-NAME>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+											</LITERALS>
+										</ECUC-ENUMERATION-PARAM-DEF>
+										<ECUC-ENUMERATION-PARAM-DEF UUID="82afd26a-93ff-4c6b-a300-a45925fd1196">
+											<SHORT-NAME>SizeOfRAMPointer</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Size of RAM pointer in bit.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<LITERALS>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="e7683c77-8a58-4e38-883f-b04869946f5d">
+													<SHORT-NAME>Size16Bit</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">16 Bit</L-4>
+													</LONG-NAME>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="0b97f848-d5b1-4f86-8ce9-6e98df35c170">
+													<SHORT-NAME>Size24Bit</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">24 Bit</L-4>
+													</LONG-NAME>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="8c7a9334-24e9-4293-923b-bef93a20d526">
+													<SHORT-NAME>Size32Bit</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">32 Bit</L-4>
+													</LONG-NAME>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="f6aacef1-1f08-4c87-b279-b024a6bbcf4c">
+													<SHORT-NAME>Size64Bit</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">64 Bit</L-4>
+													</LONG-NAME>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+											</LITERALS>
+										</ECUC-ENUMERATION-PARAM-DEF>
+										<ECUC-ENUMERATION-PARAM-DEF UUID="b127a84e-d885-4feb-998f-a4918368a940">
+											<SHORT-NAME>BitFieldDataType</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Defines the data type of a C bit-field.
+The default value is int as defined by MISRA.
+Other values can be used, but the compiler may add padding bits into the bit-field structures.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>INT</DEFAULT-VALUE>
+											<LITERALS>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="024e406b-4642-411e-8cf3-f6922c978a5c">
+													<SHORT-NAME>UNSIGNED_CHAR</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">unsigned char</L-4>
+													</LONG-NAME>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="65e1d3de-d883-4af4-b00c-67fbe31d19c5">
+													<SHORT-NAME>UNSIGNED_SHORT</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">unsigned short</L-4>
+													</LONG-NAME>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="677ac488-dbb3-4e21-9fc8-53a739635e00">
+													<SHORT-NAME>UNSIGNED_INT</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">unsigned int</L-4>
+													</LONG-NAME>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="aafa1874-977c-4a55-b5ad-a44563d1726e">
+													<SHORT-NAME>INT</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">int</L-4>
+													</LONG-NAME>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+											</LITERALS>
+										</ECUC-ENUMERATION-PARAM-DEF>
+										<!--GenTool_CodeAnalyzerPostbuildXml, Ressource calculation, Rte NVRAM Block calculation
+
+Configure the alignment of generated data. The alignment of generated data depends on the compiler and on the compiler arguments.
+These parameters can be used to calculate:
+-resource forecasts
+-the byte size of structs used in interfaces between modules. Some modules have a byte size to configure to allocate e.g. RAM for structures in other modules.
+-the alignment of post-build data-->
+										<ECUC-ENUMERATION-PARAM-DEF UUID="df536056-f9b3-48fd-b42c-af85a2c0e9e9">
+											<SHORT-NAME>StructAlignment</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Alignment of struct elements.
+
+Alignment is given in bit:
+N bit means, that the address of each struct element in bit must be a multiple of N.
+
+Auto Alignment:
+In this case, the alignment of each struct element is determined by its natural alignment requirements.
+
+Remark:
+The alignment of the overall struct is done automatically and cannot be configured except for structs in arrays (see StructInArrayAlignment).</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>Auto</DEFAULT-VALUE>
+											<LITERALS>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="1014e2c7-3891-46aa-b423-e41b3c111416">
+													<SHORT-NAME>Auto</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Auto</L-4>
+													</LONG-NAME>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="5e8540e8-87b5-4ae3-9e83-60cab11c4cc3">
+													<SHORT-NAME>Align8Bit</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">8 Bit</L-4>
+													</LONG-NAME>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="f944a5dc-fc6b-4c23-afc1-51ae50363074">
+													<SHORT-NAME>Align16Bit</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">16 Bit</L-4>
+													</LONG-NAME>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="a79751a6-2f97-4b32-bf84-5ed70473038a">
+													<SHORT-NAME>Align32Bit</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">32 Bit</L-4>
+													</LONG-NAME>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="c2756b05-9804-4501-8a2e-afadb3c7be23">
+													<SHORT-NAME>Align64Bit</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">64 bit</L-4>
+													</LONG-NAME>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+											</LITERALS>
+										</ECUC-ENUMERATION-PARAM-DEF>
+										<ECUC-ENUMERATION-PARAM-DEF UUID="ab311490-347a-4838-8c1d-c31457b2326e">
+											<SHORT-NAME>ArrayAlignment</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Alignment of arrays.
+
+Alignment is given in bit:
+N bit means, that the size and the address of an array in bit must be a multiple of N.
+
+Auto Alignment:
+In this case, the alignment of an array is the same as the alignment of one array element. The address and the size of the array must be a multiple of this alignment requirement.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>Auto</DEFAULT-VALUE>
+											<LITERALS>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="a9f4d233-10b2-408a-8067-1a9230e2dba6">
+													<SHORT-NAME>Auto</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Auto</L-4>
+													</LONG-NAME>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="fcaba8a1-cb06-47e5-bb69-97cbe589a53f">
+													<SHORT-NAME>Align8Bit</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">8 Bit</L-4>
+													</LONG-NAME>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="b69b0959-485a-4e19-828f-0899a09bec1c">
+													<SHORT-NAME>Align16Bit</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">16 Bit</L-4>
+													</LONG-NAME>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="f8d96fa5-bdfb-4c87-9ca7-0fa34c3b8dde">
+													<SHORT-NAME>Align32Bit</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">32 Bit</L-4>
+													</LONG-NAME>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="204922e9-8bae-4584-9a71-b8f57455a9db">
+													<SHORT-NAME>Align64Bit</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">64 Bit</L-4>
+													</LONG-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+											</LITERALS>
+										</ECUC-ENUMERATION-PARAM-DEF>
+										<ECUC-ENUMERATION-PARAM-DEF UUID="6de4247e-af5e-4edf-883e-f8cffabcd706">
+											<SHORT-NAME>StructInArrayAlignment</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Alignment of structs in an array.
+
+Alignment is given in bit:
+N bit means, that the size and the address of the struct in bit must be a multiple of N.
+
+Auto Alignment:
+In this case, the alignment of the overall struct is determined by the struct element with the most restrictive alignment requirements.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>Auto</DEFAULT-VALUE>
+											<LITERALS>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="60bd4de6-25ed-40c9-ae88-38f646407892">
+													<SHORT-NAME>Auto</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Auto</L-4>
+													</LONG-NAME>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="4190b1e3-c447-4c24-8e4f-8b1b0e1e8c66">
+													<SHORT-NAME>Align8Bit</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">8 Bit</L-4>
+													</LONG-NAME>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="24e8d649-9138-4b33-a1e6-148c9d766940">
+													<SHORT-NAME>Align16Bit</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">16 Bit</L-4>
+													</LONG-NAME>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="4d85af3f-b49a-4ab4-a154-9a2141cd46f9">
+													<SHORT-NAME>Align32Bit</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">32 Bit</L-4>
+													</LONG-NAME>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="132095db-a67b-408d-aa4c-a59fa8d9ec9a">
+													<SHORT-NAME>Align64Bit</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">64 Bit</L-4>
+													</LONG-NAME>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+											</LITERALS>
+										</ECUC-ENUMERATION-PARAM-DEF>
+										<!--SystemSettings-->
+										<ECUC-BOOLEAN-PARAM-DEF UUID="3e619578-6e18-4d39-b21b-4dc8bad2b3cc">
+											<SHORT-NAME>DummyFunction</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Dummy functions used to avoid NULL pointer entrance in call tables</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>false</DEFAULT-VALUE>
+										</ECUC-BOOLEAN-PARAM-DEF>
+										<ECUC-BOOLEAN-PARAM-DEF UUID="4a052313-46d8-40fa-8fbe-cbc68e51ca67">
+											<SHORT-NAME>EcuCSafeBswChecks</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Selects if safety checks are used. These checks improve robustness as e.g. invalid parameters are checked before function is executed. This attribute has to be enabled for safety projects.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>false</DEFAULT-VALUE>
+										</ECUC-BOOLEAN-PARAM-DEF>
+										<ECUC-BOOLEAN-PARAM-DEF UUID="008b5ccc-548c-4a17-ba72-5cb3ea0f2bc0">
+											<SHORT-NAME>DummyStatement</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Dummy statements used to avoid compiler warnings about e.g. unused parameters</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>false</DEFAULT-VALUE>
+										</ECUC-BOOLEAN-PARAM-DEF>
+										<ECUC-ENUMERATION-PARAM-DEF UUID="ec593e86-0aa3-40ab-a841-8007c11c1c02">
+											<SHORT-NAME>DummyStatementKind</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Dummy statements used to avoid compiler warnings about e.g. unused parameters.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>None</DEFAULT-VALUE>
+											<LITERALS>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="f232bcab-e15c-44af-92bd-12ebb85deab9">
+													<SHORT-NAME>None</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">None</L-4>
+													</LONG-NAME>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="ef70a334-d8d4-44c7-aaf5-c0e58ceb4ce4">
+													<SHORT-NAME>VoidCast</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">VoidCast</L-4>
+													</LONG-NAME>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="d92cd141-f85d-4e20-877e-a098c47031a1">
+													<SHORT-NAME>SelfAssignment</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">SelfAssignment</L-4>
+													</LONG-NAME>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="6a4aee81-16bc-4f19-a6fe-26bab0bcafcb">
+													<SHORT-NAME>UserDefined</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">UserDefined</L-4>
+													</LONG-NAME>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+											</LITERALS>
+										</ECUC-ENUMERATION-PARAM-DEF>
+										<ECUC-BOOLEAN-PARAM-DEF UUID="35a9f4f3-1649-46d3-b1bf-702886af149c">
+											<SHORT-NAME>ConditionalGenerating</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">If enabled, only the files are written to the output directory which are changed in their content. As a result the time stamps will only be updated if changes have been made. Enabling this feature will result in a reduced compile time. Disable the feature if all files shall be updated with the generation step.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>true</DEFAULT-VALUE>
+										</ECUC-BOOLEAN-PARAM-DEF>
+										<ECUC-ENUMERATION-PARAM-DEF UUID="d6d5468b-0c27-4df9-af77-de4129e48ded">
+											<SHORT-NAME>EcucBswImplementationCodeType</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Defines the realization type of MICROSAR BSW modules with Service-SWC APIs at the point in time when the RTE is build:
+- Source Code: All BSW modules with Service SWC interfaces are available as Source Code. This option shall be used by default as it allows the RTE to generate optimized code.
+- Library: Some or all BSW modules with Service SWC interface are available as library only. This option requires the RTE to disable some optimization strategies.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>EcuCSourceCode</DEFAULT-VALUE>
+											<LITERALS>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="8c23f682-94a5-41bf-9863-392a0bdcbbde">
+													<SHORT-NAME>EcuCSourceCode</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Source Code</L-4>
+													</LONG-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="b9f98245-a178-49a1-b9af-60732705de4a">
+													<SHORT-NAME>EcuCLibrary</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Library</L-4>
+													</LONG-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+											</LITERALS>
+										</ECUC-ENUMERATION-PARAM-DEF>
+										<ECUC-BOOLEAN-PARAM-DEF UUID="bafe4554-152a-46ab-a682-bfad988b52d7">
+											<SHORT-NAME>EcuCUseStdReturnTypeForRte</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Defines whether the Std_ReturnType is used for RTE.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>false</DEFAULT-VALUE>
+										</ECUC-BOOLEAN-PARAM-DEF>
+									</PARAMETERS>
+									<SUB-CONTAINERS>
+										<!--GenTool_CodeAnalyzerPostbuildXml-->
+										<ECUC-PARAM-CONF-CONTAINER-DEF UUID="744aedb1-defa-44d6-9963-10037c03979d">
+											<SHORT-NAME>PostbuildLoadable</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Post-Build Loadable specific settings.</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:CfgPostBuild">
+														<SD GID="DV:postBuildSelectableChangeable">false</SD>
+														<SD GID="DV:postBuildNotDeletable">false</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+											<PARAMETERS>
+												<ECUC-INTEGER-PARAM-DEF UUID="ae3f63ba-6f79-4957-a8bd-6ca03e6d3dcb">
+													<SHORT-NAME>AlignmentFillPattern</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Alignment Fill Pattern. Byte pattern which is used for the inserted padding bytes.</L-2>
+													</DESC>
+													<ADMIN-DATA>
+														<SDGS>
+															<SDG GID="DV:Display">
+																<SD GID="DV:DefaultFormat">HEX</SD>
+															</SDG>
+														</SDGS>
+													</ADMIN-DATA>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>0</DEFAULT-VALUE>
+													<MAX>255</MAX>
+													<MIN>0</MIN>
+												</ECUC-INTEGER-PARAM-DEF>
+												<ECUC-INTEGER-PARAM-DEF UUID="1db27b29-6be2-449d-af13-5d64278817dc">
+													<SHORT-NAME>PBROMStartAddress</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Post-Build ROM Start Address</L-4>
+													</LONG-NAME>
+													<DESC>
+														<L-2 L="EN">Start address of post-build ROM data. The defined memory are is used globally for all modules excluding these defined as IndividualPostBuildLoadableModule.</L-2>
+													</DESC>
+													<ADMIN-DATA>
+														<SDGS>
+															<SDG GID="DV:Display">
+																<SD GID="DV:DefaultFormat">HEX</SD>
+															</SDG>
+														</SDGS>
+													</ADMIN-DATA>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>0</DEFAULT-VALUE>
+													<MAX>4294967295</MAX>
+													<MIN>0</MIN>
+												</ECUC-INTEGER-PARAM-DEF>
+												<ECUC-INTEGER-PARAM-DEF UUID="9864eb11-39a5-4f55-b6d9-37c60e044ae3">
+													<SHORT-NAME>PBRAMStartAddress</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Post-Build RAM Start Address</L-4>
+													</LONG-NAME>
+													<DESC>
+														<L-2 L="EN">Start address of post-build RAM data (flexible RAM management). The defined memory are is used globally for all modules excluding these defined as IndividualPostBuildLoadableModule.</L-2>
+													</DESC>
+													<ADMIN-DATA>
+														<SDGS>
+															<SDG GID="DV:Display">
+																<SD GID="DV:DefaultFormat">HEX</SD>
+															</SDG>
+														</SDGS>
+													</ADMIN-DATA>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>0</DEFAULT-VALUE>
+													<MAX>4294967295</MAX>
+													<MIN>0</MIN>
+												</ECUC-INTEGER-PARAM-DEF>
+												<ECUC-INTEGER-PARAM-DEF UUID="9d61655c-c15f-4939-809b-c059c2bb4de6">
+													<SHORT-NAME>PBROMEndAddress</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Post-Build ROM End Address</L-4>
+													</LONG-NAME>
+													<DESC>
+														<L-2 L="EN">End address of available ROM for post-build. The defined memory are is used globally for all modules excluding these defined as IndividualPostBuildLoadableModule.</L-2>
+													</DESC>
+													<ADMIN-DATA>
+														<SDGS>
+															<SDG GID="DV:Display">
+																<SD GID="DV:DefaultFormat">HEX</SD>
+															</SDG>
+														</SDGS>
+													</ADMIN-DATA>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>0</DEFAULT-VALUE>
+													<MAX>4294967295</MAX>
+													<MIN>0</MIN>
+												</ECUC-INTEGER-PARAM-DEF>
+												<ECUC-INTEGER-PARAM-DEF UUID="15036957-2fe0-4aa2-8a7f-7aba63bd29be">
+													<SHORT-NAME>PBRAMEndAddress</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Post-Build RAM End Address</L-4>
+													</LONG-NAME>
+													<DESC>
+														<L-2 L="EN">End address of available RAM for post-build. The defined memory are is used globally for all modules excluding these defined as IndividualPostBuildLoadableModule.</L-2>
+													</DESC>
+													<ADMIN-DATA>
+														<SDGS>
+															<SDG GID="DV:Display">
+																<SD GID="DV:DefaultFormat">HEX</SD>
+															</SDG>
+														</SDGS>
+													</ADMIN-DATA>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>0</DEFAULT-VALUE>
+													<MAX>4294967295</MAX>
+													<MIN>0</MIN>
+												</ECUC-INTEGER-PARAM-DEF>
+											</PARAMETERS>
+											<SUB-CONTAINERS>
+												<ECUC-PARAM-CONF-CONTAINER-DEF UUID="7651a11a-3f38-456e-bf0f-d8c5551af855">
+													<SHORT-NAME>IndividualPostBuildLoadableModule</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Modules that shall be updated individually need to be configured here. For each module a dedicated Post-Build ROM and RAM memory are need to be defined. Modules that are updated individually must not be part of the global root structure. For each module defined here an individual Hex file will be created.</L-2>
+													</DESC>
+													<ADMIN-DATA>
+														<SDGS>
+															<SDG GID="DV:CfgPostBuild">
+																<SD GID="DV:postBuildSelectableChangeable">false</SD>
+																<SD GID="DV:postBuildNotDeletable">false</SD>
+															</SDG>
+														</SDGS>
+													</ADMIN-DATA>
+													<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+													<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+													<PARAMETERS>
+														<ECUC-INTEGER-PARAM-DEF UUID="b06dafa8-dfad-42ad-8d16-6c038726c26b">
+															<SHORT-NAME>ModulePBROMStartAddress</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">Module Specific Post-Build ROM Start Address</L-4>
+															</LONG-NAME>
+															<DESC>
+																<L-2 L="EN">Start address of post-build ROM data.</L-2>
+															</DESC>
+															<ADMIN-DATA>
+																<SDGS>
+																	<SDG GID="DV:Display">
+																		<SD GID="DV:DefaultFormat">HEX</SD>
+																	</SDG>
+																</SDGS>
+															</ADMIN-DATA>
+															<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+															<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+															<IMPLEMENTATION-CONFIG-CLASSES>
+																<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+																</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+																</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															</IMPLEMENTATION-CONFIG-CLASSES>
+															<ORIGIN>Vector Informatik</ORIGIN>
+															<REQUIRES-INDEX>false</REQUIRES-INDEX>
+															<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+															<DEFAULT-VALUE>0</DEFAULT-VALUE>
+															<MAX>4294967295</MAX>
+															<MIN>0</MIN>
+														</ECUC-INTEGER-PARAM-DEF>
+														<ECUC-INTEGER-PARAM-DEF UUID="92e19ac3-fb1a-4348-a258-79e1210afb35">
+															<SHORT-NAME>ModulePBRAMStartAddress</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">Module Specific Post-Build RAM Start Address</L-4>
+															</LONG-NAME>
+															<DESC>
+																<L-2 L="EN">Start address of post-build RAM data (flexible RAM management).</L-2>
+															</DESC>
+															<ADMIN-DATA>
+																<SDGS>
+																	<SDG GID="DV:Display">
+																		<SD GID="DV:DefaultFormat">HEX</SD>
+																	</SDG>
+																</SDGS>
+															</ADMIN-DATA>
+															<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+															<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+															<IMPLEMENTATION-CONFIG-CLASSES>
+																<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+																</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+																</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															</IMPLEMENTATION-CONFIG-CLASSES>
+															<ORIGIN>Vector Informatik</ORIGIN>
+															<REQUIRES-INDEX>false</REQUIRES-INDEX>
+															<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+															<DEFAULT-VALUE>0</DEFAULT-VALUE>
+															<MAX>4294967295</MAX>
+															<MIN>0</MIN>
+														</ECUC-INTEGER-PARAM-DEF>
+														<ECUC-INTEGER-PARAM-DEF UUID="3aac0343-c375-48a5-807c-0631c104121b">
+															<SHORT-NAME>ModulePBROMEndAddress</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">Module Specific Post-Build ROM End Address</L-4>
+															</LONG-NAME>
+															<DESC>
+																<L-2 L="EN">End address of available ROM for post-build.</L-2>
+															</DESC>
+															<ADMIN-DATA>
+																<SDGS>
+																	<SDG GID="DV:Display">
+																		<SD GID="DV:DefaultFormat">HEX</SD>
+																	</SDG>
+																</SDGS>
+															</ADMIN-DATA>
+															<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+															<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+															<IMPLEMENTATION-CONFIG-CLASSES>
+																<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+																</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+																</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															</IMPLEMENTATION-CONFIG-CLASSES>
+															<ORIGIN>Vector Informatik</ORIGIN>
+															<REQUIRES-INDEX>false</REQUIRES-INDEX>
+															<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+															<DEFAULT-VALUE>0</DEFAULT-VALUE>
+															<MAX>4294967295</MAX>
+															<MIN>0</MIN>
+														</ECUC-INTEGER-PARAM-DEF>
+														<ECUC-INTEGER-PARAM-DEF UUID="a14d4c09-7705-4c7b-92ce-34d0b2ae635a">
+															<SHORT-NAME>ModulePBRAMEndAddress</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">Module Specific Post-Build RAM End Address</L-4>
+															</LONG-NAME>
+															<DESC>
+																<L-2 L="EN">End address of available RAM for post-build.</L-2>
+															</DESC>
+															<ADMIN-DATA>
+																<SDGS>
+																	<SDG GID="DV:Display">
+																		<SD GID="DV:DefaultFormat">HEX</SD>
+																	</SDG>
+																</SDGS>
+															</ADMIN-DATA>
+															<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+															<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+															<IMPLEMENTATION-CONFIG-CLASSES>
+																<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+																</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+																</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															</IMPLEMENTATION-CONFIG-CLASSES>
+															<ORIGIN>Vector Informatik</ORIGIN>
+															<REQUIRES-INDEX>false</REQUIRES-INDEX>
+															<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+															<DEFAULT-VALUE>0</DEFAULT-VALUE>
+															<MAX>4294967295</MAX>
+															<MIN>0</MIN>
+														</ECUC-INTEGER-PARAM-DEF>
+													</PARAMETERS>
+													<SUB-CONTAINERS>
+														<ECUC-PARAM-CONF-CONTAINER-DEF UUID="142a9458-6aaf-4083-86dd-75b57d1ff6bb">
+															<SHORT-NAME>ModuleInitializationStructure</SHORT-NAME>
+															<DESC>
+																<L-2 L="EN">Defines the name of the module initialzation structure(s) used for BSW initialization. Projects not using post-build selectable have one initialization structure. For these projects the parameter ModuleInitStructureStartAddress need not to be configured as the address is equal to the configured ModulePBROMStartAddress.
+Projects using selectable post-build have for each module multiple module intialization structures (one for each identity). For each identity one ModuleInitializationStructure container shall be defined. For each container the ModuleInitStructureStartAddress must be configured according to the location of that structure in ROM. All module initialization structures shall be located sequently directly after ModulePBROMStartAddress.</L-2>
+															</DESC>
+															<ADMIN-DATA>
+																<SDGS>
+																	<SDG GID="DV:CfgPostBuild">
+																		<SD GID="DV:postBuildSelectableChangeable">false</SD>
+																		<SD GID="DV:postBuildNotDeletable">false</SD>
+																	</SDG>
+																</SDGS>
+															</ADMIN-DATA>
+															<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+															<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+															<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+															<PARAMETERS>
+																<ECUC-INTEGER-PARAM-DEF UUID="fb4f3ad3-cb94-47a8-8d12-4ad321a1346e">
+																	<SHORT-NAME>ModuleInitStructureStartAddress</SHORT-NAME>
+																	<DESC>
+																		<L-2 L="EN">Relevant for post-build selectable projects with multiple module initialization structures.
+The indicated addresses must follow directly after the PBROMStartAddress. There may be gaps
+
+ If there is only a single initialization structure this container is not relevant as the start address must be equal to PBROMStartAddress.</L-2>
+																	</DESC>
+																	<ADMIN-DATA>
+																		<SDGS>
+																			<SDG GID="DV:Display">
+																				<SD GID="DV:DefaultFormat">HEX</SD>
+																			</SDG>
+																		</SDGS>
+																	</ADMIN-DATA>
+																	<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+																	<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+																	<IMPLEMENTATION-CONFIG-CLASSES>
+																		<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																			<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																			<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+																		</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																		<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																			<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																			<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+																		</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																		<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																			<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																			<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																		</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																	</IMPLEMENTATION-CONFIG-CLASSES>
+																	<ORIGIN>Vector Informatik</ORIGIN>
+																	<REQUIRES-INDEX>false</REQUIRES-INDEX>
+																	<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+																	<DEFAULT-VALUE>0</DEFAULT-VALUE>
+																	<MAX>4294967295</MAX>
+																	<MIN>0</MIN>
+																</ECUC-INTEGER-PARAM-DEF>
+															</PARAMETERS>
+														</ECUC-PARAM-CONF-CONTAINER-DEF>
+													</SUB-CONTAINERS>
+												</ECUC-PARAM-CONF-CONTAINER-DEF>
+												<ECUC-PARAM-CONF-CONTAINER-DEF UUID="9dd085d0-0194-48a1-92ab-adae6bc8873c">
+													<SHORT-NAME>GlobalInitializationStructure</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Defines the name of the global root structure(s) used for BSW initialization. Projects not using post-build selectable have one initialization structure. For these projects the parameter GlobalRootStructureStartAddress need not to be configured as the address is equal to the configured PBROMStartAddress.
+Projects using selectable post-build have multiple global root structures (one for each identity). For each identity one GlobalInitializationStructure container shall be defined. For each container the GlobalRootStructureStartAddress must be configured according to the location of that structure in ROM. All global root structures shall be located sequently directly after PBROMStartAddress.</L-2>
+													</DESC>
+													<ADMIN-DATA>
+														<SDGS>
+															<SDG GID="DV:CfgPostBuild">
+																<SD GID="DV:postBuildSelectableChangeable">false</SD>
+																<SD GID="DV:postBuildNotDeletable">false</SD>
+															</SDG>
+														</SDGS>
+													</ADMIN-DATA>
+													<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+													<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+													<PARAMETERS>
+														<ECUC-INTEGER-PARAM-DEF UUID="36aff5f8-5eae-4bf0-83e8-7ed4698acb9c">
+															<SHORT-NAME>GlobalRootStructureStartAddress</SHORT-NAME>
+															<DESC>
+																<L-2 L="EN">Start address of post-build ROM data.</L-2>
+															</DESC>
+															<ADMIN-DATA>
+																<SDGS>
+																	<SDG GID="DV:Display">
+																		<SD GID="DV:DefaultFormat">HEX</SD>
+																	</SDG>
+																</SDGS>
+															</ADMIN-DATA>
+															<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+															<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+															<IMPLEMENTATION-CONFIG-CLASSES>
+																<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+																</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+																</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															</IMPLEMENTATION-CONFIG-CLASSES>
+															<ORIGIN>Vector Informatik</ORIGIN>
+															<REQUIRES-INDEX>false</REQUIRES-INDEX>
+															<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+															<DEFAULT-VALUE>0</DEFAULT-VALUE>
+															<MAX>4294967295</MAX>
+															<MIN>0</MIN>
+														</ECUC-INTEGER-PARAM-DEF>
+													</PARAMETERS>
+												</ECUC-PARAM-CONF-CONTAINER-DEF>
+											</SUB-CONTAINERS>
+										</ECUC-PARAM-CONF-CONTAINER-DEF>
+										<!--BswInitialization-->
+										<ECUC-PARAM-CONF-CONTAINER-DEF UUID="d6087987-84bc-4cd8-b94b-ddd979e082a6">
+											<SHORT-NAME>BswInitialization</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Contains all functions</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:CfgPostBuild">
+														<SD GID="DV:postBuildSelectableChangeable">false</SD>
+														<SD GID="DV:postBuildNotDeletable">false</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+											<SUB-CONTAINERS>
+												<ECUC-PARAM-CONF-CONTAINER-DEF UUID="8575772f-5a23-4329-bf89-c14a3d841640">
+													<SHORT-NAME>InitFunction</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Name of the init function.
+
+E.g. ComM_Init</L-2>
+													</DESC>
+													<ADMIN-DATA>
+														<SDGS>
+															<SDG GID="DV:CfgPostBuild">
+																<SD GID="DV:postBuildSelectableChangeable">false</SD>
+																<SD GID="DV:postBuildNotDeletable">false</SD>
+															</SDG>
+														</SDGS>
+													</ADMIN-DATA>
+													<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+													<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+													<PARAMETERS>
+														<ECUC-STRING-PARAM-DEF UUID="060f555d-bacf-48ae-8049-0dc1ecad8511">
+															<SHORT-NAME>Header</SHORT-NAME>
+															<DESC>
+																<L-2 L="EN">Header which declares function and types.</L-2>
+															</DESC>
+															<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+															<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+															<IMPLEMENTATION-CONFIG-CLASSES>
+																<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+																</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+																</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															</IMPLEMENTATION-CONFIG-CLASSES>
+															<ORIGIN>Vector Informatik</ORIGIN>
+															<REQUIRES-INDEX>false</REQUIRES-INDEX>
+															<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+														</ECUC-STRING-PARAM-DEF>
+														<ECUC-STRING-PARAM-DEF UUID="e5a059ee-c50c-45e4-b69d-4c476a1daa9e">
+															<SHORT-NAME>ConfigType</SHORT-NAME>
+															<DESC>
+																<L-2 L="EN">Name of ConfigType</L-2>
+															</DESC>
+															<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+															<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+															<IMPLEMENTATION-CONFIG-CLASSES>
+																<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+																</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+																</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															</IMPLEMENTATION-CONFIG-CLASSES>
+															<ORIGIN>Vector Informatik</ORIGIN>
+															<REQUIRES-INDEX>false</REQUIRES-INDEX>
+															<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+														</ECUC-STRING-PARAM-DEF>
+														<ECUC-STRING-PARAM-DEF UUID="c2ea3f18-a5f1-4c98-b058-c6db4eaabf16">
+															<SHORT-NAME>ConfigPtrName</SHORT-NAME>
+															<DESC>
+																<L-2 L="EN">Name of Config Pointer which shall be passed to function. If Empty no parameter is passed. If Init Function has a pointer, at least a NULL_PTR should be inserted here.</L-2>
+															</DESC>
+															<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+															<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+															<IMPLEMENTATION-CONFIG-CLASSES>
+																<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+																</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+																</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															</IMPLEMENTATION-CONFIG-CLASSES>
+															<ORIGIN>Vector Informatik</ORIGIN>
+															<REQUIRES-INDEX>false</REQUIRES-INDEX>
+															<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+														</ECUC-STRING-PARAM-DEF>
+														<ECUC-STRING-PARAM-DEF UUID="69d8fbea-e14d-40fe-803b-f836bc7e5227">
+															<SHORT-NAME>ConfigPtrClass</SHORT-NAME>
+															<DESC>
+																<L-2 L="EN">Memory class of Config Pointer.</L-2>
+															</DESC>
+															<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+															<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+															<IMPLEMENTATION-CONFIG-CLASSES>
+																<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+																</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+																</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															</IMPLEMENTATION-CONFIG-CLASSES>
+															<ORIGIN>Vector Informatik</ORIGIN>
+															<REQUIRES-INDEX>false</REQUIRES-INDEX>
+															<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+														</ECUC-STRING-PARAM-DEF>
+														<ECUC-ENUMERATION-PARAM-DEF UUID="147101bd-7ea4-464e-9c3d-c7d05f099405">
+															<SHORT-NAME>InitPhase</SHORT-NAME>
+															<DESC>
+																<L-2 L="EN">Phase in which this init function shall be called.</L-2>
+															</DESC>
+															<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+															<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+															<IMPLEMENTATION-CONFIG-CLASSES>
+																<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+																</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+																</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															</IMPLEMENTATION-CONFIG-CLASSES>
+															<ORIGIN>Vector Informatik</ORIGIN>
+															<REQUIRES-INDEX>false</REQUIRES-INDEX>
+															<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+															<DEFAULT-VALUE>INIT_TWO_POST_NVMREADALL</DEFAULT-VALUE>
+															<LITERALS>
+																<ECUC-ENUMERATION-LITERAL-DEF UUID="6d56b5aa-6110-4157-bb97-b4e4bdd73520">
+																	<SHORT-NAME>NO_INIT</SHORT-NAME>
+																	<ORIGIN>Vector Informatik</ORIGIN>
+																</ECUC-ENUMERATION-LITERAL-DEF>
+																<ECUC-ENUMERATION-LITERAL-DEF UUID="88cb3fc0-fc08-43c8-80db-b8e12578258a">
+																	<SHORT-NAME>INIT_MEMORY</SHORT-NAME>
+																	<ORIGIN>Vector Informatik</ORIGIN>
+																</ECUC-ENUMERATION-LITERAL-DEF>
+																<ECUC-ENUMERATION-LITERAL-DEF UUID="9dc3bdd3-6e58-4108-aacc-188c5168e291">
+																	<SHORT-NAME>INIT_ZERO</SHORT-NAME>
+																	<ORIGIN>Vector Informatik</ORIGIN>
+																</ECUC-ENUMERATION-LITERAL-DEF>
+																<ECUC-ENUMERATION-LITERAL-DEF UUID="3f0c89d9-42dc-49c1-b58c-782ce69cc76a">
+																	<SHORT-NAME>INIT_ONE_EARLY</SHORT-NAME>
+																	<ORIGIN>Vector Informatik</ORIGIN>
+																</ECUC-ENUMERATION-LITERAL-DEF>
+																<ECUC-ENUMERATION-LITERAL-DEF UUID="7bc56817-f8e9-4b8c-9642-27fffdc1eace">
+																	<SHORT-NAME>INIT_ONE</SHORT-NAME>
+																	<ORIGIN>Vector Informatik</ORIGIN>
+																</ECUC-ENUMERATION-LITERAL-DEF>
+																<ECUC-ENUMERATION-LITERAL-DEF UUID="a6db560a-b003-4daa-b606-c698491ddf1c">
+																	<SHORT-NAME>INIT_ONE_LATE</SHORT-NAME>
+																	<ORIGIN>Vector Informatik</ORIGIN>
+																</ECUC-ENUMERATION-LITERAL-DEF>
+																<ECUC-ENUMERATION-LITERAL-DEF UUID="ac18bf0c-6d0c-4d20-a52b-08fa48a8e3fa">
+																	<SHORT-NAME>INIT_TWO_MCAL</SHORT-NAME>
+																	<ORIGIN>Vector Informatik</ORIGIN>
+																</ECUC-ENUMERATION-LITERAL-DEF>
+																<ECUC-ENUMERATION-LITERAL-DEF UUID="88f1956b-b447-46e1-b9ff-585cd1c7817a">
+																	<SHORT-NAME>INIT_TWO_TRCV</SHORT-NAME>
+																	<ORIGIN>Vector Informatik</ORIGIN>
+																</ECUC-ENUMERATION-LITERAL-DEF>
+																<ECUC-ENUMERATION-LITERAL-DEF UUID="9db8e59f-cdd1-4927-9898-0d94f2d0e01a">
+																	<SHORT-NAME>INIT_TWO_DRV</SHORT-NAME>
+																	<ORIGIN>Vector Informatik</ORIGIN>
+																</ECUC-ENUMERATION-LITERAL-DEF>
+																<ECUC-ENUMERATION-LITERAL-DEF UUID="cf5c3088-c387-4a52-a760-0f4e9007139c">
+																	<SHORT-NAME>INIT_TWO_IF</SHORT-NAME>
+																	<ORIGIN>Vector Informatik</ORIGIN>
+																</ECUC-ENUMERATION-LITERAL-DEF>
+																<ECUC-ENUMERATION-LITERAL-DEF UUID="3d196abe-b589-49ed-820d-f840d8be12ff">
+																	<SHORT-NAME>INIT_TWO_COM</SHORT-NAME>
+																	<ORIGIN>Vector Informatik</ORIGIN>
+																</ECUC-ENUMERATION-LITERAL-DEF>
+																<ECUC-ENUMERATION-LITERAL-DEF UUID="cd5600e2-b6c4-4fef-a631-d2a575e24c70">
+																	<SHORT-NAME>INIT_TWO_SM</SHORT-NAME>
+																	<ORIGIN>Vector Informatik</ORIGIN>
+																</ECUC-ENUMERATION-LITERAL-DEF>
+																<ECUC-ENUMERATION-LITERAL-DEF UUID="aa0970e3-5dc0-4619-bbdb-814bb5541973">
+																	<SHORT-NAME>INIT_TWO_NM</SHORT-NAME>
+																	<ORIGIN>Vector Informatik</ORIGIN>
+																</ECUC-ENUMERATION-LITERAL-DEF>
+																<ECUC-ENUMERATION-LITERAL-DEF UUID="09671ba4-01a0-4433-b282-0e7c67b34008">
+																	<SHORT-NAME>INIT_TWO_TP</SHORT-NAME>
+																	<ORIGIN>Vector Informatik</ORIGIN>
+																</ECUC-ENUMERATION-LITERAL-DEF>
+																<ECUC-ENUMERATION-LITERAL-DEF UUID="ffbd555f-1c84-4295-9a37-2106dcfde77e">
+																	<SHORT-NAME>INIT_TWO_SYS</SHORT-NAME>
+																	<ORIGIN>Vector Informatik</ORIGIN>
+																</ECUC-ENUMERATION-LITERAL-DEF>
+																<ECUC-ENUMERATION-LITERAL-DEF UUID="d57dc06c-4391-47eb-921e-7a43619a8815">
+																	<SHORT-NAME>INIT_TWO_POST_NVMREADALL</SHORT-NAME>
+																	<ORIGIN>Vector Informatik</ORIGIN>
+																</ECUC-ENUMERATION-LITERAL-DEF>
+																<ECUC-ENUMERATION-LITERAL-DEF UUID="9f566612-c080-4b9d-819a-a9c6927b3ae4">
+																	<SHORT-NAME>INIT_THREE</SHORT-NAME>
+																	<ORIGIN>Vector Informatik</ORIGIN>
+																</ECUC-ENUMERATION-LITERAL-DEF>
+															</LITERALS>
+														</ECUC-ENUMERATION-PARAM-DEF>
+														<ECUC-STRING-PARAM-DEF UUID="6aae28ab-a0ba-44c3-98a5-600b444dc0d3">
+															<SHORT-NAME>AdditionalInitCode</SHORT-NAME>
+															<DESC>
+																<L-2 L="EN">Specify additional code which can be referenced from the initialization callouts of EcuM and BswM.
+
+E.g.: Mcu_InitClock()
+
+If it is necessary to call a function with a module pointer from the global postbuild-loadable configuration, the placeholder %CONFIGPTR% can be used:
+
+E.g.: Mcu_Init(%CONFIGPTR%)</L-2>
+															</DESC>
+															<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+															<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+															<IMPLEMENTATION-CONFIG-CLASSES>
+																<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+																</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+																</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															</IMPLEMENTATION-CONFIG-CLASSES>
+															<ORIGIN>Vector Informatik</ORIGIN>
+															<REQUIRES-INDEX>false</REQUIRES-INDEX>
+															<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+														</ECUC-STRING-PARAM-DEF>
+													</PARAMETERS>
+													<REFERENCES>
+														<ECUC-FOREIGN-REFERENCE-DEF UUID="ab72c1bb-9ad2-444a-b04f-6442eba19a9a">
+															<SHORT-NAME>ModuleRef</SHORT-NAME>
+															<DESC>
+																<L-2 L="EN">Reference to module for initialization.</L-2>
+															</DESC>
+															<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+															<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+															<IMPLEMENTATION-CONFIG-CLASSES>
+																<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+																</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+																</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															</IMPLEMENTATION-CONFIG-CLASSES>
+															<ORIGIN>Vector Informatik</ORIGIN>
+															<REQUIRES-INDEX>false</REQUIRES-INDEX>
+															<DESTINATION-TYPE>ECUC-MODULE-CONFIGURATION-VALUES</DESTINATION-TYPE>
+														</ECUC-FOREIGN-REFERENCE-DEF>
+													</REFERENCES>
+												</ECUC-PARAM-CONF-CONTAINER-DEF>
+											</SUB-CONTAINERS>
+										</ECUC-PARAM-CONF-CONTAINER-DEF>
+									</SUB-CONTAINERS>
+								</ECUC-PARAM-CONF-CONTAINER-DEF>
+								<!--InterruptFunctionality-->
+								<ECUC-PARAM-CONF-CONTAINER-DEF UUID="12d3edba-7ae1-4519-8a09-0fda8273fd83">
+									<SHORT-NAME>InterruptFunctionality</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Global interrupt configuration for Mcs12 .</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:postBuildSelectableChangeable">false</SD>
+												<SD GID="DV:postBuildNotDeletable">false</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+									<PARAMETERS>
+										<ECUC-STRING-PARAM-DEF UUID="589ff99d-bbaf-43e1-97ae-4f5a4373940d">
+											<SHORT-NAME>GlobalReEnableCat1</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Mcs12 specific parameter. It shall contain a c-Code instruction that re-enables Irqs in interrupt context, to allow nested interrupts of different sources with higher priority. This code is mostly an inline assembler instruction and therefore Compiler specific. It is 
+used in case that a driver interrupt is configured as category 1.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+										</ECUC-STRING-PARAM-DEF>
+										<ECUC-STRING-PARAM-DEF UUID="214e0681-ca65-4939-b08f-7ea92c9ca986">
+											<SHORT-NAME>GlobalReEnableCat2</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Mcs12 specific parameter. It shall contain a c-Code instruction that re-enables Irqs in interrupt context, to allow nested interrupts of different sources with higher priority. This code is mostly an inline assembler instruction and therefore Compiler specific. It is 
+used in case that a driver interrupt is configured as category 2. </L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+										</ECUC-STRING-PARAM-DEF>
+									</PARAMETERS>
+								</ECUC-PARAM-CONF-CONTAINER-DEF>
+								<ECUC-PARAM-CONF-CONTAINER-DEF UUID="680f46bb-c010-42b6-8601-38e11a704172">
+									<SHORT-NAME>EcucHardware</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Hardware definition of this Ecu.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:postBuildSelectableChangeable">false</SD>
+												<SD GID="DV:postBuildNotDeletable">false</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+									<SUB-CONTAINERS>
+										<!-- Container Definition: EcucCoreDefinition -->
+										<ECUC-PARAM-CONF-CONTAINER-DEF UUID="1f20e854-6165-470a-8e68-0ac0155766d7">
+											<SHORT-NAME>EcucCoreDefinition</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Definition of one Core on this Ecu.</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:CfgPostBuild">
+														<SD GID="DV:postBuildSelectableChangeable">false</SD>
+														<SD GID="DV:postBuildNotDeletable">false</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+											<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+											<PARAMETERS>
+												<!-- PARAMETER DEFINITION: EcucCoreId -->
+												<ECUC-INTEGER-PARAM-DEF UUID="fac997d3-2bbe-4569-8b02-2498c5209a5a">
+													<SHORT-NAME>EcucCoreId</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">ID of the core.</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+													<MAX>65535</MAX>
+													<MIN>0</MIN>
+												</ECUC-INTEGER-PARAM-DEF>
+											</PARAMETERS>
+											<REFERENCES>
+												<!-- Foreign Reference Definition: EcucCoreHwRef -->
+												<ECUC-FOREIGN-REFERENCE-DEF UUID="82478df3-7943-45db-ae63-21ecf5ce163e">
+													<SHORT-NAME>EcucCoreHwRef</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Optional reference to the HwElement of HwCategory ProcessingUnit that represents this Core in the ECU Resource Template.</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD-SELECTABLE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<DESTINATION-TYPE>HW-ELEMENT</DESTINATION-TYPE>
+												</ECUC-FOREIGN-REFERENCE-DEF>
+											</REFERENCES>
+										</ECUC-PARAM-CONF-CONTAINER-DEF>
+									</SUB-CONTAINERS>
+								</ECUC-PARAM-CONF-CONTAINER-DEF>
+							</CONTAINERS>
+						</ECUC-MODULE-DEF>
+						<BSW-IMPLEMENTATION UUID="7070a2cd-d96f-4ea0-b543-a6901c2c6339">
+							<SHORT-NAME>VTTEcuC_Impl</SHORT-NAME>
+							<PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+							<SW-VERSION>1.00.00</SW-VERSION>
+							<USED-CODE-GENERATOR>DaVinci Configurator</USED-CODE-GENERATOR>
+							<VENDOR-ID>30</VENDOR-ID>
+							<AR-RELEASE-VERSION>4.00.03</AR-RELEASE-VERSION>
+							<PRECONFIGURED-CONFIGURATION-REFS>
+								<PRECONFIGURED-CONFIGURATION-REF DEST="ECUC-MODULE-CONFIGURATION-VALUES">/MICROSAR/VTT/VTTEcuC_Pre</PRECONFIGURED-CONFIGURATION-REF>
+							</PRECONFIGURED-CONFIGURATION-REFS>
+							<RECOMMENDED-CONFIGURATION-REFS>
+								<RECOMMENDED-CONFIGURATION-REF DEST="ECUC-MODULE-CONFIGURATION-VALUES">/MICROSAR/VTT/VTTEcuC_Rec</RECOMMENDED-CONFIGURATION-REF>
+							</RECOMMENDED-CONFIGURATION-REFS>
+							<VENDOR-SPECIFIC-MODULE-DEF-REFS>
+								<VENDOR-SPECIFIC-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/MICROSAR/VTT/VTTEcuC</VENDOR-SPECIFIC-MODULE-DEF-REF>
+							</VENDOR-SPECIFIC-MODULE-DEF-REFS>
+						</BSW-IMPLEMENTATION>
+						<ECUC-MODULE-CONFIGURATION-VALUES UUID="ee8005eb-3700-432b-883e-ee67bf284f69">
+							<SHORT-NAME>VTTEcuC_Pre</SHORT-NAME>
+							<DEFINITION-REF DEST="ECUC-MODULE-DEF">/MICROSAR/VTT/VTTEcuC</DEFINITION-REF>
+							<CONTAINERS>
+								<ECUC-CONTAINER-VALUE UUID="ccb041e9-5c05-410a-85d3-fbef675fa8e7">
+									<SHORT-NAME>EcucGeneral</SHORT-NAME>
+									<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/VTT/VTTEcuC/EcucGeneral</DEFINITION-REF>
+									<PARAMETER-VALUES>
+										<ECUC-TEXTUAL-PARAM-VALUE>
+											<DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/VTT/VTTEcuC/EcucGeneral/ByteOrder</DEFINITION-REF>
+											<VALUE>LITTLE_ENDIAN</VALUE>
+										</ECUC-TEXTUAL-PARAM-VALUE>
+										<ECUC-NUMERICAL-PARAM-VALUE>
+											<DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/VTT/VTTEcuC/EcucGeneral/AtomicBitAccessInBitfield</DEFINITION-REF>
+											<VALUE>0</VALUE>
+										</ECUC-NUMERICAL-PARAM-VALUE>
+										<ECUC-TEXTUAL-PARAM-VALUE>
+											<DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/VTT/VTTEcuC/EcucGeneral/AtomicVariableAccess</DEFINITION-REF>
+											<VALUE>Atomic32BitAccess</VALUE>
+										</ECUC-TEXTUAL-PARAM-VALUE>
+										<ECUC-TEXTUAL-PARAM-VALUE>
+											<DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/VTT/VTTEcuC/EcucGeneral/CPUType</DEFINITION-REF>
+											<VALUE>CPU32Bit</VALUE>
+										</ECUC-TEXTUAL-PARAM-VALUE>
+										<ECUC-TEXTUAL-PARAM-VALUE>
+											<DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/VTT/VTTEcuC/EcucGeneral/SizeOfInt</DEFINITION-REF>
+											<VALUE>Size32Bit</VALUE>
+										</ECUC-TEXTUAL-PARAM-VALUE>
+									</PARAMETER-VALUES>
+								</ECUC-CONTAINER-VALUE>
+							</CONTAINERS>
+						</ECUC-MODULE-CONFIGURATION-VALUES>
+						<ECUC-MODULE-CONFIGURATION-VALUES UUID="4da2fe14-9979-4cf1-91ee-3e4a28f6d5ba">
+							<SHORT-NAME>VTTEcuC_Rec</SHORT-NAME>
+							<DEFINITION-REF DEST="ECUC-MODULE-DEF">/MICROSAR/VTT/VTTEcuC</DEFINITION-REF>
+							<CONTAINERS>
+								<ECUC-CONTAINER-VALUE UUID="3a6c7272-17a8-403a-b404-4740d91c025b">
+									<SHORT-NAME>EcucGeneral</SHORT-NAME>
+									<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/VTT/VTTEcuC/EcucGeneral</DEFINITION-REF>
+									<PARAMETER-VALUES>
+										<ECUC-TEXTUAL-PARAM-VALUE>
+											<DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/VTT/VTTEcuC/EcucGeneral/BitFieldDataType</DEFINITION-REF>
+											<VALUE>INT</VALUE>
+										</ECUC-TEXTUAL-PARAM-VALUE>
+										<ECUC-TEXTUAL-PARAM-VALUE>
+											<DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/VTT/VTTEcuC/EcucGeneral/BitOrder</DEFINITION-REF>
+											<VALUE>LSB_to_MSB</VALUE>
+										</ECUC-TEXTUAL-PARAM-VALUE>
+										<ECUC-TEXTUAL-PARAM-VALUE>
+											<DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/VTT/VTTEcuC/EcucGeneral/EcucBswImplementationCodeType</DEFINITION-REF>
+											<VALUE>EcuCSourceCode</VALUE>
+										</ECUC-TEXTUAL-PARAM-VALUE>
+										<ECUC-TEXTUAL-PARAM-VALUE>
+											<DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/VTT/VTTEcuC/EcucGeneral/SizeOfEnum</DEFINITION-REF>
+											<VALUE>Size32Bit</VALUE>
+										</ECUC-TEXTUAL-PARAM-VALUE>
+										<ECUC-TEXTUAL-PARAM-VALUE>
+											<DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/VTT/VTTEcuC/EcucGeneral/SizeOfRAMPointer</DEFINITION-REF>
+											<VALUE>Size32Bit</VALUE>
+										</ECUC-TEXTUAL-PARAM-VALUE>
+										<ECUC-TEXTUAL-PARAM-VALUE>
+											<DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/VTT/VTTEcuC/EcucGeneral/SizeOfROMPointer</DEFINITION-REF>
+											<VALUE>Size32Bit</VALUE>
+										</ECUC-TEXTUAL-PARAM-VALUE>
+									</PARAMETER-VALUES>
+								</ECUC-CONTAINER-VALUE>
+							</CONTAINERS>
+						</ECUC-MODULE-CONFIGURATION-VALUES>
+					</ELEMENTS>
+				</AR-PACKAGE>
+			</AR-PACKAGES>
+		</AR-PACKAGE>
+	</AR-PACKAGES>
+</AUTOSAR>

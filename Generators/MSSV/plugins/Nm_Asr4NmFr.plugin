@@ -1,0 +1,109 @@
+/**********************************************************************************************************************
+*  COPYRIGHT
+*  -------------------------------------------------------------------------------------------------------------------
+*  Copyright (c) 2017 by Vector Informatik GmbH.                                                  All rights reserved.
+*
+*                This software is copyright protected and proprietary to Vector Informatik GmbH.
+*                Vector Informatik GmbH grants to you only those rights as set out in the license conditions.
+*                All other rights remain with Vector Informatik GmbH.
+*  -------------------------------------------------------------------------------------------------------------------
+*  FILE DESCRIPTION
+*  -------------------------------------------------------------------------------------------------------------------
+*  File       :  Nm_Asr4NmFr.plugin
+*  Module     :  Elisa
+*  Description:  Entry point of Elisa Core.
+*  -------------------------------------------------------------------------------------------------------------------
+*  AUTHOR IDENTITY
+*  -------------------------------------------------------------------------------------------------------------------
+*  Name                          Initials      Company
+*  -------------------------------------------------------------------------------------------------------------------
+*  Markus Schuster               vissrk        Vector Informatik GmbH
+*  -------------------------------------------------------------------------------------------------------------------
+*  REVISION HISTORY
+*  -------------------------------------------------------------------------------------------------------------------
+*  Version    Date          Author   Change Id        Description
+*  -------------------------------------------------------------------------------------------------------------------
+*  01.00.00   2016-01-12    vissrk   ESCAN00087807    First version
+*  01.01.00   2017-03-06    vissrk   FEATC-1078       Support two separate FR controllers. Number of Channels can be greater than 1.
+**********************************************************************************************************************/
+
+/**********************************************************************************************************************
+* Mandatory Functions
+**********************************************************************************************************************/
+
+/**********************************************************************************************************************
+* Name         : RegisterPlugin
+* Return value : Reference to a structure which contains the registration information about the plugin
+* Description  : Elisa_core calls this function to query necessary information about the plugin.
+*                This function is mandatory.
+**********************************************************************************************************************/
+def RegisterPlugin()
+{
+  var reg = ModulePluginRegistration()
+  reg.SetVersion(0x010000)
+  reg.SetPackageName("Nm_Asr4NmFr")
+  reg.SetInputFiles(["FrNm_Cfg.c", "FrNm_Lcfg.c", "FrNm_PBcfg.c"])
+  return reg 
+}
+
+/**********************************************************************************************************************
+* Name         : CheckVersions
+* Return value : -
+* Description  : Elisa_core calls this function to allow the plugin a version check against the BSW sources.
+**********************************************************************************************************************/
+def CheckVersions()
+{
+  AssertDefineEquals("FRNM_CFG_MAJOR_VERSION", "0x06U")
+  AssertDefineEquals("FRNM_CFG_MINOR_VERSION", "0x01U") 
+}
+
+/**********************************************************************************************************************
+* Name         : main
+* Parameter    : None
+* Return value : None
+* Description  : This is the entry point of the MSSV plugin. Main calls all rule functions to check the configuration.
+*                This function is mandatory.
+* Requirements : N/A
+**********************************************************************************************************************/
+def main()
+{
+  InvokeRule("Check QM inactive", CheckQMDefines)
+  InvokeRule("Check Schedule Variant", CheckScheduleVariantDefines)
+}
+
+/**********************************************************************************************************************
+* Name         : CheckQMDefines
+* Parameter    : None
+* Return value : None
+* Description  : This rule checks the setting of QM-related preprocessor defines.
+*                Typically it checks that QM features are inactive in safety context.
+* Requirements : N/A
+**********************************************************************************************************************/
+def CheckQMDefines()
+{
+  AssertDefineIsStdOn("FRNM_DEV_ERROR_DETECT")
+}
+
+/**********************************************************************************************************************
+* Name         : CheckScheduleVariantDefines
+* Parameter    : None
+* Return value : None
+* Description  : This rule checks the setting of QM-related preprocessor defines.
+*                Typically it checks that QM features are inactive in safety context.
+* Requirements : N/A
+**********************************************************************************************************************/
+def CheckScheduleVariantDefines()
+{
+  AssertDefineIsStdOff("FRNM_PDU_SCHEDULE_VARIANT_3")
+  AssertDefineIsStdOff("FRNM_PDU_SCHEDULE_VARIANT_4")
+  AssertDefineIsStdOff("FRNM_PDU_SCHEDULE_VARIANT_5")
+  AssertDefineIsStdOff("FRNM_PDU_SCHEDULE_VARIANT_6")
+  AssertDefineIsStdOff("FRNM_PDU_SCHEDULE_VARIANT_7")
+  AssertDefineIsStdOff("FRNM_PDU_SCHEDULE_VARIANTS_347")
+  var scheduleVariantOnly = Define("FRNM_PDU_SCHEDULE_VARIANT_ONLY")
+  Assert(scheduleVariantOnly, NotEqual, 3)
+  Assert(scheduleVariantOnly, NotEqual, 4)
+  Assert(scheduleVariantOnly, NotEqual, 5)
+  Assert(scheduleVariantOnly, NotEqual, 6)
+  Assert(scheduleVariantOnly, NotEqual, 7)
+}

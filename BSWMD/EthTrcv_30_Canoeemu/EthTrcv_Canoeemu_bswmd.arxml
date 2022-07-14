@@ -1,0 +1,1269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+***********************************************************************************************************************
+COPYRIGHT
+===============================================================================
+Copyright (c) 2014 by Vector Informatik GmbH.                                       All rights reserved.
+
+    This software is copyright protected and proprietary to Vector Informatik GmbH.
+    Vector Informatik GmbH grants to you only those rights as set out in the license conditions.
+    All other rights remain with Vector Informatik GmbH.
+===============================================================================
+THIS IS BETA VERSION === THIS IS BETA VERSION === THIS IS BETA VERSION === THIS IS BETA
+===============================================================================
+File:           EthTrcv_Canoeemu_bswmd_Cfg5_AR4.arxml
+Component:      -
+Module:         Eth
+Generator:      -
+Description:    -
+*********************************************************************************************************************** 
+-->
+<AUTOSAR xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-0-3.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://autosar.org/schema/r4.0">
+	<AR-PACKAGES>
+		<AR-PACKAGE UUID="726a4d37-82ed-4712-aef2-0ecaf6041889">
+			<SHORT-NAME>MICROSAR</SHORT-NAME>
+			<AR-PACKAGES>
+				<AR-PACKAGE UUID="fa7a8922-03ef-4417-9f41-99d85e23a028">
+					<SHORT-NAME>EthTrcv_Canoeemu</SHORT-NAME>
+					<ADMIN-DATA>
+						<DOC-REVISIONS>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.00.00</REVISION-LABEL>
+								<ISSUED-BY>visfer</ISSUED-BY>
+								<DATE>2015-04-16T06:37:02+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">initial creation</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.01.00</REVISION-LABEL>
+								<ISSUED-BY>visfer</ISSUED-BY>
+								<DATE>2015-04-16T06:37:21+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">wakeup</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.01.01</REVISION-LABEL>
+								<ISSUED-BY>visfer</ISSUED-BY>
+								<DATE>2015-04-16T06:37:33+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">ESCAN00082252</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+						</DOC-REVISIONS>
+					</ADMIN-DATA>
+					<ELEMENTS>
+						<ECUC-MODULE-DEF UUID="aabf7606-82fe-4fb3-81de-84185b97baef">
+							<SHORT-NAME>EthTrcv</SHORT-NAME>
+							<DESC>
+								<L-2 L="EN">Configuration of the ETHTRCV (Ethernet Transceiver Driver) module.</L-2>
+							</DESC>
+							<CATEGORY>VENDOR_SPECIFIC_MODULE_DEFINITION</CATEGORY>
+							<ADMIN-DATA>
+								<DOC-REVISIONS>
+									<DOC-REVISION>
+										<REVISION-LABEL>2.00.02</REVISION-LABEL>
+										<STATE>beta</STATE>
+										<ISSUED-BY>visdd</ISSUED-BY>
+										<DATE>2009-11-16T12:32:46Z</DATE>
+										<MODIFICATIONS>
+											<MODIFICATION>
+												<CHANGE>
+													<L-2 L="EN">Descriptions Updated</L-2>
+												</CHANGE>
+												<REASON>
+													<L-2 L="EN">Feature #258 (BSWMD Description field shall contain description of all dependencies of an attribute. Also, the GENy attribute description shall be updated accordingly.) </L-2>
+												</REASON>
+											</MODIFICATION>
+										</MODIFICATIONS>
+									</DOC-REVISION>
+									<DOC-REVISION>
+										<REVISION-LABEL>02.01.00</REVISION-LABEL>
+										<STATE>beta</STATE>
+										<ISSUED-BY>vishaw</ISSUED-BY>
+										<DATE>2011-05-05T09:43:19Z</DATE>
+										<MODIFICATIONS>
+											<MODIFICATION>
+												<CHANGE>
+													<L-2 L="EN">Software version increased</L-2>
+												</CHANGE>
+												<REASON>
+													<L-2 L="EN">New implementation</L-2>
+												</REASON>
+											</MODIFICATION>
+										</MODIFICATIONS>
+									</DOC-REVISION>
+									<DOC-REVISION>
+										<REVISION-LABEL>02.01.02</REVISION-LABEL>
+										<STATE>beta</STATE>
+										<ISSUED-BY>vishaw</ISSUED-BY>
+										<DATE>2012-10-17T08:42:50+02:00</DATE>
+										<MODIFICATIONS>
+											<MODIFICATION>
+												<CHANGE>
+													<L-2 L="EN">Remove Macro support for Version Info API</L-2>
+												</CHANGE>
+												<REASON>
+													<L-2 L="EN">ESCAN00056418</L-2>
+												</REASON>
+											</MODIFICATION>
+										</MODIFICATIONS>
+									</DOC-REVISION>
+									<DOC-REVISION>
+										<REVISION-LABEL>02.02.00</REVISION-LABEL>
+										<STATE>beta</STATE>
+										<ISSUED-BY>vismha</ISSUED-BY>
+										<DATE>2013-02-21T01:00:14+01:00</DATE>
+										<MODIFICATIONS>
+											<MODIFICATION>
+												<CHANGE>
+													<L-2 L="EN">Removed unsupported Config Variants</L-2>
+												</CHANGE>
+											</MODIFICATION>
+										</MODIFICATIONS>
+									</DOC-REVISION>
+									<DOC-REVISION>
+										<REVISION-LABEL>03.00.00</REVISION-LABEL>
+										<STATE>beta</STATE>
+										<ISSUED-BY>vishaw</ISSUED-BY>
+										<DATE>2013-06-18T07:40:25+02:00</DATE>
+										<MODIFICATIONS>
+											<MODIFICATION>
+												<CHANGE>
+													<L-2 L="EN">Multiple ESCANS</L-2>
+												</CHANGE>
+												<REASON>
+													<L-2 L="EN">ESCAN00068316, ESCAN00068128, ESCAN00069938</L-2>
+												</REASON>
+											</MODIFICATION>
+										</MODIFICATIONS>
+									</DOC-REVISION>
+									<DOC-REVISION>
+										<REVISION-LABEL>03.00.01</REVISION-LABEL>
+										<STATE>beta</STATE>
+										<ISSUED-BY>vishaw</ISSUED-BY>
+										<DATE>2013-11-28T07:57:01+01:00</DATE>
+										<MODIFICATIONS>
+											<MODIFICATION>
+												<CHANGE>
+													<L-2 L="EN">Improve BSWMD Description Text</L-2>
+												</CHANGE>
+												<REASON>
+													<L-2 L="EN">ESCAN00070245</L-2>
+												</REASON>
+											</MODIFICATION>
+										</MODIFICATIONS>
+									</DOC-REVISION>
+									<DOC-REVISION>
+										<REVISION-LABEL>03.01.00</REVISION-LABEL>
+										<STATE>beta</STATE>
+										<ISSUED-BY>vishaw</ISSUED-BY>
+										<DATE>2014-05-07T10:06:48+02:00</DATE>
+										<MODIFICATIONS>
+											<MODIFICATION>
+												<CHANGE>
+													<L-2 L="EN">Adapt to MSR4-R10 base bswmd</L-2>
+												</CHANGE>
+											</MODIFICATION>
+										</MODIFICATIONS>
+									</DOC-REVISION>
+									<DOC-REVISION>
+										<REVISION-LABEL>03.02.00</REVISION-LABEL>
+										<STATE>beta</STATE>
+										<ISSUED-BY>vishaw</ISSUED-BY>
+										<DATE>2014-09-17T04:13:04+02:00</DATE>
+										<MODIFICATIONS>
+											<MODIFICATION>
+												<CHANGE>
+													<L-2 L="EN">AR4-535: RTM Runtime Measurement Points</L-2>
+												</CHANGE>
+												<REASON>
+													<L-2 L="EN">ESCAN00078438</L-2>
+												</REASON>
+											</MODIFICATION>
+										</MODIFICATIONS>
+									</DOC-REVISION>
+								</DOC-REVISIONS>
+							</ADMIN-DATA>
+							<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+							<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+							<REFINED-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/AUTOSAR/EcucDefs/EthTrcv</REFINED-MODULE-DEF-REF>
+							<SUPPORTED-CONFIG-VARIANTS>
+								<SUPPORTED-CONFIG-VARIANT>VARIANT-PRE-COMPILE</SUPPORTED-CONFIG-VARIANT>
+							</SUPPORTED-CONFIG-VARIANTS>
+							<CONTAINERS>
+								<ECUC-PARAM-CONF-CONTAINER-DEF UUID="b3ed527a-37cf-4b4f-9d47-5d26e030e956">
+									<SHORT-NAME>EthTrcvGeneral</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">General configuration of Ethernet Transceiver Driver module.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:postBuildSelectableChangeable">false</SD>
+												<SD GID="DV:postBuildNotDeletable">false</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+									<PARAMETERS>
+										<ECUC-BOOLEAN-PARAM-DEF UUID="14e7bd68-72a9-43cb-9ce0-d0b972a29e9e">
+											<SHORT-NAME>EthTrcvDevErrorDetect</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">Dev Error Detect</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter switches the Development Error Detection and Notification ON or OFF.
+true:	Development error detection is enabled.
+false:	Development error detection is disabled.
+
+Note: In general, the development error detection is recommended during pre-test phase. It is not recommended to enable the development error detection in production code due to increased runtime and ROM needs.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>false</DEFAULT-VALUE>
+										</ECUC-BOOLEAN-PARAM-DEF>
+										<ECUC-BOOLEAN-PARAM-DEF UUID="9c55b3a9-7a73-4226-ad45-7b14fb2656d4">
+											<SHORT-NAME>EthTrcvGetBaudRateApi</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">Get Baud Rate API</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter defines if the EthTrcv_GetBaudRate() API is enabled to get the current transceiver baud rate.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>true</DEFAULT-VALUE>
+										</ECUC-BOOLEAN-PARAM-DEF>
+										<ECUC-BOOLEAN-PARAM-DEF UUID="60dac37d-4085-4e1c-9bb4-270bf4583639">
+											<SHORT-NAME>EthTrcvGetDuplexModeApi</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">Get Duplex Mode Api</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter defines if the EthTrcv_GetDuplexMode() API is enabled to get the current transceiver duplex mode.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>true</DEFAULT-VALUE>
+										</ECUC-BOOLEAN-PARAM-DEF>
+										<ECUC-BOOLEAN-PARAM-DEF UUID="4bf4afb6-1db0-4644-b6a6-54182e8851c6">
+											<SHORT-NAME>EthTrcvGetLinkStateApi</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">Get Transceiver Link State API</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter defines if the EthTrcv_GetLinkState() API is enbled to get the current transceiver link state.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>true</DEFAULT-VALUE>
+										</ECUC-BOOLEAN-PARAM-DEF>
+										<ECUC-BOOLEAN-PARAM-DEF UUID="d66b1429-0a68-4817-8cbf-b576b9746a58">
+											<SHORT-NAME>EthTrcvGetTransceiverModeApi</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">Get Transceiver Mode API</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter defines if the EthTrcv_GetTransceiverMode() API is enabled to get the current transceiver mode.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>true</DEFAULT-VALUE>
+										</ECUC-BOOLEAN-PARAM-DEF>
+										<ECUC-INTEGER-PARAM-DEF UUID="690611c1-03ad-4236-b07d-ba95eb5a43ac">
+											<SHORT-NAME>EthTrcvMaxTrcvsSupported</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">Max Trcvs Supported</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">This value specifies the maximum number of transceiver configurations per transceiver driver.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>1</DEFAULT-VALUE>
+											<MAX>255</MAX>
+											<MIN>1</MIN>
+										</ECUC-INTEGER-PARAM-DEF>
+										<ECUC-BOOLEAN-PARAM-DEF UUID="852db9c9-ad65-442f-9bd9-f52a799205df">
+											<SHORT-NAME>EthTrcvSetTransceiverModeApi</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">Set Transceiver Mode API</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter defines if the EthTrcv_SetTransceiverMode() API is enabled to set the transceiver mode.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>true</DEFAULT-VALUE>
+										</ECUC-BOOLEAN-PARAM-DEF>
+										<ECUC-BOOLEAN-PARAM-DEF UUID="cd67baaf-226d-4670-9c87-caf3f3648df0">
+											<SHORT-NAME>EthTrcvStartAutoNegotiationApi</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">Start Auto Negotiation Api</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter defines if the EthTrcv_StartAutoNegotiation() is enabled to start the transceiver auto negotiation.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>true</DEFAULT-VALUE>
+										</ECUC-BOOLEAN-PARAM-DEF>
+										<ECUC-BOOLEAN-PARAM-DEF UUID="fb2ac257-2514-45d4-affb-77fb3f92bea9">
+											<SHORT-NAME>EthTrcvVersionInfoApi</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">Version Info API</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter enables/disables the function EthTrcv_GetVersionInfo() to get major, minor and patch version information.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>false</DEFAULT-VALUE>
+										</ECUC-BOOLEAN-PARAM-DEF>
+										<ECUC-STRING-PARAM-DEF UUID="1d6f8ce7-49c1-4a39-abd2-d9d58f98db11">
+											<SHORT-NAME>EthTrcvUserConfigFile</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">User Config File</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">Reference to an external text file that will be included during generation to EthTrcv_Cfg.h.
+The content of the user configuration file will be added at the end of the generated module configuration file and allows altering or extending the generated code.
+
+Caution: User configuration files can cause the software module to malfunction and must only be used with great care!</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+										</ECUC-STRING-PARAM-DEF>
+										<ECUC-BOOLEAN-PARAM-DEF UUID="20a2c783-3c05-49a5-a0b5-cddc7cf6e292">
+											<SHORT-NAME>EthTrcvEnableApiOptimization</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">Enable API Optimization</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter defines if the code can be optimized to save ROM, RAM and runtime.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>false</DEFAULT-VALUE>
+										</ECUC-BOOLEAN-PARAM-DEF>
+										<ECUC-BOOLEAN-PARAM-DEF UUID="09ce3e10-53e1-4b91-a02e-43517f5f1a58">
+											<SHORT-NAME>EthTrcvVersionInfoApiMacro</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">Version Info API Macro</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">Parameter not used.
+This parameter defines if EthTrcv_GetVersionInfo() is implemented as a macro.
+Restrictions: 'EthTrcvVersionInfoApiMacro' is only relevant, if 'EthTrcvVersionInfoApi' is set to 'true'.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>false</DEFAULT-VALUE>
+										</ECUC-BOOLEAN-PARAM-DEF>
+										<ECUC-INTEGER-PARAM-DEF UUID="36914bdc-63b6-4187-8475-9461ecf98e13">
+											<SHORT-NAME>EthTrcvIndex</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Specifies the InstanceId of this module instance. If only one instance is present it shall have the Id 0.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>0</DEFAULT-VALUE>
+											<MAX>255</MAX>
+											<MIN>0</MIN>
+										</ECUC-INTEGER-PARAM-DEF>
+										<ECUC-BOOLEAN-PARAM-DEF UUID="1c769f37-6077-4614-8965-abe8c5563125">
+											<SHORT-NAME>EthTrcvRuntimeMeasurementSupport</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">If enabled runtime measurement points are added to the BSW module code and are added to the module configuration of MICROSAR RTM. The available measurement points can be seen and configured in the RTM module configuration. Availability of the MICROSAR RTM module is a prerequisite to make use of the runtime measurement functionality.
+Runtime measurement should be disabled in production code as measurement points may inflict additional runtime.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>false</DEFAULT-VALUE>
+										</ECUC-BOOLEAN-PARAM-DEF>
+										<ECUC-ENUMERATION-PARAM-DEF UUID="93fa57ed-86eb-4ac0-b435-c5baca5cf46d">
+											<SHORT-NAME>EthTrcvWakeUpSupport</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">Wakeup Support</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter specifies the kinde of wakeup support the transceiver provides.
+
+ETHTRCV_WAKEUP_BY_INTERRUPT:
+Wakeup is realised through a interrupt triggered by Icu.
+
+ETHTRCV_WAKEUP_BY_POLLING:
+Wakeup is realised trough polling of EthTrcv_CheckWakeup() through EcuM.
+
+ETHTRCV_WAKEUO_NOT_SUPPORTED:
+Wakeup capability is either not supported by hardware/driver or is disabled.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>ETHTRCV_WAKEUP_NOT_SUPPORTED</DEFAULT-VALUE>
+											<LITERALS>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="ccdc7f30-9db4-4cac-86ec-24ff4e71a7e5">
+													<SHORT-NAME>ETHTRCV_WAKEUP_BY_INTERRUPT</SHORT-NAME>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="8ca78df3-c9ea-43cb-a7fa-5b8de7f89782">
+													<SHORT-NAME>ETHTRCV_WAKEUP_BY_POLLING</SHORT-NAME>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="3bd573e4-5c54-414f-a04c-ed63c6187bfe">
+													<SHORT-NAME>ETHTRCV_WAKEUP_NOT_SUPPORTED</SHORT-NAME>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+											</LITERALS>
+										</ECUC-ENUMERATION-PARAM-DEF>
+										<ECUC-FLOAT-PARAM-DEF UUID="a7d2f601-0902-4d2b-a549-aa0707a8c3a5">
+											<SHORT-NAME>EthTrcvMainFunctionPeriod</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">This value specifies the period the EthTrcv_MainFunction is called.</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:Display">
+														<SD GID="DV:BaseUnit">SEC</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>0.02</DEFAULT-VALUE>
+											<MAX>1</MAX>
+											<MIN>0.001</MIN>
+										</ECUC-FLOAT-PARAM-DEF>
+										<ECUC-BOOLEAN-PARAM-DEF UUID="0d3779f2-bcc7-4077-b2b5-34e962e36315">
+											<SHORT-NAME>EthTrcvGetTransceiverWakeupModeApi</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">Get Transceiver Wakeup Mode API</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter defines if the EthTrcv_GetTransceiverWakeupMode() API is enabled to get the current transceiver wakeup mode.
+
+The API can only be used if EthTrcvWakeUpSupport is not configured to ETHTRCV_WAKEUP_NOT_SUPPORTED.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>true</DEFAULT-VALUE>
+										</ECUC-BOOLEAN-PARAM-DEF>
+										<ECUC-STRING-PARAM-DEF UUID="503b4a8a-2174-4945-bda6-46f028ed5eff">
+											<SHORT-NAME>EthTrcvWakeUpCalloutIncludeFiles</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter defines include files for the declaration of wakeup callouts.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+										</ECUC-STRING-PARAM-DEF>
+									</PARAMETERS>
+								</ECUC-PARAM-CONF-CONTAINER-DEF>
+								<ECUC-PARAM-CONF-CONTAINER-DEF UUID="79b56d84-0821-40da-93c8-7f0925589eec">
+									<SHORT-NAME>EthTrcvConfigSet</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This conainter includes multiple configuration set containers.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:postBuildSelectableChangeable">false</SD>
+												<SD GID="DV:postBuildNotDeletable">false</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+									<MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+									<SUB-CONTAINERS>
+										<ECUC-PARAM-CONF-CONTAINER-DEF UUID="d8bfdfde-dfcd-4f57-87f5-671e751cf9a4">
+											<SHORT-NAME>EthTrcvConfig</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">This container includes the configuration of the individual transceiver.</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:CfgPostBuild">
+														<SD GID="DV:postBuildSelectableChangeable">false</SD>
+														<SD GID="DV:postBuildNotDeletable">false</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+											<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+											<PARAMETERS>
+												<ECUC-INTEGER-PARAM-DEF UUID="2853b01c-94eb-465d-b393-b942df57540d">
+													<SHORT-NAME>EthTrcvIdx</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Transceiver Index</L-4>
+													</LONG-NAME>
+													<DESC>
+														<L-2 L="EN">This value specifies the instance ID of the configured transceiver.</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>0</DEFAULT-VALUE>
+													<MAX>255</MAX>
+													<MIN>0</MIN>
+												</ECUC-INTEGER-PARAM-DEF>
+												<ECUC-BOOLEAN-PARAM-DEF UUID="1329b27f-4a85-48b0-aa27-0f7aca0f3bc8">
+													<SHORT-NAME>EthTrcvAutoNegotiationEnabled</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">This parameter specifies if Auto Negotiation is enabled or disabled for determination of the Ethernet Transceiver speed.</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>true</DEFAULT-VALUE>
+												</ECUC-BOOLEAN-PARAM-DEF>
+												<ECUC-ENUMERATION-PARAM-DEF UUID="f13ef48c-768b-4f9b-b39d-45b083ef7abe">
+													<SHORT-NAME>EthTrcvSpeed</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">This parameter specifies the speed of the Ethernet transceiver link in MBit/s.
+
+RESTRICTION: If Auto Negotiation is enabled this is the maximum speed advertised for Auto-Negotiation
+</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>TRCV_SPEED_100</DEFAULT-VALUE>
+													<LITERALS>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="cd9fc645-7b3f-4253-a8dc-9efef98b6ff8">
+															<SHORT-NAME>TRCV_SPEED_10</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">ETHTRCV_BAUD_RATE_10MBIT</L-4>
+															</LONG-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="704dee96-f76f-4578-b914-a5007c868aad">
+															<SHORT-NAME>TRCV_SPEED_100</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">ETHTRCV_BAUD_RATE_100MBIT</L-4>
+															</LONG-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="5ed7bd35-8dcf-499d-a167-717e11cad7d0">
+															<SHORT-NAME>TRCV_SPEED_1000</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">ETHTRCV_BAUD_RATE_1000MBIT</L-4>
+															</LONG-NAME>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+													</LITERALS>
+												</ECUC-ENUMERATION-PARAM-DEF>
+												<ECUC-ENUMERATION-PARAM-DEF UUID="374b8829-2d8a-439f-9c4d-0359435182d4">
+													<SHORT-NAME>EthTrcvWakeupInspectionType</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Wakeup Inspection Type</L-4>
+													</LONG-NAME>
+													<DESC>
+														<L-2 L="EN">This parameter specifies the method used for inspection of wakeup events.
+
+ETHTRCV_ICU_CHANNEL:
+Uses the Icu_GetInputState() API for the related Icu channel to verify if a wakeup event occured and the corresponding AUTOSAR wakeup reason must be set.
+
+ETHTRCV_TRCV_REGISTERS:
+If hardware supports waking up by the transceiver itself the driver checks its registers if a wakeup event occured and the corresponding AUTOSAR wakeup reason must be set.
+
+ETHTRCV_USER_CODE:
+The user must provide integration code by itself for wakeup event inspection. This code must be embedded within the function EthTrcv_WakeupInspection generated into EthTrcv_Lcfg.c. For a more detailed information please refere to the Technical Reference of the driver.</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>ETHTRCV_ICU_CHANNEL</DEFAULT-VALUE>
+													<LITERALS>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="c4b8c640-4fd8-412c-aaf8-3fb9ffd4a3c4">
+															<SHORT-NAME>ETHTRCV_ICU_CHANNEL</SHORT-NAME>
+															<ORIGIN>Vector Informatik</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="c2e2673b-4115-4ed4-858d-04a4c63539d9">
+															<SHORT-NAME>ETHTRCV_TRCV_REGISTERS</SHORT-NAME>
+															<ORIGIN>Vector Informatik</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="01c4d40b-bb01-47e7-a708-7ea77f0d7acb">
+															<SHORT-NAME>ETHTRCV_USER_CODE</SHORT-NAME>
+															<ORIGIN>Vector Informatik</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+													</LITERALS>
+												</ECUC-ENUMERATION-PARAM-DEF>
+												<ECUC-FUNCTION-NAME-DEF UUID="6b8ad463-99e9-4a8c-b832-7fdca882c3bc">
+													<SHORT-NAME>EthTrcvWakeUpCallout</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">This parameter specifies a callout function that is called during EthTrcv_SetTransceiverMode() for transceiver activation if a wakeup event has occured.
+
+The callout can be used for e.g. initiating a remote wakeup of related ECUs by setting a activation line connected to them.
+The function must be declared as followed:
+void &amp;lt;EthTrcvWakeUpCallout&amp;gt;(uint8 TrcvIdx)</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+												</ECUC-FUNCTION-NAME-DEF>
+											</PARAMETERS>
+											<REFERENCES>
+												<ECUC-SYMBOLIC-NAME-REFERENCE-DEF UUID="bb4567ad-193e-46d0-8e59-4bab11ad5b93">
+													<SHORT-NAME>EthTrcvIcuChannelRef</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Reference to a Icu channel container.
+
+The reference is used for enabling/disabling the wakeup notifications triggered by Icu in case EthTrcvWakeupSupport is configured to ETHTRCV_WAKEUP_BY_INTERRUPT.
+Additionally the reference is used to check for a proper wakeup signal if the parameter EthTrcvWakeupVerificationType is set to ETHTRCV_ICU_CHANNEL.</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Icu/IcuConfigSet/IcuChannel</DESTINATION-REF>
+												</ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+											</REFERENCES>
+											<SUB-CONTAINERS>
+												<ECUC-PARAM-CONF-CONTAINER-DEF UUID="1042e1ad-8b28-4c01-8d65-1bd672e57d98">
+													<SHORT-NAME>EthTrcvDemEventParameterRefs</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">This container includes the references to DemEventParameter elements which shall be invoked using the API Dem_ReportErrorStatus API in case the corresponding error occurs. The EventId is taken from the referenced DemEventParameter's DemEventId value. </L-2>
+													</DESC>
+													<ADMIN-DATA>
+														<SDGS>
+															<SDG GID="DV:CfgPostBuild">
+																<SD GID="DV:postBuildSelectableChangeable">false</SD>
+																<SD GID="DV:postBuildNotDeletable">false</SD>
+															</SDG>
+														</SDGS>
+													</ADMIN-DATA>
+													<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+													<REFERENCES>
+														<ECUC-SYMBOLIC-NAME-REFERENCE-DEF UUID="ba28420b-4fa6-4f8b-a48e-36f894d399cc">
+															<SHORT-NAME>ETHTRCV_E_ACCESS</SHORT-NAME>
+															<DESC>
+																<L-2 L="EN">Reference to the DemEventParameter which shall be issued when the error "ETHTRCV_E_ACCESS" has occurred.</L-2>
+															</DESC>
+															<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+															<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+															<IMPLEMENTATION-CONFIG-CLASSES>
+																<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															</IMPLEMENTATION-CONFIG-CLASSES>
+															<ORIGIN>Vector Informatik</ORIGIN>
+															<REQUIRES-INDEX>false</REQUIRES-INDEX>
+															<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Dem/DemConfigSet/DemEventParameter</DESTINATION-REF>
+														</ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+													</REFERENCES>
+												</ECUC-PARAM-CONF-CONTAINER-DEF>
+												<ECUC-CHOICE-CONTAINER-DEF UUID="58fa0400-7282-4a33-8d30-64c3dc6879c0">
+													<SHORT-NAME>EthTrcvMgmtInterface</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">This container includes either a MII interface or Switch interface container. Depending on the physical hardware the transceiver is either connected to an Ethernet Controller via MII interface or is integrated into an Ethernet Switch.</L-2>
+													</DESC>
+													<ADMIN-DATA>
+														<SDGS>
+															<SDG GID="DV:CfgPostBuild">
+																<SD GID="DV:postBuildSelectableChangeable">false</SD>
+																<SD GID="DV:postBuildNotDeletable">false</SD>
+															</SDG>
+														</SDGS>
+													</ADMIN-DATA>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+													<CHOICES>
+														<ECUC-PARAM-CONF-CONTAINER-DEF UUID="671aee82-c63c-4e9e-9d0d-0956b70ab9f9">
+															<SHORT-NAME>EthTrcvMiiInterface</SHORT-NAME>
+															<DESC>
+																<L-2 L="EN">This container includes the MII interface configuration between an Ethernet Controller and the Ethernet Transceiver.</L-2>
+															</DESC>
+															<ADMIN-DATA>
+																<SDGS>
+																	<SDG GID="DV:CfgPostBuild">
+																		<SD GID="DV:postBuildSelectableChangeable">false</SD>
+																		<SD GID="DV:postBuildNotDeletable">false</SD>
+																	</SDG>
+																</SDGS>
+															</ADMIN-DATA>
+															<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+															<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+															<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+															<PARAMETERS>
+																<ECUC-INTEGER-PARAM-DEF UUID="90e100f8-4778-4801-b2b4-4281ebe855b3">
+																	<SHORT-NAME>EthTrcvMiiIdx</SHORT-NAME>
+																	<LONG-NAME>
+																		<L-4 L="EN">Transceiver MII Index</L-4>
+																	</LONG-NAME>
+																	<DESC>
+																		<L-2 L="EN">This value specifies the transceiver index used for MII (Media Independent Interface) access of the transceiver. A transceiver is usually  associated with a constant MII address, that can be selected via strapping pins on the hardware. The adress is used to identify the transceiver during communication.</L-2>
+																	</DESC>
+																	<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+																	<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+																	<IMPLEMENTATION-CONFIG-CLASSES>
+																		<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																			<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																			<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																		</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																	</IMPLEMENTATION-CONFIG-CLASSES>
+																	<ORIGIN>Vector Informatik</ORIGIN>
+																	<REQUIRES-INDEX>false</REQUIRES-INDEX>
+																	<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+																	<DEFAULT-VALUE>1</DEFAULT-VALUE>
+																	<MAX>255</MAX>
+																	<MIN>0</MIN>
+																</ECUC-INTEGER-PARAM-DEF>
+																<ECUC-ENUMERATION-PARAM-DEF UUID="2341e459-874e-4e45-8f94-a09d32de2dd0">
+																	<SHORT-NAME>EthTrcvMiiSelection</SHORT-NAME>
+																	<DESC>
+																		<L-2 L="EN">This parameter specifies the type of transceiver/controller interface. The interface is either MII, Light-MII or RGMII. The interface must be selected according to your electric circuit design.</L-2>
+																	</DESC>
+																	<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+																	<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+																	<IMPLEMENTATION-CONFIG-CLASSES>
+																		<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																			<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																			<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																		</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																	</IMPLEMENTATION-CONFIG-CLASSES>
+																	<ORIGIN>Vector Informatik</ORIGIN>
+																	<REQUIRES-INDEX>false</REQUIRES-INDEX>
+																	<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+																	<DEFAULT-VALUE>ETHTRCV_MII_MODE</DEFAULT-VALUE>
+																	<LITERALS>
+																		<ECUC-ENUMERATION-LITERAL-DEF UUID="536ee32b-15a8-4f88-8ea4-ceba0181b0a3">
+																			<SHORT-NAME>ETHTRCV_MII_MODE</SHORT-NAME>
+																			<ORIGIN>Vector Informatik</ORIGIN>
+																		</ECUC-ENUMERATION-LITERAL-DEF>
+																	</LITERALS>
+																</ECUC-ENUMERATION-PARAM-DEF>
+															</PARAMETERS>
+															<REFERENCES>
+																<ECUC-SYMBOLIC-NAME-REFERENCE-DEF UUID="f6a8535f-0d50-42ab-9822-2d03a14bb66e">
+																	<SHORT-NAME>EthTrcvCtrlRef</SHORT-NAME>
+																	<DESC>
+																		<L-2 L="EN">Reference to a physical Ethernet controller configuration.</L-2>
+																	</DESC>
+																	<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+																	<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+																	<IMPLEMENTATION-CONFIG-CLASSES>
+																		<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																			<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																			<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																		</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																	</IMPLEMENTATION-CONFIG-CLASSES>
+																	<ORIGIN>Vector Informatik</ORIGIN>
+																	<REQUIRES-INDEX>false</REQUIRES-INDEX>
+																	<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Eth/EthConfigSet/EthCtrlConfig</DESTINATION-REF>
+																</ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+															</REFERENCES>
+														</ECUC-PARAM-CONF-CONTAINER-DEF>
+														<ECUC-PARAM-CONF-CONTAINER-DEF UUID="cc36f526-f974-42b1-aa15-d027411e8100">
+															<SHORT-NAME>EthTrcvSwitchInterface</SHORT-NAME>
+															<DESC>
+																<L-2 L="EN">This container includes the Switch interface configuration between an Ethernet Switch and an Ethernet Transceiver.</L-2>
+															</DESC>
+															<ADMIN-DATA>
+																<SDGS>
+																	<SDG GID="DV:CfgPostBuild">
+																		<SD GID="DV:postBuildSelectableChangeable">false</SD>
+																		<SD GID="DV:postBuildNotDeletable">false</SD>
+																	</SDG>
+																</SDGS>
+															</ADMIN-DATA>
+															<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+															<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+															<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+															<PARAMETERS>
+																<ECUC-ENUMERATION-PARAM-DEF UUID="fb2565b5-d11e-4ec1-b8c8-1e3cefd6ffea">
+																	<SHORT-NAME>EthTrcvMiiSelection</SHORT-NAME>
+																	<DESC>
+																		<L-2 L="EN">This parameter specifies the type of transceiver/controller interface. In case the configured element is an intenal PHY choose INTERNAL PHY, in case it is an external PHY managed by a switch the interface must be selected.The interface is either (G)MII, Light-MII or R(G)MII. In case of R(G)MII the refclock signal can be generated by the transceiver or applied externally. Choose R(G)MII_XTAL for transceiver clock generation and R(G)MII for an external clock. The interface must be selected according to your electric circuit design.</L-2>
+																	</DESC>
+																	<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+																	<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+																	<IMPLEMENTATION-CONFIG-CLASSES>
+																		<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																			<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																			<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																		</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																	</IMPLEMENTATION-CONFIG-CLASSES>
+																	<ORIGIN>Vector Informatik</ORIGIN>
+																	<REQUIRES-INDEX>false</REQUIRES-INDEX>
+																	<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+																	<DEFAULT-VALUE>ETHTRCV_MII_MODE</DEFAULT-VALUE>
+																	<LITERALS>
+																		<ECUC-ENUMERATION-LITERAL-DEF UUID="6d2d46f6-ba4d-47fd-833a-5eff94754cc4">
+																			<SHORT-NAME>ETHTRCV_MII_MODE</SHORT-NAME>
+																			<ORIGIN>Vector Informatik</ORIGIN>
+																		</ECUC-ENUMERATION-LITERAL-DEF>
+																	</LITERALS>
+																</ECUC-ENUMERATION-PARAM-DEF>
+															</PARAMETERS>
+															<REFERENCES>
+																<ECUC-SYMBOLIC-NAME-REFERENCE-DEF UUID="5361eac9-69d4-4eae-8394-6285f7c8bec0">
+																	<SHORT-NAME>EthTrcvSwitchRef</SHORT-NAME>
+																	<DESC>
+																		<L-2 L="EN">Reference to a switch configuration container. The switch configuration is associated with the hardware switch this transceiver is connected into.</L-2>
+																	</DESC>
+																	<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+																	<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+																	<IMPLEMENTATION-CONFIG-CLASSES>
+																		<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																			<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																			<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																		</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																	</IMPLEMENTATION-CONFIG-CLASSES>
+																	<ORIGIN>Vector Informatik</ORIGIN>
+																	<REQUIRES-INDEX>false</REQUIRES-INDEX>
+																	<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EthSwt/EthSwtConfig</DESTINATION-REF>
+																</ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+																<ECUC-SYMBOLIC-NAME-REFERENCE-DEF UUID="45170863-3948-4ae1-aa8d-5a09e0ad0039">
+																	<SHORT-NAME>EthTrcvSwitchPortRef</SHORT-NAME>
+																	<DESC>
+																		<L-2 L="EN">Reference to a switch port reference. The port configuration is associated with the port of a hardware switch this transceiver connected to.</L-2>
+																	</DESC>
+																	<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+																	<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+																	<IMPLEMENTATION-CONFIG-CLASSES>
+																		<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																			<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																			<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																		</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																	</IMPLEMENTATION-CONFIG-CLASSES>
+																	<ORIGIN>Vector Informatik</ORIGIN>
+																	<REQUIRES-INDEX>false</REQUIRES-INDEX>
+																	<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EthSwt/EthSwtConfig/EthSwtPort</DESTINATION-REF>
+																</ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+															</REFERENCES>
+														</ECUC-PARAM-CONF-CONTAINER-DEF>
+														<ECUC-PARAM-CONF-CONTAINER-DEF UUID="d846c982-6a3c-496d-a305-07aeb3f22b61">
+															<SHORT-NAME>EthTrcvSpiInterface</SHORT-NAME>
+															<ADMIN-DATA>
+																<SDGS>
+																	<SDG GID="DV:CfgPostBuild">
+																		<SD GID="DV:postBuildSelectableChangeable">false</SD>
+																		<SD GID="DV:postBuildNotDeletable">false</SD>
+																	</SDG>
+																</SDGS>
+															</ADMIN-DATA>
+															<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+															<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+															<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+															<REFERENCES>
+																<ECUC-SYMBOLIC-NAME-REFERENCE-DEF UUID="6d1a52a3-f137-45a9-82a1-c938a90f0379">
+																	<SHORT-NAME>EthTrcvCtrlRef</SHORT-NAME>
+																	<DESC>
+																		<L-2 L="EN">Reference to a physical Ethernet controller configuration.</L-2>
+																	</DESC>
+																	<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+																	<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+																	<IMPLEMENTATION-CONFIG-CLASSES>
+																		<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																			<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																			<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																		</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																	</IMPLEMENTATION-CONFIG-CLASSES>
+																	<ORIGIN>Vector Informatik</ORIGIN>
+																	<REQUIRES-INDEX>false</REQUIRES-INDEX>
+																	<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Eth/EthConfigSet/EthCtrlConfig</DESTINATION-REF>
+																</ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+															</REFERENCES>
+														</ECUC-PARAM-CONF-CONTAINER-DEF>
+														<ECUC-PARAM-CONF-CONTAINER-DEF UUID="2956cdf7-8406-477e-9517-ab7cd1829c4f">
+															<SHORT-NAME>EthTrcvIntegratedPhyInterface</SHORT-NAME>
+															<ADMIN-DATA>
+																<SDGS>
+																	<SDG GID="DV:CfgPostBuild">
+																		<SD GID="DV:postBuildSelectableChangeable">false</SD>
+																		<SD GID="DV:postBuildNotDeletable">false</SD>
+																	</SDG>
+																</SDGS>
+															</ADMIN-DATA>
+															<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+															<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+															<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+															<PARAMETERS>
+																<ECUC-INTEGER-PARAM-DEF UUID="7d9a27a0-0205-4ef2-98a4-00661f2b26d1">
+																	<SHORT-NAME>EthTrcvIntegratedPhyBaseAddress</SHORT-NAME>
+																	<DESC>
+																		<L-2 L="EN">This parameter defines the register memory base address of the integrated PHY in the SoC.</L-2>
+																	</DESC>
+																	<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+																	<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+																	<IMPLEMENTATION-CONFIG-CLASSES>
+																		<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																			<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																			<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																		</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																	</IMPLEMENTATION-CONFIG-CLASSES>
+																	<ORIGIN>Vector Informatik</ORIGIN>
+																	<REQUIRES-INDEX>false</REQUIRES-INDEX>
+																	<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+																</ECUC-INTEGER-PARAM-DEF>
+															</PARAMETERS>
+														</ECUC-PARAM-CONF-CONTAINER-DEF>
+													</CHOICES>
+												</ECUC-CHOICE-CONTAINER-DEF>
+												<ECUC-PARAM-CONF-CONTAINER-DEF UUID="59f8bf2a-1f25-4242-8623-3dc45cd37ba2">
+													<SHORT-NAME>EthTrcvWakeupMap</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Container for the mapping of wake up reasons to wake up sources. At least one container is needed if EthTrcvWakeUpSupport is not ETHTRCV_WAKEUP_NOT_SUPPORTED.</L-2>
+													</DESC>
+													<ADMIN-DATA>
+														<SDGS>
+															<SDG GID="DV:CfgPostBuild">
+																<SD GID="DV:postBuildSelectableChangeable">false</SD>
+																<SD GID="DV:postBuildNotDeletable">false</SD>
+															</SDG>
+														</SDGS>
+													</ADMIN-DATA>
+													<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>7</UPPER-MULTIPLICITY>
+													<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+													<PARAMETERS>
+														<ECUC-ENUMERATION-PARAM-DEF UUID="c177e0c6-b5bd-4eb0-9119-8e96f8c7d2ae">
+															<SHORT-NAME>EthTrcvWakeupReason</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">Trcv Wakeup Reason</L-4>
+															</LONG-NAME>
+															<DESC>
+																<L-2 L="EN">This parameter specifies the corresponding wakeup reason mapped to the wakeup source of the EcuM.
+
+ETHTRCV_WUR_BUS:
+Reason for the wakeup is a event on the Ethernet network.
+
+ETHTRCV_WUR_GENERAL:
+Reason for the wakeup is a general event.
+
+ETHTRCV_WUR_INTERNAL:
+Reason for the wakeup is a internal transceiver event.
+
+ETHTRCV_WUR_PIN:
+Reason for the wakeup is a event on the related Icu channel.
+
+ETHTRCV_WUR_POWER_ON:
+Reason for the wakeup is the power on of the ECU.
+
+ETHTRCV_WUR_RESET:
+Reason for the wakeup is the reset of the ECU.
+
+ETHTRCV_WUR_SYSERR:
+Reason for the wakeup is a system error.</L-2>
+															</DESC>
+															<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+															<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+															<IMPLEMENTATION-CONFIG-CLASSES>
+																<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															</IMPLEMENTATION-CONFIG-CLASSES>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+															<REQUIRES-INDEX>false</REQUIRES-INDEX>
+															<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+															<DEFAULT-VALUE>ETHTRCV_WUR_BUS</DEFAULT-VALUE>
+															<LITERALS>
+																<ECUC-ENUMERATION-LITERAL-DEF UUID="cae4e95e-677d-4710-864b-0c3dd14e1789">
+																	<SHORT-NAME>ETHTRCV_WUR_BUS</SHORT-NAME>
+																	<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+																</ECUC-ENUMERATION-LITERAL-DEF>
+																<ECUC-ENUMERATION-LITERAL-DEF UUID="53f4072a-29b5-4651-9709-b1df6872fea7">
+																	<SHORT-NAME>ETHTRCV_WUR_GENERAL</SHORT-NAME>
+																	<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+																</ECUC-ENUMERATION-LITERAL-DEF>
+																<ECUC-ENUMERATION-LITERAL-DEF UUID="46d9c0a4-3941-417c-bcb6-85d7c391e3ff">
+																	<SHORT-NAME>ETHTRCV_WUR_INTERNAL</SHORT-NAME>
+																	<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+																</ECUC-ENUMERATION-LITERAL-DEF>
+															</LITERALS>
+														</ECUC-ENUMERATION-PARAM-DEF>
+													</PARAMETERS>
+													<REFERENCES>
+														<ECUC-SYMBOLIC-NAME-REFERENCE-DEF UUID="d5aa49e3-c36e-435b-bb44-e30677d4488e">
+															<SHORT-NAME>EthTrcvWakeupSourceRef</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">EcuM Wakeup Source</L-4>
+															</LONG-NAME>
+															<DESC>
+																<L-2 L="EN">Reference to a EcuM wakeup source container.
+
+This wakeup source is mapped to the wakeup reason and is issued to the EcuM during EcuM_CheckWakeup() with EcuM_SetWakeupEvent() if the corresponding wakeup reason occured.</L-2>
+															</DESC>
+															<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+															<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+															<IMPLEMENTATION-CONFIG-CLASSES>
+																<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															</IMPLEMENTATION-CONFIG-CLASSES>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+															<REQUIRES-INDEX>false</REQUIRES-INDEX>
+															<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuM/EcuMConfiguration/EcuMCommonConfiguration/EcuMWakeupSource</DESTINATION-REF>
+														</ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+													</REFERENCES>
+												</ECUC-PARAM-CONF-CONTAINER-DEF>
+											</SUB-CONTAINERS>
+										</ECUC-PARAM-CONF-CONTAINER-DEF>
+									</SUB-CONTAINERS>
+								</ECUC-PARAM-CONF-CONTAINER-DEF>
+							</CONTAINERS>
+						</ECUC-MODULE-DEF>
+						<BSW-IMPLEMENTATION UUID="b1042def-0a6c-4027-9821-a04dce9ec10c">
+							<SHORT-NAME>EthTrcv_Impl</SHORT-NAME>
+							<PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+							<SW-VERSION>3.03.00</SW-VERSION>
+							<USED-CODE-GENERATOR>DaVinci Configurator</USED-CODE-GENERATOR>
+							<VENDOR-ID>30</VENDOR-ID>
+							<AR-RELEASE-VERSION>4.01.01</AR-RELEASE-VERSION>
+							<BEHAVIOR-REF DEST="BSW-INTERNAL-BEHAVIOR">/MICROSAR/EthTrcv_30_Canoeemu_ib_bswmd/BswModuleDescriptions/EthTrcv/EthTrcv_30_CanoeemuBehavior</BEHAVIOR-REF>
+							<PRECONFIGURED-CONFIGURATION-REFS>
+								<PRECONFIGURED-CONFIGURATION-REF DEST="ECUC-MODULE-CONFIGURATION-VALUES">/MICROSAR/EthTrcv_Canoeemu/EthTrcv_Pre</PRECONFIGURED-CONFIGURATION-REF>
+							</PRECONFIGURED-CONFIGURATION-REFS>
+							<RECOMMENDED-CONFIGURATION-REFS>
+								<RECOMMENDED-CONFIGURATION-REF DEST="ECUC-MODULE-CONFIGURATION-VALUES">/MICROSAR/EthTrcv_Canoeemu/EthTrcv_Rec</RECOMMENDED-CONFIGURATION-REF>
+							</RECOMMENDED-CONFIGURATION-REFS>
+							<VENDOR-API-INFIX>Canoeemu</VENDOR-API-INFIX>
+							<VENDOR-SPECIFIC-MODULE-DEF-REFS>
+								<VENDOR-SPECIFIC-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/MICROSAR/EthTrcv_Canoeemu/EthTrcv</VENDOR-SPECIFIC-MODULE-DEF-REF>
+							</VENDOR-SPECIFIC-MODULE-DEF-REFS>
+						</BSW-IMPLEMENTATION>
+						<ECUC-MODULE-CONFIGURATION-VALUES UUID="59250c9d-a976-4ab4-bc3c-eaf944e4a520">
+							<SHORT-NAME>EthTrcv_Pre</SHORT-NAME>
+							<DEFINITION-REF DEST="ECUC-MODULE-DEF">/MICROSAR/EthTrcv_Canoeemu/EthTrcv</DEFINITION-REF>
+							<CONTAINERS></CONTAINERS>
+						</ECUC-MODULE-CONFIGURATION-VALUES>
+						<ECUC-MODULE-CONFIGURATION-VALUES UUID="f3cd86e0-ccc3-4466-90fb-a756c0549612">
+							<SHORT-NAME>EthTrcv_Rec</SHORT-NAME>
+							<DEFINITION-REF DEST="ECUC-MODULE-DEF">/MICROSAR/EthTrcv_Canoeemu/EthTrcv</DEFINITION-REF>
+							<CONTAINERS></CONTAINERS>
+						</ECUC-MODULE-CONFIGURATION-VALUES>
+					</ELEMENTS>
+				</AR-PACKAGE>
+			</AR-PACKAGES>
+		</AR-PACKAGE>
+	</AR-PACKAGES>
+</AUTOSAR>

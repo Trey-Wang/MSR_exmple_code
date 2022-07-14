@@ -1,0 +1,2140 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-2-1.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="4a1f5e4e-1b37-4ab3-9756-524419074e03">
+      <SHORT-NAME>MICROSAR</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="22065bd5-4e48-4769-bf46-5f33755404a8">
+          <SHORT-NAME>Dcm_swc</SHORT-NAME>
+          <ELEMENTS>
+            <MODE-DECLARATION-GROUP UUID="b097fd9f-86f6-454d-8979-5ba34ecf9f28">
+              <SHORT-NAME>DcmControlDtcSetting</SHORT-NAME>
+              <CATEGORY>EXPLICIT_ORDER</CATEGORY>
+              <INITIAL-MODE-REF DEST="MODE-DECLARATION">/MICROSAR/Dcm_swc/DcmControlDtcSetting/ENABLEDTCSETTING</INITIAL-MODE-REF>
+              <MODE-DECLARATIONS>
+                <MODE-DECLARATION UUID="6346522f-4856-4853-bc5a-c59db956f677">
+                  <SHORT-NAME>ENABLEDTCSETTING</SHORT-NAME>
+                  <VALUE>0</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="54b495fe-0876-4dbd-8c52-d991e9c70a42">
+                  <SHORT-NAME>DISABLEDTCSETTING</SHORT-NAME>
+                  <VALUE>1</VALUE>
+                </MODE-DECLARATION>
+              </MODE-DECLARATIONS>
+              <ON-TRANSITION-VALUE>2</ON-TRANSITION-VALUE>
+            </MODE-DECLARATION-GROUP>
+            <MODE-DECLARATION-GROUP UUID="bbb4cac8-ba74-4980-a790-5ee89fcd7579">
+              <SHORT-NAME>DcmEcuReset</SHORT-NAME>
+              <CATEGORY>EXPLICIT_ORDER</CATEGORY>
+              <INITIAL-MODE-REF DEST="MODE-DECLARATION">/MICROSAR/Dcm_swc/DcmEcuReset/NONE</INITIAL-MODE-REF>
+              <MODE-DECLARATIONS>
+                <MODE-DECLARATION UUID="2d56dcdc-0c1b-4a46-b789-583d845f171e">
+                  <SHORT-NAME>NONE</SHORT-NAME>
+                  <VALUE>0</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="642bbfcd-1fe4-49f2-b607-5c814d21122e">
+                  <SHORT-NAME>HARD</SHORT-NAME>
+                  <VALUE>1</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="c7fbd158-c597-4895-b2c0-7fd894c42c13">
+                  <SHORT-NAME>KEYONOFF</SHORT-NAME>
+                  <VALUE>2</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="123568ae-4bbe-4abe-80b4-5370c8285bb9">
+                  <SHORT-NAME>SOFT</SHORT-NAME>
+                  <VALUE>3</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="91e267aa-6386-4b2b-ad10-f2fa42d9402e">
+                  <SHORT-NAME>JUMPTOBOOTLOADER</SHORT-NAME>
+                  <VALUE>4</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="ecc74e71-7aa1-4fed-b364-00d39a6959e0">
+                  <SHORT-NAME>JUMPTOSYSSUPPLIERBOOTLOADER</SHORT-NAME>
+                  <VALUE>5</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="6676aabe-4d57-4a1d-af44-341a57de4921">
+                  <SHORT-NAME>EXECUTE</SHORT-NAME>
+                  <VALUE>6</VALUE>
+                </MODE-DECLARATION>
+              </MODE-DECLARATIONS>
+              <ON-TRANSITION-VALUE>7</ON-TRANSITION-VALUE>
+            </MODE-DECLARATION-GROUP>
+            <MODE-DECLARATION-GROUP UUID="04de3e97-1203-49f6-aca3-c05745fa758c">
+              <SHORT-NAME>DcmDiagnosticSessionControl</SHORT-NAME>
+              <CATEGORY>EXPLICIT_ORDER</CATEGORY>
+              <INITIAL-MODE-REF DEST="MODE-DECLARATION">/MICROSAR/Dcm_swc/DcmDiagnosticSessionControl/DEFAULT_SESSION</INITIAL-MODE-REF>
+              <MODE-DECLARATIONS>
+                <MODE-DECLARATION UUID="6a5b5e3d-7b36-44ed-a71f-48911ef1a9c1">
+                  <SHORT-NAME>DEFAULT_SESSION</SHORT-NAME>
+                  <VALUE>1</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="1601148a-6bb6-4d2c-bb56-80bba7b28bb0">
+                  <SHORT-NAME>PROGRAMMING_SESSION</SHORT-NAME>
+                  <VALUE>2</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="9e0be23f-3e2b-485d-a149-f17203958418">
+                  <SHORT-NAME>EXTENDED_SESSION</SHORT-NAME>
+                  <VALUE>3</VALUE>
+                </MODE-DECLARATION>
+              </MODE-DECLARATIONS>
+              <ON-TRANSITION-VALUE>255</ON-TRANSITION-VALUE>
+            </MODE-DECLARATION-GROUP>
+            <DATA-TYPE-MAPPING-SET UUID="4791bc7b-b9a5-48d3-a8c5-859e4ad13b9d">
+              <SHORT-NAME>DcmMappingSet</SHORT-NAME>
+              <DESC>
+                <L-2 L="FOR-ALL">Contains mapping for ModeDeclarationGroups which are provided by Dcm.</L-2>
+              </DESC>
+              <MODE-REQUEST-TYPE-MAPS>
+                <MODE-REQUEST-TYPE-MAP>
+                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/Dcm_swc/DataTypes/Dcm_ControlDtcSettingType</IMPLEMENTATION-DATA-TYPE-REF>
+                  <MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP">/MICROSAR/Dcm_swc/DcmControlDtcSetting</MODE-GROUP-REF>
+                </MODE-REQUEST-TYPE-MAP>
+                <MODE-REQUEST-TYPE-MAP>
+                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/Dcm_swc/DataTypes/Dcm_EcuResetType</IMPLEMENTATION-DATA-TYPE-REF>
+                  <MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP">/MICROSAR/Dcm_swc/DcmEcuReset</MODE-GROUP-REF>
+                </MODE-REQUEST-TYPE-MAP>
+                <MODE-REQUEST-TYPE-MAP>
+                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/Dcm_swc/DataTypes/Dcm_DiagnosticSessionControlType</IMPLEMENTATION-DATA-TYPE-REF>
+                  <MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP">/MICROSAR/Dcm_swc/DcmDiagnosticSessionControl</MODE-GROUP-REF>
+                </MODE-REQUEST-TYPE-MAP>
+              </MODE-REQUEST-TYPE-MAPS>
+            </DATA-TYPE-MAPPING-SET>
+          </ELEMENTS>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="0fd93497-2dbc-41e6-a02c-7f8a42cc98b8">
+              <SHORT-NAME>DataTypes</SHORT-NAME>
+              <ELEMENTS>
+                <IMPLEMENTATION-DATA-TYPE UUID="f4c6ab46-8444-4bd1-8b6f-d3df57dd46e6">
+                  <SHORT-NAME>Dcm_ConfirmationStatusType</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <COMPU-METHOD-REF DEST="COMPU-METHOD">/MICROSAR/Dcm_swc/DataTypes/CompuMethods/Dcm_ConfirmationStatusType</COMPU-METHOD-REF>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </IMPLEMENTATION-DATA-TYPE>
+                <IMPLEMENTATION-DATA-TYPE UUID="216b1bdc-e213-4f44-b40f-0bde13c5e254">
+                  <SHORT-NAME>Dcm_OpStatusType</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <COMPU-METHOD-REF DEST="COMPU-METHOD">/MICROSAR/Dcm_swc/DataTypes/CompuMethods/Dcm_OpStatusType</COMPU-METHOD-REF>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </IMPLEMENTATION-DATA-TYPE>
+                <IMPLEMENTATION-DATA-TYPE UUID="8a025a41-805b-4ed9-beb9-98717951ae33">
+                  <SHORT-NAME>Dcm_NegativeResponseCodeType</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <COMPU-METHOD-REF DEST="COMPU-METHOD">/MICROSAR/Dcm_swc/DataTypes/CompuMethods/Dcm_NegativeResponseCodeType</COMPU-METHOD-REF>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </IMPLEMENTATION-DATA-TYPE>
+                <IMPLEMENTATION-DATA-TYPE UUID="ea797acb-d691-4f97-9368-6134f86e38a5">
+                  <SHORT-NAME>Dcm_ProtocolType</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <COMPU-METHOD-REF DEST="COMPU-METHOD">/MICROSAR/Dcm_swc/DataTypes/CompuMethods/Dcm_ProtocolType</COMPU-METHOD-REF>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </IMPLEMENTATION-DATA-TYPE>
+                <IMPLEMENTATION-DATA-TYPE UUID="119eb06f-b4d9-4492-a519-e094f3f94ea8">
+                  <SHORT-NAME>Dcm_RequestKindType</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <COMPU-METHOD-REF DEST="COMPU-METHOD">/MICROSAR/Dcm_swc/DataTypes/CompuMethods/Dcm_RequestKindType</COMPU-METHOD-REF>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </IMPLEMENTATION-DATA-TYPE>
+                <IMPLEMENTATION-DATA-TYPE UUID="757c4eb0-989f-4a45-8b30-0dfe8ea1c7a0">
+                  <SHORT-NAME>Dcm_SecLevelType</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <COMPU-METHOD-REF DEST="COMPU-METHOD">/MICROSAR/Dcm_swc/DataTypes/CompuMethods/Dcm_SecLevelType</COMPU-METHOD-REF>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </IMPLEMENTATION-DATA-TYPE>
+                <IMPLEMENTATION-DATA-TYPE UUID="551f119a-b078-4dd1-844d-49f53ac727fa">
+                  <SHORT-NAME>Dcm_SesCtrlType</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <COMPU-METHOD-REF DEST="COMPU-METHOD">/MICROSAR/Dcm_swc/DataTypes/CompuMethods/Dcm_SesCtrlType</COMPU-METHOD-REF>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </IMPLEMENTATION-DATA-TYPE>
+                <IMPLEMENTATION-DATA-TYPE UUID="d7272366-bc3e-4688-898e-7a2fd4e5fbdd">
+                  <SHORT-NAME>Dem_DTCFormatType</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <COMPU-METHOD-REF DEST="COMPU-METHOD">/MICROSAR/Dcm_swc/DataTypes/CompuMethods/Dem_DTCFormatType</COMPU-METHOD-REF>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </IMPLEMENTATION-DATA-TYPE>
+                <IMPLEMENTATION-DATA-TYPE UUID="23662ec7-c7f6-44b7-8b4b-07c3e4681c16">
+                  <SHORT-NAME>Dem_DTCKindType</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <COMPU-METHOD-REF DEST="COMPU-METHOD">/MICROSAR/Dcm_swc/DataTypes/CompuMethods/Dem_DTCKindType</COMPU-METHOD-REF>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </IMPLEMENTATION-DATA-TYPE>
+                <IMPLEMENTATION-DATA-TYPE UUID="4ba23009-8908-47ad-9c38-424e363eaed3">
+                  <SHORT-NAME>Dem_DTCGroupType</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <DATA-CONSTR-REF DEST="DATA-CONSTR">/MICROSAR/Dcm_swc/DataTypes/DataConstrs/Dem_DTCGroupType_Constr</DATA-CONSTR-REF>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </IMPLEMENTATION-DATA-TYPE>
+                <IMPLEMENTATION-DATA-TYPE UUID="78553eff-2f5c-4ac1-85b5-3b8cf282b776">
+                  <SHORT-NAME>Dem_DTCOriginType</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <COMPU-METHOD-REF DEST="COMPU-METHOD">/MICROSAR/Dcm_swc/DataTypes/CompuMethods/Dem_DTCOriginType</COMPU-METHOD-REF>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </IMPLEMENTATION-DATA-TYPE>
+                <IMPLEMENTATION-DATA-TYPE UUID="ccbd59d5-25bb-48e3-91e2-90bc5ec9fff8">
+                  <SHORT-NAME>Dcm_ControlDtcSettingType</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <COMPU-METHOD-REF DEST="COMPU-METHOD">/MICROSAR/Dcm_swc/DataTypes/CompuMethods/Dcm_ControlDtcSettingType</COMPU-METHOD-REF>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </IMPLEMENTATION-DATA-TYPE>
+                <IMPLEMENTATION-DATA-TYPE UUID="70813f74-454f-47df-8aa5-166b09431f14">
+                  <SHORT-NAME>Dcm_EcuResetType</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <COMPU-METHOD-REF DEST="COMPU-METHOD">/MICROSAR/Dcm_swc/DataTypes/CompuMethods/Dcm_EcuResetType</COMPU-METHOD-REF>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </IMPLEMENTATION-DATA-TYPE>
+                <IMPLEMENTATION-DATA-TYPE UUID="736646f5-8a72-41de-9507-cb35962348e0">
+                  <SHORT-NAME>Dcm_DiagnosticSessionControlType</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <COMPU-METHOD-REF DEST="COMPU-METHOD">/MICROSAR/Dcm_swc/DataTypes/CompuMethods/Dcm_DiagnosticSessionControlType</COMPU-METHOD-REF>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </IMPLEMENTATION-DATA-TYPE>
+                <IMPLEMENTATION-DATA-TYPE UUID="5feee3b3-bb6e-4c1e-806b-59e272769abc">
+                  <SHORT-NAME>Dcm_CommunicationModeType</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <COMPU-METHOD-REF DEST="COMPU-METHOD">/MICROSAR/Dcm_swc/DataTypes/CompuMethods/Dcm_CommunicationModeType</COMPU-METHOD-REF>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </IMPLEMENTATION-DATA-TYPE>
+                <IMPLEMENTATION-DATA-TYPE UUID="f760cb09-f0e9-49ca-984d-7b560b7fc21a">
+                  <SHORT-NAME>Dcm_Data2ByteType</SHORT-NAME>
+                  <CATEGORY>ARRAY</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                  <SUB-ELEMENTS>
+                    <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="cee2507e-e235-4fec-903d-8568aad7fcca">
+                      <SHORT-NAME>Dcm_Data2ByteTypeElement</SHORT-NAME>
+                      <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                      <ARRAY-SIZE>2</ARRAY-SIZE>
+                      <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                    </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                  </SUB-ELEMENTS>
+                </IMPLEMENTATION-DATA-TYPE>
+                <IMPLEMENTATION-DATA-TYPE UUID="3b960362-5aba-470d-98e2-5e69ea8fd4a2">
+                  <SHORT-NAME>Dcm_Data4ByteType</SHORT-NAME>
+                  <CATEGORY>ARRAY</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                  <SUB-ELEMENTS>
+                    <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="314ad7e2-2540-4cab-9202-94567e0e7f6d">
+                      <SHORT-NAME>Dcm_Data4ByteTypeElement</SHORT-NAME>
+                      <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                      <ARRAY-SIZE>4</ARRAY-SIZE>
+                      <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                    </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                  </SUB-ELEMENTS>
+                </IMPLEMENTATION-DATA-TYPE>
+              </ELEMENTS>
+              <AR-PACKAGES>
+                <AR-PACKAGE UUID="adebc771-5538-496b-ba90-5c9c25df8c02">
+                  <SHORT-NAME>CompuMethods</SHORT-NAME>
+                  <ELEMENTS>
+                    <COMPU-METHOD UUID="b63f6403-5c98-4169-a60e-57abc1f12077">
+                      <SHORT-NAME>Dcm_ConfirmationStatusType</SHORT-NAME>
+                      <CATEGORY>TEXTTABLE</CATEGORY>
+                      <COMPU-INTERNAL-TO-PHYS>
+                        <COMPU-SCALES>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_RES_POS_OK</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_RES_POS_OK</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_RES_POS_NOT_OK</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">1</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_RES_POS_NOT_OK</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_RES_NEG_OK</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">2</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">2</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_RES_NEG_OK</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_RES_NEG_NOT_OK</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">3</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">3</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_RES_NEG_NOT_OK</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                        </COMPU-SCALES>
+                      </COMPU-INTERNAL-TO-PHYS>
+                    </COMPU-METHOD>
+                    <COMPU-METHOD UUID="810bbac5-6f8d-4e67-9600-eb5c875195de">
+                      <SHORT-NAME>Dcm_OpStatusType</SHORT-NAME>
+                      <CATEGORY>TEXTTABLE</CATEGORY>
+                      <COMPU-INTERNAL-TO-PHYS>
+                        <COMPU-SCALES>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_INITIAL</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_INITIAL</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_PENDING</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">1</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_PENDING</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_CANCEL</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">2</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">2</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_CANCEL</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_FORCE_RCRRP_OK</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">3</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">3</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_FORCE_RCRRP_OK</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_FORCE_RCRRP_NOT_OK</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">64</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">64</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_FORCE_RCRRP_NOT_OK</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                        </COMPU-SCALES>
+                      </COMPU-INTERNAL-TO-PHYS>
+                    </COMPU-METHOD>
+                    <COMPU-METHOD UUID="86289936-6a30-43f6-979d-cebd3fcfa9c9">
+                      <SHORT-NAME>Dcm_NegativeResponseCodeType</SHORT-NAME>
+                      <CATEGORY>TEXTTABLE</CATEGORY>
+                      <COMPU-INTERNAL-TO-PHYS>
+                        <COMPU-SCALES>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_E_POSITIVERESPONSE</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_E_POSITIVERESPONSE</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_E_GENERALREJECT</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">16</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">16</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_E_GENERALREJECT</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_E_SERVICENOTSUPPORTED</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">17</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">17</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_E_SERVICENOTSUPPORTED</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_E_SUBFUNCTIONNOTSUPPORTED</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">18</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">18</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_E_SUBFUNCTIONNOTSUPPORTED</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_E_INCORRECTMESSAGELENGTHORINVALIDFORMAT</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">19</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">19</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_E_INCORRECTMESSAGELENGTHORINVALIDFORMAT</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_E_RESPONSETOOLONG</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">20</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">20</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_E_RESPONSETOOLONG</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_E_BUSYREPEATREQUEST</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">33</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">33</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_E_BUSYREPEATREQUEST</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_E_CONDITIONSNOTCORRECT</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">34</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">34</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_E_CONDITIONSNOTCORRECT</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_E_REQUESTSEQUENCEERROR</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">36</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">36</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_E_REQUESTSEQUENCEERROR</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_E_NORESPONSEFROMSUBNETCOMPONENT</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">37</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">37</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_E_NORESPONSEFROMSUBNETCOMPONENT</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_E_FAILUREPREVENTSEXECUTIONOFREQUESTEDACTION</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">38</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">38</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_E_FAILUREPREVENTSEXECUTIONOFREQUESTEDACTION</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_E_REQUESTOUTOFRANGE</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">49</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">49</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_E_REQUESTOUTOFRANGE</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_E_SECURITYACCESSDENIED</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">51</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">51</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_E_SECURITYACCESSDENIED</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_E_INVALIDKEY</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">53</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">53</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_E_INVALIDKEY</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_E_EXCEEDNUMBEROFATTEMPTS</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">54</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">54</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_E_EXCEEDNUMBEROFATTEMPTS</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_E_REQUIREDTIMEDELAYNOTEXPIRED</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">55</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">55</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_E_REQUIREDTIMEDELAYNOTEXPIRED</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_E_UPLOADDOWNLOADNOTACCEPTED</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">112</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">112</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_E_UPLOADDOWNLOADNOTACCEPTED</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_E_TRANSFERDATASUSPENDED</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">113</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">113</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_E_TRANSFERDATASUSPENDED</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_E_GENERALPROGRAMMINGFAILURE</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">114</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">114</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_E_GENERALPROGRAMMINGFAILURE</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_E_WRONGBLOCKSEQUENCECOUNTER</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">115</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">115</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_E_WRONGBLOCKSEQUENCECOUNTER</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_E_REQUESTCORRECTLYRECEIVEDRESPONSEPENDING</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">120</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">120</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_E_REQUESTCORRECTLYRECEIVEDRESPONSEPENDING</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_E_SUBFUNCTIONNOTSUPPORTEDINACTIVESESSION</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">126</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">126</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_E_SUBFUNCTIONNOTSUPPORTEDINACTIVESESSION</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_E_SERVICENOTSUPPORTEDINACTIVESESSION</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">127</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">127</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_E_SERVICENOTSUPPORTEDINACTIVESESSION</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_E_RPMTOOHIGH</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">129</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">129</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_E_RPMTOOHIGH</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_E_RPMTOOLOW</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">130</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">130</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_E_RPMTOOLOW</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_E_ENGINEISRUNNING</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">131</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">131</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_E_ENGINEISRUNNING</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_E_ENGINEISNOTRUNNING</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">132</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">132</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_E_ENGINEISNOTRUNNING</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_E_ENGINERUNTIMETOOLOW</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">133</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">133</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_E_ENGINERUNTIMETOOLOW</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_E_TEMPERATURETOOHIGH</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">134</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">134</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_E_TEMPERATURETOOHIGH</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_E_TEMPERATURETOOLOW</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">135</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">135</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_E_TEMPERATURETOOLOW</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_E_VEHICLESPEEDTOOHIGH</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">136</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">136</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_E_VEHICLESPEEDTOOHIGH</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_E_VEHICLESPEEDTOOLOW</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">137</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">137</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_E_VEHICLESPEEDTOOLOW</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_E_THROTTLE_PEDALTOOHIGH</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">138</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">138</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_E_THROTTLE_PEDALTOOHIGH</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_E_THROTTLE_PEDALTOOLOW</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">139</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">139</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_E_THROTTLE_PEDALTOOLOW</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_E_TRANSMISSIONRANGENOTINNEUTRAL</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">140</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">140</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_E_TRANSMISSIONRANGENOTINNEUTRAL</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_E_TRANSMISSIONRANGENOTINGEAR</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">141</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">141</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_E_TRANSMISSIONRANGENOTINGEAR</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_E_BRAKESWITCH_NOTCLOSED</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">143</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">143</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_E_BRAKESWITCH_NOTCLOSED</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_E_SHIFTERLEVERNOTINPARK</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">144</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">144</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_E_SHIFTERLEVERNOTINPARK</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_E_TORQUECONVERTERCLUTCHLOCKED</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">145</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">145</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_E_TORQUECONVERTERCLUTCHLOCKED</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_E_VOLTAGETOOHIGH</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">146</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">146</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_E_VOLTAGETOOHIGH</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_E_VOLTAGETOOLOW</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">147</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">147</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_E_VOLTAGETOOLOW</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_E_VMSCNC_0</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">240</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">240</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_E_VMSCNC_0</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_E_VMSCNC_1</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">241</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">241</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_E_VMSCNC_1</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_E_VMSCNC_2</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">242</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">242</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_E_VMSCNC_2</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_E_VMSCNC_3</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">243</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">243</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_E_VMSCNC_3</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_E_VMSCNC_4</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">244</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">244</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_E_VMSCNC_4</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_E_VMSCNC_5</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">245</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">245</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_E_VMSCNC_5</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_E_VMSCNC_6</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">246</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">246</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_E_VMSCNC_6</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_E_VMSCNC_7</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">247</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">247</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_E_VMSCNC_7</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_E_VMSCNC_8</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">248</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">248</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_E_VMSCNC_8</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_E_VMSCNC_9</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">249</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">249</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_E_VMSCNC_9</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_E_VMSCNC_A</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">250</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">250</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_E_VMSCNC_A</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_E_VMSCNC_B</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">251</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">251</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_E_VMSCNC_B</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_E_VMSCNC_C</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">252</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">252</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_E_VMSCNC_C</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_E_VMSCNC_D</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">253</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">253</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_E_VMSCNC_D</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_E_VMSCNC_E</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">254</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">254</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_E_VMSCNC_E</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                        </COMPU-SCALES>
+                      </COMPU-INTERNAL-TO-PHYS>
+                    </COMPU-METHOD>
+                    <COMPU-METHOD UUID="04ee159c-8639-4fc6-a746-585912fe33e1">
+                      <SHORT-NAME>Dcm_ProtocolType</SHORT-NAME>
+                      <CATEGORY>TEXTTABLE</CATEGORY>
+                      <COMPU-INTERNAL-TO-PHYS>
+                        <COMPU-SCALES>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_OBD_ON_CAN</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_OBD_ON_CAN</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_OBD_ON_FLEXRAY</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">1</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_OBD_ON_FLEXRAY</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_OBD_ON_IP</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">2</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">2</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_OBD_ON_IP</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_UDS_ON_CAN</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">3</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">3</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_UDS_ON_CAN</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_UDS_ON_FLEXRAY</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">4</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">4</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_UDS_ON_FLEXRAY</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_UDS_ON_IP</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">5</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">5</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_UDS_ON_IP</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_NO_ACTIVE_PROTOCOL</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">12</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">12</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_NO_ACTIVE_PROTOCOL</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_SUPPLIER_1</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">240</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">240</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_SUPPLIER_1</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_SUPPLIER_2</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">241</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">241</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_SUPPLIER_2</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_SUPPLIER_3</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">242</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">242</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_SUPPLIER_3</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_SUPPLIER_4</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">243</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">243</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_SUPPLIER_4</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_SUPPLIER_5</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">244</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">244</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_SUPPLIER_5</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_SUPPLIER_6</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">245</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">245</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_SUPPLIER_6</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_SUPPLIER_7</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">246</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">246</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_SUPPLIER_7</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_SUPPLIER_8</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">247</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">247</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_SUPPLIER_8</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_SUPPLIER_9</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">248</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">248</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_SUPPLIER_9</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_SUPPLIER_10</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">249</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">249</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_SUPPLIER_10</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_SUPPLIER_11</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">250</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">250</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_SUPPLIER_11</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_SUPPLIER_12</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">251</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">251</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_SUPPLIER_12</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_SUPPLIER_13</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">252</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">252</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_SUPPLIER_13</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_SUPPLIER_14</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">253</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">253</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_SUPPLIER_14</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_SUPPLIER_15</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">254</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">254</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_SUPPLIER_15</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                        </COMPU-SCALES>
+                      </COMPU-INTERNAL-TO-PHYS>
+                    </COMPU-METHOD>
+                    <COMPU-METHOD UUID="38536260-2db3-4209-815d-1de28be04a29">
+                      <SHORT-NAME>Dcm_RequestKindType</SHORT-NAME>
+                      <CATEGORY>TEXTTABLE</CATEGORY>
+                      <COMPU-INTERNAL-TO-PHYS>
+                        <COMPU-SCALES>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_REQ_KIND_NONE</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_REQ_KIND_NONE</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_REQ_KIND_EXTERNAL</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">1</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_REQ_KIND_EXTERNAL</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_REQ_KIND_ROE</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">2</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">2</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_REQ_KIND_ROE</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                        </COMPU-SCALES>
+                      </COMPU-INTERNAL-TO-PHYS>
+                    </COMPU-METHOD>
+                    <COMPU-METHOD UUID="4c6a3289-0965-46a6-9c86-78c76eb1c540">
+                      <SHORT-NAME>Dcm_SecLevelType</SHORT-NAME>
+                      <CATEGORY>TEXTTABLE</CATEGORY>
+                      <COMPU-INTERNAL-TO-PHYS>
+                        <COMPU-SCALES>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_SEC_LEV_LOCKED</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_SEC_LEV_LOCKED</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_SEC_LEV_L1</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">1</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_SEC_LEV_L1</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                        </COMPU-SCALES>
+                      </COMPU-INTERNAL-TO-PHYS>
+                    </COMPU-METHOD>
+                    <COMPU-METHOD UUID="596868a2-6185-4c31-9b7f-008c3529d601">
+                      <SHORT-NAME>Dcm_SesCtrlType</SHORT-NAME>
+                      <CATEGORY>TEXTTABLE</CATEGORY>
+                      <COMPU-INTERNAL-TO-PHYS>
+                        <COMPU-SCALES>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_DEFAULT_SESSION</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">1</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_DEFAULT_SESSION</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_PROGRAMMING_SESSION</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">2</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">2</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_PROGRAMMING_SESSION</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_EXTENDED_DIAGNOSTIC_SESSION</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">3</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">3</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_EXTENDED_DIAGNOSTIC_SESSION</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                        </COMPU-SCALES>
+                      </COMPU-INTERNAL-TO-PHYS>
+                    </COMPU-METHOD>
+                    <COMPU-METHOD UUID="477c9a9b-9f45-4eb4-b32e-537f93e9a2f6">
+                      <SHORT-NAME>Dem_DTCFormatType</SHORT-NAME>
+                      <CATEGORY>TEXTTABLE</CATEGORY>
+                      <COMPU-INTERNAL-TO-PHYS>
+                        <COMPU-SCALES>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DEM_DTC_FORMAT_OBD</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DEM_DTC_FORMAT_OBD</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DEM_DTC_FORMAT_UDS</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">1</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DEM_DTC_FORMAT_UDS</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DEM_DTC_FORMAT_J1939</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">2</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">2</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DEM_DTC_FORMAT_J1939</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                        </COMPU-SCALES>
+                      </COMPU-INTERNAL-TO-PHYS>
+                    </COMPU-METHOD>
+                    <COMPU-METHOD UUID="31e908b8-bd15-4967-95f3-c12d37eeffba">
+                      <SHORT-NAME>Dem_DTCKindType</SHORT-NAME>
+                      <CATEGORY>TEXTTABLE</CATEGORY>
+                      <COMPU-INTERNAL-TO-PHYS>
+                        <COMPU-SCALES>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DEM_DTC_KIND_ALL_DTCS</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">1</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DEM_DTC_KIND_ALL_DTCS</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DEM_DTC_KIND_EMISSION_REL_DTCS</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">2</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">2</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DEM_DTC_KIND_EMISSION_REL_DTCS</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                        </COMPU-SCALES>
+                      </COMPU-INTERNAL-TO-PHYS>
+                    </COMPU-METHOD>
+                    <COMPU-METHOD UUID="798f5a86-fcec-40f3-951c-703e5aa4c857">
+                      <SHORT-NAME>Dem_DTCOriginType</SHORT-NAME>
+                      <CATEGORY>TEXTTABLE</CATEGORY>
+                      <COMPU-INTERNAL-TO-PHYS>
+                        <COMPU-SCALES>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DEM_DTC_ORIGIN_PRIMARY_MEMORY</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">1</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DEM_DTC_ORIGIN_PRIMARY_MEMORY</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DEM_DTC_ORIGIN_MIRROR_MEMORY</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">2</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">2</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DEM_DTC_ORIGIN_MIRROR_MEMORY</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DEM_DTC_ORIGIN_PERMANENT_MEMORY</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">3</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">3</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DEM_DTC_ORIGIN_PERMANENT_MEMORY</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DEM_DTC_ORIGIN_SECONDARY_MEMORY</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">4</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">4</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DEM_DTC_ORIGIN_SECONDARY_MEMORY</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                        </COMPU-SCALES>
+                      </COMPU-INTERNAL-TO-PHYS>
+                    </COMPU-METHOD>
+                    <COMPU-METHOD UUID="7fbb41ab-67a4-4e23-90fd-98f45f3997d8">
+                      <SHORT-NAME>Dcm_ControlDtcSettingType</SHORT-NAME>
+                      <CATEGORY>TEXTTABLE</CATEGORY>
+                      <COMPU-INTERNAL-TO-PHYS>
+                        <COMPU-SCALES>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_ENUM_ENABLEDTCSETTING</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_ENUM_ENABLEDTCSETTING</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_ENUM_DISABLEDTCSETTING</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">1</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_ENUM_DISABLEDTCSETTING</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                        </COMPU-SCALES>
+                      </COMPU-INTERNAL-TO-PHYS>
+                    </COMPU-METHOD>
+                    <COMPU-METHOD UUID="8dd72edc-4187-4196-9971-e8ea95854788">
+                      <SHORT-NAME>Dcm_EcuResetType</SHORT-NAME>
+                      <CATEGORY>TEXTTABLE</CATEGORY>
+                      <COMPU-INTERNAL-TO-PHYS>
+                        <COMPU-SCALES>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_ENUM_NONE</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_ENUM_NONE</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_ENUM_HARD</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">1</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_ENUM_HARD</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_ENUM_KEYONOFF</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">2</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">2</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_ENUM_KEYONOFF</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_ENUM_SOFT</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">3</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">3</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_ENUM_SOFT</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_ENUM_JUMPTOBOOTLOADER</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">4</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">4</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_ENUM_JUMPTOBOOTLOADER</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_ENUM_JUMPTOSYSSUPPLIERBOOTLOADER</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">5</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">5</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_ENUM_JUMPTOSYSSUPPLIERBOOTLOADER</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_ENUM_EXECUTE</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">6</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">6</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_ENUM_EXECUTE</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                        </COMPU-SCALES>
+                      </COMPU-INTERNAL-TO-PHYS>
+                    </COMPU-METHOD>
+                    <COMPU-METHOD UUID="c783d5c5-97fb-47ea-94e2-afc6daf247d9">
+                      <SHORT-NAME>Dcm_DiagnosticSessionControlType</SHORT-NAME>
+                      <CATEGORY>TEXTTABLE</CATEGORY>
+                      <COMPU-INTERNAL-TO-PHYS>
+                        <COMPU-SCALES>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_ENUM_DEFAULT_SESSION</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">1</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_ENUM_DEFAULT_SESSION</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_ENUM_PROGRAMMING_SESSION</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">2</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">2</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_ENUM_PROGRAMMING_SESSION</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_ENUM_EXTENDED_SESSION</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">3</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">3</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_ENUM_EXTENDED_SESSION</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                        </COMPU-SCALES>
+                      </COMPU-INTERNAL-TO-PHYS>
+                    </COMPU-METHOD>
+                    <COMPU-METHOD UUID="47c86304-6ca5-40f7-899b-910c8110d3ba">
+                      <SHORT-NAME>Dcm_CommunicationModeType</SHORT-NAME>
+                      <CATEGORY>TEXTTABLE</CATEGORY>
+                      <COMPU-INTERNAL-TO-PHYS>
+                        <COMPU-SCALES>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_ENABLE_RX_TX_NORM</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_ENABLE_RX_TX_NORM</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_ENABLE_RX_DISABLE_TX_NORM</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">1</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_ENABLE_RX_DISABLE_TX_NORM</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_DISABLE_RX_ENABLE_TX_NORM</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">2</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">2</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_DISABLE_RX_ENABLE_TX_NORM</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_DISABLE_RX_TX_NORMAL</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">3</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">3</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_DISABLE_RX_TX_NORMAL</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_ENABLE_RX_TX_NM</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">4</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">4</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_ENABLE_RX_TX_NM</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_ENABLE_RX_DISABLE_TX_NM</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">5</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">5</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_ENABLE_RX_DISABLE_TX_NM</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_DISABLE_RX_ENABLE_TX_NM</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">6</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">6</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_DISABLE_RX_ENABLE_TX_NM</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_DISABLE_RX_TX_NM</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">7</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">7</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_DISABLE_RX_TX_NM</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_ENABLE_RX_TX_NORM_NM</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">8</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">8</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_ENABLE_RX_TX_NORM_NM</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_ENABLE_RX_DISABLE_TX_NORM_NM</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">9</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">9</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_ENABLE_RX_DISABLE_TX_NORM_NM</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_DISABLE_RX_ENABLE_TX_NORM_NM</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">10</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">10</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_DISABLE_RX_ENABLE_TX_NORM_NM</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>DCM_DISABLE_RX_TX_NORM_NM</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">11</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">11</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>DCM_DISABLE_RX_TX_NORM_NM</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                        </COMPU-SCALES>
+                      </COMPU-INTERNAL-TO-PHYS>
+                    </COMPU-METHOD>
+                  </ELEMENTS>
+                </AR-PACKAGE>
+                <AR-PACKAGE UUID="bb9f5a58-7ae8-43f4-abeb-3de3226a4193">
+                  <SHORT-NAME>DataConstrs</SHORT-NAME>
+                  <ELEMENTS>
+                    <DATA-CONSTR UUID="034bd149-e884-4792-9fbf-b9137118a63e">
+                      <SHORT-NAME>Dem_DTCGroupType_Constr</SHORT-NAME>
+                      <DATA-CONSTR-RULES>
+                        <DATA-CONSTR-RULE>
+                          <INTERNAL-CONSTRS>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">16777215</UPPER-LIMIT>
+                          </INTERNAL-CONSTRS>
+                        </DATA-CONSTR-RULE>
+                      </DATA-CONSTR-RULES>
+                    </DATA-CONSTR>
+                  </ELEMENTS>
+                </AR-PACKAGE>
+              </AR-PACKAGES>
+            </AR-PACKAGE>
+            <AR-PACKAGE UUID="c5b05cec-9f3f-4508-8ad3-87aec5caa392">
+              <SHORT-NAME>Interfaces</SHORT-NAME>
+              <ELEMENTS>
+                <MODE-SWITCH-INTERFACE UUID="a999e03d-03b3-4cf9-bb82-9270c8322c06">
+                  <SHORT-NAME>DcmControlDtcSetting</SHORT-NAME>
+                  <IS-SERVICE>true</IS-SERVICE>
+                  <SERVICE-KIND>DIAGNOSTIC-COMMUNICATION-MANAGER</SERVICE-KIND>
+                  <MODE-GROUP UUID="8fce4d6e-73dd-4688-9a22-6c1279c3d632">
+                    <SHORT-NAME>DcmControlDtcSetting</SHORT-NAME>
+                    <TYPE-TREF DEST="MODE-DECLARATION-GROUP">/MICROSAR/Dcm_swc/DcmControlDtcSetting</TYPE-TREF>
+                  </MODE-GROUP>
+                </MODE-SWITCH-INTERFACE>
+                <MODE-SWITCH-INTERFACE UUID="d0c55699-068f-4815-9555-dec5bfc1331d">
+                  <SHORT-NAME>DcmEcuReset</SHORT-NAME>
+                  <IS-SERVICE>true</IS-SERVICE>
+                  <SERVICE-KIND>DIAGNOSTIC-COMMUNICATION-MANAGER</SERVICE-KIND>
+                  <MODE-GROUP UUID="055eab86-b6fc-445e-b444-58451e266118">
+                    <SHORT-NAME>DcmEcuReset</SHORT-NAME>
+                    <TYPE-TREF DEST="MODE-DECLARATION-GROUP">/MICROSAR/Dcm_swc/DcmEcuReset</TYPE-TREF>
+                  </MODE-GROUP>
+                </MODE-SWITCH-INTERFACE>
+                <MODE-SWITCH-INTERFACE UUID="5a4b42c0-dfe5-46c9-9ebb-7d1382083fbf">
+                  <SHORT-NAME>DcmDiagnosticSessionControl</SHORT-NAME>
+                  <IS-SERVICE>true</IS-SERVICE>
+                  <SERVICE-KIND>DIAGNOSTIC-COMMUNICATION-MANAGER</SERVICE-KIND>
+                  <MODE-GROUP UUID="9dc59615-b92d-4871-a5a5-ff885fe1062d">
+                    <SHORT-NAME>DcmDiagnosticSessionControl</SHORT-NAME>
+                    <TYPE-TREF DEST="MODE-DECLARATION-GROUP">/MICROSAR/Dcm_swc/DcmDiagnosticSessionControl</TYPE-TREF>
+                  </MODE-GROUP>
+                </MODE-SWITCH-INTERFACE>
+                <CLIENT-SERVER-INTERFACE UUID="caa776c7-ac59-4fe8-8348-3a5798048938">
+                  <SHORT-NAME>DCMServices</SHORT-NAME>
+                  <IS-SERVICE>true</IS-SERVICE>
+                  <SERVICE-KIND>DIAGNOSTIC-COMMUNICATION-MANAGER</SERVICE-KIND>
+                  <OPERATIONS>
+                    <CLIENT-SERVER-OPERATION UUID="cbca970e-0146-4900-8978-dcaedd0f8cb4">
+                      <SHORT-NAME>GetActiveProtocol</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="FOR-ALL"/>
+                      </DESC>
+                      <ARGUMENTS>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="e001c2d5-d709-4542-a8f2-cda77c9dd4f5">
+                          <SHORT-NAME>ActiveProtocol</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/Dcm_swc/DataTypes/Dcm_ProtocolType</TYPE-TREF>
+                          <DIRECTION>OUT</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                      </ARGUMENTS>
+                      <POSSIBLE-ERROR-REFS>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/Dcm_swc/Interfaces/DCMServices/E_OK</POSSIBLE-ERROR-REF>
+                      </POSSIBLE-ERROR-REFS>
+                    </CLIENT-SERVER-OPERATION>
+                    <CLIENT-SERVER-OPERATION UUID="1ba111ac-6989-4859-9fb1-52a48fc545ff">
+                      <SHORT-NAME>GetSesCtrlType</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="FOR-ALL"/>
+                      </DESC>
+                      <ARGUMENTS>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="01c277dd-7dfe-487c-8e21-67278201f2ab">
+                          <SHORT-NAME>SesCtrlType</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/Dcm_swc/DataTypes/Dcm_SesCtrlType</TYPE-TREF>
+                          <DIRECTION>OUT</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                      </ARGUMENTS>
+                      <POSSIBLE-ERROR-REFS>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/Dcm_swc/Interfaces/DCMServices/E_OK</POSSIBLE-ERROR-REF>
+                      </POSSIBLE-ERROR-REFS>
+                    </CLIENT-SERVER-OPERATION>
+                    <CLIENT-SERVER-OPERATION UUID="45ea004c-f9dd-4442-9ea1-7da17b5fc16d">
+                      <SHORT-NAME>ResetToDefaultSession</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="FOR-ALL"/>
+                      </DESC>
+                      <POSSIBLE-ERROR-REFS>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/Dcm_swc/Interfaces/DCMServices/E_OK</POSSIBLE-ERROR-REF>
+                      </POSSIBLE-ERROR-REFS>
+                    </CLIENT-SERVER-OPERATION>
+                    <CLIENT-SERVER-OPERATION UUID="7896a54c-d476-46fa-b24c-638b5192da67">
+                      <SHORT-NAME>GetSecurityLevel</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="FOR-ALL"/>
+                      </DESC>
+                      <ARGUMENTS>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="afcf069a-8e7b-4cc4-b2a9-37db1d8a5769">
+                          <SHORT-NAME>SecLevel</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/Dcm_swc/DataTypes/Dcm_SecLevelType</TYPE-TREF>
+                          <DIRECTION>OUT</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                      </ARGUMENTS>
+                      <POSSIBLE-ERROR-REFS>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/Dcm_swc/Interfaces/DCMServices/E_OK</POSSIBLE-ERROR-REF>
+                      </POSSIBLE-ERROR-REFS>
+                    </CLIENT-SERVER-OPERATION>
+                    <CLIENT-SERVER-OPERATION UUID="42c9a0f6-b88e-4dc4-bd0f-1c1ec2f89800">
+                      <SHORT-NAME>SetActiveDiagnostic</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="FOR-ALL"/>
+                      </DESC>
+                      <ARGUMENTS>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="a5dda9a0-72ae-4ef2-b7db-da73b11a596e">
+                          <SHORT-NAME>active</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</TYPE-TREF>
+                          <DIRECTION>IN</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                      </ARGUMENTS>
+                      <POSSIBLE-ERROR-REFS>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/Dcm_swc/Interfaces/DCMServices/E_OK</POSSIBLE-ERROR-REF>
+                      </POSSIBLE-ERROR-REFS>
+                    </CLIENT-SERVER-OPERATION>
+                    <CLIENT-SERVER-OPERATION UUID="bedb19e6-234b-4213-801c-bc416b27536a">
+                      <SHORT-NAME>GetRequestKind</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="FOR-ALL"/>
+                      </DESC>
+                      <ARGUMENTS>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="8018f627-4912-4e21-a93a-fa1814899d6c">
+                          <SHORT-NAME>TesterSourceAddress</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16</TYPE-TREF>
+                          <DIRECTION>IN</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="ec5dc67e-0a0f-4653-baf7-dfc418b30b6c">
+                          <SHORT-NAME>RequestKind</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/Dcm_swc/DataTypes/Dcm_RequestKindType</TYPE-TREF>
+                          <DIRECTION>OUT</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                      </ARGUMENTS>
+                      <POSSIBLE-ERROR-REFS>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/Dcm_swc/Interfaces/DCMServices/E_NOT_OK</POSSIBLE-ERROR-REF>
+                      </POSSIBLE-ERROR-REFS>
+                    </CLIENT-SERVER-OPERATION>
+                  </OPERATIONS>
+                  <POSSIBLE-ERRORS>
+                    <APPLICATION-ERROR UUID="cbc76cca-8a9d-49ad-8ab8-cba4b2849a52">
+                      <SHORT-NAME>E_OK</SHORT-NAME>
+                      <ERROR-CODE>0</ERROR-CODE>
+                    </APPLICATION-ERROR>
+                    <APPLICATION-ERROR UUID="4cf0dd55-e34e-4953-91c6-ddebc3c1cf12">
+                      <SHORT-NAME>E_NOT_OK</SHORT-NAME>
+                      <ERROR-CODE>1</ERROR-CODE>
+                    </APPLICATION-ERROR>
+                  </POSSIBLE-ERRORS>
+                </CLIENT-SERVER-INTERFACE>
+                <CLIENT-SERVER-INTERFACE UUID="98204bb8-09d6-4856-bdef-781b7c188698">
+                  <SHORT-NAME>SecurityAccess_Level_01</SHORT-NAME>
+                  <IS-SERVICE>true</IS-SERVICE>
+                  <SERVICE-KIND>DIAGNOSTIC-COMMUNICATION-MANAGER</SERVICE-KIND>
+                  <OPERATIONS>
+                    <CLIENT-SERVER-OPERATION UUID="e97555de-71cf-4247-8a67-877b6c6816f6">
+                      <SHORT-NAME>GetSeed</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="FOR-ALL"/>
+                      </DESC>
+                      <ARGUMENTS>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="6eb8a855-6ab6-4c45-959d-8f84b21d4d84">
+                          <SHORT-NAME>OpStatus</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/Dcm_swc/DataTypes/Dcm_OpStatusType</TYPE-TREF>
+                          <DIRECTION>IN</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="bea14c77-8371-4da6-9976-c577d4e9125f">
+                          <SHORT-NAME>Seed</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/Dcm_swc/DataTypes/Dcm_Data2ByteType</TYPE-TREF>
+                          <DIRECTION>OUT</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="92dd8b44-f5f6-4556-9060-dffac36af351">
+                          <SHORT-NAME>ErrorCode</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/Dcm_swc/DataTypes/Dcm_NegativeResponseCodeType</TYPE-TREF>
+                          <DIRECTION>OUT</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                      </ARGUMENTS>
+                      <POSSIBLE-ERROR-REFS>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/Dcm_swc/Interfaces/SecurityAccess_Level_01/E_NOT_OK</POSSIBLE-ERROR-REF>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/Dcm_swc/Interfaces/SecurityAccess_Level_01/DCM_E_PENDING</POSSIBLE-ERROR-REF>
+                      </POSSIBLE-ERROR-REFS>
+                    </CLIENT-SERVER-OPERATION>
+                    <CLIENT-SERVER-OPERATION UUID="b726ca31-e4e4-454c-bf08-7a9a1f805c5b">
+                      <SHORT-NAME>CompareKey</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="FOR-ALL"/>
+                      </DESC>
+                      <ARGUMENTS>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="3b50e545-f591-4139-bf4e-9f81c2613023">
+                          <SHORT-NAME>Key</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/Dcm_swc/DataTypes/Dcm_Data2ByteType</TYPE-TREF>
+                          <DIRECTION>IN</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="3137b749-e360-4597-bd9a-dc5696060807">
+                          <SHORT-NAME>OpStatus</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/Dcm_swc/DataTypes/Dcm_OpStatusType</TYPE-TREF>
+                          <DIRECTION>IN</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="da443f2d-6a4f-41c8-992d-fd33ddc4aab7">
+                          <SHORT-NAME>ErrorCode</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/Dcm_swc/DataTypes/Dcm_NegativeResponseCodeType</TYPE-TREF>
+                          <DIRECTION>OUT</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                      </ARGUMENTS>
+                      <POSSIBLE-ERROR-REFS>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/Dcm_swc/Interfaces/SecurityAccess_Level_01/E_NOT_OK</POSSIBLE-ERROR-REF>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/Dcm_swc/Interfaces/SecurityAccess_Level_01/DCM_E_PENDING</POSSIBLE-ERROR-REF>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/Dcm_swc/Interfaces/SecurityAccess_Level_01/DCM_E_COMPARE_KEY_FAILED</POSSIBLE-ERROR-REF>
+                      </POSSIBLE-ERROR-REFS>
+                    </CLIENT-SERVER-OPERATION>
+                  </OPERATIONS>
+                  <POSSIBLE-ERRORS>
+                    <APPLICATION-ERROR UUID="89489209-a1d5-4a66-84a3-d0b49c5a43ae">
+                      <SHORT-NAME>E_NOT_OK</SHORT-NAME>
+                      <ERROR-CODE>1</ERROR-CODE>
+                    </APPLICATION-ERROR>
+                    <APPLICATION-ERROR UUID="e7464e50-135e-4441-9123-3e0fc502c359">
+                      <SHORT-NAME>DCM_E_PENDING</SHORT-NAME>
+                      <ERROR-CODE>10</ERROR-CODE>
+                    </APPLICATION-ERROR>
+                    <APPLICATION-ERROR UUID="6e786e65-4033-4919-8f9d-268bf8a0ab98">
+                      <SHORT-NAME>DCM_E_COMPARE_KEY_FAILED</SHORT-NAME>
+                      <ERROR-CODE>11</ERROR-CODE>
+                    </APPLICATION-ERROR>
+                  </POSSIBLE-ERRORS>
+                </CLIENT-SERVER-INTERFACE>
+                <CLIENT-SERVER-INTERFACE UUID="9d1d140e-8b36-4fc7-b0bb-b5c09af72ab6">
+                  <SHORT-NAME>DataServices_Diag_RWDI_LightOnOffCounter_LightOnOffCounter_Value</SHORT-NAME>
+                  <IS-SERVICE>true</IS-SERVICE>
+                  <SERVICE-KIND>DIAGNOSTIC-COMMUNICATION-MANAGER</SERVICE-KIND>
+                  <OPERATIONS>
+                    <CLIENT-SERVER-OPERATION UUID="e94dc2de-298b-4628-8c5a-ad0dea755f30">
+                      <SHORT-NAME>ReadData</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="FOR-ALL"/>
+                      </DESC>
+                      <ARGUMENTS>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="6d8f27a8-7393-4266-93c0-29beabb35a1f">
+                          <SHORT-NAME>OpStatus</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/Dcm_swc/DataTypes/Dcm_OpStatusType</TYPE-TREF>
+                          <DIRECTION>IN</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="8182ab75-6282-4310-be4e-5dc6513bc8e8">
+                          <SHORT-NAME>Data</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/Dcm_swc/DataTypes/Dcm_Data4ByteType</TYPE-TREF>
+                          <DIRECTION>OUT</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                      </ARGUMENTS>
+                      <POSSIBLE-ERROR-REFS>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/Dcm_swc/Interfaces/DataServices_Diag_RWDI_LightOnOffCounter_LightOnOffCounter_Value/E_NOT_OK</POSSIBLE-ERROR-REF>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/Dcm_swc/Interfaces/DataServices_Diag_RWDI_LightOnOffCounter_LightOnOffCounter_Value/DCM_E_PENDING</POSSIBLE-ERROR-REF>
+                      </POSSIBLE-ERROR-REFS>
+                    </CLIENT-SERVER-OPERATION>
+                    <CLIENT-SERVER-OPERATION UUID="40077b40-f2d1-4a1a-af07-d1017db14109">
+                      <SHORT-NAME>ConditionCheckRead</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="FOR-ALL"/>
+                      </DESC>
+                      <ARGUMENTS>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="4f97abdc-1162-45e6-8026-c7534f53243e">
+                          <SHORT-NAME>OpStatus</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/Dcm_swc/DataTypes/Dcm_OpStatusType</TYPE-TREF>
+                          <DIRECTION>IN</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="608308b7-56bd-47df-9ff3-17fac88d17ef">
+                          <SHORT-NAME>ErrorCode</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/Dcm_swc/DataTypes/Dcm_NegativeResponseCodeType</TYPE-TREF>
+                          <DIRECTION>OUT</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                      </ARGUMENTS>
+                      <POSSIBLE-ERROR-REFS>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/Dcm_swc/Interfaces/DataServices_Diag_RWDI_LightOnOffCounter_LightOnOffCounter_Value/E_NOT_OK</POSSIBLE-ERROR-REF>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/Dcm_swc/Interfaces/DataServices_Diag_RWDI_LightOnOffCounter_LightOnOffCounter_Value/DCM_E_PENDING</POSSIBLE-ERROR-REF>
+                      </POSSIBLE-ERROR-REFS>
+                    </CLIENT-SERVER-OPERATION>
+                    <CLIENT-SERVER-OPERATION UUID="93adedc2-fcbe-4e4e-ad4b-c1aaeb27450e">
+                      <SHORT-NAME>WriteData</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="FOR-ALL"/>
+                      </DESC>
+                      <ARGUMENTS>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="9c63fd0d-724b-43e0-8fa5-dd8fcef12901">
+                          <SHORT-NAME>Data</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/Dcm_swc/DataTypes/Dcm_Data4ByteType</TYPE-TREF>
+                          <DIRECTION>IN</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="7b42f94a-2b55-4e11-9cf6-b0dd184c0a34">
+                          <SHORT-NAME>OpStatus</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/Dcm_swc/DataTypes/Dcm_OpStatusType</TYPE-TREF>
+                          <DIRECTION>IN</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="5daf65a3-4bb5-4b9f-9147-0165858afb1b">
+                          <SHORT-NAME>ErrorCode</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/Dcm_swc/DataTypes/Dcm_NegativeResponseCodeType</TYPE-TREF>
+                          <DIRECTION>OUT</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                      </ARGUMENTS>
+                      <POSSIBLE-ERROR-REFS>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/Dcm_swc/Interfaces/DataServices_Diag_RWDI_LightOnOffCounter_LightOnOffCounter_Value/E_NOT_OK</POSSIBLE-ERROR-REF>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/Dcm_swc/Interfaces/DataServices_Diag_RWDI_LightOnOffCounter_LightOnOffCounter_Value/DCM_E_PENDING</POSSIBLE-ERROR-REF>
+                      </POSSIBLE-ERROR-REFS>
+                    </CLIENT-SERVER-OPERATION>
+                  </OPERATIONS>
+                  <POSSIBLE-ERRORS>
+                    <APPLICATION-ERROR UUID="1f633c85-b9a6-4a9c-8dc2-98735449f21e">
+                      <SHORT-NAME>E_NOT_OK</SHORT-NAME>
+                      <ERROR-CODE>1</ERROR-CODE>
+                    </APPLICATION-ERROR>
+                    <APPLICATION-ERROR UUID="b14f2128-5352-41af-a2a1-b8fe7432e730">
+                      <SHORT-NAME>DCM_E_PENDING</SHORT-NAME>
+                      <ERROR-CODE>10</ERROR-CODE>
+                    </APPLICATION-ERROR>
+                  </POSSIBLE-ERRORS>
+                </CLIENT-SERVER-INTERFACE>
+              </ELEMENTS>
+            </AR-PACKAGE>
+            <AR-PACKAGE UUID="ddf2630e-63b1-4b82-adf9-18a0ee63056e">
+              <SHORT-NAME>ComponentTypes</SHORT-NAME>
+              <ELEMENTS>
+                <SERVICE-SW-COMPONENT-TYPE UUID="3c41660e-74d2-4c14-8547-a8171702646f">
+                  <SHORT-NAME>Dcm</SHORT-NAME>
+                  <CATEGORY>SERVICE_COMPONENT</CATEGORY>
+                  <PORTS>
+                    <P-PORT-PROTOTYPE UUID="4ea37d53-abe7-422c-badf-cea4ac16a3c2">
+                      <SHORT-NAME>DcmControlDtcSetting</SHORT-NAME>
+                      <PROVIDED-INTERFACE-TREF DEST="MODE-SWITCH-INTERFACE">/MICROSAR/Dcm_swc/Interfaces/DcmControlDtcSetting</PROVIDED-INTERFACE-TREF>
+                    </P-PORT-PROTOTYPE>
+                    <P-PORT-PROTOTYPE UUID="d413b3c1-e4d4-4e37-96ab-7aa874c522fe">
+                      <SHORT-NAME>DcmEcuReset</SHORT-NAME>
+                      <PROVIDED-COM-SPECS>
+                        <MODE-SWITCH-SENDER-COM-SPEC>
+                          <MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MICROSAR/Dcm_swc/Interfaces/DcmEcuReset/DcmEcuReset</MODE-GROUP-REF>
+                          <MODE-SWITCHED-ACK>
+                            <TIMEOUT>0</TIMEOUT>
+                          </MODE-SWITCHED-ACK>
+                        </MODE-SWITCH-SENDER-COM-SPEC>
+                      </PROVIDED-COM-SPECS>
+                      <PROVIDED-INTERFACE-TREF DEST="MODE-SWITCH-INTERFACE">/MICROSAR/Dcm_swc/Interfaces/DcmEcuReset</PROVIDED-INTERFACE-TREF>
+                    </P-PORT-PROTOTYPE>
+                    <P-PORT-PROTOTYPE UUID="fcfa70eb-99d9-440d-af7b-fade40d56585">
+                      <SHORT-NAME>DcmDiagnosticSessionControl</SHORT-NAME>
+                      <PROVIDED-INTERFACE-TREF DEST="MODE-SWITCH-INTERFACE">/MICROSAR/Dcm_swc/Interfaces/DcmDiagnosticSessionControl</PROVIDED-INTERFACE-TREF>
+                    </P-PORT-PROTOTYPE>
+                    <P-PORT-PROTOTYPE UUID="a915cd9e-30f7-45b4-b726-d83b45051134">
+                      <SHORT-NAME>DCMServices</SHORT-NAME>
+                      <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/MICROSAR/Dcm_swc/Interfaces/DCMServices</PROVIDED-INTERFACE-TREF>
+                    </P-PORT-PROTOTYPE>
+                    <R-PORT-PROTOTYPE UUID="f92b3be4-588e-4b44-b45d-5ec41d038eb3">
+                      <SHORT-NAME>SecurityAccess_Level_01</SHORT-NAME>
+                      <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/MICROSAR/Dcm_swc/Interfaces/SecurityAccess_Level_01</REQUIRED-INTERFACE-TREF>
+                    </R-PORT-PROTOTYPE>
+                    <R-PORT-PROTOTYPE UUID="d160bce2-64f5-4a3e-91c1-b99c9c4eea6d">
+                      <SHORT-NAME>DataServices_Diag_RWDI_LightOnOffCounter_LightOnOffCounter_Value</SHORT-NAME>
+                      <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/MICROSAR/Dcm_swc/Interfaces/DataServices_Diag_RWDI_LightOnOffCounter_LightOnOffCounter_Value</REQUIRED-INTERFACE-TREF>
+                    </R-PORT-PROTOTYPE>
+                  </PORTS>
+                  <INTERNAL-BEHAVIORS>
+                    <SWC-INTERNAL-BEHAVIOR UUID="e5117c1c-2816-46ce-8d56-33f69afda736">
+                      <SHORT-NAME>DcmInternalBehavior</SHORT-NAME>
+                      <DATA-TYPE-MAPPING-REFS>
+                        <DATA-TYPE-MAPPING-REF DEST="DATA-TYPE-MAPPING-SET">/MICROSAR/Dcm_swc/DcmMappingSet</DATA-TYPE-MAPPING-REF>
+                      </DATA-TYPE-MAPPING-REFS>
+                      <EVENTS>
+                        <TIMING-EVENT UUID="4b7e5bc4-75cb-403c-8aad-358f3e4a1013">
+                          <SHORT-NAME>Timer_Dcm_MainFunction</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/DcmInternalBehavior/Dcm_MainFunction</START-ON-EVENT-REF>
+                          <PERIOD>0.01</PERIOD>
+                        </TIMING-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="5bd182e1-31f2-47f8-b788-987b5fdd562c">
+                          <SHORT-NAME>OpEventGetActiveProtocol_GetActiveProtocol_DCMServices</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/DcmInternalBehavior/GetActiveProtocol</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/DCMServices</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/Dcm_swc/Interfaces/DCMServices/GetActiveProtocol</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="5ee6f42b-4bd5-4e99-8a1a-eaaf191a3a73">
+                          <SHORT-NAME>OpEventGetSesCtrlType_GetSesCtrlType_DCMServices</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/DcmInternalBehavior/GetSesCtrlType</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/DCMServices</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/Dcm_swc/Interfaces/DCMServices/GetSesCtrlType</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="b7684ca5-6f3a-4fa4-98d6-dc4b01c76b96">
+                          <SHORT-NAME>OpEventResetToDefaultSession_ResetToDefaultSession_DCMServices</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/DcmInternalBehavior/ResetToDefaultSession</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/DCMServices</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/Dcm_swc/Interfaces/DCMServices/ResetToDefaultSession</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="610d273b-052e-49ea-ae50-53977df4fe9c">
+                          <SHORT-NAME>OpEventGetSecurityLevel_GetSecurityLevel_DCMServices</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/DcmInternalBehavior/GetSecurityLevel</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/DCMServices</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/Dcm_swc/Interfaces/DCMServices/GetSecurityLevel</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="61ffed23-cab9-49e2-9b29-0439393bc353">
+                          <SHORT-NAME>OpEventSetActiveDiagnostic_SetActiveDiagnostic_DCMServices</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/DcmInternalBehavior/SetActiveDiagnostic</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/DCMServices</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/Dcm_swc/Interfaces/DCMServices/SetActiveDiagnostic</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="6ee18a35-8660-4846-9299-c437697e6a01">
+                          <SHORT-NAME>OpEventGetRequestKind_GetRequestKind_DCMServices</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/DcmInternalBehavior/GetRequestKind</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/DCMServices</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/Dcm_swc/Interfaces/DCMServices/GetRequestKind</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                      </EVENTS>
+                      <HANDLE-TERMINATION-AND-RESTART>NO-SUPPORT</HANDLE-TERMINATION-AND-RESTART>
+                      <INCLUDED-DATA-TYPE-SETS>
+                        <INCLUDED-DATA-TYPE-SET>
+                          <DATA-TYPE-REFS>
+                            <DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/Dcm_swc/DataTypes/Dcm_ConfirmationStatusType</DATA-TYPE-REF>
+                            <DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/Dcm_swc/DataTypes/Dcm_OpStatusType</DATA-TYPE-REF>
+                            <DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/Dcm_swc/DataTypes/Dcm_NegativeResponseCodeType</DATA-TYPE-REF>
+                            <DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/Dcm_swc/DataTypes/Dcm_ProtocolType</DATA-TYPE-REF>
+                            <DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/Dcm_swc/DataTypes/Dcm_RequestKindType</DATA-TYPE-REF>
+                            <DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/Dcm_swc/DataTypes/Dcm_SecLevelType</DATA-TYPE-REF>
+                            <DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/Dcm_swc/DataTypes/Dcm_SesCtrlType</DATA-TYPE-REF>
+                            <DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/Dcm_swc/DataTypes/Dcm_ControlDtcSettingType</DATA-TYPE-REF>
+                            <DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/Dcm_swc/DataTypes/Dcm_EcuResetType</DATA-TYPE-REF>
+                            <DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/Dcm_swc/DataTypes/Dcm_DiagnosticSessionControlType</DATA-TYPE-REF>
+                            <DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/Dcm_swc/DataTypes/Dcm_CommunicationModeType</DATA-TYPE-REF>
+                          </DATA-TYPE-REFS>
+                        </INCLUDED-DATA-TYPE-SET>
+                      </INCLUDED-DATA-TYPE-SETS>
+                      <PORT-API-OPTIONS>
+                        <PORT-API-OPTION>
+                          <ENABLE-TAKE-ADDRESS>true</ENABLE-TAKE-ADDRESS>
+                          <INDIRECT-API>false</INDIRECT-API>
+                          <PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/DcmControlDtcSetting</PORT-REF>
+                        </PORT-API-OPTION>
+                        <PORT-API-OPTION>
+                          <ENABLE-TAKE-ADDRESS>true</ENABLE-TAKE-ADDRESS>
+                          <INDIRECT-API>false</INDIRECT-API>
+                          <PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/DcmEcuReset</PORT-REF>
+                        </PORT-API-OPTION>
+                        <PORT-API-OPTION>
+                          <ENABLE-TAKE-ADDRESS>true</ENABLE-TAKE-ADDRESS>
+                          <INDIRECT-API>false</INDIRECT-API>
+                          <PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/DcmDiagnosticSessionControl</PORT-REF>
+                        </PORT-API-OPTION>
+                        <PORT-API-OPTION>
+                          <ENABLE-TAKE-ADDRESS>true</ENABLE-TAKE-ADDRESS>
+                          <INDIRECT-API>false</INDIRECT-API>
+                          <PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/DCMServices</PORT-REF>
+                        </PORT-API-OPTION>
+                        <PORT-API-OPTION>
+                          <ENABLE-TAKE-ADDRESS>true</ENABLE-TAKE-ADDRESS>
+                          <INDIRECT-API>false</INDIRECT-API>
+                          <PORT-REF DEST="R-PORT-PROTOTYPE">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/SecurityAccess_Level_01</PORT-REF>
+                        </PORT-API-OPTION>
+                        <PORT-API-OPTION>
+                          <ENABLE-TAKE-ADDRESS>true</ENABLE-TAKE-ADDRESS>
+                          <INDIRECT-API>false</INDIRECT-API>
+                          <PORT-REF DEST="R-PORT-PROTOTYPE">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/DataServices_Diag_RWDI_LightOnOffCounter_LightOnOffCounter_Value</PORT-REF>
+                        </PORT-API-OPTION>
+                      </PORT-API-OPTIONS>
+                      <RUNNABLES>
+                        <RUNNABLE-ENTITY UUID="4b9a5483-153f-471c-8165-b7443ec80721">
+                          <SHORT-NAME>Dcm_MainFunction</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                          <MODE-SWITCH-POINTS>
+                            <MODE-SWITCH-POINT UUID="c92e606b-8f49-4f03-8c3d-795e2541d813">
+                              <SHORT-NAME>ModeSwitchPointDcm_MainFunction_DcmControlDtcSetting_DcmControlDtcSetting</SHORT-NAME>
+                              <MODE-GROUP-IREF>
+                                <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/DcmControlDtcSetting</CONTEXT-P-PORT-REF>
+                                <TARGET-MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MICROSAR/Dcm_swc/Interfaces/DcmControlDtcSetting/DcmControlDtcSetting</TARGET-MODE-GROUP-REF>
+                              </MODE-GROUP-IREF>
+                            </MODE-SWITCH-POINT>
+                            <MODE-SWITCH-POINT UUID="33863145-24c9-4b5b-a154-c2c1e22f509c">
+                              <SHORT-NAME>ModeSwitchPointDcm_MainFunction_DcmEcuReset_DcmEcuReset</SHORT-NAME>
+                              <MODE-GROUP-IREF>
+                                <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/DcmEcuReset</CONTEXT-P-PORT-REF>
+                                <TARGET-MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MICROSAR/Dcm_swc/Interfaces/DcmEcuReset/DcmEcuReset</TARGET-MODE-GROUP-REF>
+                              </MODE-GROUP-IREF>
+                            </MODE-SWITCH-POINT>
+                            <MODE-SWITCH-POINT UUID="f962fbf2-7b56-4b3c-a639-37004930b2d3">
+                              <SHORT-NAME>ModeSwitchPointDcm_MainFunction_DcmDiagnosticSessionControl_DcmDiagnosticSessionControl</SHORT-NAME>
+                              <MODE-GROUP-IREF>
+                                <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/DcmDiagnosticSessionControl</CONTEXT-P-PORT-REF>
+                                <TARGET-MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MICROSAR/Dcm_swc/Interfaces/DcmDiagnosticSessionControl/DcmDiagnosticSessionControl</TARGET-MODE-GROUP-REF>
+                              </MODE-GROUP-IREF>
+                            </MODE-SWITCH-POINT>
+                          </MODE-SWITCH-POINTS>
+                          <SERVER-CALL-POINTS>
+                            <SYNCHRONOUS-SERVER-CALL-POINT UUID="890bc8f2-22ef-4601-b3b7-ad206590a35f">
+                              <SHORT-NAME>OpServerCallDcm_MainFunction_GetSeed_SecurityAccess_Level_01</SHORT-NAME>
+                              <OPERATION-IREF>
+                                <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/SecurityAccess_Level_01</CONTEXT-R-PORT-REF>
+                                <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/Dcm_swc/Interfaces/SecurityAccess_Level_01/GetSeed</TARGET-REQUIRED-OPERATION-REF>
+                              </OPERATION-IREF>
+                              <TIMEOUT>0</TIMEOUT>
+                            </SYNCHRONOUS-SERVER-CALL-POINT>
+                            <SYNCHRONOUS-SERVER-CALL-POINT UUID="21a8c9fc-511a-47ab-8190-5054c3e6d840">
+                              <SHORT-NAME>OpServerCallDcm_MainFunction_CompareKey_SecurityAccess_Level_01</SHORT-NAME>
+                              <OPERATION-IREF>
+                                <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/SecurityAccess_Level_01</CONTEXT-R-PORT-REF>
+                                <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/Dcm_swc/Interfaces/SecurityAccess_Level_01/CompareKey</TARGET-REQUIRED-OPERATION-REF>
+                              </OPERATION-IREF>
+                              <TIMEOUT>0</TIMEOUT>
+                            </SYNCHRONOUS-SERVER-CALL-POINT>
+                            <SYNCHRONOUS-SERVER-CALL-POINT UUID="2d092ef8-3f26-496b-b5f1-96e080b0e372">
+                              <SHORT-NAME>OpServerCallDcm_MainFunction_ReadData_DataServices_Diag_RWDI_LightOnOffCounter_LightOnOffCounter_Value</SHORT-NAME>
+                              <OPERATION-IREF>
+                                <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/DataServices_Diag_RWDI_LightOnOffCounter_LightOnOffCounter_Value</CONTEXT-R-PORT-REF>
+                                <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/Dcm_swc/Interfaces/DataServices_Diag_RWDI_LightOnOffCounter_LightOnOffCounter_Value/ReadData</TARGET-REQUIRED-OPERATION-REF>
+                              </OPERATION-IREF>
+                              <TIMEOUT>0</TIMEOUT>
+                            </SYNCHRONOUS-SERVER-CALL-POINT>
+                            <SYNCHRONOUS-SERVER-CALL-POINT UUID="7e17b823-b6d7-4439-86ac-632775a5a470">
+                              <SHORT-NAME>OpServerCallDcm_MainFunction_ConditionCheckRead_DataServices_Diag_RWDI_LightOnOffCounter_LightOnOffCounter_Value</SHORT-NAME>
+                              <OPERATION-IREF>
+                                <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/DataServices_Diag_RWDI_LightOnOffCounter_LightOnOffCounter_Value</CONTEXT-R-PORT-REF>
+                                <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/Dcm_swc/Interfaces/DataServices_Diag_RWDI_LightOnOffCounter_LightOnOffCounter_Value/ConditionCheckRead</TARGET-REQUIRED-OPERATION-REF>
+                              </OPERATION-IREF>
+                              <TIMEOUT>0</TIMEOUT>
+                            </SYNCHRONOUS-SERVER-CALL-POINT>
+                            <SYNCHRONOUS-SERVER-CALL-POINT UUID="a4080081-a7a6-4318-aa15-401fc914a2cf">
+                              <SHORT-NAME>OpServerCallDcm_MainFunction_WriteData_DataServices_Diag_RWDI_LightOnOffCounter_LightOnOffCounter_Value</SHORT-NAME>
+                              <OPERATION-IREF>
+                                <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/DataServices_Diag_RWDI_LightOnOffCounter_LightOnOffCounter_Value</CONTEXT-R-PORT-REF>
+                                <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/Dcm_swc/Interfaces/DataServices_Diag_RWDI_LightOnOffCounter_LightOnOffCounter_Value/WriteData</TARGET-REQUIRED-OPERATION-REF>
+                              </OPERATION-IREF>
+                              <TIMEOUT>0</TIMEOUT>
+                            </SYNCHRONOUS-SERVER-CALL-POINT>
+                          </SERVER-CALL-POINTS>
+                          <SYMBOL>Dcm_MainFunction</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="463b4979-aad9-40a0-b9d9-7c66a2692775">
+                          <SHORT-NAME>GetActiveProtocol</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>Dcm_GetActiveProtocol</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="78332b28-fded-4a74-a3d5-cab14d2c1558">
+                          <SHORT-NAME>GetSesCtrlType</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>Dcm_GetSesCtrlType</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="05edf590-8fc0-4e00-acfe-1ca21e5911f9">
+                          <SHORT-NAME>ResetToDefaultSession</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>Dcm_ResetToDefaultSession</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="0614ffb8-9b6a-4994-b61e-ee13fc22ef55">
+                          <SHORT-NAME>GetSecurityLevel</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>Dcm_GetSecurityLevel</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="30ff08b1-0cfb-4078-9b5f-812d50cb56d1">
+                          <SHORT-NAME>SetActiveDiagnostic</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>Dcm_SetActiveDiagnostic</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="9d9d1899-5c54-4e02-8aac-d3602455b127">
+                          <SHORT-NAME>GetRequestKind</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>Dcm_GetRequestKind</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                      </RUNNABLES>
+                      <SUPPORTS-MULTIPLE-INSTANTIATION>false</SUPPORTS-MULTIPLE-INSTANTIATION>
+                    </SWC-INTERNAL-BEHAVIOR>
+                  </INTERNAL-BEHAVIORS>
+                </SERVICE-SW-COMPONENT-TYPE>
+                <SWC-IMPLEMENTATION UUID="d6762304-bf85-467b-8ed6-20640c214cd6">
+                  <SHORT-NAME>DcmImplementation</SHORT-NAME>
+                  <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+                  <BEHAVIOR-REF DEST="SWC-INTERNAL-BEHAVIOR">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/DcmInternalBehavior</BEHAVIOR-REF>
+                </SWC-IMPLEMENTATION>
+              </ELEMENTS>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

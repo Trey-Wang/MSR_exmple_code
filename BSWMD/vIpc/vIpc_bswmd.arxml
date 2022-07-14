@@ -1,0 +1,678 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+***********************************************************************************************************************
+COPYRIGHT
+===============================================================================
+Copyright (c) 2017 by Vector Informatik GmbH.                                         All rights reserved.
+
+    This software is copyright protected and proprietary to Vector Informatik GmbH.
+    Vector Informatik GmbH grants to you only those rights as set out in the license conditions.
+    All other rights remain with Vector Informatik GmbH.
+===============================================================================
+FILE DESCRIPTION
+===============================================================================
+File:           vIpc_bswmd.arxml
+Component:      
+Module:         vIpc
+Generator:     	
+
+Description:    -
+*********************************************************************************************************************** 
+-->
+<AUTOSAR xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-3-0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://autosar.org/schema/r4.0">
+	<AR-PACKAGES>
+		<AR-PACKAGE UUID="7e014948-52d6-4968-8759-081b4a41f424">
+			<SHORT-NAME>MICROSAR</SHORT-NAME>
+			<ELEMENTS>
+				<BSW-IMPLEMENTATION UUID="b42670ff-2131-4fe5-a0ff-d2bffed77b4a">
+					<SHORT-NAME>vIpc_Impl</SHORT-NAME>
+					<PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+					<SW-VERSION>0.02.00</SW-VERSION>
+					<USED-CODE-GENERATOR>DaVinci Configurator</USED-CODE-GENERATOR>
+					<VENDOR-ID>30</VENDOR-ID>
+					<AR-RELEASE-VERSION>4.03.00</AR-RELEASE-VERSION>
+					<BEHAVIOR-REF DEST="BSW-INTERNAL-BEHAVIOR">/MICROSAR/vIpc_ib_bswmd/BswModuleDescriptions/vIpc/vIpcBehavior</BEHAVIOR-REF>
+					<PRECONFIGURED-CONFIGURATION-REFS>
+						<PRECONFIGURED-CONFIGURATION-REF DEST="ECUC-MODULE-CONFIGURATION-VALUES">/MICROSAR/vIpc_Pre</PRECONFIGURED-CONFIGURATION-REF>
+					</PRECONFIGURED-CONFIGURATION-REFS>
+					<RECOMMENDED-CONFIGURATION-REFS>
+						<RECOMMENDED-CONFIGURATION-REF DEST="ECUC-MODULE-CONFIGURATION-VALUES">/MICROSAR/vIpc_Rec</RECOMMENDED-CONFIGURATION-REF>
+					</RECOMMENDED-CONFIGURATION-REFS>
+					<VENDOR-SPECIFIC-MODULE-DEF-REFS>
+						<VENDOR-SPECIFIC-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/MICROSAR/vIpc</VENDOR-SPECIFIC-MODULE-DEF-REF>
+					</VENDOR-SPECIFIC-MODULE-DEF-REFS>
+				</BSW-IMPLEMENTATION>
+				<ECUC-MODULE-DEF UUID="04fd5e4c-6b2b-4c0d-97e9-77a100a10cf4">
+					<SHORT-NAME>vIpc</SHORT-NAME>
+					<DESC>
+						<L-2 L="EN">Configuration of the vIpc (vector Interprocessor communication) module.</L-2>
+					</DESC>
+					<CATEGORY>VENDOR_SPECIFIC_MODULE_DEFINITION</CATEGORY>
+					<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+					<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+					<POST-BUILD-VARIANT-SUPPORT>false</POST-BUILD-VARIANT-SUPPORT>
+					<SUPPORTED-CONFIG-VARIANTS>
+						<SUPPORTED-CONFIG-VARIANT>VARIANT-PRE-COMPILE</SUPPORTED-CONFIG-VARIANT>
+					</SUPPORTED-CONFIG-VARIANTS>
+					<CONTAINERS>
+						<ECUC-PARAM-CONF-CONTAINER-DEF UUID="90077ced-e5fa-41e0-923a-89a9e9aa6eb0">
+							<SHORT-NAME>vIpcGeneral</SHORT-NAME>
+							<DESC>
+								<L-2 L="EN">General configuration parameters of vIpc.</L-2>
+							</DESC>
+							<ADMIN-DATA>
+								<SDGS>
+									<SDG GID="DV:CfgPostBuild">
+										<SD GID="DV:postBuildNotDeletable">true</SD>
+										<SD GID="DV:postBuildSelectableChangeable">false</SD>
+									</SDG>
+								</SDGS>
+							</ADMIN-DATA>
+							<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+							<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+							<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+							<REQUIRES-INDEX>false</REQUIRES-INDEX>
+							<PARAMETERS>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="5600ff41-414f-4b8b-972d-03e7a088ae4e">
+									<SHORT-NAME>vIpcDevErrorDetect</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">This parameter switches the Development Error Detection and Notification ON or OFF.
+true:	Development error detection is enabled.
+false:	Development error detection is disabled.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<SCOPE>LOCAL</SCOPE>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>true</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="d0597bb4-6e10-4d36-9ce9-52c34d562064">
+									<SHORT-NAME>vIpcSafeBswChecks</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Selects whether safety checks are used. These checks improve robustness as e.g. invalid parameter values are detected before a function is executed. This attribute has to be enabled for safety projects where this component is mapped to an ASIL partition.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<SCOPE>LOCAL</SCOPE>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-FLOAT-PARAM-DEF UUID="af508ff8-59e5-427f-bab2-a62ee8a773c4">
+									<SHORT-NAME>vIpcMainFunctionCycle</SHORT-NAME>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:BaseUnit">SEC</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<SCOPE>LOCAL</SCOPE>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>0.005</DEFAULT-VALUE>
+									<MAX INTERVAL-TYPE="OPEN">65535</MAX>
+									<MIN INTERVAL-TYPE="OPEN">0</MIN>
+								</ECUC-FLOAT-PARAM-DEF>
+								<ECUC-STRING-PARAM-DEF UUID="0a54fbcb-6a27-4ab3-861a-4bb77916b4e9">
+									<SHORT-NAME>vIpcUserConfigFile</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Reference to an external text file that will be included into vIpc_Cfg.h during generation.
+The content of the user configuration file will be added at the end of the generated module configuration file and allows altering or extending the generated code.
+Caution: User configuration files can cause the software module to malfunction and must only be used with great care!</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<SCOPE>LOCAL</SCOPE>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<ECUC-STRING-PARAM-DEF-VARIANTS>
+										<ECUC-STRING-PARAM-DEF-CONDITIONAL>
+											<DEFAULT-VALUE>vIpc_UserCfg.h</DEFAULT-VALUE>
+										</ECUC-STRING-PARAM-DEF-CONDITIONAL>
+									</ECUC-STRING-PARAM-DEF-VARIANTS>
+								</ECUC-STRING-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="0328c09b-7f20-4182-9d0a-d74a449fa8c3">
+									<SHORT-NAME>vIpcRuntimeErrorReport</SHORT-NAME>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<SCOPE>LOCAL</SCOPE>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>true</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+							</PARAMETERS>
+						</ECUC-PARAM-CONF-CONTAINER-DEF>
+						<ECUC-PARAM-CONF-CONTAINER-DEF UUID="c3705fa1-8522-4ad5-a6b8-59ac35753dd0">
+							<SHORT-NAME>vIpcConfig</SHORT-NAME>
+							<DESC>
+								<L-2 L="EN">This container includes one or several multiple configuration sets.</L-2>
+							</DESC>
+							<ADMIN-DATA>
+								<SDGS>
+									<SDG GID="DV:CfgPostBuild">
+										<SD GID="DV:postBuildNotDeletable">true</SD>
+										<SD GID="DV:postBuildSelectableChangeable">false</SD>
+									</SDG>
+								</SDGS>
+							</ADMIN-DATA>
+							<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+							<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+							<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+							<REQUIRES-INDEX>false</REQUIRES-INDEX>
+							<SUB-CONTAINERS>
+								<ECUC-PARAM-CONF-CONTAINER-DEF UUID="4ee6ce93-7664-4964-8a73-e46df54311d0">
+									<SHORT-NAME>vIpcRxChannel</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">vIpcRxChannel is a representation of a physical channel that will receive a data stream from another vIpc instance.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:postBuildNotDeletable">true</SD>
+												<SD GID="DV:postBuildSelectableChangeable">false</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<PARAMETERS>
+										<ECUC-INTEGER-PARAM-DEF UUID="e452546d-8b48-4de6-85be-9487e1d91fad">
+											<SHORT-NAME>vIpcRxChannelId</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Handle id that is used for Rx functions by the lower layer.</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:Display">
+														<SD GID="DV:DefaultFormat">DEC</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>0</DEFAULT-VALUE>
+											<MAX>65535</MAX>
+											<MIN>0</MIN>
+										</ECUC-INTEGER-PARAM-DEF>
+									</PARAMETERS>
+									<REFERENCES>
+										<ECUC-REFERENCE-DEF UUID="949e80d4-7dcf-4b88-b288-d98060fa4786">
+											<SHORT-NAME>vIpcRxPduRef</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Reference to a PDU in the global PDU collection.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucPduCollection/Pdu</DESTINATION-REF>
+										</ECUC-REFERENCE-DEF>
+										<ECUC-REFERENCE-DEF UUID="c072a542-4937-4c86-bf84-9fc6923f762b">
+											<SHORT-NAME>vIpcRxLowerLayerRef</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Reference to Lower Layer Module containing references to type of lower layer.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/vIpc/vIpcConfig/vIpcLowerLayer</DESTINATION-REF>
+										</ECUC-REFERENCE-DEF>
+									</REFERENCES>
+									<SUB-CONTAINERS>
+										<ECUC-PARAM-CONF-CONTAINER-DEF UUID="632f7465-126c-47ed-8b53-ae67bd7e55ad">
+											<SHORT-NAME>vIpcRxConnection</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">vIpcRxConnection represents virtual data sources that are tunneled via a physical channel.</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:CfgPostBuild">
+														<SD GID="DV:postBuildNotDeletable">true</SD>
+														<SD GID="DV:postBuildSelectableChangeable">false</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<PARAMETERS>
+												<ECUC-INTEGER-PARAM-DEF UUID="763092d0-d045-487a-a6bf-19f903e0cbc1">
+													<SHORT-NAME>vIpcRxAddress</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Local address to enable demultiplexing from one physical channel to multiple connections.
+
+This address has to correspond to an address on a Tx connection on the same physical channel.</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<SCOPE>LOCAL</SCOPE>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+													<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+												</ECUC-INTEGER-PARAM-DEF>
+											</PARAMETERS>
+											<REFERENCES>
+												<ECUC-REFERENCE-DEF UUID="3cd034fd-79ed-41d1-bd16-0b240b7470b5">
+													<SHORT-NAME>vIpcRxSduRef</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Reference to a PDU in the global PDU collection.</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<SCOPE>LOCAL</SCOPE>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+													<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucPduCollection/Pdu</DESTINATION-REF>
+												</ECUC-REFERENCE-DEF>
+												<ECUC-REFERENCE-DEF UUID="f8898ddb-4fc2-4afa-a44e-3f9ccb59f7de">
+													<SHORT-NAME>vIpcRxUpperLayerRef</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Reference to Upper Layer Module containing references to type of upper layer.</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<SCOPE>LOCAL</SCOPE>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+													<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/vIpc/vIpcConfig/vIpcUpperLayer</DESTINATION-REF>
+												</ECUC-REFERENCE-DEF>
+											</REFERENCES>
+										</ECUC-PARAM-CONF-CONTAINER-DEF>
+									</SUB-CONTAINERS>
+								</ECUC-PARAM-CONF-CONTAINER-DEF>
+								<ECUC-PARAM-CONF-CONTAINER-DEF UUID="b4745df9-76cf-49b4-b5e3-ca58d06b2c95">
+									<SHORT-NAME>vIpcTxChannel</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">vIpcTxChannel is a representation of a physical channel that will transmit a data stream to another vIpc instance.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:postBuildNotDeletable">true</SD>
+												<SD GID="DV:postBuildSelectableChangeable">false</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<PARAMETERS>
+										<ECUC-INTEGER-PARAM-DEF UUID="e74046bc-8e84-4420-8dc0-cafa48ec0bf5">
+											<SHORT-NAME>vIpcNumSeparationCycles</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">The number of main function cycles between two transmits on the same physical channel</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:Display">
+														<SD GID="DV:DefaultFormat">DEC</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>0</DEFAULT-VALUE>
+											<MAX>1024</MAX>
+											<MIN>0</MIN>
+										</ECUC-INTEGER-PARAM-DEF>
+										<ECUC-INTEGER-PARAM-DEF UUID="1b6d974f-5fd9-4be4-8f35-902e9776b005">
+											<SHORT-NAME>vIpcTxChannelId</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Handle id that is used for Tx functions by the lower layer.</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:Display">
+														<SD GID="DV:DefaultFormat">DEC</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>0</DEFAULT-VALUE>
+											<MAX>65535</MAX>
+											<MIN>0</MIN>
+										</ECUC-INTEGER-PARAM-DEF>
+										<ECUC-ENUMERATION-PARAM-DEF UUID="3f8c75af-9788-48fc-91e1-5803cdd1a7a7">
+											<SHORT-NAME>vIpcSchedulingAlgorithm</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Supported:
+Fifo (FIFO)
+Fixed priority (FP)</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>FIFO</DEFAULT-VALUE>
+											<LITERALS>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="dcc58227-87b9-40fa-bea2-8ba947d459fe">
+													<SHORT-NAME>FIFO</SHORT-NAME>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="48bc58e6-0257-41b9-99aa-4429af1f14ca">
+													<SHORT-NAME>FP</SHORT-NAME>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+											</LITERALS>
+										</ECUC-ENUMERATION-PARAM-DEF>
+									</PARAMETERS>
+									<REFERENCES>
+										<ECUC-REFERENCE-DEF UUID="71b55a5f-4f79-4844-818d-2ee96f17bf96">
+											<SHORT-NAME>vIpcTxPduRef</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Reference to a PDU in the global PDU collection.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>ECU</SCOPE>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucPduCollection/Pdu</DESTINATION-REF>
+										</ECUC-REFERENCE-DEF>
+										<ECUC-REFERENCE-DEF UUID="56064133-9b37-41d0-aebe-bb67897bde53">
+											<SHORT-NAME>vIpcTxLowerLayerRef</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Reference to Lower Layer Module containing references to type of lower layer.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/vIpc/vIpcConfig/vIpcLowerLayer</DESTINATION-REF>
+										</ECUC-REFERENCE-DEF>
+									</REFERENCES>
+									<SUB-CONTAINERS>
+										<ECUC-PARAM-CONF-CONTAINER-DEF UUID="cc94b162-bab7-4513-9c49-291e538b1430">
+											<SHORT-NAME>vIpcTxConnection</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">vIpcRxConnection represents virtual data sinks that are tunneled via a physical channel.</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:CfgPostBuild">
+														<SD GID="DV:postBuildNotDeletable">true</SD>
+														<SD GID="DV:postBuildSelectableChangeable">false</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<PARAMETERS>
+												<ECUC-INTEGER-PARAM-DEF UUID="53092a1a-4bc5-478f-b1f4-e4246eb4ffc8">
+													<SHORT-NAME>vIpcTxConnectionId</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Handle id that is used for Tx functions by the upper layer.</L-2>
+													</DESC>
+													<ADMIN-DATA>
+														<SDGS>
+															<SDG GID="DV:Display">
+																<SD GID="DV:DefaultFormat">DEC</SD>
+															</SDG>
+														</SDGS>
+													</ADMIN-DATA>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<SCOPE>LOCAL</SCOPE>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+													<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>0</DEFAULT-VALUE>
+													<MAX>65535</MAX>
+													<MIN>0</MIN>
+												</ECUC-INTEGER-PARAM-DEF>
+												<ECUC-INTEGER-PARAM-DEF UUID="02a480c2-c7be-4e66-8268-f363043156b7">
+													<SHORT-NAME>vIpcTxAddress</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Remote address to enable demultiplexing from one physical channel to multiple connections.
+
+This address has to correspond to an address on a Rx connection on the same physical channel.</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<SCOPE>LOCAL</SCOPE>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+													<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+												</ECUC-INTEGER-PARAM-DEF>
+												<ECUC-INTEGER-PARAM-DEF UUID="cbcc5797-f899-462c-8408-63be8757efc2">
+													<SHORT-NAME>vIpcPriority</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Only relevant for 'Fixed priority'.
+Higher numbers mean higher priority.</L-2>
+													</DESC>
+													<ADMIN-DATA>
+														<SDGS>
+															<SDG GID="DV:Display">
+																<SD GID="DV:DefaultFormat">DEC</SD>
+															</SDG>
+														</SDGS>
+													</ADMIN-DATA>
+													<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<SCOPE>LOCAL</SCOPE>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+													<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>0</DEFAULT-VALUE>
+													<MAX>255</MAX>
+													<MIN>0</MIN>
+												</ECUC-INTEGER-PARAM-DEF>
+											</PARAMETERS>
+											<REFERENCES>
+												<ECUC-REFERENCE-DEF UUID="c4b9d042-4fbe-42dd-8249-3bc70af3e6a5">
+													<SHORT-NAME>vIpcTxSduRef</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Reference to a PDU in the global PDU collection.</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<SCOPE>LOCAL</SCOPE>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+													<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucPduCollection/Pdu</DESTINATION-REF>
+												</ECUC-REFERENCE-DEF>
+												<ECUC-REFERENCE-DEF UUID="66f031a1-bc35-42cb-b5b8-337df2fa65a3">
+													<SHORT-NAME>vIpcTxUpperLayerRef</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Reference to Upper Layer Module containing references to type of upper layer.</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<SCOPE>LOCAL</SCOPE>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+													<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/vIpc/vIpcConfig/vIpcUpperLayer</DESTINATION-REF>
+												</ECUC-REFERENCE-DEF>
+											</REFERENCES>
+										</ECUC-PARAM-CONF-CONTAINER-DEF>
+									</SUB-CONTAINERS>
+								</ECUC-PARAM-CONF-CONTAINER-DEF>
+								<ECUC-PARAM-CONF-CONTAINER-DEF UUID="68fd44e0-9e3b-4161-9378-21e322d8f3a8">
+									<SHORT-NAME>vIpcUpperLayer</SHORT-NAME>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:postBuildNotDeletable">true</SD>
+												<SD GID="DV:postBuildSelectableChangeable">false</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<PARAMETERS>
+										<ECUC-ENUMERATION-PARAM-DEF UUID="4ae2af79-6451-41f7-861d-396351f55ca9">
+											<SHORT-NAME>vIpcUpperLayerType</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Type of upper layer.
+
+In case a CDD is used, a upper layer reference has to be provided.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>PDUR</DEFAULT-VALUE>
+											<LITERALS>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="3b8e5687-3cab-4fff-a055-7da2c58edcb4">
+													<SHORT-NAME>PDUR</SHORT-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="bc1f3a9a-2541-494e-bc39-04d6d1f715bb">
+													<SHORT-NAME>POSIX</SHORT-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF UUID="6542ed71-8b98-4212-882f-e89dac38e528">
+													<SHORT-NAME>CDD</SHORT-NAME>
+													<ORIGIN>Vector Informatik</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+											</LITERALS>
+										</ECUC-ENUMERATION-PARAM-DEF>
+									</PARAMETERS>
+									<REFERENCES>
+										<ECUC-FOREIGN-REFERENCE-DEF UUID="3f6ad91d-098d-4b9e-b470-07a6e10aa8e8">
+											<SHORT-NAME>vIpcUpperLayerRef</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Reference to the UpperLayer module description.
+
+Customizable only in case of CDD</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<DESTINATION-TYPE>ECUC-MODULE-CONFIGURATION-VALUES</DESTINATION-TYPE>
+										</ECUC-FOREIGN-REFERENCE-DEF>
+									</REFERENCES>
+								</ECUC-PARAM-CONF-CONTAINER-DEF>
+								<ECUC-PARAM-CONF-CONTAINER-DEF UUID="0f3b66e8-01e1-463a-8b49-899e9fd847db">
+									<SHORT-NAME>vIpcLowerLayer</SHORT-NAME>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:postBuildNotDeletable">true</SD>
+												<SD GID="DV:postBuildSelectableChangeable">false</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<REFERENCES>
+										<ECUC-FOREIGN-REFERENCE-DEF UUID="d6e00399-4658-4348-9e95-6eab5bbf2cfb">
+											<SHORT-NAME>vIpcLowerLayerRef</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Reference to the lower layer module description.</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<DESTINATION-TYPE>ECUC-MODULE-CONFIGURATION-VALUES</DESTINATION-TYPE>
+										</ECUC-FOREIGN-REFERENCE-DEF>
+									</REFERENCES>
+								</ECUC-PARAM-CONF-CONTAINER-DEF>
+							</SUB-CONTAINERS>
+						</ECUC-PARAM-CONF-CONTAINER-DEF>
+					</CONTAINERS>
+				</ECUC-MODULE-DEF>
+				<ECUC-MODULE-CONFIGURATION-VALUES UUID="a21adfe3-ba63-41ed-80f1-abb2f517c5c1">
+					<SHORT-NAME>vIpc_Pre</SHORT-NAME>
+					<DEFINITION-REF DEST="ECUC-MODULE-DEF">/MICROSAR/vIpc</DEFINITION-REF>
+					<CONTAINERS></CONTAINERS>
+				</ECUC-MODULE-CONFIGURATION-VALUES>
+				<ECUC-MODULE-CONFIGURATION-VALUES UUID="499efb9a-4035-4160-9979-bcb07de36c3a">
+					<SHORT-NAME>vIpc_Rec</SHORT-NAME>
+					<DEFINITION-REF DEST="ECUC-MODULE-DEF">/MICROSAR/vIpc</DEFINITION-REF>
+					<CONTAINERS></CONTAINERS>
+				</ECUC-MODULE-CONFIGURATION-VALUES>
+			</ELEMENTS>
+		</AR-PACKAGE>
+	</AR-PACKAGES>
+</AUTOSAR>

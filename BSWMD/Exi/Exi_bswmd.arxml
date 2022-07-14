@@ -1,0 +1,2444 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-0-3.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://autosar.org/schema/r4.0">
+	<AR-PACKAGES>
+		<AR-PACKAGE UUID="2fbfbbb9-42ba-4c5c-a1ed-47126f2b8bcb">
+			<SHORT-NAME>MICROSAR</SHORT-NAME>
+			<ELEMENTS>
+				<ECUC-MODULE-DEF UUID="d7f56f86-32e1-4989-8c43-c088c6eb5153">
+					<SHORT-NAME>Exi</SHORT-NAME>
+					<DESC>
+						<L-2 L="EN">Configuration of the Domain Name System (Exi) Client.</L-2>
+					</DESC>
+					<CATEGORY>VENDOR_SPECIFIC_MODULE_DEFINITION</CATEGORY>
+					<ADMIN-DATA>
+						<DOC-REVISIONS>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.00.00</REVISION-LABEL>
+								<STATE>beta</STATE>
+								<ISSUED-BY>visdd</ISSUED-BY>
+								<DATE>2012-02-01T08:25:00Z</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Created</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.00.01</REVISION-LABEL>
+								<STATE>beta</STATE>
+								<ISSUED-BY>visdd</ISSUED-BY>
+								<DATE>2012-04-19T01:51:20+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Implementation SW version update</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.01.00</REVISION-LABEL>
+								<STATE>beta</STATE>
+								<ISSUED-BY>visdd</ISSUED-BY>
+								<DATE>2012-06-22T12:45:51+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Added ExiAllowSchemaDeviation and ExiMaxOccursUnbounded</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.01.01</REVISION-LABEL>
+								<STATE>beta</STATE>
+								<ISSUED-BY>visdd</ISSUED-BY>
+								<DATE>2012-08-09T07:59:20+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Implementation SW version update</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00060205, ESCAN00060304</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.01.02</REVISION-LABEL>
+								<STATE>beta</STATE>
+								<ISSUED-BY>visdd</ISSUED-BY>
+								<DATE>2012-10-02T12:38:53+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Implementation SW version update</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00061406</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.02.00</REVISION-LABEL>
+								<ISSUED-BY>visdd</ISSUED-BY>
+								<DATE>2012-12-10T09:25:30+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Added configuration parameters for unbounded buffer elements</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00063588</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.02.01</REVISION-LABEL>
+								<ISSUED-BY>visdd</ISSUED-BY>
+								<DATE>2013-04-25T05:37:53+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Implementation version changed</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.02.02</REVISION-LABEL>
+								<ISSUED-BY>visdd</ISSUED-BY>
+								<DATE>2013-07-23T03:28:47+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Implementation version changed</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.02.03</REVISION-LABEL>
+								<ISSUED-BY>visdd</ISSUED-BY>
+								<DATE>2013-10-01T01:11:55+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Implementation version changed</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>2.00.00</REVISION-LABEL>
+								<ISSUED-BY>visdd</ISSUED-BY>
+								<DATE>2013-11-14T04:34:44+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Support ISO 15118-2 FDIS version</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>2.00.01</REVISION-LABEL>
+								<ISSUED-BY>visdd</ISSUED-BY>
+								<DATE>2014-02-20T09:43:00+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Implementation version changed</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>2.01.00</REVISION-LABEL>
+								<ISSUED-BY>visdd</ISSUED-BY>
+								<DATE>2014-03-03T09:03:50+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Added customer specific extension switch</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00074027</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>2.01.01</REVISION-LABEL>
+								<ISSUED-BY>vissop</ISSUED-BY>
+								<DATE>2014-05-27T02:11:17+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Implementation version changed</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>2.02.00</REVISION-LABEL>
+								<ISSUED-BY>vissop</ISSUED-BY>
+								<DATE>2014-06-12T03:08:37+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Implementation version changed</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>3.00.00</REVISION-LABEL>
+								<ISSUED-BY>vissop</ISSUED-BY>
+								<DATE>2014-07-18T02:46:05+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Update to ASR4 R9</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00077162</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>3.00.01</REVISION-LABEL>
+								<ISSUED-BY>vissop</ISSUED-BY>
+								<DATE>2014-08-22T04:58:56+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Implementation version changed</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>3.00.02</REVISION-LABEL>
+								<ISSUED-BY>vissop</ISSUED-BY>
+								<DATE>2014-08-28T02:58:54+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Implementation version changed</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>3.00.03</REVISION-LABEL>
+								<ISSUED-BY>vissop</ISSUED-BY>
+								<DATE>2014-09-29T10:37:51+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Implementation version changed</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00078623</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>3.00.04</REVISION-LABEL>
+								<ISSUED-BY>vissop</ISSUED-BY>
+								<DATE>2014-10-29T02:26:19+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Implementation version changed</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00079205</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>3.01.00</REVISION-LABEL>
+								<ISSUED-BY>vissop</ISSUED-BY>
+								<DATE>2014-12-15T02:46:46+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Add simple encoder streaming support</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00063588</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>3.02.00</REVISION-LABEL>
+								<ISSUED-BY>vissop</ISSUED-BY>
+								<DATE>2015-04-16T06:25:20+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Implementation version changed</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00081584</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>3.03.00</REVISION-LABEL>
+								<ISSUED-BY>vissop</ISSUED-BY>
+								<DATE>2015-06-12T10:59:26+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Update Cfg5 to R12</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00082631</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>3.03.01</REVISION-LABEL>
+								<ISSUED-BY>vissop</ISSUED-BY>
+								<DATE>2015-07-07T04:49:56+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Implementation version changed</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00083840</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>3.03.02</REVISION-LABEL>
+								<ISSUED-BY>vissop</ISSUED-BY>
+								<DATE>2015-09-02T05:45:16+02:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Implementation version changed</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00083713</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>3.03.03</REVISION-LABEL>
+								<ISSUED-BY>vissop</ISSUED-BY>
+								<DATE>2016-02-29T04:06:03+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Update Cfg5 to R14 + Bugfix</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00087829, ESCAN00086646, ESCAN00088429</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>3.03.04</REVISION-LABEL>
+								<ISSUED-BY>vissop</ISSUED-BY>
+								<DATE>2016-03-01T10:36:39+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Correct spelling and change default values</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>3.03.05</REVISION-LABEL>
+								<ISSUED-BY>vissop</ISSUED-BY>
+								<DATE>2016-12-07T03:14:26+01:00</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Increment implementation version</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">ESCAN00092055</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+						</DOC-REVISIONS>
+					</ADMIN-DATA>
+					<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+					<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+					<SUPPORTED-CONFIG-VARIANTS>
+						<SUPPORTED-CONFIG-VARIANT>VARIANT-PRE-COMPILE</SUPPORTED-CONFIG-VARIANT>
+					</SUPPORTED-CONFIG-VARIANTS>
+					<CONTAINERS>
+						<ECUC-PARAM-CONF-CONTAINER-DEF UUID="680a6022-9d2b-42ad-aa08-1f5a00f1bd41">
+							<SHORT-NAME>ExiGeneral</SHORT-NAME>
+							<ADMIN-DATA>
+								<SDGS>
+									<SDG GID="DV:CfgPostBuild">
+										<SD GID="DV:postBuildSelectableChangeable">false</SD>
+										<SD GID="DV:postBuildNotDeletable">false</SD>
+									</SDG>
+								</SDGS>
+							</ADMIN-DATA>
+							<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+							<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+							<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+							<PARAMETERS>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="bb30c196-5a1d-4d4d-a050-5d6666d18ee7">
+									<SHORT-NAME>ExiDevErrorDetect</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">If 'Dev Error Detection' is enabled, all development errors are reported to the Development Error Tracer (DET). The errors are described in the [TechnicalReference_Asr_Exi.pdf].
+
+Note: In general, the development error detection is recommended during pre-test phase. It is not recommended to enable the development error detection in production code due to increased runtime and ROM needs.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="b42d1d5a-84d2-4123-b458-a4dbfb9cfbe9">
+									<SHORT-NAME>ExiVersionInfoApi</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">If 'Version Info Api' is enabled, the function Exi_GetVersionInfo() is available to get major, minor and patch version information.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-STRING-PARAM-DEF UUID="e5fd7c13-7b12-487d-bea8-d2d1698b88aa">
+									<SHORT-NAME>ExiUserConfigFile</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">If a file path will be specified, the file is read and its contents are put at the end of the Exi config file.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+								</ECUC-STRING-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="a5b2ea53-9e06-4a11-9d25-d302441eab59">
+									<SHORT-NAME>ExiSupportedAppProtocolSupport</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">If 'Supported App Protocol Support' is enabled, EXI Encoder/Decoder is able to handle Messages described in the ISO15118/DIN70121 supportedAppProtocol Schema.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>true</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="d8901d4f-a33b-4089-aa83-418a986542ff">
+									<SHORT-NAME>ExiDin70121Support</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">DIN 70121 Support</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">If 'DIN 70121 Support' is enabled, EXI Encoder/Decoder is able to handle Messages described in the ISO15118/DIN70121 MsgDef Schema Set urn:din:70121:2012:MsgDef, version 2.0.
+
+HINT: Select this option if you want to handle Messages based on ISO 15118-2 DIS schema version.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="5e54d229-393f-4d7a-bd16-75db516c5045">
+									<SHORT-NAME>ExiDecodeStringTruncation</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">If 'Decode String Truncation' is enabled, string characters that do not fit into the schema dependent target buffer will be skipped silently. Setting the value to false will lead to a decoding error.
+
+This option can be helpful to accept some schema deviations and avoid errors receiving strings that do not match the schema definition.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="ff6e1003-f361-4f36-86bf-ffed34505fb4">
+									<SHORT-NAME>ExiInternalDevErrorDetect</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">If 'Internal Dev Error Detection' is enabled, all development errors for internal EXI Encoder/Decoder functions are reported to the Development Error Tracer (DET). The errors are identified via module Instance ID 108 for Encoder and 109 for Decoder errors.
+
+Note: In general, the development error detection is recommended during pre-test phase. It is not recommended to enable the development error detection in production code due to increased runtime and ROM needs.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="bb7b26dc-45e3-474d-b740-4967b7f70de3">
+									<SHORT-NAME>ExiAllowSchemaDeviation</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">If 'Allow Schema Deviation' is enabled, schema deviations in the decoding process will be skipped silently if possible. Setting the value to false will lead to a decoding error with return value EXI_INV_EVENT_CODE for all schema deviations.
+
+This option can be helpful to accept some schema deviations and avoid errors receiving strings that do not match the schema definition.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-INTEGER-PARAM-DEF UUID="90d7ed1a-e8ec-4053-b007-3046f8d3e533">
+									<SHORT-NAME>ExiMaxOccursUnbounded</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Support for unbounded maximum occurrence values is not possible. Therefore this value is used as max value for all elements in the schema where MaxOccurs is set to "unbounded" and no special optimization attribute is available.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>32</DEFAULT-VALUE>
+									<MAX>65535</MAX>
+									<MIN>1</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<ECUC-INTEGER-PARAM-DEF UUID="8e0c9842-94f0-4c05-ae59-626cce4f9a45">
+									<SHORT-NAME>ExiMaxOccursGenericElement</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Max Occurrence Value Generic Elements</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">Support for unbounded maximum occurrence values is not possible. Therefore this value is used as max value for generic #any and #other schema elements used in CanonicalizationMethod, DigestMethod, PGPData and SignatureMethod complex type included in the Signature used in the Message Header. The XSD schema does not limit the maximum number of these entries because the value is set to unbounded.
+
+RESTRICTION: Only required if ISO PnC identification mode with XML security should be supported.
+
+HINT: The use of this element is not required for ISO15118. Setting the value to 1 is recommended to reduce the code size.
+</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>1</DEFAULT-VALUE>
+									<MAX>65535</MAX>
+									<MIN>1</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="0dca8e7c-1f50-449f-94ad-97da13d70e54">
+									<SHORT-NAME>ExiEnablePBufSupport</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">If 'Enable PBuf Support' is enabled, EXI uses AUTOSAR PBufs for EXI stream buffers. If linear buffers are used, disable this feature.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>true</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="01e0bd37-cad7-4572-a346-cf0c477cac28">
+									<SHORT-NAME>ExiEnableEVMessageSet</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">If 'Enable EV Message Set' is enabled, EXI is able to encode and decode the ISO 15118 and DIN 70121 messages that are required for the EV side. For optimization reason, this feature shall only be enabled for electric vehicles.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>true</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="7a0c61af-8e9d-4896-a253-5ed534c8b5b7">
+									<SHORT-NAME>ExiEnableEVSEMessageSet</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">If 'Enable EVSE Message Set' is enabled, EXI is able to encode and decode the ISO 15118 and DIN 70121 messages that are required for the EVSE side. For optimization reason, this feature shall only be enabled for charge points.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-INTEGER-PARAM-DEF UUID="2d533894-e5b9-4807-9957-173489846acc">
+									<SHORT-NAME>ExiBigIntegerMaxSize</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">XML Signature namespace requires support for bit integer values - numbers that are not limited to a maximum value (XSD type Integer). This configuration parameter is used to set the maximum number of bytes.
+
+This effects the parameter HMACOutpputLength and X509SerialNumber. HMACOutputLength shall not occur in an ISO15118 use case but X509SerialNumber may be used inside a KeyInfo element to identify the certificate that was used to create the signature and allow the receiver to get the public key information required for signature validation.
+
+RESTRICTION: Only required if ISO PnC identification mode with XML security should be supported.
+
+HINT: See [RFC5280 4.1.2.2. Serial Number]
+
+   "The serial number MUST be a positive integer assigned by the CA to
+   each certificate.  It MUST be unique for each certificate issued by a
+   given CA (i.e., the issuer name and serial number identify a unique
+   certificate).  CAs MUST force the serialNumber to be a non-negative
+   integer.
+
+   Given the uniqueness requirements above, serial numbers can be
+   expected to contain long integers.  Certificate users MUST be able to
+   handle serialNumber values up to 20 octets.  Conforming CAs MUST NOT
+   use serialNumber values longer than 20 octets.
+
+   Note: Non-conforming CAs may issue certificates with serial numbers
+   that are negative or zero.  Certificate users SHOULD be prepared to
+   gracefully handle such certificates."</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:BaseUnit">BYTE</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>20</DEFAULT-VALUE>
+									<MAX>65535</MAX>
+									<MIN>8</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<ECUC-INTEGER-PARAM-DEF UUID="ae99696e-9b45-4914-9c09-fb184885a3c8">
+									<SHORT-NAME>ExiStringBufferSize</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">The string values used in the ISO15118 and XML Signature namespace is not length limited. The maximum supported length needs to be configured using this parameter. The stringValue element is included in the Parameter element used for service details, the X509IssuerName inside the X509IssuerSerial element, The X509SubjectName in the X509Data element and as XPath filter in the Transform element.
+
+RESTRICTION: Only required if ISO PnC identification with value added services or XML security should be supported.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:BaseUnit">BYTE</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>64</DEFAULT-VALUE>
+									<MAX>65535</MAX>
+									<MIN>1</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<ECUC-INTEGER-PARAM-DEF UUID="2de10233-a906-45fe-bfa3-3730ce0f6ce4">
+									<SHORT-NAME>ExiUnboundedBufferSize</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Support for unbounded length values is not possible. Therefore this value is used as max value for all elements in the schema where the buffer length is not limited and no special optimization attribute is available.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:BaseUnit">BYTE</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>64</DEFAULT-VALUE>
+									<MAX>65535</MAX>
+									<MIN>1</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="3fcdec79-a5ee-4313-ba70-2bd33d07a1f9">
+									<SHORT-NAME>ExiIso15118FdisSupport</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">ISO 15118-2 FDIS Support</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">If 'ISO 15118-2 FDIS Support' is enabled, EXI Encoder/Decoder is able to handle Messages described in the ISO15118 MsgDef Schema Set urn:iso:15118:2:2013:MsgDef, version 2.0.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>true</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="2656c408-6189-47c8-9eb7-4472b01d16ef">
+									<SHORT-NAME>ExiXmlSecuritySupport</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">XML Security Support</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">If 'XML Security Support' is enabled, EXI Encoder/Decoder is able to handle Elements described in the XML Signature Schema. Schema fragment grammar encoding is supported as well to be able to generate and validate Signatures accoring to the ISO15118 requirements for PnC profile.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>true</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="673350da-5992-4d93-b81c-b1223063bde7">
+									<SHORT-NAME>ExiUseVStdLib</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">During decoding Exi needs to clear the memory where to store the newly created structs. If this parameter is set to true, VStdLib functionality is used. Else Exi will call memset defined in string.h.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>true</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="e971b68d-283e-438c-9127-1a9b467cd3e4">
+									<SHORT-NAME>ExiIso15118FdisCustomerExtensionSupport</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">ISO 15118-2 FDIS Customer Extension Support</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">If 'ISO 15118-2 FDIS Customer Extension Support' is enabled, EXI Encoder/Decoder is able to handle Messages described in the customer defined extension Schema Set for ISO15118 MsgDef Schema urn:iso:15118:2:2013:MsgDef, version 2.0.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>true</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-FLOAT-PARAM-DEF UUID="646af4f2-ecd5-4029-90de-79b19c17ce6a">
+									<SHORT-NAME>ExiMainFunctionPeriod</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Main Function Period [sec]</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">Specifies the period in seconds that the MainFunction has to be triggered with.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:BaseUnit">SEC</SD>
+												<SD GID="DV:Unit">MSEC</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>0.005</DEFAULT-VALUE>
+									<MAX>30</MAX>
+									<MIN>0.001</MIN>
+								</ECUC-FLOAT-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="92ef7f9f-7c63-4d64-82c6-16c4baa57244">
+									<SHORT-NAME>ExiEncoderSimpleStreamingSupport</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Enable Simple Encoder Streaming Support</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">If enabled the EXI encoder supports a simplified EXI stream streaming. It can encode the full EXI stream at once, parts of an EXI stream or just calculate the stream length without writing data.
+
+Note: This will result in a higher runtime for big messages (e.g. CertificateUpdateReq). The benefit is that the TLS and/or TCP buffer that is used by e.g. SCC can be reduced to e.g. 200 bytes.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>true</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+							</PARAMETERS>
+							<SUB-CONTAINERS>
+								<ECUC-PARAM-CONF-CONTAINER-DEF UUID="56fa1a72-29e0-4df0-a327-095488bfd8cb">
+									<SHORT-NAME>ExiPaddingConfig</SHORT-NAME>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:postBuildSelectableChangeable">false</SD>
+												<SD GID="DV:postBuildNotDeletable">false</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+									<PARAMETERS>
+										<ECUC-BOOLEAN-PARAM-DEF UUID="39097d21-983d-434e-b0a7-aa828873be47">
+											<SHORT-NAME>ExiEnableStructPad16Bit</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">Enable 16 Bit Struct Padding</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">In case your platform does not support unaligned memory access, you should use this configuration.
+In case you have enough memory this setting may give you a performance advantage.
+Enabling 16 or 32 bit padding will result in all structures that do not have a length that is a multiple of 16 or 32 bit to be padded to this length. This will result in all following EXI structure structs to have the chosen alignment too.
+
+Note: Your compiler must not add padding or alignment itself. If it does, the manual padding must be disabled!</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>false</DEFAULT-VALUE>
+										</ECUC-BOOLEAN-PARAM-DEF>
+										<ECUC-BOOLEAN-PARAM-DEF UUID="d4e602a2-c4e0-4e70-abf3-373f66331177">
+											<SHORT-NAME>ExiEnableStructPad32Bit</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">Enable 32 Bit Struct Padding</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">In case your platform does not support unaligned memory access, you should use this configuration.
+In case you have enough memory this setting may give you a performance advantage.
+Enabling 16 or 32 bit padding will result in all structures that do not have a length that is a multiple of 16 or 32 bit to be padded to this length. This will result in all following EXI structure structs to have the chosen alignment too.
+
+Note: Your compiler must not add padding or alignment itself. If it does, the manual padding must be disabled!</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>false</DEFAULT-VALUE>
+										</ECUC-BOOLEAN-PARAM-DEF>
+										<ECUC-INTEGER-PARAM-DEF UUID="87f4a151-0ea0-44e7-9dd9-924bc8c2f384">
+											<SHORT-NAME>ExiStructPadBitFieldSize</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">Struct Padding Bit Field Size</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">In case your platform does not support unaligned memory access, you should use this configuration.
+In case you have enough memory this setting may give you a performance advantage.
+Enabling 16 or 32 bit padding will result in all structures that do not have a length that is a multiple of 16 or 32 bit to be padded to this length. This will result in all following EXI structure structs to have the chosen alignment too.
+
+Note: Your compiler must not add padding or alignment itself. If it does, the manual padding must be disabled!</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:Display">
+														<SD GID="DV:BaseUnit">BYTE</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>1</DEFAULT-VALUE>
+											<MAX>4</MAX>
+											<MIN>1</MIN>
+										</ECUC-INTEGER-PARAM-DEF>
+										<ECUC-INTEGER-PARAM-DEF UUID="df680219-b943-4f97-810c-7f623a66cba1">
+											<SHORT-NAME>ExiStructPadEnumSize</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">Struct Padding Enum Size</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">In case your platform does not support unaligned memory access, you should use this configuration.
+In case you have enough memory this setting may give you a performance advantage.
+Enabling 16 or 32 bit padding will result in all structures that do not have a length that is a multiple of 16 or 32 bit to be padded to this length. This will result in all following EXI structure structs to have the chosen alignment too.
+
+Note: Your compiler must not add padding or alignment itself. If it does, the manual padding must be disabled!</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:Display">
+														<SD GID="DV:BaseUnit">BYTE</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>Vector Informatik</ORIGIN>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<DEFAULT-VALUE>1</DEFAULT-VALUE>
+											<MAX>4</MAX>
+											<MIN>1</MIN>
+										</ECUC-INTEGER-PARAM-DEF>
+									</PARAMETERS>
+								</ECUC-PARAM-CONF-CONTAINER-DEF>
+							</SUB-CONTAINERS>
+						</ECUC-PARAM-CONF-CONTAINER-DEF>
+						<ECUC-PARAM-CONF-CONTAINER-DEF UUID="369c317f-7278-420b-be32-715d245721fc">
+							<SHORT-NAME>ExiDIN70121</SHORT-NAME>
+							<ADMIN-DATA>
+								<SDGS>
+									<SDG GID="DV:CfgPostBuild">
+										<SD GID="DV:postBuildSelectableChangeable">false</SD>
+										<SD GID="DV:postBuildNotDeletable">false</SD>
+									</SDG>
+								</SDGS>
+							</ADMIN-DATA>
+							<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+							<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+							<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+							<PARAMETERS>
+								<ECUC-INTEGER-PARAM-DEF UUID="8e7a68b5-538a-4eeb-a157-c86a2f45d436">
+									<SHORT-NAME>ExiMaxOccursConsumptionCost</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Max Occurrence Value Consumption Cost Element</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">Support for unbounded maximum occurrence values is not possible. Therefore this value is used as max value for ConsumptionCost schema element used in SalesTariffEntry complex type included in the SalesTariff used in the Charge Parameter Discovery Response. The XSD schema does not limit the maximum number of ConsumptionCost entries because the value is set to unbounded.
+
+HINT: ISO Requirement [V2G2-326] limits the value to 3.
+
+RESTRICTION: Only required if ISO PnC identification mode should be supported.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>3</DEFAULT-VALUE>
+									<MAX>65535</MAX>
+									<MIN>1</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<ECUC-INTEGER-PARAM-DEF UUID="bdb26b21-fa55-46a1-a832-4773bfdf5a94">
+									<SHORT-NAME>ExiMaxOccursCost</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Max Occurrence Value Cost Element</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">Support for unbounded maximum occurrence values is not possible. Therefore this value is used as max value for Cost schema element used in ConsumptionCost complex type included in the SalesTariff used in the Charge Parameter Discovery Response. The XSD schema does not limit the maximum number of Cost entries because the value is set to unbounded.
+
+HINT: ISO Requirement [V2G2-334] limits the value to 3.
+
+RESTRICTION: Only required if ISO PnC identification mode should be supported.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>3</DEFAULT-VALUE>
+									<MAX>65535</MAX>
+									<MIN>1</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<ECUC-INTEGER-PARAM-DEF UUID="11472a7e-ced4-4629-8aa2-8cd2ba7c693d">
+									<SHORT-NAME>ExiMaxOccursParameter</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Max Occurrence Value Parameter Element</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">Support for unbounded maximum occurrence values is not possible. Therefore this value is used as max value for Parameter schema elements used in ParameterSet complex type included in the ParameterList used in the Service Details Response. The XSD schema does not limit the maximum number of these entries because the value is set to unbounded.
+
+HINT: ISO specified services internet access requieres 2 and certificate requires 1 Parameter.
+
+RESTRICTION: Only required if Services with Service Details (e.g. internet access, certificate service) should be supported.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>2</DEFAULT-VALUE>
+									<MAX>65535</MAX>
+									<MIN>1</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<ECUC-INTEGER-PARAM-DEF UUID="c1e1e0f8-cb68-4552-ad45-f054a7b1979b">
+									<SHORT-NAME>ExiMaxOccursParameterSet</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Max Occurrence Value Parameter Set Element</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">Support for unbounded maximum occurrence values is not possible. Therefore this value is used as max value for ParameterSet schema elements used in ParameterList complex type included in the ParameterList used in the Service Details Response. The XSD schema does not limit the maximum number of these entries because the value is set to unbounded.
+
+HINT: ISO specified services internet access defines 4 and certificate defines 2 ParameterLists.
+
+RESTRICTION: Only required if Services with Service Details (e.g. internet access, certificate service) should be supported.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>4</DEFAULT-VALUE>
+									<MAX>65535</MAX>
+									<MIN>1</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<ECUC-INTEGER-PARAM-DEF UUID="9e691339-e30b-4565-9b3c-80afcb10b350">
+									<SHORT-NAME>ExiMaxOccursPaymentOption</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Max Occurrence Value Payment Option Element</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">Support for unbounded maximum occurrence values is not possible. Therefore this value is used as max value for PaymentOption schema elements used in PaymentOptions complex type included in the Service Discovery Response. The XSD schema does not limit the maximum number of these entries because the value is set to unbounded.
+
+HINT: ISO specified only 2 valid PaymentOptions: Contract and ExternalPayment.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>2</DEFAULT-VALUE>
+									<MAX>65535</MAX>
+									<MIN>1</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<ECUC-INTEGER-PARAM-DEF UUID="b1ece8c1-871a-44b5-88d4-d4ef46e52f56">
+									<SHORT-NAME>ExiMaxOccursPMaxScheduleEntry</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Max Occurrence Value PMax Schedule Entry Element</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">Support for unbounded maximum occurrence values is not possible. Therefore this value is used as max value for PMaxScheduleEntry schema elements used in PMaxSchedule complex type included in the SAScheduleList used in the Charge Parameter Response. The XSD schema does not limit the maximum number of these entries because the value is set to unbounded.
+
+HINT: ISO Requirement [V2G2-312] limits the value to 12.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>12</DEFAULT-VALUE>
+									<MAX>65535</MAX>
+									<MIN>1</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<ECUC-INTEGER-PARAM-DEF UUID="5d9ad8bb-d5c0-4027-9349-d3344ec78a01">
+									<SHORT-NAME>ExiMaxOccursProfileEntry</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Max Occurrence Value Profile Entry Element</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">Support for unbounded maximum occurrence values is not possible. Therefore this value is used as max value for ProfileEntry schema elements used in ChargingProfile complex type included in the Power Delivery Request. The XSD schema does not limit the maximum number of these entries because the value is set to unbounded.
+
+HINT: ISO Requirement [V2G2-287] limits the value to 24.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>24</DEFAULT-VALUE>
+									<MAX>65535</MAX>
+									<MIN>1</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<ECUC-INTEGER-PARAM-DEF UUID="7f3db9e5-5a54-45eb-afc4-34eeacbcd9c8">
+									<SHORT-NAME>ExiMaxOccursRootCertificateID</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Max Occurrence Value Root Certificate ID Element</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">Support for unbounded maximum occurrence values is not possible. Therefore this value is used as max value for RootCertificateID schema element used in ListOfRootCertificateIDs complex type included in Certificate Installation and Update Request messages. The XSD schema does not limit the maximum number of RootCertificateID because the value is set to unbounded.
+
+HINT: ISO Requirement [V2G2-357] limits the value to 20.
+
+RESTRICTION: Only required if ISO PnC identification mode should be supported.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>20</DEFAULT-VALUE>
+									<MAX>65535</MAX>
+									<MIN>1</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<ECUC-INTEGER-PARAM-DEF UUID="d49f4b66-ad96-4094-b919-cf402d7f43e7">
+									<SHORT-NAME>ExiMaxOccursSalesTariffEntry</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Max Occurrence Value Sales Tariff Entry Element</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">Support for unbounded maximum occurrence values is not possible. Therefore this value is used as max value for SalesTariffEntry schema element used in SalesTariff complex type included in the Charge Parameter Discovery Response message. The XSD schema does not limit the maximum number of SalesTariffEntry because the value is set to unbounded.
+
+HINT: ISO Requirement [V2G2-320] limits the value to 12.
+
+RESTRICTION: Only required if ISO PnC identification mode should be supported.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>12</DEFAULT-VALUE>
+									<MAX>65535</MAX>
+									<MIN>1</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<ECUC-INTEGER-PARAM-DEF UUID="1de6c1f2-44a0-4f06-9ad0-18b03494d19b">
+									<SHORT-NAME>ExiMaxOccursSAScheduleTuple</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Max Occurrence Value SA Schedule Tuple Element</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">Support for unbounded maximum occurrence values is not possible. Therefore this value is used as max value for SAScheduleTuple schema element used in SAScheduleList complex type included in the Charge Parameter Discovery Response message. The XSD schema does not limit the maximum number of SAScheduleTuple because the value is set to unbounded.
+
+HINT: ISO Requirement [V2G2-295] limits the value to 3.
+
+RESTRICTION: Only required if ISO PnC identification mode should be supported.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>3</DEFAULT-VALUE>
+									<MAX>65535</MAX>
+									<MIN>1</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<ECUC-INTEGER-PARAM-DEF UUID="588bb194-a538-43f3-803c-d8cd60270b27">
+									<SHORT-NAME>ExiMaxOccursSelectedService</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Max Occurrence Value Selected Service Element</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">Support for unbounded maximum occurrence values is not possible. Therefore this value is used as max value for SelectedService schema element used in SelectedServiceList complex type included in the Service Payment Selection Request message. The XSD schema does not limit the maximum number of SelectedService because the value is set to unbounded.
+
+HINT: ISO Requirement [V2G2-417] only defines 3 known services (AC_DC_Charging, Certificate and InternetAccess).</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>3</DEFAULT-VALUE>
+									<MAX>65535</MAX>
+									<MIN>1</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<ECUC-INTEGER-PARAM-DEF UUID="a3b1fe5f-c11c-4393-9c9e-fc62dcf6cba2">
+									<SHORT-NAME>ExiMaxOccursService</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Max Occurrence Value Service Element</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">Support for unbounded maximum occurrence values is not possible. Therefore this value is used as max value for Service schema element used in ServiceTagList complex type included in the Service Discovery Response message. The XSD schema does not limit the maximum number of Service because the value is set to unbounded.
+
+HINT: ISO Requirement [V2G2-417] only defines 3 known services (AC_DC_Charging, Certificate and InternetAccess).</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>3</DEFAULT-VALUE>
+									<MAX>65535</MAX>
+									<MIN>1</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<ECUC-INTEGER-PARAM-DEF UUID="8c2ce43a-4b53-4eb6-b632-af83a7054473">
+									<SHORT-NAME>ExiDinIDBufferSize</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">DIN ID Buffer Size</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">The ID string attribute used in the ISO15118 and XML Signature namespace is not length limited. The maximum supported string length needs to be configured using this parameter. The ID attribute is used to identify XML elements that are signed using XML Signature.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:BaseUnit">BYTE</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>10</DEFAULT-VALUE>
+									<MAX>65535</MAX>
+									<MIN>1</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<ECUC-INTEGER-PARAM-DEF UUID="610b5fb6-cf12-4c65-8264-481a923228af">
+									<SHORT-NAME>ExiDinNameBufferSize</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">DIN Name Buffer Size</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">The Name string attribute used in the Parameter element at ISO15118 namespace is not length limited. The maximum supported length needs to be configured using this parameter.
+
+RESTRICTION: Only required if ISO PnC identification with value added services should be supported.
+
+HINT: ISO15118 specifies 3 valid Parameter Names: Service, Protocol and Port. A minimum size of 8 is recommended to be able to receive these parameters. See [V2G2-428], [V2G2-429] and the related Tables 100 and 101.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:BaseUnit">BYTE</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>8</DEFAULT-VALUE>
+									<MAX>65535</MAX>
+									<MIN>1</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<ECUC-INTEGER-PARAM-DEF UUID="0b6e1dce-15ae-45c0-bc17-b2f29ac38c27">
+									<SHORT-NAME>ExiGenChallengeBufferSize</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">The GenChallenge element used in the ISO15118 namespace is not length limited. The maximum supported length needs to be configured using this parameter.
+
+RESTRICTION: Only required if ISO PnC identification mode should be supported.
+
+HINT: For ISO15118 the GenChallenge value will be a SHA256 hash value. The value langth will be 32 byte in this case. Note: Base64 encoding length does not need to be included in this length because EXI is working with the binary representation.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:BaseUnit">BYTE</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>32</DEFAULT-VALUE>
+									<MAX>65535</MAX>
+									<MIN>1</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="1c35d0b6-758b-4610-bfb2-c6d1b73fc0f6">
+									<SHORT-NAME>ExiACEIMSupport</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">AC External Identification Means Profile Support</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">If 'AC External Identification Means Profile Support' is enabled, EXI Encoder/Decoder is able to handle Messages described in the ISO15118/DIN70121 MsgDef Schema Set, that are included in the External Identification Means (EIM) Profile for AC charging.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="7ff936da-7706-486c-adc3-723d0959b39e">
+									<SHORT-NAME>ExiACPnCSupport</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">AC Plug and Charge Profile Support</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">If 'AC Plug and Charge Profile Support' is enabled, EXI Encoder/Decoder is able to handle Messages described in the ISO15118/DIN70121 MsgDef Schema Set, that are included in the Plug and Charge (PnC) Profile for AC charging.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="262ca490-fcef-42db-b13c-cabf10fe7b86">
+									<SHORT-NAME>ExiDCEIMSupport</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">DC External Identification Means Profile Support</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">If 'DC External Identification Means Profile Support' is enabled, EXI Encoder/Decoder is able to handle Messages described in the ISO15118/DIN70121 MsgDef Schema Set, that are included in the External Identification Means (EIM) Profile for DC charging.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>true</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-INTEGER-PARAM-DEF UUID="a4f3e0c3-e76d-4b1c-b9ef-1246f3519ac7">
+									<SHORT-NAME>ExiMaxOccursCertificate</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Max Occurrence Value Certificate Element</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">Support for unbounded maximum occurrence values is not possible. Therefore this value is used as max value for Certificate schema element used in SubCertifcates complex type included in the CertificateChain used in Certificate Installation and Update messages as well as in the Payment Details Request. The XSD schema does not limit the maximum number of Certificates because the value is set to unbounded.
+
+RESTRICTION: Only required if ISO PnC identification mode should be supported.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>8</DEFAULT-VALUE>
+									<MAX>65535</MAX>
+									<MIN>1</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+							</PARAMETERS>
+						</ECUC-PARAM-CONF-CONTAINER-DEF>
+						<ECUC-PARAM-CONF-CONTAINER-DEF UUID="dc6e5e3b-a726-43e2-92dc-f9863e3ff5cd">
+							<SHORT-NAME>ExiISO15118FDIS</SHORT-NAME>
+							<ADMIN-DATA>
+								<SDGS>
+									<SDG GID="DV:CfgPostBuild">
+										<SD GID="DV:postBuildSelectableChangeable">false</SD>
+										<SD GID="DV:postBuildNotDeletable">false</SD>
+									</SDG>
+								</SDGS>
+							</ADMIN-DATA>
+							<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+							<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+							<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+							<PARAMETERS>
+								<ECUC-INTEGER-PARAM-DEF UUID="1f639339-21b6-4847-9b9d-1fa08b34ff73">
+									<SHORT-NAME>ExiIsoIDBufferSize</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">ISO ID Buffer Size</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">The ID string attribute used in the ISO15118 and XML Signature namespace is not length limited. The maximum supported string length needs to be configured using this parameter. The ID attribute is used to identify XML elements that are signed using XML Signature.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:BaseUnit">BYTE</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>10</DEFAULT-VALUE>
+									<MAX>65535</MAX>
+									<MIN>1</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<ECUC-INTEGER-PARAM-DEF UUID="c6bfc63c-1d08-4634-9f22-7ef1682a0a6c">
+									<SHORT-NAME>ExiIsoNameBufferSize</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">ISO Name Buffer Size</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">The Name string attribute used in the Parameter element at ISO15118 namespace is not length limited. The maximum supported length needs to be configured using this parameter.
+
+RESTRICTION: Only required if ISO PnC identification with value added services should be supported.
+
+HINT: ISO15118 specifies 3 valid Parameter Names: Service, Protocol and Port. A minimum size of 8 is recommended to be able to receive these parameters. See [V2G2-428], [V2G2-429] and the related Tables 100 and 101.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:BaseUnit">BYTE</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>8</DEFAULT-VALUE>
+									<MAX>65535</MAX>
+									<MIN>1</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="6c476951-508c-4f60-a820-dbb95215f511">
+									<SHORT-NAME>ExiACEIMSupport</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">AC External Identification Means Profile Support</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">If 'AC External Identification Means Profile Support' is enabled, EXI Encoder/Decoder is able to handle Messages described in the ISO15118/DIN70121 MsgDef Schema Set, that are included in the External Identification Means (EIM) Profile for AC charging.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>true</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="1ad05d81-ff6f-4d83-850e-590629ed0bd2">
+									<SHORT-NAME>ExiACPnCSupport</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">AC Plug and Charge Profile Support</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">If 'AC Plug and Charge Profile Support' is enabled, EXI Encoder/Decoder is able to handle Messages described in the ISO15118/DIN70121 MsgDef Schema Set, that are included in the Plug and Charge (PnC) Profile for AC charging.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>true</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="62c24f74-2622-49cd-b323-0efe3488ac38">
+									<SHORT-NAME>ExiDCEIMSupport</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">DC External Identification Means Profile Support</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">If 'DC External Identification Means Profile Support' is enabled, EXI Encoder/Decoder is able to handle Messages described in the ISO15118/DIN70121 MsgDef Schema Set, that are included in the External Identification Means (EIM) Profile for DC charging.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="55a625e5-de19-4db8-bb0b-8e36c4e23ee3">
+									<SHORT-NAME>ExiDCPnCSupport</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">DC Plug and Charge Profile Support</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">If 'DC Plug and Charge Profile Support' is enabled, EXI Encoder/Decoder is able to handle Messages described in the ISO15118/DIN70121 MsgDef Schema Set, that are included in the Plug and Charge (PnC) Profile for DC charging.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="7c7fd07a-a112-4661-8b3c-79f809c14b6a">
+									<SHORT-NAME>ExiDecodePnCMessageSupport</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Decode PnC Message Support</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">If enabled EXI will be able to decode PnC messages in EIM usecase. This may be required for detailed error logs.
+In case PnC is disabled and this option is:
+- Disabled: Decoding of e.g. a CertificateUpdateRes will result in a decode error.
+- Enabled: Decoding of e.g. a CertificateUpdateRes is possible, application e.g. SCC can decide how to handle this sequence error.
+
+Note: Decoding of messages that include optional PnC parameters is always possible.
+
+Note: This configuration will not enable PnC message encoding.
+
+Note: In case AC or DC PnC support is enabled this switch has no functionality for this engery type.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="cb002890-f785-4a38-b78f-97cccc80e55e">
+									<SHORT-NAME>ExiDecodeAllAcDcSpecificMessages</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Decode All AC/DC Specific Messages</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">If enabled EXI will be able to decode AC messages in DC only use case and vice verssa. This may be required for detailed error logs.
+In case an energy transfermode (e.g. DC charging) is disabled and this option is:
+- Disabled: Decoding of e.g. a CableCheckRes will result in a decode error.
+- Enabled: Decoding of e.g. a CableCheckRes is possible, application e.g. SCC can decide how to handle this sequence error.
+
+Note: The decoding of not supported energy transfer type elememnts is always possible e.g. decoding of ChargeParameterDiscoveryRes.DC_EVSEChargeParameter in an AC only use case.
+
+Note: This configuration will not enable the message encoding of unsupported energy transfer types.
+
+Note: In case AC and DC support is enabled this switch has no functionality.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+							</PARAMETERS>
+						</ECUC-PARAM-CONF-CONTAINER-DEF>
+						<ECUC-PARAM-CONF-CONTAINER-DEF UUID="558c1674-65d4-46fa-8e46-9d15ef259c79">
+							<SHORT-NAME>ExiXMLSignature</SHORT-NAME>
+							<ADMIN-DATA>
+								<SDGS>
+									<SDG GID="DV:CfgPostBuild">
+										<SD GID="DV:postBuildSelectableChangeable">false</SD>
+										<SD GID="DV:postBuildNotDeletable">false</SD>
+									</SDG>
+								</SDGS>
+							</ADMIN-DATA>
+							<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+							<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+							<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+							<PARAMETERS>
+								<ECUC-INTEGER-PARAM-DEF UUID="f9cf75f0-9458-4601-b357-7ce1d414cbf3">
+									<SHORT-NAME>ExiMaxOccursReference</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Max Occurrence Value Reference Element</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">Support for unbounded maximum occurrence values is not possible. Therefore this value is used as max value for Reference schema elements used in Manifest or SignedInfo complex type. Manifest is a XML Security root element and may appear as a #any element below the Signature in the MessageHeader. SignedInfo complex type is included in the Signature in the MessageHeader. The XSD schema does not limit the maximum number of these entries because the value is set to unbounded.
+
+RESTRICTION: Only required if ISO PnC identification mode with XML security should be supported.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>16</DEFAULT-VALUE>
+									<MAX>65535</MAX>
+									<MIN>1</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<ECUC-INTEGER-PARAM-DEF UUID="a58a7593-ce08-435a-bbc0-ab2d900b2d9a">
+									<SHORT-NAME>ExiMaxOccursSignatureProperty</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Max Occurrence Value Signature Property Element</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">Support for unbounded maximum occurrence values is not possible. Therefore this value is used as max value for SignatureProperty schema element included in SignatureProperties complex type. SignatureProperty is a XML Security root element and may appear as a #any element below the Signature in the MessageHeader. The XSD schema does not limit the maximum number of SignatureProperty because the value is set to unbounded.
+
+RESTRICTION: Only required if ISO PnC identification mode with XML security should be supported.
+
+HINT: The use of this element is not required for ISO15118. Setting the value to 1 is recommended to reduce the code size.
+</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>1</DEFAULT-VALUE>
+									<MAX>65535</MAX>
+									<MIN>1</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<ECUC-INTEGER-PARAM-DEF UUID="a5f77480-069f-473b-a073-3b0d3c033ffd">
+									<SHORT-NAME>ExiMaxOccursTransform</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Max Occurrence Value Transform Element</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">Support for unbounded maximum occurrence values is not possible. Therefore this value is used as max value for Transform schema element included in Transforms complex type is used in the Signature included in the MessageHeader. The XSD schema does not limit the maximum number of Transform because the value is set to unbounded.
+
+RESTRICTION: Only required if ISO PnC identification mode with XML security should be supported.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>2</DEFAULT-VALUE>
+									<MAX>65535</MAX>
+									<MIN>1</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<ECUC-INTEGER-PARAM-DEF UUID="6b08ec55-7a43-4da7-8234-41aa02c87bae">
+									<SHORT-NAME>ExiMaxOccursObject</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Max Occurrence Value Object Element</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">Support for unbounded maximum occurrence values is not possible. Therefore this value is used as max value for Object schema elements included in the Signature complex type used in the Message Header. The XSD schema does not limit the maximum number of these entries because the value is set to unbounded.
+
+RESTRICTION: Only required if ISO PnC identification mode with XML security should be supported.
+
+HINT: The use of this element is not required for ISO15118. Setting the value to 1 is recommended to reduce the code size.
+</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>1</DEFAULT-VALUE>
+									<MAX>65535</MAX>
+									<MIN>1</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<ECUC-INTEGER-PARAM-DEF UUID="4ed953c7-b87f-4a01-8408-6dad63785d8e">
+									<SHORT-NAME>ExiMaxOccursTransformChoice</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Max Occurrence Value Transform Choice Element</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">Support for unbounded maximum occurrence values is not possible. Therefore this value is used as max value for Transform choice schema element included in Transform complex type is used in the Signature included in the MessageHeader. The XSD schema does not limit the maximum number of Transform choice element because the value is set to unbounded.
+
+RESTRICTION: Only required if ISO PnC identification mode with XML security should be supported.
+
+HINT: This choice shall not be used in ISO15118 use case. Setting the value to 1 is recommended to reduce the code size.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>1</DEFAULT-VALUE>
+									<MAX>65535</MAX>
+									<MIN>1</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<ECUC-INTEGER-PARAM-DEF UUID="53944c19-0fc9-462d-9c58-265ed6354afe">
+									<SHORT-NAME>ExiMaxOccursSigPropertyChoice</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Max Occurrence Value Signature Property Choice Element</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">Support for unbounded maximum occurrence values is not possible. Therefore this value is used as max value for SignatureProperty choice schema element included in SignatureProperties complex type. SignatureProperty is a XML Security root element and may appear as a #any element below the Signature in the MessageHeader. The XSD schema does not limit the maximum number of SignatureProperty choice because the value is set to unbounded.
+
+RESTRICTION: Only required if ISO PnC identification mode with XML security should be supported.
+
+HINT: The use of this element is not required for ISO15118. Setting the value to 1 is recommended to reduce the code size.
+</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>1</DEFAULT-VALUE>
+									<MAX>65535</MAX>
+									<MIN>1</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<ECUC-INTEGER-PARAM-DEF UUID="333c5a52-7869-45e9-9672-1abbce0787ae">
+									<SHORT-NAME>ExiMaxOccursKeyInfoChoice</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Max Occurrence Value Key Info Choice Element</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">Support for unbounded maximum occurrence values is not possible. Therefore this value is used as max value for KeyInfo choice schema elements used in Signature complex type. The XSD schema does not limit the maximum number of KeyInfo choice elements because the value is set to unbounded.
+
+RESTRICTION: Only required if ISO PnC identification mode with XML security should be supported.
+
+HINT: Only one KeyInfo element should be used for ISO15118-2 DIS. The use of this element is not required for ISO15118-2 FDIS. Setting the value to 1 is recommended to reduce the code size.
+</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>1</DEFAULT-VALUE>
+									<MAX>65535</MAX>
+									<MIN>1</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<ECUC-INTEGER-PARAM-DEF UUID="0ade6c37-7ae9-4a1b-9bee-92374d64df22">
+									<SHORT-NAME>ExiMaxOccursX509DataChoice</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Max Occurrence Value X509 Data Choice Element</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">Support for unbounded maximum occurrence values is not possible. Therefore this value is used as max value for X509Data choice schema elements used in KeyInfo complex type. The XSD schema does not limit the maximum number of X509Data choice elements because the value is set to unbounded.
+
+RESTRICTION: Only required if ISO PnC identification mode with XML security should be supported.
+
+HINT: X509Data choice element may represent a certificate chain required for signature validation in ISO15118-2 DIS. The use of this element is not required for ISO15118-2 FDIS. Setting the value to 1 for FDIS version is recommended to reduce the code size.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>8</DEFAULT-VALUE>
+									<MAX>65535</MAX>
+									<MIN>1</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<ECUC-INTEGER-PARAM-DEF UUID="17243748-9688-4aad-9b72-b4419d7dd2b8">
+									<SHORT-NAME>ExiAlgorithmBufferSize</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">The Algorithm string attribute used in the XML Signature namespace is not length limited. The maximum supported string length needs to be configured using this parameter.
+
+RESTRICTION: Only required if ISO PnC identification mode with XML security should be supported.
+
+HINT: For ISO15118 the longest algorithm identifier is http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha256. Therefore it is not recommended to configure a value smaller than 51.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:BaseUnit">BYTE</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>51</DEFAULT-VALUE>
+									<MAX>65535</MAX>
+									<MIN>1</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<ECUC-INTEGER-PARAM-DEF UUID="b1e0d398-640a-4166-a21f-8b405731c580">
+									<SHORT-NAME>ExiXMLSigIDBufferSize</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">The ID string attribute used in the ISO15118 and XML Signature namespace is not length limited. The maximum supported string length needs to be configured using this parameter. The ID attribute is used to identify XML elements that are signed using XML Signature.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:BaseUnit">BYTE</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>10</DEFAULT-VALUE>
+									<MAX>65535</MAX>
+									<MIN>1</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<ECUC-INTEGER-PARAM-DEF UUID="a5aaca4c-5ae6-4af7-8c06-38a4f42ef731">
+									<SHORT-NAME>ExiURIBufferSize</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">The URI string attribute used in the XML Signature namespace is not length limited. The maximum supported string length needs to be configured using this parameter. The URI is used to specify the referenced element inside the Reference element.
+
+RESTRICTION: Only required if ISO PnC identification mode with XML security should be supported.
+
+HINT: A good value is ID Buffer Size + 1 because ISO15118 uses same document references. Same document reference form is a #-signed followed by the ID.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:BaseUnit">BYTE</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>11</DEFAULT-VALUE>
+									<MAX>65535</MAX>
+									<MIN>1</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<ECUC-INTEGER-PARAM-DEF UUID="1b76735a-5239-4941-9aff-abf67d0c8320">
+									<SHORT-NAME>ExiDigestValueBufferSize</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">The DigestValue element used in the XML Signature namespace is not length limited. The maximum supported length needs to be configured using this parameter.
+
+RESTRICTION: Only required if ISO PnC identification mode with XML security should be supported.
+
+HINT: For ISO15118 the only supported hash algorithm is SHA256. The digest value length using SHA256 is 32 byte.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:BaseUnit">BYTE</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>32</DEFAULT-VALUE>
+									<MAX>65535</MAX>
+									<MIN>1</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<ECUC-INTEGER-PARAM-DEF UUID="0348948f-7aee-47dd-b83d-822ba4d0a094">
+									<SHORT-NAME>ExiSignatureValueBufferSize</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">The SignatureValue element used in the XML Signature namespace is not length limited. The maximum supported length needs to be configured using this parameter.
+
+RESTRICTION: Only required if ISO PnC identification mode with XML security should be supported.
+
+HINT: For ISO15118 the only supported signature algorithm is ECDSA with SHA256 and curve secp256r1 (see [V2G2-006]). The signature value worst case length for this algorithm is 72 byte.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:BaseUnit">BYTE</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>72</DEFAULT-VALUE>
+									<MAX>65535</MAX>
+									<MIN>1</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<ECUC-INTEGER-PARAM-DEF UUID="aa8386bf-85a7-4ee2-8cfc-502b4eda1998">
+									<SHORT-NAME>ExiBase64BinaryBufferSize</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">The Base64Binary element used for X509SKI, X509CRL, X509Certificate and SPKISexp in the XML Signature namespace is not length limited. The maximum supported length needs to be configured using this parameter.
+
+RESTRICTION: Only required if ISO PnC identification mode with XML security should be supported.
+
+HINT: For ISO15118 the only X509Certificate is required. This element should be able to store a complete X509v3 certificate with a Base64 encoded maximum length of 1200 (see [V2G2-354]). Note: Base64 encoding length does not need to be included in this length because EXI is working with the binary representation. Therefore a buffer size of 900 byte will be a good value.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:BaseUnit">BYTE</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>900</DEFAULT-VALUE>
+									<MAX>65535</MAX>
+									<MIN>1</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<ECUC-INTEGER-PARAM-DEF UUID="6f375249-13d4-4bcb-9c5a-1d4a988f4565">
+									<SHORT-NAME>ExiTypeBufferSize</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">The Type attribute used inside the Reference and RetrievelMethod element in the XML Signature namespace is not length limited. The maximum supported length needs to be configured using this parameter.
+
+RESTRICTION: Only required if ISO PnC identification with XML security should be supported.
+
+HINT: The use of this attribute is not required for ISO15118. Setting the value to 1 is recommended to reduce the code size.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:BaseUnit">BYTE</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>1</DEFAULT-VALUE>
+									<MAX>65535</MAX>
+									<MIN>1</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<ECUC-INTEGER-PARAM-DEF UUID="49681868-aa1c-49a0-9b20-4223c5df0bb0">
+									<SHORT-NAME>ExiEncodingBufferSize</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">The Encoding attribute used inside the Object element in the XML Signature namespace is not length limited. The maximum supported length needs to be configured using this parameter.
+
+RESTRICTION: Only required if ISO PnC identification with XML security should be supported.
+
+HINT: The use of the Object element and its attributes is not required for ISO15118. Setting the value to 1 is recommended to reduce the code size.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:BaseUnit">BYTE</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>1</DEFAULT-VALUE>
+									<MAX>65535</MAX>
+									<MIN>1</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<ECUC-INTEGER-PARAM-DEF UUID="7bfbcb51-0db4-4848-8f3c-6afcd9b89265">
+									<SHORT-NAME>ExiMimeTypeBufferSize</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">The MimeType attribute used inside the Object element in the XML Signature namespace is not length limited. The maximum supported length needs to be configured using this parameter.
+
+RESTRICTION: Only required if ISO PnC identification with XML security should be supported.
+
+HINT: The use of the Object element and its attributes is not required for ISO15118. Setting the value to 1 is recommended to reduce the code size.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:BaseUnit">BYTE</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>1</DEFAULT-VALUE>
+									<MAX>65535</MAX>
+									<MIN>1</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<ECUC-INTEGER-PARAM-DEF UUID="d6cc00c5-fd24-4d85-b115-f539b40bdaa4">
+									<SHORT-NAME>ExiTargetBufferSize</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">The Target attribute used inside the SignatureProperty element in the XML Signature namespace is not length limited. The maximum supported length needs to be configured using this parameter.
+
+RESTRICTION: Only required if ISO PnC identification with XML security should be supported.
+
+HINT: The use of the SignatureProperty element and its attributes is not required for ISO15118. Setting the value to 1 is recommended to reduce the code size.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:BaseUnit">BYTE</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>1</DEFAULT-VALUE>
+									<MAX>65535</MAX>
+									<MIN>1</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<ECUC-INTEGER-PARAM-DEF UUID="e0195adc-07b5-4f2f-9296-ca96d0c2f117">
+									<SHORT-NAME>ExiCryptoBinaryBufferSize</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">The CryptoBinary type used inside the RSAKeyValue and DSAKeyValue element in the XML Signature namespace is not length limited. The maximum supported length needs to be configured using this parameter.
+
+RESTRICTION: Only required if ISO PnC identification with XML security should be supported.
+
+HINT: The use of the RSAKeyValue and DSAKeyValue elements are not required for ISO15118. Setting the value to 1 is recommended to reduce the code size.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:BaseUnit">BYTE</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>1</DEFAULT-VALUE>
+									<MAX>65535</MAX>
+									<MIN>1</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<ECUC-INTEGER-PARAM-DEF UUID="4266c095-d36e-4f91-a710-e322b2fbc625">
+									<SHORT-NAME>ExiKeyNameBufferSize</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">The KeyName element used inside the KeyInfo choice in the XML Signature namespace is not length limited. The maximum supported length needs to be configured using this parameter.
+
+RESTRICTION: Only required if ISO PnC identification with XML security should be supported.
+
+HINT: The use of the KeyName element is not required for ISO15118. Setting the value to 1 is recommended to reduce the code size.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:BaseUnit">BYTE</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>1</DEFAULT-VALUE>
+									<MAX>65535</MAX>
+									<MIN>1</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+								<ECUC-INTEGER-PARAM-DEF UUID="753cc93e-b194-4000-aa74-6b4fba1639ff">
+									<SHORT-NAME>ExiMgmtDataBufferSize</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">The MgmtData element used inside the KeyInfo choice in the XML Signature namespace is not length limited. The maximum supported length needs to be configured using this parameter.
+
+RESTRICTION: Only required if ISO PnC identification with XML security should be supported.
+
+HINT: The use of the MgmtData element is not required for ISO15118. Setting the value to 1 is recommended to reduce the code size.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:BaseUnit">BYTE</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									</IMPLEMENTATION-CONFIG-CLASSES>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>1</DEFAULT-VALUE>
+									<MAX>65535</MAX>
+									<MIN>1</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+							</PARAMETERS>
+						</ECUC-PARAM-CONF-CONTAINER-DEF>
+					</CONTAINERS>
+				</ECUC-MODULE-DEF>
+				<BSW-IMPLEMENTATION UUID="34938f30-0191-47c4-a76e-e042705e4047">
+					<SHORT-NAME>Exi_Impl</SHORT-NAME>
+					<PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+					<SW-VERSION>3.02.05</SW-VERSION>
+					<USED-CODE-GENERATOR>DaVinci Configurator</USED-CODE-GENERATOR>
+					<VENDOR-ID>30</VENDOR-ID>
+					<AR-RELEASE-VERSION>4.00.03</AR-RELEASE-VERSION>
+					<BEHAVIOR-REF DEST="BSW-INTERNAL-BEHAVIOR">/MICROSAR/Exi_ib_bswmd/BswModuleDescriptions/Exi/ExiBehavior</BEHAVIOR-REF>
+					<PRECONFIGURED-CONFIGURATION-REFS>
+						<PRECONFIGURED-CONFIGURATION-REF DEST="ECUC-MODULE-CONFIGURATION-VALUES">/MICROSAR/Exi_Pre</PRECONFIGURED-CONFIGURATION-REF>
+					</PRECONFIGURED-CONFIGURATION-REFS>
+					<RECOMMENDED-CONFIGURATION-REFS>
+						<RECOMMENDED-CONFIGURATION-REF DEST="ECUC-MODULE-CONFIGURATION-VALUES">/MICROSAR/Exi_Rec</RECOMMENDED-CONFIGURATION-REF>
+					</RECOMMENDED-CONFIGURATION-REFS>
+					<VENDOR-SPECIFIC-MODULE-DEF-REFS>
+						<VENDOR-SPECIFIC-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/MICROSAR/Exi</VENDOR-SPECIFIC-MODULE-DEF-REF>
+					</VENDOR-SPECIFIC-MODULE-DEF-REFS>
+				</BSW-IMPLEMENTATION>
+				<ECUC-MODULE-CONFIGURATION-VALUES UUID="5146871a-f17c-42a4-9075-842efd46d9eb">
+					<SHORT-NAME>Exi_Pre</SHORT-NAME>
+					<DEFINITION-REF DEST="ECUC-MODULE-DEF">/MICROSAR/Exi</DEFINITION-REF>
+					<CONTAINERS></CONTAINERS>
+				</ECUC-MODULE-CONFIGURATION-VALUES>
+				<ECUC-MODULE-CONFIGURATION-VALUES UUID="0d82f523-cae8-48d1-8284-d123a3975bdf">
+					<SHORT-NAME>Exi_Rec</SHORT-NAME>
+					<DEFINITION-REF DEST="ECUC-MODULE-DEF">/MICROSAR/Exi</DEFINITION-REF>
+					<CONTAINERS></CONTAINERS>
+				</ECUC-MODULE-CONFIGURATION-VALUES>
+			</ELEMENTS>
+		</AR-PACKAGE>
+	</AR-PACKAGES>
+</AUTOSAR>

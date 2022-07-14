@@ -1,0 +1,129 @@
+/**********************************************************************************************************************
+*  COPYRIGHT
+*  -------------------------------------------------------------------------------------------------------------------
+*  Copyright (c) 2015 by Vector Informatik GmbH.                                            All rights reserved.
+*
+*                This software is copyright protected and proprietary to Vector Informatik GmbH.
+*                Vector Informatik GmbH grants to you only those rights as set out in the license conditions.
+*                All other rights remain with Vector Informatik GmbH.
+*  -------------------------------------------------------------------------------------------------------------------
+*  FILE DESCRIPTION
+*  -------------------------------------------------------------------------------------------------------------------
+*  File       :  If_AsrIfEa.plugin
+*  Module     :  Elisa
+*
+*  Description:  Checking rule for If_AsrIfEa
+*
+*  -------------------------------------------------------------------------------------------------------------------
+*  AUTHOR IDENTITY
+*  -------------------------------------------------------------------------------------------------------------------
+*  Name                          Initials      Company
+*  -------------------------------------------------------------------------------------------------------------------
+*  Patrick Markl                  visml        Vector Informatik GmbH
+*  Markus Groﬂ                    visgms       Vector Informatik GmbH
+*  Michael Goﬂ                    virgmi       Vector Informatik GmbH
+*  -------------------------------------------------------------------------------------------------------------------
+*  REVISION HISTORY
+*  -------------------------------------------------------------------------------------------------------------------
+*  Version    Date          Author   Change Id        Description
+*  -------------------------------------------------------------------------------------------------------------------
+*  00.01.00   2012-05-21    visml    -                Initial version
+*  00.02.00   2012-07-13    visgms   -                Updated to current API version
+*  00.03.00   2012-08-07    visml    -                Added field for requirements tracking.
+*  01.00.00   2015-04-14    virgmi   -                First version
+*  01.00.01   2016-01-14    virgmi   -                Generator version was incremented
+*  01.00.02   2016-03-07    virgmi   -                Generator version was incremented. QM Check was added
+*  01.01.00   2017-04-20    virgmi   ESCAN00094819    ElisaPlugin does not work with Generator version 5.02.xx
+*  
+**********************************************************************************************************************/
+
+/**********************************************************************************************************************
+* Mandatory Functions
+**********************************************************************************************************************/
+
+/**********************************************************************************************************************
+* Name         : RegisterPlugin
+* Return value : Reference to a structure which contains the registration information about the plugin
+* Description  : Elisa_core calls this function to query necessary information about the plugin.
+*                This function is mandatory.
+**********************************************************************************************************************/
+def RegisterPlugin()
+{
+  var reg = ModulePluginRegistration()
+  reg.SetVersion(0x010100)
+  reg.SetPackageName("If_AsrIfEa")
+  reg.SetInputFiles(["Ea_Cfg.c"])
+  return reg
+}
+
+/**********************************************************************************************************************
+* Name         : CheckVersions
+* Return value : -
+* Description  : This function checks the correct module version
+**********************************************************************************************************************/
+def CheckVersions()
+{
+  var DEF_CFG_MAJOR = Define("EA_CFG_MAJOR_VERSION")
+  var DEF_CFG_MINOR = Define("EA_CFG_MINOR_VERSION")
+  
+  Assert(DEF_CFG_MAJOR.GetValueAsNumber, Equal, 5)
+  Assert(DEF_CFG_MINOR.GetValueAsNumber, Equal, 2)
+}
+
+/**********************************************************************************************************************
+* Name         : main
+* Parameter    : None
+* Return value : None
+* Description  : This is the entry point of the Elisa plugin. main calls all rule functions to check the configuration.
+*                This function is mandatory.
+* Requirements : 
+**********************************************************************************************************************/
+def main()
+{
+  InvokeRule("Verify that size of all configured write alignments is equal or smaller than EA_MAX_WRITE_ALIGNMENT", CheckAlignmentSize)
+  InvokeRule("Check QM inactive", CheckQMDefines)
+}
+
+/**********************************************************************************************************************
+* Rules
+**********************************************************************************************************************/
+
+/**********************************************************************************************************************
+* Name         : CheckAlignmentSize
+* Parameter    : None
+* Return value : None
+* Description  : Verifies that size of all configured write alignments is equal or smaller than EA_MAX_WRITE_ALIGNMENT
+* Requirements : SBSW_EA_28 (TCASE24821)
+**********************************************************************************************************************/
+def CheckAlignmentSize()
+{
+  var DEF_MAX_ALIGNMENT = Define("EA_MAX_WRITE_ALIGNMENT")
+  var MaxAlignmentValue = DEF_MAX_ALIGNMENT.GetValueAsNumber()
+  
+  var DEF_NUMBER_PARTITIONS = Define("EA_NUMBER_OF_PARTITIONS") 
+  var NumberPartitionsValue = DEF_NUMBER_PARTITIONS.GetValueAsNumber()
+  
+  var partitionConfigList = Array("Ea_PartitionConfigList")
+  
+  for (var i = 0; i < NumberPartitionsValue; ++i)
+  {
+	var partitionStruct = partitionConfigList.GetElemAsStruct(i)
+	
+	var writeAlignment = partitionStruct.GetMemberAsNumber("PartitionWriteAlignment")
+	
+	Assert(writeAlignment, LessEqual, MaxAlignmentValue)
+  }
+}
+
+/**********************************************************************************************************************
+* Name         : CheckQMDefines
+* Parameter    : None
+* Return value : None
+* Description  : This rule checks the setting of QM-related preprocessor defines.
+*                Typically it checks that QM features are inactive in safety context.
+* Requirements : N/A
+**********************************************************************************************************************/
+def CheckQMDefines()
+{
+  AssertDefineEquals("EA_DEV_ERROR_DETECT", "(STD_ON)")
+}

@@ -1,0 +1,752 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--This file was saved with a tool from Vector Informatik GmbH-->
+<AUTOSAR xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-3-0.xsd" xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="39CABC69-37A5-4537-ABD5-8D5EAB912270">
+      <SHORT-NAME>AUTOSAR_Platform</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="7F29EE49-3369-4CAE-97D4-9E396CD874B2">
+          <SHORT-NAME>BaseTypes</SHORT-NAME>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="82D60D99-92CA-4657-B34C-D0016EE45F2A">
+          <SHORT-NAME>CompuMethods</SHORT-NAME>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="FA424BB6-1B6C-488A-945A-A658AC991E53">
+          <SHORT-NAME>DataConstrs</SHORT-NAME>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="7DC7FE6F-E81B-4846-90DE-05EFAC729EF4">
+          <SHORT-NAME>ImplementationDataTypes</SHORT-NAME>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+    <AR-PACKAGE UUID="EF715741-57A4-499B-8956-5D86123151BB">
+      <SHORT-NAME>ComponentTypes</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="B8F80335-95A6-4191-9F8C-3EA2780D081D">
+          <SHORT-NAME>DataTypeMappingSets</SHORT-NAME>
+          <ELEMENTS>
+            <DATA-TYPE-MAPPING-SET UUID="29180E43-F936-40EE-B25F-B83BF599172A">
+              <SHORT-NAME>DemoTypeMapping</SHORT-NAME>
+              <DATA-TYPE-MAPS>
+                <DATA-TYPE-MAP>
+                  <APPLICATION-DATA-TYPE-REF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/DataTypes/AdtDoorState</APPLICATION-DATA-TYPE-REF>
+                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/DataTypes/IdtDoorState</IMPLEMENTATION-DATA-TYPE-REF>
+                </DATA-TYPE-MAP>
+                <DATA-TYPE-MAP>
+                  <APPLICATION-DATA-TYPE-REF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/DataTypes/AdtLightState</APPLICATION-DATA-TYPE-REF>
+                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/DataTypes/IdtLightState</IMPLEMENTATION-DATA-TYPE-REF>
+                </DATA-TYPE-MAP>
+                <DATA-TYPE-MAP>
+                  <APPLICATION-DATA-TYPE-REF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/DataTypes/AdtLightOnOffCounter</APPLICATION-DATA-TYPE-REF>
+                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/DataTypes/PlatformTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                </DATA-TYPE-MAP>
+                <DATA-TYPE-MAP>
+                  <APPLICATION-DATA-TYPE-REF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/DataTypes/AdtOdometer</APPLICATION-DATA-TYPE-REF>
+                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/DataTypes/PlatformTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                </DATA-TYPE-MAP>
+              </DATA-TYPE-MAPS>
+              <MODE-REQUEST-TYPE-MAPS>
+                <MODE-REQUEST-TYPE-MAP>
+                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/BswM_swc/DataTypes/BswM_ESH_Mode</IMPLEMENTATION-DATA-TYPE-REF>
+                  <MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP">/MICROSAR/BswM_swc/ESH_Mode</MODE-GROUP-REF>
+                </MODE-REQUEST-TYPE-MAP>
+                <MODE-REQUEST-TYPE-MAP>
+                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/DataTypes/PlatformTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                  <MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP">/MICROSAR/ComM_swc/ComMMode</MODE-GROUP-REF>
+                </MODE-REQUEST-TYPE-MAP>
+              </MODE-REQUEST-TYPE-MAPS>
+            </DATA-TYPE-MAPPING-SET>
+          </ELEMENTS>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+    <AR-PACKAGE UUID="4BA26531-0D5C-4F71-A5DF-FB3554695EED">
+      <SHORT-NAME>Predefined_DEV</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="2080E04F-2557-4F74-914E-9C83AC33810F">
+          <SHORT-NAME>DataConstraints</SHORT-NAME>
+          <ELEMENTS>
+            <DATA-CONSTR UUID="CAFD5AB6-E7BD-4ECA-8DF5-499AB1BE5DD8">
+              <SHORT-NAME>Dem_UdsStatusByteType</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <DATA-CONSTR-RULES>
+                <DATA-CONSTR-RULE>
+                  <INTERNAL-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">255</UPPER-LIMIT>
+                  </INTERNAL-CONSTRS>
+                </DATA-CONSTR-RULE>
+              </DATA-CONSTR-RULES>
+            </DATA-CONSTR>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="C9BE1C47-B977-45D4-9A59-A61078315E5E">
+          <SHORT-NAME>CompuMethods</SHORT-NAME>
+          <ELEMENTS>
+            <COMPU-METHOD UUID="F2570AA0-D6E5-4217-80F7-5F60B8778133">
+              <SHORT-NAME>NvM_RequestResultType</SHORT-NAME>
+              <CATEGORY>TEXTTABLE</CATEGORY>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <COMPU-INTERNAL-TO-PHYS>
+                <COMPU-SCALES>
+                  <COMPU-SCALE>
+                    <SHORT-LABEL>NVM_REQ_OK</SHORT-LABEL>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>NVM_REQ_OK</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <SHORT-LABEL>NVM_REQ_NOT_OK</SHORT-LABEL>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">1</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>NVM_REQ_NOT_OK</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <SHORT-LABEL>NVM_REQ_PENDING</SHORT-LABEL>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">2</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">2</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>NVM_REQ_PENDING</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <SHORT-LABEL>NVM_REQ_INTEGRITY_FAILED</SHORT-LABEL>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">3</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">3</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>NVM_REQ_INTEGRITY_FAILED</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <SHORT-LABEL>NVM_REQ_BLOCK_SKIPPED</SHORT-LABEL>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">4</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">4</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>NVM_REQ_BLOCK_SKIPPED</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <SHORT-LABEL>NVM_REQ_NV_INVALIDATED</SHORT-LABEL>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">5</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">5</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>NVM_REQ_NV_INVALIDATED</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <SHORT-LABEL>NVM_REQ_CANCELED</SHORT-LABEL>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">6</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">6</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>NVM_REQ_CANCELED</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <SHORT-LABEL>NVM_REQ_REDUNDANCY_FAILED</SHORT-LABEL>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">7</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">7</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>NVM_REQ_REDUNDANCY_FAILED</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <SHORT-LABEL>NVM_REQ_RESTORED_FROM_ROM</SHORT-LABEL>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">8</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">8</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>NVM_REQ_RESTORED_FROM_ROM</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                </COMPU-SCALES>
+              </COMPU-INTERNAL-TO-PHYS>
+            </COMPU-METHOD>
+            <COMPU-METHOD UUID="007B24D3-5C46-4986-B3CA-31D71FEDD510">
+              <SHORT-NAME>NvM_ServiceIdType</SHORT-NAME>
+              <CATEGORY>TEXTTABLE</CATEGORY>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <COMPU-INTERNAL-TO-PHYS>
+                <COMPU-SCALES>
+                  <COMPU-SCALE>
+                    <SHORT-LABEL>NVM_READ_BLOCK</SHORT-LABEL>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">6</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">6</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>NVM_READ_BLOCK</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <SHORT-LABEL>NVM_WRITE_BLOCK</SHORT-LABEL>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">7</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">7</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>NVM_WRITE_BLOCK</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <SHORT-LABEL>NVM_RESTORE_BLOCK_DEFAULTS</SHORT-LABEL>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">8</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">8</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>NVM_RESTORE_BLOCK_DEFAULTS</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <SHORT-LABEL>NVM_ERASE_BLOCK</SHORT-LABEL>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">9</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">9</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>NVM_ERASE_BLOCK</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <SHORT-LABEL>NVM_INVALIDATE_NV_BLOCK</SHORT-LABEL>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">11</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">11</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>NVM_INVALIDATE_NV_BLOCK</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <SHORT-LABEL>NVM_READ_ALL</SHORT-LABEL>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">12</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">12</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>NVM_READ_ALL</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                </COMPU-SCALES>
+              </COMPU-INTERNAL-TO-PHYS>
+            </COMPU-METHOD>
+            <COMPU-METHOD UUID="{AF35D1D4-4362-4055-B014-780FA6F9E75B}">
+              <SHORT-NAME>Dem_UdsStatusByteType</SHORT-NAME>
+              <CATEGORY>BITFIELD_TEXTTABLE</CATEGORY>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <COMPU-INTERNAL-TO-PHYS>
+                <COMPU-SCALES>
+                  <COMPU-SCALE>
+                    <SHORT-LABEL>DEM_UDS_STATUS_TF</SHORT-LABEL>
+                    <SYMBOL>DEM_UDS_STATUS_TF</SYMBOL>
+                    <MASK>1</MASK>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">1</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <SHORT-LABEL>DEM_UDS_STATUS_TFTOC</SHORT-LABEL>
+                    <SYMBOL>DEM_UDS_STATUS_TFTOC</SYMBOL>
+                    <MASK>2</MASK>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">2</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">2</UPPER-LIMIT>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <SHORT-LABEL>DEM_UDS_STATUS_PDTC</SHORT-LABEL>
+                    <SYMBOL>DEM_UDS_STATUS_PDTC</SYMBOL>
+                    <MASK>4</MASK>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">4</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">4</UPPER-LIMIT>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <SHORT-LABEL>DEM_UDS_STATUS_CDTC</SHORT-LABEL>
+                    <SYMBOL>DEM_UDS_STATUS_CDTC</SYMBOL>
+                    <MASK>8</MASK>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">8</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">8</UPPER-LIMIT>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <SHORT-LABEL>DEM_UDS_STATUS_TNCSLC</SHORT-LABEL>
+                    <SYMBOL>DEM_UDS_STATUS_TNCSLC</SYMBOL>
+                    <MASK>16</MASK>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">16</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">16</UPPER-LIMIT>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <SHORT-LABEL>DEM_UDS_STATUS_TFSLC</SHORT-LABEL>
+                    <SYMBOL>DEM_UDS_STATUS_TFSLC</SYMBOL>
+                    <MASK>32</MASK>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">32</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">32</UPPER-LIMIT>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <SHORT-LABEL>DEM_UDS_STATUS_TNCTOC</SHORT-LABEL>
+                    <SYMBOL>DEM_UDS_STATUS_TNCTOC</SYMBOL>
+                    <MASK>64</MASK>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">64</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">64</UPPER-LIMIT>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <SHORT-LABEL>DEM_UDS_STATUS_WIR</SHORT-LABEL>
+                    <SYMBOL>DEM_UDS_STATUS_WIR</SYMBOL>
+                    <MASK>128</MASK>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">128</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">128</UPPER-LIMIT>
+                  </COMPU-SCALE>
+                </COMPU-SCALES>
+              </COMPU-INTERNAL-TO-PHYS>
+            </COMPU-METHOD>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="A986B76E-C120-4B9C-84C0-579769224214">
+          <SHORT-NAME>ImplementationDataTypes</SHORT-NAME>
+          <ELEMENTS>
+            <IMPLEMENTATION-DATA-TYPE UUID="91037BEA-8260-4D81-AF92-D77F36795EEF">
+              <SHORT-NAME>NvM_RequestResultType</SHORT-NAME>
+              <CATEGORY>TYPE_REFERENCE</CATEGORY>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <COMPU-METHOD-REF DEST="COMPU-METHOD">/Predefined_DEV/CompuMethods/NvM_RequestResultType</COMPU-METHOD-REF>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </IMPLEMENTATION-DATA-TYPE>
+            <IMPLEMENTATION-DATA-TYPE UUID="E8567FAC-3DF7-4B9A-AE12-961DD3DAE8F3">
+              <SHORT-NAME>NvM_ServiceIdType</SHORT-NAME>
+              <CATEGORY>TYPE_REFERENCE</CATEGORY>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <COMPU-METHOD-REF DEST="COMPU-METHOD">/Predefined_DEV/CompuMethods/NvM_ServiceIdType</COMPU-METHOD-REF>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </IMPLEMENTATION-DATA-TYPE>
+            <IMPLEMENTATION-DATA-TYPE UUID="{BFD05982-482E-4C42-9D53-AEC2E5E9005D}">
+              <SHORT-NAME>Dem_UdsStatusByteType</SHORT-NAME>
+              <CATEGORY>TYPE_REFERENCE</CATEGORY>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <COMPU-METHOD-REF DEST="COMPU-METHOD">/Predefined_DEV/CompuMethods/Dem_UdsStatusByteType</COMPU-METHOD-REF>
+                    <DATA-CONSTR-REF DEST="DATA-CONSTR">/Predefined_DEV/DataConstraints/Dem_UdsStatusByteType</DATA-CONSTR-REF>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </IMPLEMENTATION-DATA-TYPE>
+          </ELEMENTS>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+    <AR-PACKAGE UUID="037D2C69-2BAA-401B-9BFB-87C9A2520DC7">
+      <SHORT-NAME>DataType</SHORT-NAME>
+      <ELEMENTS>
+        <SW-BASE-TYPE UUID="9A8FCF90-8510-43AC-962C-B2C66DD28CF0">
+          <SHORT-NAME>boolean</SHORT-NAME>
+          <CATEGORY>FIXED_LENGTH</CATEGORY>
+          <ADMIN-DATA>
+            <SDGS>
+              <SDG GID="DV_SDG">
+                <SD GID="DV_ReadOnly">1</SD>
+              </SDG>
+            </SDGS>
+          </ADMIN-DATA>
+          <BASE-TYPE-ENCODING>BOOLEAN</BASE-TYPE-ENCODING>
+        </SW-BASE-TYPE>
+      </ELEMENTS>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="3CE5865F-0491-4A35-AD47-4AE30DA249D4">
+          <SHORT-NAME>Semantics</SHORT-NAME>
+          <ELEMENTS>
+            <COMPU-METHOD UUID="D1C42EA4-01C0-457B-A19C-C2B772FFDE6B">
+              <SHORT-NAME>CM_sig_RearInteriorLight</SHORT-NAME>
+              <CATEGORY>LINEAR</CATEGORY>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <COMPU-INTERNAL-TO-PHYS>
+                <COMPU-SCALES>
+                  <COMPU-SCALE>
+                    <SHORT-LABEL>RANGE</SHORT-LABEL>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
+                  </COMPU-SCALE>
+                </COMPU-SCALES>
+              </COMPU-INTERNAL-TO-PHYS>
+            </COMPU-METHOD>
+            <COMPU-METHOD UUID="245F09D7-F714-48B6-88E7-826AF256C57A">
+              <SHORT-NAME>CM_sig_State_RearInteriorLight</SHORT-NAME>
+              <CATEGORY>LINEAR</CATEGORY>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <COMPU-INTERNAL-TO-PHYS>
+                <COMPU-SCALES>
+                  <COMPU-SCALE>
+                    <SHORT-LABEL>RANGE</SHORT-LABEL>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
+                  </COMPU-SCALE>
+                </COMPU-SCALES>
+              </COMPU-INTERNAL-TO-PHYS>
+            </COMPU-METHOD>
+            <COMPU-METHOD UUID="5B6BD4C3-E0DE-4ECE-A740-B314680F809D">
+              <SHORT-NAME>CM_sig_State_RearLeftDoor</SHORT-NAME>
+              <CATEGORY>LINEAR</CATEGORY>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <COMPU-INTERNAL-TO-PHYS>
+                <COMPU-SCALES>
+                  <COMPU-SCALE>
+                    <SHORT-LABEL>RANGE</SHORT-LABEL>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
+                  </COMPU-SCALE>
+                </COMPU-SCALES>
+              </COMPU-INTERNAL-TO-PHYS>
+            </COMPU-METHOD>
+            <COMPU-METHOD UUID="2B0D760B-9A91-4386-B185-8536837E5122">
+              <SHORT-NAME>CM_sig_State_RearRightDoor</SHORT-NAME>
+              <CATEGORY>LINEAR</CATEGORY>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <COMPU-INTERNAL-TO-PHYS>
+                <COMPU-SCALES>
+                  <COMPU-SCALE>
+                    <SHORT-LABEL>RANGE</SHORT-LABEL>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
+                  </COMPU-SCALE>
+                </COMPU-SCALES>
+              </COMPU-INTERNAL-TO-PHYS>
+            </COMPU-METHOD>
+          </ELEMENTS>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+    <AR-PACKAGE UUID="DBA33561-2162-4D94-8F4F-0937366792E2">
+      <SHORT-NAME>DataTypes</SHORT-NAME>
+      <ELEMENTS>
+        <APPLICATION-PRIMITIVE-DATA-TYPE UUID="0049409E-3282-407A-A34F-D46C1B312CC3">
+          <SHORT-NAME>AdtDoorState</SHORT-NAME>
+          <CATEGORY>BOOLEAN</CATEGORY>
+          <SW-DATA-DEF-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </SW-DATA-DEF-PROPS>
+        </APPLICATION-PRIMITIVE-DATA-TYPE>
+        <APPLICATION-PRIMITIVE-DATA-TYPE UUID="634F2914-F63E-4118-8099-D3D549A1B071">
+          <SHORT-NAME>AdtLightState</SHORT-NAME>
+          <CATEGORY>BOOLEAN</CATEGORY>
+          <SW-DATA-DEF-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </SW-DATA-DEF-PROPS>
+        </APPLICATION-PRIMITIVE-DATA-TYPE>
+        <IMPLEMENTATION-DATA-TYPE UUID="C0354A68-419A-4271-B959-2DA74EF22438">
+          <SHORT-NAME>IdtDoorState</SHORT-NAME>
+          <CATEGORY>TYPE_REFERENCE</CATEGORY>
+          <SW-DATA-DEF-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <COMPU-METHOD-REF DEST="COMPU-METHOD">/DataTypes/CompuMethods/CmDoorState</COMPU-METHOD-REF>
+                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/DataTypes/PlatformTypes/boolean</IMPLEMENTATION-DATA-TYPE-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </SW-DATA-DEF-PROPS>
+          <TYPE-EMITTER>RTE</TYPE-EMITTER>
+        </IMPLEMENTATION-DATA-TYPE>
+        <IMPLEMENTATION-DATA-TYPE UUID="E6D30BCB-E12F-4062-B62F-B5E925716F9E">
+          <SHORT-NAME>IdtLightState</SHORT-NAME>
+          <CATEGORY>TYPE_REFERENCE</CATEGORY>
+          <SW-DATA-DEF-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <COMPU-METHOD-REF DEST="COMPU-METHOD">/DataTypes/CompuMethods/CmLightState</COMPU-METHOD-REF>
+                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/DataTypes/PlatformTypes/boolean</IMPLEMENTATION-DATA-TYPE-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </SW-DATA-DEF-PROPS>
+          <TYPE-EMITTER>RTE</TYPE-EMITTER>
+        </IMPLEMENTATION-DATA-TYPE>
+        <IMPLEMENTATION-DATA-TYPE UUID="F944A80A-D491-476A-BA39-789E31B5EF1E">
+          <SHORT-NAME>IdtDioValueType</SHORT-NAME>
+          <CATEGORY>TYPE_REFERENCE</CATEGORY>
+          <SW-DATA-DEF-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/DataTypes/PlatformTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </SW-DATA-DEF-PROPS>
+          <TYPE-EMITTER>RTE</TYPE-EMITTER>
+        </IMPLEMENTATION-DATA-TYPE>
+        <IMPLEMENTATION-DATA-TYPE UUID="DC9696D4-46D5-46B4-9171-FE8B40D2930B">
+          <SHORT-NAME>IdtDisplayIgnitionState</SHORT-NAME>
+          <CATEGORY>VALUE</CATEGORY>
+          <SW-DATA-DEF-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <BASE-TYPE-REF DEST="SW-BASE-TYPE">/DataTypes/BaseTypes/UInt8</BASE-TYPE-REF>
+                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                <COMPU-METHOD-REF DEST="COMPU-METHOD">/DataTypes/CompuMethods/CMIgnitionState</COMPU-METHOD-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </SW-DATA-DEF-PROPS>
+          <TYPE-EMITTER>RTE</TYPE-EMITTER>
+        </IMPLEMENTATION-DATA-TYPE>
+        <APPLICATION-PRIMITIVE-DATA-TYPE UUID="43573ED6-77A3-444A-A4BD-72482CE39EE5">
+          <SHORT-NAME>AdtOdometer</SHORT-NAME>
+          <CATEGORY>VALUE</CATEGORY>
+          <SW-DATA-DEF-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </SW-DATA-DEF-PROPS>
+        </APPLICATION-PRIMITIVE-DATA-TYPE>
+        <APPLICATION-PRIMITIVE-DATA-TYPE UUID="46CB52E7-1659-4CDA-8AB7-80A4024A6DAF">
+          <SHORT-NAME>AdtLightOnOffCounter</SHORT-NAME>
+          <CATEGORY>VALUE</CATEGORY>
+          <SW-DATA-DEF-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </SW-DATA-DEF-PROPS>
+        </APPLICATION-PRIMITIVE-DATA-TYPE>
+      </ELEMENTS>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="D703D285-AA2C-441A-BCBB-5E7DE6FE1640">
+          <SHORT-NAME>BaseTypes</SHORT-NAME>
+          <ELEMENTS>
+            <SW-BASE-TYPE UUID="8FE80DCB-80CA-4BC2-B2A8-43FD4705C1C6">
+              <SHORT-NAME>UInt8</SHORT-NAME>
+              <NATIVE-DECLARATION>uint8</NATIVE-DECLARATION>
+            </SW-BASE-TYPE>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="8C56B425-5A53-46AB-B644-0436165596F5">
+          <SHORT-NAME>CompuMethods</SHORT-NAME>
+          <ELEMENTS>
+            <COMPU-METHOD UUID="C868E1A9-8A9C-4673-9476-49B0573C25B9">
+              <SHORT-NAME>CmDoorState</SHORT-NAME>
+              <CATEGORY>TEXTTABLE</CATEGORY>
+              <COMPU-INTERNAL-TO-PHYS>
+                <COMPU-SCALES>
+                  <COMPU-SCALE>
+                    <SHORT-LABEL>CMDOORSTATE_DOORCLOSED</SHORT-LABEL>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>CMDOORSTATE_DOORCLOSED</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <SHORT-LABEL>CMDOORSTATE_DOOROPEN</SHORT-LABEL>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">1</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>CMDOORSTATE_DOOROPEN</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                </COMPU-SCALES>
+              </COMPU-INTERNAL-TO-PHYS>
+            </COMPU-METHOD>
+            <COMPU-METHOD UUID="70DAF86B-B9A4-4B4D-A85B-F154F379FC59">
+              <SHORT-NAME>CMIgnitionState</SHORT-NAME>
+              <CATEGORY>TEXTTABLE</CATEGORY>
+              <COMPU-INTERNAL-TO-PHYS>
+                <COMPU-SCALES>
+                  <COMPU-SCALE>
+                    <SHORT-LABEL>CMIGNITION_STATEON</SHORT-LABEL>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>CMIGNITION_STATEON</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <SHORT-LABEL>CMIGNITION_STATEOFF</SHORT-LABEL>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">1</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>CMIGNITION_STATEOFF</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                </COMPU-SCALES>
+              </COMPU-INTERNAL-TO-PHYS>
+            </COMPU-METHOD>
+            <COMPU-METHOD UUID="7EE4C146-798A-4D6F-B1E9-F3902C2C64F8">
+              <SHORT-NAME>CmLightState</SHORT-NAME>
+              <CATEGORY>TEXTTABLE</CATEGORY>
+              <COMPU-INTERNAL-TO-PHYS>
+                <COMPU-SCALES>
+                  <COMPU-SCALE>
+                    <SHORT-LABEL>CMLIGHTSTATE_LIGHTOFF</SHORT-LABEL>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>CMLIGHTSTATE_LIGHTOFF</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <SHORT-LABEL>CMLIGHTSTATE_LIGHTON</SHORT-LABEL>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">1</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>CMLIGHTSTATE_LIGHTON</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                </COMPU-SCALES>
+              </COMPU-INTERNAL-TO-PHYS>
+            </COMPU-METHOD>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="EFEFF172-851B-489A-8D18-F6E5B9B80FCD">
+          <SHORT-NAME>DataConstrs</SHORT-NAME>
+          <ELEMENTS>
+            <DATA-CONSTR UUID="1EEDAB00-6C23-45F7-A156-0D8F92B29A17">
+              <SHORT-NAME>uint8_DataConstr</SHORT-NAME>
+              <DATA-CONSTR-RULES>
+                <DATA-CONSTR-RULE>
+                  <INTERNAL-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">255</UPPER-LIMIT>
+                  </INTERNAL-CONSTRS>
+                </DATA-CONSTR-RULE>
+              </DATA-CONSTR-RULES>
+            </DATA-CONSTR>
+            <DATA-CONSTR UUID="F020527D-31D9-4599-A0C8-189EF94A6B7D">
+              <SHORT-NAME>uint32_DataConstr</SHORT-NAME>
+              <DATA-CONSTR-RULES>
+                <DATA-CONSTR-RULE>
+                  <INTERNAL-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">4294967295</UPPER-LIMIT>
+                  </INTERNAL-CONSTRS>
+                </DATA-CONSTR-RULE>
+              </DATA-CONSTR-RULES>
+            </DATA-CONSTR>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="D4737CAC-2469-44BF-820E-1934913F9E37">
+          <SHORT-NAME>PlatformTypes</SHORT-NAME>
+          <ELEMENTS>
+            <IMPLEMENTATION-DATA-TYPE UUID="3311E168-758E-4736-8C27-CEE019F4EF73">
+              <SHORT-NAME>boolean</SHORT-NAME>
+              <DESC>
+                <L-2 L="FOR-ALL">boolean has the value space required to support the mathematical concept of 
+binary-valued logic: {true, false}.</L-2>
+              </DESC>
+              <CATEGORY>VALUE</CATEGORY>
+            </IMPLEMENTATION-DATA-TYPE>
+            <IMPLEMENTATION-DATA-TYPE UUID="AE2BA532-EEE3-47B5-A9AB-B76149A63845">
+              <SHORT-NAME>uint8</SHORT-NAME>
+              <DESC>
+                <L-2 L="FOR-ALL">uint8 represents integers with a minimum value of 0 and a maximum value of 255.
+The order-relation on uint8 is: x &lt; y if y - x is positive.
+uint8 has a lexical representation consisting of a finite-length sequence 
+of decimal digits (#x30-#x39).
+
+For example: 1, 0, 126, +10.</L-2>
+              </DESC>
+              <CATEGORY>VALUE</CATEGORY>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <DATA-CONSTR-REF DEST="DATA-CONSTR">/AUTOSAR_Platform/DataConstrs/uint8_DataConstr</DATA-CONSTR-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </IMPLEMENTATION-DATA-TYPE>
+            <IMPLEMENTATION-DATA-TYPE UUID="4B4194F6-8B1F-400E-B679-80B58EA9086D">
+              <SHORT-NAME>uint32</SHORT-NAME>
+              <DESC>
+                <L-2 L="FOR-ALL">uint32 represents integers with a minimum value of 0 and a maximum value 
+of 4294967295. The order-relation on uint32 is: x &lt; y if y - x is positive.
+uint32 has a lexical representation consisting of a finite-length sequence 
+of decimal digits (#x30-#x39). 
+
+For example: 1, 0, 12234567, 104400.</L-2>
+              </DESC>
+              <CATEGORY>VALUE</CATEGORY>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <DATA-CONSTR-REF DEST="DATA-CONSTR">/AUTOSAR_Platform/DataConstrs/uint32_DataConstr</DATA-CONSTR-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </IMPLEMENTATION-DATA-TYPE>
+          </ELEMENTS>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

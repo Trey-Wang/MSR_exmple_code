@@ -1,0 +1,1078 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-2-1.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://autosar.org/schema/r4.0">
+	<AR-PACKAGES>
+		<AR-PACKAGE UUID="d83064a7-c11d-4586-bae6-678c6ed73b30">
+			<SHORT-NAME>MICROSAR</SHORT-NAME>
+			<ELEMENTS>
+				<BSW-IMPLEMENTATION UUID="88daaad1-5bf9-41ac-9fe1-d67a79e996d6">
+					<SHORT-NAME>Mirror_Impl</SHORT-NAME>
+					<PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+					<SW-VERSION>2.00.00</SW-VERSION>
+					<USED-CODE-GENERATOR>DaVinci Configurator</USED-CODE-GENERATOR>
+					<VENDOR-ID>30</VENDOR-ID>
+					<AR-RELEASE-VERSION>4.02.02</AR-RELEASE-VERSION>
+					<BEHAVIOR-REF DEST="BSW-INTERNAL-BEHAVIOR">/MICROSAR/Mirror_ib_bswmd/BswModuleDescriptions/Mirror/MirrorBehavior</BEHAVIOR-REF>
+					<PRECONFIGURED-CONFIGURATION-REFS>
+						<PRECONFIGURED-CONFIGURATION-REF DEST="ECUC-MODULE-CONFIGURATION-VALUES">/MICROSAR/Mirror_Pre</PRECONFIGURED-CONFIGURATION-REF>
+					</PRECONFIGURED-CONFIGURATION-REFS>
+					<RECOMMENDED-CONFIGURATION-REFS>
+						<RECOMMENDED-CONFIGURATION-REF DEST="ECUC-MODULE-CONFIGURATION-VALUES">/MICROSAR/Mirror_Rec</RECOMMENDED-CONFIGURATION-REF>
+					</RECOMMENDED-CONFIGURATION-REFS>
+					<VENDOR-SPECIFIC-MODULE-DEF-REFS>
+						<VENDOR-SPECIFIC-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/MICROSAR/Mirror</VENDOR-SPECIFIC-MODULE-DEF-REF>
+					</VENDOR-SPECIFIC-MODULE-DEF-REFS>
+				</BSW-IMPLEMENTATION>
+				<ECUC-MODULE-DEF UUID="f50e1a9d-6102-4f63-9a1d-8af8f31f06e3">
+					<SHORT-NAME>Mirror</SHORT-NAME>
+					<CATEGORY>VENDOR_SPECIFIC_MODULE_DEFINITION</CATEGORY>
+					<ADMIN-DATA>
+						<DOC-REVISIONS>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.0.0</REVISION-LABEL>
+								<STATE>BETA</STATE>
+								<ISSUED-BY>vismmu</ISSUED-BY>
+								<DATE>2016-10-18</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Initial</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">FEATC-312</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>1.0.1</REVISION-LABEL>
+								<STATE>BETA</STATE>
+								<ISSUED-BY>visgsi</ISSUED-BY>
+								<DATE>2017-02-21</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">CAN-CAN Mirroring</L-2>
+										</CHANGE>
+										<REASON>
+											<L-2 L="EN">FEATC-616</L-2>
+										</REASON>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+							<DOC-REVISION>
+								<REVISION-LABEL>2.0.0</REVISION-LABEL>
+								<STATE>Released</STATE>
+								<ISSUED-BY>visgsi</ISSUED-BY>
+								<DATE>2017-03-30</DATE>
+								<MODIFICATIONS>
+									<MODIFICATION>
+										<CHANGE>
+											<L-2 L="EN">Version increment</L-2>
+										</CHANGE>
+									</MODIFICATION>
+								</MODIFICATIONS>
+							</DOC-REVISION>
+						</DOC-REVISIONS>
+					</ADMIN-DATA>
+					<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+					<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+					<POST-BUILD-VARIANT-SUPPORT>false</POST-BUILD-VARIANT-SUPPORT>
+					<SUPPORTED-CONFIG-VARIANTS>
+						<SUPPORTED-CONFIG-VARIANT>VARIANT-PRE-COMPILE</SUPPORTED-CONFIG-VARIANT>
+						<SUPPORTED-CONFIG-VARIANT>VARIANT-POST-BUILD</SUPPORTED-CONFIG-VARIANT>
+					</SUPPORTED-CONFIG-VARIANTS>
+					<CONTAINERS>
+						<ECUC-PARAM-CONF-CONTAINER-DEF UUID="affe670d-2020-4d36-9a7e-5378298da1df">
+							<SHORT-NAME>MirrorGeneral</SHORT-NAME>
+							<DESC>
+								<L-2 L="EN">This container contains the general configuration parameters of the Mirror module.</L-2>
+							</DESC>
+							<ADMIN-DATA>
+								<SDGS>
+									<SDG GID="DV:CfgPostBuild">
+										<SD GID="DV:postBuildNotDeletable">true</SD>
+										<SD GID="DV:postBuildSelectableChangeable">false</SD>
+									</SDG>
+								</SDGS>
+							</ADMIN-DATA>
+							<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+							<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+							<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+							<REQUIRES-INDEX>false</REQUIRES-INDEX>
+							<PARAMETERS>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="770d2fa7-a47c-4343-980a-657f065511c2">
+									<SHORT-NAME>MirrorDevErrorDetect</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Enables/disables the development error detection.
+
+Note: In general, the development error detection is recommended during pre-test phase. It is not recommended to enable the development error detection in production code due to increased runtime and ROM needs.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<SCOPE>LOCAL</SCOPE>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<VALUE-CONFIG-CLASSES>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+									</VALUE-CONFIG-CLASSES>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>true</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-FLOAT-PARAM-DEF UUID="55fdb72c-561a-44f1-9225-c8349910d15b">
+									<SHORT-NAME>MirrorMainFunctionPeriod</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Execution cycle of Mirror_MainFunction.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:BaseUnit">SEC</SD>
+												<SD GID="DV:Unit">MSEC</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<SCOPE>ECU</SCOPE>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<VALUE-CONFIG-CLASSES>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+									</VALUE-CONFIG-CLASSES>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>0.01</DEFAULT-VALUE>
+									<MAX>0.255</MAX>
+									<MIN>0.001</MIN>
+								</ECUC-FLOAT-PARAM-DEF>
+								<ECUC-BOOLEAN-PARAM-DEF UUID="f5fc564a-82dc-4dc2-b6bd-3374692738b7">
+									<SHORT-NAME>MirrorVersionInfoApi</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Enables/disables the function Mirror_GetVersionInfo() to get major, minor and patch version information.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<SCOPE>LOCAL</SCOPE>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<VALUE-CONFIG-CLASSES>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+									</VALUE-CONFIG-CLASSES>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>false</DEFAULT-VALUE>
+								</ECUC-BOOLEAN-PARAM-DEF>
+								<ECUC-STRING-PARAM-DEF UUID="068bf877-a0a8-4379-b678-0dd3b06f06cd">
+									<SHORT-NAME>MirrorUserConfigurationFile</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Reference to an external user configuration file that will be included during generation.
+
+The content of the user configuration file will be added at the end of the generated module configuration file and allows altering or extending the generated code.
+
+Caution: User configuration files can cause the software module to malfunction and must only be used with great care!</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<SCOPE>LOCAL</SCOPE>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<VALUE-CONFIG-CLASSES>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+									</VALUE-CONFIG-CLASSES>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+								</ECUC-STRING-PARAM-DEF>
+								<ECUC-FLOAT-PARAM-DEF UUID="cf421da2-8e34-476d-98fc-2a7f509d0958">
+									<SHORT-NAME>MirrorTxConfirmationTimeout</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Time to wait for a confirmation after transmission of a message. After this time, TxConfirmation is not expected to be called for the last transmission, and the message is assumed to have been lost.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:Display">
+												<SD GID="DV:BaseUnit">SEC</SD>
+												<SD GID="DV:Unit">MSEC</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<SCOPE>LOCAL</SCOPE>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<VALUE-CONFIG-CLASSES>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+									</VALUE-CONFIG-CLASSES>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<DEFAULT-VALUE>1.5</DEFAULT-VALUE>
+									<MAX>65</MAX>
+									<MIN>0.01</MIN>
+								</ECUC-FLOAT-PARAM-DEF>
+								<ECUC-STRING-PARAM-DEF UUID="8d1320db-0bab-4ccc-b6d4-e90c6fcf5e9b">
+									<SHORT-NAME>MirrorTimingCalloutHeaderName</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Header name of the used defined source for time stamps.
+
+RESTRICTIONS: If this parameter is used the parameter
+
+/MICROSAR/Mirror/MirrorGeneral/MirrorDestChannelStbRef
+
+must not be used.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<SCOPE>LOCAL</SCOPE>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<ECUC-STRING-PARAM-DEF-VARIANTS>
+										<ECUC-STRING-PARAM-DEF-CONDITIONAL>
+											<MIN-LENGTH>3</MIN-LENGTH>
+										</ECUC-STRING-PARAM-DEF-CONDITIONAL>
+									</ECUC-STRING-PARAM-DEF-VARIANTS>
+								</ECUC-STRING-PARAM-DEF>
+								<ECUC-FUNCTION-NAME-DEF UUID="e7c4c599-8966-4ff0-9277-f8c22bdaff05">
+									<SHORT-NAME>MirrorTimingCalloutName</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Function name of the used defined source for time stamps.
+
+RESTRICTIONS: If this parameter is used the parameter
+
+/MICROSAR/Mirror/MirrorGeneral/MirrorDestChannelStbRef
+
+must not be used.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<SCOPE>LOCAL</SCOPE>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<ECUC-FUNCTION-NAME-DEF-VARIANTS>
+										<ECUC-FUNCTION-NAME-DEF-CONDITIONAL>
+											<MIN-LENGTH>1</MIN-LENGTH>
+										</ECUC-FUNCTION-NAME-DEF-CONDITIONAL>
+									</ECUC-FUNCTION-NAME-DEF-VARIANTS>
+								</ECUC-FUNCTION-NAME-DEF>
+								<ECUC-ENUMERATION-PARAM-DEF UUID="dfb532dc-dfe9-47de-a823-3a3dcddf8a03">
+									<SHORT-NAME>MirrorSourceChannelCanFilterType</SHORT-NAME>
+									<LONG-NAME>
+										<L-4 L="EN">Source Channel Can Filter Type</L-4>
+									</LONG-NAME>
+									<DESC>
+										<L-2 L="EN">Filter type used by all Can Source Channels.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<SCOPE>LOCAL</SCOPE>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<VALUE-CONFIG-CLASSES>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+									</VALUE-CONFIG-CLASSES>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<LITERALS>
+										<ECUC-ENUMERATION-LITERAL-DEF UUID="c7988fc3-ff82-4cf5-b1a0-6e5cfcfa33a4">
+											<SHORT-NAME>FILTER_TYPE_RANGE</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">Range filter with lower and upper Id</L-4>
+											</LONG-NAME>
+											<ORIGIN>Vector Informatik</ORIGIN>
+										</ECUC-ENUMERATION-LITERAL-DEF>
+										<ECUC-ENUMERATION-LITERAL-DEF UUID="5c7b7db0-64f2-4d8a-ae6d-b34e0570587c">
+											<SHORT-NAME>FILTER_TYPE_ID</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">Id and Mask filter</L-4>
+											</LONG-NAME>
+											<ORIGIN>Vector Informatik</ORIGIN>
+										</ECUC-ENUMERATION-LITERAL-DEF>
+									</LITERALS>
+								</ECUC-ENUMERATION-PARAM-DEF>
+							</PARAMETERS>
+							<REFERENCES>
+								<ECUC-SYMBOLIC-NAME-REFERENCE-DEF UUID="b650b986-0e02-462f-91e9-87fb24274091">
+									<SHORT-NAME>MirrorDestChannelStbRef</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Reference to the synchronized time base used for time stamps.
+
+RESTRICTIONS: If this parameter is used the parameters
+
+/MICROSAR/Mirror/MirrorGeneral/MirrorTimingCalloutHeaderName
+/MICROSAR/Mirror/MirrorGeneral/MirrorTimingCalloutName
+
+must not be used.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<SCOPE>LOCAL</SCOPE>
+									<ORIGIN>Vector Informatik</ORIGIN>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/StbM/StbMSynchronizedTimeBase</DESTINATION-REF>
+								</ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+							</REFERENCES>
+						</ECUC-PARAM-CONF-CONTAINER-DEF>
+						<ECUC-PARAM-CONF-CONTAINER-DEF UUID="6b451635-a85d-4979-a9fa-9b24200ccfa7">
+							<SHORT-NAME>MirrorConfigSet</SHORT-NAME>
+							<DESC>
+								<L-2 L="EN">Configuration of the Mirror source and destination channel.</L-2>
+							</DESC>
+							<ADMIN-DATA>
+								<SDGS>
+									<SDG GID="DV:CfgPostBuild">
+										<SD GID="DV:postBuildNotDeletable">true</SD>
+										<SD GID="DV:postBuildSelectableChangeable">false</SD>
+									</SDG>
+								</SDGS>
+							</ADMIN-DATA>
+							<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+							<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+							<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+							<REQUIRES-INDEX>false</REQUIRES-INDEX>
+							<SUB-CONTAINERS>
+								<ECUC-CHOICE-CONTAINER-DEF UUID="e8374bef-0347-4b7d-83b4-77c4d155bade">
+									<SHORT-NAME>MirrorSourceChannel</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Source channel, bound to one of the supported bus types.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:postBuildNotDeletable">false</SD>
+												<SD GID="DV:postBuildSelectableChangeable">false</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+									<MULTIPLICITY-CONFIG-CLASSES>
+										<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+										</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+										<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+									</MULTIPLICITY-CONFIG-CLASSES>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<CHOICES>
+										<ECUC-PARAM-CONF-CONTAINER-DEF UUID="3e1ec6bb-02d5-48bf-b69e-0cdf23684040">
+											<SHORT-NAME>MirrorSourceChannelCan</SHORT-NAME>
+											<LONG-NAME>
+												<L-4 L="EN">Source Channel CAN</L-4>
+											</LONG-NAME>
+											<DESC>
+												<L-2 L="EN">Source channel of bus type CAN.</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:CfgPostBuild">
+														<SD GID="DV:postBuildNotDeletable">false</SD>
+														<SD GID="DV:postBuildSelectableChangeable">false</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<MULTIPLICITY-CONFIG-CLASSES>
+												<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+												<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											</MULTIPLICITY-CONFIG-CLASSES>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<PARAMETERS>
+												<ECUC-INTEGER-PARAM-DEF UUID="2e419ded-40d7-40cf-bb81-022aff5aed21">
+													<SHORT-NAME>MirrorNetworkId</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Mirror Network Id</L-4>
+													</LONG-NAME>
+													<DESC>
+														<L-2 L="EN">User defined network Id for a source channel. Will only be used as network identifier in IP frame.</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<SCOPE>LOCAL</SCOPE>
+													<MULTIPLICITY-CONFIG-CLASSES>
+														<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+														</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+														<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													</MULTIPLICITY-CONFIG-CLASSES>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+													<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<VALUE-CONFIG-CLASSES>
+														<ECUC-VALUE-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+														</ECUC-VALUE-CONFIGURATION-CLASS>
+														<ECUC-VALUE-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-VALUE-CONFIGURATION-CLASS>
+													</VALUE-CONFIG-CLASSES>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<MAX>255</MAX>
+													<MIN>0</MIN>
+												</ECUC-INTEGER-PARAM-DEF>
+											</PARAMETERS>
+											<REFERENCES>
+												<ECUC-SYMBOLIC-NAME-REFERENCE-DEF UUID="00ed229e-59d0-4898-88bb-a2c5aaf5a7a8">
+													<SHORT-NAME>MirrorSourceChannelComMNetworkHandleRef</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Source Channel ComM Network Handle Ref</L-4>
+													</LONG-NAME>
+													<DESC>
+														<L-2 L="EN">Reference to the channel defined by the ComMChannel providing access to the unique channel index ComMChannelId.</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<SCOPE>LOCAL</SCOPE>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+													<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<VALUE-CONFIG-CLASSES>
+														<ECUC-VALUE-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+														</ECUC-VALUE-CONFIGURATION-CLASS>
+														<ECUC-VALUE-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-VALUE-CONFIGURATION-CLASS>
+													</VALUE-CONFIG-CLASSES>
+													<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/ComM/ComMConfigSet/ComMChannel</DESTINATION-REF>
+												</ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+											</REFERENCES>
+											<SUB-CONTAINERS>
+												<ECUC-PARAM-CONF-CONTAINER-DEF UUID="e9abcac1-82dd-41a7-a226-673155487c1b">
+													<SHORT-NAME>MirrorCanIdFilter</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">CAN ID Filter</L-4>
+													</LONG-NAME>
+													<DESC>
+														<L-2 L="EN">Filter configuration for CAN IDs. A CAN ID is accepted if it matches any of the configured filters.</L-2>
+													</DESC>
+													<ADMIN-DATA>
+														<SDGS>
+															<SDG GID="DV:CfgPostBuild">
+																<SD GID="DV:postBuildNotDeletable">false</SD>
+																<SD GID="DV:postBuildSelectableChangeable">false</SD>
+															</SDG>
+														</SDGS>
+													</ADMIN-DATA>
+													<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>2</UPPER-MULTIPLICITY>
+													<MULTIPLICITY-CONFIG-CLASSES>
+														<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+														</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+														<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													</MULTIPLICITY-CONFIG-CLASSES>
+													<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<PARAMETERS>
+														<ECUC-INTEGER-PARAM-DEF UUID="ff53e02b-63c7-4689-b3d2-7cd8a485db20">
+															<SHORT-NAME>MirrorFilterValueHighOrMask</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">Filter Value High or Mask</L-4>
+															</LONG-NAME>
+															<DESC>
+																<L-2 L="EN">If the general parameter MirrorSourceChannelCanFilterType is set to "Filter_Type_Range" this value is used as upper value for a range filter.
+If the general parameter MirrorSourceChannelCanFilterType is set to "Filter_Tyoe_Id" this parameter is used as Mask for the CAN ID match  for a ID filter. The configured and the received CAN ID are first masked and then compared:
+(MirrorCanId &amp; MirrorMask) == (canId &amp; MirrorMask)</L-2>
+															</DESC>
+															<ADMIN-DATA>
+																<SDGS>
+																	<SDG GID="DV:Display">
+																		<SD GID="DV:DefaultFormat">HEX</SD>
+																	</SDG>
+																</SDGS>
+															</ADMIN-DATA>
+															<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+															<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+															<SCOPE>LOCAL</SCOPE>
+															<ORIGIN>Vector Informatik</ORIGIN>
+															<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+															<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+															<REQUIRES-INDEX>false</REQUIRES-INDEX>
+															<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+															<DEFAULT-VALUE>0</DEFAULT-VALUE>
+															<MAX>4294967295</MAX>
+															<MIN>0</MIN>
+														</ECUC-INTEGER-PARAM-DEF>
+														<ECUC-INTEGER-PARAM-DEF UUID="05518546-763b-46bc-94fb-2e0f5bee1de9">
+															<SHORT-NAME>MirrorFilterValueLowOrId</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">Filter Value Low or ID</L-4>
+															</LONG-NAME>
+															<DESC>
+																<L-2 L="EN">If the general parameter MirrorSourceChannelCanFilterType is set to "Filter_Type_Range" this value is used as lower value for a range filter.
+If the general parameter MirrorSourceChannelCanFilterType is set to "Filter_Tyoe_Id" this parameter is used as base CAN ID for a ID filter.</L-2>
+															</DESC>
+															<ADMIN-DATA>
+																<SDGS>
+																	<SDG GID="DV:Display">
+																		<SD GID="DV:DefaultFormat">HEX</SD>
+																	</SDG>
+																</SDGS>
+															</ADMIN-DATA>
+															<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+															<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+															<SCOPE>LOCAL</SCOPE>
+															<ORIGIN>Vector Informatik</ORIGIN>
+															<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+															<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+															<REQUIRES-INDEX>false</REQUIRES-INDEX>
+															<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+															<DEFAULT-VALUE>0</DEFAULT-VALUE>
+															<MAX>4294967295</MAX>
+															<MIN>0</MIN>
+														</ECUC-INTEGER-PARAM-DEF>
+														<ECUC-INTEGER-PARAM-DEF UUID="705b09d9-9f33-462e-b283-228bfcf04aa2">
+															<SHORT-NAME>MirrorCanFilterId</SHORT-NAME>
+															<LONG-NAME>
+																<L-4 L="EN">CAN Filter Id</L-4>
+															</LONG-NAME>
+															<DESC>
+																<L-2 L="EN">Id of the filter that must be used to access the filter.</L-2>
+															</DESC>
+															<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+															<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+															<SCOPE>LOCAL</SCOPE>
+															<ORIGIN>Vector Informatik</ORIGIN>
+															<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+															<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+															<REQUIRES-INDEX>false</REQUIRES-INDEX>
+															<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+															<DEFAULT-VALUE>0</DEFAULT-VALUE>
+															<MAX>4294967295</MAX>
+															<MIN>0</MIN>
+														</ECUC-INTEGER-PARAM-DEF>
+													</PARAMETERS>
+												</ECUC-PARAM-CONF-CONTAINER-DEF>
+											</SUB-CONTAINERS>
+										</ECUC-PARAM-CONF-CONTAINER-DEF>
+									</CHOICES>
+								</ECUC-CHOICE-CONTAINER-DEF>
+								<ECUC-CHOICE-CONTAINER-DEF UUID="b69fea22-e733-4f5e-9219-b29d20b0465c">
+									<SHORT-NAME>MirrorDestChannel</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Destination channel, bound to one of the supported bus types.</L-2>
+									</DESC>
+									<ADMIN-DATA>
+										<SDGS>
+											<SDG GID="DV:CfgPostBuild">
+												<SD GID="DV:postBuildNotDeletable">false</SD>
+												<SD GID="DV:postBuildSelectableChangeable">false</SD>
+											</SDG>
+										</SDGS>
+									</ADMIN-DATA>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+									<MULTIPLICITY-CONFIG-CLASSES>
+										<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+										</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+										<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+									</MULTIPLICITY-CONFIG-CLASSES>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<CHOICES>
+										<ECUC-PARAM-CONF-CONTAINER-DEF UUID="df58f814-9c66-4dfc-8fae-44e59d6ad0f0">
+											<SHORT-NAME>MirrorDestChannelIp</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Contains the configuration of a destination channel IP.</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:CfgPostBuild">
+														<SD GID="DV:postBuildNotDeletable">false</SD>
+														<SD GID="DV:postBuildSelectableChangeable">false</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<MULTIPLICITY-CONFIG-CLASSES>
+												<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+												<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											</MULTIPLICITY-CONFIG-CLASSES>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<PARAMETERS>
+												<ECUC-FLOAT-PARAM-DEF UUID="1609535d-cc13-4433-a08a-a9554a2f0d0b">
+													<SHORT-NAME>MirrorDestPduMaxDelay</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Time in seconds after which a message is transmitted even if its buffer is not yet filled.
+
+RESTRICTIONS: If this parameter is used, its value must be greater than the value of:
+
+/MICROSAR/Mirror/MirrorGeneral/MirrorTxConfirmationTimeout
+</L-2>
+													</DESC>
+													<ADMIN-DATA>
+														<SDGS>
+															<SDG GID="DV:Display">
+																<SD GID="DV:BaseUnit">SEC</SD>
+																<SD GID="DV:Unit">MSEC</SD>
+															</SDG>
+														</SDGS>
+													</ADMIN-DATA>
+													<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<SCOPE>LOCAL</SCOPE>
+													<MULTIPLICITY-CONFIG-CLASSES>
+														<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+														</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+														<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													</MULTIPLICITY-CONFIG-CLASSES>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+													<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<VALUE-CONFIG-CLASSES>
+														<ECUC-VALUE-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+														</ECUC-VALUE-CONFIGURATION-CLASS>
+														<ECUC-VALUE-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-VALUE-CONFIGURATION-CLASS>
+													</VALUE-CONFIG-CLASSES>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>0.1</DEFAULT-VALUE>
+													<MAX>66</MAX>
+													<MIN>0.001</MIN>
+												</ECUC-FLOAT-PARAM-DEF>
+												<ECUC-BOOLEAN-PARAM-DEF UUID="40dc10f8-0eb1-4ecf-9bde-374cc6fa518b">
+													<SHORT-NAME>MirrorDefaultDestChannel</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Standard destination channel after initialization of the Mirror module.</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<SCOPE>LOCAL</SCOPE>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+													<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>false</DEFAULT-VALUE>
+												</ECUC-BOOLEAN-PARAM-DEF>
+												<ECUC-INTEGER-PARAM-DEF UUID="77a83a28-6d67-4b67-b64a-9ce1ac29682b">
+													<SHORT-NAME>MirrorDestChannelQueueSize</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Number of buffers used for transmitting IP mirror messages.</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<SCOPE>LOCAL</SCOPE>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+													<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<VALUE-CONFIG-CLASSES>
+														<ECUC-VALUE-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+														</ECUC-VALUE-CONFIGURATION-CLASS>
+														<ECUC-VALUE-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-VALUE-CONFIGURATION-CLASS>
+													</VALUE-CONFIG-CLASSES>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>2</DEFAULT-VALUE>
+													<MAX>5</MAX>
+													<MIN>1</MIN>
+												</ECUC-INTEGER-PARAM-DEF>
+											</PARAMETERS>
+											<REFERENCES>
+												<ECUC-SYMBOLIC-NAME-REFERENCE-DEF UUID="8229aa9d-b24a-4e60-93fc-11e4203814de">
+													<SHORT-NAME>MirrorDestChannelComMNetworkHandleRef</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Destination Channel ComM Network Handle Ref</L-4>
+													</LONG-NAME>
+													<DESC>
+														<L-2 L="EN">Reference to the channel defined by the ComMChannel providing access to the unique channel index ComMChannelId.</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<SCOPE>LOCAL</SCOPE>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+													<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<VALUE-CONFIG-CLASSES>
+														<ECUC-VALUE-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+														</ECUC-VALUE-CONFIGURATION-CLASS>
+														<ECUC-VALUE-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-VALUE-CONFIGURATION-CLASS>
+													</VALUE-CONFIG-CLASSES>
+													<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/ComM/ComMConfigSet/ComMChannel</DESTINATION-REF>
+												</ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+											</REFERENCES>
+											<SUB-CONTAINERS>
+												<ECUC-PARAM-CONF-CONTAINER-DEF UUID="ad7eab3e-6bbf-43aa-a481-936c98162844">
+													<SHORT-NAME>MirrorDestPdu</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Contains the configuration of the PDU used to transmit the mirrored data.</L-2>
+													</DESC>
+													<ADMIN-DATA>
+														<SDGS>
+															<SDG GID="DV:CfgPostBuild">
+																<SD GID="DV:postBuildNotDeletable">true</SD>
+																<SD GID="DV:postBuildSelectableChangeable">false</SD>
+															</SDG>
+														</SDGS>
+													</ADMIN-DATA>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<PARAMETERS>
+														<ECUC-INTEGER-PARAM-DEF UUID="a097cd73-4e1f-4022-a126-285fc8c6c315">
+															<SHORT-NAME>MirrorDestPduId</SHORT-NAME>
+															<DESC>
+																<L-2 L="EN">The PDU identifier used for TxConfirmation from PduR.</L-2>
+															</DESC>
+															<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+															<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+															<SCOPE>ECU</SCOPE>
+															<ORIGIN>Vector Informatik</ORIGIN>
+															<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+															<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+															<REQUIRES-INDEX>false</REQUIRES-INDEX>
+															<VALUE-CONFIG-CLASSES>
+																<ECUC-VALUE-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+																</ECUC-VALUE-CONFIGURATION-CLASS>
+																<ECUC-VALUE-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																</ECUC-VALUE-CONFIGURATION-CLASS>
+															</VALUE-CONFIG-CLASSES>
+															<SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+															<DEFAULT-VALUE>0</DEFAULT-VALUE>
+															<MAX>65535</MAX>
+															<MIN>0</MIN>
+														</ECUC-INTEGER-PARAM-DEF>
+													</PARAMETERS>
+													<REFERENCES>
+														<ECUC-REFERENCE-DEF UUID="e5d8f328-92fb-433f-b94b-25150d4ac529">
+															<SHORT-NAME>MirrorDestPduRef</SHORT-NAME>
+															<DESC>
+																<L-2 L="EN">Reference to the Pdu object representing the PDU.</L-2>
+															</DESC>
+															<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+															<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+															<SCOPE>LOCAL</SCOPE>
+															<ORIGIN>Vector Informatik</ORIGIN>
+															<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+															<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+															<REQUIRES-INDEX>false</REQUIRES-INDEX>
+															<VALUE-CONFIG-CLASSES>
+																<ECUC-VALUE-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+																</ECUC-VALUE-CONFIGURATION-CLASS>
+																<ECUC-VALUE-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																</ECUC-VALUE-CONFIGURATION-CLASS>
+															</VALUE-CONFIG-CLASSES>
+															<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucPduCollection/Pdu</DESTINATION-REF>
+														</ECUC-REFERENCE-DEF>
+													</REFERENCES>
+												</ECUC-PARAM-CONF-CONTAINER-DEF>
+											</SUB-CONTAINERS>
+										</ECUC-PARAM-CONF-CONTAINER-DEF>
+										<ECUC-PARAM-CONF-CONTAINER-DEF UUID="5624bf5c-86b9-4844-8e6a-841969755fbc">
+											<SHORT-NAME>MirrorDestChannelCan</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Contains the configuration of a destination channel CAN.</L-2>
+											</DESC>
+											<ADMIN-DATA>
+												<SDGS>
+													<SDG GID="DV:CfgPostBuild">
+														<SD GID="DV:postBuildNotDeletable">false</SD>
+														<SD GID="DV:postBuildSelectableChangeable">false</SD>
+													</SDG>
+												</SDGS>
+											</ADMIN-DATA>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<MULTIPLICITY-CONFIG-CLASSES>
+												<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+												<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											</MULTIPLICITY-CONFIG-CLASSES>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<PARAMETERS>
+												<ECUC-BOOLEAN-PARAM-DEF UUID="c61268b6-1f1c-4f6a-ac74-e2bfe3c31b57">
+													<SHORT-NAME>MirrorDefaultDestChannel</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Standard destination channel after initialization of the Mirror module.</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<SCOPE>LOCAL</SCOPE>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+													<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>false</DEFAULT-VALUE>
+												</ECUC-BOOLEAN-PARAM-DEF>
+												<ECUC-INTEGER-PARAM-DEF UUID="2cb2adff-c48d-4404-8609-afb9304d1e13">
+													<SHORT-NAME>MirrorDestChannelQueueSize</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Number of buffers used for transmitting Can mirror messages.</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<SCOPE>LOCAL</SCOPE>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+													<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<VALUE-CONFIG-CLASSES>
+														<ECUC-VALUE-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+														</ECUC-VALUE-CONFIGURATION-CLASS>
+														<ECUC-VALUE-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-VALUE-CONFIGURATION-CLASS>
+													</VALUE-CONFIG-CLASSES>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<DEFAULT-VALUE>2</DEFAULT-VALUE>
+													<MAX>500</MAX>
+													<MIN>1</MIN>
+												</ECUC-INTEGER-PARAM-DEF>
+											</PARAMETERS>
+											<REFERENCES>
+												<ECUC-SYMBOLIC-NAME-REFERENCE-DEF UUID="38fea203-84a6-462f-975f-3cf8db434bb7">
+													<SHORT-NAME>MirrorDestChannelComMNetworkHandleRef</SHORT-NAME>
+													<LONG-NAME>
+														<L-4 L="EN">Destination Channel ComM Network Handle Ref</L-4>
+													</LONG-NAME>
+													<DESC>
+														<L-2 L="EN">Reference to the channel defined by the ComMChannel providing access to the unique channel index ComMChannelId.</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<SCOPE>LOCAL</SCOPE>
+													<ORIGIN>Vector Informatik</ORIGIN>
+													<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+													<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<VALUE-CONFIG-CLASSES>
+														<ECUC-VALUE-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+														</ECUC-VALUE-CONFIGURATION-CLASS>
+														<ECUC-VALUE-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-VALUE-CONFIGURATION-CLASS>
+													</VALUE-CONFIG-CLASSES>
+													<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/ComM/ComMConfigSet/ComMChannel</DESTINATION-REF>
+												</ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+											</REFERENCES>
+											<SUB-CONTAINERS>
+												<ECUC-PARAM-CONF-CONTAINER-DEF UUID="6b4a0deb-de62-405a-a44a-27a6540a543b">
+													<SHORT-NAME>MirrorDestPdu</SHORT-NAME>
+													<ADMIN-DATA>
+														<SDGS>
+															<SDG GID="DV:CfgPostBuild">
+																<SD GID="DV:postBuildNotDeletable">true</SD>
+																<SD GID="DV:postBuildSelectableChangeable">false</SD>
+															</SDG>
+														</SDGS>
+													</ADMIN-DATA>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<PARAMETERS>
+														<ECUC-INTEGER-PARAM-DEF UUID="3fbe176a-52b8-47af-addb-80083a7bbc46">
+															<SHORT-NAME>MirrorDestPduId</SHORT-NAME>
+															<DESC>
+																<L-2 L="EN">The PDU identifier used for TxConfirmation from PduR.</L-2>
+															</DESC>
+															<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+															<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+															<SCOPE>ECU</SCOPE>
+															<ORIGIN>Vector Informatik</ORIGIN>
+															<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+															<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+															<REQUIRES-INDEX>false</REQUIRES-INDEX>
+															<VALUE-CONFIG-CLASSES>
+																<ECUC-VALUE-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+																</ECUC-VALUE-CONFIGURATION-CLASS>
+																<ECUC-VALUE-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																</ECUC-VALUE-CONFIGURATION-CLASS>
+															</VALUE-CONFIG-CLASSES>
+															<SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+															<DEFAULT-VALUE>0</DEFAULT-VALUE>
+															<MAX>65535</MAX>
+															<MIN>0</MIN>
+														</ECUC-INTEGER-PARAM-DEF>
+													</PARAMETERS>
+													<REFERENCES>
+														<ECUC-REFERENCE-DEF UUID="b18e98c7-b44b-4ed9-a9d2-b67dcaeeaa5f">
+															<SHORT-NAME>MirrorDestPduRef</SHORT-NAME>
+															<DESC>
+																<L-2 L="EN">Reference to the Pdu object representing the PDU.</L-2>
+															</DESC>
+															<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+															<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+															<SCOPE>LOCAL</SCOPE>
+															<ORIGIN>Vector Informatik</ORIGIN>
+															<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+															<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+															<REQUIRES-INDEX>false</REQUIRES-INDEX>
+															<VALUE-CONFIG-CLASSES>
+																<ECUC-VALUE-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+																</ECUC-VALUE-CONFIGURATION-CLASS>
+																<ECUC-VALUE-CONFIGURATION-CLASS>
+																	<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																	<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																</ECUC-VALUE-CONFIGURATION-CLASS>
+															</VALUE-CONFIG-CLASSES>
+															<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucPduCollection/Pdu</DESTINATION-REF>
+														</ECUC-REFERENCE-DEF>
+													</REFERENCES>
+												</ECUC-PARAM-CONF-CONTAINER-DEF>
+											</SUB-CONTAINERS>
+										</ECUC-PARAM-CONF-CONTAINER-DEF>
+									</CHOICES>
+								</ECUC-CHOICE-CONTAINER-DEF>
+							</SUB-CONTAINERS>
+						</ECUC-PARAM-CONF-CONTAINER-DEF>
+					</CONTAINERS>
+				</ECUC-MODULE-DEF>
+				<ECUC-MODULE-CONFIGURATION-VALUES UUID="e903683f-70c8-4c32-8ade-c46cf4ac526b">
+					<SHORT-NAME>Mirror_Pre</SHORT-NAME>
+					<DEFINITION-REF DEST="ECUC-MODULE-DEF">/MICROSAR/Mirror</DEFINITION-REF>
+					<CONTAINERS></CONTAINERS>
+				</ECUC-MODULE-CONFIGURATION-VALUES>
+				<ECUC-MODULE-CONFIGURATION-VALUES UUID="0e74ca5f-e933-4ebb-9bed-07274a76e9cf">
+					<SHORT-NAME>Mirror_Rec</SHORT-NAME>
+					<DEFINITION-REF DEST="ECUC-MODULE-DEF">/MICROSAR/Mirror</DEFINITION-REF>
+					<CONTAINERS></CONTAINERS>
+				</ECUC-MODULE-CONFIGURATION-VALUES>
+			</ELEMENTS>
+		</AR-PACKAGE>
+	</AR-PACKAGES>
+</AUTOSAR>
